@@ -8,7 +8,7 @@ const config = {
     '\\.module\\.css$': 'identity-obj-proxy',
   },
   transform: {
-    '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.json' }],
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: { jsx: 'react-jsx' } }],
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
   coverageDirectory: 'coverage',
