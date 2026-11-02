@@ -7,6 +7,7 @@ import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { AnswerSection } from '@/components/features/AnswerSection'
 import { BookmarkButton } from '@/components/features/BookmarkButton'
+import { CompletionCheckbox } from '@/components/features/CompletionCheckbox'
 import styles from './page.module.css'
 
 interface PageProps {
@@ -87,6 +88,7 @@ export default async function QuestionPage({ params }: PageProps) {
         <BookmarkButton questionId={question.id} />
       </div>
       <h1 className={styles.title}>{question.title}</h1>
+      <CompletionCheckbox questionId={question.id} />
       <Card className={styles.answerCard}>
         {sectionKeys.map((key) => (
           <AnswerSection key={key} sectionKey={key} content={question.sections[key]} />

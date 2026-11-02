@@ -1,0 +1,25 @@
+.label {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  cursor: pointer;
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  user-select: none;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-success);
+  cursor: pointer;
+}
+
+.text {
+  transition: color 0.15s;
+}
+
+.label:has(.checkbox:checked) .text {
+  color: var(--color-success);
+  font-weight: 600;
+}
