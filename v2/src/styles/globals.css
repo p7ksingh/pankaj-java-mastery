@@ -63,6 +63,9 @@ pre {
   font-size: 13px;
   line-height: 1.55;
   overflow-x: auto;
+  white-space: pre;
+  word-break: normal;
+  overflow-wrap: normal;
 }
 
 code {
