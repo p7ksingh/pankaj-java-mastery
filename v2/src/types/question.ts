@@ -29,4 +29,5 @@ export interface SectionContent {
   analogy: string
   oneliner: string
   raw: string
+  [key: string]: string
 }

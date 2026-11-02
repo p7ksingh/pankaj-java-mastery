@@ -1,0 +1,30 @@
+.questionList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.questionRow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: 16px var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: background 0.15s;
+}
+
+.questionRow:hover {
+  background: var(--color-hover);
+  text-decoration: none;
+}
+
+.questionTitle {
+  font-weight: 600;
+  font-size: var(--font-size-base);
+}
