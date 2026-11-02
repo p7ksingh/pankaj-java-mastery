@@ -1,0 +1,25 @@
+.categoryCard {
+  display: block;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-lg);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: box-shadow 0.2s;
+}
+
+.categoryCard:hover {
+  box-shadow: var(--shadow-hover);
+  text-decoration: none;
+}
+
+.categoryTitle {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.categoryDesc {
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-md);
+}

@@ -3786,4 +3786,23 @@
   <url><loc>https://www.javabypankaj.live/interview/miscellaneous-advanced/print-and-read/Q2638/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.javabypankaj.live/interview/miscellaneous-advanced/print-and-read/Q2639/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.javabypankaj.live/interview/miscellaneous-advanced/print-and-read/Q2640/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/01-singleton-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/02-factory-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/03-abstract-factory-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/04-template-method-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/05-builder-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/06-strategy-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/07-adapter-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/08-decorator-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/09-flyweight-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/10-proxy-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/11-prototype-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/12-dao-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/13-business-delegate-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/14-service-locator-pattern/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/15-session-message-facade-composite-view/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/16-intercepting-filter-front-controller/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.javabypankaj.live/learn/design-patterns/17-microservices-patterns/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>

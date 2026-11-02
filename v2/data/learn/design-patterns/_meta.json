@@ -1,0 +1,161 @@
+{
+  "category": "design-patterns",
+  "title": "Java Design Patterns",
+  "description": "21 design patterns with complete tutorials, industry projects, HLD/LLD, and interview questions.",
+  "totalPatterns": 17,
+  "patterns": [
+    {
+      "slug": "01-singleton-pattern",
+      "title": "Singleton Design Pattern",
+      "subcategory": "creational",
+      "difficulty": "Medium",
+      "readingTimeMinutes": 25,
+      "sectionCount": 13,
+      "order": 1
+    },
+    {
+      "slug": "02-factory-pattern",
+      "title": "Factory and Factory Method Pattern",
+      "subcategory": "creational",
+      "difficulty": "Medium",
+      "readingTimeMinutes": 20,
+      "sectionCount": 12,
+      "order": 2
+    },
+    {
+      "slug": "03-abstract-factory-pattern",
+      "title": "Abstract Factory Pattern",
+      "subcategory": "creational",
+      "difficulty": "Hard",
+      "readingTimeMinutes": 18,
+      "sectionCount": 9,
+      "order": 3
+    },
+    {
+      "slug": "04-template-method-pattern",
+      "title": "Template Method Pattern",
+      "subcategory": "behavioral",
+      "difficulty": "Medium",
+      "readingTimeMinutes": 18,
+      "sectionCount": 10,
+      "order": 4
+    },
+    {
+      "slug": "05-builder-pattern",
+      "title": "Builder Design Pattern",
+      "subcategory": "creational",
+      "difficulty": "Medium",
+      "readingTimeMinutes": 18,
+      "sectionCount": 10,
+      "order": 5
+    },
+    {
+      "slug": "06-strategy-pattern",
+      "title": "Strategy Design Pattern",
+      "subcategory": "behavioral",
+      "difficulty": "Medium",
+      "readingTimeMinutes": 18,
+      "sectionCount": 12,
+      "order": 6
+    },
+    {
+      "slug": "07-adapter-pattern",
+      "title": "Adapter Design Pattern",
+      "subcategory": "structural",
+      "difficulty": "Medium",
+      "readingTimeMinutes": 15,
+      "sectionCount": 10,
+      "order": 7
+    },
+    {
+      "slug": "08-decorator-pattern",
+      "title": "Decorator / Wrapper Pattern",
+      "subcategory": "structural",
+      "difficulty": "Medium",
+      "readingTimeMinutes": 15,
+      "sectionCount": 10,
+      "order": 8
+    },
+    {
+      "slug": "09-flyweight-pattern",
+      "title": "Flyweight Design Pattern",
+      "subcategory": "structural",
+      "difficulty": "Medium",
+      "readingTimeMinutes": 14,
+      "sectionCount": 10,
+      "order": 9
+    },
+    {
+      "slug": "10-proxy-pattern",
+      "title": "Proxy Design Pattern",
+      "subcategory": "structural",
+      "difficulty": "Hard",
+      "readingTimeMinutes": 18,
+      "sectionCount": 11,
+      "order": 10
+    },
+    {
+      "slug": "11-prototype-pattern",
+      "title": "Prototype Design Pattern",
+      "subcategory": "creational",
+      "difficulty": "Medium",
+      "readingTimeMinutes": 16,
+      "sectionCount": 10,
+      "order": 11
+    },
+    {
+      "slug": "12-dao-pattern",
+      "title": "DAO (Data Access Object) Pattern",
+      "subcategory": "jee-integration",
+      "difficulty": "Medium",
+      "readingTimeMinutes": 15,
+      "sectionCount": 12,
+      "order": 12
+    },
+    {
+      "slug": "13-business-delegate-pattern",
+      "title": "Business Delegate Pattern",
+      "subcategory": "jee-business",
+      "difficulty": "Hard",
+      "readingTimeMinutes": 15,
+      "sectionCount": 10,
+      "order": 13
+    },
+    {
+      "slug": "14-service-locator-pattern",
+      "title": "Service Locator Pattern",
+      "subcategory": "jee-business",
+      "difficulty": "Medium",
+      "readingTimeMinutes": 14,
+      "sectionCount": 9,
+      "order": 14
+    },
+    {
+      "slug": "15-session-message-facade-composite-view",
+      "title": "Session Facade, Message Facade, Composite View",
+      "subcategory": "jee-mixed",
+      "difficulty": "Medium",
+      "readingTimeMinutes": 12,
+      "sectionCount": 5,
+      "order": 15
+    },
+    {
+      "slug": "16-intercepting-filter-front-controller",
+      "title": "Intercepting Filter and Front Controller",
+      "subcategory": "jee-presentation",
+      "difficulty": "Medium",
+      "readingTimeMinutes": 12,
+      "sectionCount": 5,
+      "order": 16
+    },
+    {
+      "slug": "17-microservices-patterns",
+      "title": "Microservices Patterns (SAGA, CQRS, API Gateway)",
+      "subcategory": "microservices",
+      "difficulty": "Hard",
+      "readingTimeMinutes": 14,
+      "sectionCount": 7,
+      "order": 17
+    }
+  ]
+}
