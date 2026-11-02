@@ -27,9 +27,6 @@ jobs:
             --exclude "parse_md.py" \
             --exclude "group_topics.py" \
             --exclude "package*" \
-            --exclude ".netlify/*" \
-            --exclude "netlify.toml" \
-            --exclude "netlify/*" \
             --exclude ".github/*" \
             --delete
 
