@@ -41,7 +41,6 @@
   font-size: 16px;
   line-height: 1.9;
   color: #2c2c2c;
-  max-width: 720px;
   letter-spacing: 0.01em;
   word-spacing: 0.05em;
 }
@@ -192,7 +191,6 @@
   background: linear-gradient(135deg, rgba(230, 126, 34, 0.05), rgba(230, 126, 34, 0.02));
   border-radius: 8px;
   border-left: 3px solid var(--color-warning);
-  max-width: 720px;
 }
 
 .analogy code {
