@@ -86,7 +86,7 @@
   color: #d4dae5;
   border-radius: 10px;
   padding: 20px 24px;
-  font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'Liberation Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 13.5px;
   line-height: 1.65;
   overflow-x: auto;
@@ -98,7 +98,7 @@
 }
 
 .content code {
-  font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'Liberation Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 14px;
   background: rgba(74, 144, 217, 0.08);
   color: #c0392b;
@@ -149,7 +149,7 @@
   border: 1px solid rgba(142, 202, 230, 0.15);
   border-radius: 10px;
   padding: 20px 24px;
-  font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'Liberation Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 12.5px;
   line-height: 1.55;
   white-space: pre;
@@ -209,7 +209,7 @@
   color: #7ee787;
   border-radius: 10px;
   padding: 20px 24px;
-  font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'Liberation Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 12.5px;
   line-height: 1.6;
   margin: 20px 0;
@@ -224,7 +224,7 @@
   color: #d4dae5;
   border-radius: 10px;
   padding: 20px 24px;
-  font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'Liberation Mono', monospace;
+  font-family: var(--font-mono);
   font-size: 13px;
   line-height: 1.65;
   overflow-x: auto;

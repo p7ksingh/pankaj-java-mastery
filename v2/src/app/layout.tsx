@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, JetBrains_Mono } from 'next/font/google'
 import { TopBar } from '@/components/layout/TopBar'
 import { Footer } from '@/components/layout/Footer'
 import '@/styles/theme.css'
@@ -13,6 +13,12 @@ const inter = Inter({
   variable: '--font-family',
 })
 
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-mono',
+})
+
 const SITE_NAME = 'javabypankaj'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.javabypankaj.live'
 
@@ -24,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <meta name="theme-color" content="#2d3748" />
       </head>
