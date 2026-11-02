@@ -1,1 +1,103 @@
-/* CSS Variables, reset, base styles */
+/* Reset and base styles. Applied once via root layout. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-text-primary);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+code,
+pre {
+  font-family: var(--font-mono);
+}
+
+pre {
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  font-size: 13px;
+  line-height: 1.55;
+  overflow-x: auto;
+}
+
+code {
+  font-size: 13px;
+  background: var(--color-code-inline-bg);
+  padding: 1px 5px;
+  border-radius: 4px;
+}
+
+/* Prevent pre > code from doubling the background */
+pre code {
+  background: none;
+  padding: 0;
+}
+
+/* Selection */
+::selection {
+  background: rgba(74, 144, 217, 0.25);
+}
+
+/* Focus ring for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-link);
+  outline-offset: 2px;
+}
+
+/* Print: hide non-content elements */
+@media print {
+  nav,
+  footer,
+  button {
+    display: none !important;
+  }
+  body {
+    background: #fff;
+    color: #000;
+  }
+}

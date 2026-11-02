@@ -1,1 +1,97 @@
-/* Light and dark mode variable overrides */
+/*
+ * Design tokens. Every colour, size, font and shadow used in the app.
+ * Components reference these via var(--name). No raw values in components.
+ * Dark mode overrides only colours, not spacing or typography.
+ */
+
+:root {
+  /* Colours - surfaces */
+  --color-bg: #f0f2f5;
+  --color-surface: #ffffff;
+  --color-hover: #f7f9fc;
+  --color-border: #e0e0e0;
+
+  /* Colours - text */
+  --color-text-primary: #333333;
+  --color-text-secondary: #666666;
+  --color-text-muted: #999999;
+
+  /* Colours - brand */
+  --color-brand: #ff0000;
+  --color-brand-gradient: linear-gradient(135deg, #ff0000, #ff6b6b);
+
+  /* Colours - semantic */
+  --color-link: #4a90d9;
+  --color-success: #27ae60;
+  --color-warning: #e67e22;
+  --color-error: #e74c3c;
+
+  /* Colours - structural */
+  --color-topbar: #2d3748;
+  --color-footer: #1a2332;
+  --color-table-header: #2d3748;
+  --color-pill-bg: #f0f0f0;
+  --color-badge-bg: #3b4660;
+
+  /* Colours - code */
+  --color-code-bg: #1e2533;
+  --color-code-text: #e6edf3;
+  --color-code-inline-bg: #f0f0f0;
+
+  /* Typography */
+  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Menlo', 'Consolas', 'Monaco', monospace;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 22px;
+  --font-size-2xl: 28px;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 25px;
+  --radius-full: 50%;
+
+  /* Shadows */
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-topbar: 0 1px 4px rgba(0, 0, 0, 0.15);
+
+  /* Sizes */
+  --topbar-height: 56px;
+  --max-width: 1200px;
+  --sidebar-width: 300px;
+}
+
+/* Dark mode: only colour overrides */
+body.dark {
+  --color-bg: #121212;
+  --color-surface: #1e1e1e;
+  --color-hover: #2a2a2a;
+  --color-border: #2a2a2a;
+
+  --color-text-primary: #d4d4d4;
+  --color-text-secondary: #aaaaaa;
+  --color-text-muted: #777777;
+
+  --color-topbar: #1a1a1a;
+  --color-footer: #0d0d0d;
+  --color-table-header: #1a1a1a;
+  --color-pill-bg: #2a2a2a;
+
+  --color-code-inline-bg: #2a2a2a;
+
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-topbar: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
