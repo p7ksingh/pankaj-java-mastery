@@ -37,11 +37,15 @@ Next.js App Router. Each folder = a route. Each `page.tsx` = a page.
 
 | File | URL | Renders |
 |---|---|---|
-| `app/page.tsx` | `/` | Home (chapter table) |
-| `app/[chapter]/page.tsx` | `/core-java` | Chapter (topic list) |
-| `app/[chapter]/[topic]/page.tsx` | `/core-java/collections` | Topic (question list) |
-| `app/[chapter]/[topic]/[question]/page.tsx` | `/core-java/collections/hashmap-internal-working` | Single question |
-| `app/search/page.tsx` | `/search?q=hashmap` | Search results |
+| `app/page.tsx` | `/` | Home (both sections, featured content) |
+| `app/interview/page.tsx` | `/interview` | Interview chapter table |
+| `app/interview/[chapter]/page.tsx` | `/interview/core-java` | Chapter (topic list) |
+| `app/interview/[chapter]/[topic]/page.tsx` | `/interview/core-java/collections` | Topic (question list) |
+| `app/interview/[chapter]/[topic]/[question]/page.tsx` | `/interview/core-java/collections/hashmap-internal-working` | Single question |
+| `app/learn/page.tsx` | `/learn` | Learning categories (added later) |
+| `app/learn/[category]/page.tsx` | `/learn/design-patterns` | Category (pattern list) |
+| `app/learn/[category]/[topic]/page.tsx` | `/learn/design-patterns/singleton-pattern` | Full tutorial |
+| `app/search/page.tsx` | `/search?q=hashmap` | Search results (both sections) |
 | `app/layout.tsx` | — | Root layout (wraps all pages) |
 | `app/not-found.tsx` | — | 404 page |
 
@@ -65,7 +69,7 @@ Components: `TopBar`, `Footer`, `Breadcrumb`, `PageHeader`, `Sidebar`
 ### `src/components/features/` — Feature Components
 Compose ui + layout components with business logic.
 
-Components: `ChapterTable`, `TopicTable`, `QuestionView`, `AnswerSection`, `SearchResults`, `SubmitForm`, `DarkModeToggle`, `BookmarkButton`, `NotesPanel`, `CommunityQuestions`, `ContinueWhereYouLeftOff`, `EmailPopup`, `ShareButtons`
+Components: `ChapterTable`, `TopicTable`, `QuestionView`, `AnswerSection`, `SearchResults`, `SubmitForm`, `DarkModeToggle`, `BookmarkButton`, `NotesPanel`, `CommunityQuestions`, `ContinueWhereYouLeftOff`, `EmailPopup`, `ShareButtons`, `TutorialView`, `TutorialSection`, `PatternCard`, `CategoryGrid`
 
 ### `src/hooks/` — Custom Hooks
 Encapsulate stateful logic. Each hook = one responsibility.
@@ -85,7 +89,9 @@ Pure TypeScript. No React imports. No DOM access. Fully testable.
 
 - `lib/data/chapters.ts` — Load all chapters, get by slug
 - `lib/data/questions.ts` — Load questions, index by ID/slug, get related
-- `lib/data/search.ts` — Build search index, fuzzy search
+- `lib/data/search.ts` — Build search index, fuzzy search (both sections)
+- `lib/data/tutorials.ts` — Load learn content, get by category/slug
+- `lib/data/patterns.ts` — Load design patterns, get by slug
 - `lib/utils/slug.ts` — Generate URL-safe slugs from titles
 - `lib/utils/format.ts` — Format numbers, dates, reading time
 - `lib/utils/validation.ts` — Validate form inputs

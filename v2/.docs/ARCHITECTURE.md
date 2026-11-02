@@ -62,29 +62,69 @@ A Next.js (React) static site that pre-generates 2,500+ individual HTML pages fr
 
 ## Data Flow
 ```
-JSON files (data/ch01.json ... ch28.json)
-    │
-    ▼ (imported at build time)
-lib/data/chapters.ts — loads, validates, transforms
-lib/data/questions.ts — indexes by slug, chapter, topic
-    │
-    ▼ (passed as props)
-app/[chapter]/[topic]/[question]/page.tsx
-    │
-    ▼ (renders)
-components/features/QuestionView — the answer card
-components/features/AnswerSection — each SKILL section
-components/ui/* — buttons, pills, badges, code blocks
+data/interview/ch01.json ... ch28.json     data/learn/design-patterns/*.json
+    │                                           │
+    ▼ (imported at build time)                  ▼
+lib/data/chapters.ts                       lib/data/tutorials.ts
+lib/data/questions.ts                      lib/data/patterns.ts
+    │                                           │
+    ▼ (passed as props)                         ▼
+app/interview/[chapter]/...               app/learn/[category]/[topic]/page.tsx
+    │                                           │
+    ▼ (renders)                                 ▼
+components/features/QuestionView          components/features/TutorialView
+components/features/AnswerSection          components/features/TutorialSection
+components/ui/* (shared)                   components/ui/* (shared)
+```
+
+## Content Sections
+The site has two main sections. Both share the same design system, components and layout.
+
+### Interview Section (Phase 1 — build now)
+- 28 chapters, 2,506+ questions
+- Data: `data/interview/ch01.json ... ch28.json`
+- Format: SKILL-compliant answers (12 sections per question)
+- URL pattern: `/interview/[chapter]/[topic]/[question]`
+
+### Learn Section (Phase 2 — add later)
+- Design Patterns (21 patterns, 69 pages of notes)
+- Source: `/Users/PASINGH2501/Downloads/Design_Patterns_Notes/` + `Design_Patterns_Reference.html`
+- Categories: GOF Creational, GOF Structural, GOF Behavioral, JEE Patterns, Microservices Patterns
+- Format: Tutorial-style (concept → problem → solution → code → diagram → real-world example)
+- Data: `data/learn/design-patterns/*.json`
+- URL pattern: `/learn/[category]/[topic]`
+- Future categories: SOLID Principles, System Design, Data Structures
+
+### Content Type System
+```typescript
+type ContentType = 'interview' | 'learn'
+
+// Interview: Q&A format, SKILL sections, banking examples
+// Learn: Tutorial format, step-by-step, diagrams, multiple code examples
 ```
 
 ## URL Structure (SEO)
+
+### Interview URLs
 | Route | Example | Page |
 |---|---|---|
-| `/` | `/` | Home — chapter table |
-| `/[chapter]` | `/core-java` | Chapter — topic list |
-| `/[chapter]/[topic]` | `/core-java/collections` | Topic — question list |
-| `/[chapter]/[topic]/[question]` | `/core-java/collections/hashmap-internal-working` | Question — full answer |
-| `/search?q=hashmap` | `/search?q=hashmap` | Search results |
+| `/` | `/` | Home — both sections |
+| `/interview` | `/interview` | Interview chapter table |
+| `/interview/[chapter]` | `/interview/core-java` | Chapter — topic list |
+| `/interview/[chapter]/[topic]` | `/interview/core-java/collections` | Topic — question list |
+| `/interview/[chapter]/[topic]/[question]` | `/interview/core-java/collections/hashmap-internal-working` | Question — full answer |
+
+### Learn URLs (added later)
+| Route | Example | Page |
+|---|---|---|
+| `/learn` | `/learn` | Learning categories |
+| `/learn/[category]` | `/learn/design-patterns` | Category — pattern list |
+| `/learn/[category]/[topic]` | `/learn/design-patterns/singleton-pattern` | Full tutorial page |
+
+### Shared URLs
+| Route | Example | Page |
+|---|---|---|
+| `/search?q=hashmap` | `/search?q=hashmap` | Search results (both sections) |
 | `/sitemap.xml` | | Auto-generated |
 
 ## Performance Targets

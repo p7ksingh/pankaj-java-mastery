@@ -29,15 +29,23 @@ Phase 3: Features ━━━━━━━━━━━━━━━━━━━━�
   3H: Share buttons
   3I: Keyboard shortcuts (⌘K)
 
-Phase 4: SEO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-  4A: Unique title/description per page
-  4B: Structured data (WebSite, FAQPage, BreadcrumbList)
-  4C: Sitemap generation (2,500+ URLs)
-  4D: robots.txt
-  4E: OG image per page (or shared)
-  4F: Canonical URLs
+Phase 4: Learn Section ━━━━━━━━━━━━━━━━━━━━━━━━━
+  4A: Learn data types and loader (tutorial.ts, patterns.ts)
+  4B: Convert Design_Patterns_Reference.html → JSON data files
+  4C: Write proper SKILL-format content with code examples for each pattern
+  4D: TutorialView and TutorialSection components
+  4E: Learn home page, category page, pattern page
+  4F: Add design patterns to search index and sitemap
 
-Phase 5: Quality ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Phase 5: SEO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  5A: Unique title/description per page
+  5B: Structured data (WebSite, FAQPage, BreadcrumbList, Course)
+  5C: Sitemap generation (2,500+ interview + 21 learn URLs)
+  5D: robots.txt
+  5E: OG image per page (or shared)
+  5F: Canonical URLs
+
+Phase 6: Quality ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
   5A: Lighthouse audit (target 95+)
   5B: Accessibility audit (WCAG 2.1 AA)
   5C: Mobile testing (390px, 360px, 414px)
