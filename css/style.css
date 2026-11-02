@@ -810,3 +810,12 @@ body.dark .skel__circle,body.dark .skel__line{background:#2a2a2a;}
   pre{font-size:11px !important;}
   .page__header h1{font-size:18px !important;}
 }
+
+/* Top bar: Submit interview question button (all pages) */
+.topbar__submit{border:none;cursor:pointer;font-family:inherit;font-size:13px;font-weight:700;color:#fff;padding:7px 16px;border-radius:20px;white-space:nowrap;background:linear-gradient(135deg,#FF0000,#ff6b6b);transition:all 0.2s;}
+.topbar__submit:hover{transform:translateY(-1px);box-shadow:0 3px 12px rgba(255,0,0,0.35);}
+@media(max-width:900px){
+  .topbar__submit{padding:0;width:34px;height:34px;border-radius:50%;font-size:16px;display:grid;place-items:center;}
+  .topbar__submit-text{display:none;}
+}
+@media(max-width:480px){.topbar__submit{width:28px;height:28px;font-size:14px;}}

@@ -830,7 +830,7 @@ window.showCommunityQuestions=function(container){
   container.innerHTML='<div class="loader"><div class="loader__spin"></div></div>';
   fetch(QS_API).then(function(r){return r.json();}).then(function(qs){
     if(!qs.length){container.innerHTML='<p style="color:#999;text-align:center;padding:20px">No questions submitted yet. Be the first!</p>';return;}
-    var h='<div class="community-header"><h3>Community Questions ('+qs.length+')</h3><button class="submit-btn-home" onclick="openSubmitForm()">💡 Submit Yours</button></div>';
+    var h='<div class="community-header"><h3>Community Questions ('+qs.length+')</h3><button class="submit-btn-home" onclick="openSubmitForm()">💡 Submit Yours Interview Question</button></div>';
     qs.reverse().forEach(function(q){
       var date=q.time?new Date(q.time).toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'}):'';
       h+='<div class="community-card">';
