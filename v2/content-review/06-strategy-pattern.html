@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strategy Design Pattern in Java - Complete Tutorial | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px}
+h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}
+h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}
+p,li{font-size:14px;margin-bottom:8px}
+ul,ol{margin-left:24px;margin-bottom:12px}
+pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}
+code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}
+pre code{background:none;padding:0}
+.meta{font-size:13px;color:#999;margin-bottom:24px}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
+.tag-b{background:#e8f4fd;color:#2980b9}.tag-g{background:#e8f8f0;color:#27ae60}.tag-m{background:#fff3e0;color:#e67e22}
+.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.box-blue{border-color:#4A90D9;background:#eff6ff}
+.box-red{border-color:#e74c3c;background:#fef2f2}
+.box-green{border-color:#27ae60;background:#f0fdf4}
+.box-orange{border-color:#e67e22;background:#fffbeb}
+.box-purple{border-color:#8b5cf6;background:#f5f3ff}
+.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}
+th{background:#2d3748;color:#fff;font-weight:600}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+.ps{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-family:Menlo,monospace;font-size:13px;line-height:1.6}
+.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-b">Behavioral</span>
+<span class="tag tag-g">GOF Pattern</span>
+<span class="tag tag-m">Medium</span>
+
+<h1>Strategy Design Pattern in Java</h1>
+<p class="meta">Complete Tutorial | 12 Sections | Full Shopping Cart Project with HLD and LLD | Three Rules of Strategy | Composition over Inheritance | Spring DI Connection | Multiple Scenarios | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>1. What is Strategy Pattern?</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Strategy pattern is a <strong>GOF Behavioral Pattern</strong>. Strategy means planning. It defines a family of algorithms, encapsulates each one, and makes them interchangeable. The Strategy pattern lets the algorithm vary independently from the clients that use it.</p>
+<p><strong>One line:</strong> Keep two collaborating classes as loosely coupled interchangeable parts. Instead of hardcoding a dependency, inject it through an interface.</p>
+</div>
+
+<p>The class that uses other class is called <strong>target class</strong> (or context). The class that is acting as helper to the main class (target class) is called <strong>dependent class</strong> (or strategy).</p>
+
+<table>
+<tr><th>Target Class</th><th>Relationship</th><th>Dependent Class</th></tr>
+<tr><td>Flipkart</td><td>uses/needs</td><td>DTDC, BlueDart, DHL (Courier Services)</td></tr>
+<tr><td>Vehicle</td><td>uses/needs</td><td>Engine</td></tr>
+<tr><td>Cricketor</td><td>uses/needs</td><td>CricketBat</td></tr>
+</table>
+
+<p>Strategy DP says we can describe the Java classes of dependency management (classes in collaboration) as <strong>loosely coupled interchangeable parts</strong>. We can replace any dependent class with another dependent class without modifying the target class.</p>
+
+<!-- ================================================================ -->
+<h2>2. Three Rules of Strategy Pattern</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Three Rules</div>
+<ol type="a">
+<li><strong>Favour composition over inheritance</strong></li>
+<li><strong>Code to interfaces/abstract classes, never code to implementation classes (concrete classes)</strong></li>
+<li><strong>Code must be open for extension and closed for modification</strong></li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>3. Rule a) Favour Composition Over Inheritance</h2>
+<!-- ================================================================ -->
+
+<p>Inheritance is IS-A relationship. Composition is HAS-A relationship.</p>
+
+<pre><code>// Inheritance (IS-A): class B extends A
+class A { }
+class B extends A { }    // B is-a A (IS-A relationship)
+
+// Composition (HAS-A): class B has reference to A
+class A { }
+class B {
+    private A a;          // B has-a A (HAS-A relationship)
+}</code></pre>
+
+<p>If a class wants to use everything from another class (both properties and methods), use inheritance (IS-A). If a class wants to use specific properties and methods of another class, use composition (HAS-A).</p>
+
+<h3>Three limitations of inheritance</h3>
+
+<h4>a) No multiple inheritance in Java</h4>
+<p>Java does not support multiple inheritance using classes. Interfaces in Java are not given in the aspect of inheritance; they are given for achieving polymorphism with loose coupling.</p>
+
+<div class="diagram">Problem (with inheritance):
+class A    class B    class C extends A, B
+  ...        ...           ... (Definitely not possible in Java!)
+
+Solution (using composition):
+class A    class B    class C {
+  ...        ...        private A a;    // HAS-A
+                         private B b;    // HAS-A
+                       }</div>
+
+<h4>b) Inheritance code becomes fragile (easily breakable)</h4>
+
+<pre><code>// Problem: with inheritance
+class A {
+    public int m1() { return 100; }
+}
+
+class B extends A {
+    public int m1() {    // overrides A.m1()
+        return 200;
+    }
+}
+
+class C extends A { }   // inherits m1()
+
+class D extends B { }   // inherits overridden m1()
+
+// Note: if we modify the signature of m1() in class A:
+//   - method m1() in B that was only overriding immediately
+//     becomes a new different method (no longer overriding)
+//   - all extending hierarchy in A's entire hierarchy of B,
+//     classes will distributed indicating "code is fragile"</code></pre>
+
+<div class="box box-orange">
+<div class="box-label" style="color:#92400e">Solution using composition</div>
+<pre><code>class A {
+    public void m1() { return 100; }
+}
+
+class B {
+    private A a = new A();
+
+    public void m1() {
+        int result = a.m1();    // delegates to A
+        return result;
+    }
+}
+
+// If we modify the signature of m1() in class A, only in B,
+// the m1() method's code will be distributed. But other classes
+// extending B will not be distributed.
+// Using composition we have minimized the problem.</code></pre>
+</div>
+
+<h4>c) Inheritance makes Unit Testing very complex</h4>
+
+<div class="diagram">Unit Testing: Programmers testing on his own piece code is called unit testing.
+  If expected results are matching with actual results, then we say test results are positive.
+  If not matching, we say test results are negative.
+
+class A {              class B extends A {
+  10 methods              ... other 10 methods
+  ...                     ...
+}                      }
+
+// Inside class:
+// B knows A's:
+// total B = 10 (own) + 10 (from A) = 20 methods
+
+// We need to perform unit testing: 10 methods while testing A class (10 methods to test)
+// But while testing B class: 20 methods to test (inherited + own)
+
+Solution using composition:
+class A {              class B {
+  10 methods              private A a = new A();
+  ...                     int x = a.m1();
+}                         ... other 9 methods
+                       }
+
+// Now: Unit testing required only on 10 methods (B's own).
+// While doing B class methods, some of the A class methods will be tested.
+// Less methods to involve in unit testing!</div>
+
+<!-- ================================================================ -->
+<h2>4. Rule b) Code to Interfaces, Not Concrete Classes</h2>
+<!-- ================================================================ -->
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Problem: Tight Coupling</div>
+<pre><code>// Target class directly uses concrete dependent classes
+public class Communication {
+    private DTDC dtdc;        // hardcoded to DTDC
+    private DHL dhl;          // hardcoded to DHL
+    private BlueDart bluedart; // hardcoded to BlueDart
+
+    public String shipping(String[] items, double[] prices) {
+        // must decide which courier to use with if-else
+        // tightly coupled to all concrete classes
+    }
+}</code></pre>
+<p>If the target and dependent classes are among the same package and directly referencing each other, they are called <strong>tightly coupled components</strong>.</p>
+</div>
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Solution: Loose Coupling</div>
+<pre><code>// Target class holds interface reference (loosely coupled)
+public class Communication {
+    private Courier courier;    // interface reference
+
+    public void setCourier(Courier courier) {
+        this.courier = courier; // inject at runtime
+    }
+
+    public String shipping(String[] items, double[] prices) {
+        courier.deliver(1001);  // uses interface method
+    }
+}</code></pre>
+<p>If the objects of dependency live among interfaces with no direct reference, they are called <strong>loosely coupled components</strong>. In the target class, we able to change the dependent class (of target class) without touching the source code of target class. So we can say the target and dependent classes are loosely coupled classes.</p>
+</div>
+
+<h3>Modes of dependent class injection</h3>
+<ul>
+<li><strong>Constructor-based injection:</strong> Dependent classes implementing common interface/base class can be injected in constructor. At level class or child class, along with setter method, parameterized constructor is for support.</li>
+<li><strong>Setter-based injection:</strong> Inject via setter method at runtime.</li>
+<li><strong>Interface-based injection:</strong> Inject via interface method.</li>
+</ul>
+
+<pre><code>// Constructor-based injection
+public class Communication {
+    private Courier courier;
+
+    public Communication(Courier courier) {   // injected via constructor
+        this.courier = courier;
+    }
+}
+
+// Setter-based injection
+public class Communication {
+    private Courier courier;
+
+    public void setCourier(Courier courier) { // injected via setter
+        this.courier = courier;
+    }
+}</code></pre>
+
+<!-- ================================================================ -->
+<h2>5. Rule c) Open for Extension, Closed for Modification</h2>
+<!-- ================================================================ -->
+
+<div class="box box-purple">
+<div class="box-label" style="color:#6d28d9">Open/Closed Principle</div>
+<ul>
+<li><strong>Open for extension:</strong> If an implementation (strategy) is not property, we can swap out with another strategy by extending classes (the contract/interface). We can add new strategies without modifying existing code. This is also how any code is added to the target class outside the target class.</li>
+<li><strong>Closed for modification:</strong> When dependent classes are called/created/injected by implementing the common interface/class, our code is open for extension. We can modify our code in limited ways: (a) By keeping the classes as final classes (so extending will not be a problem), (b) If the class is not final and if there is no need to modify the logic in its given class methods, (c) By defining methods of upper class as final methods. Since methods of upper class are declared or defined in the sub class, we can say the code of the parent class is closed for modification.</li>
+</ul>
+</div>
+
+<!-- ================================================================ -->
+<h2>6. Implementation: Courier Delivery System</h2>
+<!-- ================================================================ -->
+
+<h3>Strategy DP Components</h3>
+<table>
+<tr><th>Component</th><th>Role</th><th>In Our Example</th></tr>
+<tr><td>Context (Target)</td><td>The class that uses a strategy. Holds interface reference.</td><td><code>Communication</code></td></tr>
+<tr><td>Strategy Interface</td><td>Common interface for all algorithms.</td><td><code>Courier</code></td></tr>
+<tr><td>Concrete Strategies</td><td>Multiple implementations of the interface.</td><td><code>DHL</code>, <code>BlueDart</code>, <code>DTDC</code></td></tr>
+<tr><td>Client</td><td>Creates strategy and injects it into context.</td><td><code>ClientApp</code></td></tr>
+</table>
+
+<div class="diagram">Client (injects strategy into target class)
+  |
+  +-- Target Class: Communication
+  |      private Courier courier;     (HAS-A interface ref)
+  |      setCourier(Courier c);       (setter injection)
+  |      shipping();                  (uses courier.deliver())
+  |
+  +-- Strategy Interface: Courier
+           |
+      +----+----+----+
+      |    |    |    |
+     DHL BlueDart DTDC  (future: FedEx, Ekart...)
+</div>
+
+<h3>Courier.java (Strategy interface)</h3>
+<pre><code>package com.nt.strategy;
+
+public interface Courier {
+    void deliver(int orderId);
+    String getDeliveryEstimate(String destination);
+}</code></pre>
+
+<h3>Concrete strategies</h3>
+<pre><code>// DHL.java
+package com.nt.strategy;
+
+public class DHL implements Courier {
+    public DHL() {
+        System.out.println("DHL:: 0-param constructor");
+    }
+
+    @Override
+    public void deliver(int orderId) {
+        System.out.println("DHL delivering order #" + orderId + " via express air");
+    }
+
+    @Override
+    public String getDeliveryEstimate(String destination) {
+        return "2-3 business days to " + destination;
+    }
+}
+
+// BlueDart.java
+package com.nt.strategy;
+
+public class BlueDart implements Courier {
+    public BlueDart() {
+        System.out.println("BlueDart:: 0-param constructor");
+    }
+
+    @Override
+    public void deliver(int orderId) {
+        System.out.println("BlueDart delivering order #" + orderId + " via ground");
+    }
+
+    @Override
+    public String getDeliveryEstimate(String destination) {
+        return "4-5 business days to " + destination;
+    }
+}
+
+// DTDC.java
+package com.nt.strategy;
+
+public class DTDC implements Courier {
+    public DTDC() {
+        System.out.println("DTDC:: 0-param constructor");
+    }
+
+    @Override
+    public void deliver(int orderId) {
+        System.out.println("DTDC delivering order #" + orderId + " via economy");
+    }
+
+    @Override
+    public String getDeliveryEstimate(String destination) {
+        return "5-7 business days to " + destination;
+    }
+}</code></pre>
+
+<h3>CourierFactory.java</h3>
+<pre><code>package com.nt.factory;
+
+import com.nt.strategy.*;
+
+public class CourierFactory {
+    public static Courier getInstance(String type) {
+        if (type == null) {
+            throw new IllegalArgumentException("Courier type cannot be null");
+        }
+        switch (type.toLowerCase()) {
+            case "dhl":       return new DHL();
+            case "bluedart":  return new BlueDart();
+            case "dtdc":      return new DTDC();
+            default: throw new IllegalArgumentException("Unknown courier: " + type);
+        }
+    }
+}</code></pre>
+
+<h3>Communication.java (Context / Target class)</h3>
+<pre><code>package com.nt.target;
+
+import com.nt.strategy.Courier;
+
+public class Communication {
+    private Courier courier;    // HAS-A (composition, not inheritance)
+
+    // Setter-based injection
+    public void setCourier(Courier courier) {
+        this.courier = courier;
+    }
+
+    public void shipping(String[] items, double[] prices) {
+        System.out.println("Processing shipment of " + items.length + " items...");
+        double total = 0;
+        for (int i = 0; i < items.length; i++) {
+            System.out.println("  Item: " + items[i] + " | Price: Rs " + prices[i]);
+            total += prices[i];
+        }
+        System.out.println("  Total: Rs " + total);
+
+        // Delegate delivery to the injected strategy
+        courier.deliver(1001);
+        System.out.println("  Estimate: " + courier.getDeliveryEstimate("Hyderabad"));
+    }
+}</code></pre>
+
+<h3>Client test</h3>
+<pre><code>package com.nt.test;
+
+import com.nt.target.Communication;
+import com.nt.strategy.Courier;
+import com.nt.factory.CourierFactory;
+
+public class ClientApp {
+    public static void main(String[] args) {
+        Communication comm = new Communication();
+
+        String[] items = {"Java Book", "Laptop Stand"};
+        double[] prices = {500.0, 1200.0};
+
+        // Strategy 1: DHL
+        System.out.println("=== Using DHL ===");
+        Courier dhl = CourierFactory.getInstance("dhl");
+        comm.setCourier(dhl);
+        comm.shipping(items, prices);
+
+        System.out.println();
+
+        // Strategy 2: Switch to BlueDart at runtime (no code change in Communication)
+        System.out.println("=== Switching to BlueDart ===");
+        Courier bluedart = CourierFactory.getInstance("bluedart");
+        comm.setCourier(bluedart);
+        comm.shipping(items, prices);
+    }
+}</code></pre>
+
+<div class="output">=== Using DHL ===
+DHL:: 0-param constructor
+Processing shipment of 2 items...
+  Item: Java Book | Price: Rs 500.0
+  Item: Laptop Stand | Price: Rs 1200.0
+  Total: Rs 1700.0
+DHL delivering order #1001 via express air
+  Estimate: 2-3 business days to Hyderabad
+
+=== Switching to BlueDart ===
+BlueDart:: 0-param constructor
+Processing shipment of 2 items...
+  Item: Java Book | Price: Rs 500.0
+  Item: Laptop Stand | Price: Rs 1200.0
+  Total: Rs 1700.0
+BlueDart delivering order #1001 via ground
+  Estimate: 4-5 business days to Hyderabad</div>
+
+<div class="box box-orange">
+<div class="box-label" style="color:#92400e">Key Observation</div>
+<p>The <code>Communication</code> class was NOT modified when switching from DHL to BlueDart. We only changed the injected strategy object via <code>setCourier()</code>. The target and dependent classes are loosely coupled.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>7. Strategy Pattern and Spring Dependency Injection</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Connection to Spring</div>
+<p>Spring Dependency Injection is fundamentally the Strategy pattern. Spring creates strategy objects (beans) and injects them into target classes. The XML or annotation configuration determines which concrete strategy is used. Changing the strategy requires only a configuration change, not a code change.</p>
+</div>
+
+<pre><code>// Spring XML configuration (beans.xml)
+&lt;bean id="dhlCourier" class="com.nt.strategy.DHL" /&gt;
+&lt;bean id="bluedartCourier" class="com.nt.strategy.BlueDart" /&gt;
+
+&lt;bean id="communication" class="com.nt.target.Communication"&gt;
+    &lt;property name="courier" ref="dhlCourier" /&gt;
+    &lt;!-- Switch by changing ref to "bluedartCourier" --&gt;
+&lt;/bean&gt;
+
+// Spring Boot annotation equivalent:
+@Service
+public class Communication {
+    @Autowired
+    @Qualifier("dhl")
+    private Courier courier;    // Spring injects the strategy
+}</code></pre>
+
+<p>In Spring, the <code>BeanFactory.getBean()</code> call creates and returns the strategy object. The <code>ApplicationContext</code> manages the entire lifecycle. This is the Strategy pattern automated by the framework.</p>
+
+<!-- ================================================================ -->
+<h2>8. Full-Length Industry Project: Shopping Cart with Payment Strategy</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Business Scenario</div>
+<p>National Bank of India's e-commerce partner needs a shopping cart that supports multiple payment methods: UPI, Credit Card, and Net Banking. The payment method is selected by the customer at checkout. The cart must be able to switch payment strategies at runtime without modifying the cart logic. New payment methods (Wallet, EMI) must be addable without changing existing code.</p>
+</div>
+
+<h3>High-Level Design (HLD)</h3>
+
+<div class="diagram">
++---------------------------------------------------+
+|                CLIENT LAYER                        |
+|  Application (main)                                |
+|    +-- creates ShoppingCart (context)               |
+|    +-- adds items to cart                           |
+|    +-- selects payment strategy at checkout         |
++----------------------------+----------------------+
+                             |
+                             v
++---------------------------------------------------+
+|             CONTEXT LAYER                          |
+|  ShoppingCart (target class)                        |
+|    - items: List&lt;CartItem&gt;                         |
+|    - paymentStrategy: PaymentStrategy (HAS-A)      |
+|    + addItem(item)                                  |
+|    + setPaymentStrategy(strategy)                   |
+|    + checkout(): PaymentResult                      |
++---------------------------------------------------+
+                             |
+                             v
++---------------------------------------------------+
+|          STRATEGY LAYER                            |
+|  PaymentStrategy (interface)                       |
+|    + pay(amount): PaymentResult                    |
+|    + getName(): String                              |
+|         |                                           |
+|    +----+--------+----------+                       |
+|    |              |          |                       |
+|   UPI        CreditCard   NetBanking                |
+|   Strategy   Strategy     Strategy                  |
++---------------------------------------------------+
+                             |
+                             v
++---------------------------------------------------+
+|          MODEL LAYER                               |
+|  CartItem:      name, price, quantity               |
+|  PaymentResult: success, txnId, message             |
++---------------------------------------------------+
+</div>
+
+<h3>Low-Level Design (LLD)</h3>
+
+<div class="diagram">
++-------------------------------------------------------+
+| PaymentStrategy (interface)                           |
++-------------------------------------------------------+
+| + pay(amount: BigDecimal): PaymentResult              |
+| + getName(): String                                    |
+| + validate(): boolean                                  |
++-------------------------------------------------------+
+         ^              ^               ^
+         |              |               |
++-----------------+ +------------------+ +-------------------+
+| UPIStrategy     | | CreditCardStrat  | | NetBankingStrat   |
++-----------------+ +------------------+ +-------------------+
+| - upiId: String | | - cardNumber     | | - bankCode        |
+|                 | | - cvv, expiry    | | - userId          |
++-----------------+ +------------------+ +-------------------+
+
++-------------------------------------------------------+
+| ShoppingCart (Context)                                |
++-------------------------------------------------------+
+| - items: List&lt;CartItem&gt;                              |
+| - paymentStrategy: PaymentStrategy  [HAS-A interface] |
++-------------------------------------------------------+
+| + addItem(item): void                                 |
+| + removeItem(name): void                              |
+| + getTotal(): BigDecimal                              |
+| + setPaymentStrategy(strategy): void                  |
+| + checkout(): PaymentResult                           |
+| + displayCart(): void                                 |
++-------------------------------------------------------+
+</div>
+
+<h3>Project Structure</h3>
+<div class="ps">nbi-shopping-cart/
+├── src/
+│   └── main/java/com/nbi/shop/
+│       ├── model/
+│       │   ├── CartItem.java
+│       │   └── PaymentResult.java
+│       ├── strategy/
+│       │   ├── PaymentStrategy.java        (interface)
+│       │   ├── UPIStrategy.java
+│       │   ├── CreditCardStrategy.java
+│       │   └── NetBankingStrategy.java
+│       ├── cart/
+│       │   └── ShoppingCart.java           (context)
+│       └── Application.java
+├── src/
+│   └── test/java/com/nbi/shop/
+│       ├── strategy/
+│       │   └── PaymentStrategyTest.java
+│       └── cart/
+│           └── ShoppingCartTest.java
+└── pom.xml</div>
+
+<h3>CartItem.java</h3>
+<pre><code>package com.nbi.shop.model;
+
+import java.math.BigDecimal;
+
+public class CartItem {
+    private final String name;
+    private final BigDecimal price;
+    private final int quantity;
+
+    public CartItem(String name, BigDecimal price, int quantity) {
+        this.name = name;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public String getName() { return name; }
+    public BigDecimal getPrice() { return price; }
+    public int getQuantity() { return quantity; }
+
+    public BigDecimal getSubtotal() {
+        return price.multiply(BigDecimal.valueOf(quantity));
+    }
+
+    @Override
+    public String toString() {
+        return name + " x" + quantity + " @ Rs " + price + " = Rs " + getSubtotal();
+    }
+}</code></pre>
+
+<h3>PaymentResult.java</h3>
+<pre><code>package com.nbi.shop.model;
+
+import java.util.UUID;
+
+public class PaymentResult {
+    private final boolean success;
+    private final String transactionId;
+    private final String message;
+
+    private PaymentResult(boolean success, String transactionId, String message) {
+        this.success = success;
+        this.transactionId = transactionId;
+        this.message = message;
+    }
+
+    public static PaymentResult success(String message) {
+        String txnId = "TXN-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
+        return new PaymentResult(true, txnId, message);
+    }
+
+    public static PaymentResult failure(String message) {
+        return new PaymentResult(false, null, message);
+    }
+
+    public boolean isSuccess() { return success; }
+    public String getTransactionId() { return transactionId; }
+    public String getMessage() { return message; }
+
+    @Override
+    public String toString() {
+        return success
+            ? "SUCCESS | " + transactionId + " | " + message
+            : "FAILED | " + message;
+    }
+}</code></pre>
+
+<h3>PaymentStrategy.java (Strategy interface)</h3>
+<pre><code>package com.nbi.shop.strategy;
+
+import com.nbi.shop.model.PaymentResult;
+import java.math.BigDecimal;
+
+public interface PaymentStrategy {
+    PaymentResult pay(BigDecimal amount);
+    String getName();
+    boolean validate();
+}</code></pre>
+
+<h3>UPIStrategy.java</h3>
+<pre><code>package com.nbi.shop.strategy;
+
+import com.nbi.shop.model.PaymentResult;
+import java.math.BigDecimal;
+
+public class UPIStrategy implements PaymentStrategy {
+    private final String upiId;
+    private static final BigDecimal MAX_AMOUNT = new BigDecimal("100000");
+
+    public UPIStrategy(String upiId) {
+        this.upiId = upiId;
+    }
+
+    @Override
+    public boolean validate() {
+        return upiId != null && upiId.contains("@");
+    }
+
+    @Override
+    public PaymentResult pay(BigDecimal amount) {
+        if (!validate()) {
+            return PaymentResult.failure("Invalid UPI ID: " + upiId);
+        }
+        if (amount.compareTo(MAX_AMOUNT) > 0) {
+            return PaymentResult.failure("UPI limit exceeded. Max: Rs " + MAX_AMOUNT);
+        }
+
+        System.out.println("  [UPI] Sending request to " + upiId);
+        System.out.println("  [UPI] Waiting for approval...");
+        System.out.println("  [UPI] Payment approved");
+        return PaymentResult.success("Paid Rs " + amount + " via UPI (" + upiId + ")");
+    }
+
+    @Override
+    public String getName() { return "UPI"; }
+}</code></pre>
+
+<h3>CreditCardStrategy.java</h3>
+<pre><code>package com.nbi.shop.strategy;
+
+import com.nbi.shop.model.PaymentResult;
+import java.math.BigDecimal;
+
+public class CreditCardStrategy implements PaymentStrategy {
+    private final String cardNumber;
+    private final String cvv;
+    private final String expiry;
+
+    public CreditCardStrategy(String cardNumber, String cvv, String expiry) {
+        this.cardNumber = cardNumber;
+        this.cvv = cvv;
+        this.expiry = expiry;
+    }
+
+    @Override
+    public boolean validate() {
+        return cardNumber != null && cardNumber.length() == 16
+            && cvv != null && cvv.length() == 3
+            && expiry != null && !expiry.isEmpty();
+    }
+
+    @Override
+    public PaymentResult pay(BigDecimal amount) {
+        if (!validate()) {
+            return PaymentResult.failure("Invalid card details");
+        }
+
+        String masked = "****-" + cardNumber.substring(12);
+        System.out.println("  [CARD] Authorizing card " + masked);
+        System.out.println("  [CARD] Charging Rs " + amount);
+        System.out.println("  [CARD] Payment settled");
+        return PaymentResult.success("Paid Rs " + amount + " via Credit Card (" + masked + ")");
+    }
+
+    @Override
+    public String getName() { return "Credit Card"; }
+}</code></pre>
+
+<h3>NetBankingStrategy.java</h3>
+<pre><code>package com.nbi.shop.strategy;
+
+import com.nbi.shop.model.PaymentResult;
+import java.math.BigDecimal;
+
+public class NetBankingStrategy implements PaymentStrategy {
+    private final String bankCode;
+
+    public NetBankingStrategy(String bankCode) {
+        this.bankCode = bankCode;
+    }
+
+    @Override
+    public boolean validate() {
+        return bankCode != null && !bankCode.isEmpty();
+    }
+
+    @Override
+    public PaymentResult pay(BigDecimal amount) {
+        if (!validate()) {
+            return PaymentResult.failure("Bank code is required");
+        }
+
+        System.out.println("  [NETBANK] Redirecting to " + bankCode + " portal");
+        System.out.println("  [NETBANK] User approved transaction");
+        System.out.println("  [NETBANK] Debit confirmed");
+        return PaymentResult.success("Paid Rs " + amount + " via Net Banking (" + bankCode + ")");
+    }
+
+    @Override
+    public String getName() { return "Net Banking"; }
+}</code></pre>
+
+<h3>ShoppingCart.java (Context / Target class)</h3>
+<pre><code>package com.nbi.shop.cart;
+
+import com.nbi.shop.model.CartItem;
+import com.nbi.shop.model.PaymentResult;
+import com.nbi.shop.strategy.PaymentStrategy;
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+
+public class ShoppingCart {
+    private final List&lt;CartItem&gt; items = new ArrayList&lt;&gt;();
+    private PaymentStrategy paymentStrategy;  // HAS-A (composition)
+
+    public void addItem(CartItem item) {
+        items.add(item);
+    }
+
+    public void removeItem(String name) {
+        items.removeIf(item -> item.getName().equals(name));
+    }
+
+    public BigDecimal getTotal() {
+        return items.stream()
+            .map(CartItem::getSubtotal)
+            .reduce(BigDecimal.ZERO, BigDecimal::add);
+    }
+
+    // Strategy injection via setter
+    public void setPaymentStrategy(PaymentStrategy strategy) {
+        this.paymentStrategy = strategy;
+    }
+
+    public void displayCart() {
+        System.out.println("Cart Items:");
+        for (CartItem item : items) {
+            System.out.println("  " + item);
+        }
+        System.out.println("  Total: Rs " + getTotal());
+    }
+
+    public PaymentResult checkout() {
+        if (items.isEmpty()) {
+            return PaymentResult.failure("Cart is empty");
+        }
+        if (paymentStrategy == null) {
+            return PaymentResult.failure("No payment method selected");
+        }
+
+        BigDecimal total = getTotal();
+        System.out.println("Checking out with " + paymentStrategy.getName()
+            + " | Amount: Rs " + total);
+
+        PaymentResult result = paymentStrategy.pay(total);
+        if (result.isSuccess()) {
+            items.clear();
+        }
+        return result;
+    }
+}</code></pre>
+
+<h3>Application.java</h3>
+<pre><code>package com.nbi.shop;
+
+import com.nbi.shop.cart.ShoppingCart;
+import com.nbi.shop.model.CartItem;
+import com.nbi.shop.model.PaymentResult;
+import com.nbi.shop.strategy.*;
+import java.math.BigDecimal;
+
+public class Application {
+    public static void main(String[] args) {
+        ShoppingCart cart = new ShoppingCart();
+
+        // Add items
+        cart.addItem(new CartItem("Java: The Complete Reference", new BigDecimal("799"), 1));
+        cart.addItem(new CartItem("Mechanical Keyboard", new BigDecimal("3500"), 1));
+        cart.addItem(new CartItem("USB-C Hub", new BigDecimal("1200"), 2));
+
+        // Scenario 1: Pay with UPI
+        System.out.println("=== Scenario 1: UPI Payment ===");
+        cart.displayCart();
+        cart.setPaymentStrategy(new UPIStrategy("rajesh@icici"));
+        PaymentResult r1 = cart.checkout();
+        System.out.println("Result: " + r1);
+        System.out.println();
+
+        // Scenario 2: New cart, pay with Credit Card
+        System.out.println("=== Scenario 2: Credit Card Payment ===");
+        cart.addItem(new CartItem("Monitor", new BigDecimal("15000"), 1));
+        cart.addItem(new CartItem("Mouse", new BigDecimal("800"), 1));
+        cart.displayCart();
+        cart.setPaymentStrategy(new CreditCardStrategy("4111222233334444", "123", "12/28"));
+        PaymentResult r2 = cart.checkout();
+        System.out.println("Result: " + r2);
+        System.out.println();
+
+        // Scenario 3: Switch strategy at runtime to Net Banking
+        System.out.println("=== Scenario 3: Net Banking (runtime switch) ===");
+        cart.addItem(new CartItem("Standing Desk", new BigDecimal("25000"), 1));
+        cart.displayCart();
+        cart.setPaymentStrategy(new NetBankingStrategy("SBI"));
+        PaymentResult r3 = cart.checkout();
+        System.out.println("Result: " + r3);
+        System.out.println();
+
+        // Scenario 4: Validation failure (invalid UPI)
+        System.out.println("=== Scenario 4: Invalid UPI ===");
+        cart.addItem(new CartItem("Book", new BigDecimal("500"), 1));
+        cart.setPaymentStrategy(new UPIStrategy("invalid_no_at"));
+        PaymentResult r4 = cart.checkout();
+        System.out.println("Result: " + r4);
+        System.out.println();
+
+        // Scenario 5: Empty cart
+        System.out.println("=== Scenario 5: Empty Cart ===");
+        ShoppingCart emptyCart = new ShoppingCart();
+        emptyCart.setPaymentStrategy(new UPIStrategy("test@bank"));
+        PaymentResult r5 = emptyCart.checkout();
+        System.out.println("Result: " + r5);
+        System.out.println();
+
+        // Scenario 6: No payment strategy set
+        System.out.println("=== Scenario 6: No Payment Method ===");
+        ShoppingCart noPayCart = new ShoppingCart();
+        noPayCart.addItem(new CartItem("Item", new BigDecimal("100"), 1));
+        PaymentResult r6 = noPayCart.checkout();
+        System.out.println("Result: " + r6);
+    }
+}</code></pre>
+
+<h3>Expected Output</h3>
+<div class="output">=== Scenario 1: UPI Payment ===
+Cart Items:
+  Java: The Complete Reference x1 @ Rs 799 = Rs 799
+  Mechanical Keyboard x1 @ Rs 3500 = Rs 3500
+  USB-C Hub x2 @ Rs 1200 = Rs 2400
+  Total: Rs 6699
+Checking out with UPI | Amount: Rs 6699
+  [UPI] Sending request to rajesh@icici
+  [UPI] Waiting for approval...
+  [UPI] Payment approved
+Result: SUCCESS | TXN-A1B2C3D4 | Paid Rs 6699 via UPI (rajesh@icici)
+
+=== Scenario 2: Credit Card Payment ===
+Cart Items:
+  Monitor x1 @ Rs 15000 = Rs 15000
+  Mouse x1 @ Rs 800 = Rs 800
+  Total: Rs 15800
+Checking out with Credit Card | Amount: Rs 15800
+  [CARD] Authorizing card ****-4444
+  [CARD] Charging Rs 15800
+  [CARD] Payment settled
+Result: SUCCESS | TXN-E5F6G7H8 | Paid Rs 15800 via Credit Card (****-4444)
+
+=== Scenario 3: Net Banking (runtime switch) ===
+Cart Items:
+  Standing Desk x1 @ Rs 25000 = Rs 25000
+  Total: Rs 25000
+Checking out with Net Banking | Amount: Rs 25000
+  [NETBANK] Redirecting to SBI portal
+  [NETBANK] User approved transaction
+  [NETBANK] Debit confirmed
+Result: SUCCESS | TXN-I9J0K1L2 | Paid Rs 25000 via Net Banking (SBI)
+
+=== Scenario 4: Invalid UPI ===
+Checking out with UPI | Amount: Rs 500
+Result: FAILED | Invalid UPI ID: invalid_no_at
+
+=== Scenario 5: Empty Cart ===
+Result: FAILED | Cart is empty
+
+=== Scenario 6: No Payment Method ===
+Result: FAILED | No payment method selected</div>
+
+<h3>Key observations from the project</h3>
+<div class="card">
+<ol>
+<li><strong>ShoppingCart never imports concrete strategy classes.</strong> It depends only on the <code>PaymentStrategy</code> interface. Composition, not inheritance.</li>
+<li><strong>Strategy is swapped at runtime</strong> via <code>setPaymentStrategy()</code>. Scenario 1 uses UPI, scenario 2 switches to Credit Card, scenario 3 switches to Net Banking. The ShoppingCart code does not change.</li>
+<li><strong>Adding a Wallet strategy:</strong> Create <code>WalletStrategy implements PaymentStrategy</code>, inject it via <code>setPaymentStrategy(new WalletStrategy())</code>. Zero changes to ShoppingCart or other strategies.</li>
+<li><strong>Each strategy validates independently.</strong> UPI checks for @ in ID. Credit Card checks 16-digit number. Net Banking checks bank code. The cart does not know the validation rules.</li>
+<li><strong>Six scenarios cover happy path, runtime switch, validation failure, empty cart, and missing strategy.</strong> All demonstrate loose coupling.</li>
+<li><strong>Spring equivalent:</strong> Replace <code>setPaymentStrategy()</code> with <code>@Autowired @Qualifier("upi")</code> and the framework handles injection.</li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>9. Strategy vs Template Method</h2>
+<!-- ================================================================ -->
+
+<table>
+<tr><th>Aspect</th><th>Strategy</th><th>Template Method</th></tr>
+<tr><td>Mechanism</td><td>Composition (HAS-A interface reference)</td><td>Inheritance (abstract class + subclasses)</td></tr>
+<tr><td>What varies</td><td>The entire algorithm</td><td>Some steps of the algorithm</td></tr>
+<tr><td>Algorithm locked?</td><td>No. Each strategy defines its own flow</td><td>Yes. Template method is final</td></tr>
+<tr><td>Runtime swap</td><td>Yes. Change strategy object at runtime</td><td>No. Object type fixed at creation</td></tr>
+<tr><td>Open/Closed</td><td>Add new strategy class. No existing changes.</td><td>Add new subclass. No existing changes.</td></tr>
+<tr><td>Testing</td><td>Easy. Mock the interface.</td><td>Harder. Must test inherited + own methods.</td></tr>
+<tr><td>Use when</td><td>Multiple interchangeable algorithms</td><td>Fixed algorithm with varying steps</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>10. When to Use and When NOT to Use</h2>
+<!-- ================================================================ -->
+
+<h3>When to use Strategy</h3>
+<table>
+<tr><th>Scenario</th><th>Example</th><th>Why Strategy</th></tr>
+<tr><td>Multiple payment methods</td><td>UPI, Card, NetBanking, Wallet</td><td>Customer picks at runtime. Cart logic unchanged.</td></tr>
+<tr><td>Sorting algorithms</td><td>BubbleSort, QuickSort, MergeSort</td><td>Choose based on data size. Swap without changing caller.</td></tr>
+<tr><td>Compression</td><td>ZIP, GZIP, LZ4</td><td>Choose based on file type. All implement same interface.</td></tr>
+<tr><td>Authentication</td><td>JWT, OAuth2, Basic Auth</td><td>Different systems use different auth. Strategy lets you swap.</td></tr>
+<tr><td>Notification channels</td><td>Email, SMS, Push, Slack</td><td>User preference determines channel. Inject at runtime.</td></tr>
+</table>
+
+<h3>When NOT to use Strategy</h3>
+<table>
+<tr><th>Scenario</th><th>Why NOT</th><th>Use Instead</th></tr>
+<tr><td>Only one algorithm</td><td>No alternatives to swap between</td><td>Direct implementation</td></tr>
+<tr><td>Algorithm never changes at runtime</td><td>If decided at compile time, strategy adds unnecessary indirection</td><td>Template Method or simple if/else</td></tr>
+<tr><td>Too many strategies</td><td>If strategies proliferate and each is trivial, the pattern adds class count for little benefit</td><td>Lambda expressions or functional approach</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>11. Quick Reference Card</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<table>
+<tr><th>Component</th><th>Role</th><th>In Shopping Cart Project</th></tr>
+<tr><td>Context (Target)</td><td>Uses strategy via interface reference</td><td><code>ShoppingCart</code></td></tr>
+<tr><td>Strategy Interface</td><td>Common contract for all algorithms</td><td><code>PaymentStrategy</code></td></tr>
+<tr><td>Concrete Strategies</td><td>Each implements one algorithm</td><td><code>UPIStrategy</code>, <code>CreditCardStrategy</code>, <code>NetBankingStrategy</code></td></tr>
+<tr><td>Client</td><td>Creates strategy, injects into context</td><td><code>Application</code></td></tr>
+<tr><td>Injection method</td><td>Setter or constructor</td><td><code>setPaymentStrategy()</code></td></tr>
+</table>
+</div>
+
+<!-- ================================================================ -->
+<h2>12. Interview Questions</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<ol>
+<li>What is the Strategy pattern? Give a real-world example.</li>
+<li>What are the three rules of the Strategy pattern?</li>
+<li>Why should you favour composition over inheritance?</li>
+<li>What does "code to interfaces, not concrete classes" mean?</li>
+<li>What is the Open/Closed Principle and how does Strategy pattern follow it?</li>
+<li>What is the difference between Strategy and Template Method patterns?</li>
+<li>How does Spring Dependency Injection relate to the Strategy pattern?</li>
+<li>Design a notification system (Email, SMS, Push) using Strategy pattern.</li>
+<li>How do you add a new strategy without modifying existing code?</li>
+<li>What is tight coupling vs loose coupling? How does Strategy achieve loose coupling?</li>
+<li>Can you implement Strategy pattern using Java 8 lambdas? Show an example.</li>
+<li>What are the disadvantages of the Strategy pattern?</li>
+</ol>
+</div>
+
+</body>
+</html>

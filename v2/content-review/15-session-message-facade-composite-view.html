@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Session Facade, Message Facade, and Composite View Patterns | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px}
+h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}
+h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}
+p,li{font-size:14px;margin-bottom:8px}
+ul,ol{margin-left:24px;margin-bottom:12px}
+pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}
+code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}
+pre code{background:none;padding:0}
+.meta{font-size:13px;color:#999;margin-bottom:24px}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
+.tag-j{background:#fef3c7;color:#92400e}.tag-b{background:#dbeafe;color:#1e40af}.tag-p{background:#fce7f3;color:#9d174d}.tag-m{background:#fff3e0;color:#e67e22}
+.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.box-blue{border-color:#4A90D9;background:#eff6ff}
+.box-red{border-color:#e74c3c;background:#fef2f2}
+.box-green{border-color:#27ae60;background:#f0fdf4}
+.box-orange{border-color:#e67e22;background:#fffbeb}
+.box-purple{border-color:#8b5cf6;background:#f5f3ff}
+.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}
+th{background:#2d3748;color:#fff;font-weight:600}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-j">JEE Pattern</span>
+<span class="tag tag-b">Business Tier</span>
+<span class="tag tag-p">Presentation Tier</span>
+
+<h1>Session Facade, Message Facade, and Composite View Patterns</h1>
+<p class="meta">Three related JEE patterns | Synchronous vs Asynchronous Communication | Coarse-grained Service Access | Reusable View Components | Full Stock Trading and E-Commerce Examples | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<!-- PART 1: SESSION FACADE -->
+<!-- ================================================================ -->
+
+<h2>Session Facade Pattern</h2>
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Session Facade is a <strong>JEE Business Tier Pattern</strong>. It provides a <strong>coarse-grained interface</strong> to a set of fine-grained external services. Instead of the client making multiple network calls to multiple external services, the client makes ONE call to the Session Facade, which internally coordinates all the fine-grained calls on the server side.</p>
+<p><strong>One line:</strong> One dummy external comp that sits in front of multiple real external comps, reducing network round trips from the client.</p>
+</div>
+
+<h3>Problem: Multiple Network Round Trips</h3>
+
+<div class="diagram">Problem: BusinessDelegate calls 3 external services directly
+
+Client App                              Server Side (BSE/ICC)
+                        round trips
+BusinessDelegate ----[1]----> GetStockIdComp (External Service 1)
+                 <---[2]----
+                 ----[3]----> GetStockValueComp (External Service 2)
+                 <---[4]----
+                 ----[5]----> GetStockFutureValueComp (External Service 3)
+                 <---[6]----
+
+Total: 6 network round trips (3 requests + 3 responses)
+Each round trip adds latency. Performance bottleneck.</div>
+
+<p>Here BusinessDelegate comp of Client App is having multiple round trips with multiple external comps which leads to performance issues (problem).</p>
+
+<h3>Solution: Session Facade Aggregates Calls</h3>
+
+<div class="diagram">Solution: SessionFacade aggregates 3 services into 1
+
+Client App                              Server Side
+                        1 round trip
+BusinessDelegate ----[1]----> SessionFacadeComp
+                 <---[2]----    |
+                                |--> GetStockIdComp (local call, no network)
+                                |--> GetStockValueComp (local call)
+                                |--> GetStockFutureValueComp (local call)
+                                |
+                              All four comps are placed in same environment
+
+Total: 2 network trips (1 request + 1 response) instead of 6.
+Session Facade coordinates all internal calls on the server side.
+BusinessDelegate is getting all the 3 external comp services by just having
+one network round trip with SessionFacade comp (dummy comp).</div>
+
+<h3>Implementation</h3>
+<pre><code>// Session Facade interface
+public interface IStockFacade {
+    StockDetailsDTO getCompleteStockInfo(String stockName);
+}
+
+// Session Facade implementation: aggregates 3 services
+public class StockFacadeImpl implements IStockFacade {
+    private final IGetStockId stockIdService;
+    private final IGetStockValue stockValueService;
+    private final IGetStockFutureValue futureService;
+
+    public StockFacadeImpl() {
+        // All services are local to the Facade (same server)
+        this.stockIdService = new GetStockIdImpl();
+        this.stockValueService = new GetStockValueImpl();
+        this.futureService = new GetStockFutureValueImpl();
+    }
+
+    @Override
+    public StockDetailsDTO getCompleteStockInfo(String stockName) {
+        // 3 internal calls, 0 extra network round trips
+        int id = stockIdService.getStockId(stockName);
+        double value = stockValueService.getStockValue(id);
+        double future = futureService.getFutureValue(id);
+        return new StockDetailsDTO(stockName, id, value, future);
+    }
+}
+
+// Client side: ONE call instead of THREE
+StockDetailsDTO result = facade.getCompleteStockInfo("Reliance");</code></pre>
+
+<div class="box box-orange">
+<div class="box-label" style="color:#92400e">Key Points</div>
+<ul>
+<li>All four comps (SessionFacade + 3 external services) should be developed as Distributed comps either as WebService comp or as EJB comp. For simplification, we are developing ordinary Java classes implementing Java interfaces.</li>
+<li>The Session Facade and all external comps it wraps must be placed in the <strong>same environment/server</strong> so internal calls are local (no network overhead).</li>
+<li>The Session Facade provides a <strong>coarse-grained</strong> interface (one method that does everything) instead of multiple fine-grained calls.</li>
+</ul>
+</div>
+
+<!-- ================================================================ -->
+<!-- PART 2: MESSAGE FACADE -->
+<!-- ================================================================ -->
+
+<h2>Message Facade Pattern</h2>
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Message Facade is a <strong>JEE Business Tier Pattern</strong>. It is similar to Session Facade but uses <strong>asynchronous communication</strong> instead of synchronous. The client sends a message to the Message Facade and does not wait for a response. The Facade processes the request in the background using messaging systems like JMS (Java Message Service).</p>
+<p><strong>One line:</strong> An asynchronous version of Session Facade that uses message queues for non-blocking communication.</p>
+</div>
+
+<h3>Synchronous vs Asynchronous Communication</h3>
+
+<table>
+<tr><th>Aspect</th><th>Synchronous (Session Facade)</th><th>Asynchronous (Message Facade)</th></tr>
+<tr><td>Client behavior</td><td>Client sends request and <strong>waits</strong> (blocked) until response is received</td><td>Client sends message and <strong>continues</strong> immediately (non-blocking)</td></tr>
+<tr><td>Response</td><td>Immediate response in same call</td><td>Response delivered later via callback, polling, or notification</td></tr>
+<tr><td>Technology</td><td>RMI, EJB Session Beans, REST (default)</td><td>JMS, Kafka, RabbitMQ, SQS</td></tr>
+<tr><td>Use when</td><td>Client needs the result immediately</td><td>Client does not need immediate result</td></tr>
+<tr><td>Examples</td><td>Stock price lookup, balance check</td><td>Email sending, report generation, order processing</td></tr>
+</table>
+
+<div class="diagram">Synchronous Communication (Session Facade):
+
+Client App                    External Service
+    |                              |
+    |---- request (HTTP) --------->|
+    |     (client WAITS)           |---- process
+    |                              |---- query DB
+    |<--- response (HTTP) ---------|
+    |     (client RESUMES)
+    |
+If the request takes 10 seconds, client is BLOCKED for 10 seconds.
+
+Asynchronous Communication (Message Facade):
+
+Client App                    Message Queue         External Service
+    |                              |                      |
+    |---- send message ----------->|                      |
+    |     (client CONTINUES        |--- deliver message -->|
+    |      immediately!)           |                      |---- process
+    |                              |                      |---- query DB
+    |<--- notification/callback ---|<---- send response ---|
+    |     (later, when ready)
+
+Client is free to do other work while the request is being processed.</div>
+
+<h3>When to use Message Facade</h3>
+<ul>
+<li>If the client does not need the result <strong>immediately</strong> (e.g., sending email, generating PDF report)</li>
+<li>If the processing takes a long time (e.g., data migration, batch processing)</li>
+<li>If the system needs to handle <strong>spikes in traffic</strong> (message queue acts as buffer)</li>
+<li>If the external service may be <strong>temporarily unavailable</strong> (messages are persisted in queue)</li>
+</ul>
+
+<pre><code>// Message Facade: sends message to JMS queue
+public class OrderMessageFacade {
+
+    public void submitOrder(OrderDTO order) {
+        // Create JMS message
+        // Send to "orders" queue
+        // Client is NOT blocked - returns immediately
+        jmsTemplate.convertAndSend("orders-queue", order);
+        System.out.println("Order submitted to queue. Processing async.");
+    }
+}
+
+// Message Listener (processes asynchronously)
+@JmsListener(destination = "orders-queue")
+public void processOrder(OrderDTO order) {
+    // This runs in a separate thread, later
+    orderService.process(order);
+    notificationService.sendConfirmation(order);
+}</code></pre>
+
+<div class="box box-purple">
+<div class="box-label" style="color:#6d28d9">Session Facade vs Message Facade</div>
+<table>
+<tr><th>Aspect</th><th>Session Facade</th><th>Message Facade</th></tr>
+<tr><td>Communication</td><td>Synchronous (request-response)</td><td>Asynchronous (fire-and-forget)</td></tr>
+<tr><td>Client blocking</td><td>Yes, client waits</td><td>No, client continues</td></tr>
+<tr><td>Technology</td><td>EJB Session Bean, REST API</td><td>JMS, MDB (Message Driven Bean), Kafka</td></tr>
+<tr><td>Error handling</td><td>Immediate exception to client</td><td>Dead letter queue, retry mechanism</td></tr>
+<tr><td>Use case</td><td>Real-time data (stock price, balance)</td><td>Background tasks (email, report, notification)</td></tr>
+</table>
+</div>
+
+<p><strong>Note:</strong> "QUEUE" concept in messaging is used in JEE where sent message is consumed by one and only one receiver. In "TOPIC" concept, the message published by producer gets delivered to all the subscribers. This follows the publish-subscribe model.</p>
+
+<h3>JMS implementations and modern equivalents</h3>
+<ul>
+<li>ActiveMQ, RabbitMQ (JMS implementations)</li>
+<li>Apache Kafka (distributed streaming, high throughput)</li>
+<li>AWS SQS/SNS (cloud-native message service)</li>
+<li>Spring JMS, Spring AMQP, Spring Cloud Stream (framework support)</li>
+</ul>
+
+<!-- ================================================================ -->
+<!-- PART 3: COMPOSITE VIEW -->
+<!-- ================================================================ -->
+
+<h2>Composite View Pattern</h2>
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Composite View is a <strong>JEE Presentation Tier Pattern</strong>. A view that contains presentation logic having ability to generate views for each page independently, instead of the entire page. If the view logic is scattered in individual views, then those sub-views become a part of a larger composite view.</p>
+<p><strong>One line:</strong> Break a complex page into reusable sub-views (header, footer, sidebar, content) and compose them together dynamically.</p>
+</div>
+
+<p><strong>JSP</strong> - JavaServer Pages: each view comp is a separate JSP file.</p>
+<p><strong>angular/html</strong> - PA (pagination applied) to a single column of the DB table.</p>
+<p><strong>Composite/PV</strong> - PA (pagination applied) to multiple columns from multiple sections from the table together.</p>
+
+<h3>Problem: Monolithic Views</h3>
+
+<div class="diagram">Problem: Each page duplicates header and footer
+
+home.jsp:                    products.jsp:
++---------------------+     +---------------------+
+| header (duplicated)  |     | header (DUPLICATED!) |
++---------------------+     | re-embedded without  |
+| nav links           |     | any body content will|
++---------------------+     | also be changed!     |
+| body content        |     +---------------------+
+| (home specific)     |     | body content         |
++---------------------+     | (products specific)  |
+| footer (duplicated) |     +---------------------+
++---------------------+     | footer (DUPLICATED!) |
+                             +---------------------+
+
+If the header/footer logic (like header/footer logos) are not reusable logics,
+we need to change them in EVERY page when something changes.</div>
+
+<h3>Solution: Composite View with Includes</h3>
+
+<div class="diagram">Solution: Composite View using JSP includes
+
+JSP page (main.jsp):         header.jsp (reusable)
++---------------------+     +---------------------+
+| jsp:include           |     | Logo | Navigation   |
+|   file="header.jsp"  |     | Search | Login      |
++---------------------+     +---------------------+
+| jsp:include           |
+|   file="sidebar.jsp" |     sidebar.jsp (reusable)
+|   + main content     |     +---------------------+
++---------------------+     | Categories | Links   |
+| jsp:include           |     +---------------------+
+|   file="footer.jsp"  |
++---------------------+     footer.jsp (reusable)
+                             +---------------------+
+Makes the common logics in separate each comp              | Copyright | Social |
+and include them to the main page via the main             +---------------------+
+controller page as composite view.
+
+Changes to header happen in ONE file, reflected in ALL pages.</div>
+
+<h3>View Layout Types</h3>
+<table>
+<tr><th>#</th><th>Layout</th><th>Description</th></tr>
+<tr><td>1</td><td>Basic layout</td><td>Header + Body + Footer (3 regions)</td></tr>
+<tr><td>2</td><td>Classic layout</td><td>Header + Left sidebar + Body + Footer</td></tr>
+<tr><td>3</td><td>Menu layout</td><td>Header + Body + Right sidebar + Footer</td></tr>
+<tr><td>4</td><td>Full classic layout</td><td>Header + Left sidebar + Body + Right sidebar + Footer</td></tr>
+<tr><td>5</td><td>Divide layout</td><td>Header + multiple equal columns + Footer</td></tr>
+</table>
+
+<pre><code>// main.jsp using Composite View pattern
+&lt;%-- Header: reusable across all pages --%&gt;
+&lt;jsp:include page="header.jsp" /&gt;
+
+&lt;div class="layout"&gt;
+    &lt;%-- Sidebar: reusable navigation --%&gt;
+    &lt;jsp:include page="sidebar.jsp" /&gt;
+
+    &lt;%-- Main content: page-specific --%&gt;
+    &lt;div class="content"&gt;
+        &lt;jsp:include page="${contentPage}" /&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;%-- Footer: reusable across all pages --%&gt;
+&lt;jsp:include page="footer.jsp" /&gt;</code></pre>
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Modern Equivalents</div>
+<ul>
+<li><strong>Apache Tiles:</strong> Framework for Composite View in JEE. Define layouts with reusable regions. Each page fills in only the content region.</li>
+<li><strong>Thymeleaf Layouts:</strong> Template inheritance with <code>th:fragment</code> and <code>th:replace</code>.</li>
+<li><strong>JSF Facelets:</strong> Template composition with <code>ui:composition</code>, <code>ui:define</code>, <code>ui:insert</code>.</li>
+<li><strong>React/Next.js:</strong> Layout components that wrap page-specific content. This is exactly what our javabypankaj v2 does with <code>layout.tsx</code> wrapping TopBar + content + Footer.</li>
+<li><strong>Note:</strong> The Tiles framework will also work with Struts or JSF framework's based servlets into frontend web/view patterns.</li>
+</ul>
+</div>
+
+<p>Each portion of web page that contains static content is called a <strong>tile</strong>. If the application has multiple pages which contains/need same set of tiles (like the Styles and Layout), tiles pools to avoid re-development/duplication of tiles.</p>
+
+<!-- ================================================================ -->
+<!-- COMBINED COMPARISON AND INTERVIEW QUESTIONS -->
+<!-- ================================================================ -->
+
+<h2>Comparison Table</h2>
+
+<div class="card">
+<table>
+<tr><th>Aspect</th><th>Session Facade</th><th>Message Facade</th><th>Composite View</th></tr>
+<tr><td>Tier</td><td>Business</td><td>Business</td><td>Presentation</td></tr>
+<tr><td>Purpose</td><td>Aggregate multiple services into one coarse-grained call</td><td>Async version of Session Facade using message queues</td><td>Compose reusable view fragments into pages</td></tr>
+<tr><td>Communication</td><td>Synchronous</td><td>Asynchronous</td><td>N/A (view composition)</td></tr>
+<tr><td>Reduces</td><td>Network round trips</td><td>Client blocking time</td><td>View code duplication</td></tr>
+<tr><td>Modern equivalent</td><td>API Gateway, GraphQL</td><td>Kafka, RabbitMQ, SQS</td><td>React layouts, Thymeleaf templates</td></tr>
+</table>
+</div>
+
+<h2>Interview Questions</h2>
+
+<div class="card">
+<ol>
+<li>What is the Session Facade pattern? How does it reduce network round trips?</li>
+<li>What is the difference between fine-grained and coarse-grained interfaces?</li>
+<li>Where should the Session Facade be deployed relative to the external services?</li>
+<li>What is the Message Facade pattern? When would you use it over Session Facade?</li>
+<li>What is the difference between synchronous and asynchronous communication?</li>
+<li>What is a JMS Queue vs Topic? How do they relate to Message Facade?</li>
+<li>What is the Composite View pattern? How does it prevent view duplication?</li>
+<li>How does Apache Tiles implement the Composite View pattern?</li>
+<li>How do React/Next.js layouts implement the Composite View pattern?</li>
+<li>Design a Session Facade for an e-commerce checkout that calls inventory, payment, and shipping services.</li>
+<li>Design a Message Facade for an email notification system that handles 10,000 emails/hour.</li>
+<li>What is the relationship between Session Facade and API Gateway in microservices?</li>
+</ol>
+</div>
+
+</body>
+</html>

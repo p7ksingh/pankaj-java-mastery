@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Adapter Design Pattern in Java - Complete Tutorial | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px}
+h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}
+h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}
+p,li{font-size:14px;margin-bottom:8px}
+ul,ol{margin-left:24px;margin-bottom:12px}
+pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}
+code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}
+pre code{background:none;padding:0}
+.meta{font-size:13px;color:#999;margin-bottom:24px}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
+.tag-s{background:#fce7f3;color:#9d174d}.tag-g{background:#e8f8f0;color:#27ae60}.tag-m{background:#fff3e0;color:#e67e22}
+.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.box-blue{border-color:#4A90D9;background:#eff6ff}
+.box-red{border-color:#e74c3c;background:#fef2f2}
+.box-green{border-color:#27ae60;background:#f0fdf4}
+.box-orange{border-color:#e67e22;background:#fffbeb}
+.box-purple{border-color:#8b5cf6;background:#f5f3ff}
+.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}
+th{background:#2d3748;color:#fff;font-weight:600}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+.ps{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-family:Menlo,monospace;font-size:13px;line-height:1.6}
+.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-s">Structural</span>
+<span class="tag tag-g">GOF Pattern</span>
+<span class="tag tag-m">Medium</span>
+
+<h1>Adapter Design Pattern in Java</h1>
+<p class="meta">Complete Tutorial | 10 Sections | Full Currency Exchange Project with HLD and LLD | AccuWeather Example | Class vs Object Adapter | Multiple Scenarios | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>1. What is Adapter Pattern?</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Adapter pattern is a <strong>GOF Structural Pattern</strong>. It makes two incompatible components or interfaces interact with each other by performing the necessary conversions. It acts as a bridge between two incompatible interfaces.</p>
+<p><strong>One line:</strong> Convert the interface of one class into another interface the client expects, so that classes that could not work together can collaborate.</p>
+</div>
+
+<p>An adapter is responsible for two things:</p>
+<ol>
+<li>Performing <strong>data conversions</strong> as required for the destination (e.g., city name to city code, Fahrenheit to Celsius)</li>
+<li><strong>Interacting with the destination component</strong> by giving it the necessary inputs in the format it expects</li>
+</ol>
+
+<h3>Real-world examples</h3>
+
+<div class="diagram">Example 1: Power Adapter
+
+Live Supply (230V AC)  -->  [Adapter]  -->  Electronic Device (DC 9-12V)
+   (Indian outlet)          230V AC       (Mobile phone, laptop)
+                            to DC
+
+The adapter converts 230V AC to low-voltage DC.
+For an electronic product purchased in USA to work in India,
+we need an adapter which takes 230V and converts to 120V.
+Then that 120V will be converted to DC power.</div>
+
+<div class="diagram">Example 2: Weather App
+
+Your App                    Adapter                External Component
+(uses city name,    -->    (converts)    -->       WeatherReport API
+ needs celsius)            city name               (needs city code,
+                           to city code             returns fahrenheit)
+                           fahrenheit
+                           to celsius</div>
+
+<div class="diagram">Example 3: Stock Trading
+
+StockBroker            Adapter           StockExchange
+(stock name,    -->   (converts)   -->   (stock code,
+ stock price)          name to code       numeric price)
+
+Example 4: E-Commerce
+
+E-Commerce Store       Adapter          Payment Gateway
+(bank name,      -->  (converts)  -->   (bank code,
+ card details)         name to code      encrypted token)</div>
+
+<!-- ================================================================ -->
+<h2>2. The Problem</h2>
+<!-- ================================================================ -->
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Problem</div>
+<p>Your application (local component) uses city names and expects temperature in Celsius. The external WeatherReport API uses city codes (integers) and returns temperature in Fahrenheit. The two components are incompatible. Your app cannot call the external API directly because the data formats do not match.</p>
+</div>
+
+<div class="diagram">Problem: Incompatible Interfaces
+
+Your App (Local)                     External API (WeatherReport)
++-------------------+               +-------------------+
+| Input: "Hyderabad"|               | Input: 1100       |
+|       (city name) |  INCOMPATIBLE | (city code)       |
+| Output: celsius   |  <---------  | Output: fahrenheit|
++-------------------+  cannot call  +-------------------+
+
+The external comp is expecting city code, not the city name.
+Similarly, external comp is giving temperature in fahrenheit
+degrees but we need it in celsius degrees.
+For this, take the support of Adapter (two-way adapter).</div>
+
+<!-- ================================================================ -->
+<h2>3. The Solution: Adapter as Bridge</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Solution</div>
+<p>Place an <strong>Adapter class</strong> between your local component and the external component. The adapter:</p>
+<ol>
+<li>Implements your local interface (so your app can call it normally)</li>
+<li>Internally creates/holds an instance of the external component</li>
+<li>Converts input data from your format to the external format (city name to city code)</li>
+<li>Calls the external component with the converted data</li>
+<li>Converts the output data from external format to your format (Fahrenheit to Celsius)</li>
+<li>Returns the converted result to your app</li>
+</ol>
+</div>
+
+<div class="diagram">Solution: Adapter bridges the gap
+
+Your App --> IAccuWeatherService --> Adapter --> IWeatherReportComp --> External API
+ (city name)  (your interface)      (converts)  (external interface)    (city code)
+ (celsius)                          both ways                           (fahrenheit)</div>
+
+<!-- ================================================================ -->
+<h2>4. AccuWeather Example (from course notes)</h2>
+<!-- ================================================================ -->
+
+<p>The AccuWeather Local Service Component interacts with the destination WeatherReport component through an adapter that performs two conversions: (a) converting city name to city code, and (b) converting temperature from Fahrenheit degrees to Celsius degrees.</p>
+
+<h3>External component (third-party, cannot modify)</h3>
+<pre><code>// IWeatherReportComp.java (external interface)
+package com.nt.external;
+
+public interface IWeatherReportComp {
+    float getTemperature(int cityCode);
+}
+
+// WeatherReportCompImpl.java (external implementation)
+package com.nt.external;
+
+import java.util.Random;
+
+public class WeatherReportCompImpl implements IWeatherReportComp {
+    @Override
+    public float getTemperature(int cityCode) {
+        // Returns temperature in FAHRENHEIT based on city code
+        if (cityCode == 1100)       // Hyderabad - India
+            return new Random().nextFloat() * 100.0f;
+        else if (cityCode == 1101)  // Delhi
+            return new Random().nextFloat() * 100.0f;
+        else if (cityCode == 1202)  // Bangalore
+            return new Random().nextFloat() * 100.0f;
+        else
+            throw new IllegalArgumentException("Invalid city code");
+    }
+}</code></pre>
+
+<h3>Local service interface (your application)</h3>
+<pre><code>// IAccuWeatherService.java (local interface)
+package com.nt.service;
+
+public interface IAccuWeatherService {
+    String showTemperature(String cityName);
+}</code></pre>
+
+<h3>Adapter class (the bridge)</h3>
+<pre><code>// WeatherReportCompAdapter.java
+package com.nt.adapter;
+
+import com.nt.external.IWeatherReportComp;
+import com.nt.external.WeatherReportCompImpl;
+
+public class WeatherReportCompAdapter {
+
+    public String fetchTemperature(String cityName) {
+        // Conversion 1: city name to city code (adapter logic)
+        int cityCode;
+        if (cityName.equalsIgnoreCase("hyderabad"))
+            cityCode = 1100;
+        else if (cityName.equalsIgnoreCase("bangalore"))
+            cityCode = 1202;
+        else if (cityName.equalsIgnoreCase("delhi"))
+            cityCode = 1101;
+        else
+            return "City not found in list";
+
+        // Use external comp service
+        IWeatherReportComp comp = new WeatherReportCompImpl();
+        float tempF = comp.getTemperature(cityCode);
+
+        // Conversion 2: fahrenheit to celsius (adapter logic)
+        float tempC = (5.0f / 9.0f) * (tempF - 32.0f);
+        return tempC + " celsius degrees";
+    }
+}</code></pre>
+
+<h3>Local service implementation (uses adapter internally)</h3>
+<pre><code>// AccuWeatherServiceImpl.java
+package com.nt.service;
+
+import com.nt.adapter.WeatherReportCompAdapter;
+
+public class AccuWeatherServiceImpl implements IAccuWeatherService {
+
+    @Override
+    public String showTemperature(String cityName) {
+        // Use adapter class
+        WeatherReportCompAdapter adapter = new WeatherReportCompAdapter();
+        String tempInfo = adapter.fetchTemperature(cityName);
+        return tempInfo;
+    }
+}</code></pre>
+
+<h3>Client test</h3>
+<pre><code>// AdapterDPTest.java
+package com.nt.test;
+
+import com.nt.service.AccuWeatherServiceImpl;
+import com.nt.service.IAccuWeatherService;
+
+public class AdapterDPTest {
+    public static void main(String[] args) {
+        // Use AccuWeather service
+        IAccuWeatherService service = new AccuWeatherServiceImpl();
+        String result = service.showTemperature("hyderabad");
+        System.out.println("Temperature: " + result);
+    }
+}</code></pre>
+
+<div class="output">Temperature: 22.35 celsius degrees</div>
+
+<!-- ================================================================ -->
+<h2>5. Two Types of Adapter</h2>
+<!-- ================================================================ -->
+
+<h3>a) Object Adapter (Composition - Recommended)</h3>
+<p>The adapter holds a reference to the adaptee (external component) via composition (HAS-A).</p>
+
+<pre><code>// Object Adapter: holds reference to adaptee
+public class WeatherAdapter implements IAccuWeatherService {
+    private final IWeatherReportComp adaptee;  // HAS-A (composition)
+
+    public WeatherAdapter(IWeatherReportComp adaptee) {
+        this.adaptee = adaptee;
+    }
+
+    @Override
+    public String showTemperature(String cityName) {
+        int cityCode = convertCityNameToCode(cityName);
+        float tempF = adaptee.getTemperature(cityCode);
+        float tempC = fahrenheitToCelsius(tempF);
+        return String.format("%.1f celsius", tempC);
+    }
+
+    private int convertCityNameToCode(String name) { /* ... */ }
+    private float fahrenheitToCelsius(float f) { return (5.0f / 9.0f) * (f - 32); }
+}</code></pre>
+
+<h3>b) Class Adapter (Inheritance - Less common in Java)</h3>
+<p>The adapter extends the adaptee class and implements the target interface. Requires multiple inheritance, so in Java this is only possible when the adaptee is a concrete class (extend) and the target is an interface (implement).</p>
+
+<pre><code>// Class Adapter: extends adaptee, implements target
+public class WeatherClassAdapter extends WeatherReportCompImpl
+                                  implements IAccuWeatherService {
+
+    @Override
+    public String showTemperature(String cityName) {
+        int cityCode = convertCityNameToCode(cityName);
+        float tempF = getTemperature(cityCode);  // inherited from adaptee
+        float tempC = fahrenheitToCelsius(tempF);
+        return String.format("%.1f celsius", tempC);
+    }
+}</code></pre>
+
+<table>
+<tr><th>Aspect</th><th>Object Adapter</th><th>Class Adapter</th></tr>
+<tr><td>Mechanism</td><td>Composition (HAS-A)</td><td>Inheritance (IS-A)</td></tr>
+<tr><td>Flexibility</td><td>Can adapt any subclass of adaptee</td><td>Locked to one specific adaptee class</td></tr>
+<tr><td>Java support</td><td>Fully supported</td><td>Limited (no multiple class inheritance)</td></tr>
+<tr><td>Recommended</td><td>Yes</td><td>Use only when composition is not possible</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>6. Pre-defined Adapter Classes in Java</h2>
+<!-- ================================================================ -->
+
+<table>
+<tr><th>Adapter</th><th>Converts From</th><th>Converts To</th></tr>
+<tr><td><code>java.util.Arrays.asList()</code></td><td>Array</td><td>List (gives List from given array content)</td></tr>
+<tr><td><code>java.util.Collections.list()</code></td><td>Enumeration</td><td>ArrayList (gives collection from the given content)</td></tr>
+<tr><td><code>java.util.Collections.enumeration()</code></td><td>Collection</td><td>Enumeration (appears in Enumerations)</td></tr>
+<tr><td><code>java.io.InputStreamReader</code></td><td>InputStream (byte stream)</td><td>Reader (character stream)</td></tr>
+<tr><td><code>java.io.OutputStreamWriter</code></td><td>OutputStream (byte stream)</td><td>Writer (character stream)</td></tr>
+<tr><td><code>javax.xml.bind.annotation.adapters.XmlAdapter</code></td><td>XML data (marshalling)</td><td>Java object data (unmarshalling). Used to convert XML data to object data and object data to XML data.</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>7. Full-Length Industry Project: Currency Exchange Adapter</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Business Scenario</div>
+<p>National Bank of India's international transfer service needs to display exchange rates and convert currencies. The bank's internal system uses INR and city names. The external forex API (ExchangeRateAPI) uses ISO currency codes (USD, EUR, GBP) and returns rates in a different response format. An adapter bridges the gap so the bank's service can call the external API without knowing its internal format.</p>
+</div>
+
+<h3>High-Level Design (HLD)</h3>
+
+<div class="diagram">
++---------------------------------------------------+
+|             BANK SERVICE LAYER                     |
+|  CurrencyService (uses ICurrencyProvider)          |
+|    - getExchangeRate("US Dollar")                  |
+|    - convert(1000, "INR", "US Dollar")             |
+|    (uses currency NAMES, expects INR-based rates)  |
++----------------------------+----------------------+
+                             |
+                             v
++---------------------------------------------------+
+|             ADAPTER LAYER                          |
+|  ForexAPIAdapter (implements ICurrencyProvider)    |
+|    - converts currency NAME to ISO CODE            |
+|    - calls external API with ISO code              |
+|    - converts response format to bank format       |
++----------------------------+----------------------+
+                             |
+                             v
++---------------------------------------------------+
+|          EXTERNAL API LAYER (cannot modify)        |
+|  IForexAPI interface                               |
+|  ForexAPIImpl                                      |
+|    - getRate(String isoCode): ExternalRate          |
+|    (uses ISO codes: USD, EUR, GBP, JPY)            |
+|    (returns rate in its own format)                 |
++---------------------------------------------------+
+</div>
+
+<h3>Low-Level Design (LLD)</h3>
+
+<div class="diagram">
++-------------------------------------------------------+
+| ICurrencyProvider (bank's interface)                  |
++-------------------------------------------------------+
+| + getExchangeRate(currencyName): ExchangeRate         |
+| + convert(amount, from, to): ConversionResult         |
+| + getSupportedCurrencies(): List&lt;String&gt;              |
++-------------------------------------------------------+
+         ^
+         |
++-------------------------------------------------------+
+| ForexAPIAdapter (implements ICurrencyProvider)        |
++-------------------------------------------------------+
+| - forexAPI: IForexAPI            [HAS-A, composition] |
+| - nameToCodeMap: Map             [conversion lookup]  |
++-------------------------------------------------------+
+| + getExchangeRate(name): ExchangeRate                 |
+| + convert(amount, from, to): ConversionResult         |
+| - resolveCode(name): String      [name to ISO code]  |
+| - toExchangeRate(ext): ExchangeRate [format convert]  |
++-------------------------------------------------------+
+
++-------------------------------------------------------+
+| IForexAPI (external, cannot modify)                   |
++-------------------------------------------------------+
+| + getRate(isoCode): ExternalRate                      |
++-------------------------------------------------------+
+         ^
+         |
++-------------------------------------------------------+
+| ForexAPIImpl (external implementation)                |
++-------------------------------------------------------+
+| + getRate(isoCode): ExternalRate                      |
+| (returns rate relative to USD, in external format)    |
++-------------------------------------------------------+
+
++------------------------------+  +------------------------------+
+| ExternalRate (external model)| | ExchangeRate (bank model)    |
++------------------------------+  +------------------------------+
+| - isoCode: String            | | - currencyName: String       |
+| - rateToUSD: double          | | - isoCode: String            |
+| - lastUpdated: long          | | - rateToINR: double          |
++------------------------------+  | - lastUpdated: String        |
+                                  +------------------------------+
+
++------------------------------+
+| ConversionResult             |
++------------------------------+
+| - fromCurrency: String       |
+| - toCurrency: String         |
+| - originalAmount: double     |
+| - convertedAmount: double    |
+| - rate: double               |
++------------------------------+
+</div>
+
+<h3>Project Structure</h3>
+<div class="ps">nbi-currency-adapter/
+├── src/
+│   └── main/java/com/nbi/currency/
+│       ├── external/
+│       │   ├── IForexAPI.java              (external interface, cannot modify)
+│       │   ├── ForexAPIImpl.java           (external implementation)
+│       │   └── ExternalRate.java           (external model)
+│       ├── model/
+│       │   ├── ExchangeRate.java           (bank's model)
+│       │   └── ConversionResult.java
+│       ├── adapter/
+│       │   └── ForexAPIAdapter.java        (adapter)
+│       ├── provider/
+│       │   └── ICurrencyProvider.java      (bank's interface)
+│       ├── service/
+│       │   └── CurrencyService.java
+│       └── Application.java
+├── src/
+│   └── test/java/com/nbi/currency/
+│       └── adapter/
+│           └── ForexAPIAdapterTest.java
+└── pom.xml</div>
+
+<h3>External API (third-party, cannot modify)</h3>
+<pre><code>// ExternalRate.java (external model)
+package com.nbi.currency.external;
+
+public class ExternalRate {
+    private final String isoCode;
+    private final double rateToUSD;
+    private final long lastUpdatedEpoch;
+
+    public ExternalRate(String isoCode, double rateToUSD, long lastUpdatedEpoch) {
+        this.isoCode = isoCode;
+        this.rateToUSD = rateToUSD;
+        this.lastUpdatedEpoch = lastUpdatedEpoch;
+    }
+
+    public String getIsoCode() { return isoCode; }
+    public double getRateToUSD() { return rateToUSD; }
+    public long getLastUpdatedEpoch() { return lastUpdatedEpoch; }
+}
+
+// IForexAPI.java (external interface)
+package com.nbi.currency.external;
+
+public interface IForexAPI {
+    ExternalRate getRate(String isoCode);
+}
+
+// ForexAPIImpl.java (external implementation)
+package com.nbi.currency.external;
+
+public class ForexAPIImpl implements IForexAPI {
+
+    @Override
+    public ExternalRate getRate(String isoCode) {
+        // Simulated rates (1 unit of currency = X USD)
+        long now = System.currentTimeMillis();
+        switch (isoCode.toUpperCase()) {
+            case "INR": return new ExternalRate("INR", 0.012, now);
+            case "USD": return new ExternalRate("USD", 1.0, now);
+            case "EUR": return new ExternalRate("EUR", 1.08, now);
+            case "GBP": return new ExternalRate("GBP", 1.26, now);
+            case "JPY": return new ExternalRate("JPY", 0.0067, now);
+            case "AED": return new ExternalRate("AED", 0.27, now);
+            default:
+                throw new IllegalArgumentException("Unsupported currency: " + isoCode);
+        }
+    }
+}</code></pre>
+
+<h3>Bank's model and interface</h3>
+<pre><code>// ExchangeRate.java (bank's model)
+package com.nbi.currency.model;
+
+public class ExchangeRate {
+    private final String currencyName;
+    private final String isoCode;
+    private final double rateToINR;
+    private final String lastUpdated;
+
+    public ExchangeRate(String currencyName, String isoCode,
+                        double rateToINR, String lastUpdated) {
+        this.currencyName = currencyName;
+        this.isoCode = isoCode;
+        this.rateToINR = rateToINR;
+        this.lastUpdated = lastUpdated;
+    }
+
+    public String getCurrencyName() { return currencyName; }
+    public String getIsoCode() { return isoCode; }
+    public double getRateToINR() { return rateToINR; }
+    public String getLastUpdated() { return lastUpdated; }
+
+    @Override
+    public String toString() {
+        return String.format("1 %s (%s) = Rs %.2f INR [updated: %s]",
+            currencyName, isoCode, rateToINR, lastUpdated);
+    }
+}
+
+// ConversionResult.java
+package com.nbi.currency.model;
+
+public class ConversionResult {
+    private final String fromCurrency;
+    private final String toCurrency;
+    private final double originalAmount;
+    private final double convertedAmount;
+    private final double rate;
+
+    public ConversionResult(String fromCurrency, String toCurrency,
+                            double originalAmount, double convertedAmount, double rate) {
+        this.fromCurrency = fromCurrency;
+        this.toCurrency = toCurrency;
+        this.originalAmount = originalAmount;
+        this.convertedAmount = convertedAmount;
+        this.rate = rate;
+    }
+
+    public double getConvertedAmount() { return convertedAmount; }
+
+    @Override
+    public String toString() {
+        return String.format("%.2f %s = %.2f %s (rate: %.4f)",
+            originalAmount, fromCurrency, convertedAmount, toCurrency, rate);
+    }
+}
+
+// ICurrencyProvider.java (bank's interface)
+package com.nbi.currency.provider;
+
+import com.nbi.currency.model.ExchangeRate;
+import com.nbi.currency.model.ConversionResult;
+import java.util.List;
+
+public interface ICurrencyProvider {
+    ExchangeRate getExchangeRate(String currencyName);
+    ConversionResult convert(double amount, String fromCurrency, String toCurrency);
+    List&lt;String&gt; getSupportedCurrencies();
+}</code></pre>
+
+<h3>ForexAPIAdapter.java (the adapter)</h3>
+<pre><code>package com.nbi.currency.adapter;
+
+import com.nbi.currency.external.ExternalRate;
+import com.nbi.currency.external.ForexAPIImpl;
+import com.nbi.currency.external.IForexAPI;
+import com.nbi.currency.model.ConversionResult;
+import com.nbi.currency.model.ExchangeRate;
+import com.nbi.currency.provider.ICurrencyProvider;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.util.*;
+
+public class ForexAPIAdapter implements ICurrencyProvider {
+    private final IForexAPI forexAPI;  // HAS-A (composition with external component)
+
+    private static final Map&lt;String, String&gt; NAME_TO_CODE = new LinkedHashMap&lt;&gt;();
+    static {
+        NAME_TO_CODE.put("Indian Rupee", "INR");
+        NAME_TO_CODE.put("US Dollar", "USD");
+        NAME_TO_CODE.put("Euro", "EUR");
+        NAME_TO_CODE.put("British Pound", "GBP");
+        NAME_TO_CODE.put("Japanese Yen", "JPY");
+        NAME_TO_CODE.put("UAE Dirham", "AED");
+    }
+
+    private static final DateTimeFormatter FORMATTER =
+        DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss")
+            .withZone(ZoneId.of("Asia/Kolkata"));
+
+    public ForexAPIAdapter() {
+        this.forexAPI = new ForexAPIImpl();
+    }
+
+    // Constructor for testing with mock API
+    public ForexAPIAdapter(IForexAPI forexAPI) {
+        this.forexAPI = forexAPI;
+    }
+
+    @Override
+    public ExchangeRate getExchangeRate(String currencyName) {
+        // Conversion 1: currency name to ISO code
+        String isoCode = resolveCode(currencyName);
+
+        // Call external API with ISO code
+        ExternalRate externalRate = forexAPI.getRate(isoCode);
+
+        // Conversion 2: USD-based rate to INR-based rate
+        ExternalRate inrRate = forexAPI.getRate("INR");
+        double rateToINR = externalRate.getRateToUSD() / inrRate.getRateToUSD();
+
+        // Conversion 3: epoch timestamp to readable date
+        String lastUpdated = FORMATTER.format(
+            Instant.ofEpochMilli(externalRate.getLastUpdatedEpoch()));
+
+        return new ExchangeRate(currencyName, isoCode, rateToINR, lastUpdated);
+    }
+
+    @Override
+    public ConversionResult convert(double amount, String fromCurrency, String toCurrency) {
+        ExchangeRate fromRate = getExchangeRate(fromCurrency);
+        ExchangeRate toRate = getExchangeRate(toCurrency);
+
+        // Convert: from -> INR -> to
+        double amountInINR = amount * fromRate.getRateToINR();
+        double convertedAmount = amountInINR / toRate.getRateToINR();
+        double directRate = fromRate.getRateToINR() / toRate.getRateToINR();
+
+        return new ConversionResult(fromCurrency, toCurrency,
+            amount, convertedAmount, directRate);
+    }
+
+    @Override
+    public List&lt;String&gt; getSupportedCurrencies() {
+        return new ArrayList&lt;&gt;(NAME_TO_CODE.keySet());
+    }
+
+    private String resolveCode(String currencyName) {
+        String code = NAME_TO_CODE.get(currencyName);
+        if (code == null) {
+            throw new IllegalArgumentException(
+                "Unknown currency: " + currencyName
+                + ". Supported: " + NAME_TO_CODE.keySet());
+        }
+        return code;
+    }
+}</code></pre>
+
+<h3>CurrencyService.java</h3>
+<pre><code>package com.nbi.currency.service;
+
+import com.nbi.currency.adapter.ForexAPIAdapter;
+import com.nbi.currency.model.ConversionResult;
+import com.nbi.currency.model.ExchangeRate;
+import com.nbi.currency.provider.ICurrencyProvider;
+
+public class CurrencyService {
+    private final ICurrencyProvider provider;
+
+    public CurrencyService() {
+        this.provider = new ForexAPIAdapter();
+    }
+
+    // Constructor for testing with mock provider
+    public CurrencyService(ICurrencyProvider provider) {
+        this.provider = provider;
+    }
+
+    public void displayRate(String currencyName) {
+        ExchangeRate rate = provider.getExchangeRate(currencyName);
+        System.out.println("  " + rate);
+    }
+
+    public ConversionResult convertCurrency(double amount,
+                                             String from, String to) {
+        ConversionResult result = provider.convert(amount, from, to);
+        System.out.println("  " + result);
+        return result;
+    }
+}</code></pre>
+
+<h3>Application.java</h3>
+<pre><code>package com.nbi.currency;
+
+import com.nbi.currency.service.CurrencyService;
+
+public class Application {
+    public static void main(String[] args) {
+        CurrencyService service = new CurrencyService();
+
+        // Scenario 1: Display exchange rates
+        System.out.println("=== Scenario 1: Exchange Rates ===");
+        service.displayRate("US Dollar");
+        service.displayRate("Euro");
+        service.displayRate("British Pound");
+        service.displayRate("Japanese Yen");
+        service.displayRate("UAE Dirham");
+        System.out.println();
+
+        // Scenario 2: Convert INR to USD
+        System.out.println("=== Scenario 2: INR to USD ===");
+        service.convertCurrency(100000, "Indian Rupee", "US Dollar");
+        System.out.println();
+
+        // Scenario 3: Convert USD to EUR
+        System.out.println("=== Scenario 3: USD to EUR ===");
+        service.convertCurrency(5000, "US Dollar", "Euro");
+        System.out.println();
+
+        // Scenario 4: Convert GBP to INR
+        System.out.println("=== Scenario 4: GBP to INR ===");
+        service.convertCurrency(1000, "British Pound", "Indian Rupee");
+        System.out.println();
+
+        // Scenario 5: Invalid currency
+        System.out.println("=== Scenario 5: Invalid Currency ===");
+        try {
+            service.displayRate("Bitcoin");
+        } catch (IllegalArgumentException e) {
+            System.out.println("  Error: " + e.getMessage());
+        }
+        System.out.println();
+
+        // Scenario 6: List supported currencies
+        System.out.println("=== Scenario 6: Supported Currencies ===");
+        var adapter = new com.nbi.currency.adapter.ForexAPIAdapter();
+        System.out.println("  " + adapter.getSupportedCurrencies());
+    }
+}</code></pre>
+
+<h3>Expected Output</h3>
+<div class="output">=== Scenario 1: Exchange Rates ===
+  1 US Dollar (USD) = Rs 83.33 INR [updated: 2026-11-02 18:00:00]
+  1 Euro (EUR) = Rs 90.00 INR [updated: 2026-11-02 18:00:00]
+  1 British Pound (GBP) = Rs 105.00 INR [updated: 2026-11-02 18:00:00]
+  1 Japanese Yen (JPY) = Rs 0.56 INR [updated: 2026-11-02 18:00:00]
+  1 UAE Dirham (AED) = Rs 22.50 INR [updated: 2026-11-02 18:00:00]
+
+=== Scenario 2: INR to USD ===
+  100000.00 Indian Rupee = 1200.00 US Dollar (rate: 0.0120)
+
+=== Scenario 3: USD to EUR ===
+  5000.00 US Dollar = 4629.63 Euro (rate: 0.9259)
+
+=== Scenario 4: GBP to INR ===
+  1000.00 British Pound = 105000.00 Indian Rupee (rate: 105.0000)
+
+=== Scenario 5: Invalid Currency ===
+  Error: Unknown currency: Bitcoin. Supported: [Indian Rupee, US Dollar, Euro, British Pound, Japanese Yen, UAE Dirham]
+
+=== Scenario 6: Supported Currencies ===
+  [Indian Rupee, US Dollar, Euro, British Pound, Japanese Yen, UAE Dirham]</div>
+
+<h3>ForexAPIAdapterTest.java</h3>
+<pre><code>package com.nbi.currency.adapter;
+
+import com.nbi.currency.external.ExternalRate;
+import com.nbi.currency.external.IForexAPI;
+import com.nbi.currency.model.ConversionResult;
+import com.nbi.currency.model.ExchangeRate;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class ForexAPIAdapterTest {
+    private ForexAPIAdapter adapter;
+
+    @BeforeEach
+    void setUp() {
+        // Mock external API with fixed rates for predictable testing
+        IForexAPI mockAPI = (isoCode) -> {
+            switch (isoCode) {
+                case "INR": return new ExternalRate("INR", 0.012, System.currentTimeMillis());
+                case "USD": return new ExternalRate("USD", 1.0, System.currentTimeMillis());
+                case "EUR": return new ExternalRate("EUR", 1.08, System.currentTimeMillis());
+                case "GBP": return new ExternalRate("GBP", 1.26, System.currentTimeMillis());
+                default: throw new IllegalArgumentException("Unknown: " + isoCode);
+            }
+        };
+        adapter = new ForexAPIAdapter(mockAPI);
+    }
+
+    @Test
+    void getExchangeRate_convertsNameToCode() {
+        ExchangeRate rate = adapter.getExchangeRate("US Dollar");
+        assertEquals("USD", rate.getIsoCode());
+    }
+
+    @Test
+    void getExchangeRate_convertsToINR() {
+        ExchangeRate rate = adapter.getExchangeRate("US Dollar");
+        assertTrue(rate.getRateToINR() > 0);
+        // 1 USD = 1.0/0.012 = ~83.33 INR
+        assertEquals(83.33, rate.getRateToINR(), 1.0);
+    }
+
+    @Test
+    void getExchangeRate_formatsDate() {
+        ExchangeRate rate = adapter.getExchangeRate("Euro");
+        assertNotNull(rate.getLastUpdated());
+        assertTrue(rate.getLastUpdated().contains("2026"));
+    }
+
+    @Test
+    void convert_INRtoUSD() {
+        ConversionResult result = adapter.convert(83333, "Indian Rupee", "US Dollar");
+        assertEquals(1000.0, result.getConvertedAmount(), 5.0);
+    }
+
+    @Test
+    void convert_USDtoEUR() {
+        ConversionResult result = adapter.convert(1000, "US Dollar", "Euro");
+        assertTrue(result.getConvertedAmount() > 0);
+    }
+
+    @Test
+    void getExchangeRate_throwsForUnknown() {
+        assertThrows(IllegalArgumentException.class,
+            () -> adapter.getExchangeRate("Bitcoin"));
+    }
+
+    @Test
+    void getSupportedCurrencies_returnsAll() {
+        var currencies = adapter.getSupportedCurrencies();
+        assertTrue(currencies.contains("US Dollar"));
+        assertTrue(currencies.contains("Indian Rupee"));
+        assertTrue(currencies.contains("Euro"));
+    }
+
+    @Test
+    void adapter_usesComposition() {
+        // Adapter should work with any IForexAPI implementation
+        // (mock or real). This proves Object Adapter pattern.
+        assertNotNull(adapter.getExchangeRate("British Pound"));
+    }
+}</code></pre>
+
+<h3>Key observations from the project</h3>
+<div class="card">
+<ol>
+<li><strong>Three conversions performed by the adapter:</strong> Currency name to ISO code, USD-based rate to INR-based rate, epoch timestamp to human-readable date. The bank service never knows about ISO codes or USD base rates.</li>
+<li><strong>Object Adapter pattern:</strong> ForexAPIAdapter holds <code>IForexAPI</code> reference (HAS-A composition). This allows injecting a mock API for testing.</li>
+<li><strong>External API is untouched:</strong> <code>IForexAPI</code> and <code>ForexAPIImpl</code> are not modified. The adapter wraps them without changing their code.</li>
+<li><strong>CurrencyService uses only the bank's interface:</strong> It depends on <code>ICurrencyProvider</code>, not on the adapter directly. Tomorrow, if the external API changes, only the adapter changes.</li>
+<li><strong>Testable with mocks:</strong> The test creates a mock <code>IForexAPI</code> with fixed rates, injects it into the adapter via constructor, and verifies conversions with predictable values.</li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>8. When to Use and When NOT to Use</h2>
+<!-- ================================================================ -->
+
+<h3>When to use Adapter</h3>
+<table>
+<tr><th>Scenario</th><th>Example</th><th>Why Adapter</th></tr>
+<tr><td>Integrating third-party APIs</td><td>Weather API, Payment Gateway, SMS service</td><td>External API has a different interface than your system expects</td></tr>
+<tr><td>Legacy system integration</td><td>Old SOAP service with new REST client</td><td>Convert between old and new data formats</td></tr>
+<tr><td>Data format conversion</td><td>XML to JSON, CSV to database records</td><td>Source and destination use different formats</td></tr>
+<tr><td>Unit conversions</td><td>Fahrenheit to Celsius, miles to km</td><td>External system uses different units</td></tr>
+<tr><td>Wrapping vendor libraries</td><td>Switching from one logging lib to another</td><td>Adapter isolates your code from vendor-specific APIs</td></tr>
+</table>
+
+<h3>When NOT to use Adapter</h3>
+<table>
+<tr><th>Scenario</th><th>Why NOT</th><th>Use Instead</th></tr>
+<tr><td>Interfaces are already compatible</td><td>No conversion needed</td><td>Direct usage</td></tr>
+<tr><td>You control both sides</td><td>Modify the source interface instead</td><td>Refactor the interface</td></tr>
+<tr><td>Too many conversions</td><td>Adapter becomes a god class doing everything</td><td>Break into multiple focused adapters</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>9. Quick Reference Card</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<table>
+<tr><th>Component</th><th>Role</th><th>In Currency Project</th></tr>
+<tr><td>Target Interface</td><td>The interface your client expects</td><td><code>ICurrencyProvider</code></td></tr>
+<tr><td>Adaptee</td><td>The existing class with incompatible interface</td><td><code>IForexAPI</code> + <code>ForexAPIImpl</code></td></tr>
+<tr><td>Adapter</td><td>Converts between target and adaptee</td><td><code>ForexAPIAdapter</code></td></tr>
+<tr><td>Client</td><td>Uses the target interface</td><td><code>CurrencyService</code></td></tr>
+</table>
+</div>
+
+<!-- ================================================================ -->
+<h2>10. Interview Questions</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<ol>
+<li>What is the Adapter pattern? Give a real-world example.</li>
+<li>What is the difference between Object Adapter and Class Adapter?</li>
+<li>Why is Object Adapter preferred over Class Adapter in Java?</li>
+<li>How does <code>InputStreamReader</code> act as an adapter in Java?</li>
+<li>How does <code>Arrays.asList()</code> demonstrate the Adapter pattern?</li>
+<li>Design an adapter to integrate a third-party SMS service with your notification system.</li>
+<li>What is the difference between Adapter and Decorator patterns?</li>
+<li>What is the difference between Adapter and Facade patterns?</li>
+<li>Can an adapter be bidirectional (two-way adapter)? Give an example.</li>
+<li>How do you test an adapter that wraps an external API?</li>
+<li>When should you NOT use the Adapter pattern?</li>
+<li>How does Adapter pattern relate to the Open/Closed Principle?</li>
+</ol>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Builder Design Pattern in Java - Complete Tutorial | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px}
+h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}
+h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}
+p,li{font-size:14px;margin-bottom:8px}
+ul,ol{margin-left:24px;margin-bottom:12px}
+pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}
+code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}
+pre code{background:none;padding:0}
+.meta{font-size:13px;color:#999;margin-bottom:24px}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
+.tag-c{background:#e8f4fd;color:#2980b9}.tag-g{background:#e8f8f0;color:#27ae60}.tag-m{background:#fff3e0;color:#e67e22}
+.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.box-blue{border-color:#4A90D9;background:#eff6ff}
+.box-red{border-color:#e74c3c;background:#fef2f2}
+.box-green{border-color:#27ae60;background:#f0fdf4}
+.box-orange{border-color:#e67e22;background:#fffbeb}
+.box-purple{border-color:#8b5cf6;background:#f5f3ff}
+.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}
+th{background:#2d3748;color:#fff;font-weight:600}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+.ps{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-family:Menlo,monospace;font-size:13px;line-height:1.6}
+.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-c">Creational</span>
+<span class="tag tag-g">GOF Pattern</span>
+<span class="tag tag-m">Medium</span>
+
+<h1>Builder Design Pattern in Java</h1>
+<p class="meta">Complete Tutorial | 11 Sections | Classic GOF Builder + Modern Fluent Builder | Full HTTP Request Builder Project with HLD and LLD | House Construction Example | Multiple Scenarios | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>1. What is Builder Pattern?</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Builder pattern is a <strong>GOF Creational Pattern</strong>. It creates a complex object by combining multiple simple objects step by step, separating construction from representation so that the same construction process can be used to create multiple objects of the same type.</p>
+<p><strong>One line:</strong> Build a complex object piece by piece using a step-by-step construction process.</p>
+</div>
+
+<h3>Key concepts</h3>
+<ul>
+<li><strong>Complex object:</strong> The object creation that uses multiple other objects is called a complex object.</li>
+<li><strong>Simple object:</strong> The object created directly for a class (created directly with <code>new</code>) is called a simple object.</li>
+<li>e.g., <strong>House</strong> is a complex object where Basement, Pillars, Roofing, and Interior are simple objects.</li>
+<li>e.g., <strong>Meal</strong> is a complex object where Rice, Curry, Chutney, and Pickle are simple objects.</li>
+</ul>
+
+<h3>Real-world examples</h3>
+<ul>
+<li><strong>House construction:</strong> A House is complex. It needs Basement, Pillars/Structure, Roofing, and Interior objects step by step. This construction process can be used to create different types of houses: MarbleHouse, BrickHouse, IceHouse (Igloo), WoodenHouse, etc.</li>
+<li><strong>Indian Meal:</strong> A Meal is complex. It needs Rice, Curry, Roti, Curd, and Pickle objects step by step. This meal preparation process can be used to create different types: Veg Meal, NonVeg Meal, Andhra Meal, Gujarati Meal, Rajasthani Thali, etc.</li>
+<li><strong>Computer:</strong> A Computer needs CPU, RAM, Storage, GPU, and PowerSupply. Different builders create Gaming PC, Office PC, Server, etc.</li>
+</ul>
+
+<!-- ================================================================ -->
+<h2>2. The Problem</h2>
+<!-- ================================================================ -->
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Problem</div>
+<p>Creating a complex class directly by defining the complex class is a costly affair for programmers. Problems include:</p>
+<ul>
+<li>Constructor with many parameters (telescoping constructor anti-pattern)</li>
+<li>Client must know the exact order and types of all parameters</li>
+<li>If a new part is added, every constructor call must change</li>
+<li>Cannot create partially built objects (some parts optional)</li>
+<li>No way to reuse the same construction process for different representations</li>
+</ul>
+</div>
+
+<h3>Telescoping constructor problem</h3>
+<pre><code>// Without Builder: constructor grows with every new field
+public class House {
+    public House(Basement basement, Structure structure,
+                 Roofing roofing, Interior interior,
+                 Garden garden, Garage garage,
+                 SwimmingPool pool, SecuritySystem security) {
+        // 8 parameters! Hard to read, easy to mix up order
+    }
+}
+
+// Client must pass ALL parameters, even optional ones
+House house = new House(
+    new ConcreteBasement(),
+    new ConcreteStructure(),
+    new ConcreteRoofing(),
+    new ConcreteInterior(),
+    null,    // no garden
+    null,    // no garage
+    null,    // no pool
+    null     // no security
+);</code></pre>
+
+<!-- ================================================================ -->
+<h2>3. The Solution: Four Components</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Solution</div>
+<p>The Builder pattern separates object construction from its representation using four components:</p>
+</div>
+
+<table>
+<tr><th>Component</th><th>Role</th><th>House Example</th></tr>
+<tr><td><strong>a) Product</strong></td><td>The complex object being built</td><td><code>House</code></td></tr>
+<tr><td><strong>b) Builder (interface)</strong></td><td>Declares the steps needed to build the product</td><td><code>HouseBuilder</code></td></tr>
+<tr><td><strong>c) ConcreteBuilder</strong></td><td>Implements the builder for a specific product type</td><td><code>IglooHouseBuilder</code>, <code>ConcreteHouseBuilder</code>, <code>WoodenHouseBuilder</code></td></tr>
+<tr><td><strong>d) Director</strong></td><td>Uses the builder to construct the product in a specific order. Like a CivilEngineer who uses the Builder support to create the product.</td><td><code>CivilEngineer</code></td></tr>
+</table>
+
+<div class="diagram">Director (CivilEngineer)
+   |
+   +-- uses --> HouseBuilder (interface)
+                    |
+       +------------+-------------+------------------+
+       |            |             |                  |
+   IglooHouse   WoodenHouse  ConcreteHouse     MarbleHouse
+   Builder      Builder      Builder           Builder
+
+Each builder creates:
+   House (Product)
+   +-- Basement       (IceBasement / WoodenBasement / ConcreteBasement)
+   +-- Structure       (IceStructure / WoodenStructure / ConcreteStructure)
+   +-- Roofing         (IceRoofing / WoodenRoofing / ConcreteRoofing)
+   +-- Interior        (IceCurvingInterior / WoodenInterior / ConcreteInterior)</div>
+
+<!-- ================================================================ -->
+<h2>4. Classic GOF Builder: House Construction</h2>
+<!-- ================================================================ -->
+
+<h3>Simple object interfaces (parts of the house)</h3>
+<pre><code>// Basement.java
+package com.nt.product;
+public interface Basement {
+    String getBasementType();
+}
+
+// Structure.java
+package com.nt.product;
+public interface Structure {
+    String getStructureType();
+}
+
+// Roofing.java
+package com.nt.product;
+public interface Roofing {
+    String getRoofingType();
+}
+
+// Interior.java
+package com.nt.product;
+public interface Interior {
+    String getInteriorType();
+}</code></pre>
+
+<h3>Concrete parts (one set per house type)</h3>
+<pre><code>// Concrete house parts
+public class ConcreteBasement implements Basement {
+    public String getBasementType() { return "Concrete Basement"; }
+}
+public class ConcreteStructure implements Structure {
+    public String getStructureType() { return "Concrete Pillars Structure"; }
+}
+public class ConcreteRoofing implements Roofing {
+    public String getRoofingType() { return "Concrete Slab Roofing"; }
+}
+public class ConcreteInterior implements Interior {
+    public String getInteriorType() { return "Concrete Interior with Paint"; }
+}
+
+// Wooden house parts
+public class WoodenBasement implements Basement {
+    public String getBasementType() { return "Wooden Basement"; }
+}
+public class WoodenStructure implements Structure {
+    public String getStructureType() { return "Wooden Pillars Structure"; }
+}
+public class WoodenRoofing implements Roofing {
+    public String getRoofingType() { return "Wooden Roofing"; }
+}
+public class WoodenInterior implements Interior {
+    public String getInteriorType() { return "Wooden Panel Interior"; }
+}
+
+// Ice house (Igloo) parts
+public class IceBasement implements Basement {
+    public String getBasementType() { return "Ice Basement"; }
+}
+public class IceStructure implements Structure {
+    public String getStructureType() { return "Ice Blocks Structure"; }
+}
+public class IceRoofing implements Roofing {
+    public String getRoofingType() { return "Ice Dome Roofing"; }
+}
+public class IceCurvingInterior implements Interior {
+    public String getInteriorType() { return "Ice Curving Interior"; }
+}</code></pre>
+
+<h3>House.java (the complex Product)</h3>
+<pre><code>package com.nt.product;
+
+public class House {
+    private Basement basement;
+    private Structure structure;
+    private Roofing roofing;
+    private Interior interior;
+
+    public void setBasement(Basement basement) { this.basement = basement; }
+    public void setStructure(Structure structure) { this.structure = structure; }
+    public void setRoofing(Roofing roofing) { this.roofing = roofing; }
+    public void setInterior(Interior interior) { this.interior = interior; }
+
+    public Basement getBasement() { return basement; }
+    public Structure getStructure() { return structure; }
+    public Roofing getRoofing() { return roofing; }
+    public Interior getInterior() { return interior; }
+
+    @Override
+    public String toString() {
+        return "House [\n"
+            + "  Basement  = " + basement.getBasementType() + "\n"
+            + "  Structure = " + structure.getStructureType() + "\n"
+            + "  Roofing   = " + roofing.getRoofingType() + "\n"
+            + "  Interior  = " + interior.getInteriorType() + "\n"
+            + "]";
+    }
+}</code></pre>
+
+<h3>HouseBuilder.java (Builder interface)</h3>
+<pre><code>package com.nt.builder;
+
+import com.nt.product.House;
+
+public interface HouseBuilder {
+    void buildBasement();
+    void buildStructure();
+    void buildRoofing();
+    void buildInterior();
+    House getHouse();
+}</code></pre>
+
+<h3>ConcreteHouseBuilder.java</h3>
+<pre><code>package com.nt.builder;
+
+import com.nt.product.*;
+
+public class ConcreteHouseBuilder implements HouseBuilder {
+    private House house;
+
+    public ConcreteHouseBuilder() {
+        this.house = new House();
+    }
+
+    public void buildBasement() { house.setBasement(new ConcreteBasement()); }
+    public void buildStructure() { house.setStructure(new ConcreteStructure()); }
+    public void buildRoofing() { house.setRoofing(new ConcreteRoofing()); }
+    public void buildInterior() { house.setInterior(new ConcreteInterior()); }
+    public House getHouse() { return this.house; }
+}</code></pre>
+
+<h3>WoodenHouseBuilder.java</h3>
+<pre><code>package com.nt.builder;
+
+import com.nt.product.*;
+
+public class WoodenHouseBuilder implements HouseBuilder {
+    private House house;
+
+    public WoodenHouseBuilder() {
+        this.house = new House();
+    }
+
+    public void buildBasement() { house.setBasement(new WoodenBasement()); }
+    public void buildStructure() { house.setStructure(new WoodenStructure()); }
+    public void buildRoofing() { house.setRoofing(new WoodenRoofing()); }
+    public void buildInterior() { house.setInterior(new WoodenInterior()); }
+    public House getHouse() { return this.house; }
+}</code></pre>
+
+<h3>IglooHouseBuilder.java</h3>
+<pre><code>package com.nt.builder;
+
+import com.nt.product.*;
+
+public class IglooHouseBuilder implements HouseBuilder {
+    private House house;
+
+    public IglooHouseBuilder() {
+        this.house = new House();
+    }
+
+    public void buildBasement() { house.setBasement(new IceBasement()); }
+    public void buildStructure() { house.setStructure(new IceStructure()); }
+    public void buildRoofing() { house.setRoofing(new IceRoofing()); }
+    public void buildInterior() { house.setInterior(new IceCurvingInterior()); }
+    public House getHouse() { return this.house; }
+}</code></pre>
+
+<h3>CivilEngineer.java (Director)</h3>
+<pre><code>package com.nt.director;
+
+import com.nt.builder.HouseBuilder;
+import com.nt.product.House;
+
+public class CivilEngineer {
+    private HouseBuilder builder;
+
+    public CivilEngineer(HouseBuilder builder) {
+        this.builder = builder;
+    }
+
+    // Director defines the ORDER of construction steps
+    public House constructHouse() {
+        builder.buildBasement();
+        builder.buildStructure();
+        builder.buildRoofing();
+        builder.buildInterior();
+        return builder.getHouse();
+    }
+}</code></pre>
+
+<h3>Client test</h3>
+<pre><code>package com.nt.test;
+
+import com.nt.builder.*;
+import com.nt.director.CivilEngineer;
+import com.nt.product.House;
+
+public class BuilderDPTest {
+    public static void main(String[] args) {
+        // Build a Concrete House
+        HouseBuilder concreteBuilder = new ConcreteHouseBuilder();
+        CivilEngineer engineer1 = new CivilEngineer(concreteBuilder);
+        House concreteHouse = engineer1.constructHouse();
+        System.out.println("=== Concrete House ===");
+        System.out.println(concreteHouse);
+
+        // Build a Wooden House
+        HouseBuilder woodenBuilder = new WoodenHouseBuilder();
+        CivilEngineer engineer2 = new CivilEngineer(woodenBuilder);
+        House woodenHouse = engineer2.constructHouse();
+        System.out.println("=== Wooden House ===");
+        System.out.println(woodenHouse);
+
+        // Build an Igloo House
+        HouseBuilder iglooBuilder = new IglooHouseBuilder();
+        CivilEngineer engineer3 = new CivilEngineer(iglooBuilder);
+        House iglooHouse = engineer3.constructHouse();
+        System.out.println("=== Igloo House ===");
+        System.out.println(iglooHouse);
+    }
+}</code></pre>
+
+<div class="output">=== Concrete House ===
+House [
+  Basement  = Concrete Basement
+  Structure = Concrete Pillars Structure
+  Roofing   = Concrete Slab Roofing
+  Interior  = Concrete Interior with Paint
+]
+=== Wooden House ===
+House [
+  Basement  = Wooden Basement
+  Structure = Wooden Pillars Structure
+  Roofing   = Wooden Roofing
+  Interior  = Wooden Panel Interior
+]
+=== Igloo House ===
+House [
+  Basement  = Ice Basement
+  Structure = Ice Blocks Structure
+  Roofing   = Ice Dome Roofing
+  Interior  = Ice Curving Interior
+]</div>
+
+<!-- ================================================================ -->
+<h2>5. Modern Fluent Builder (Joshua Bloch Style)</h2>
+<!-- ================================================================ -->
+
+<div class="box box-purple">
+<div class="box-label" style="color:#6d28d9">Modern Approach</div>
+<p>The classic GOF Builder uses a separate Builder class, Director, and product. In modern Java (and in frameworks like Lombok, Immutables), the <strong>Fluent Builder</strong> is more common. It uses method chaining, returns <code>this</code> from each setter, and has a <code>build()</code> method that creates the final immutable object. No Director class needed.</p>
+</div>
+
+<pre><code>public class HttpRequest {
+    private final String method;
+    private final String url;
+    private final Map&lt;String, String&gt; headers;
+    private final String body;
+    private final int timeoutMs;
+
+    // Private constructor: only Builder can create this
+    private HttpRequest(Builder builder) {
+        this.method = builder.method;
+        this.url = builder.url;
+        this.headers = Collections.unmodifiableMap(builder.headers);
+        this.body = builder.body;
+        this.timeoutMs = builder.timeoutMs;
+    }
+
+    // Getters only, no setters (immutable)
+    public String getMethod() { return method; }
+    public String getUrl() { return url; }
+    public Map&lt;String, String&gt; getHeaders() { return headers; }
+    public String getBody() { return body; }
+    public int getTimeoutMs() { return timeoutMs; }
+
+    // Static inner Builder class
+    public static class Builder {
+        // Required fields
+        private final String method;
+        private final String url;
+
+        // Optional fields with defaults
+        private Map&lt;String, String&gt; headers = new HashMap&lt;&gt;();
+        private String body = "";
+        private int timeoutMs = 5000;
+
+        // Constructor takes only required fields
+        public Builder(String method, String url) {
+            this.method = method;
+            this.url = url;
+        }
+
+        // Each setter returns 'this' for chaining
+        public Builder header(String key, String value) {
+            this.headers.put(key, value);
+            return this;
+        }
+
+        public Builder body(String body) {
+            this.body = body;
+            return this;
+        }
+
+        public Builder timeout(int timeoutMs) {
+            this.timeoutMs = timeoutMs;
+            return this;
+        }
+
+        // Build method creates the final immutable object
+        public HttpRequest build() {
+            return new HttpRequest(this);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return method + " " + url + "\n"
+            + "Headers: " + headers + "\n"
+            + "Body: " + (body.isEmpty() ? "(empty)" : body) + "\n"
+            + "Timeout: " + timeoutMs + "ms";
+    }
+}
+
+// Usage: clean, readable, no parameter order confusion
+HttpRequest request = new HttpRequest.Builder("POST", "https://api.nbi.com/transfer")
+    .header("Content-Type", "application/json")
+    .header("Authorization", "Bearer token123")
+    .body("{\"from\":\"SAV2001\",\"to\":\"CUR3001\",\"amount\":50000}")
+    .timeout(10000)
+    .build();</code></pre>
+
+<h3>GOF Builder vs Fluent Builder</h3>
+<table>
+<tr><th>Aspect</th><th>GOF Builder (Classic)</th><th>Fluent Builder (Modern)</th></tr>
+<tr><td>Director</td><td>Separate class controls build order</td><td>No director, client chains methods</td></tr>
+<tr><td>Builder location</td><td>Separate class/interface</td><td>Static inner class</td></tr>
+<tr><td>Product mutability</td><td>Mutable (setters)</td><td>Immutable (private constructor)</td></tr>
+<tr><td>Method chaining</td><td>No</td><td>Yes (return this)</td></tr>
+<tr><td>Required vs optional</td><td>All steps called by director</td><td>Required in constructor, optional via methods</td></tr>
+<tr><td>Use case</td><td>Multiple representations of same construction process</td><td>Objects with many optional parameters</td></tr>
+<tr><td>JDK examples</td><td>DocumentBuilder</td><td>StringBuilder, Stream.Builder, Locale.Builder</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>6. Pre-defined Builder Examples in Java</h2>
+<!-- ================================================================ -->
+
+<table>
+<tr><th>Class</th><th>Builder Type</th><th>Usage</th></tr>
+<tr><td><code>StringBuilder</code></td><td>Fluent</td><td><code>new StringBuilder().append("hello").append(" ").append("world").toString()</code></td></tr>
+<tr><td><code>StringBuffer</code></td><td>Fluent</td><td>Thread-safe version of StringBuilder</td></tr>
+<tr><td><code>Stream.Builder</code></td><td>Fluent</td><td><code>Stream.builder().add(1).add(2).add(3).build()</code></td></tr>
+<tr><td><code>Locale.Builder</code></td><td>Fluent</td><td><code>new Locale.Builder().setLanguage("en").setRegion("US").build()</code></td></tr>
+<tr><td><code>Calendar.Builder</code></td><td>Fluent</td><td><code>new Calendar.Builder().setDate(2026,10,2).build()</code></td></tr>
+<tr><td><code>DocumentBuilderFactory</code></td><td>GOF</td><td>Creates DocumentBuilder to parse XML</td></tr>
+<tr><td><code>ProcessBuilder</code></td><td>Fluent</td><td><code>new ProcessBuilder("ls", "-la").directory(dir).start()</code></td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>7. Full-Length Industry Project: HTTP Client Request Builder</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Business Scenario</div>
+<p>National Bank of India's backend services communicate with external APIs (payment gateways, credit bureaus, government services). Each HTTP request needs a method, URL, headers, query parameters, body, timeout, retry configuration, and authentication. Some requests need all fields, others need only a few. The team wants a clean, immutable, type-safe way to construct HTTP requests without a 15-parameter constructor.</p>
+</div>
+
+<h3>High-Level Design (HLD)</h3>
+
+<div class="diagram">
++---------------------------------------------------+
+|                SERVICE LAYER                       |
+|  PaymentService     CreditCheckService             |
+|    |                    |                          |
+|    +-- builds request using HttpRequest.Builder    |
+|    +-- sends via HttpClient                        |
++----------------------------+----------------------+
+                             |
+                             v
++---------------------------------------------------+
+|             BUILDER LAYER                          |
+|                                                    |
+|  HttpRequest (immutable product)                   |
+|    +-- Builder (static inner class)                |
+|        +-- method(String)      [required]          |
+|        +-- url(String)         [required]          |
+|        +-- header(k, v)       [optional, chainable]|
+|        +-- queryParam(k, v)   [optional, chainable]|
+|        +-- body(String)       [optional]           |
+|        +-- timeout(int)       [optional, default]  |
+|        +-- retries(int)       [optional, default]  |
+|        +-- bearerToken(String)[optional]           |
+|        +-- build()             [creates product]   |
++---------------------------------------------------+
+                             |
+                             v
++---------------------------------------------------+
+|              HTTP CLIENT LAYER                     |
+|  HttpClient                                        |
+|    +-- send(HttpRequest): HttpResponse             |
+|    +-- logs request details                        |
+|    +-- simulates network call                      |
++---------------------------------------------------+
+</div>
+
+<h3>Low-Level Design (LLD)</h3>
+
+<div class="diagram">
++-------------------------------------------------------+
+| HttpRequest (immutable product)                       |
++-------------------------------------------------------+
+| - method: String                    [final]           |
+| - url: String                       [final]           |
+| - headers: Map&lt;String, String&gt;     [final, unmodifiable]|
+| - queryParams: Map&lt;String, String&gt; [final, unmodifiable]|
+| - body: String                      [final]           |
+| - timeoutMs: int                    [final]           |
+| - maxRetries: int                   [final]           |
++-------------------------------------------------------+
+| - HttpRequest(Builder)              [private]         |
+| + getMethod(): String                                 |
+| + getUrl(): String                                    |
+| + getFullUrl(): String  (url + query params)          |
+| + getHeaders(): Map                                   |
+| + getBody(): String                                   |
+| + getTimeoutMs(): int                                 |
+| + getMaxRetries(): int                                |
++-------------------------------------------------------+
+| + static class Builder                                |
+|   - method: String       [required]                   |
+|   - url: String          [required]                   |
+|   - headers: Map         [default empty]              |
+|   - queryParams: Map     [default empty]              |
+|   - body: String         [default empty]              |
+|   - timeoutMs: int       [default 5000]               |
+|   - maxRetries: int      [default 3]                  |
+|   + Builder(method, url) [constructor]                |
+|   + header(k, v): Builder                             |
+|   + queryParam(k, v): Builder                         |
+|   + body(String): Builder                             |
+|   + timeout(int): Builder                             |
+|   + retries(int): Builder                             |
+|   + bearerToken(String): Builder                      |
+|   + contentTypeJson(): Builder                        |
+|   + build(): HttpRequest                              |
++-------------------------------------------------------+
+
++-------------------------------------------------------+
+| HttpResponse                                          |
++-------------------------------------------------------+
+| - statusCode: int                                     |
+| - body: String                                        |
+| - headers: Map                                        |
+| + isSuccess(): boolean                                |
++-------------------------------------------------------+
+
++-------------------------------------------------------+
+| HttpClient                                            |
++-------------------------------------------------------+
+| + send(request): HttpResponse                         |
+| - logRequest(request): void                           |
++-------------------------------------------------------+
+</div>
+
+<h3>Project Structure</h3>
+<div class="ps">nbi-http-client/
+├── src/
+│   └── main/java/com/nbi/http/
+│       ├── HttpRequest.java           (immutable product + fluent builder)
+│       ├── HttpResponse.java
+│       ├── HttpClient.java            (sends requests)
+│       └── Application.java
+├── src/
+│   └── test/java/com/nbi/http/
+│       ├── HttpRequestBuilderTest.java
+│       └── HttpClientTest.java
+└── pom.xml</div>
+
+<h3>HttpRequest.java (Product + Fluent Builder)</h3>
+<pre><code>package com.nbi.http;
+
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class HttpRequest {
+    private final String method;
+    private final String url;
+    private final Map&lt;String, String&gt; headers;
+    private final Map&lt;String, String&gt; queryParams;
+    private final String body;
+    private final int timeoutMs;
+    private final int maxRetries;
+
+    private HttpRequest(Builder builder) {
+        this.method = builder.method;
+        this.url = builder.url;
+        this.headers = Collections.unmodifiableMap(new HashMap&lt;&gt;(builder.headers));
+        this.queryParams = Collections.unmodifiableMap(new HashMap&lt;&gt;(builder.queryParams));
+        this.body = builder.body;
+        this.timeoutMs = builder.timeoutMs;
+        this.maxRetries = builder.maxRetries;
+    }
+
+    public String getMethod() { return method; }
+    public String getUrl() { return url; }
+    public Map&lt;String, String&gt; getHeaders() { return headers; }
+    public Map&lt;String, String&gt; getQueryParams() { return queryParams; }
+    public String getBody() { return body; }
+    public int getTimeoutMs() { return timeoutMs; }
+    public int getMaxRetries() { return maxRetries; }
+
+    public String getFullUrl() {
+        if (queryParams.isEmpty()) return url;
+        String params = queryParams.entrySet().stream()
+            .map(e -> e.getKey() + "=" + e.getValue())
+            .collect(Collectors.joining("&amp;"));
+        return url + "?" + params;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append(method).append(" ").append(getFullUrl()).append("\n");
+        headers.forEach((k, v) -> sb.append("  ").append(k).append(": ").append(v).append("\n"));
+        if (!body.isEmpty()) {
+            sb.append("  Body: ").append(body.length() > 80 ? body.substring(0, 80) + "..." : body).append("\n");
+        }
+        sb.append("  Timeout: ").append(timeoutMs).append("ms | Retries: ").append(maxRetries);
+        return sb.toString();
+    }
+
+    public static class Builder {
+        private final String method;
+        private final String url;
+        private Map&lt;String, String&gt; headers = new HashMap&lt;&gt;();
+        private Map&lt;String, String&gt; queryParams = new HashMap&lt;&gt;();
+        private String body = "";
+        private int timeoutMs = 5000;
+        private int maxRetries = 3;
+
+        public Builder(String method, String url) {
+            if (method == null || method.isEmpty()) {
+                throw new IllegalArgumentException("HTTP method is required");
+            }
+            if (url == null || url.isEmpty()) {
+                throw new IllegalArgumentException("URL is required");
+            }
+            this.method = method.toUpperCase();
+            this.url = url;
+        }
+
+        public Builder header(String key, String value) {
+            this.headers.put(key, value);
+            return this;
+        }
+
+        public Builder queryParam(String key, String value) {
+            this.queryParams.put(key, value);
+            return this;
+        }
+
+        public Builder body(String body) {
+            this.body = body != null ? body : "";
+            return this;
+        }
+
+        public Builder timeout(int timeoutMs) {
+            if (timeoutMs <= 0) {
+                throw new IllegalArgumentException("Timeout must be positive");
+            }
+            this.timeoutMs = timeoutMs;
+            return this;
+        }
+
+        public Builder retries(int maxRetries) {
+            if (maxRetries < 0) {
+                throw new IllegalArgumentException("Retries cannot be negative");
+            }
+            this.maxRetries = maxRetries;
+            return this;
+        }
+
+        // Convenience methods for common patterns
+        public Builder bearerToken(String token) {
+            return header("Authorization", "Bearer " + token);
+        }
+
+        public Builder contentTypeJson() {
+            return header("Content-Type", "application/json");
+        }
+
+        public Builder contentTypeForm() {
+            return header("Content-Type", "application/x-www-form-urlencoded");
+        }
+
+        public HttpRequest build() {
+            return new HttpRequest(this);
+        }
+    }
+}</code></pre>
+
+<h3>HttpResponse.java</h3>
+<pre><code>package com.nbi.http;
+
+import java.util.Map;
+
+public class HttpResponse {
+    private final int statusCode;
+    private final String body;
+    private final Map&lt;String, String&gt; headers;
+
+    public HttpResponse(int statusCode, String body, Map&lt;String, String&gt; headers) {
+        this.statusCode = statusCode;
+        this.body = body;
+        this.headers = headers;
+    }
+
+    public int getStatusCode() { return statusCode; }
+    public String getBody() { return body; }
+    public Map&lt;String, String&gt; getHeaders() { return headers; }
+    public boolean isSuccess() { return statusCode >= 200 && statusCode < 300; }
+
+    @Override
+    public String toString() {
+        return "HTTP " + statusCode + (isSuccess() ? " OK" : " ERROR")
+            + " | Body: " + (body.length() > 80 ? body.substring(0, 80) + "..." : body);
+    }
+}</code></pre>
+
+<h3>HttpClient.java</h3>
+<pre><code>package com.nbi.http;
+
+import java.util.Map;
+
+public class HttpClient {
+
+    public HttpResponse send(HttpRequest request) {
+        System.out.println("--- Sending Request ---");
+        System.out.println(request);
+        System.out.println();
+
+        // Simulate network call based on URL
+        int statusCode = 200;
+        String responseBody;
+
+        if (request.getUrl().contains("/transfer")) {
+            responseBody = "{\"status\":\"success\",\"txnId\":\"NEFT123456\"}";
+        } else if (request.getUrl().contains("/credit-score")) {
+            responseBody = "{\"score\":780,\"rating\":\"excellent\"}";
+        } else if (request.getUrl().contains("/balance")) {
+            responseBody = "{\"accountNo\":\"SAV2001\",\"balance\":250000.00}";
+        } else if (request.getUrl().contains("/error")) {
+            statusCode = 500;
+            responseBody = "{\"error\":\"Internal Server Error\"}";
+        } else {
+            responseBody = "{\"message\":\"OK\"}";
+        }
+
+        HttpResponse response = new HttpResponse(statusCode, responseBody,
+            Map.of("Content-Type", "application/json"));
+        System.out.println("--- Response ---");
+        System.out.println(response);
+        System.out.println();
+
+        return response;
+    }
+}</code></pre>
+
+<h3>Application.java</h3>
+<pre><code>package com.nbi.http;
+
+public class Application {
+    public static void main(String[] args) {
+        HttpClient client = new HttpClient();
+
+        // Scenario 1: Simple GET request (minimal builder usage)
+        System.out.println("=== Scenario 1: Simple GET ===");
+        HttpRequest getBalance = new HttpRequest.Builder("GET", "https://api.nbi.com/balance")
+            .queryParam("accountNo", "SAV2001")
+            .bearerToken("jwt_token_abc123")
+            .build();
+        client.send(getBalance);
+
+        // Scenario 2: POST with JSON body (full builder usage)
+        System.out.println("=== Scenario 2: POST Transfer ===");
+        HttpRequest transfer = new HttpRequest.Builder("POST", "https://api.nbi.com/transfer")
+            .contentTypeJson()
+            .bearerToken("jwt_token_abc123")
+            .body("{\"from\":\"SAV2001\",\"to\":\"CUR3001\",\"amount\":50000}")
+            .timeout(10000)
+            .retries(5)
+            .build();
+        client.send(transfer);
+
+        // Scenario 3: GET with multiple query params
+        System.out.println("=== Scenario 3: Credit Score Check ===");
+        HttpRequest creditCheck = new HttpRequest.Builder("GET", "https://api.creditbureau.com/credit-score")
+            .queryParam("pan", "ABCDE1234F")
+            .queryParam("consent", "true")
+            .header("X-API-Key", "bureau_key_xyz")
+            .timeout(15000)
+            .build();
+        client.send(creditCheck);
+
+        // Scenario 4: Immutability verification
+        System.out.println("=== Scenario 4: Immutability Check ===");
+        HttpRequest req = new HttpRequest.Builder("GET", "https://api.nbi.com/test")
+            .header("Accept", "application/json")
+            .build();
+
+        try {
+            req.getHeaders().put("Injected", "value");
+            System.out.println("FAILED: headers are mutable");
+        } catch (UnsupportedOperationException e) {
+            System.out.println("PASSED: headers are immutable (UnsupportedOperationException)");
+        }
+
+        // Scenario 5: Error response
+        System.out.println("\n=== Scenario 5: Error Response ===");
+        HttpRequest errorReq = new HttpRequest.Builder("POST", "https://api.nbi.com/error")
+            .contentTypeJson()
+            .body("{\"bad\":\"data\"}")
+            .build();
+        HttpResponse errorResp = client.send(errorReq);
+        System.out.println("Success? " + errorResp.isSuccess());
+
+        // Scenario 6: Validation error
+        System.out.println("\n=== Scenario 6: Builder Validation ===");
+        try {
+            new HttpRequest.Builder("", "https://api.nbi.com/test").build();
+        } catch (IllegalArgumentException e) {
+            System.out.println("PASSED: " + e.getMessage());
+        }
+        try {
+            new HttpRequest.Builder("GET", "https://api.nbi.com/test")
+                .timeout(-1)
+                .build();
+        } catch (IllegalArgumentException e) {
+            System.out.println("PASSED: " + e.getMessage());
+        }
+    }
+}</code></pre>
+
+<h3>Expected Output</h3>
+<div class="output">=== Scenario 1: Simple GET ===
+--- Sending Request ---
+GET https://api.nbi.com/balance?accountNo=SAV2001
+  Authorization: Bearer jwt_token_abc123
+  Timeout: 5000ms | Retries: 3
+
+--- Response ---
+HTTP 200 OK | Body: {"accountNo":"SAV2001","balance":250000.00}
+
+=== Scenario 2: POST Transfer ===
+--- Sending Request ---
+POST https://api.nbi.com/transfer
+  Content-Type: application/json
+  Authorization: Bearer jwt_token_abc123
+  Body: {"from":"SAV2001","to":"CUR3001","amount":50000}
+  Timeout: 10000ms | Retries: 5
+
+--- Response ---
+HTTP 200 OK | Body: {"status":"success","txnId":"NEFT123456"}
+
+=== Scenario 3: Credit Score Check ===
+--- Sending Request ---
+GET https://api.creditbureau.com/credit-score?pan=ABCDE1234F&consent=true
+  X-API-Key: bureau_key_xyz
+  Timeout: 15000ms | Retries: 3
+
+--- Response ---
+HTTP 200 OK | Body: {"score":780,"rating":"excellent"}
+
+=== Scenario 4: Immutability Check ===
+PASSED: headers are immutable (UnsupportedOperationException)
+
+=== Scenario 5: Error Response ===
+--- Sending Request ---
+POST https://api.nbi.com/error
+  Content-Type: application/json
+  Body: {"bad":"data"}
+  Timeout: 5000ms | Retries: 3
+
+--- Response ---
+HTTP 500 ERROR | Body: {"error":"Internal Server Error"}
+
+Success? false
+
+=== Scenario 6: Builder Validation ===
+PASSED: HTTP method is required
+PASSED: Timeout must be positive</div>
+
+<h3>HttpRequestBuilderTest.java</h3>
+<pre><code>package com.nbi.http;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class HttpRequestBuilderTest {
+
+    @Test
+    void build_createsRequestWithRequiredFields() {
+        HttpRequest req = new HttpRequest.Builder("GET", "https://api.nbi.com/test").build();
+        assertEquals("GET", req.getMethod());
+        assertEquals("https://api.nbi.com/test", req.getUrl());
+    }
+
+    @Test
+    void build_methodIsUppercased() {
+        HttpRequest req = new HttpRequest.Builder("post", "https://api.nbi.com").build();
+        assertEquals("POST", req.getMethod());
+    }
+
+    @Test
+    void build_setsDefaultTimeout() {
+        HttpRequest req = new HttpRequest.Builder("GET", "https://api.nbi.com").build();
+        assertEquals(5000, req.getTimeoutMs());
+    }
+
+    @Test
+    void build_setsDefaultRetries() {
+        HttpRequest req = new HttpRequest.Builder("GET", "https://api.nbi.com").build();
+        assertEquals(3, req.getMaxRetries());
+    }
+
+    @Test
+    void build_overridesDefaults() {
+        HttpRequest req = new HttpRequest.Builder("GET", "https://api.nbi.com")
+            .timeout(10000)
+            .retries(5)
+            .build();
+        assertEquals(10000, req.getTimeoutMs());
+        assertEquals(5, req.getMaxRetries());
+    }
+
+    @Test
+    void build_addsHeaders() {
+        HttpRequest req = new HttpRequest.Builder("GET", "https://api.nbi.com")
+            .header("Accept", "application/json")
+            .header("X-Custom", "value")
+            .build();
+        assertEquals("application/json", req.getHeaders().get("Accept"));
+        assertEquals("value", req.getHeaders().get("X-Custom"));
+    }
+
+    @Test
+    void build_headersAreImmutable() {
+        HttpRequest req = new HttpRequest.Builder("GET", "https://api.nbi.com")
+            .header("Accept", "application/json")
+            .build();
+        assertThrows(UnsupportedOperationException.class,
+            () -> req.getHeaders().put("Injected", "value"));
+    }
+
+    @Test
+    void build_bearerTokenSetsAuthHeader() {
+        HttpRequest req = new HttpRequest.Builder("GET", "https://api.nbi.com")
+            .bearerToken("mytoken")
+            .build();
+        assertEquals("Bearer mytoken", req.getHeaders().get("Authorization"));
+    }
+
+    @Test
+    void build_contentTypeJsonSetsHeader() {
+        HttpRequest req = new HttpRequest.Builder("POST", "https://api.nbi.com")
+            .contentTypeJson()
+            .build();
+        assertEquals("application/json", req.getHeaders().get("Content-Type"));
+    }
+
+    @Test
+    void build_queryParamsInFullUrl() {
+        HttpRequest req = new HttpRequest.Builder("GET", "https://api.nbi.com/search")
+            .queryParam("q", "hashmap")
+            .queryParam("limit", "10")
+            .build();
+        assertTrue(req.getFullUrl().contains("q=hashmap"));
+        assertTrue(req.getFullUrl().contains("limit=10"));
+    }
+
+    @Test
+    void builder_throwsForNullMethod() {
+        assertThrows(IllegalArgumentException.class,
+            () -> new HttpRequest.Builder(null, "https://api.nbi.com"));
+    }
+
+    @Test
+    void builder_throwsForNegativeTimeout() {
+        assertThrows(IllegalArgumentException.class,
+            () -> new HttpRequest.Builder("GET", "https://api.nbi.com").timeout(-1));
+    }
+}</code></pre>
+
+<h3>Key observations from the project</h3>
+<div class="card">
+<ol>
+<li><strong>Immutable product:</strong> <code>HttpRequest</code> has only <code>final</code> fields and a private constructor. Once built, it cannot be modified. Headers and query params are wrapped in <code>Collections.unmodifiableMap</code>.</li>
+<li><strong>Required vs optional fields:</strong> <code>method</code> and <code>url</code> are required (in the Builder constructor). Everything else is optional with sensible defaults (timeout=5000, retries=3).</li>
+<li><strong>Method chaining:</strong> Each builder method returns <code>this</code>, enabling fluent construction: <code>.header(...).body(...).timeout(...).build()</code>.</li>
+<li><strong>Convenience methods:</strong> <code>bearerToken()</code>, <code>contentTypeJson()</code>, <code>contentTypeForm()</code> wrap common patterns so the client does not need to know the exact header names.</li>
+<li><strong>Validation in Builder:</strong> Null/empty method and URL are caught in the Builder constructor. Negative timeout is caught in <code>timeout()</code>. Errors are thrown before <code>build()</code> creates the object.</li>
+<li><strong>Six scenarios tested:</strong> Simple GET, POST with body, query params, immutability, error response, validation error.</li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>8. When to Use and When NOT to Use</h2>
+<!-- ================================================================ -->
+
+<h3>When to use Builder</h3>
+<table>
+<tr><th>Scenario</th><th>Example</th><th>Why Builder</th></tr>
+<tr><td>Many constructor parameters</td><td>HTTP request, database query, report config</td><td>Avoids telescoping constructor. Each parameter is named and optional.</td></tr>
+<tr><td>Immutable objects</td><td>Value objects, configuration, DTOs</td><td>Builder collects data, then creates a frozen immutable object.</td></tr>
+<tr><td>Multiple representations</td><td>ConcreteHouse, WoodenHouse, IglooHouse</td><td>Same construction process, different product types.</td></tr>
+<tr><td>Complex object with dependencies</td><td>Computer (CPU + RAM + GPU + Storage)</td><td>Builder ensures all parts are assembled correctly before use.</td></tr>
+<tr><td>Step-by-step construction</td><td>Document builder, meal builder</td><td>Each step adds one part. The order can be fixed (GOF) or flexible (fluent).</td></tr>
+</table>
+
+<h3>When NOT to use Builder</h3>
+<table>
+<tr><th>Scenario</th><th>Why NOT</th><th>Use Instead</th></tr>
+<tr><td>Simple objects (1-3 fields)</td><td>Builder adds unnecessary code for trivial objects</td><td>Constructor or factory method</td></tr>
+<tr><td>Mutable objects</td><td>If the object changes after creation, builder's immutability benefit is lost</td><td>Constructor + setters</td></tr>
+<tr><td>Objects created once at startup</td><td>Builder's readability benefit is wasted on a single call</td><td>Constructor or config file</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>9. Quick Reference Card</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<table>
+<tr><th>Component</th><th>GOF Builder</th><th>Fluent Builder</th></tr>
+<tr><td>Product</td><td>House (mutable, setters)</td><td>HttpRequest (immutable, final fields)</td></tr>
+<tr><td>Builder</td><td>HouseBuilder interface, separate concrete builders</td><td>Static inner Builder class</td></tr>
+<tr><td>Director</td><td>CivilEngineer (controls build order)</td><td>Not needed (client chains methods)</td></tr>
+<tr><td>Creation</td><td><code>engineer.constructHouse()</code></td><td><code>new Builder(...).method().build()</code></td></tr>
+<tr><td>Immutable?</td><td>No (product has setters)</td><td>Yes (private constructor, final fields)</td></tr>
+<tr><td>JDK example</td><td>DocumentBuilderFactory</td><td>StringBuilder, Locale.Builder</td></tr>
+</table>
+</div>
+
+<!-- ================================================================ -->
+<h2>10. Interview Questions</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<ol>
+<li>What is the Builder pattern? Give a real-world example.</li>
+<li>What are the four components of the classic GOF Builder pattern?</li>
+<li>What is the role of the Director in the Builder pattern?</li>
+<li>What is the difference between GOF Builder and Fluent Builder?</li>
+<li>How does the Builder pattern solve the telescoping constructor problem?</li>
+<li>How do you make the product immutable in the Builder pattern?</li>
+<li>Write a Fluent Builder for a <code>DatabaseConfig</code> with host, port, username, password, poolSize, timeout.</li>
+<li>What is the difference between Builder and Factory patterns?</li>
+<li>How does <code>StringBuilder</code> use the Builder pattern?</li>
+<li>Can you combine Builder with other patterns? Give examples.</li>
+<li>What are the disadvantages of the Builder pattern?</li>
+<li>Design an email message builder (to, cc, bcc, subject, body, attachments) using the Fluent Builder approach.</li>
+</ol>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,2477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singleton Design Pattern in Java - Complete Tutorial | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px}
+h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}
+h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}
+p,li{font-size:14px;margin-bottom:8px}
+ul,ol{margin-left:24px;margin-bottom:12px}
+pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}
+code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}
+pre code{background:none;padding:0}
+.meta{font-size:13px;color:#999;margin-bottom:24px}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
+.tag-c{background:#e8f4fd;color:#2980b9}.tag-g{background:#e8f8f0;color:#27ae60}.tag-m{background:#fff3e0;color:#e67e22}
+.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.box-blue{border-color:#4A90D9;background:#eff6ff}
+.box-red{border-color:#e74c3c;background:#fef2f2}
+.box-green{border-color:#27ae60;background:#f0fdf4}
+.box-orange{border-color:#e67e22;background:#fffbeb}
+.box-purple{border-color:#8b5cf6;background:#f5f3ff}
+.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}
+th{background:#2d3748;color:#fff;font-weight:600}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+.ps{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-family:Menlo,monospace;font-size:13px;line-height:1.6}
+.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-c">Creational</span>
+<span class="tag tag-g">GOF Pattern</span>
+<span class="tag tag-m">Medium</span>
+
+<h1>Singleton Design Pattern in Java</h1>
+<p class="meta">Complete Tutorial | 13 Sections | Full BookMyShow Project with HLD and LLD | 6 Thread-Safe Approaches | 3 Ways to Break Singleton | ClassLoader Attack | Spring vs Singleton | Multiple Scenarios | 15 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>1. What is Singleton Pattern?</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Singleton pattern is a <strong>GOF Creational Pattern</strong> that restricts a class to exactly one instance across the entire JVM. It provides a global access point to that single instance through a static factory method. The class itself controls its own instantiation.</p>
+<p><strong>One line:</strong> Single means one, ton means object. A singleton class allows creating only one object.</p>
+</div>
+
+<p>In Java it is called a singleton Java class. In C# it is called a singleton C# class. Since it is a GOF pattern, it can be implemented in any OOP language (C++, Java, C#, Python, etc.).</p>
+
+<h3>Design patterns are defined by three parts</h3>
+<ol>
+<li><strong>Problem:</strong> The recurring issue in software development</li>
+<li><strong>Solution:</strong> The best proven approach to solve it</li>
+<li><strong>Context:</strong> The situation where this solution applies</li>
+</ol>
+
+<div class="box box-orange">
+<div class="box-label" style="color:#92400e">Key Point</div>
+<p>Not every solution is a design pattern. For a recurring problem, there can be many solutions. Only the <strong>best solution</strong> that has been proven across multiple projects is called a Design Pattern. The worst solution is called an <strong>Anti Pattern</strong>.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>2. The Problem</h2>
+<!-- ================================================================ -->
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Problem</div>
+<p>Creating multiple objects for a Java class in the following situations is a waste of memory and CPU time:</p>
+<ol type="a">
+<li>If the class has <strong>no member variables/attributes/properties</strong> (no state)</li>
+<li>If the class has <strong>read-only state</strong> (only final variables)</li>
+<li>If the class has <strong>sharable state</strong> (like cache or buffer)</li>
+</ol>
+</div>
+
+<p>In Java, object creation is a costly process in terms of memory and CPU utilization. Every <code>new</code> call allocates heap memory, runs the constructor, and initializes fields. If a class needs only one instance, creating more wastes resources.</p>
+
+<h3>Real-world analogy</h3>
+<p>Think of all employees in an office sharing a single printer. Every employee does not need their own printer. One printer serves everyone. If we design software for this office, the Printer class should be a singleton -- creating 100 Printer objects for 100 employees is wasteful when one object can serve all.</p>
+
+<h3>Three cases where singleton is needed</h3>
+
+<h4>Case 1: Class with no state</h4>
+<p>A class that has no member variables, only methods. Creating multiple objects is pointless because every object behaves identically.</p>
+<pre><code>// No state -- all objects are identical
+public class MathUtils {
+    private MathUtils() {}
+
+    private static MathUtils INSTANCE;
+
+    public static MathUtils getInstance() {
+        if (INSTANCE == null) INSTANCE = new MathUtils();
+        return INSTANCE;
+    }
+
+    public int add(int a, int b) { return a + b; }
+    public int multiply(int a, int b) { return a * b; }
+}
+
+// Can call methods for multiple times
+// No need to create multiple objects
+MathUtils.getInstance().add(10, 20);
+MathUtils.getInstance().multiply(5, 6);</code></pre>
+
+<h4>Case 2: Class with read-only state (final variables)</h4>
+<p>A class whose state is set once and never changes. Multiple objects all hold the same data.</p>
+<pre><code>// Read-only state -- all objects have same data
+public class AppConfig {
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/bankdb";
+    private static final int MAX_CONNECTIONS = 10;
+
+    private static AppConfig INSTANCE;
+
+    private AppConfig() {
+        if (INSTANCE != null)
+            throw new RuntimeException("Object already created");
+    }
+
+    public static AppConfig getInstance() {
+        if (INSTANCE == null)
+            INSTANCE = new AppConfig();
+        return INSTANCE;
+    }
+
+    public String getDbUrl() { return DB_URL; }
+    public int getMaxConnections() { return MAX_CONNECTIONS; }
+}</code></pre>
+
+<h4>Case 3: Class with sharable state (cache, buffer, pool)</h4>
+<p>A class that holds shared mutable state. Multiple objects would mean duplicate caches or connection pools, leading to inconsistency and wasted memory.</p>
+<pre><code>// Sharable state -- one connection pool serves all
+public class ConnectionPool {
+    private static ConnectionPool INSTANCE;
+    private final List&lt;Connection&gt; pool = new ArrayList&lt;&gt;();
+    private static final int POOL_SIZE = 10;
+
+    private ConnectionPool() {
+        for (int i = 0; i &lt; POOL_SIZE; i++) {
+            pool.add(createConnection());
+        }
+    }
+
+    public static ConnectionPool getInstance() {
+        if (INSTANCE == null)
+            INSTANCE = new ConnectionPool();
+        return INSTANCE;
+    }
+
+    public synchronized Connection getConnection() {
+        if (pool.isEmpty()) throw new RuntimeException("Pool exhausted");
+        return pool.remove(0);
+    }
+
+    public synchronized void releaseConnection(Connection conn) {
+        pool.add(conn);
+    }
+
+    private Connection createConnection() {
+        // create actual DB connection
+        return DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/bankdb", "root", "password");
+    }
+}</code></pre>
+
+<!-- ================================================================ -->
+<h2>3. The Solution: Three Minimum Standards</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Solution</div>
+<p>A singleton class enforces single-instance creation through three rules:</p>
+<ol>
+<li><strong>Private constructor</strong> (infact ALL constructors) -- prevents outsiders from using <code>new</code> operator to create objects</li>
+<li><strong>Private static reference variable</strong> of class type -- holds the single instance. If null, object not yet created. If not null, object already exists.</li>
+<li><strong>Public static factory method</strong> with singleton logic -- checks the reference variable, creates object only if null, returns existing object otherwise</li>
+</ol>
+</div>
+
+<h3>Basic Singleton: Printer.java</h3>
+<pre><code>package com.nt.sdp;
+
+public class Printer {
+    // Step 2: private static ref variable of class type
+    private static Printer INSTANCE;
+
+    // Step 1: private 0-param constructor
+    private Printer() {
+        System.out.println("Printer:: 0-param constructor");
+    }
+
+    // Step 3: static factory method having singleton logic
+    public static Printer getInstance() {
+        if (INSTANCE == null) {
+            INSTANCE = new Printer();
+        }
+        return INSTANCE;
+    }
+
+    // business method
+    public void printMessage(String msg) {
+        System.out.println(msg);
+    }
+}</code></pre>
+
+<h3>Client App: SingletonClassTest1.java</h3>
+<pre><code>package com.nt.test;
+
+import com.nt.sdp.Printer;
+
+public class SingletonClassTest1 {
+    public static void main(String[] args) {
+        // Printer p1 = new Printer(); // INVALID - constructor is private
+
+        // Get singleton object
+        Printer p1 = Printer.getInstance();
+        Printer p2 = Printer.getInstance();
+
+        System.out.println("hash codes: " + p1.hashCode() + " " + p2.hashCode());
+        System.out.println("p1 == p2? " + (p1 == p2));
+    }
+}</code></pre>
+
+<div class="output">Printer:: 0-param constructor
+hash codes: 305808283 305808283
+p1 == p2? true</div>
+
+<p>The constructor is called only once. Both <code>p1</code> and <code>p2</code> point to the same object (same hashCode, <code>p1 == p2</code> is true).</p>
+
+<div class="box box-orange">
+<div class="box-label" style="color:#92400e">Note on constructor execution</div>
+<p>We cannot always go by constructor execution to confirm whether an object is created. There are exceptional cases:</p>
+<ul>
+<li>If you create an object for a subclass of an abstract class, the abstract class constructor will execute along with the subclass constructor. But that does not mean an object is created for the abstract class.</li>
+<li>In Java, we cannot create objects for interfaces and abstract classes.</li>
+<li>If the object is created using Cloning or Deserialization, the constructor will NOT be executed because the object is already initialized with data from the source.</li>
+</ul>
+</div>
+
+<!-- ================================================================ -->
+<h2>4. Pre-defined Singleton Classes in Java</h2>
+<!-- ================================================================ -->
+
+<table>
+<tr><th>Class</th><th>Why Singleton</th><th>How to Get Instance</th></tr>
+<tr><td><code>java.lang.Runtime</code></td><td>One app contains only one runtime. The Runtime class manages the running JVM.</td><td><code>Runtime.getRuntime()</code></td></tr>
+<tr><td><code>java.awt.Desktop</code></td><td>One computer contains one desktop. The Desktop class provides access to default browser, email client, etc.</td><td><code>Desktop.getDesktop()</code></td></tr>
+<tr><td><code>org.apache.log4j.Logger</code></td><td>All logging activities of an app should be handled by a single Logger object to ensure consistent log output.</td><td><code>Logger.getLogger(Class)</code></td></tr>
+</table>
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Important Distinction</div>
+<p>If a Java class <strong>allows</strong> creating only one object, but someone still creates one, that class is NOT called singleton. A class is singleton only when it <strong>forces/restricts</strong> object creation to one. Example: the <code>Test</code> class below is NOT singleton even though you only create one object:</p>
+<pre><code>public class Test {
+    Test t = new Test();  // Creates only one, but nothing stops creating more
+    // ...
+    // "Test" is NOT a singleton Java class
+}</code></pre>
+<p>Servlet component class is not a singleton -- <code>ServletContainer</code> is happy to create one object of Servlet, but it does not force the restriction. If you can bypass the container, you could create more objects.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>5. Multithreading Problem</h2>
+<!-- ================================================================ -->
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Critical Problem</div>
+<p>The basic lazy singleton is <strong>NOT thread-safe</strong>. If multiple threads of the same Client App or different Client Apps call <code>Printer.getInstance()</code> simultaneously with improper thread switching while executing singleton logic, there is a possibility of creating multiple objects for the singleton class.</p>
+<p>This is a serious problem when using singleton as a helper class for Servlet/JSP in a web application, which is a multithreaded environment where multiple threads will be created for multiple requests.</p>
+</div>
+
+<h3>Thread switching scenario</h3>
+
+<div class="diagram">Thread Switching During getInstance():
+
+thread1                              thread2
+  |                                     |
+  |--(a1) enter getInstance()           |
+  |--(a2) check INSTANCE==null --> true |
+  |--(a3) CONTEXT SWITCH!              |
+  |                                     |--(b1) enter getInstance()
+  |                                     |--(b2) check INSTANCE==null --> true
+  |                                     |--(b3) INSTANCE = new Printer()  [object 1]
+  |                                     |--(b4) return INSTANCE
+  |--(a4) thread1 resumed              |
+  |--(a5) INSTANCE = new Printer()     |  [object 2!]
+  |--(a6) return INSTANCE              |
+
+Flow of execution:
+  a1 to a3 --> first level
+  b1 to b4 --> second level
+  a4 to a6 --> third level
+
+Result: 2 objects created. Singleton behavior BROKEN.</div>
+
+<h3>Web application scenario (BookMyShowApp)</h3>
+
+<div class="diagram">browser1                WebServer / Application Server
+  |  request1            BookMyShowApp / TicketBusApp
+  |--------->            +---------------------------+
+  |                      | TicketBooking class        |
+  |                      |   Printer p1 =             |
+browser2                 |     Printer.getInstance(); |  Printer class (Singleton)
+  |  request2            |   p1.printMessage(ticket); |  +-------------------+
+  |--------->            |                            |  | private static    |
+  |                      | thread1     thread2        |  |   Printer INSTANCE|
+  |                      |   |           |            |  | private Printer() |
+  |                      |   |-- both call getInstance()|  | public static   |
+  |                      |   |-- simultaneously!     |  |   getInstance()   |
+  |                      +---------------------------+  +-------------------+
+  |
+  | If multiple threads call getInstance() at the same time,
+  | singleton can be broken!</div>
+
+<h3>Thread-unsafe demo code</h3>
+<pre><code>// TicketBookingOperation.java
+package com.nt.test;
+
+import com.nt.sdp.Printer;
+
+public class TicketBookingOperation implements Runnable {
+    @Override
+    public void run() {
+        System.out.println("TicketBookingOperation.run()");
+        Printer p = Printer.getInstance();
+        System.out.println(p.hashCode());
+    }
+}
+
+// SingletonClassTest_MultiThreaded.java
+public class SingletonClassTest_MultiThreaded {
+    public static void main(String[] args) {
+        // create Threads with data
+        TicketBookingOperation operation = new TicketBookingOperation();
+        Thread th1 = new Thread(operation);
+        Thread th2 = new Thread(operation);
+        Thread th3 = new Thread(operation);
+
+        // start threads
+        th1.start();
+        th2.start();
+        th3.start();
+    }
+}</code></pre>
+
+<div class="output">TicketBookingOperation.run()
+TicketBookingOperation.run()
+TicketBookingOperation.run()
+Printer:: 0-param constructor
+Printer:: 0-param constructor    &lt;-- 3 objects created!
+Printer:: 0-param constructor
+1794691421
+2049543315
+571539904</div>
+
+<p>Three different hashCodes = three different objects. The singleton is broken in a multithreaded environment.</p>
+
+<!-- ================================================================ -->
+<h2>6. Six Thread-Safe Solutions</h2>
+<!-- ================================================================ -->
+
+<h3>a) Synchronized static factory method</h3>
+<pre><code>// In Printer.java
+public synchronized static Printer getInstance() {
+    // singleton logic
+    if (INSTANCE == null) {
+        try {
+            Thread.sleep(10000); // simulate slow creation
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        INSTANCE = new Printer();
+    }
+    return INSTANCE;
+}</code></pre>
+<p>Since the synchronized method allows only one thread at a time inside the method, there is no problem of multithreading breaking singleton. However, every call acquires the lock, even after the object exists. This is slow.</p>
+<p><strong>Better:</strong> Place <code>synchronized(){}</code> block inside the method where the sensitive logic is, instead of making the whole method synchronized.</p>
+
+<h3>b) Synchronized block inside static factory method</h3>
+<pre><code>public static Printer getInstance() {
+    // singleton logic
+    synchronized (Printer.class) {  // class level locking
+        if (INSTANCE == null) {
+            try {
+                Thread.sleep(10000);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            INSTANCE = new Printer();
+        }
+    }
+    return INSTANCE;
+}</code></pre>
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Why Printer.class?</div>
+<p>We cannot use <code>this</code> inside a static method, so we cannot pass <code>synchronized(this)</code>. To protect static properties of a class, we use <strong>class level locking</strong> by passing the class name in the form of <code>java.lang.Class</code> object: <code>synchronized(Printer.class)</code>.</p>
+<p>In Java, <code>.class</code> is a compiler-generated pre-defined <code>public static</code> property of every Java class, returning the object of <code>java.lang.Class</code> having the current class name and info.</p>
+<p><strong>Conclusion:</strong> If we want to pass a Java class in the app as input value, we can use <code>ClassName.class</code> or the object of <code>java.lang.Class</code>.</p>
+</div>
+
+<h3>c) Double-checked locking (Best 1)</h3>
+<div class="box box-purple">
+<div class="box-label" style="color:#6d28d9">Recommended Approach 1</div>
+<pre><code>public class Printer {
+    private static volatile Printer INSTANCE;
+
+    private Printer() {
+        System.out.println("Printer:: 0-param constructor");
+    }
+
+    public static Printer getInstance() {
+        if (INSTANCE == null) {  // 1st NULL check (no lock)
+            System.out.println("Printer.getInstance()[outside sync block]: "
+                + Thread.currentThread().getName());
+
+            synchronized (Printer.class) {  // class level locking
+                System.out.println("Printer.getInstance()[inside sync block]: "
+                    + Thread.currentThread().getName());
+
+                if (INSTANCE == null) {  // 2nd NULL check (with lock)
+                    try {
+                        Thread.sleep(10000);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    INSTANCE = new Printer();
+                }
+            }
+        }
+        return INSTANCE;
+    }
+}</code></pre>
+<p>The first null check avoids the synchronized block entirely once the object is created. Only when INSTANCE is null do threads enter the synchronized block, and the second null check inside prevents duplicate creation. The <code>volatile</code> keyword ensures the INSTANCE field is visible across all threads immediately.</p>
+<p><strong>This is the most commonly used approach in production code.</strong></p>
+</div>
+
+<h3>d) Eager instantiation</h3>
+<pre><code>public class Printer {
+    // object created at class loading time itself (eager)
+    private static final Printer INSTANCE = new Printer();
+
+    private Printer() {
+        System.out.println("Printer:: 0-param constructor");
+    }
+
+    public static Printer getInstance() {
+        return INSTANCE;  // no checking needed
+    }
+}</code></pre>
+<p>Since the object is the static reference variable, the JVM creates it at class loading time. The object is created as soon as the class is loaded, even if it is never used. Thread-safe because class loading is inherently thread-safe in JVM.</p>
+<p><strong>Drawback:</strong> Creates the object even if never needed (no lazy loading).</p>
+
+<h3>e) Inner class based lazy instantiation (Bill Pugh - Best 2)</h3>
+<div class="box box-purple">
+<div class="box-label" style="color:#6d28d9">Recommended Approach 2</div>
+<pre><code>public class Printer {
+    private Printer() {
+        System.out.println("Printer:: 0-param constructor");
+    }
+
+    // Inner class -- loaded only when getInstance() is called
+    private static class InstanceHolder {
+        private static final Printer INSTANCE = new Printer();
+    }
+
+    public static Printer getInstance() {
+        return InstanceHolder.INSTANCE;
+    }
+}</code></pre>
+<p>The key: the inner class <code>InstanceHolder</code> is NOT loaded when the outer class <code>Printer</code> is loaded. It is loaded only when <code>getInstance()</code> is first called. The JVM guarantees that class loading is thread-safe. No explicit synchronization needed.</p>
+<p>This is the <strong>Bill Pugh Singleton</strong> -- it combines lazy initialization with thread safety and zero synchronization overhead.</p>
+</div>
+
+<h3>f) ENUM based singleton (Best 3)</h3>
+<div class="box box-purple">
+<div class="box-label" style="color:#6d28d9">Recommended Approach 3</div>
+<pre><code>package com.nt.sdp;
+
+public enum Printer3 {
+    INSTANCE;  // enum constant -- internally: public static final Printer3 INSTANCE = new Printer3()
+
+    public static Printer3 getInstance() {
+        return INSTANCE;
+    }
+
+    // business method
+    public void printMessage(String msg) {
+        System.out.println("printing: " + msg);
+    }
+}
+
+// Usage:
+Printer3.INSTANCE.printMessage("Report #1234");</code></pre>
+</div>
+
+<h4>Why is Enum singleton the best?</h4>
+<ol>
+<li><strong>No multithreading issues:</strong> Eager instantiation happens on enum constant like INSTANCE. There will not be any multi-threading issue.</li>
+<li><strong>Easy to develop:</strong> Writing less code with minimum coding standards.</li>
+<li><strong>Clone-safe:</strong> The <code>clone()</code> method is marked as protected final in the internal default super class <code>java.lang.Enum&lt;E&gt;</code>. So we cannot override <code>clone()</code> in our enum. <code>clone()</code> cannot be called on enum constants. Every enum already extends <code>java.lang.Enum&lt;E&gt;</code> class internally. It cannot be extended further (Java does not support multiple inheritance). So our enum is NOT <code>Cloneable</code> by default.</li>
+<li><strong>Serialization-safe:</strong> Every enum is Serializable by default. If we perform Serialization on enum constants, when we attempt to do Deserialization, we get already available enum obj/constant (i.e., some internal <code>readResolve()</code> method functionality is given).</li>
+<li><strong>Reflection-safe:</strong> For enums, we cannot create objects using Reflection API as they do not contain constructors.</li>
+</ol>
+
+<h4>Enum inheritance hierarchy</h4>
+<div class="diagram">java.lang.Object
+    |
+    extends
+    |
+java.lang.Enum&lt;E&gt; ----implements----> java.lang.Comparable&lt;E&gt;
+    |                                    java.io.Serializable
+    |
+    extends (internally by compiler)
+    |
+com.nt.sdp.Printer3 (enum -- internally class)</div>
+
+<h4>Enum singleton limitations</h4>
+<ul>
+<li>a) We cannot apply few features of Java on enum like inheritance using "extends"</li>
+<li>b) We cannot place instance, static member variables in the enum representing the state of the object</li>
+<li>c) We cannot place <code>serialVersionUID</code> while working with Enum to perform serialization activity</li>
+<li>d) Eager instantiation based singleton is not ideal if the object is never used</li>
+</ul>
+
+<!-- ================================================================ -->
+<h2>7. Breaking Singleton (and How to Prevent)</h2>
+<!-- ================================================================ -->
+
+<h3>a) Breaking via Cloning</h3>
+<p>If a singleton class implements <code>Cloneable</code> (directly or through inheritance), calling <code>clone()</code> creates a second object.</p>
+
+<div class="diagram">java.lang.Cloneable (I)       java.io.Serializable (I)
+         |                              |
+         implements                     implements
+         |                              |
+com.nt.util.CommonUtils (C)
+         |
+         extends
+         |
+com.nt.sdp.Printer (C)
+
+Note: Even if Printer does not directly implement Cloneable,
+it inherits it from CommonUtils. Cloning is now possible.</div>
+
+<h4>Prevention: Override clone()</h4>
+<pre><code>// Option 1: Return existing instance (not recommended)
+@Override
+public Object clone() throws CloneNotSupportedException {
+    return INSTANCE;
+}
+
+// Option 2: Throw exception (BEST solution)
+@Override
+public Object clone() throws CloneNotSupportedException {
+    throw new CloneNotSupportedException(
+        "In this singleton class, cloning is restricted");
+}</code></pre>
+
+<h3>b) Breaking via Serialization and Deserialization</h3>
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Problem</div>
+<p>The process of converting a Java object's data into a stream of bits and bytes is called Serialization. These bits/bytes can be written to a file or sent over a network. Serialization is possible only on Serializable objects (class must implement <code>java.io.Serializable</code>).</p>
+<p>If we perform Serialization on the singleton object and write its data to a file, we can then create as many objects as we want by reading from that file through Deserialization.</p>
+</div>
+
+<div class="diagram">Java App                              File
++-----------+     Serialization       +--------+
+| singleton |  (ObjectOutputStream)   |  ...   |
+| object    | ----bits/bytes--------> | bits   |
+| (java     |                         | bytes  |
+|  data)    |                         +--------+
++-----------+                              |
+                                           |
++-----------+     DeSerialization          |
+| NEW Java  |  (ObjectInputStream)  <------+
+| object    |
++-----------+
+
+When object is created through DeSerialization, the constructor
+will NOT be executed because the newly created object is already
+initialized with data collected from the file/network.
+So separate initialization via constructor is not required.</div>
+
+<h4>Prevention: readResolve() method</h4>
+<pre><code>// Add this method in your singleton class
+private Object readResolve() throws ObjectStreamException {
+    return INSTANCE;
+}</code></pre>
+
+<h4>Full Serialization test code</h4>
+<pre><code>package com.nt.test;
+
+import java.io.*;
+import com.nt.sdp.Printer;
+
+public class SingletonSerializationTest {
+    public static void doSerialization(Printer printer) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(
+                new FileOutputStream("data.ser"))) {
+            oos.writeObject(printer);
+            oos.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        System.out.println("Object Serialization is done");
+    }
+
+    public static Printer doDeSerialization() {
+        Printer p = null;
+        try (ObjectInputStream ois = new ObjectInputStream(
+                new FileInputStream("data.ser"))) {
+            p = (Printer) ois.readObject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return p;
+    }
+
+    public static void main(String[] args) {
+        Printer p1 = Printer.getInstance();
+        doSerialization(p1);
+
+        System.out.println("--------DeSerialization--------");
+        Printer p2 = doDeSerialization();
+        Printer p3 = doDeSerialization();
+
+        System.out.println(p1.hashCode() + " " + p2.hashCode() + " " + p3.hashCode());
+    }
+}</code></pre>
+
+<div class="output">Without readResolve():
+  1784662007  702218396  672329506   &lt;-- 3 objects created!
+
+With readResolve():
+  1784662007  1784662007  1784662007  &lt;-- all same object</div>
+
+<div class="box box-orange">
+<div class="box-label" style="color:#92400e">Important Note on serialVersionUID</div>
+<p>We never make a singleton class implementing <code>Serializable</code> directly, but it may implement indirectly because classes in the inheritance hierarchy may implement Serializable. In that case, Serialization and Deserialization on the singleton object is possible.</p>
+<p>It is recommended to add <code>serialVersionUID</code> to every Serializable class so we will not get <code>InvalidClassException</code> even though the class structure is changed at the time of DeSerialization:</p>
+<pre><code>private static final long serialVersionUID = 1L;</code></pre>
+<p>If <code>serialVersionUID</code> is not placed, the JVM generates a dynamic one based on the structure of the class. If the structure is modified during DeSerialization, we get:</p>
+<pre><code>java.io.InvalidClassException: com.nt.sdp.Printer;
+local class incompatible: stream classdesc
+serialVersionUID = 1104536345855,
+local class serialVersionUID = 8110690610001600652</code></pre>
+</div>
+
+<h3>c) Breaking via Reflection API</h3>
+<p>Even if the constructor is <code>private</code>, the Reflection API can access it, set it accessible, and create multiple objects. This breaks the singleton guarantee.</p>
+
+<pre><code>package com.nt.test;
+
+import java.lang.reflect.Constructor;
+
+public class SingletonReflectionTest {
+    public static void main(String[] args) throws Exception {
+        // Normal way -- gives single object
+        Printer p1 = Printer.getInstance();
+
+        // Reflection API way -- breaks singleton
+        Class c = Class.forName("com.nt.sdp.Printer");
+        Constructor[] cons = c.getDeclaredConstructors();
+        cons[0].setAccessible(true);  // bypass private access
+        Printer p2 = (Printer) cons[0].newInstance();
+
+        System.out.println(p1.hashCode() + " " + p2.hashCode());
+        // Output: DIFFERENT hashCodes -- singleton is broken!
+        System.out.println("p1 == p2? " + (p1 == p2));  // false
+    }
+}</code></pre>
+
+<h4>Prevention: isInstantiated flag</h4>
+<pre><code>public class Printer {
+    private static Printer INSTANCE;
+    private static boolean isInstantiated = false;
+
+    private Printer() {
+        // Stop reflection-based second object creation
+        if (isInstantiated) {
+            throw new RuntimeException(
+                "Object is already created. Cannot create another.");
+        }
+        isInstantiated = true;
+        System.out.println("Printer:: 0-param constructor");
+    }
+
+    public static Printer getInstance() {
+        if (INSTANCE == null)
+            INSTANCE = new Printer();
+        return INSTANCE;
+    }
+}</code></pre>
+
+<!-- ================================================================ -->
+<h2>8. Breaking Singleton via ClassLoader</h2>
+<!-- ================================================================ -->
+
+<p>JVM internally uses a ClassLoader subsystem to load Java classes. The system has three classloaders:</p>
+
+<div class="diagram">ClassLoader Hierarchy (Parent Delegation Model):
+
++-----------------------+
+| BootStrap ClassLoader |  Loading classes from &lt;java_home&gt;/jre/lib folder (jar files)
+|        [a]            |
++-----------+-----------+
+            |
+            | if not found (a,F)
+            v
++-----------------------+
+| Extension ClassLoader |  Loading classes from &lt;java_home&gt;/jre/lib/ext folder (jar files)
+|        [b]            |
++-----------+-----------+
+            |
+            | if not found (b,F)
+            v
++-----------------------+
+| Application           |  Loading classes from the jar files, directories added to
+| ClassLoader [c]       |  CLASSPATH env... variable
++-----------------------+
+            |
+            | (c,F) if not found
+            v
+   ClassNotFoundException / NoClassDefFoundError
+
+Request to load a class:
+  [c] Application CL receives request
+  --> delegates to parent [b] Extension CL
+  --> delegates to parent [a] BootStrap CL
+  --> [a] searches rt.jar etc. If found, loads it.
+  --> If not found, [b] searches ext folder.
+  --> If not found, [c] searches CLASSPATH.
+  --> If still not found, throws exception.</div>
+
+<h4>Notes on ClassLoader behavior</h4>
+<ul>
+<li>If a class is loaded by parent classloader, the same class will NOT be loaded by child classloader (Principle of Delegation)</li>
+<li>The class loaded by parent classloader is visible to child classloader, but not the reverse (Principle of Visibility)</li>
+<li>When JVM gives a class to classloader subsystem for loading, it is delegated to all classloaders using the delegation principle</li>
+</ul>
+
+<h4>Breaking singleton using Custom ClassLoader</h4>
+<p><code>URLClassLoader</code> is a readily available custom classloader which can load classes from specific jar files and also initialize them as needed.</p>
+
+<pre><code>// Using Application ClassLoader (default)
+System.out.println("Using Application ClassLoader");
+Printer p1 = Printer.getInstance();
+Printer p2 = Printer.getInstance();
+System.out.println(p1.hashCode() + " " + p2.hashCode());
+
+System.out.println("---");
+
+// Using Custom ClassLoader (URLClassLoader)
+System.out.println("Using URLClassLoader");
+URLClassLoader loader = new URLClassLoader(
+    new URL[]{new URL("file:///c/myProj/jar5/1.jar")});
+Class c1 = loader.loadClass("com.nt.sdp.Printer");
+Constructor cons = c1.getDeclaredConstructors()[0];
+cons.setAccessible(true);
+Object obj = cons.newInstance();
+
+System.out.println("object hash codes: " + obj.hashCode() + " " + p1.hashCode());</code></pre>
+
+<div class="output">Using Application ClassLoader
+object hash codes: 1550009438  1550009438
+
+Using URLClassLoader (separate Custom ClassLoader)
+object hash codes: 1300502809  895342119</div>
+
+<p>Here <code>URLClassLoader</code> is an independent classloader and not linked with JVM's classloader system. So one object is created using ApplicationClassLoader of ClassLoader sub system and another object will be using URLClassLoader (custom classloader).</p>
+
+<div class="box box-orange">
+<div class="box-label" style="color:#92400e">Practical Impact</div>
+<p>There is no solution for this problem from the singleton Java class developer perspective. Because URLClassLoader can break any singleton Java class. The only practical advice is: do not allow untrusted jar files to create CustomClassLoader or use SecurityManager to restrict ClassLoader creation.</p>
+<p>Fortunately, this is a rare scenario in production. It only occurs when someone deliberately creates a custom classloader.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>9. Singleton Pattern vs Spring Singleton Scope</h2>
+<!-- ================================================================ -->
+
+<table>
+<tr><th>Aspect</th><th>Singleton Design Pattern</th><th>Spring Singleton Scope</th></tr>
+<tr><td>Scope</td><td>One object per JVM (per classloader)</td><td>One object per Spring IoC container</td></tr>
+<tr><td>Who controls</td><td>The class itself (private constructor)</td><td>The Spring container (bean lifecycle)</td></tr>
+<tr><td>Multiple containers</td><td>Not possible. One JVM = one instance</td><td>Each container has its own instance</td></tr>
+<tr><td>Thread safety</td><td>Developer's responsibility</td><td>Container handles lifecycle, developer handles state</td></tr>
+<tr><td>Implementation</td><td>Private constructor + static factory method</td><td><code>@Scope("singleton")</code> or default scope</td></tr>
+</table>
+
+<p>Spring IoC container creating one object for servlet comp class does not mean Spring is making classes as singletons. Spring is just having singleton <strong>behavior</strong> (one object for singleton scope spring bean), but the class is not a true singleton because there is no private constructor restriction. If you bypass the container, you could create more objects.</p>
+
+<!-- ================================================================ -->
+<h2>10. Full-Length Industry Project: BookMyShow Ticket Booking System</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Business Scenario</div>
+<p><strong>BookMyShow</strong> is an online ticket booking platform. Thousands of users access the system simultaneously from browsers and mobile apps. The system needs:</p>
+<ul>
+<li>A <strong>single database connection pool</strong> shared across all request threads (creating a pool per request would exhaust DB connections)</li>
+<li>A <strong>single application logger</strong> so all services write to the same log file in order</li>
+<li>A <strong>single configuration manager</strong> to load settings once and serve all services</li>
+<li>A <strong>single cache manager</strong> to cache movie and show data, avoiding repeated DB calls</li>
+</ul>
+<p>Each of these is a Singleton. The project demonstrates four different singleton implementations working together in a real layered architecture.</p>
+</div>
+
+<h3>High-Level Design (HLD)</h3>
+
+<div class="diagram">
+                    +------------------+
+                    |   Client Tier    |
+                    | Browser / Mobile |
+                    +--------+---------+
+                             |
+                             v
++----------------------------------------------------------------+
+|                    PRESENTATION TIER                             |
+|   BookingController    MovieController    PaymentController     |
++-------------------+--------------------+------------------------+
+                    |
+                    v
++----------------------------------------------------------------+
+|                      SERVICE TIER                               |
+|   BookingService      MovieService      PaymentService          |
+|       |                    |                  |                  |
+|       |   Uses:            |   Uses:          |   Uses:         |
+|       |   - Logger         |   - Logger       |   - Logger      |
+|       |   - Config         |   - Config       |   - Config      |
+|       |   - ConnPool       |   - Cache        |   - ConnPool    |
+|       |   - Cache          |   - ConnPool     |                 |
++-------------------+--------------------+------------------------+
+                    |
+                    v
++----------------------------------------------------------------+
+|                   SINGLETON LAYER                               |
+|                                                                 |
+|  +------------------+  +-----------------+  +----------------+  |
+|  | ConnectionPool   |  | AppLogger       |  | ConfigManager  |  |
+|  | (Double-checked) |  | (Bill Pugh)     |  | (Enum-based)   |  |
+|  | Manages 20 DB    |  | Writes to file  |  | Loads props    |  |
+|  | connections      |  | + console       |  | from file      |  |
+|  +------------------+  +-----------------+  +----------------+  |
+|                                                                 |
+|  +------------------+                                           |
+|  | CacheManager     |                                           |
+|  | (Inner class)    |                                           |
+|  | In-memory cache  |                                           |
+|  | with TTL expiry  |                                           |
+|  +------------------+                                           |
++----------------------------------------------------------------+
+                    |
+                    v
++----------------------------------------------------------------+
+|                      DATA TIER                                  |
+|   MySQL Database    |   application.properties                  |
+|   (movies, shows,   |   (db url, pool size, cache ttl, etc.)   |
+|    bookings, seats)  |                                          |
++----------------------------------------------------------------+
+</div>
+
+<h3>Low-Level Design (LLD)</h3>
+
+<div class="diagram">
++------------------------------------------------------------+
+|   ConfigManager (ENUM Singleton)                           |
++------------------------------------------------------------+
+| INSTANCE                              [enum constant]      |
+| - properties: Properties              [private final]      |
++------------------------------------------------------------+
+| + get(key): String                                         |
+| + getInt(key, default): int                                |
+| + getBoolean(key, default): boolean                        |
++------------------------------------------------------------+
+
++------------------------------------------------------------+
+|   AppLogger (Bill Pugh Singleton)                          |
++------------------------------------------------------------+
+| - writer: PrintWriter                 [private final]      |
+| - dateFormatter: DateTimeFormatter    [private static final]|
++------------------------------------------------------------+
+| - AppLogger()                         [private]            |
+| + getInstance(): AppLogger            [public static]      |
+| + info(msg): void                                          |
+| + warn(msg): void                                          |
+| + error(msg): void                                         |
+| + error(msg, throwable): void                              |
++------------------------------------------------------------+
+| - InstanceHolder                      [private static class]|
+|   - INSTANCE: AppLogger               [private static final]|
++------------------------------------------------------------+
+
++------------------------------------------------------------+
+|   ConnectionPool (Double-Checked Locking Singleton)        |
++------------------------------------------------------------+
+| - INSTANCE: ConnectionPool            [private static volatile]|
+| - availableConnections: Queue&lt;Connection&gt; [private final] |
+| - usedConnections: Set&lt;Connection&gt;    [private final]      |
+| - MAX_POOL_SIZE: int                  [private final]      |
++------------------------------------------------------------+
+| - ConnectionPool(size)                [private]            |
+| + getInstance(): ConnectionPool       [public static]      |
+| + getConnection(): Connection         [public synchronized]|
+| + releaseConnection(conn): void       [public synchronized]|
+| + getAvailableCount(): int            [public]             |
+| + getUsedCount(): int                 [public]             |
++------------------------------------------------------------+
+
++------------------------------------------------------------+
+|   CacheManager (Inner Class Singleton)                     |
++------------------------------------------------------------+
+| - cache: Map&lt;String, CacheEntry&gt;     [private final]      |
+| - defaultTtlMs: long                 [private final]       |
++------------------------------------------------------------+
+| - CacheManager()                      [private]            |
+| + getInstance(): CacheManager         [public static]      |
+| + put(key, value): void                                    |
+| + put(key, value, ttlMs): void                             |
+| + get(key): Object                                         |
+| + remove(key): void                                        |
+| + clear(): void                                            |
+| + size(): int                                              |
+| - isExpired(entry): boolean           [private]            |
++------------------------------------------------------------+
+| - CacheEntry                          [private static class]|
+|   - value: Object                                          |
+|   - expiresAt: long                                        |
++------------------------------------------------------------+
+| - InstanceHolder                      [private static class]|
+|   - INSTANCE: CacheManager                                 |
++------------------------------------------------------------+
+
++------------------------------------------------------------+
+|   MovieService                                             |
++------------------------------------------------------------+
+| - logger: AppLogger                   [private final]      |
+| - config: ConfigManager               [private final]      |
+| - cache: CacheManager                 [private final]      |
+| - pool: ConnectionPool                [private final]      |
++------------------------------------------------------------+
+| + getAllMovies(): List&lt;Movie&gt;                              |
+| + getMovieById(id): Movie                                  |
+| + getShowsForMovie(movieId): List&lt;Show&gt;                    |
++------------------------------------------------------------+
+
++------------------------------------------------------------+
+|   BookingService                                           |
++------------------------------------------------------------+
+| - logger: AppLogger                   [private final]      |
+| - pool: ConnectionPool                [private final]      |
+| - cache: CacheManager                 [private final]      |
++------------------------------------------------------------+
+| + bookTicket(userId, showId, seats): Booking               |
+| + cancelBooking(bookingId): boolean                        |
+| + getBooking(bookingId): Booking                           |
++------------------------------------------------------------+
+
++------------------------------------------------------------+
+|   Model Classes                                            |
++------------------------------------------------------------+
+| Movie:    id, title, genre, durationMinutes                |
+| Show:     id, movieId, theatre, time, availableSeats, price|
+| Booking:  id, userId, showId, seats, totalAmount, status   |
+| Connection: id, url (simulated DB connection)              |
++------------------------------------------------------------+
+</div>
+
+<h3>Project Structure</h3>
+<div class="ps">bookmyshow-singleton-demo/
+├── src/
+│   └── main/
+│       ├── java/com/bookmyshow/
+│       │   ├── singleton/
+│       │   │   ├── ConfigManager.java          (enum singleton)
+│       │   │   ├── AppLogger.java              (Bill Pugh singleton)
+│       │   │   ├── ConnectionPool.java         (double-checked locking)
+│       │   │   └── CacheManager.java           (inner class singleton)
+│       │   ├── model/
+│       │   │   ├── Movie.java
+│       │   │   ├── Show.java
+│       │   │   ├── Booking.java
+│       │   │   └── Connection.java             (simulated DB connection)
+│       │   ├── service/
+│       │   │   ├── MovieService.java
+│       │   │   └── BookingService.java
+│       │   └── Application.java                (main entry point)
+│       └── resources/
+│           └── application.properties
+├── src/
+│   └── test/java/com/bookmyshow/
+│       └── singleton/
+│           ├── ConfigManagerTest.java
+│           ├── AppLoggerTest.java
+│           ├── ConnectionPoolTest.java
+│           ├── CacheManagerTest.java
+│           └── SingletonThreadSafetyTest.java  (all singletons under load)
+└── pom.xml</div>
+
+<h3>application.properties</h3>
+<pre><code># BookMyShow Configuration
+app.name=BookMyShow
+app.version=1.0.0
+
+# Database
+db.url=jdbc:mysql://localhost:3306/bookmyshow_db
+db.username=bms_admin
+db.password=encrypted_pwd
+db.pool.size=20
+
+# Cache
+cache.default.ttl.seconds=300
+cache.movies.ttl.seconds=600
+
+# Booking
+booking.max.seats.per.transaction=10
+booking.payment.timeout.seconds=120
+
+# Logging
+log.file=bookmyshow.log
+log.level=INFO</code></pre>
+
+<h3>Connection.java (Simulated DB connection)</h3>
+<pre><code>package com.bookmyshow.model;
+
+import java.util.UUID;
+
+public class Connection {
+    private final String id;
+    private final String url;
+    private boolean inUse;
+
+    public Connection(String url) {
+        this.id = UUID.randomUUID().toString().substring(0, 8);
+        this.url = url;
+        this.inUse = false;
+    }
+
+    public String getId() { return id; }
+    public String getUrl() { return url; }
+    public boolean isInUse() { return inUse; }
+    public void setInUse(boolean inUse) { this.inUse = inUse; }
+
+    @Override
+    public String toString() {
+        return "Connection[" + id + "]";
+    }
+}</code></pre>
+
+<h3>Movie.java</h3>
+<pre><code>package com.bookmyshow.model;
+
+public class Movie {
+    private final String id;
+    private final String title;
+    private final String genre;
+    private final int durationMinutes;
+
+    public Movie(String id, String title, String genre, int durationMinutes) {
+        this.id = id;
+        this.title = title;
+        this.genre = genre;
+        this.durationMinutes = durationMinutes;
+    }
+
+    public String getId() { return id; }
+    public String getTitle() { return title; }
+    public String getGenre() { return genre; }
+    public int getDurationMinutes() { return durationMinutes; }
+
+    @Override
+    public String toString() {
+        return title + " (" + genre + ", " + durationMinutes + " min)";
+    }
+}</code></pre>
+
+<h3>Show.java</h3>
+<pre><code>package com.bookmyshow.model;
+
+public class Show {
+    private final String id;
+    private final String movieId;
+    private final String theatre;
+    private final String time;
+    private int availableSeats;
+    private final double price;
+
+    public Show(String id, String movieId, String theatre,
+                String time, int availableSeats, double price) {
+        this.id = id;
+        this.movieId = movieId;
+        this.theatre = theatre;
+        this.time = time;
+        this.availableSeats = availableSeats;
+        this.price = price;
+    }
+
+    public String getId() { return id; }
+    public String getMovieId() { return movieId; }
+    public String getTheatre() { return theatre; }
+    public String getTime() { return time; }
+    public int getAvailableSeats() { return availableSeats; }
+    public double getPrice() { return price; }
+
+    public synchronized boolean reserveSeats(int count) {
+        if (count > availableSeats) return false;
+        availableSeats -= count;
+        return true;
+    }
+
+    @Override
+    public String toString() {
+        return theatre + " | " + time + " | Seats: " + availableSeats
+            + " | Rs " + price;
+    }
+}</code></pre>
+
+<h3>Booking.java</h3>
+<pre><code>package com.bookmyshow.model;
+
+import java.time.LocalDateTime;
+import java.util.UUID;
+
+public class Booking {
+    private final String id;
+    private final String userId;
+    private final String showId;
+    private final int seats;
+    private final double totalAmount;
+    private final LocalDateTime bookedAt;
+    private String status;
+
+    public Booking(String userId, String showId, int seats, double totalAmount) {
+        this.id = "BKG-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
+        this.userId = userId;
+        this.showId = showId;
+        this.seats = seats;
+        this.totalAmount = totalAmount;
+        this.bookedAt = LocalDateTime.now();
+        this.status = "CONFIRMED";
+    }
+
+    public String getId() { return id; }
+    public String getUserId() { return userId; }
+    public String getShowId() { return showId; }
+    public int getSeats() { return seats; }
+    public double getTotalAmount() { return totalAmount; }
+    public LocalDateTime getBookedAt() { return bookedAt; }
+    public String getStatus() { return status; }
+    public void setStatus(String status) { this.status = status; }
+
+    @Override
+    public String toString() {
+        return "Booking{id=" + id + ", user=" + userId + ", show=" + showId
+            + ", seats=" + seats + ", amount=Rs " + totalAmount
+            + ", status=" + status + "}";
+    }
+}</code></pre>
+
+<h3>ConfigManager.java (Enum Singleton)</h3>
+<pre><code>package com.bookmyshow.singleton;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
+/**
+ * Application configuration manager.
+ * Enum-based singleton: thread-safe, reflection-safe, serialization-safe.
+ */
+public enum ConfigManager {
+    INSTANCE;
+
+    private final Properties properties;
+
+    ConfigManager() {
+        this.properties = new Properties();
+        try (InputStream stream = getClass().getClassLoader()
+                .getResourceAsStream("application.properties")) {
+            if (stream != null) {
+                properties.load(stream);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException("Failed to load configuration", e);
+        }
+    }
+
+    public String get(String key) {
+        return properties.getProperty(key);
+    }
+
+    public String get(String key, String defaultValue) {
+        return properties.getProperty(key, defaultValue);
+    }
+
+    public int getInt(String key, int defaultValue) {
+        String value = properties.getProperty(key);
+        if (value == null) return defaultValue;
+        try {
+            return Integer.parseInt(value.trim());
+        } catch (NumberFormatException e) {
+            return defaultValue;
+        }
+    }
+
+    public boolean getBoolean(String key, boolean defaultValue) {
+        String value = properties.getProperty(key);
+        if (value == null) return defaultValue;
+        return Boolean.parseBoolean(value.trim());
+    }
+}</code></pre>
+
+<h3>AppLogger.java (Bill Pugh Singleton)</h3>
+<pre><code>package com.bookmyshow.singleton;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+/**
+ * Application logger.
+ * Bill Pugh (inner class) singleton: lazy loaded, thread-safe, no synchronization overhead.
+ */
+public class AppLogger {
+    private static final DateTimeFormatter FORMATTER =
+        DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+
+    private final PrintWriter fileWriter;
+
+    private AppLogger() {
+        String logFile = ConfigManager.INSTANCE.get("log.file", "app.log");
+        try {
+            this.fileWriter = new PrintWriter(
+                new FileWriter(logFile, true), true);
+        } catch (IOException e) {
+            throw new RuntimeException("Cannot open log file: " + logFile, e);
+        }
+    }
+
+    // Inner class loaded only when getInstance() is first called
+    private static class InstanceHolder {
+        private static final AppLogger INSTANCE = new AppLogger();
+    }
+
+    public static AppLogger getInstance() {
+        return InstanceHolder.INSTANCE;
+    }
+
+    public void info(String message) {
+        log("INFO", message);
+    }
+
+    public void warn(String message) {
+        log("WARN", message);
+    }
+
+    public void error(String message) {
+        log("ERROR", message);
+    }
+
+    public void error(String message, Throwable throwable) {
+        log("ERROR", message + " | " + throwable.getMessage());
+    }
+
+    private void log(String level, String message) {
+        String timestamp = LocalDateTime.now().format(FORMATTER);
+        String threadName = Thread.currentThread().getName();
+        String entry = String.format("[%s] [%-5s] [%s] %s",
+            timestamp, level, threadName, message);
+        System.out.println(entry);
+        fileWriter.println(entry);
+    }
+}</code></pre>
+
+<h3>ConnectionPool.java (Double-Checked Locking Singleton)</h3>
+<pre><code>package com.bookmyshow.singleton;
+
+import com.bookmyshow.model.Connection;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Set;
+
+/**
+ * Database connection pool.
+ * Double-checked locking singleton: lazy, thread-safe, minimal lock contention.
+ */
+public class ConnectionPool {
+    private static volatile ConnectionPool INSTANCE;
+
+    private final Queue&lt;Connection&gt; availableConnections;
+    private final Set&lt;Connection&gt; usedConnections;
+    private final int maxPoolSize;
+
+    private ConnectionPool(int poolSize, String dbUrl) {
+        this.maxPoolSize = poolSize;
+        this.availableConnections = new LinkedList&lt;&gt;();
+        this.usedConnections = new HashSet&lt;&gt;();
+
+        for (int i = 0; i &lt; poolSize; i++) {
+            availableConnections.add(new Connection(dbUrl));
+        }
+
+        AppLogger.getInstance().info(
+            "ConnectionPool initialized with " + poolSize + " connections");
+    }
+
+    public static ConnectionPool getInstance() {
+        if (INSTANCE == null) {
+            synchronized (ConnectionPool.class) {
+                if (INSTANCE == null) {
+                    String dbUrl = ConfigManager.INSTANCE.get("db.url");
+                    int poolSize = ConfigManager.INSTANCE.getInt("db.pool.size", 10);
+                    INSTANCE = new ConnectionPool(poolSize, dbUrl);
+                }
+            }
+        }
+        return INSTANCE;
+    }
+
+    public synchronized Connection getConnection() {
+        if (availableConnections.isEmpty()) {
+            AppLogger.getInstance().warn(
+                "Connection pool exhausted. Used: " + usedConnections.size()
+                + "/" + maxPoolSize);
+            throw new RuntimeException("No available connections in pool");
+        }
+        Connection conn = availableConnections.poll();
+        conn.setInUse(true);
+        usedConnections.add(conn);
+        return conn;
+    }
+
+    public synchronized void releaseConnection(Connection conn) {
+        if (conn == null) return;
+        conn.setInUse(false);
+        usedConnections.remove(conn);
+        availableConnections.offer(conn);
+    }
+
+    public int getAvailableCount() {
+        return availableConnections.size();
+    }
+
+    public int getUsedCount() {
+        return usedConnections.size();
+    }
+}</code></pre>
+
+<h3>CacheManager.java (Inner Class Singleton with TTL)</h3>
+<pre><code>package com.bookmyshow.singleton;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+/**
+ * In-memory cache with time-to-live (TTL) expiry.
+ * Inner class singleton: lazy loaded, thread-safe.
+ * Uses ConcurrentHashMap for thread-safe read/write.
+ */
+public class CacheManager {
+    private final Map&lt;String, CacheEntry&gt; cache;
+    private final long defaultTtlMs;
+
+    private static class CacheEntry {
+        final Object value;
+        final long expiresAt;
+
+        CacheEntry(Object value, long ttlMs) {
+            this.value = value;
+            this.expiresAt = System.currentTimeMillis() + ttlMs;
+        }
+
+        boolean isExpired() {
+            return System.currentTimeMillis() > expiresAt;
+        }
+    }
+
+    private CacheManager() {
+        this.cache = new ConcurrentHashMap&lt;&gt;();
+        int ttlSeconds = ConfigManager.INSTANCE.getInt(
+            "cache.default.ttl.seconds", 300);
+        this.defaultTtlMs = ttlSeconds * 1000L;
+
+        AppLogger.getInstance().info(
+            "CacheManager initialized with default TTL: " + ttlSeconds + "s");
+    }
+
+    private static class InstanceHolder {
+        private static final CacheManager INSTANCE = new CacheManager();
+    }
+
+    public static CacheManager getInstance() {
+        return InstanceHolder.INSTANCE;
+    }
+
+    public void put(String key, Object value) {
+        put(key, value, defaultTtlMs);
+    }
+
+    public void put(String key, Object value, long ttlMs) {
+        cache.put(key, new CacheEntry(value, ttlMs));
+    }
+
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T get(String key) {
+        CacheEntry entry = cache.get(key);
+        if (entry == null) return null;
+        if (entry.isExpired()) {
+            cache.remove(key);
+            return null;
+        }
+        return (T) entry.value;
+    }
+
+    public void remove(String key) {
+        cache.remove(key);
+    }
+
+    public void clear() {
+        cache.clear();
+    }
+
+    public int size() {
+        // Remove expired entries and return count
+        cache.entrySet().removeIf(e -> e.getValue().isExpired());
+        return cache.size();
+    }
+}</code></pre>
+
+<h3>MovieService.java</h3>
+<pre><code>package com.bookmyshow.service;
+
+import com.bookmyshow.model.Connection;
+import com.bookmyshow.model.Movie;
+import com.bookmyshow.model.Show;
+import com.bookmyshow.singleton.AppLogger;
+import com.bookmyshow.singleton.CacheManager;
+import com.bookmyshow.singleton.ConnectionPool;
+import java.util.Arrays;
+import java.util.List;
+
+public class MovieService {
+    private final AppLogger logger = AppLogger.getInstance();
+    private final CacheManager cache = CacheManager.getInstance();
+    private final ConnectionPool pool = ConnectionPool.getInstance();
+
+    public List&lt;Movie&gt; getAllMovies() {
+        // Check cache first
+        List&lt;Movie&gt; cached = cache.get("all_movies");
+        if (cached != null) {
+            logger.info("Movies loaded from cache");
+            return cached;
+        }
+
+        // Cache miss: fetch from DB
+        Connection conn = pool.getConnection();
+        try {
+            logger.info("Fetching movies from DB using " + conn);
+
+            // Simulated DB query
+            List&lt;Movie&gt; movies = Arrays.asList(
+                new Movie("MOV001", "Pathaan", "Action", 146),
+                new Movie("MOV002", "Jawan", "Action", 169),
+                new Movie("MOV003", "Animal", "Drama", 201),
+                new Movie("MOV004", "12th Fail", "Drama", 147),
+                new Movie("MOV005", "Dunki", "Comedy-Drama", 161)
+            );
+
+            // Store in cache
+            cache.put("all_movies", movies);
+            logger.info("Movies cached. Count: " + movies.size());
+
+            return movies;
+        } finally {
+            pool.releaseConnection(conn);
+        }
+    }
+
+    public Movie getMovieById(String movieId) {
+        Movie cached = cache.get("movie_" + movieId);
+        if (cached != null) return cached;
+
+        List&lt;Movie&gt; movies = getAllMovies();
+        for (Movie m : movies) {
+            if (m.getId().equals(movieId)) {
+                cache.put("movie_" + movieId, m);
+                return m;
+            }
+        }
+        return null;
+    }
+
+    public List&lt;Show&gt; getShowsForMovie(String movieId) {
+        List&lt;Show&gt; cached = cache.get("shows_" + movieId);
+        if (cached != null) {
+            logger.info("Shows for " + movieId + " loaded from cache");
+            return cached;
+        }
+
+        Connection conn = pool.getConnection();
+        try {
+            logger.info("Fetching shows for " + movieId + " from DB using " + conn);
+
+            // Simulated DB query
+            List&lt;Show&gt; shows = Arrays.asList(
+                new Show("SHW001", movieId, "PVR Phoenix Mall", "10:00 AM", 150, 250.0),
+                new Show("SHW002", movieId, "PVR Phoenix Mall", "02:30 PM", 150, 300.0),
+                new Show("SHW003", movieId, "INOX Lido", "06:00 PM", 200, 350.0),
+                new Show("SHW004", movieId, "INOX Lido", "09:30 PM", 200, 400.0)
+            );
+
+            cache.put("shows_" + movieId, shows);
+            return shows;
+        } finally {
+            pool.releaseConnection(conn);
+        }
+    }
+}</code></pre>
+
+<h3>BookingService.java</h3>
+<pre><code>package com.bookmyshow.service;
+
+import com.bookmyshow.model.Booking;
+import com.bookmyshow.model.Connection;
+import com.bookmyshow.model.Show;
+import com.bookmyshow.singleton.AppLogger;
+import com.bookmyshow.singleton.CacheManager;
+import com.bookmyshow.singleton.ConfigManager;
+import com.bookmyshow.singleton.ConnectionPool;
+import java.util.List;
+
+public class BookingService {
+    private final AppLogger logger = AppLogger.getInstance();
+    private final ConnectionPool pool = ConnectionPool.getInstance();
+    private final CacheManager cache = CacheManager.getInstance();
+
+    public Booking bookTicket(String userId, String showId, int seatCount) {
+        int maxSeats = ConfigManager.INSTANCE.getInt(
+            "booking.max.seats.per.transaction", 10);
+
+        if (seatCount <= 0 || seatCount > maxSeats) {
+            logger.error("Invalid seat count: " + seatCount
+                + ". Max allowed: " + maxSeats);
+            throw new IllegalArgumentException(
+                "Seat count must be between 1 and " + maxSeats);
+        }
+
+        Connection conn = pool.getConnection();
+        try {
+            logger.info("Booking " + seatCount + " seats for user "
+                + userId + " on show " + showId);
+
+            // Find the show and reserve seats
+            Show show = findShow(showId);
+            if (show == null) {
+                logger.error("Show not found: " + showId);
+                throw new RuntimeException("Show not found: " + showId);
+            }
+
+            boolean reserved = show.reserveSeats(seatCount);
+            if (!reserved) {
+                logger.warn("Not enough seats for show " + showId
+                    + ". Requested: " + seatCount
+                    + ", Available: " + show.getAvailableSeats());
+                throw new RuntimeException(
+                    "Not enough seats. Available: " + show.getAvailableSeats());
+            }
+
+            double totalAmount = show.getPrice() * seatCount;
+            Booking booking = new Booking(userId, showId, seatCount, totalAmount);
+
+            // Invalidate show cache since seats changed
+            cache.remove("shows_" + show.getMovieId());
+
+            logger.info("Booking confirmed: " + booking.getId()
+                + " | Amount: Rs " + totalAmount);
+
+            return booking;
+        } finally {
+            pool.releaseConnection(conn);
+        }
+    }
+
+    public boolean cancelBooking(Booking booking) {
+        logger.info("Cancelling booking: " + booking.getId());
+        booking.setStatus("CANCELLED");
+        logger.info("Booking cancelled: " + booking.getId());
+        return true;
+    }
+
+    private Show findShow(String showId) {
+        // Search across all cached shows
+        MovieService movieService = new MovieService();
+        for (var movie : movieService.getAllMovies()) {
+            List&lt;Show&gt; shows = movieService.getShowsForMovie(movie.getId());
+            for (Show s : shows) {
+                if (s.getId().equals(showId)) return s;
+            }
+        }
+        return null;
+    }
+}</code></pre>
+
+<h3>Application.java (Main Entry Point)</h3>
+<pre><code>package com.bookmyshow;
+
+import com.bookmyshow.model.Booking;
+import com.bookmyshow.model.Movie;
+import com.bookmyshow.model.Show;
+import com.bookmyshow.service.BookingService;
+import com.bookmyshow.service.MovieService;
+import com.bookmyshow.singleton.AppLogger;
+import com.bookmyshow.singleton.CacheManager;
+import com.bookmyshow.singleton.ConfigManager;
+import com.bookmyshow.singleton.ConnectionPool;
+import java.util.List;
+
+public class Application {
+    public static void main(String[] args) throws InterruptedException {
+        AppLogger logger = AppLogger.getInstance();
+        logger.info("=== BookMyShow Application Started ===");
+        logger.info("App: " + ConfigManager.INSTANCE.get("app.name")
+            + " v" + ConfigManager.INSTANCE.get("app.version"));
+
+        // ---- 1. VERIFY ALL FOUR SINGLETONS ----
+        System.out.println("\n--- Singleton Verification ---");
+
+        ConfigManager c1 = ConfigManager.INSTANCE;
+        ConfigManager c2 = ConfigManager.INSTANCE;
+        System.out.println("ConfigManager same?    " + (c1 == c2)
+            + " | hashCode: " + c1.hashCode());
+
+        AppLogger l1 = AppLogger.getInstance();
+        AppLogger l2 = AppLogger.getInstance();
+        System.out.println("AppLogger same?        " + (l1 == l2)
+            + " | hashCode: " + l1.hashCode());
+
+        ConnectionPool p1 = ConnectionPool.getInstance();
+        ConnectionPool p2 = ConnectionPool.getInstance();
+        System.out.println("ConnectionPool same?   " + (p1 == p2)
+            + " | hashCode: " + p1.hashCode());
+
+        CacheManager m1 = CacheManager.getInstance();
+        CacheManager m2 = CacheManager.getInstance();
+        System.out.println("CacheManager same?     " + (m1 == m2)
+            + " | hashCode: " + m1.hashCode());
+
+        // ---- 2. BROWSE MOVIES ----
+        System.out.println("\n--- Available Movies ---");
+        MovieService movieService = new MovieService();
+        List&lt;Movie&gt; movies = movieService.getAllMovies();
+        for (Movie m : movies) {
+            System.out.println("  " + m);
+        }
+
+        // Call again -- should come from cache
+        System.out.println("\n--- Movies (2nd call - from cache) ---");
+        movieService.getAllMovies();
+
+        // ---- 3. BROWSE SHOWS ----
+        System.out.println("\n--- Shows for Pathaan ---");
+        List&lt;Show&gt; shows = movieService.getShowsForMovie("MOV001");
+        for (Show s : shows) {
+            System.out.println("  " + s);
+        }
+
+        // ---- 4. BOOK TICKETS ----
+        System.out.println("\n--- Booking Tickets ---");
+        BookingService bookingService = new BookingService();
+
+        Booking booking1 = bookingService.bookTicket("USER001", "SHW003", 4);
+        System.out.println("  " + booking1);
+
+        Booking booking2 = bookingService.bookTicket("USER002", "SHW003", 2);
+        System.out.println("  " + booking2);
+
+        // ---- 5. CANCEL BOOKING ----
+        System.out.println("\n--- Cancel Booking ---");
+        bookingService.cancelBooking(booking1);
+        System.out.println("  " + booking1);
+
+        // ---- 6. CONNECTION POOL STATUS ----
+        System.out.println("\n--- Connection Pool Status ---");
+        System.out.println("  Available: " + p1.getAvailableCount());
+        System.out.println("  In use:    " + p1.getUsedCount());
+
+        // ---- 7. CACHE STATUS ----
+        System.out.println("\n--- Cache Status ---");
+        System.out.println("  Cached items: " + m1.size());
+
+        // ---- 8. MULTITHREADED BOOKING TEST ----
+        System.out.println("\n--- Multithreaded Booking Test (5 users) ---");
+        Thread[] threads = new Thread[5];
+        for (int i = 0; i &lt; 5; i++) {
+            final int idx = i;
+            threads[i] = new Thread(() -> {
+                try {
+                    BookingService svc = new BookingService();
+                    Booking b = svc.bookTicket("USER_MT_" + idx, "SHW004", 2);
+                    System.out.println("  Thread-" + idx + ": " + b.getId()
+                        + " | Seats: " + b.getSeats()
+                        + " | Amount: Rs " + b.getTotalAmount());
+                } catch (Exception e) {
+                    System.out.println("  Thread-" + idx + ": FAILED - "
+                        + e.getMessage());
+                }
+            }, "BookingThread-" + i);
+        }
+
+        for (Thread t : threads) t.start();
+        for (Thread t : threads) t.join();
+
+        System.out.println("\n--- Final Pool Status ---");
+        System.out.println("  Available: " + p1.getAvailableCount());
+        System.out.println("  In use:    " + p1.getUsedCount());
+
+        logger.info("=== BookMyShow Application Finished ===");
+    }
+}</code></pre>
+
+<h3>SingletonThreadSafetyTest.java</h3>
+<pre><code>package com.bookmyshow.singleton;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class SingletonThreadSafetyTest {
+
+    @Test
+    void configManager_isSingleton() {
+        assertSame(ConfigManager.INSTANCE, ConfigManager.INSTANCE);
+    }
+
+    @Test
+    void appLogger_isSingleton() {
+        assertSame(AppLogger.getInstance(), AppLogger.getInstance());
+    }
+
+    @Test
+    void connectionPool_isSingleton() {
+        assertSame(ConnectionPool.getInstance(), ConnectionPool.getInstance());
+    }
+
+    @Test
+    void cacheManager_isSingleton() {
+        assertSame(CacheManager.getInstance(), CacheManager.getInstance());
+    }
+
+    @Test
+    void allSingletons_threadSafe() throws InterruptedException {
+        int threadCount = 100;
+        AppLogger[] loggers = new AppLogger[threadCount];
+        ConnectionPool[] pools = new ConnectionPool[threadCount];
+        CacheManager[] caches = new CacheManager[threadCount];
+        Thread[] threads = new Thread[threadCount];
+
+        for (int i = 0; i &lt; threadCount; i++) {
+            final int idx = i;
+            threads[i] = new Thread(() -> {
+                loggers[idx] = AppLogger.getInstance();
+                pools[idx] = ConnectionPool.getInstance();
+                caches[idx] = CacheManager.getInstance();
+            });
+        }
+
+        for (Thread t : threads) t.start();
+        for (Thread t : threads) t.join();
+
+        for (int i = 1; i &lt; threadCount; i++) {
+            assertSame(loggers[0], loggers[i],
+                "AppLogger must be same across all threads");
+            assertSame(pools[0], pools[i],
+                "ConnectionPool must be same across all threads");
+            assertSame(caches[0], caches[i],
+                "CacheManager must be same across all threads");
+        }
+    }
+
+    @Test
+    void connectionPool_getAndRelease() {
+        ConnectionPool pool = ConnectionPool.getInstance();
+        int before = pool.getAvailableCount();
+
+        var conn = pool.getConnection();
+        assertEquals(before - 1, pool.getAvailableCount());
+        assertEquals(1, pool.getUsedCount());
+
+        pool.releaseConnection(conn);
+        assertEquals(before, pool.getAvailableCount());
+        assertEquals(0, pool.getUsedCount());
+    }
+
+    @Test
+    void cacheManager_putAndGet() {
+        CacheManager cache = CacheManager.getInstance();
+        cache.put("test_key", "test_value");
+        assertEquals("test_value", cache.get("test_key"));
+    }
+
+    @Test
+    void cacheManager_expiredEntryReturnsNull() throws InterruptedException {
+        CacheManager cache = CacheManager.getInstance();
+        cache.put("expire_key", "value", 50); // 50ms TTL
+        Thread.sleep(100);
+        assertNull(cache.get("expire_key"));
+    }
+
+    @Test
+    void configManager_readsProperties() {
+        assertEquals("BookMyShow", ConfigManager.INSTANCE.get("app.name"));
+        assertEquals(20, ConfigManager.INSTANCE.getInt("db.pool.size", 5));
+    }
+}</code></pre>
+
+<h3>Expected Output</h3>
+<div class="output">[2026-11-02 18:00:00.001] [INFO ] [main] === BookMyShow Application Started ===
+[2026-11-02 18:00:00.002] [INFO ] [main] App: BookMyShow v1.0.0
+[2026-11-02 18:00:00.003] [INFO ] [main] ConnectionPool initialized with 20 connections
+[2026-11-02 18:00:00.004] [INFO ] [main] CacheManager initialized with default TTL: 300s
+
+--- Singleton Verification ---
+ConfigManager same?    true | hashCode: 1550009438
+AppLogger same?        true | hashCode: 895342119
+ConnectionPool same?   true | hashCode: 672329506
+CacheManager same?     true | hashCode: 1300502809
+
+--- Available Movies ---
+[2026-11-02 18:00:00.010] [INFO ] [main] Fetching movies from DB using Connection[a3f2b1c8]
+[2026-11-02 18:00:00.011] [INFO ] [main] Movies cached. Count: 5
+  Pathaan (Action, 146 min)
+  Jawan (Action, 169 min)
+  Animal (Drama, 201 min)
+  12th Fail (Drama, 147 min)
+  Dunki (Comedy-Drama, 161 min)
+
+--- Movies (2nd call - from cache) ---
+[2026-11-02 18:00:00.012] [INFO ] [main] Movies loaded from cache
+
+--- Shows for Pathaan ---
+[2026-11-02 18:00:00.013] [INFO ] [main] Fetching shows for MOV001 from DB using Connection[b7d9e2f4]
+  PVR Phoenix Mall | 10:00 AM | Seats: 150 | Rs 250.0
+  PVR Phoenix Mall | 02:30 PM | Seats: 150 | Rs 300.0
+  INOX Lido | 06:00 PM | Seats: 200 | Rs 350.0
+  INOX Lido | 09:30 PM | Seats: 200 | Rs 400.0
+
+--- Booking Tickets ---
+[2026-11-02 18:00:00.020] [INFO ] [main] Booking 4 seats for user USER001 on show SHW003
+[2026-11-02 18:00:00.021] [INFO ] [main] Booking confirmed: BKG-A1B2C3D4 | Amount: Rs 1400.0
+  Booking{id=BKG-A1B2C3D4, user=USER001, show=SHW003, seats=4, amount=Rs 1400.0, status=CONFIRMED}
+[2026-11-02 18:00:00.022] [INFO ] [main] Booking 2 seats for user USER002 on show SHW003
+[2026-11-02 18:00:00.023] [INFO ] [main] Booking confirmed: BKG-E5F6G7H8 | Amount: Rs 700.0
+  Booking{id=BKG-E5F6G7H8, user=USER002, show=SHW003, seats=2, amount=Rs 700.0, status=CONFIRMED}
+
+--- Cancel Booking ---
+[2026-11-02 18:00:00.024] [INFO ] [main] Cancelling booking: BKG-A1B2C3D4
+[2026-11-02 18:00:00.025] [INFO ] [main] Booking cancelled: BKG-A1B2C3D4
+  Booking{id=BKG-A1B2C3D4, user=USER001, show=SHW003, seats=4, amount=Rs 1400.0, status=CANCELLED}
+
+--- Connection Pool Status ---
+  Available: 20
+  In use:    0
+
+--- Cache Status ---
+  Cached items: 7
+
+--- Multithreaded Booking Test (5 users) ---
+[2026-11-02 18:00:00.030] [INFO ] [BookingThread-0] Booking 2 seats for user USER_MT_0 on show SHW004
+[2026-11-02 18:00:00.030] [INFO ] [BookingThread-1] Booking 2 seats for user USER_MT_1 on show SHW004
+[2026-11-02 18:00:00.030] [INFO ] [BookingThread-2] Booking 2 seats for user USER_MT_2 on show SHW004
+[2026-11-02 18:00:00.031] [INFO ] [BookingThread-0] Booking confirmed: BKG-MT000001 | Amount: Rs 800.0
+[2026-11-02 18:00:00.031] [INFO ] [BookingThread-1] Booking confirmed: BKG-MT000002 | Amount: Rs 800.0
+[2026-11-02 18:00:00.031] [INFO ] [BookingThread-2] Booking confirmed: BKG-MT000003 | Amount: Rs 800.0
+[2026-11-02 18:00:00.032] [INFO ] [BookingThread-3] Booking 2 seats for user USER_MT_3 on show SHW004
+[2026-11-02 18:00:00.032] [INFO ] [BookingThread-4] Booking 2 seats for user USER_MT_4 on show SHW004
+[2026-11-02 18:00:00.033] [INFO ] [BookingThread-3] Booking confirmed: BKG-MT000004 | Amount: Rs 800.0
+[2026-11-02 18:00:00.033] [INFO ] [BookingThread-4] Booking confirmed: BKG-MT000005 | Amount: Rs 800.0
+  Thread-0: BKG-MT000001 | Seats: 2 | Amount: Rs 800.0
+  Thread-1: BKG-MT000002 | Seats: 2 | Amount: Rs 800.0
+  Thread-2: BKG-MT000003 | Seats: 2 | Amount: Rs 800.0
+  Thread-3: BKG-MT000004 | Seats: 2 | Amount: Rs 800.0
+  Thread-4: BKG-MT000005 | Seats: 2 | Amount: Rs 800.0
+
+--- Final Pool Status ---
+  Available: 20
+  In use:    0
+
+[2026-11-02 18:00:00.040] [INFO ] [main] === BookMyShow Application Finished ===</div>
+
+<h3>Key observations from the project</h3>
+<div class="card">
+<ol>
+<li><strong>Four singletons, four approaches:</strong> ConfigManager (enum), AppLogger (Bill Pugh), ConnectionPool (double-checked locking), CacheManager (inner class). Each chosen for a specific reason.</li>
+<li><strong>All services share the same instances:</strong> MovieService and BookingService both call <code>getInstance()</code> and get the exact same object (verified by hashCode).</li>
+<li><strong>Thread safety verified:</strong> 5 concurrent booking threads all get the same singleton instances and all bookings succeed without data corruption.</li>
+<li><strong>Connection pool manages lifecycle:</strong> Connections are borrowed and returned. Pool never exceeds the configured size.</li>
+<li><strong>Cache reduces DB calls:</strong> First movie list call hits DB. Second call returns from cache. No redundant queries.</li>
+<li><strong>Configuration drives behavior:</strong> Pool size, cache TTL, max seats all come from properties file. No hardcoded values.</li>
+<li><strong>Logger captures everything:</strong> Every operation is logged with timestamp, level, thread name, and message. Written to console and file simultaneously.</li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>11. Smaller Example: Configuration Manager</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Scenario</div>
+<p>National Bank of India needs a centralized configuration manager for their banking application. The config manager loads database URLs, API keys, feature flags, and connection pool sizes from a properties file. Every service (Account Service, Transfer Service, Notification Service) must read from the same configuration. If each service creates its own config object, they might read stale or inconsistent data. The config must be loaded once, shared everywhere, and be thread-safe because multiple request threads access it simultaneously.</p>
+</div>
+
+<h3>High-Level Design (HLD)</h3>
+
+<div class="diagram">
++----------------------------+
+|       Client Tier          |
+|  (Browser, Mobile App)     |
++-------------+--------------+
+              |
+              v
++----------------------------+
+|    Controller Layer         |
+|  (REST API endpoints)       |
+|  AccountController          |
+|  TransferController         |
++-------------+--------------+
+              |
+              v
++----------------------------+
+|    Service Layer            |
+|  AccountService             |  <--- all services use
+|  TransferService            |  <--- ConfigManager.getInstance()
+|  NotificationService        |  <--- to read config values
++-------------+--------------+
+              |
+              v
++----------------------------+
+|    Configuration Layer      |
+|  ConfigManager (SINGLETON)  |  <--- ONE instance per JVM
+|  - loads application.properties
+|  - provides get() methods
+|  - thread-safe read access
++-------------+--------------+
+              |
+              v
++----------------------------+
+|    Data Layer               |
+|  application.properties     |
+|  (file on classpath)        |
++----------------------------+
+</div>
+
+<h3>Low-Level Design (LLD)</h3>
+
+<div class="diagram">
++--------------------------------------------------+
+|           ConfigManager (Singleton)               |
++--------------------------------------------------+
+| - INSTANCE: ConfigManager        [private static volatile]
+| - properties: Properties         [private final]
+| - isInstantiated: boolean        [private static]
+| - serialVersionUID: long         [private static final]
++--------------------------------------------------+
+| - ConfigManager()                [private - loads properties file]
+| + getInstance(): ConfigManager   [public static - double-checked locking]
+| + get(key): String               [public - returns config value]
+| + getInt(key, default): int      [public - returns int config value]
+| + getBoolean(key, default): boolean [public - returns boolean config value]
+| + getAllKeys(): Set&lt;String&gt;       [public - returns all config keys]
+| + reload(): void                 [public synchronized - reloads from file]
+| - readResolve(): Object          [private - serialization protection]
+| # clone(): Object                [protected - throws CloneNotSupportedException]
++--------------------------------------------------+
+         ^                    ^                ^
+         |                    |                |
+  AccountService      TransferService   NotificationService
+  (calls getInstance)  (calls getInstance)  (calls getInstance)
+</div>
+
+<h3>Project Structure</h3>
+<div class="ps">nbi-config-manager/
+├── src/
+│   └── main/
+│       ├── java/com/nbi/banking/
+│       │   ├── config/
+│       │   │   └── ConfigManager.java          (singleton)
+│       │   ├── service/
+│       │   │   ├── AccountService.java
+│       │   │   ├── TransferService.java
+│       │   │   └── NotificationService.java
+│       │   └── Application.java                (main entry)
+│       └── resources/
+│           └── application.properties          (configuration file)
+├── src/
+│   └── test/java/com/nbi/banking/
+│       └── config/
+│           └── ConfigManagerTest.java          (unit tests)
+└── pom.xml</div>
+
+<h3>application.properties</h3>
+<pre><code># Database Configuration
+db.url=jdbc:mysql://localhost:3306/national_bank_db
+db.username=nbi_admin
+db.password=encrypted_pwd_here
+db.pool.size=20
+db.pool.timeout=30000
+
+# API Configuration
+api.base.url=https://api.nationalbankofIndia.com/v1
+api.timeout=5000
+api.retry.count=3
+
+# Feature Flags
+feature.upi.enabled=true
+feature.international.transfer.enabled=false
+feature.sms.notification.enabled=true
+
+# Notification
+notification.sms.gateway=https://sms.gateway.nbi.com
+notification.email.from=noreply@nationalbankofIndia.com</code></pre>
+
+<h3>ConfigManager.java</h3>
+<pre><code>package com.nbi.banking.config;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectStreamException;
+import java.io.Serializable;
+import java.util.Properties;
+import java.util.Set;
+
+public class ConfigManager implements Serializable {
+    private static final long serialVersionUID = 1L;
+    private static volatile ConfigManager INSTANCE;
+    private static boolean isInstantiated = false;
+
+    private final Properties properties;
+
+    private ConfigManager() {
+        // Reflection protection
+        if (isInstantiated) {
+            throw new RuntimeException(
+                "ConfigManager is a singleton. Use getInstance() instead.");
+        }
+        isInstantiated = true;
+
+        this.properties = new Properties();
+        loadProperties();
+    }
+
+    public static ConfigManager getInstance() {
+        if (INSTANCE == null) {
+            synchronized (ConfigManager.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new ConfigManager();
+                }
+            }
+        }
+        return INSTANCE;
+    }
+
+    public String get(String key) {
+        return properties.getProperty(key);
+    }
+
+    public String get(String key, String defaultValue) {
+        return properties.getProperty(key, defaultValue);
+    }
+
+    public int getInt(String key, int defaultValue) {
+        String value = properties.getProperty(key);
+        if (value == null) return defaultValue;
+        try {
+            return Integer.parseInt(value.trim());
+        } catch (NumberFormatException e) {
+            return defaultValue;
+        }
+    }
+
+    public boolean getBoolean(String key, boolean defaultValue) {
+        String value = properties.getProperty(key);
+        if (value == null) return defaultValue;
+        return Boolean.parseBoolean(value.trim());
+    }
+
+    public Set<String> getAllKeys() {
+        return properties.stringPropertyNames();
+    }
+
+    public synchronized void reload() {
+        properties.clear();
+        loadProperties();
+        System.out.println("Configuration reloaded successfully");
+    }
+
+    private void loadProperties() {
+        try (InputStream stream = getClass().getClassLoader()
+                .getResourceAsStream("application.properties")) {
+            if (stream == null) {
+                throw new RuntimeException(
+                    "application.properties not found on classpath");
+            }
+            properties.load(stream);
+            System.out.println("Loaded " + properties.size()
+                + " configuration properties");
+        } catch (IOException e) {
+            throw new RuntimeException(
+                "Failed to load configuration", e);
+        }
+    }
+
+    // Serialization protection
+    private Object readResolve() throws ObjectStreamException {
+        return INSTANCE;
+    }
+
+    // Clone protection
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        throw new CloneNotSupportedException(
+            "ConfigManager is a singleton. Cloning is not allowed.");
+    }
+}</code></pre>
+
+<h3>AccountService.java</h3>
+<pre><code>package com.nbi.banking.service;
+
+import com.nbi.banking.config.ConfigManager;
+
+public class AccountService {
+    private final ConfigManager config = ConfigManager.getInstance();
+
+    public void getAccountDetails(String accountNumber) {
+        String dbUrl = config.get("db.url");
+        int poolSize = config.getInt("db.pool.size", 10);
+
+        System.out.println("Fetching account " + accountNumber
+            + " from database: " + dbUrl
+            + " (pool size: " + poolSize + ")");
+        // actual DB query logic here
+    }
+}</code></pre>
+
+<h3>TransferService.java</h3>
+<pre><code>package com.nbi.banking.service;
+
+import com.nbi.banking.config.ConfigManager;
+import java.math.BigDecimal;
+
+public class TransferService {
+    private final ConfigManager config = ConfigManager.getInstance();
+
+    public boolean transfer(String from, String to, BigDecimal amount) {
+        boolean upiEnabled = config.getBoolean("feature.upi.enabled", false);
+        int timeout = config.getInt("api.timeout", 5000);
+
+        System.out.println("Transfer " + amount + " from " + from + " to " + to);
+        System.out.println("UPI enabled: " + upiEnabled + ", timeout: " + timeout + "ms");
+
+        // Verify same config instance across services
+        System.out.println("Config instance hashCode: "
+            + config.hashCode());
+        return true;
+    }
+}</code></pre>
+
+<h3>NotificationService.java</h3>
+<pre><code>package com.nbi.banking.service;
+
+import com.nbi.banking.config.ConfigManager;
+
+public class NotificationService {
+    private final ConfigManager config = ConfigManager.getInstance();
+
+    public void sendSmsNotification(String phone, String message) {
+        boolean smsEnabled = config.getBoolean(
+            "feature.sms.notification.enabled", false);
+
+        if (!smsEnabled) {
+            System.out.println("SMS notification is disabled");
+            return;
+        }
+
+        String gateway = config.get("notification.sms.gateway");
+        System.out.println("Sending SMS via " + gateway
+            + " to " + phone + ": " + message);
+
+        // Verify same config instance
+        System.out.println("Config instance hashCode: "
+            + config.hashCode());
+    }
+}</code></pre>
+
+<h3>Application.java</h3>
+<pre><code>package com.nbi.banking;
+
+import com.nbi.banking.config.ConfigManager;
+import com.nbi.banking.service.AccountService;
+import com.nbi.banking.service.TransferService;
+import com.nbi.banking.service.NotificationService;
+import java.math.BigDecimal;
+
+public class Application {
+    public static void main(String[] args) throws InterruptedException {
+        System.out.println("=== National Bank of India - Banking Application ===");
+        System.out.println();
+
+        // 1. Verify singleton behavior
+        ConfigManager config1 = ConfigManager.getInstance();
+        ConfigManager config2 = ConfigManager.getInstance();
+        System.out.println("Singleton verification:");
+        System.out.println("  config1 hashCode: " + config1.hashCode());
+        System.out.println("  config2 hashCode: " + config2.hashCode());
+        System.out.println("  config1 == config2? " + (config1 == config2));
+        System.out.println();
+
+        // 2. Use services (all share same ConfigManager instance)
+        AccountService accountService = new AccountService();
+        TransferService transferService = new TransferService();
+        NotificationService notificationService = new NotificationService();
+
+        accountService.getAccountDetails("SAV2001");
+        System.out.println();
+
+        transferService.transfer("SAV2001", "CUR3001",
+            new BigDecimal("50000.00"));
+        System.out.println();
+
+        notificationService.sendSmsNotification(
+            "+91-9876543210",
+            "Transfer of Rs 50,000 from SAV2001 to CUR3001 completed");
+        System.out.println();
+
+        // 3. Multithreaded access verification
+        System.out.println("=== Multithreaded Access Test ===");
+        Thread[] threads = new Thread[10];
+        int[] hashCodes = new int[10];
+
+        for (int i = 0; i < 10; i++) {
+            final int idx = i;
+            threads[i] = new Thread(() -> {
+                ConfigManager cm = ConfigManager.getInstance();
+                hashCodes[idx] = cm.hashCode();
+                System.out.println("Thread-" + idx
+                    + " config hashCode: " + cm.hashCode());
+            });
+        }
+
+        for (Thread t : threads) t.start();
+        for (Thread t : threads) t.join();
+
+        // Verify all threads got the same instance
+        boolean allSame = true;
+        for (int i = 1; i < 10; i++) {
+            if (hashCodes[i] != hashCodes[0]) {
+                allSame = false;
+                break;
+            }
+        }
+        System.out.println("All threads got same instance? " + allSame);
+        System.out.println();
+
+        // 4. Read all configuration keys
+        System.out.println("=== All Configuration Keys ===");
+        for (String key : config1.getAllKeys()) {
+            System.out.println("  " + key + " = " + config1.get(key));
+        }
+    }
+}</code></pre>
+
+<h3>ConfigManagerTest.java</h3>
+<pre><code>package com.nbi.banking.config;
+
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class ConfigManagerTest {
+
+    @Test
+    void getInstance_returnsSameInstance() {
+        ConfigManager c1 = ConfigManager.getInstance();
+        ConfigManager c2 = ConfigManager.getInstance();
+        assertSame(c1, c2);
+    }
+
+    @Test
+    void getInstance_isThreadSafe() throws InterruptedException {
+        ConfigManager[] results = new ConfigManager[100];
+        Thread[] threads = new Thread[100];
+
+        for (int i = 0; i < 100; i++) {
+            final int idx = i;
+            threads[i] = new Thread(
+                () -> results[idx] = ConfigManager.getInstance());
+        }
+        for (Thread t : threads) t.start();
+        for (Thread t : threads) t.join();
+
+        for (ConfigManager result : results) {
+            assertSame(results[0], result);
+        }
+    }
+
+    @Test
+    void get_returnsConfigValue() {
+        ConfigManager config = ConfigManager.getInstance();
+        String dbUrl = config.get("db.url");
+        assertNotNull(dbUrl);
+        assertTrue(dbUrl.contains("national_bank_db"));
+    }
+
+    @Test
+    void getInt_returnsIntValue() {
+        ConfigManager config = ConfigManager.getInstance();
+        int poolSize = config.getInt("db.pool.size", 5);
+        assertEquals(20, poolSize);
+    }
+
+    @Test
+    void getInt_returnsDefaultForMissingKey() {
+        ConfigManager config = ConfigManager.getInstance();
+        int value = config.getInt("nonexistent.key", 42);
+        assertEquals(42, value);
+    }
+
+    @Test
+    void getBoolean_returnsBooleanValue() {
+        ConfigManager config = ConfigManager.getInstance();
+        assertTrue(config.getBoolean("feature.upi.enabled", false));
+        assertFalse(config.getBoolean(
+            "feature.international.transfer.enabled", true));
+    }
+
+    @Test
+    void clone_throwsException() {
+        ConfigManager config = ConfigManager.getInstance();
+        assertThrows(CloneNotSupportedException.class,
+            () -> config.clone());
+    }
+
+    @Test
+    void getAllKeys_returnsNonEmptySet() {
+        ConfigManager config = ConfigManager.getInstance();
+        assertFalse(config.getAllKeys().isEmpty());
+    }
+}</code></pre>
+
+<h3>Expected Output</h3>
+<div class="output">=== National Bank of India - Banking Application ===
+
+Loaded 12 configuration properties
+Singleton verification:
+  config1 hashCode: 1550009438
+  config2 hashCode: 1550009438
+  config1 == config2? true
+
+Fetching account SAV2001 from database: jdbc:mysql://localhost:3306/national_bank_db (pool size: 20)
+
+Transfer 50000.00 from SAV2001 to CUR3001
+UPI enabled: true, timeout: 5000ms
+Config instance hashCode: 1550009438
+
+Sending SMS via https://sms.gateway.nbi.com to +91-9876543210: Transfer of Rs 50,000 from SAV2001 to CUR3001 completed
+Config instance hashCode: 1550009438
+
+=== Multithreaded Access Test ===
+Thread-0 config hashCode: 1550009438
+Thread-1 config hashCode: 1550009438
+Thread-2 config hashCode: 1550009438
+Thread-3 config hashCode: 1550009438
+Thread-4 config hashCode: 1550009438
+Thread-5 config hashCode: 1550009438
+Thread-6 config hashCode: 1550009438
+Thread-7 config hashCode: 1550009438
+Thread-8 config hashCode: 1550009438
+Thread-9 config hashCode: 1550009438
+All threads got same instance? true
+
+=== All Configuration Keys ===
+  db.url = jdbc:mysql://localhost:3306/national_bank_db
+  db.username = nbi_admin
+  db.pool.size = 20
+  feature.upi.enabled = true
+  notification.sms.gateway = https://sms.gateway.nbi.com
+  ...</div>
+
+<!-- ================================================================ -->
+<h2>12. When to Use and When NOT to Use</h2>
+<!-- ================================================================ -->
+
+<h3>When to use Singleton</h3>
+<table>
+<tr><th>Scenario</th><th>Example</th><th>Why Singleton</th></tr>
+<tr><td>Configuration management</td><td>Loading app config from properties/yaml</td><td>Config is read-only after load. One source of truth for all services.</td></tr>
+<tr><td>Logging</td><td>Application-wide logger</td><td>All components write to same log file. One writer prevents file corruption.</td></tr>
+<tr><td>Database connection pool</td><td>HikariCP, C3P0 pool manager</td><td>One pool shared by all threads. Multiple pools waste connections.</td></tr>
+<tr><td>Cache manager</td><td>In-memory cache (Guava, Caffeine)</td><td>One cache serves all reads. Duplicate caches waste memory and lose consistency.</td></tr>
+<tr><td>Thread pool manager</td><td>Executor service manager</td><td>One pool controls thread count. Multiple pools can exhaust system resources.</td></tr>
+<tr><td>Hardware access</td><td>Printer spooler, file system access</td><td>One manager coordinates access to shared hardware.</td></tr>
+<tr><td>Registry / Service locator</td><td>JNDI lookup, bean factory</td><td>One registry holds all references. Multiple registries cause inconsistency.</td></tr>
+</table>
+
+<h3>When NOT to use Singleton</h3>
+<table>
+<tr><th>Scenario</th><th>Why NOT</th><th>Use Instead</th></tr>
+<tr><td>Classes with per-request state</td><td>Each request needs its own state (user data, session). Singleton shares state across all requests.</td><td>New instance per request (prototype scope)</td></tr>
+<tr><td>Unit testing</td><td>Singletons carry state between tests. One test can pollute another. Hard to mock.</td><td>Dependency injection with interfaces</td></tr>
+<tr><td>When subclassing is needed</td><td>Singleton has a private constructor. Cannot extend it. Limits flexibility.</td><td>Factory pattern with interface</td></tr>
+<tr><td>In distributed systems</td><td>Singleton is per-JVM. In a cluster with 10 JVMs, you have 10 instances, not one.</td><td>Distributed cache (Redis, Hazelcast)</td></tr>
+<tr><td>When lazy init overhead matters</td><td>Double-checked locking adds complexity. If the class is always used, eager init is simpler.</td><td>Eager init or Spring bean</td></tr>
+<tr><td>God object / too many responsibilities</td><td>Singleton should not become a dumping ground for unrelated state.</td><td>Split into focused classes</td></tr>
+</table>
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Anti-pattern Warning</div>
+<p>Singleton becomes an anti-pattern when:</p>
+<ul>
+<li>It holds mutable state that changes per request (user sessions, request data)</li>
+<li>It is used as a global variable to avoid passing dependencies</li>
+<li>It makes unit testing impossible because you cannot inject mock implementations</li>
+<li>It grows into a god class with 50+ methods doing unrelated things</li>
+</ul>
+<p><strong>Modern approach:</strong> Use dependency injection (Spring, Guice) to manage object lifecycle instead of manually coding singletons. Let the framework decide the scope.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>13. Quick Reference Card</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<h3>All 6 Approaches Comparison</h3>
+<table>
+<tr><th>Approach</th><th>Thread Safe</th><th>Lazy</th><th>Reflection Safe</th><th>Serialization Safe</th><th>Clone Safe</th><th>ClassLoader Safe</th><th>Verdict</th></tr>
+<tr><td>Basic lazy</td><td>No</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Never use in production</td></tr>
+<tr><td>Synchronized method</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Simple but slow</td></tr>
+<tr><td>Synchronized block</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td><td>No</td><td>No</td><td>Slightly better than (a)</td></tr>
+<tr><td>Double-checked locking</td><td>Yes</td><td>Yes</td><td>With flag</td><td>With readResolve</td><td>With override</td><td>No</td><td>Best for class-based</td></tr>
+<tr><td>Inner class (Bill Pugh)</td><td>Yes</td><td>Yes</td><td>With flag</td><td>With readResolve</td><td>With override</td><td>No</td><td>Preferred for class-based</td></tr>
+<tr><td>Enum</td><td>Yes</td><td>No</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td><td>Best overall</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Interview Questions on Singleton</h3>
+<ol>
+<li>What is the Singleton pattern and why is it needed?</li>
+<li>Write a thread-safe singleton class from scratch.</li>
+<li>What is the difference between lazy and eager initialization?</li>
+<li>Explain double-checked locking. Why is <code>volatile</code> needed?</li>
+<li>What is the Bill Pugh singleton? How does it achieve lazy loading without synchronization?</li>
+<li>How can you break a singleton using Reflection? How to prevent it?</li>
+<li>How does Serialization break singleton? What is <code>readResolve()</code>?</li>
+<li>Can you break singleton using Cloning? How to prevent it?</li>
+<li>Can you break singleton using ClassLoader? Is there a solution?</li>
+<li>Why is Enum the best way to implement singleton in Java?</li>
+<li>What are the limitations of Enum-based singleton?</li>
+<li>What is the difference between Singleton pattern and Spring singleton scope?</li>
+<li>Is Singleton pattern an anti-pattern? When should you avoid it?</li>
+<li>How does Singleton work in a distributed (multi-JVM) environment?</li>
+<li>Design a thread-safe ConfigManager singleton for a banking application.</li>
+</ol>
+</div>
+
+</body>
+</html>

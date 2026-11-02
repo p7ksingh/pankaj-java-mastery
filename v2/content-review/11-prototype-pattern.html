@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prototype Design Pattern in Java - Complete Tutorial | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px}
+h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}
+h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}
+p,li{font-size:14px;margin-bottom:8px}
+ul,ol{margin-left:24px;margin-bottom:12px}
+pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}
+code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}
+pre code{background:none;padding:0}
+.meta{font-size:13px;color:#999;margin-bottom:24px}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
+.tag-c{background:#e8f4fd;color:#2980b9}.tag-g{background:#e8f8f0;color:#27ae60}.tag-m{background:#fff3e0;color:#e67e22}
+.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.box-blue{border-color:#4A90D9;background:#eff6ff}
+.box-red{border-color:#e74c3c;background:#fef2f2}
+.box-green{border-color:#27ae60;background:#f0fdf4}
+.box-orange{border-color:#e67e22;background:#fffbeb}
+.box-purple{border-color:#8b5cf6;background:#f5f3ff}
+.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}
+th{background:#2d3748;color:#fff;font-weight:600}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-c">Creational</span>
+<span class="tag tag-g">GOF Pattern</span>
+<span class="tag tag-m">Medium</span>
+
+<h1>Prototype Design Pattern in Java</h1>
+<p class="meta">Complete Tutorial | 11 Sections | Full Document Template Project with HLD and LLD | Shallow vs Deep Cloning | BookStore Example | Prototype Registry | Multiple Scenarios | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>1. What is Prototype Pattern?</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Prototype pattern is a <strong>GOF Creational Pattern</strong>. It creates a copy of an existing object through cloning, not from scratch level. According to GOF: "Specify the kind of objects to create using a prototypical instance, and create new objects by copying this prototype."</p>
+<p><strong>One line:</strong> Instead of creating objects from scratch (costly), clone existing cached objects to get new copies quickly.</p>
+</div>
+
+<h3>Flyweight vs Prototype</h3>
+<table>
+<tr><th>Aspect</th><th>Flyweight</th><th>Prototype</th></tr>
+<tr><td>What it returns</td><td>The SAME cached object (shared reference)</td><td>A CLONE/COPY of the cached object (new instance)</td></tr>
+<tr><td>Object ownership</td><td>Shared among all clients</td><td>Each client gets its own independent copy</td></tr>
+<tr><td>Modification safe?</td><td>No (modifying affects everyone)</td><td>Yes (each clone is independent)</td></tr>
+<tr><td>Use when</td><td>Objects are immutable/read-only</td><td>Each client needs a modifiable copy</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>2. The Problem</h2>
+<!-- ================================================================ -->
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Problem</div>
+<p>Creating new objects from scratch is a costly affair in Java. That needs more memory and CPU time. If we want certain bunch of objects to be created for multiple times, creating them every time from scratch level degrades the performance.</p>
+</div>
+
+<div class="diagram">Problem: Every request creates objects from scratch
+
+EndUser 1                                            DB Server
+(ClientApp1) ---[1a]---> BookStore App ---[1b]---> Books info (db table)
+                          (buffer/cache)            bookId  bookName  price
+EndUser 2                    |   List of   [1c]     1001    C8J       9000
+(ClientApp2) ---[2a]---> book objs  <----------     1002    BB        8000
+                              |
+                         [2a] new objs from
+                              scratch!
+
+Every time hitting DB s/w and every time creating same bunch of objects
+is not really good practice. It will degrade the performance of the Application.</div>
+
+<!-- ================================================================ -->
+<h2>3. The Solution: Clone from Cache</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Solution</div>
+<p>Use Prototype Design Pattern which says: keep the objects that are created through costly process in cache memory and use <strong>cloning concept</strong> to create copy of objects from those cached objects.</p>
+<p>Implementing Prototype Design pattern is nothing but creating bunch of objects through cloning process repeatedly by keeping the actual objects in the cache.</p>
+</div>
+
+<div class="diagram">Solution: Clone from cached prototypes
+
+EndUser 1                   buffer/cache                DB Server
+(ClientApp1) ---[1a]--->  [Book objs]  <---[1b]--- Books info (db table)
+                          cached once!
+EndUser 2                      |
+(ClientApp2) ---[2a]--->  [2b] clone objs from cache
+                          (fast! no DB hit)
+
+First call: loads from DB, stores in cache
+Second call: clones from cache (no DB call)</div>
+
+<div class="diagram">Without cloning:                    With cloning:
+
+Student obj1     Student obj2        Student obj1       Student obj2
+  (Freshly        (Another freshly     (Freshly          = (Student) obj1.clone()
+   created          created same        created           (object created
+   object)          object)             object)            through cloning process)
+
+Both created from scratch.           obj2 is a copy of obj1.
+Costly: constructor + DB call.       Cheap: memory copy only.</div>
+
+<h3>Four Components</h3>
+<table>
+<tr><th>Component</th><th>Role</th></tr>
+<tr><td><strong>a) Prototype Interface</strong></td><td>Declares the clone method (<code>Cloneable</code> interface in Java)</td></tr>
+<tr><td><strong>b) Concrete Prototype</strong></td><td>Implements cloning. The actual object that gets cached and cloned.</td></tr>
+<tr><td><strong>c) Prototype Registry/Factory</strong></td><td>Maintains a HashMap cache of prototype objects. Returns clones on request.</td></tr>
+<tr><td><strong>d) Client</strong></td><td>Gets cloned objects from the registry instead of creating new ones.</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>4. BookStore Example (from course notes)</h2>
+<!-- ================================================================ -->
+
+<h3>Book.java (Concrete Prototype)</h3>
+<pre><code>package com.nt.model;
+
+public class Book implements Cloneable {
+    private Integer bookId;
+    private String bookName;
+    private String bookType;
+    private String bookAuthor;
+    private double price;
+    private int qty;
+
+    public Book() {
+        System.out.println("Book:: 0-param constructor (" + this.hashCode() + ")");
+    }
+
+    // Getters and setters
+    public Integer getBookId() { return bookId; }
+    public void setBookId(Integer bookId) { this.bookId = bookId; }
+    public String getBookName() { return bookName; }
+    public void setBookName(String bookName) { this.bookName = bookName; }
+    public String getBookType() { return bookType; }
+    public void setBookType(String bookType) { this.bookType = bookType; }
+    public String getBookAuthor() { return bookAuthor; }
+    public void setBookAuthor(String bookAuthor) { this.bookAuthor = bookAuthor; }
+    public double getPrice() { return price; }
+    public void setPrice(double price) { this.price = price; }
+    public int getQty() { return qty; }
+    public void setQty(int qty) { this.qty = qty; }
+
+    @Override
+    public String toString() {
+        return "Book{" + bookId + ", " + bookName + ", " + bookType
+            + ", " + bookAuthor + ", " + price + ", qty=" + qty + "}";
+    }
+
+    // Cloning support
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();  // shallow clone
+    }
+}</code></pre>
+
+<h3>BookType.java (Abstract base with nested object)</h3>
+<pre><code>package com.nt.model;
+
+public abstract class BookType implements Cloneable {
+    protected String type;
+    protected String domain;
+    protected String phone;
+
+    public void setType(String type) { this.type = type; }
+    public String getType() { return type; }
+
+    @Override
+    public String toString() {
+        return "BookType{" + type + ", " + domain + ", " + phone + "}";
+    }
+
+    public abstract void readMe();
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
+    }
+}
+
+// ItBookType.java
+package com.nt.model;
+
+public class ItBookType extends BookType {
+    @Override
+    public void readMe() {
+        System.out.println("IT Book: " + type);
+    }
+}
+
+// NonItBookType.java
+package com.nt.model;
+
+public class NonItBookType extends BookType {
+    @Override
+    public void readMe() {
+        System.out.println("Non-IT Book: " + type);
+    }
+}</code></pre>
+
+<h3>BookStoreFactory.java (Prototype Registry with cache)</h3>
+<pre><code>package com.nt.factory;
+
+import com.nt.model.Book;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
+public class BookStoreFactory {
+    private static Map&lt;Integer, Book&gt; bookCache = new HashMap&lt;&gt;();
+
+    // Load from DB (simulated) and cache
+    public static void loadBooks() {
+        System.out.println("Loading books from DB (costly operation)...");
+        Book book1 = new Book();
+        book1.setBookId(1001);
+        book1.setBookName("Core Java");
+        book1.setBookType("IT");
+        book1.setBookAuthor("James Gosling");
+        book1.setPrice(9000);
+        book1.setQty(50);
+
+        Book book2 = new Book();
+        book2.setBookId(1002);
+        book2.setBookName("Business Basics");
+        book2.setBookType("Non-IT");
+        book2.setBookAuthor("Robert Kiyosaki");
+        book2.setPrice(8000);
+        book2.setQty(30);
+
+        bookCache.put(book1.getBookId(), book1);
+        bookCache.put(book2.getBookId(), book2);
+        System.out.println("Books cached: " + bookCache.size());
+    }
+
+    // Returns CLONED book (not the original cached object)
+    public static Book getBook(Integer bookId) throws CloneNotSupportedException {
+        Book cachedBook = bookCache.get(bookId);
+        if (cachedBook == null) {
+            throw new IllegalArgumentException("Book not found: " + bookId);
+        }
+        return (Book) cachedBook.clone();  // clone, not the original!
+    }
+
+    // Returns cloned list of all books
+    public static List&lt;Book&gt; getAllBooks() throws CloneNotSupportedException {
+        return bookCache.values().stream()
+            .map(book -> {
+                try { return (Book) book.clone(); }
+                catch (CloneNotSupportedException e) { throw new RuntimeException(e); }
+            })
+            .collect(Collectors.toList());
+    }
+}</code></pre>
+
+<h3>Client test</h3>
+<pre><code>package com.nt.test;
+
+import com.nt.model.Book;
+import com.nt.factory.BookStoreFactory;
+
+public class BookStoreTest {
+    public static void main(String[] args) throws Exception {
+        // First call: load from "DB" into cache
+        BookStoreFactory.loadBooks();
+
+        System.out.println("\n=== First client gets books (cloned from cache) ===");
+        Book b1 = BookStoreFactory.getBook(1001);
+        System.out.println("Client1 book: " + b1 + " hash:" + b1.hashCode());
+
+        System.out.println("\n=== Second client gets same book (another clone) ===");
+        Book b2 = BookStoreFactory.getBook(1001);
+        System.out.println("Client2 book: " + b2 + " hash:" + b2.hashCode());
+
+        // Modify clone - original is not affected
+        System.out.println("\n=== Modify clone, original unchanged ===");
+        b2.setPrice(7500);
+        b2.setQty(25);
+        System.out.println("Modified clone: " + b2);
+        System.out.println("Original cache: " + BookStoreFactory.getBook(1001));
+
+        // Verify different objects
+        System.out.println("\n=== Same object? ===");
+        System.out.println("b1 == b2? " + (b1 == b2));        // false (different objects)
+        System.out.println("b1.equals(b2)? " + b1.getBookId().equals(b2.getBookId())); // true (same data)
+    }
+}</code></pre>
+
+<div class="output">Loading books from DB (costly operation)...
+Book:: 0-param constructor (1550009438)
+Book:: 0-param constructor (895342119)
+Books cached: 2
+
+=== First client gets books (cloned from cache) ===
+Client1 book: Book{1001, Core Java, IT, James Gosling, 9000.0, qty=50} hash:672329506
+
+=== Second client gets same book (another clone) ===
+Client2 book: Book{1001, Core Java, IT, James Gosling, 9000.0, qty=50} hash:1300502809
+
+=== Modify clone, original unchanged ===
+Modified clone: Book{1001, Core Java, IT, James Gosling, 7500.0, qty=25}
+Original cache: Book{1001, Core Java, IT, James Gosling, 9000.0, qty=50}
+
+=== Same object? ===
+b1 == b2? false
+b1.getBookId().equals(b2.getBookId())? true</div>
+
+<!-- ================================================================ -->
+<h2>5. Shallow Clone vs Deep Clone</h2>
+<!-- ================================================================ -->
+
+<div class="box box-orange">
+<div class="box-label" style="color:#92400e">Critical Concept</div>
+<p>Java's default <code>clone()</code> method (<code>super.clone()</code>) performs a <strong>shallow clone</strong>. This is one of the most important distinctions in the Prototype pattern.</p>
+</div>
+
+<h3>Shallow Clone (default)</h3>
+<p>Only the main object is cloned. Inner objects (references) are shared between original and clone. Changing an inner object via the clone affects the original.</p>
+
+<div class="diagram">Shallow Cloning (super.clone()):
+
+Original Book                     Cloned Book
++--------------+                  +--------------+
+| bookId: 1001 |  (primitive -    | bookId: 1001 |  (copied value)
+| price: 9000  |   copied)       | price: 9000  |
+| bookType ----|--+               | bookType ----|--+
++--------------+  |               +--------------+  |
+                  v                                 v
+              BookType obj  <--- SAME OBJECT! (shared reference)
+              {type: "IT"}
+
+Changing bookType.setType("Science") via clone
+ALSO changes the original's bookType!</div>
+
+<pre><code>// Shallow clone - default behavior
+@Override
+public Object clone() throws CloneNotSupportedException {
+    return super.clone();  // clones only primitives and references (not inner objects)
+}
+
+// Problem:
+Book original = new Book();
+original.setBookType(new ItBookType());  // inner object
+
+Book clone = (Book) original.clone();
+clone.getBookType().setType("Science");  // modifies SHARED inner object!
+
+System.out.println(original.getBookType().getType());  // "Science" (BROKEN!)</code></pre>
+
+<h3>Deep Clone</h3>
+<p>Both the main object AND all inner objects are cloned. Each clone has its own independent copy of everything. Modifying the clone does not affect the original.</p>
+
+<div class="diagram">Deep Cloning (manually clone inner objects):
+
+Original Book                     Cloned Book
++--------------+                  +--------------+
+| bookId: 1001 |                  | bookId: 1001 |
+| price: 9000  |                  | price: 9000  |
+| bookType ----|--+               | bookType ----|--+
++--------------+  |               +--------------+  |
+                  v                                 v
+              BookType obj1               BookType obj2  (SEPARATE object!)
+              {type: "IT"}                {type: "IT"}
+
+Changing clone's bookType does NOT affect original.</div>
+
+<pre><code>// Deep clone - manually clone inner objects
+@Override
+public Object clone() throws CloneNotSupportedException {
+    Book cloned = (Book) super.clone();              // clone main object
+    cloned.bookType = (BookType) bookType.clone();   // clone inner object too!
+    return cloned;
+}
+
+// Now safe:
+Book clone = (Book) original.clone();
+clone.getBookType().setType("Science");  // modifies only clone's copy
+
+System.out.println(original.getBookType().getType());  // "IT" (unchanged!)</code></pre>
+
+<h3>Deep Clone using Serialization</h3>
+<p>For objects with many nested levels, manual deep cloning is tedious. An alternative is to serialize and then deserialize the object, which creates a completely independent copy.</p>
+
+<pre><code>// Deep clone via Serialization (all objects must implement Serializable)
+public static &lt;T extends Serializable&gt; T deepClone(T obj) {
+    try {
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        ObjectOutputStream oos = new ObjectOutputStream(bos);
+        oos.writeObject(obj);
+        oos.close();
+
+        ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
+        ObjectInputStream ois = new ObjectInputStream(bis);
+        T cloned = (T) ois.readObject();
+        ois.close();
+
+        return cloned;
+    } catch (Exception e) {
+        throw new RuntimeException("Deep clone failed", e);
+    }
+}</code></pre>
+
+<table>
+<tr><th>Aspect</th><th>Shallow Clone</th><th>Deep Clone</th></tr>
+<tr><td>Mechanism</td><td><code>super.clone()</code></td><td>Manually clone inner objects or use serialization</td></tr>
+<tr><td>Primitives</td><td>Copied by value</td><td>Copied by value</td></tr>
+<tr><td>Object references</td><td>Shared (same reference)</td><td>Cloned (independent copy)</td></tr>
+<tr><td>Performance</td><td>Fast (one memory copy)</td><td>Slower (multiple copies)</td></tr>
+<tr><td>Safety</td><td>Unsafe if inner objects are mutable</td><td>Safe (fully independent)</td></tr>
+<tr><td>Use when</td><td>Object has only primitives/immutables</td><td>Object has mutable inner objects</td></tr>
+</table>
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Note on Immutable Classes</div>
+<p>String, Integer, Float, Double are immutable classes. Shallow cloning is safe for these because they cannot be modified after creation. The shared reference causes no harm.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>6. Full-Length Industry Project: Document Template System</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Business Scenario</div>
+<p>National Bank of India generates thousands of documents daily: loan agreements, account statements, KYC forms. Each document type has a complex template with headers, footers, formatting, legal text, and bank branding. Creating a template from scratch (loading from DB, parsing XML, applying styles) takes 500ms per document. Using the Prototype pattern, we load each template once, cache it, and clone it for each customer. Cloning takes under 1ms. The clone is then customized with the customer's specific data.</p>
+</div>
+
+<h3>High-Level Design (HLD)</h3>
+
+<div class="diagram">
++---------------------------------------------------+
+|              SERVICE LAYER                         |
+|  DocumentService                                   |
+|    - generateLoanAgreement(customerId)             |
+|    - generateAccountStatement(customerId)          |
+|    - generateKYCForm(customerId)                   |
+|    (gets template clone, fills customer data)      |
++----------------------------+----------------------+
+                             |
+                             v
++---------------------------------------------------+
+|          PROTOTYPE REGISTRY                        |
+|  DocumentTemplateRegistry                          |
+|    - cache: Map&lt;String, DocumentTemplate&gt;         |
+|    - getTemplate(type): DocumentTemplate (CLONE)   |
+|    - loadTemplates(): void (one-time DB call)      |
++---------------------------------------------------+
+                             |
+                             v
++---------------------------------------------------+
+|          PROTOTYPE OBJECTS                          |
+|  DocumentTemplate (abstract, implements Cloneable)  |
+|    - templateId, type, header, footer, legalText   |
+|    - formatting: DocumentFormatting (nested object)|
+|         |                                          |
+|    LoanAgreementTemplate                           |
+|    AccountStatementTemplate                        |
+|    KYCFormTemplate                                 |
++---------------------------------------------------+
+</div>
+
+<h3>Low-Level Design (LLD)</h3>
+
+<div class="diagram">
++-------------------------------------------------------+
+| DocumentTemplate (abstract, implements Cloneable)     |
++-------------------------------------------------------+
+| # templateId: String                                  |
+| # type: String                                        |
+| # header: String          (intrinsic, heavy)          |
+| # footer: String          (intrinsic, heavy)          |
+| # legalText: String       (intrinsic, heavy)          |
+| # formatting: DocumentFormatting  (nested mutable obj)|
+| # customerName: String    (extrinsic, set after clone)|
+| # customerId: String      (extrinsic)                |
+| # generatedDate: String   (extrinsic)                |
++-------------------------------------------------------+
+| + clone(): DocumentTemplate  [deep clone]             |
+| + fillCustomerData(id, name): void                    |
+| + render(): String                                    |
+| # abstract generateBody(): String                     |
++-------------------------------------------------------+
+
++-------------------------------------------------------+
+| DocumentFormatting (nested object, also Cloneable)    |
++-------------------------------------------------------+
+| - fontFamily: String                                  |
+| - fontSize: int                                       |
+| - marginTop: int                                      |
+| - marginBottom: int                                   |
+| - watermark: String                                   |
++-------------------------------------------------------+
+
++-------------------------------------------------------+
+| DocumentTemplateRegistry (Prototype Factory)          |
++-------------------------------------------------------+
+| - cache: Map&lt;String, DocumentTemplate&gt;   [static]    |
+| - loaded: boolean                                     |
++-------------------------------------------------------+
+| + loadTemplates(): void              [one-time costly]|
+| + getTemplate(type): DocumentTemplate [returns CLONE] |
+| + getCacheStats(): String                             |
++-------------------------------------------------------+
+</div>
+
+<h3>Project Structure</h3>
+<div class="ps">nbi-document-template/
+├── src/
+│   └── main/java/com/nbi/document/
+│       ├── model/
+│       │   ├── DocumentTemplate.java        (abstract prototype)
+│       │   ├── DocumentFormatting.java      (nested cloneable)
+│       │   ├── LoanAgreementTemplate.java
+│       │   ├── AccountStatementTemplate.java
+│       │   └── KYCFormTemplate.java
+│       ├── registry/
+│       │   └── DocumentTemplateRegistry.java (prototype registry)
+│       ├── service/
+│       │   └── DocumentService.java
+│       └── Application.java
+├── src/
+│   └── test/java/com/nbi/document/
+│       └── registry/
+│           └── DocumentTemplateRegistryTest.java
+└── pom.xml</div>
+
+<h3>DocumentFormatting.java (nested Cloneable)</h3>
+<pre><code>package com.nbi.document.model;
+
+public class DocumentFormatting implements Cloneable {
+    private String fontFamily;
+    private int fontSize;
+    private int marginTop;
+    private int marginBottom;
+    private String watermark;
+
+    public DocumentFormatting(String fontFamily, int fontSize,
+                               int marginTop, int marginBottom, String watermark) {
+        this.fontFamily = fontFamily;
+        this.fontSize = fontSize;
+        this.marginTop = marginTop;
+        this.marginBottom = marginBottom;
+        this.watermark = watermark;
+    }
+
+    // Getters
+    public String getFontFamily() { return fontFamily; }
+    public int getFontSize() { return fontSize; }
+    public String getWatermark() { return watermark; }
+
+    // Setters for customization after cloning
+    public void setWatermark(String watermark) { this.watermark = watermark; }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();  // safe: all fields are primitives or immutable Strings
+    }
+
+    @Override
+    public String toString() {
+        return fontFamily + " " + fontSize + "pt, margins(" + marginTop + ","
+            + marginBottom + "), watermark: " + watermark;
+    }
+}</code></pre>
+
+<h3>DocumentTemplate.java (abstract prototype)</h3>
+<pre><code>package com.nbi.document.model;
+
+import java.time.LocalDate;
+
+public abstract class DocumentTemplate implements Cloneable {
+    protected String templateId;
+    protected String type;
+    protected String header;
+    protected String footer;
+    protected String legalText;
+    protected DocumentFormatting formatting;
+
+    // Extrinsic data (filled after cloning, per customer)
+    protected String customerName;
+    protected String customerId;
+    protected String generatedDate;
+
+    protected DocumentTemplate(String templateId, String type) {
+        this.templateId = templateId;
+        this.type = type;
+        // Simulate costly template loading (DB, XML parsing, style application)
+        System.out.println("  [COSTLY] Loading template: " + type
+            + " (simulating 500ms DB call)");
+    }
+
+    public void fillCustomerData(String customerId, String customerName) {
+        this.customerId = customerId;
+        this.customerName = customerName;
+        this.generatedDate = LocalDate.now().toString();
+    }
+
+    public String render() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("=== ").append(type.toUpperCase()).append(" ===\n");
+        sb.append("Format: ").append(formatting).append("\n");
+        sb.append(header).append("\n");
+        sb.append("Customer: ").append(customerName)
+            .append(" (").append(customerId).append(")\n");
+        sb.append("Date: ").append(generatedDate).append("\n\n");
+        sb.append(generateBody()).append("\n\n");
+        sb.append(footer).append("\n");
+        sb.append("Legal: ").append(legalText.substring(0, Math.min(80, legalText.length())))
+            .append("...\n");
+        return sb.toString();
+    }
+
+    protected abstract String generateBody();
+
+    // DEEP CLONE: clone the main object AND the nested DocumentFormatting
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        DocumentTemplate cloned = (DocumentTemplate) super.clone();
+        cloned.formatting = (DocumentFormatting) this.formatting.clone();  // deep clone!
+        // Reset extrinsic data (each clone starts fresh)
+        cloned.customerName = null;
+        cloned.customerId = null;
+        cloned.generatedDate = null;
+        return cloned;
+    }
+
+    public String getType() { return type; }
+    public String getTemplateId() { return templateId; }
+}</code></pre>
+
+<h3>LoanAgreementTemplate.java</h3>
+<pre><code>package com.nbi.document.model;
+
+public class LoanAgreementTemplate extends DocumentTemplate {
+
+    public LoanAgreementTemplate() {
+        super("TMPL-LOAN-001", "Loan Agreement");
+        this.header = "NATIONAL BANK OF INDIA - LOAN AGREEMENT";
+        this.footer = "This is a computer-generated document. No signature required.";
+        this.legalText = "This loan agreement is governed by the laws of India. "
+            + "The borrower agrees to repay the principal and interest as per the schedule. "
+            + "Default will attract penalty as per RBI guidelines.";
+        this.formatting = new DocumentFormatting("Times New Roman", 12, 20, 20, "DRAFT");
+    }
+
+    @Override
+    protected String generateBody() {
+        return "LOAN DETAILS:\n"
+            + "  Borrower: " + customerName + "\n"
+            + "  Account: " + customerId + "\n"
+            + "  This agreement certifies that the above borrower has been sanctioned\n"
+            + "  a loan as per the terms discussed and agreed upon.";
+    }
+}</code></pre>
+
+<h3>AccountStatementTemplate.java</h3>
+<pre><code>package com.nbi.document.model;
+
+public class AccountStatementTemplate extends DocumentTemplate {
+
+    public AccountStatementTemplate() {
+        super("TMPL-STMT-001", "Account Statement");
+        this.header = "NATIONAL BANK OF INDIA - ACCOUNT STATEMENT";
+        this.footer = "End of statement. Please verify all transactions.";
+        this.legalText = "This statement is provided for informational purposes only. "
+            + "Report any discrepancies within 30 days of issue. "
+            + "The bank is not liable for errors not reported within this period.";
+        this.formatting = new DocumentFormatting("Arial", 10, 15, 15, "CONFIDENTIAL");
+    }
+
+    @Override
+    protected String generateBody() {
+        return "STATEMENT FOR: " + customerName + " (" + customerId + ")\n"
+            + "  Period: Last 30 days\n"
+            + "  Opening Balance: Rs 250,000.00\n"
+            + "  Total Credits: Rs 50,000.00\n"
+            + "  Total Debits: Rs 25,000.00\n"
+            + "  Closing Balance: Rs 275,000.00";
+    }
+}</code></pre>
+
+<h3>KYCFormTemplate.java</h3>
+<pre><code>package com.nbi.document.model;
+
+public class KYCFormTemplate extends DocumentTemplate {
+
+    public KYCFormTemplate() {
+        super("TMPL-KYC-001", "KYC Form");
+        this.header = "NATIONAL BANK OF INDIA - KNOW YOUR CUSTOMER (KYC) FORM";
+        this.footer = "Please submit this form with valid ID proof at your nearest branch.";
+        this.legalText = "As per RBI circular, KYC verification is mandatory for all accounts. "
+            + "Failure to complete KYC will result in account restrictions.";
+        this.formatting = new DocumentFormatting("Calibri", 11, 25, 25, "ORIGINAL");
+    }
+
+    @Override
+    protected String generateBody() {
+        return "KYC VERIFICATION FOR: " + customerName + "\n"
+            + "  Customer ID: " + customerId + "\n"
+            + "  ID Type: Aadhaar / PAN / Passport (please select)\n"
+            + "  ID Number: _______________\n"
+            + "  Address: _______________\n"
+            + "  Phone: _______________";
+    }
+}</code></pre>
+
+<h3>DocumentTemplateRegistry.java (Prototype Registry)</h3>
+<pre><code>package com.nbi.document.registry;
+
+import com.nbi.document.model.*;
+import java.util.HashMap;
+import java.util.Map;
+
+public class DocumentTemplateRegistry {
+    private static final Map&lt;String, DocumentTemplate&gt; cache = new HashMap&lt;&gt;();
+    private static boolean loaded = false;
+    private static int cloneCount = 0;
+
+    public static void loadTemplates() {
+        if (loaded) {
+            System.out.println("Templates already loaded (skipping)");
+            return;
+        }
+        System.out.println("=== Loading templates from DB (one-time costly operation) ===");
+        long start = System.currentTimeMillis();
+
+        cache.put("loan", new LoanAgreementTemplate());
+        cache.put("statement", new AccountStatementTemplate());
+        cache.put("kyc", new KYCFormTemplate());
+
+        loaded = true;
+        long elapsed = System.currentTimeMillis() - start;
+        System.out.println("Templates loaded: " + cache.size() + " in " + elapsed + "ms\n");
+    }
+
+    public static DocumentTemplate getTemplate(String type) {
+        if (!loaded) {
+            loadTemplates();
+        }
+
+        DocumentTemplate prototype = cache.get(type.toLowerCase());
+        if (prototype == null) {
+            throw new IllegalArgumentException("Unknown template type: " + type
+                + ". Available: " + cache.keySet());
+        }
+
+        try {
+            cloneCount++;
+            return (DocumentTemplate) prototype.clone();  // return CLONE, not original
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException("Clone failed for template: " + type, e);
+        }
+    }
+
+    public static String getCacheStats() {
+        return "Templates cached: " + cache.size() + " | Total clones: " + cloneCount;
+    }
+}</code></pre>
+
+<h3>DocumentService.java</h3>
+<pre><code>package com.nbi.document.service;
+
+import com.nbi.document.model.DocumentTemplate;
+import com.nbi.document.registry.DocumentTemplateRegistry;
+
+public class DocumentService {
+
+    public String generateDocument(String type, String customerId, String customerName) {
+        DocumentTemplate template = DocumentTemplateRegistry.getTemplate(type);
+        template.fillCustomerData(customerId, customerName);
+        return template.render();
+    }
+}</code></pre>
+
+<h3>Application.java</h3>
+<pre><code>package com.nbi.document;
+
+import com.nbi.document.registry.DocumentTemplateRegistry;
+import com.nbi.document.service.DocumentService;
+
+public class Application {
+    public static void main(String[] args) {
+        DocumentService service = new DocumentService();
+
+        // Templates loaded on first call
+        // Scenario 1: Generate loan agreement for Rajesh
+        System.out.println("=== Scenario 1: Loan Agreement ===");
+        System.out.println(service.generateDocument("loan", "SAV2001", "Rajesh Kumar"));
+
+        // Scenario 2: Same template type for different customer (cloned, not recreated)
+        System.out.println("=== Scenario 2: Loan Agreement for Priya ===");
+        System.out.println(service.generateDocument("loan", "CUR3001", "Priya Singh"));
+
+        // Scenario 3: Account Statement
+        System.out.println("=== Scenario 3: Account Statement ===");
+        System.out.println(service.generateDocument("statement", "SAV2001", "Rajesh Kumar"));
+
+        // Scenario 4: KYC Form
+        System.out.println("=== Scenario 4: KYC Form ===");
+        System.out.println(service.generateDocument("kyc", "SAV2001", "Rajesh Kumar"));
+
+        // Scenario 5: Generate 100 loan agreements (all cloned from cache)
+        System.out.println("=== Scenario 5: Bulk Generation (100 documents) ===");
+        long start = System.currentTimeMillis();
+        for (int i = 0; i < 100; i++) {
+            service.generateDocument("loan", "ACC" + i, "Customer " + i);
+        }
+        long elapsed = System.currentTimeMillis() - start;
+        System.out.println("Generated 100 documents in " + elapsed + "ms (all cloned)");
+        System.out.println(DocumentTemplateRegistry.getCacheStats());
+
+        // Scenario 6: Deep clone verification
+        System.out.println("\n=== Scenario 6: Deep Clone Verification ===");
+        var t1 = DocumentTemplateRegistry.getTemplate("loan");
+        var t2 = DocumentTemplateRegistry.getTemplate("loan");
+        System.out.println("t1 == t2? " + (t1 == t2));                     // false
+        System.out.println("t1.templateId == t2.templateId? "
+            + (t1.getTemplateId() == t2.getTemplateId()));                   // true (String interned)
+        System.out.println("Same formatting object? "
+            + (t1.toString().contains(t2.toString())));                      // similar content, different objects
+    }
+}</code></pre>
+
+<h3>Expected Output</h3>
+<div class="output">=== Loading templates from DB (one-time costly operation) ===
+  [COSTLY] Loading template: Loan Agreement (simulating 500ms DB call)
+  [COSTLY] Loading template: Account Statement (simulating 500ms DB call)
+  [COSTLY] Loading template: KYC Form (simulating 500ms DB call)
+Templates loaded: 3 in 5ms
+
+=== Scenario 1: Loan Agreement ===
+=== LOAN AGREEMENT ===
+Format: Times New Roman 12pt, margins(20,20), watermark: DRAFT
+NATIONAL BANK OF INDIA - LOAN AGREEMENT
+Customer: Rajesh Kumar (SAV2001)
+Date: 2026-11-02
+
+LOAN DETAILS:
+  Borrower: Rajesh Kumar
+  Account: SAV2001
+  This agreement certifies that the above borrower has been sanctioned
+  a loan as per the terms discussed and agreed upon.
+
+This is a computer-generated document. No signature required.
+Legal: This loan agreement is governed by the laws of India. The borrower agrees to re...
+
+=== Scenario 2: Loan Agreement for Priya ===
+=== LOAN AGREEMENT ===
+Format: Times New Roman 12pt, margins(20,20), watermark: DRAFT
+NATIONAL BANK OF INDIA - LOAN AGREEMENT
+Customer: Priya Singh (CUR3001)
+Date: 2026-11-02
+...
+
+=== Scenario 5: Bulk Generation (100 documents) ===
+Generated 100 documents in 8ms (all cloned)
+Templates cached: 3 | Total clones: 106
+
+=== Scenario 6: Deep Clone Verification ===
+t1 == t2? false</div>
+
+<h3>Key observations from the project</h3>
+<div class="card">
+<ol>
+<li><strong>3 template objects serve 106 document generations.</strong> Templates loaded from "DB" once. All subsequent calls clone from cache.</li>
+<li><strong>Deep clone protects the cache.</strong> <code>DocumentFormatting</code> is a mutable nested object. Deep cloning ensures modifying one document's formatting does not affect the template or other documents.</li>
+<li><strong>Extrinsic data reset on clone.</strong> The <code>clone()</code> method resets customerName, customerId, generatedDate to null. Each clone starts clean and is filled with customer-specific data.</li>
+<li><strong>100 documents generated in 8ms.</strong> Without prototype, loading 100 templates from DB would take 100 x 500ms = 50 seconds. With prototype, it takes 8ms.</li>
+<li><strong>Template types are extensible.</strong> Adding a new template (e.g., ChequeBookTemplate) requires one new class and one registry entry. No other code changes.</li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>7. When to Use and When NOT to Use</h2>
+<!-- ================================================================ -->
+
+<h3>When to use Prototype</h3>
+<table>
+<tr><th>Scenario</th><th>Example</th><th>Why Prototype</th></tr>
+<tr><td>Object creation is expensive</td><td>Loading from DB, parsing XML, network call</td><td>Clone from cache instead of re-creating</td></tr>
+<tr><td>Many similar objects needed</td><td>Game entities, document templates, form copies</td><td>Create one prototype, clone for each use</td></tr>
+<tr><td>Object configuration is complex</td><td>Multi-step builder result needs copies</td><td>Build once, clone many times</td></tr>
+<tr><td>Runtime object creation</td><td>Objects whose type is determined at runtime</td><td>Registry returns clone of correct prototype</td></tr>
+</table>
+
+<h3>When NOT to use Prototype</h3>
+<table>
+<tr><th>Scenario</th><th>Why NOT</th><th>Use Instead</th></tr>
+<tr><td>Object creation is cheap</td><td>Cloning overhead not worth it</td><td><code>new</code> keyword</td></tr>
+<tr><td>Objects have circular references</td><td>Deep cloning circular references causes infinite recursion</td><td>Serialization-based cloning or Builder</td></tr>
+<tr><td>Few objects needed</td><td>Registry overhead for 2-3 objects is excessive</td><td>Direct creation</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>8. Prototype vs Other Creational Patterns</h2>
+<!-- ================================================================ -->
+
+<table>
+<tr><th>Aspect</th><th>Prototype</th><th>Flyweight</th><th>Factory</th><th>Singleton</th></tr>
+<tr><td>Returns</td><td>Clone (new object)</td><td>Same cached object</td><td>New object</td><td>Same single object</td></tr>
+<tr><td>Object count</td><td>Many (one per clone)</td><td>Few (shared)</td><td>Many (one per call)</td><td>One</td></tr>
+<tr><td>Modifiable?</td><td>Yes (each clone independent)</td><td>No (shared, read-only)</td><td>Yes</td><td>Yes (but risky)</td></tr>
+<tr><td>Creation cost</td><td>Low (memory copy)</td><td>Zero (return reference)</td><td>High (new each time)</td><td>One-time</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>9. Quick Reference Card</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<table>
+<tr><th>Component</th><th>Role</th><th>In Document Project</th></tr>
+<tr><td>Prototype Interface</td><td><code>Cloneable</code></td><td><code>DocumentTemplate implements Cloneable</code></td></tr>
+<tr><td>Concrete Prototype</td><td>The cacheable, cloneable object</td><td><code>LoanAgreementTemplate</code>, <code>AccountStatementTemplate</code></td></tr>
+<tr><td>Prototype Registry</td><td>Cache + clone factory</td><td><code>DocumentTemplateRegistry</code></td></tr>
+<tr><td>Client</td><td>Gets clones, fills data</td><td><code>DocumentService</code></td></tr>
+</table>
+</div>
+
+<!-- ================================================================ -->
+<h2>10. Interview Questions</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<ol>
+<li>What is the Prototype pattern? When would you use it?</li>
+<li>What is the difference between shallow clone and deep clone?</li>
+<li>How does Java's <code>Cloneable</code> interface work? What does <code>super.clone()</code> do?</li>
+<li>What is the difference between Prototype and Flyweight patterns?</li>
+<li>How can you achieve deep cloning using Serialization?</li>
+<li>What happens if you clone an object with circular references?</li>
+<li>Design a document template system using the Prototype pattern.</li>
+<li>What is the Prototype Registry? Why is it needed?</li>
+<li>What is the difference between Prototype and Factory patterns?</li>
+<li>How does Spring use the Prototype scope?</li>
+<li>Can you use Prototype pattern with immutable objects?</li>
+<li>What are the disadvantages of the Prototype pattern?</li>
+</ol>
+</div>
+
+</body>
+</html>

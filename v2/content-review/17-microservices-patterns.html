@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Microservices Design Patterns - SAGA, Event Sourcing, CQRS, API Gateway | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}h1{font-size:28px;font-weight:800;margin-bottom:8px}h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}p,li{font-size:14px;margin-bottom:8px}ul,ol{margin-left:24px;margin-bottom:12px}pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}pre code{background:none;padding:0}.meta{font-size:13px;color:#999;margin-bottom:24px}.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}.tag-ms{background:#e0e7ff;color:#3730a3}.tag-h{background:#fee2e2;color:#991b1b}.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}.box-blue{border-color:#4A90D9;background:#eff6ff}.box-red{border-color:#e74c3c;background:#fef2f2}.box-green{border-color:#27ae60;background:#f0fdf4}.box-orange{border-color:#e67e22;background:#fffbeb}.box-purple{border-color:#8b5cf6;background:#f5f3ff}.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}table{border-collapse:collapse;margin:12px 0;width:100%}th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}th{background:#2d3748;color:#fff;font-weight:600}.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+</style>
+</head>
+<body>
+
+<span class="tag tag-ms">Microservices</span>
+<span class="tag tag-h">Advanced</span>
+
+<h1>Microservices Design Patterns</h1>
+<p class="meta">SAGA, Event Sourcing, CQRS, API Gateway, Database Per Service | Flipkart Architecture Example | Distributed Transaction Management | Orchestration vs Choreography | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>1. What is Microservice Architecture?</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>Microservice architecture develops every service as a separate project (executable app), nothing but REST application. So that we can activate or deactivate services as per our need. Each service is independently deployable, scalable, and maintainable.</p>
+</div>
+
+<div class="diagram">Flipkart Project using MicroService Architecture:
+
+Login &          ShoppingService        BillingService
+Application      [As Rest App]         [As Rest App]
+Service
+[As Rest App]    MS#2                  MS#3
+MS#1
+
+Since each service is developed as separate Rest App, we can take
+more instances of busy service and less instances for other/rarely used services.
+
+Instance of service/App means a running copy the app/service.
+e.g., Since Shopping service will be having more traffic and more
+requests from more users, we will more instances for it. Only 60%
+users who do shopping go for billing so we can take less no. of
+instances for billing service. Only 20% users generally go for payment
+so we more less no. of instances for payment service as needed.</div>
+
+<h3>Benefits of Microservice Architecture</h3>
+<ol type="a">
+<li><strong>Scalability:</strong> ability to increase or decrease number of instances</li>
+<li><strong>Flexibility:</strong> ability to use our choice one or more services together</li>
+<li><strong>Independent and autonomous:</strong> ability to use each service in different projects</li>
+<li><strong>Resilience:</strong> taking care of fail overs - if one service goes down, it diverts to another service</li>
+<li><strong>Continuous integration and delivery:</strong> ability to have modifications and releases continuously</li>
+</ol>
+
+<h3>Microservice Design Patterns</h3>
+<p>To provide the above benefits, we can use the following microservice architecture design patterns:</p>
+<ol type="a">
+<li><strong>Database per MicroService</strong></li>
+<li><strong>Event Sourcing</strong></li>
+<li><strong>CQRS</strong> (Command Query Responsibility Segregation)</li>
+<li><strong>SAGA</strong></li>
+<li><strong>API Gateway</strong></li>
+<li>Circuit Breaker</li>
+<li>Externalized Configuration</li>
+<li>Consumer-driven Contract Tracing</li>
+</ol>
+
+<!-- ================================================================ -->
+<h2>2. Database Per Microservice</h2>
+<!-- ================================================================ -->
+
+<h3>Problem: Shared Database (Anti-Pattern)</h3>
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Anti-Pattern</div>
+<p>Where all services together use same DB s/w or DB instance. Microservices using shared DB is anti-pattern. Note: Best solution for the problem is design pattern. Worst solution for the problem is called anti-pattern.</p>
+</div>
+
+<div class="diagram">Anti-Pattern: Shared Database
+
+MS#1   MS#2   MS#3   MS#4   MS#5
+  |      |      |      |      |
+  +------+------+------+------+
+                |
+         Database software
+         (single shared DB)
+
+Cons:
+- Microservices become non-scalable
+  (as data is increasing in multiple microservices
+   we need to change to DB s/w or increase RAM size and HDD size)
+- Microservices lose their independent or autonomous behavior
+- Microservices lose their portability
+- All Microservices are forced to execute in same platform and environment
+
+Pros:
+- Transaction management becomes (Local Transaction Management sufficient)</div>
+
+<h3>Solution: Database Per Service (Design Pattern)</h3>
+
+<div class="diagram">Design Pattern: Database Per Service
+
+MS#1 <--> MS#2 <--> MS#3 <--> MS#4
+  |         |         |         |
+DB s/w    DB s/w    DB s/w    DB s/w
+
+Every Micro service will use separate DB s/w or instance.
+
+Pros:
+- Each service DB s/w can be made scalable
+- Each Service (MS) domain data is encapsulated,
+  one Service (MS) cannot get other service (MS) data
+- Understanding service, enhancement of service becomes easy
+- Suitable for new developers for MS project
+- Services become independent and autonomous
+- Some services can use SQL DBs and some other services
+  can use No SQL DBs as needed based on format of the data
+- Different MS can be placed in different platforms because
+  they have their own DB
+
+Cons:
+- We definitely need Distributed TransactionManagement support
+  that runs on 2PC (two phase commit protocol)</div>
+
+<div class="box box-purple">
+<div class="box-label" style="color:#6d28d9">Conclusion</div>
+<p>In Micro service architecture, every service (MS) should have separate DB s/w or Logical DB or DB Instance or Schema having all DB tables.</p>
+<p>Note: In Monolithic App (all services as modules as single App/Project), we prefer this kind of single or shared DB s/w. But in MicroServices, we prefer Database per service.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>3. SAGA Pattern</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>In Microservices, each service has its own database. So the traditional local transaction (single DB) does not work across services. SAGA is a pattern for managing <strong>distributed transactions</strong> across multiple microservices. Each service performs its local transaction and publishes an event. If any step fails, compensating transactions are executed to undo the previous steps.</p>
+</div>
+
+<h3>Two Types of SAGA</h3>
+
+<table>
+<tr><th>Type</th><th>Description</th><th>Coordinator</th></tr>
+<tr><td><strong>Choreography</strong></td><td>Each service publishes events and listens for events from other services. No central coordinator. Services decide on their own what to do based on events.</td><td>None (event-driven, decentralized)</td></tr>
+<tr><td><strong>Orchestration</strong></td><td>A central orchestrator (SAGA coordinator) tells each service when to execute its transaction. The orchestrator manages the flow.</td><td>SAGA Orchestrator service</td></tr>
+</table>
+
+<div class="diagram">SAGA Orchestration Example: Order Processing
+
+                  SAGA Orchestrator
+                  (central coordinator)
+                  /        |         \
+                 v         v          v
+          Order Service  Payment   Shipping
+          (step 1:       Service    Service
+           create order) (step 2:   (step 3:
+                         charge)    ship)
+
+Success flow: create order -> charge payment -> ship order -> DONE
+Failure flow: create order -> charge payment FAILS ->
+              compensate: cancel order (undo step 1)
+
+Each step has a compensating transaction:
+  create order  <-->  cancel order
+  charge payment <--> refund payment
+  ship order    <-->  cancel shipment</div>
+
+<!-- ================================================================ -->
+<h2>4. CQRS Pattern (Command Query Responsibility Segregation)</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>This pattern is good along with Event Sourcing pattern. This pattern says: separate read operations and write operations that are happening on the DB s/w or any Repository by taking different Services.</p>
+</div>
+
+<div class="diagram">CQRS: Separate read and write services
+
+           write operations
+UI ---> Service1 ---------> DB s/w
+   |
+   +--> Service2
+         read operations
+
+Example Scenario:
+
+                   Payment Service ---write---> [DB]
+UI               /
+  \--> Order    /  read
+   \   Overview ---> Shipping Service ---write---> [DB]
+    \  Service   \
+     \            \ read
+      \            +--> Order Service ---write---> [DB]
+
+Note: Instead of payment, shipping, order MS talking with each other and mixing
+read and write operations on DB s/w or Event Logs or Event Repository, the CQRS
+pattern says develop separate MS talking to these related Services to get
+the necessary information and to present to enduser through UI.</div>
+
+<h3>CQRS combined with Event Sourcing</h3>
+<p>According to Event Sourcing pattern, every business activity will be treated as one event, and all these events will be written to Event Log Repository.</p>
+
+<div class="diagram">Event Sourcing + CQRS:
+
+                payment service ----write----> [Event Log Repository]
+               /                               (immutable)
+Order         /
+Overview  ---+--- Shipping Service --write--> [Event Log Repository]
+Service       \                                (immutable)
+(reads         \
+the state)      +--- Order Service ---write--> [Event Log Repository]
+                                               (immutable)
+
+All these Event Log Repositories
+maintain business operations as events.
+
+Event Sourcing says: MS should write their business operations as events.
+CQRS says: develop separate MS for Reading data and separate MS for writing data.</div>
+
+<!-- ================================================================ -->
+<h2>5. API Gateway Pattern</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>API Gateway is a tool that traps and routes all the requests and delegates to specific other services by applying common logic on trapped requests and responses.</p>
+</div>
+
+<div class="diagram">Problem: Microservice Architecture without API Gateway
+
+Browser --> Flipkart-order.com     (Order Service)
+Mobile  --> Flipkart-shopping.com  (Shopping Service)
+        --> Flipkart-Payment.com   (Payment Service)
+
+UI should use different domain names in order to interact with
+different services. Remembering multiple domain names to use
+multiple service is quite hard approach. To overcome this use API Gateway.
+
+Solution: API Gateway
+
+Browser --> api.flipkart.com --> Order Service (Flipkart-order.com)
+Mobile  -->                 --> Shopping Service (Flipkart-shopping.com)
+                            --> Payment Service (Flipkart-Payment.com)
+
+For enduser one URL:
+  If we request flipkart/order then request to order service
+  If we request flipkart/shopping then request to shopping service
+  If we request flipkart/payment then request to payment service
+  (we can access all the services using the common domain flipkart/*)
+
+API Gateway is a tool that traps and routes all the requests and delegates to specific
+other services by applying common logic on trapped requests and responses.
+
+e.g.: Netflix Zuul, Spring Cloud Gateway, Kong Gateway, Apigee and etc.</div>
+
+<h3>Advantages of API Gateway</h3>
+<ol type="a">
+<li><strong>Common Authentication:</strong> at API gateway level</li>
+<li><strong>Response caching:</strong> if same request comes to same MS for multiple times with same inputs, the response will be kept in cache and will be used multiple times</li>
+<li><strong>Load balancing:</strong> we can take multiple instances of each service, so API gateway picks less load instance because of its load balancing</li>
+<li><strong>Metrics Collection:</strong> since API gateway traps all requests and responses, so we can get no. of requests, no responses, request processing time, etc.</li>
+<li><strong>Circuit Breaker:</strong> if any problem comes while executing any service, it automatically diverts to another service</li>
+<li><strong>Common URL/URI:</strong> for accessing all the services</li>
+</ol>
+
+<!-- ================================================================ -->
+<h2>6. All Patterns Comparison</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<table>
+<tr><th>Pattern</th><th>Solves</th><th>Mechanism</th><th>Tools</th></tr>
+<tr><td>Database Per Service</td><td>Data coupling between services</td><td>Each MS has its own DB</td><td>MySQL, PostgreSQL, MongoDB (per service)</td></tr>
+<tr><td>SAGA</td><td>Distributed transactions</td><td>Local transactions + events + compensation</td><td>Axon Framework, Eventuate, custom orchestrator</td></tr>
+<tr><td>CQRS</td><td>Read/write performance bottleneck</td><td>Separate read and write services</td><td>Axon, custom event store</td></tr>
+<tr><td>Event Sourcing</td><td>Audit trail, state reconstruction</td><td>Store events instead of current state</td><td>Kafka, EventStore, Axon</td></tr>
+<tr><td>API Gateway</td><td>Multiple entry points, cross-cutting concerns</td><td>Single entry point routing to services</td><td>Spring Cloud Gateway, Kong, Netflix Zuul, Apigee</td></tr>
+<tr><td>Circuit Breaker</td><td>Cascading failures</td><td>Fail fast when service is down</td><td>Resilience4j, Hystrix (deprecated)</td></tr>
+</table>
+</div>
+
+<!-- ================================================================ -->
+<h2>7. Interview Questions</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<ol>
+<li>What is Microservice Architecture? How is it different from Monolithic?</li>
+<li>What is the Database Per Service pattern? Why is shared DB an anti-pattern in microservices?</li>
+<li>What is the SAGA pattern? Explain Choreography vs Orchestration.</li>
+<li>What is CQRS? When would you separate read and write services?</li>
+<li>What is Event Sourcing? How does it work with CQRS?</li>
+<li>What is an API Gateway? What are its advantages?</li>
+<li>What is the Circuit Breaker pattern? How does it prevent cascading failures?</li>
+<li>How does distributed transaction management differ from local transaction management?</li>
+<li>Design a SAGA for an e-commerce order flow (order, payment, inventory, shipping).</li>
+<li>What is the difference between Netflix Zuul and Spring Cloud Gateway?</li>
+<li>How does Kafka support Event Sourcing and CQRS patterns?</li>
+<li>What are compensating transactions in SAGA? Give an example.</li>
+</ol>
+</div>
+
+</body>
+</html>

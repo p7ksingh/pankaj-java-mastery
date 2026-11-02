@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service Locator Pattern in Java - Complete Tutorial | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px}
+h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}
+h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}
+p,li{font-size:14px;margin-bottom:8px}
+ul,ol{margin-left:24px;margin-bottom:12px}
+pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}
+code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}
+pre code{background:none;padding:0}
+.meta{font-size:13px;color:#999;margin-bottom:24px}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
+.tag-j{background:#fef3c7;color:#92400e}.tag-b{background:#dbeafe;color:#1e40af}.tag-m{background:#fff3e0;color:#e67e22}
+.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.box-blue{border-color:#4A90D9;background:#eff6ff}
+.box-red{border-color:#e74c3c;background:#fef2f2}
+.box-green{border-color:#27ae60;background:#f0fdf4}
+.box-orange{border-color:#e67e22;background:#fffbeb}
+.box-purple{border-color:#8b5cf6;background:#f5f3ff}
+.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}
+th{background:#2d3748;color:#fff;font-weight:600}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-j">JEE Pattern</span>
+<span class="tag tag-b">Business Tier</span>
+<span class="tag tag-m">Medium</span>
+
+<h1>Service Locator Design Pattern in Java</h1>
+<p class="meta">Complete Tutorial | 10 Sections | Full Stock Trading Project with HLD and LLD | JNDI Lookup Caching | Local vs External Services | Combined with Session Facade | Multiple Scenarios | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>1. What is Service Locator Pattern?</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Service Locator pattern is a <strong>JEE Business Tier Pattern</strong>. It separates JNDI/registry lookup code from the BusinessDelegate class and keeps it in a dedicated class that maintains a <strong>buffer/cache</strong> of external service component references. The Service Locator contains JNDI lookup code to locate and get external comp references from the registry.</p>
+<p><strong>One line:</strong> A centralized registry lookup class that caches external service references to avoid repeated costly JNDI lookups across multiple requests.</p>
+</div>
+
+<h3>Local Services vs External Services</h3>
+<table>
+<tr><th>Type</th><th>Description</th><th>Examples</th></tr>
+<tr><td><strong>Local Services</strong></td><td>Service logics used only inside the project. BusinessDelegate class logics are local services.</td><td>Flipkart's billing calculations, discount logic, cart operations</td></tr>
+<tr><td><strong>External Services (Distributed Comps)</strong></td><td>Service logics that can be accessed and used from different projects. Accessed over the network using distributed technologies.</td><td>GPay, PhonePe, BharatPe, ICC Score Comp, BSE Comp, WeatherReport comp</td></tr>
+</table>
+
+<h3>How external services are discovered</h3>
+<p>To make our logics/services as external services or distributed comps, we need to take the support of Distributed Technologies like <strong>EJB (old), RMI (old), WebServices (SOAP or REST based)</strong>.</p>
+<p>The distributed comps/external comps keep their comp details in special <strong>registries</strong> to expose the details to different local or remote client projects. The special registries are like:</p>
+<ul>
+<li><strong>JNDI Registry</strong> (Java Naming and Directory Interface)</li>
+<li><strong>RMI Registry</strong></li>
+<li><strong>UDDI Registry</strong> (for SOAP WebServices)</li>
+</ul>
+<p>The remote or local Client Apps/Projects search for external services/distributed comp in JNDI registry or UDDI registry and get references from those registries in order to consume the services of external service or distributed comp.</p>
+
+<h3>Real-world examples of client-service relationships</h3>
+<ul>
+<li>Flipkart, Amazon, Myntra, Snapdeal are <strong>Client Apps</strong> using GPay, PhonePe, BharatPe as <strong>external services</strong> (UPI payments)</li>
+<li>Sharekhan, Upstox, Zerodha, Paisa, Angel One are <strong>Client Apps</strong> using BSE, NSE Comps as <strong>external services</strong></li>
+<li>CrickBuzz, CricInfo, Dream11, ESPNsports are <strong>Client Apps</strong> using ICC Score Comps as <strong>external services</strong></li>
+<li>Flipkart, Amazon, Myntra are <strong>Client Apps</strong> using PayPal, PayTM, Razorpay as <strong>external services</strong> (card payment)</li>
+</ul>
+
+<!-- ================================================================ -->
+<h2>2. The Problem: JNDI Lookup in BusinessDelegate</h2>
+<!-- ================================================================ -->
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Four Problems with placing JNDI lookup directly in BusinessDelegate</div>
+<ol>
+<li><strong>No reusability:</strong> If multiple BusinessDelegate comps want to interact with the same external service, we need the same JNDI code in multiple BusinessDelegate classes. There is no reusability for JNDI lookup code.</li>
+<li><strong>Location dependency:</strong> If the external comp location or technology is modified, then we need to modify JNDI lookup code in BusinessDelegate class.</li>
+<li><strong>Registry dependency:</strong> If the JNDI registry which maintains the external comp reference location or technology is changed, then the JNDI lookup code in BusinessDelegate class will also be changed.</li>
+<li><strong>Network overhead:</strong> Since we are not maintaining external comp ref in cache/buffer, there will be more network round trips between Client App and JNDI registry across multiple requests.</li>
+</ol>
+</div>
+
+<div class="diagram">Problem: JNDI lookup code inside BusinessDelegate directly
+
+CrickBuzz.com (India) website                  ICC - Dubai
+                                               ICCScoreComp (external comp)
+MainControllerServlet  ScoreAgent               public String fetchScore(int mid)
+  |               BusinessDelegate              ...
+  |  get_score.jsp    |
+  |  IND vs PAK  [1] read   [2] invoke        [4]      JNDI Registry
+  |  request     form data   delegate.findScore(mid)    icc <---> ICCScore comp ref
+  |              [3]                             [3]     (jndi name) (external comp ref)
+  |                    public String findScore(int mid) {
+  |                      // JNDI lookup code here
+  |                      // invoke external comp method
+  |                    }
+  |
+  | Multiple BusinessDelegates need same JNDI code = NO REUSE
+  | External comp location changes = MODIFY all BusinessDelegates</div>
+
+<!-- ================================================================ -->
+<h2>3. The Solution: Service Locator with Cache</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Solution</div>
+<p>Separate the JNDI lookup code from BusinessDelegate class and keep it in a separate class. This special class should maintain a <strong>buffer/cache</strong> having external comp references. This class is called <strong>Service Locator</strong> class.</p>
+<p>It contains JNDI lookup code to locate and get external comp ref from JNDI registry. On first lookup, it fetches from registry and caches. On subsequent lookups, it returns from cache (no network call).</p>
+</div>
+
+<div class="diagram">Solution: Service Locator with buffer/cache
+
+CrickBuzz.com                                   ICC - Dubai
+MainControllerServlet  ScoreAgent                ICCScoreComp
+  |               BusinessDelegate               |
+  |  [1a]         |                     [1d]     JNDI Registry
+  |  request   [1b] get comp ref        icc <--> ICCScore comp ref
+  |            from ServiceLocator
+  |                |
+  |           ServiceLocator               buffer/cache
+  |              [1c] JNDI lookup code     +--------+--------+
+  |              (only on first call)      | keys   | values |
+  |              caches result             | "icc"  | ICCScore comp ref |
+  |                                        +--------+--------+
+
+1a to 10 = 1st request
+2a to 2f = 2nd request  (both requests follow same flow,
+                          but 2nd request gets comp ref from cache, no JNDI lookup)</div>
+
+<h3>Advantages of Service Locator</h3>
+<ol type="a">
+<li><strong>Reusable lookup code:</strong> Separates the JNDI lookup from BusinessDelegate classes. Makes the code reusable across multiple BusinessDelegates.</li>
+<li><strong>Loose coupling with external comp:</strong> Any change in external comp location and technology, we just need to modify the code of Service Locator, not the BusinessDelegate classes.</li>
+<li><strong>Loose coupling with registry:</strong> Any change in JNDI registry location and technology, we just need to modify the code of Service Locator, not the BusinessDelegate classes.</li>
+<li><strong>Reduced network round trips:</strong> The buffer/cache maintained by Service Locator reduces the network round trips between client application and JNDI registry.</li>
+</ol>
+
+<div class="box box-purple">
+<div class="box-label" style="color:#6d28d9">Service Locator should be a Singleton</div>
+<p>Since the ServiceLocator class is having buffer/cache as the sharable state across the multiple BusinessDelegate classes, it is better to develop ServiceLocator class as <strong>singleton Java class</strong>.</p>
+<p>Service Locator as singleton Java class is the best use case for making a Java class as singleton when the class has sharable state across multiple other classes.</p>
+<p><strong>Note:</strong> BusinessDelegate contains the local business logic AND logic to invoke external comp service methods. ServiceLocator contains only lookup code to get external comp ref from JNDI registry. ServiceLocator is a helper comp to BusinessDelegate comp.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>4. CrickBuzz Example: Consuming ICC Score Service</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Scenario</div>
+<p>CrickBuzz.com (India) needs to display live cricket scores. The ICC (International Cricket Council) in Dubai maintains the score data. ICC develops one external service/distributed comp called ICCScoreComp and keeps its details in JNDI registry to expose to multiple clients like CrickBuzz, CricInfo, and ESPNsports. All client apps access the DB of ICC having score information through this service.</p>
+</div>
+
+<p>Different options for CrickBuzz.com to display updated scores:</p>
+<ol type="a">
+<li>Send a person to match area, gets up to scores minute by minute by phone and enter in the website (lots of manual parties, not recommended)</li>
+<li>ICC organization provides its DB username, password details to CrickBuzz.com to connect to DB directly (gives unrestricted access to DB, can corrupt the DB data)</li>
+<li><strong>Best: ICC develops one external service (ICCScoreComp) and keeps its details in JNDI registry to expose to multiple clients</strong>. All client apps access the DB of ICC having scores mentioned.</li>
+</ol>
+
+<p>If the external comp (ICCScoreComp) is developed in EJB or RMI, then the client app (CrickBuzz, CricInfo) should also be developed in Java language. If the external comp is developed as WebServices, then the client app can be developed in any language (Java, .NET, PHP, Python, etc.).</p>
+
+<!-- ================================================================ -->
+<h2>5. Full-Length Industry Project: Stock Trading System (ShareKhan)</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Business Scenario</div>
+<p>ShareKhan.com is a stock trading client application. It needs data from three external services hosted by BSE (Bombay Stock Exchange): (1) GetStockIdComp - looks up stock ID by name, (2) GetStockValueComp - gets current stock price by ID, (3) GetStockFutureValueComp - gets predicted future value. These three external services are registered in JNDI registry. A Session Facade on the server side aggregates all three calls into one. A Service Locator on the client side caches the Facade reference.</p>
+</div>
+
+<h3>High-Level Design (HLD)</h3>
+
+<div class="diagram">
++---------------------------------------------+
+|  CLIENT SIDE (ShareKhan.com)                 |
+|                                              |
+|  get_stock_details.jsp  MainControllerComp   |
+|    stock name: [___]      |                  |
+|    [Get Stock Details]    |                  |
+|                           v                  |
+|                     StockMgmt                |
+|                     BusinessDelegate         |
+|                      |         |             |
+|                      v         v             |
+|                 ServiceLocator               |
+|                 (Singleton with cache)        |
+|                 buffer/cache:                |
+|                 +-------+----------+         |
+|                 | stock | StockFacade        |
+|                 | facade| comp ref  |        |
+|                 +-------+----------+         |
+|                      |                       |
+|  show_stock_details  | network               |
+|   .jsp               |                       |
++----------------------|-----------------------+
+                       |
+                       v
++---------------------------------------------+
+|  BSE/ICC SERVER SIDE (External Services)     |
+|                                              |
+|  StockFacadeComp (Session Facade)            |
+|    - aggregates 3 external services          |
+|    - one network call from client            |
+|    - multiple internal calls on server       |
+|        |            |            |           |
+|        v            v            v           |
+|  GetStockIdComp  GetStockValue  GetStockFuture|
+|  (External       Comp           ValueComp     |
+|   Service 1)    (Service 2)    (Service 3)    |
+|                                              |
+|  JNDI Registry:                              |
+|    stockFacade <--> StockFacadeComp ref       |
++---------------------------------------------+
+</div>
+
+<h3>Low-Level Design (LLD)</h3>
+
+<div class="diagram">
++-----------------------------------------------------+
+| ServiceLocator (Singleton)                          |
++-----------------------------------------------------+
+| - cache: Map&lt;String, Object&gt;  [buffer/cache]       |
+| - INSTANCE: ServiceLocator     [static volatile]    |
++-----------------------------------------------------+
+| + getInstance(): ServiceLocator [double-checked]    |
+| + getService(jndiName): Object  [lookup + cache]    |
++-----------------------------------------------------+
+
++-----------------------------------------------------+
+| StockMgmt (BusinessDelegate)                        |
++-----------------------------------------------------+
+| + getStockDetails(stockName): StockDetailsVO        |
+|   - gets StockFacade ref from ServiceLocator        |
+|   - invokes facade.getCompleteStockInfo(name)       |
+|   - converts result to VO for presentation          |
++-----------------------------------------------------+
+
++-----------------------------------------------------+
+| IStockFacade (Session Facade interface)             |
++-----------------------------------------------------+
+| + getCompleteStockInfo(name): StockDetailsDTO       |
++-----------------------------------------------------+
+         ^
+         |
++-----------------------------------------------------+
+| StockFacadeImpl (aggregates 3 services)             |
++-----------------------------------------------------+
+| - stockIdService: IGetStockId                       |
+| - stockValueService: IGetStockValue                 |
+| - stockFutureService: IGetStockFutureValue          |
++-----------------------------------------------------+
+| + getCompleteStockInfo(name): StockDetailsDTO       |
+|   1. id = stockIdService.getStockId(name)           |
+|   2. value = stockValueService.getValue(id)         |
+|   3. future = stockFutureService.getFutureValue(id) |
+|   4. return new StockDetailsDTO(id, value, future)  |
++-----------------------------------------------------+
+</div>
+
+<h3>Project Structure</h3>
+<div class="ps">stock-trading-system/
+├── src/main/java/com/sharekhan/
+│   ├── vo/
+│   │   └── StockDetailsVO.java           (presentation tier)
+│   ├── dto/
+│   │   └── StockDetailsDTO.java          (transfer between tiers)
+│   ├── delegate/
+│   │   └── StockMgmt.java                (BusinessDelegate)
+│   ├── locator/
+│   │   └── ServiceLocator.java           (Singleton with cache)
+│   ├── facade/
+│   │   ├── IStockFacade.java             (Session Facade interface)
+│   │   └── StockFacadeImpl.java          (aggregates 3 services)
+│   ├── external/
+│   │   ├── IGetStockId.java
+│   │   ├── GetStockIdImpl.java
+│   │   ├── IGetStockValue.java
+│   │   ├── GetStockValueImpl.java
+│   │   ├── IGetStockFutureValue.java
+│   │   └── GetStockFutureValueImpl.java
+│   └── Application.java
+└── pom.xml</div>
+
+<h3>ServiceLocator.java (Singleton with cache)</h3>
+<pre><code>package com.sharekhan.locator;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class ServiceLocator {
+    private static volatile ServiceLocator INSTANCE;
+    private final Map&lt;String, Object&gt; cache = new HashMap&lt;&gt;();
+
+    private ServiceLocator() {
+        System.out.println("[ServiceLocator] Initialized (singleton)");
+    }
+
+    public static ServiceLocator getInstance() {
+        if (INSTANCE == null) {
+            synchronized (ServiceLocator.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new ServiceLocator();
+                }
+            }
+        }
+        return INSTANCE;
+    }
+
+    @SuppressWarnings("unchecked")
+    public &lt;T&gt; T getService(String jndiName, Class&lt;T&gt; serviceType) {
+        // Check cache first
+        if (cache.containsKey(jndiName)) {
+            System.out.println("[ServiceLocator] Cache HIT for: " + jndiName);
+            return (T) cache.get(jndiName);
+        }
+
+        // Cache miss: perform JNDI lookup (simulated)
+        System.out.println("[ServiceLocator] Cache MISS. Looking up: " + jndiName);
+        T service = performLookup(jndiName, serviceType);
+
+        // Cache the reference
+        cache.put(jndiName, service);
+        System.out.println("[ServiceLocator] Cached: " + jndiName);
+
+        return service;
+    }
+
+    @SuppressWarnings("unchecked")
+    private &lt;T&gt; T performLookup(String jndiName, Class&lt;T&gt; serviceType) {
+        // Simulated JNDI/registry lookup
+        // In real app: InitialContext ctx = new InitialContext();
+        //              return (T) ctx.lookup(jndiName);
+        System.out.println("[ServiceLocator] JNDI lookup for: " + jndiName
+            + " (network call to registry)");
+
+        // Simulate creating the service based on JNDI name
+        switch (jndiName) {
+            case "stockFacade":
+                return (T) new com.sharekhan.facade.StockFacadeImpl();
+            default:
+                throw new RuntimeException("Service not found in registry: " + jndiName);
+        }
+    }
+
+    public int getCacheSize() {
+        return cache.size();
+    }
+}</code></pre>
+
+<h3>External Services (simulated)</h3>
+<pre><code>// IGetStockId.java
+package com.sharekhan.external;
+public interface IGetStockId {
+    int getStockId(String stockName);
+}
+
+// GetStockIdImpl.java
+package com.sharekhan.external;
+public class GetStockIdImpl implements IGetStockId {
+    public int getStockId(String stockName) {
+        System.out.println("  [External Service 1] Looking up ID for: " + stockName);
+        switch (stockName.toUpperCase()) {
+            case "RELIANCE": return 500325;
+            case "TCS": return 532540;
+            case "INFOSYS": return 500209;
+            case "HDFC": return 500180;
+            default: return -1;
+        }
+    }
+}
+
+// IGetStockValue.java
+package com.sharekhan.external;
+public interface IGetStockValue {
+    double getStockValue(int stockId);
+}
+
+// GetStockValueImpl.java
+package com.sharekhan.external;
+public class GetStockValueImpl implements IGetStockValue {
+    public double getStockValue(int stockId) {
+        System.out.println("  [External Service 2] Getting value for ID: " + stockId);
+        switch (stockId) {
+            case 500325: return 2485.50;  // Reliance
+            case 532540: return 3678.25;  // TCS
+            case 500209: return 1542.75;  // Infosys
+            case 500180: return 1623.00;  // HDFC
+            default: return 0.0;
+        }
+    }
+}
+
+// IGetStockFutureValue.java
+package com.sharekhan.external;
+public interface IGetStockFutureValue {
+    double getFutureValue(int stockId);
+}
+
+// GetStockFutureValueImpl.java
+package com.sharekhan.external;
+public class GetStockFutureValueImpl implements IGetStockFutureValue {
+    public double getFutureValue(int stockId) {
+        System.out.println("  [External Service 3] Predicting future for ID: " + stockId);
+        switch (stockId) {
+            case 500325: return 2650.00;
+            case 532540: return 3900.00;
+            case 500209: return 1680.00;
+            case 500180: return 1750.00;
+            default: return 0.0;
+        }
+    }
+}</code></pre>
+
+<h3>StockDetailsDTO.java</h3>
+<pre><code>package com.sharekhan.dto;
+
+public class StockDetailsDTO {
+    private final String stockName;
+    private final int stockId;
+    private final double currentValue;
+    private final double futureValue;
+    private final double changePercent;
+
+    public StockDetailsDTO(String stockName, int stockId,
+                            double currentValue, double futureValue) {
+        this.stockName = stockName;
+        this.stockId = stockId;
+        this.currentValue = currentValue;
+        this.futureValue = futureValue;
+        this.changePercent = ((futureValue - currentValue) / currentValue) * 100;
+    }
+
+    public String getStockName() { return stockName; }
+    public int getStockId() { return stockId; }
+    public double getCurrentValue() { return currentValue; }
+    public double getFutureValue() { return futureValue; }
+    public double getChangePercent() { return changePercent; }
+
+    @Override
+    public String toString() {
+        return String.format("%s (ID: %d) | Current: Rs %.2f | Future: Rs %.2f | Change: %.1f%%",
+            stockName, stockId, currentValue, futureValue, changePercent);
+    }
+}</code></pre>
+
+<h3>IStockFacade.java and StockFacadeImpl.java (Session Facade)</h3>
+<pre><code>// IStockFacade.java
+package com.sharekhan.facade;
+
+import com.sharekhan.dto.StockDetailsDTO;
+
+public interface IStockFacade {
+    StockDetailsDTO getCompleteStockInfo(String stockName);
+}
+
+// StockFacadeImpl.java (aggregates 3 external services into ONE call)
+package com.sharekhan.facade;
+
+import com.sharekhan.dto.StockDetailsDTO;
+import com.sharekhan.external.*;
+
+public class StockFacadeImpl implements IStockFacade {
+    private final IGetStockId stockIdService;
+    private final IGetStockValue stockValueService;
+    private final IGetStockFutureValue stockFutureService;
+
+    public StockFacadeImpl() {
+        this.stockIdService = new GetStockIdImpl();
+        this.stockValueService = new GetStockValueImpl();
+        this.stockFutureService = new GetStockFutureValueImpl();
+        System.out.println("[StockFacade] Initialized with 3 external services");
+    }
+
+    @Override
+    public StockDetailsDTO getCompleteStockInfo(String stockName) {
+        System.out.println("[StockFacade] Aggregating data for: " + stockName);
+
+        // Call 3 external services (server-side, no extra network calls)
+        int stockId = stockIdService.getStockId(stockName);
+        if (stockId == -1) {
+            throw new RuntimeException("Stock not found: " + stockName);
+        }
+
+        double currentValue = stockValueService.getStockValue(stockId);
+        double futureValue = stockFutureService.getFutureValue(stockId);
+
+        return new StockDetailsDTO(stockName, stockId, currentValue, futureValue);
+    }
+}</code></pre>
+
+<h3>StockMgmt.java (BusinessDelegate)</h3>
+<pre><code>package com.sharekhan.delegate;
+
+import com.sharekhan.dto.StockDetailsDTO;
+import com.sharekhan.facade.IStockFacade;
+import com.sharekhan.locator.ServiceLocator;
+
+public class StockMgmt {
+
+    public StockDetailsDTO getStockDetails(String stockName) {
+        // Get StockFacade ref from ServiceLocator (cached after first lookup)
+        IStockFacade facade = ServiceLocator.getInstance()
+            .getService("stockFacade", IStockFacade.class);
+
+        // Invoke external comp method through facade
+        return facade.getCompleteStockInfo(stockName);
+    }
+}</code></pre>
+
+<h3>Application.java</h3>
+<pre><code>package com.sharekhan;
+
+import com.sharekhan.delegate.StockMgmt;
+import com.sharekhan.dto.StockDetailsDTO;
+import com.sharekhan.locator.ServiceLocator;
+
+public class Application {
+    public static void main(String[] args) {
+        StockMgmt delegate = new StockMgmt();
+
+        // Scenario 1: First request (JNDI lookup + cache)
+        System.out.println("=== Scenario 1: First Request (Reliance) ===");
+        StockDetailsDTO reliance = delegate.getStockDetails("Reliance");
+        System.out.println("Result: " + reliance);
+        System.out.println();
+
+        // Scenario 2: Second request (cache hit, no JNDI lookup)
+        System.out.println("=== Scenario 2: Second Request (TCS) ===");
+        StockDetailsDTO tcs = delegate.getStockDetails("TCS");
+        System.out.println("Result: " + tcs);
+        System.out.println();
+
+        // Scenario 3: Third request (cache hit again)
+        System.out.println("=== Scenario 3: Third Request (Infosys) ===");
+        StockDetailsDTO infosys = delegate.getStockDetails("Infosys");
+        System.out.println("Result: " + infosys);
+        System.out.println();
+
+        // Scenario 4: Verify ServiceLocator is singleton with cache
+        System.out.println("=== Scenario 4: ServiceLocator Stats ===");
+        System.out.println("Cache size: " + ServiceLocator.getInstance().getCacheSize());
+        System.out.println("ServiceLocator hashCode: " + ServiceLocator.getInstance().hashCode());
+
+        System.out.println();
+
+        // Scenario 5: Invalid stock
+        System.out.println("=== Scenario 5: Invalid Stock ===");
+        try {
+            delegate.getStockDetails("UNKNOWN_STOCK");
+        } catch (RuntimeException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
+}</code></pre>
+
+<h3>Expected Output</h3>
+<div class="output">=== Scenario 1: First Request (Reliance) ===
+[ServiceLocator] Initialized (singleton)
+[ServiceLocator] Cache MISS. Looking up: stockFacade
+[ServiceLocator] JNDI lookup for: stockFacade (network call to registry)
+[StockFacade] Initialized with 3 external services
+[ServiceLocator] Cached: stockFacade
+[StockFacade] Aggregating data for: Reliance
+  [External Service 1] Looking up ID for: Reliance
+  [External Service 2] Getting value for ID: 500325
+  [External Service 3] Predicting future for ID: 500325
+Result: Reliance (ID: 500325) | Current: Rs 2485.50 | Future: Rs 2650.00 | Change: 6.6%
+
+=== Scenario 2: Second Request (TCS) ===
+[ServiceLocator] Cache HIT for: stockFacade
+[StockFacade] Aggregating data for: TCS
+  [External Service 1] Looking up ID for: TCS
+  [External Service 2] Getting value for ID: 532540
+  [External Service 3] Predicting future for ID: 532540
+Result: TCS (ID: 532540) | Current: Rs 3678.25 | Future: Rs 3900.00 | Change: 6.0%
+
+=== Scenario 3: Third Request (Infosys) ===
+[ServiceLocator] Cache HIT for: stockFacade
+[StockFacade] Aggregating data for: Infosys
+  [External Service 1] Looking up ID for: Infosys
+  [External Service 2] Getting value for ID: 500209
+  [External Service 3] Predicting future for ID: 500209
+Result: Infosys (ID: 500209) | Current: Rs 1542.75 | Future: Rs 1680.00 | Change: 8.9%
+
+=== Scenario 4: ServiceLocator Stats ===
+Cache size: 1
+ServiceLocator hashCode: 1550009438
+
+=== Scenario 5: Invalid Stock ===
+[ServiceLocator] Cache HIT for: stockFacade
+[StockFacade] Aggregating data for: UNKNOWN_STOCK
+  [External Service 1] Looking up ID for: UNKNOWN_STOCK
+Error: Stock not found: UNKNOWN_STOCK</div>
+
+<h3>Key observations from the project</h3>
+<div class="card">
+<ol>
+<li><strong>JNDI lookup happens only once.</strong> Scenario 1 shows "Cache MISS" and performs the lookup. Scenarios 2 and 3 show "Cache HIT" with no network call to the registry.</li>
+<li><strong>ServiceLocator is a Singleton.</strong> Same hashCode across all calls. Buffer/cache is shared state.</li>
+<li><strong>Session Facade aggregates 3 external services into 1 call.</strong> The client makes one network call to the Facade. The Facade internally calls 3 services on the server side (no extra network hops from client).</li>
+<li><strong>BusinessDelegate is clean.</strong> It calls <code>ServiceLocator.getInstance().getService()</code> to get the Facade reference and then invokes the business method. No JNDI code, no caching logic.</li>
+<li><strong>Adding a new external service:</strong> Register it in JNDI, add a case to ServiceLocator's <code>performLookup()</code>. No BusinessDelegate changes.</li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>6. Service Locator Combined with Other Patterns</h2>
+<!-- ================================================================ -->
+
+<table>
+<tr><th>Pattern</th><th>Role in this architecture</th></tr>
+<tr><td><strong>Service Locator</strong></td><td>Looks up and caches external service references from JNDI registry</td></tr>
+<tr><td><strong>Session Facade</strong></td><td>Aggregates multiple external service calls into one coarse-grained call</td></tr>
+<tr><td><strong>Business Delegate</strong></td><td>Contains local business logic and uses ServiceLocator + Facade</td></tr>
+<tr><td><strong>Singleton</strong></td><td>ServiceLocator is a singleton (shared cache across all delegates)</td></tr>
+<tr><td><strong>Flyweight</strong></td><td>The cached service references are reused (flyweight concept)</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>7. When to Use and When NOT to Use</h2>
+<!-- ================================================================ -->
+
+<h3>When to use Service Locator</h3>
+<table>
+<tr><th>Scenario</th><th>Why</th></tr>
+<tr><td>Multiple BusinessDelegates share same external service</td><td>Reuse lookup code, share cached reference</td></tr>
+<tr><td>JNDI/registry lookups are expensive</td><td>Cache avoids repeated network calls</td></tr>
+<tr><td>External service location may change</td><td>Only ServiceLocator code changes</td></tr>
+<tr><td>EJB or RMI based distributed services</td><td>JNDI lookup is the standard discovery mechanism</td></tr>
+</table>
+
+<h3>When NOT to use (modern alternatives)</h3>
+<table>
+<tr><th>Scenario</th><th>Alternative</th></tr>
+<tr><td>Spring Boot application</td><td>Spring Dependency Injection replaces Service Locator. <code>@Autowired</code> injects services.</td></tr>
+<tr><td>REST-based microservices</td><td>Service Discovery (Eureka, Consul) replaces JNDI. Ribbon/Feign handles lookup.</td></tr>
+<tr><td>Simple application with few services</td><td>Direct injection or Factory pattern is simpler.</td></tr>
+</table>
+
+<div class="box box-orange">
+<div class="box-label" style="color:#92400e">Service Locator vs Dependency Injection</div>
+<p>Martin Fowler (2004) described Service Locator as an anti-pattern when Dependency Injection is available. In modern frameworks (Spring, CDI), DI is preferred because the container manages the lifecycle, and the class explicitly declares its dependencies. Service Locator hides dependencies, making them harder to test and understand.</p>
+<p>However, Service Locator is still valid in: (a) legacy JEE applications, (b) environments without a DI container, (c) runtime service discovery scenarios.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>8. Quick Reference Card</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<table>
+<tr><th>Component</th><th>Role</th><th>In Stock Trading Project</th></tr>
+<tr><td>Service Locator</td><td>Singleton with cache, performs JNDI lookup</td><td><code>ServiceLocator</code></td></tr>
+<tr><td>Cache</td><td>HashMap of JNDI name to service reference</td><td><code>cache: Map&lt;String, Object&gt;</code></td></tr>
+<tr><td>Business Delegate</td><td>Uses Service Locator to get service ref</td><td><code>StockMgmt</code></td></tr>
+<tr><td>Session Facade</td><td>Aggregates multiple services into one call</td><td><code>StockFacadeImpl</code></td></tr>
+<tr><td>External Services</td><td>Distributed components in registry</td><td><code>GetStockIdImpl</code>, <code>GetStockValueImpl</code>, etc.</td></tr>
+</table>
+</div>
+
+<!-- ================================================================ -->
+<h2>9. Interview Questions</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<ol>
+<li>What is the Service Locator pattern? Why is it needed?</li>
+<li>What are the four problems of placing JNDI lookup directly in BusinessDelegate?</li>
+<li>How does Service Locator reduce network round trips?</li>
+<li>Why should Service Locator be implemented as a Singleton?</li>
+<li>What is the difference between local services and external/distributed services?</li>
+<li>What is a JNDI Registry? How does Service Locator interact with it?</li>
+<li>How does Service Locator work together with Session Facade?</li>
+<li>What is the difference between Service Locator and Dependency Injection?</li>
+<li>Is Service Locator an anti-pattern? When should you still use it?</li>
+<li>How does Spring Boot replace the need for Service Locator?</li>
+<li>Design a Service Locator for a payment gateway that supports multiple providers (PayPal, Razorpay, Stripe).</li>
+<li>How would you make Service Locator thread-safe?</li>
+</ol>
+</div>
+
+</body>
+</html>

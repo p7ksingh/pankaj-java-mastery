@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DAO (Data Access Object) Pattern in Java - Complete Tutorial | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px}
+h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}
+h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}
+p,li{font-size:14px;margin-bottom:8px}
+ul,ol{margin-left:24px;margin-bottom:12px}
+pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}
+code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}
+pre code{background:none;padding:0}
+.meta{font-size:13px;color:#999;margin-bottom:24px}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
+.tag-j{background:#fef3c7;color:#92400e}.tag-i{background:#e0e7ff;color:#3730a3}.tag-m{background:#fff3e0;color:#e67e22}
+.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.box-blue{border-color:#4A90D9;background:#eff6ff}
+.box-red{border-color:#e74c3c;background:#fef2f2}
+.box-green{border-color:#27ae60;background:#f0fdf4}
+.box-orange{border-color:#e67e22;background:#fffbeb}
+.box-purple{border-color:#8b5cf6;background:#f5f3ff}
+.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}
+th{background:#2d3748;color:#fff;font-weight:600}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-j">JEE Pattern</span>
+<span class="tag tag-i">Integration Tier</span>
+<span class="tag tag-m">Medium</span>
+
+<h1>DAO (Data Access Object) Pattern in Java</h1>
+<p class="meta">Complete Tutorial | 12 Sections | Full Customer Registration Project with HLD and LLD | Java Bean Types (VO, DTO, BO) | Layered Architecture | ConnectionFactory | Exception Propagation | Multiple Scenarios | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>1. What is the DAO Pattern?</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The DAO (Data Access Object) pattern is a <strong>JEE Integration Tier Pattern</strong>. A DAO class is a Java class that contains <strong>only persistence logic</strong> (CRUD operations on the database) using the support of Data Access technologies like JDBC, Hibernate, Spring JDBC, Spring Data JPA, etc.</p>
+<p><strong>One line:</strong> Separate the data access logic from the business logic into dedicated DAO classes, one per database table.</p>
+</div>
+
+<p>Oracle, Hibernate, Spring JDBC, Spring JPA/Spring Data JPA, and others are called <strong>Data Storage technologies</strong> because they store and maintain data persistently. They are also called <strong>Data Access technologies</strong> because they let you access and manipulate the data.</p>
+
+<h3>JEE Pattern Categories</h3>
+<p>JEE patterns are given by Sun Microsystems addressing problems of <strong>Layered Application development</strong>. The JEE pattern catalog has 3 categories:</p>
+<table>
+<tr><th>Tier</th><th>Patterns</th></tr>
+<tr><td>Presentation Tier</td><td>Intercepting Filter, Front Controller, View Helper, Composite View</td></tr>
+<tr><td>Business Tier</td><td>Business Delegate, Service Locator, Session Facade, Message Facade</td></tr>
+<tr><td>Integration Tier</td><td><strong>DAO (Data Access Object)</strong></td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>2. Java Bean Types: VO, DTO, BO</h2>
+<!-- ================================================================ -->
+
+<p>Before understanding DAO, we need to know the three types of Java Beans used in layered applications:</p>
+
+<h3>a) VO Class (Value Object)</h3>
+<div class="box box-green">
+<div class="box-label" style="color:#166534">VO</div>
+<p>The Java bean whose object holds either <strong>input values or output values</strong> is called VO class. Generally this class maintains all its properties as <code>String</code> type irrespective of the kind of data they hold.</p>
+</div>
+<pre><code>// StudentVO.java
+public class StudentVO {
+    private String sno;
+    private String sname;
+    private String m1, m2, m3;
+    // setters and getters
+}</code></pre>
+
+<h3>b) DTO Class (Data Transfer Object)</h3>
+<div class="box box-green">
+<div class="box-label" style="color:#166534">DTO</div>
+<p>The Java bean whose object holds <strong>shippable/transferable data</strong> either within the project or between the projects is called DTO class. It implements <code>Serializable</code> for network transfer.</p>
+</div>
+<pre><code>// CardDetailsDto.java
+public class CardDetailsDto implements Serializable {
+    private long cardNo;
+    private String gateway;
+    private Date expiryDate;
+    private int cvc;
+    // setters and getters
+}
+// Case: Flipkart sends credit/debit card details to PayPal (payment broker)
+// in the form of DTO class object. PayPal sends back transaction status
+// in the form of another DTO class object.</code></pre>
+
+<h3>c) BO Class (Business Object / Model / Domain / Entity / Persistence class)</h3>
+<div class="box box-green">
+<div class="box-label" style="color:#166534">BO</div>
+<p>The Java bean whose object holds either <strong>persistable data</strong> (to be saved) or <strong>persistent data</strong> (collected from DB table records) is called BO class / Entity class / Domain class / Model class. Generally it will be taken as 1 per DB table basis.</p>
+</div>
+<pre><code>// EmployeeBO.java - maps to Employee DB table
+//
+// DB table in Oracle:
+// Employee (DB table)
+//   |--empId (N)
+//   |--ename (vc2)
+//   |--eaddr (vc2)
+//   |--salary (F)
+
+public class EmployeeBO {
+    private int eno;
+    private String ename;
+    private String eaddr;
+    private float esalary;
+    // setters and getters
+}</code></pre>
+
+<div class="box box-orange">
+<div class="box-label" style="color:#92400e">Important</div>
+<p><strong>Model class = Entity class = BO class = Domain class = Persistence class.</strong> These are all the same thing. In modern style, the industry uses a single Java bean class (Model class) in all places instead of maintaining separate VO, DTO, and BO classes. The model class itself becomes DTO class if the project is sending data to another project over the network.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>3. Layered Architecture</h2>
+<!-- ================================================================ -->
+
+<div class="diagram">Legacy Style (Standalone Layered App):
+
+Client App -----> Controller class -----> Service class -----> DAO class -----> DB s/w
+(presentation    (monitoring logic)    (b.logic)          (persistence logic)   (data)
+ logic)
+  VO class obj    DTO class obj         BO class obj        SQL queries
+
+Modern Style (reduces number of classes):
+
+Client App -----> Controller -----> Service class -----> DAO class -----> DB s/w
+(presentation    (monitoring)     (b.logic)          (persistence logic)   (data)
+ logic)
+  Model class obj  Model class obj   Model class obj     SQL queries
+
+Web-based Layered Application:
+
+html/jsp file -----> Controller Servlet -----> Service class -----> DAO class -----> DB s/w
+(presentation       (Monitoring logic)        (B.logic)         (persistence logic)   (Data)
+ logic)
+  Model class obj     Model class obj          Model class obj    SQL queries</div>
+
+<!-- ================================================================ -->
+<h2>4. DAO Pattern Rules</h2>
+<!-- ================================================================ -->
+
+<ul>
+<li>DAO class <strong>separates the persistence logic</strong> from other logics of the App and makes that logic as flexible/modifiable.</li>
+<li>If total DB tables of the Project is 1000 then we take <strong>1 DAO class per DB table</strong>.</li>
+<li>If total DB tables of Project is 5 then we take <strong>5 DAO classes</strong> per 5 related DB tables.</li>
+<li>DAO class should <strong>not have any other logics</strong> except persistence logic. Even Java code-level persistence logic also should not be there.</li>
+<li>Instead of writing logic of establishing the connection with DB s/w in multiple DAO classes, it is recommended to write it separately in a <strong>ConnectionFactory</strong> class and use it in multiple DAO classes.</li>
+</ul>
+
+<h3>Advantages of DAO Pattern</h3>
+<ol>
+<li>It makes the persistence logic as flexible logic to modify by separating that logic from other logics.</li>
+<li>The modifications done in DAO class persistence logic does not affect other layer logics.</li>
+<li>Since we implement DAO Pattern having DAO interface and DAO impl classes, there is possibility of writing same Persistence logic using different technologies in different impl classes.</li>
+</ol>
+
+<div class="diagram">DAO Interface:
+                    +-------------------+
+                    | IEmployeeDAO      |
+                    | (persistence      |
+                    |  method decl.)    |
+                    +-------------------+
+                     /       |          \
+          DAO impl class1  DAO impl class2  DAO impl class3
+          (JDBC persistence (Hibernate      (Spring JDBC
+           logic) for oracle  persistence   persistence logic)
+                              logic) for mysql  for postgresql</div>
+
+<h3>DAO Class Structure: Two Parts</h3>
+<table>
+<tr><th>Part</th><th>Description</th><th>Example</th></tr>
+<tr><td><strong>Query Part</strong></td><td>All SQL Queries declared at the top of the DAO class as String constants (<code>private static final</code>)</td><td><code>private static final String EMPLOYEE_INSERT_QUERY = "INSERT INTO EMPLOYEE VALUES(?,?,?,?)";</code></td></tr>
+<tr><td><strong>Code Part</strong></td><td>The persistence logic for different CRUD operations using JDBC/Hibernate/etc. The methods that house persistence logic developed in different technologies.</td><td><code>public int insertEmployee(Employee employee) { // jdbc/hibernate/spring jdbc code }</code></td></tr>
+</table>
+
+<div class="box box-orange">
+<div class="box-label" style="color:#92400e">Exception Propagation</div>
+<p>The methods of DAO class should propagate the raised exception to service class methods (caller methods) to support exception propagation. For this we need to use <code>throws Exception</code> in method signatures. Except in Client App, in all remaining layers we need to declare the exception to be thrown using "throws" keyword. In that process we can go for Exception rethrowing when needed. Due to this, the exception thrown in DAO class propagates to Service class to Controller to Client App and we catch and handle the exception in the Client App using try-catch block to display the exception-related messages as required for the end users.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>5. DAO Pattern Components</h2>
+<!-- ================================================================ -->
+
+<table>
+<tr><th>Component</th><th>Role</th></tr>
+<tr><td><strong>a) DAO Interface</strong></td><td>Declares the persistence methods (CRUD operations)</td></tr>
+<tr><td><strong>b) Entity/BO classes</strong></td><td>Java beans representing DB table records</td></tr>
+<tr><td><strong>c) DAOFactory</strong></td><td>Creates the right DAO impl class based on the data we pass</td></tr>
+<tr><td><strong>d) ConnectionFactory</strong></td><td>Handles code for connection establishment and connection closing with DB s/w. Reads jdbc.properties for DB connection details. Can work with either direct JDBC connection or pooled JDBC connection.</td></tr>
+</table>
+
+<h3>DAO Pattern Architecture (Flow of Execution)</h3>
+
+<div class="diagram">Client App ---(a)---> Controller ---(b)---> Service class ---(c)--->
+(presentation        (monitoring             (b.logic)
+ logic)               logic)
+
+  ---(d)---> DAO Impl class ---(e)---> ConnectionFactory ---(f)---> DB s/w
+            (persistence logic)      (logic to establish       (persistence store)
+                                      connection with DB s/w
+                                      and logic to close the
+             ^                        connection with DB s/w)
+             |
+     DAOFactory                       jdbc.properties
+     (logic to create right           (url, driver, user, pwd)
+      DAO impl class)
+
+Connection: Making all requests using same jdbc connection for DB operations is bad practice.
+Each request using its own jdbc con object for DB operations is good practice.
+
+request1 ---> insert query ---> DB s/w    (blocks all requests)
+request2 ---> update query ---> DB s/w    using shared connection:
+request3 ---> validate   ---> DB s/w      object(s). the third request
+                                           update and it ultimately validates
+                                           request1 insert query, request2 update
+                                           query execution.
+
+request1 ---> insert query ---> DB s/w    (now every request is
+request2 ---> update query ---> DB s/w     getting its own con object.
+request3 ---> validate   ---> DB s/w      So any pending request's
+                                           rollback/commit does not
+                                           effect other request's related
+                                           persistence operations.)</div>
+
+<!-- ================================================================ -->
+<h2>6. Full-Length Industry Project: Customer Registration System</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Business Scenario</div>
+<p>National Bank of India needs a customer registration system. When a new customer visits the branch, the staff enters their details (name, email, city, phone) into the system. The data is saved to a MySQL database. The system follows the DAO pattern with proper layering: Client App -> Service -> DAO -> DB, with a ConnectionFactory for JDBC connection management and a DAOFactory for creating the correct DAO implementation.</p>
+</div>
+
+<h3>High-Level Design (HLD)</h3>
+
+<div class="diagram">
++---------------------------------------------------+
+|              CLIENT APP                            |
+|  CustomerApp (presentation logic)                  |
+|    - collects customer details                     |
+|    - calls service                                 |
+|    - displays result/error to user                 |
++----------------------------+----------------------+
+                             |
+                             v
++---------------------------------------------------+
+|              SERVICE LAYER                         |
+|  CustomerRegService (business logic)               |
+|    - validates customer data                       |
+|    - gets DAO from DAOFactory                      |
+|    - calls DAO register method                     |
++----------------------------+----------------------+
+                             |
+                             v
++---------------------------------------------------+
+|              DAO LAYER                             |
+|  ICustomerDAO (interface)                          |
+|    + register(Customer): int                       |
+|    + findById(int): Customer                       |
+|    + findAll(): List&lt;Customer&gt;                    |
+|                                                    |
+|  CustomerMySQLDAOImpl (JDBC implementation)        |
+|    - SQL queries as static final constants         |
+|    - uses ConnectionFactory for DB connection      |
+|    - propagates exceptions via throws              |
+|                                                    |
+|  DAOFactory                                        |
+|    + getCustomerDAO(String): ICustomerDAO          |
++---------------------------------------------------+
+                             |
+                             v
++---------------------------------------------------+
+|          CONNECTION FACTORY                        |
+|  ConnectionFactory                                 |
+|    - reads jdbc.properties                         |
+|    - establishes JDBC connection                   |
+|    - works with direct or pooled connection        |
++---------------------------------------------------+
+                             |
+                             v
++---------------------------------------------------+
+|              DATABASE                              |
+|  MySQL: customers table                            |
+|  (custId, custName, email, city, phone)            |
++---------------------------------------------------+
+</div>
+
+<h3>Low-Level Design (LLD)</h3>
+
+<div class="diagram">
++-------------------------------------------------------+
+| Customer (BO/Entity/Model class)                      |
++-------------------------------------------------------+
+| - custId: int                                         |
+| - custName: String                                    |
+| - email: String                                       |
+| - city: String                                        |
+| - phone: String                                       |
++-------------------------------------------------------+
+
++-------------------------------------------------------+
+| ICustomerDAO (DAO Interface)                          |
++-------------------------------------------------------+
+| + register(Customer): int      throws Exception       |
+| + findById(int): Customer      throws Exception       |
+| + findAll(): List&lt;Customer&gt;   throws Exception       |
+| + update(Customer): int        throws Exception       |
+| + delete(int): int             throws Exception       |
++-------------------------------------------------------+
+         ^
+         |
++-------------------------------------------------------+
+| CustomerMySQLDAOImpl (DAO Impl)                       |
++-------------------------------------------------------+
+| - INSERT_QUERY: String         [static final]         |
+| - SELECT_BY_ID: String         [static final]         |
+| - SELECT_ALL: String           [static final]         |
+| - UPDATE_QUERY: String         [static final]         |
+| - DELETE_QUERY: String         [static final]         |
++-------------------------------------------------------+
+| + register(Customer): int                             |
+| + findById(int): Customer                             |
+| + findAll(): List&lt;Customer&gt;                          |
+| + update(Customer): int                               |
+| + delete(int): int                                    |
++-------------------------------------------------------+
+
++-------------------------------------------------------+
+| ConnectionFactory                                     |
++-------------------------------------------------------+
+| - props: Properties            [static]               |
++-------------------------------------------------------+
+| + getConnection(): Connection  [static]               |
+| + closeConnection(conn): void  [static]               |
++-------------------------------------------------------+
+
++-------------------------------------------------------+
+| DAOFactory                                            |
++-------------------------------------------------------+
+| + getCustomerDAO(String): ICustomerDAO  [static]      |
++-------------------------------------------------------+
+</div>
+
+<h3>Project Structure</h3>
+<div class="ps">nbi-customer-registration/
+├── src/
+│   └── main/
+│       ├── java/com/nbi/customer/
+│       │   ├── model/
+│       │   │   └── Customer.java            (BO/Entity/Model class)
+│       │   ├── dao/
+│       │   │   ├── ICustomerDAO.java        (DAO interface)
+│       │   │   └── CustomerMySQLDAOImpl.java (JDBC implementation)
+│       │   ├── factory/
+│       │   │   ├── ConnectionFactory.java   (JDBC connection manager)
+│       │   │   └── DAOFactory.java          (creates DAO impl)
+│       │   ├── service/
+│       │   │   └── CustomerRegService.java  (business logic)
+│       │   └── Application.java             (client app)
+│       └── resources/
+│           └── jdbc.properties              (DB connection details)
+├── src/
+│   └── test/java/com/nbi/customer/
+│       └── dao/
+│           └── CustomerDAOTest.java
+└── pom.xml</div>
+
+<h3>jdbc.properties</h3>
+<pre><code># Database connection configuration
+jdbc.driver=com.mysql.cj.jdbc.Driver
+jdbc.url=jdbc:mysql://localhost:3306/national_bank_db
+jdbc.user=nbi_admin
+jdbc.password=nbi_secure_pwd</code></pre>
+
+<h3>Customer.java (BO/Entity/Model class)</h3>
+<pre><code>package com.nbi.customer.model;
+
+public class Customer {
+    private int custId;
+    private String custName;
+    private String email;
+    private String city;
+    private String phone;
+
+    public Customer() {}
+
+    public Customer(int custId, String custName, String email,
+                    String city, String phone) {
+        this.custId = custId;
+        this.custName = custName;
+        this.email = email;
+        this.city = city;
+        this.phone = phone;
+    }
+
+    // Getters and setters
+    public int getCustId() { return custId; }
+    public void setCustId(int custId) { this.custId = custId; }
+    public String getCustName() { return custName; }
+    public void setCustName(String custName) { this.custName = custName; }
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+    public String getCity() { return city; }
+    public void setCity(String city) { this.city = city; }
+    public String getPhone() { return phone; }
+    public void setPhone(String phone) { this.phone = phone; }
+
+    @Override
+    public String toString() {
+        return "Customer{" + custId + ", " + custName + ", " + email
+            + ", " + city + ", " + phone + "}";
+    }
+}</code></pre>
+
+<h3>ConnectionFactory.java</h3>
+<pre><code>package com.nbi.customer.factory;
+
+import java.io.InputStream;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.util.Properties;
+
+public class ConnectionFactory {
+    private static Properties props = new Properties();
+
+    static {
+        try (InputStream is = ConnectionFactory.class.getClassLoader()
+                .getResourceAsStream("jdbc.properties")) {
+            props.load(is);
+            Class.forName(props.getProperty("jdbc.driver"));
+        } catch (Exception e) {
+            throw new RuntimeException("Failed to load jdbc.properties", e);
+        }
+    }
+
+    public static Connection getConnection() throws Exception {
+        return DriverManager.getConnection(
+            props.getProperty("jdbc.url"),
+            props.getProperty("jdbc.user"),
+            props.getProperty("jdbc.password")
+        );
+    }
+
+    public static void closeConnection(Connection conn) {
+        if (conn != null) {
+            try {
+                conn.close();
+            } catch (Exception e) {
+                System.err.println("Error closing connection: " + e.getMessage());
+            }
+        }
+    }
+}</code></pre>
+
+<h3>ICustomerDAO.java (DAO Interface)</h3>
+<pre><code>package com.nbi.customer.dao;
+
+import com.nbi.customer.model.Customer;
+import java.util.List;
+
+public interface ICustomerDAO {
+    int register(Customer customer) throws Exception;
+    Customer findById(int custId) throws Exception;
+    List&lt;Customer&gt; findAll() throws Exception;
+    int update(Customer customer) throws Exception;
+    int delete(int custId) throws Exception;
+}</code></pre>
+
+<h3>CustomerMySQLDAOImpl.java (JDBC Implementation)</h3>
+<pre><code>package com.nbi.customer.dao;
+
+import com.nbi.customer.factory.ConnectionFactory;
+import com.nbi.customer.model.Customer;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class CustomerMySQLDAOImpl implements ICustomerDAO {
+
+    // Query Part: all SQL queries as static final constants
+    private static final String INSERT_CUSTOMER =
+        "INSERT INTO customers (cust_id, cust_name, email, city, phone) VALUES (?, ?, ?, ?, ?)";
+    private static final String SELECT_BY_ID =
+        "SELECT * FROM customers WHERE cust_id = ?";
+    private static final String SELECT_ALL =
+        "SELECT * FROM customers ORDER BY cust_id";
+    private static final String UPDATE_CUSTOMER =
+        "UPDATE customers SET cust_name=?, email=?, city=?, phone=? WHERE cust_id=?";
+    private static final String DELETE_CUSTOMER =
+        "DELETE FROM customers WHERE cust_id=?";
+
+    // Code Part: CRUD operations
+
+    @Override
+    public int register(Customer customer) throws Exception {
+        Connection conn = null;
+        try {
+            conn = ConnectionFactory.getConnection();
+            PreparedStatement ps = conn.prepareStatement(INSERT_CUSTOMER);
+            ps.setInt(1, customer.getCustId());
+            ps.setString(2, customer.getCustName());
+            ps.setString(3, customer.getEmail());
+            ps.setString(4, customer.getCity());
+            ps.setString(5, customer.getPhone());
+            int count = ps.executeUpdate();
+            return count;
+        } finally {
+            ConnectionFactory.closeConnection(conn);
+        }
+    }
+
+    @Override
+    public Customer findById(int custId) throws Exception {
+        Connection conn = null;
+        try {
+            conn = ConnectionFactory.getConnection();
+            PreparedStatement ps = conn.prepareStatement(SELECT_BY_ID);
+            ps.setInt(1, custId);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                return mapResultSetToCustomer(rs);
+            }
+            return null;
+        } finally {
+            ConnectionFactory.closeConnection(conn);
+        }
+    }
+
+    @Override
+    public List&lt;Customer&gt; findAll() throws Exception {
+        Connection conn = null;
+        List&lt;Customer&gt; customers = new ArrayList&lt;&gt;();
+        try {
+            conn = ConnectionFactory.getConnection();
+            PreparedStatement ps = conn.prepareStatement(SELECT_ALL);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                customers.add(mapResultSetToCustomer(rs));
+            }
+            return customers;
+        } finally {
+            ConnectionFactory.closeConnection(conn);
+        }
+    }
+
+    @Override
+    public int update(Customer customer) throws Exception {
+        Connection conn = null;
+        try {
+            conn = ConnectionFactory.getConnection();
+            PreparedStatement ps = conn.prepareStatement(UPDATE_CUSTOMER);
+            ps.setString(1, customer.getCustName());
+            ps.setString(2, customer.getEmail());
+            ps.setString(3, customer.getCity());
+            ps.setString(4, customer.getPhone());
+            ps.setInt(5, customer.getCustId());
+            return ps.executeUpdate();
+        } finally {
+            ConnectionFactory.closeConnection(conn);
+        }
+    }
+
+    @Override
+    public int delete(int custId) throws Exception {
+        Connection conn = null;
+        try {
+            conn = ConnectionFactory.getConnection();
+            PreparedStatement ps = conn.prepareStatement(DELETE_CUSTOMER);
+            ps.setInt(1, custId);
+            return ps.executeUpdate();
+        } finally {
+            ConnectionFactory.closeConnection(conn);
+        }
+    }
+
+    private Customer mapResultSetToCustomer(ResultSet rs) throws SQLException {
+        Customer c = new Customer();
+        c.setCustId(rs.getInt("cust_id"));
+        c.setCustName(rs.getString("cust_name"));
+        c.setEmail(rs.getString("email"));
+        c.setCity(rs.getString("city"));
+        c.setPhone(rs.getString("phone"));
+        return c;
+    }
+}</code></pre>
+
+<h3>DAOFactory.java</h3>
+<pre><code>package com.nbi.customer.factory;
+
+import com.nbi.customer.dao.ICustomerDAO;
+import com.nbi.customer.dao.CustomerMySQLDAOImpl;
+
+public class DAOFactory {
+
+    public static ICustomerDAO getCustomerDAO(String dbType) {
+        if ("mysql".equalsIgnoreCase(dbType)) {
+            return new CustomerMySQLDAOImpl();
+        }
+        // Future: "oracle" -> CustomerOracleDAOImpl
+        //         "postgres" -> CustomerPostgresDAOImpl
+        throw new IllegalArgumentException("Unsupported DB type: " + dbType);
+    }
+}</code></pre>
+
+<h3>CustomerRegService.java (Business Logic)</h3>
+<pre><code>package com.nbi.customer.service;
+
+import com.nbi.customer.dao.ICustomerDAO;
+import com.nbi.customer.factory.DAOFactory;
+import com.nbi.customer.model.Customer;
+import java.util.List;
+
+public class CustomerRegService {
+    private final ICustomerDAO customerDAO;
+
+    public CustomerRegService() {
+        this.customerDAO = DAOFactory.getCustomerDAO("mysql");
+    }
+
+    public String registerCustomer(Customer customer) throws Exception {
+        // Business validation
+        if (customer.getCustName() == null || customer.getCustName().isEmpty()) {
+            return "Customer name is required";
+        }
+        if (customer.getEmail() == null || !customer.getEmail().contains("@")) {
+            return "Valid email is required";
+        }
+
+        int count = customerDAO.register(customer);
+        if (count > 0) {
+            return "Customer registered successfully. ID: " + customer.getCustId();
+        }
+        return "Customer registration failed";
+    }
+
+    public Customer getCustomer(int custId) throws Exception {
+        Customer customer = customerDAO.findById(custId);
+        if (customer == null) {
+            throw new Exception("Customer not found with ID: " + custId);
+        }
+        return customer;
+    }
+
+    public List&lt;Customer&gt; getAllCustomers() throws Exception {
+        return customerDAO.findAll();
+    }
+}</code></pre>
+
+<h3>Application.java (Client App)</h3>
+<pre><code>package com.nbi.customer;
+
+import com.nbi.customer.model.Customer;
+import com.nbi.customer.service.CustomerRegService;
+import java.util.List;
+
+public class Application {
+    public static void main(String[] args) {
+        CustomerRegService service = new CustomerRegService();
+
+        try {
+            // Scenario 1: Register a new customer
+            System.out.println("=== Scenario 1: Register Customer ===");
+            Customer rajesh = new Customer(1001, "Rajesh Kumar",
+                "rajesh@nationalbankofIndia.com", "Hyderabad", "+91-9876543210");
+            String result = service.registerCustomer(rajesh);
+            System.out.println(result);
+
+            // Scenario 2: Register another customer
+            System.out.println("\n=== Scenario 2: Register Another ===");
+            Customer priya = new Customer(1002, "Priya Singh",
+                "priya@nationalbankofIndia.com", "Mumbai", "+91-9876543211");
+            System.out.println(service.registerCustomer(priya));
+
+            // Scenario 3: Find customer by ID
+            System.out.println("\n=== Scenario 3: Find by ID ===");
+            Customer found = service.getCustomer(1001);
+            System.out.println("Found: " + found);
+
+            // Scenario 4: List all customers
+            System.out.println("\n=== Scenario 4: List All ===");
+            List&lt;Customer&gt; all = service.getAllCustomers();
+            all.forEach(c -> System.out.println("  " + c));
+
+            // Scenario 5: Validation failure
+            System.out.println("\n=== Scenario 5: Validation Error ===");
+            Customer invalid = new Customer(1003, "", "bad-email", "Delhi", "123");
+            System.out.println(service.registerCustomer(invalid));
+
+        } catch (Exception e) {
+            // Exception propagated from DAO -> Service -> here
+            System.out.println("ERROR: " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+
+<h3>Expected Output</h3>
+<div class="output">=== Scenario 1: Register Customer ===
+Customer registered successfully. ID: 1001
+
+=== Scenario 2: Register Another ===
+Customer registered successfully. ID: 1002
+
+=== Scenario 3: Find by ID ===
+Found: Customer{1001, Rajesh Kumar, rajesh@nationalbankofIndia.com, Hyderabad, +91-9876543210}
+
+=== Scenario 4: List All ===
+  Customer{1001, Rajesh Kumar, rajesh@nationalbankofIndia.com, Hyderabad, +91-9876543210}
+  Customer{1002, Priya Singh, priya@nationalbankofIndia.com, Mumbai, +91-9876543211}
+
+=== Scenario 5: Validation Error ===
+Customer name is required</div>
+
+<h3>Key observations from the project</h3>
+<div class="card">
+<ol>
+<li><strong>DAO class has ONLY persistence logic.</strong> No validation, no business rules, no presentation. Pure CRUD with SQL queries.</li>
+<li><strong>SQL queries are static final constants.</strong> Declared at the top (Query Part), used in methods (Code Part). Easy to find, easy to modify.</li>
+<li><strong>ConnectionFactory separates connection management.</strong> DAO methods call <code>getConnection()</code> and <code>closeConnection()</code>. If we switch from direct JDBC to connection pooling, only ConnectionFactory changes.</li>
+<li><strong>DAOFactory enables technology switching.</strong> Today MySQL, tomorrow PostgreSQL. Add a new DAO impl class, change one factory line. Service and Client are untouched.</li>
+<li><strong>Exception propagation via throws.</strong> DAO throws, Service throws, Client catches. Error messages flow from the database layer all the way to the user.</li>
+<li><strong>Each request gets its own connection.</strong> The <code>finally</code> block closes the connection after each operation. No shared connection between requests.</li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>7. DAO with Different Technologies</h2>
+<!-- ================================================================ -->
+
+<div class="diagram">ICustomerDAO (interface)
+        |
+  +-----+-------+----------+
+  |             |            |
+CustomerMySQL  CustomerHib  CustomerSpringJDBC
+DAOImpl        DAOImpl      DAOImpl
+(JDBC code)    (Hibernate)  (Spring JdbcTemplate)
+
+Switch technology by changing ONE line in DAOFactory.</div>
+
+<table>
+<tr><th>Technology</th><th>DAO Class</th><th>Connection Method</th></tr>
+<tr><td>Plain JDBC</td><td>CustomerMySQLDAOImpl</td><td>DriverManager.getConnection()</td></tr>
+<tr><td>Hibernate</td><td>CustomerHibernateDAOImpl</td><td>SessionFactory.openSession()</td></tr>
+<tr><td>Spring JDBC</td><td>CustomerSpringJdbcDAOImpl</td><td>JdbcTemplate (injected)</td></tr>
+<tr><td>Spring Data JPA</td><td>CustomerRepository (interface only!)</td><td>Auto-generated by Spring</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>8. Shared vs Dedicated Connection</h2>
+<!-- ================================================================ -->
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Bad Practice: Shared Connection</div>
+<p>Making all requests use the same JDBC connection object for DB operations is bad practice. If one request's transaction is pending and another request uses the same connection, the second request's commit/rollback can affect the first request's data.</p>
+</div>
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Good Practice: Dedicated Connection</div>
+<p>Each request using its own JDBC connection object for DB operations is good practice. Each request gets its own connection, so any pending request's rollback/commit does not affect other request's persistence operations.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>9. When to Use and When NOT to Use</h2>
+<!-- ================================================================ -->
+
+<h3>When to use DAO</h3>
+<table>
+<tr><th>Scenario</th><th>Why DAO</th></tr>
+<tr><td>Any application with database access</td><td>Separates persistence logic from business logic</td></tr>
+<tr><td>Multiple database technologies</td><td>Same interface, different implementations per technology</td></tr>
+<tr><td>Testability needed</td><td>Mock the DAO interface for unit testing service layer</td></tr>
+<tr><td>Team development</td><td>DAO team and service team work independently</td></tr>
+</table>
+
+<h3>When NOT to use DAO (or use lighter alternatives)</h3>
+<table>
+<tr><th>Scenario</th><th>Alternative</th></tr>
+<tr><td>Spring Data JPA project</td><td>Use Repository interfaces. Spring generates DAO automatically.</td></tr>
+<tr><td>Simple CRUD with no custom logic</td><td>Use JpaRepository/CrudRepository directly</td></tr>
+<tr><td>Microservice with single DB table</td><td>Repository pattern (thinner than DAO)</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>10. DAO vs Repository Pattern</h2>
+<!-- ================================================================ -->
+
+<table>
+<tr><th>Aspect</th><th>DAO Pattern</th><th>Repository Pattern</th></tr>
+<tr><td>Origin</td><td>JEE Pattern (Sun Microsystems)</td><td>Domain-Driven Design (Eric Evans)</td></tr>
+<tr><td>Focus</td><td>Data access technology abstraction</td><td>Domain object collection abstraction</td></tr>
+<tr><td>Interface</td><td>Technology-oriented (CRUD methods)</td><td>Domain-oriented (findByName, findActive)</td></tr>
+<tr><td>Implementation</td><td>One impl per technology (JDBC, Hibernate)</td><td>One impl, technology is hidden</td></tr>
+<tr><td>Spring equivalent</td><td>Custom DAO classes</td><td>JpaRepository, CrudRepository</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>11. Quick Reference Card</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<table>
+<tr><th>Component</th><th>Role</th><th>In Customer Project</th></tr>
+<tr><td>DAO Interface</td><td>Declares CRUD methods</td><td><code>ICustomerDAO</code></td></tr>
+<tr><td>DAO Impl</td><td>Implements using specific technology</td><td><code>CustomerMySQLDAOImpl</code></td></tr>
+<tr><td>Entity/BO</td><td>Maps to DB table</td><td><code>Customer</code></td></tr>
+<tr><td>DAOFactory</td><td>Creates correct DAO impl</td><td><code>DAOFactory</code></td></tr>
+<tr><td>ConnectionFactory</td><td>Manages DB connections</td><td><code>ConnectionFactory</code></td></tr>
+<tr><td>Service</td><td>Business logic, calls DAO</td><td><code>CustomerRegService</code></td></tr>
+</table>
+</div>
+
+<!-- ================================================================ -->
+<h2>12. Interview Questions</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<ol>
+<li>What is the DAO pattern? Why is it needed?</li>
+<li>What are the three types of Java Beans (VO, DTO, BO)? When do you use each?</li>
+<li>What is the difference between VO, DTO, and BO classes?</li>
+<li>What are the components of the DAO pattern?</li>
+<li>Why should SQL queries be declared as static final constants in the DAO class?</li>
+<li>What is the role of ConnectionFactory in the DAO pattern?</li>
+<li>Why should each request use its own JDBC connection?</li>
+<li>How do you propagate exceptions in a layered application?</li>
+<li>What is the difference between DAO pattern and Repository pattern?</li>
+<li>How does Spring Data JPA eliminate the need for manual DAO classes?</li>
+<li>Design a DAO layer for a banking application with Account and Transaction tables.</li>
+<li>How would you switch from JDBC to Hibernate without changing the service layer?</li>
+</ol>
+</div>
+
+</body>
+</html>

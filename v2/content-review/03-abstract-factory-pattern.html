@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abstract Factory Design Pattern in Java - Complete Tutorial | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px}
+h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}
+h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}
+p,li{font-size:14px;margin-bottom:8px}
+ul,ol{margin-left:24px;margin-bottom:12px}
+pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}
+code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}
+pre code{background:none;padding:0}
+.meta{font-size:13px;color:#999;margin-bottom:24px}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
+.tag-c{background:#e8f4fd;color:#2980b9}.tag-g{background:#e8f8f0;color:#27ae60}.tag-m{background:#fff3e0;color:#e67e22}.tag-h{background:#fee2e2;color:#991b1b}
+.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.box-blue{border-color:#4A90D9;background:#eff6ff}
+.box-red{border-color:#e74c3c;background:#fef2f2}
+.box-green{border-color:#27ae60;background:#f0fdf4}
+.box-orange{border-color:#e67e22;background:#fffbeb}
+.box-purple{border-color:#8b5cf6;background:#f5f3ff}
+.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}
+th{background:#2d3748;color:#fff;font-weight:600}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+.ps{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-family:Menlo,monospace;font-size:13px;line-height:1.6}
+.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-c">Creational</span>
+<span class="tag tag-g">GOF Pattern</span>
+<span class="tag tag-h">Hard</span>
+
+<h1>Abstract Factory Design Pattern in Java</h1>
+<p class="meta">Complete Tutorial | 12 Sections | Full Cross-Platform UI Project with HLD and LLD | Factory of Factories | DAO and Beverage Examples | Multiple Scenarios | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>1. What is Abstract Factory Pattern?</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Abstract Factory pattern is a <strong>GOF Creational Pattern</strong> also called <strong>Factory of Factories</strong> or <strong>Super Factory</strong>. It provides an interface for creating <strong>families of related or dependent objects</strong> without specifying their concrete classes.</p>
+<p><strong>One line:</strong> A factory that creates other factories, each producing a family of related products.</p>
+</div>
+
+<p>It is the advanced level of Factory and Factory Method patterns. While a Simple Factory creates one product type and Factory Method lets subclasses decide which product to create, Abstract Factory creates entire <strong>families</strong> of products that work together.</p>
+
+<h3>When does Abstract Factory apply?</h3>
+<p>In a Factory pattern, if multiple factories are creating and returning same family class objects (classes having common super class or interface), then we need the Abstract Factory pattern. It acts as a super class for the factories, providing standards to them toward object creation.</p>
+
+<h3>Relationship between all three factory patterns</h3>
+<table>
+<tr><th>Pattern</th><th>Creates</th><th>Structure</th><th>Analogy</th></tr>
+<tr><td>Simple Factory</td><td>One product type, multiple variants</td><td>1 factory, N products</td><td>One bakery making different cakes</td></tr>
+<tr><td>Factory Method</td><td>One product type, factory per variant</td><td>1 abstract factory, N factory subclasses</td><td>Multiple bakeries (Chennai, Noida) each making cakes their way</td></tr>
+<tr><td>Abstract Factory</td><td>Multiple product families</td><td>1 super factory returning N factories, each producing a family</td><td>A food court that has a bakery, a juice bar, and a snack counter</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>2. The Problem</h2>
+<!-- ================================================================ -->
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Problem</div>
+<p>When an application needs to work with multiple families of related products (e.g., JDBC vs Hibernate for database access, or Windows vs macOS for UI components), the client ends up tightly coupled to concrete implementations. Switching from one family to another requires changes throughout the application.</p>
+</div>
+
+<h3>Problem scenario 1: DAO layer</h3>
+<p>A banking application uses JDBC for data access. The client directly creates <code>EmployeeJdbcDAOImpl</code> objects. When the team decides to switch to Hibernate, every service class that creates DAO objects must be changed.</p>
+
+<h3>Problem scenario 2: Beverage factory</h3>
+<p>A beverage company sells two product families: Fruit Juices (Mango, Orange, Mixed) and Health Drinks (Protein Shake, Energy Drink). Each has its own factory. The client must know which factory to use and how to create products from each. If a new product family is added (Smoothies), the client code must change.</p>
+
+<h3>Problem scenario 3: Cross-platform UI</h3>
+<p>An application needs to render UI on Windows (Windows buttons, Windows text fields, Windows checkboxes) and macOS (macOS buttons, macOS text fields, macOS checkboxes). Without Abstract Factory, the client has if/else everywhere to decide which component to create.</p>
+
+<!-- ================================================================ -->
+<h2>3. The Solution: Factory of Factories</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Solution</div>
+<p>Create an <strong>abstract factory</strong> interface/class that declares methods for creating each product in a family. Each concrete factory implements this interface and creates products for one specific family. The client works only with the abstract factory and abstract products, never knowing which concrete family it is using.</p>
+</div>
+
+<div class="diagram">
+                    AbstractFactory (interface)
+                    +-- createProductA(): AbstractProductA
+                    +-- createProductB(): AbstractProductB
+                           /                        \
+              ConcreteFactory1                ConcreteFactory2
+              +-- createProductA()            +-- createProductA()
+              |   returns ConcreteA1          |   returns ConcreteA2
+              +-- createProductB()            +-- createProductB()
+                  returns ConcreteB1              returns ConcreteB2
+
+  Product Families:
+    Family 1: ConcreteA1 + ConcreteB1 (work together)
+    Family 2: ConcreteA2 + ConcreteB2 (work together)
+
+  Client knows: AbstractFactory + AbstractProductA + AbstractProductB
+  Client does NOT know: which concrete factory or product is used</div>
+
+<!-- ================================================================ -->
+<h2>4. Example 1: Beverage Factory</h2>
+<!-- ================================================================ -->
+
+<p>From the course notes: a beverage company has two product families managed by separate factories.</p>
+
+<h4>Product interfaces</h4>
+<pre><code>// FruitJuice.java
+package com.nt.beverage;
+
+public interface FruitJuice {
+    void prepare();
+}
+
+// HealthDrink.java
+package com.nt.beverage;
+
+public interface HealthDrink {
+    void mix();
+}</code></pre>
+
+<h4>Fruit Juice products</h4>
+<pre><code>package com.nt.beverage;
+
+public class MangoJuice implements FruitJuice {
+    public void prepare() {
+        System.out.println("MangoJuice :: blending mango pulp");
+    }
+}
+
+public class OrangeJuice implements FruitJuice {
+    public void prepare() {
+        System.out.println("OrangeJuice :: squeezing fresh oranges");
+    }
+}
+
+public class MixedFruitJuice implements FruitJuice {
+    public void prepare() {
+        System.out.println("MixedFruitJuice :: mixing all seasonal fruits");
+    }
+}</code></pre>
+
+<h4>Health Drink products</h4>
+<pre><code>package com.nt.beverage;
+
+public class ProteinShake implements HealthDrink {
+    public void mix() {
+        System.out.println("ProteinShake :: mixing whey protein with milk");
+    }
+}
+
+public class EnergyDrink implements HealthDrink {
+    public void mix() {
+        System.out.println("EnergyDrink :: mixing electrolytes and caffeine");
+    }
+}</code></pre>
+
+<h4>Abstract Factory</h4>
+<pre><code>package com.nt.factory;
+
+public interface BeverageFactory {
+    Object create(String type);
+}
+
+// Concrete factory for juices
+package com.nt.factory;
+
+import com.nt.beverage.*;
+
+public class JuiceFactory implements BeverageFactory {
+    public Object create(String type) {
+        if ("mango".equalsIgnoreCase(type)) return new MangoJuice();
+        if ("orange".equalsIgnoreCase(type)) return new OrangeJuice();
+        if ("mixed".equalsIgnoreCase(type)) return new MixedFruitJuice();
+        throw new IllegalArgumentException("Unknown juice type: " + type);
+    }
+}
+
+// Concrete factory for health drinks
+package com.nt.factory;
+
+import com.nt.beverage.*;
+
+public class HealthDrinkFactory implements BeverageFactory {
+    public Object create(String type) {
+        if ("protein".equalsIgnoreCase(type)) return new ProteinShake();
+        if ("energy".equalsIgnoreCase(type)) return new EnergyDrink();
+        throw new IllegalArgumentException("Unknown drink type: " + type);
+    }
+}
+
+// Super Factory (Factory of Factories)
+package com.nt.factory;
+
+public class BeverageSuperFactory {
+    public static BeverageFactory getFactory(String category) {
+        if ("juice".equalsIgnoreCase(category)) return new JuiceFactory();
+        if ("health".equalsIgnoreCase(category)) return new HealthDrinkFactory();
+        throw new IllegalArgumentException("Unknown category: " + category);
+    }
+}</code></pre>
+
+<h4>Client code</h4>
+<pre><code>package com.nt.test;
+
+import com.nt.beverage.FruitJuice;
+import com.nt.beverage.HealthDrink;
+import com.nt.factory.BeverageFactory;
+import com.nt.factory.BeverageSuperFactory;
+
+public class BeverageClient {
+    public static void main(String[] args) {
+        // Client asks super factory for a juice factory
+        BeverageFactory juiceFactory = BeverageSuperFactory.getFactory("juice");
+        FruitJuice mango = (FruitJuice) juiceFactory.create("mango");
+        mango.prepare();
+
+        // Client asks super factory for a health drink factory
+        BeverageFactory healthFactory = BeverageSuperFactory.getFactory("health");
+        HealthDrink protein = (HealthDrink) healthFactory.create("protein");
+        protein.mix();
+    }
+}</code></pre>
+
+<div class="output">MangoJuice :: blending mango pulp
+ProteinShake :: mixing whey protein with milk</div>
+
+<!-- ================================================================ -->
+<h2>5. Example 2: DAO Abstract Factory (JDBC vs Hibernate)</h2>
+<!-- ================================================================ -->
+
+<p>This is the classic enterprise example. The application can switch between JDBC and Hibernate without changing service layer code.</p>
+
+<div class="diagram">ApplicationFactory (factory of factories)
+       |
+       v
+   DAOFactory (abstract)
+   /           \
+JdbcDAOFactory  HibernateDAOFactory
+   |                |
+   |                |
+EmployeeJdbc       EmployeeHibernate
+DAOImpl            DAOImpl
+   |                |
+AccountJdbc        AccountHibernate
+DAOImpl            DAOImpl</div>
+
+<pre><code>// DAO interfaces
+public interface IEmployeeDAO {
+    void insert(EmployeeBO bo);
+    EmployeeBO find(int empno);
+}
+
+public interface IAccountDAO {
+    void createAccount(AccountBO bo);
+    AccountBO findByNumber(String accountNo);
+}
+
+// JDBC implementations
+public class EmployeeJdbcDAOImpl implements IEmployeeDAO {
+    public void insert(EmployeeBO bo) {
+        System.out.println("JDBC: inserting employee " + bo.getName());
+    }
+    public EmployeeBO find(int empno) {
+        System.out.println("JDBC: finding employee " + empno);
+        return null;
+    }
+}
+
+public class AccountJdbcDAOImpl implements IAccountDAO {
+    public void createAccount(AccountBO bo) {
+        System.out.println("JDBC: creating account " + bo.getAccountNo());
+    }
+    public AccountBO findByNumber(String accountNo) {
+        System.out.println("JDBC: finding account " + accountNo);
+        return null;
+    }
+}
+
+// Hibernate implementations
+public class EmployeeHibernateDAOImpl implements IEmployeeDAO {
+    public void insert(EmployeeBO bo) {
+        System.out.println("Hibernate: saving employee " + bo.getName());
+    }
+    public EmployeeBO find(int empno) {
+        System.out.println("Hibernate: loading employee " + empno);
+        return null;
+    }
+}
+
+public class AccountHibernateDAOImpl implements IAccountDAO {
+    public void createAccount(AccountBO bo) {
+        System.out.println("Hibernate: persisting account " + bo.getAccountNo());
+    }
+    public AccountBO findByNumber(String accountNo) {
+        System.out.println("Hibernate: loading account " + accountNo);
+        return null;
+    }
+}
+
+// Abstract Factory
+public abstract class DAOFactory {
+    public abstract IEmployeeDAO getEmployeeDAO();
+    public abstract IAccountDAO getAccountDAO();
+
+    public static DAOFactory getInstance(String type) {
+        if ("jdbc".equalsIgnoreCase(type)) return new JdbcDAOFactory();
+        if ("hibernate".equalsIgnoreCase(type)) return new HibernateDAOFactory();
+        throw new IllegalArgumentException("Unknown DAO type: " + type);
+    }
+}
+
+// Concrete factories
+public class JdbcDAOFactory extends DAOFactory {
+    public IEmployeeDAO getEmployeeDAO() { return new EmployeeJdbcDAOImpl(); }
+    public IAccountDAO getAccountDAO() { return new AccountJdbcDAOImpl(); }
+}
+
+public class HibernateDAOFactory extends DAOFactory {
+    public IEmployeeDAO getEmployeeDAO() { return new EmployeeHibernateDAOImpl(); }
+    public IAccountDAO getAccountDAO() { return new AccountHibernateDAOImpl(); }
+}
+
+// Application Factory (super factory)
+public class ApplicationFactory {
+    public static DAOFactory getDAOFactory(String type) {
+        return DAOFactory.getInstance(type);
+    }
+}</code></pre>
+
+<h4>Client code</h4>
+<pre><code>// Service layer uses only interfaces and abstract factory
+DAOFactory factory = ApplicationFactory.getDAOFactory("jdbc");  // or "hibernate"
+IEmployeeDAO empDAO = factory.getEmployeeDAO();
+IAccountDAO accDAO = factory.getAccountDAO();
+
+empDAO.insert(new EmployeeBO("Rajesh", 50000));
+accDAO.createAccount(new AccountBO("SAV2001", "Rajesh"));</code></pre>
+
+<div class="output">// With "jdbc":
+JDBC: inserting employee Rajesh
+JDBC: creating account SAV2001
+
+// With "hibernate" (change ONE string):
+Hibernate: saving employee Rajesh
+Hibernate: persisting account SAV2001</div>
+
+<div class="box box-purple">
+<div class="box-label" style="color:#6d28d9">Advanced: Using Properties File</div>
+<p>For even looser coupling, read the factory type from a properties file instead of hardcoding "jdbc" or "hibernate":</p>
+<pre><code># dao.properties
+dao.type=hibernate
+
+// In ApplicationFactory:
+Properties props = new Properties();
+props.load(getClass().getResourceAsStream("/dao.properties"));
+DAOFactory factory = DAOFactory.getInstance(props.getProperty("dao.type"));</code></pre>
+<p>Now switching between JDBC and Hibernate requires changing only the properties file. No recompilation.</p>
+</div>
+
+<div class="box box-orange">
+<div class="box-label" style="color:#92400e">Advanced: Using Reflection</div>
+<p>For maximum flexibility, the factory class name itself can be read from configuration and instantiated via reflection. This way, even the factory class can be swapped without modifying any Java code:</p>
+<pre><code># factory.properties
+dao.factory.class=com.nbi.dao.HibernateDAOFactory
+
+// In ApplicationFactory:
+String className = props.getProperty("dao.factory.class");
+Class c = Class.forName(className);
+DAOFactory factory = (DAOFactory) c.getDeclaredConstructor().newInstance();</code></pre>
+<p>This is how frameworks like Spring achieve complete decoupling between the client and the implementation.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>6. Full-Length Industry Project: Cross-Platform UI Toolkit</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Business Scenario</div>
+<p>A fintech company builds a banking application that runs on both <strong>Windows</strong> and <strong>macOS</strong>. Each platform has its own look-and-feel for buttons, text fields, and checkboxes. The application must render the correct platform-specific components without hardcoding platform checks throughout the codebase. Adding a new platform (Linux) in the future should require only new component classes and a new factory, with zero changes to existing code.</p>
+</div>
+
+<h3>High-Level Design (HLD)</h3>
+
+<div class="diagram">
++-------------------------------------------------------+
+|                  APPLICATION LAYER                     |
+|  BankingApp (main)                                     |
+|    |                                                   |
+|    +-- reads platform from config                      |
+|    +-- gets UIFactory from UIFactoryProvider            |
+|    +-- creates LoginScreen using factory               |
+|    +-- creates DashboardScreen using factory            |
++----------------------------+--------------------------+
+                             |
+                             v
++-------------------------------------------------------+
+|             ABSTRACT FACTORY LAYER                     |
+|                                                        |
+|  UIFactory (interface)                                 |
+|  +-- createButton(text): Button                        |
+|  +-- createTextField(placeholder): TextField           |
+|  +-- createCheckbox(label): Checkbox                   |
+|                                                        |
+|  UIFactoryProvider (super factory)                     |
+|  +-- getFactory(platform): UIFactory                   |
++-------------------------------------------------------+
+         /                                 \
++--------------------+          +---------------------+
+| WindowsUIFactory   |          | MacOSUIFactory      |
+| creates:           |          | creates:            |
+| - WindowsButton    |          | - MacOSButton       |
+| - WindowsTextField |          | - MacOSTextField    |
+| - WindowsCheckbox  |          | - MacOSCheckbox     |
++--------------------+          +---------------------+
+         |                                 |
+         v                                 v
++-------------------------------------------------------+
+|              ABSTRACT PRODUCT LAYER                    |
+|  Button (interface)     - render(), onClick()          |
+|  TextField (interface)  - render(), getValue()         |
+|  Checkbox (interface)   - render(), isChecked()        |
++-------------------------------------------------------+
+</div>
+
+<h3>Low-Level Design (LLD)</h3>
+
+<div class="diagram">
++---------------------------------------------+
+| UIFactory (interface)                       |
++---------------------------------------------+
+| + createButton(text): Button                |
+| + createTextField(placeholder): TextField   |
+| + createCheckbox(label): Checkbox           |
++---------------------------------------------+
+         ^                    ^
+         |                    |
++-------------------+  +-------------------+
+| WindowsUIFactory  |  | MacOSUIFactory    |
++-------------------+  +-------------------+
+
++---------------------------------------------+
+| Button (interface)                          |
++---------------------------------------------+
+| + render(): void                            |
+| + onClick(action: Runnable): void           |
+| + getText(): String                         |
++---------------------------------------------+
+    ^                    ^
+    |                    |
++----------------+  +----------------+
+| WindowsButton  |  | MacOSButton    |
+| style: [====]  |  | style: (====)  |
++----------------+  +----------------+
+
++---------------------------------------------+
+| TextField (interface)                       |
++---------------------------------------------+
+| + render(): void                            |
+| + setValue(text): void                       |
+| + getValue(): String                        |
++---------------------------------------------+
+    ^                    ^
+    |                    |
++------------------+ +------------------+
+| WindowsTextField | | MacOSTextField   |
+| style: |_____|   | | style: [_____|   |
++------------------+ +------------------+
+
++---------------------------------------------+
+| Checkbox (interface)                        |
++---------------------------------------------+
+| + render(): void                            |
+| + toggle(): void                            |
+| + isChecked(): boolean                      |
++---------------------------------------------+
+    ^                    ^
+    |                    |
++------------------+ +------------------+
+| WindowsCheckbox  | | MacOSCheckbox    |
+| style: [x]       | | style: (x)       |
++------------------+ +------------------+
+
++---------------------------------------------+
+| UIFactoryProvider (super factory)           |
++---------------------------------------------+
+| + getFactory(platform): UIFactory  [static] |
+| Reads platform, returns correct factory.    |
+| Adding Linux = add LinuxUIFactory + products|
+| No changes to existing code.                |
++---------------------------------------------+
+
++---------------------------------------------+
+| Screen classes (use factory)                |
++---------------------------------------------+
+| LoginScreen                                 |
+| - factory: UIFactory                        |
+| - usernameField, passwordField, loginButton |
+| + render(): void                            |
++---------------------------------------------+
+| DashboardScreen                             |
+| - factory: UIFactory                        |
+| - welcomeButton, settingsCheckbox           |
+| + render(): void                            |
++---------------------------------------------+
+</div>
+
+<h3>Project Structure</h3>
+<div class="ps">cross-platform-ui-demo/
+├── src/
+│   └── main/java/com/nbi/ui/
+│       ├── product/
+│       │   ├── Button.java                    (interface)
+│       │   ├── TextField.java                 (interface)
+│       │   ├── Checkbox.java                  (interface)
+│       │   ├── windows/
+│       │   │   ├── WindowsButton.java
+│       │   │   ├── WindowsTextField.java
+│       │   │   └── WindowsCheckbox.java
+│       │   └── macos/
+│       │       ├── MacOSButton.java
+│       │       ├── MacOSTextField.java
+│       │       └── MacOSCheckbox.java
+│       ├── factory/
+│       │   ├── UIFactory.java                 (abstract factory interface)
+│       │   ├── WindowsUIFactory.java
+│       │   ├── MacOSUIFactory.java
+│       │   └── UIFactoryProvider.java         (super factory)
+│       ├── screen/
+│       │   ├── LoginScreen.java
+│       │   └── DashboardScreen.java
+│       └── Application.java
+├── src/
+│   └── test/java/com/nbi/ui/
+│       ├── factory/
+│       │   └── UIFactoryProviderTest.java
+│       └── screen/
+│           └── LoginScreenTest.java
+├── src/
+│   └── main/resources/
+│       └── ui.properties
+└── pom.xml</div>
+
+<h3>ui.properties</h3>
+<pre><code># Change this to switch the entire UI family
+# Supported: windows, macos
+ui.platform=windows</code></pre>
+
+<h3>Product interfaces</h3>
+<pre><code>// Button.java
+package com.nbi.ui.product;
+
+public interface Button {
+    void render();
+    void onClick(Runnable action);
+    String getText();
+}
+
+// TextField.java
+package com.nbi.ui.product;
+
+public interface TextField {
+    void render();
+    void setValue(String text);
+    String getValue();
+}
+
+// Checkbox.java
+package com.nbi.ui.product;
+
+public interface Checkbox {
+    void render();
+    void toggle();
+    boolean isChecked();
+}</code></pre>
+
+<h3>Windows products</h3>
+<pre><code>// WindowsButton.java
+package com.nbi.ui.product.windows;
+
+import com.nbi.ui.product.Button;
+
+public class WindowsButton implements Button {
+    private final String text;
+
+    public WindowsButton(String text) {
+        this.text = text;
+    }
+
+    @Override
+    public void render() {
+        System.out.println("  [Windows Button] [ " + text + " ]");
+    }
+
+    @Override
+    public void onClick(Runnable action) {
+        System.out.println("  [Windows Button] clicked: " + text);
+        action.run();
+    }
+
+    @Override
+    public String getText() { return text; }
+}
+
+// WindowsTextField.java
+package com.nbi.ui.product.windows;
+
+import com.nbi.ui.product.TextField;
+
+public class WindowsTextField implements TextField {
+    private final String placeholder;
+    private String value = "";
+
+    public WindowsTextField(String placeholder) {
+        this.placeholder = placeholder;
+    }
+
+    @Override
+    public void render() {
+        String display = value.isEmpty() ? placeholder : value;
+        System.out.println("  [Windows TextField] |" + display + "|");
+    }
+
+    @Override
+    public void setValue(String text) { this.value = text; }
+
+    @Override
+    public String getValue() { return value; }
+}
+
+// WindowsCheckbox.java
+package com.nbi.ui.product.windows;
+
+import com.nbi.ui.product.Checkbox;
+
+public class WindowsCheckbox implements Checkbox {
+    private final String label;
+    private boolean checked = false;
+
+    public WindowsCheckbox(String label) {
+        this.label = label;
+    }
+
+    @Override
+    public void render() {
+        String mark = checked ? "x" : " ";
+        System.out.println("  [Windows Checkbox] [" + mark + "] " + label);
+    }
+
+    @Override
+    public void toggle() { checked = !checked; }
+
+    @Override
+    public boolean isChecked() { return checked; }
+}</code></pre>
+
+<h3>macOS products</h3>
+<pre><code>// MacOSButton.java
+package com.nbi.ui.product.macos;
+
+import com.nbi.ui.product.Button;
+
+public class MacOSButton implements Button {
+    private final String text;
+
+    public MacOSButton(String text) {
+        this.text = text;
+    }
+
+    @Override
+    public void render() {
+        System.out.println("  (macOS Button) ( " + text + " )");
+    }
+
+    @Override
+    public void onClick(Runnable action) {
+        System.out.println("  (macOS Button) tapped: " + text);
+        action.run();
+    }
+
+    @Override
+    public String getText() { return text; }
+}
+
+// MacOSTextField.java
+package com.nbi.ui.product.macos;
+
+import com.nbi.ui.product.TextField;
+
+public class MacOSTextField implements TextField {
+    private final String placeholder;
+    private String value = "";
+
+    public MacOSTextField(String placeholder) {
+        this.placeholder = placeholder;
+    }
+
+    @Override
+    public void render() {
+        String display = value.isEmpty() ? placeholder : value;
+        System.out.println("  (macOS TextField) [" + display + "]");
+    }
+
+    @Override
+    public void setValue(String text) { this.value = text; }
+
+    @Override
+    public String getValue() { return value; }
+}
+
+// MacOSCheckbox.java
+package com.nbi.ui.product.macos;
+
+import com.nbi.ui.product.Checkbox;
+
+public class MacOSCheckbox implements Checkbox {
+    private final String label;
+    private boolean checked = false;
+
+    public MacOSCheckbox(String label) {
+        this.label = label;
+    }
+
+    @Override
+    public void render() {
+        String mark = checked ? "x" : " ";
+        System.out.println("  (macOS Checkbox) (" + mark + ") " + label);
+    }
+
+    @Override
+    public void toggle() { checked = !checked; }
+
+    @Override
+    public boolean isChecked() { return checked; }
+}</code></pre>
+
+<h3>UIFactory.java (Abstract Factory interface)</h3>
+<pre><code>package com.nbi.ui.factory;
+
+import com.nbi.ui.product.Button;
+import com.nbi.ui.product.TextField;
+import com.nbi.ui.product.Checkbox;
+
+public interface UIFactory {
+    Button createButton(String text);
+    TextField createTextField(String placeholder);
+    Checkbox createCheckbox(String label);
+    String getPlatformName();
+}</code></pre>
+
+<h3>WindowsUIFactory.java</h3>
+<pre><code>package com.nbi.ui.factory;
+
+import com.nbi.ui.product.Button;
+import com.nbi.ui.product.TextField;
+import com.nbi.ui.product.Checkbox;
+import com.nbi.ui.product.windows.WindowsButton;
+import com.nbi.ui.product.windows.WindowsTextField;
+import com.nbi.ui.product.windows.WindowsCheckbox;
+
+public class WindowsUIFactory implements UIFactory {
+    @Override
+    public Button createButton(String text) { return new WindowsButton(text); }
+
+    @Override
+    public TextField createTextField(String placeholder) { return new WindowsTextField(placeholder); }
+
+    @Override
+    public Checkbox createCheckbox(String label) { return new WindowsCheckbox(label); }
+
+    @Override
+    public String getPlatformName() { return "Windows 11"; }
+}</code></pre>
+
+<h3>MacOSUIFactory.java</h3>
+<pre><code>package com.nbi.ui.factory;
+
+import com.nbi.ui.product.Button;
+import com.nbi.ui.product.TextField;
+import com.nbi.ui.product.Checkbox;
+import com.nbi.ui.product.macos.MacOSButton;
+import com.nbi.ui.product.macos.MacOSTextField;
+import com.nbi.ui.product.macos.MacOSCheckbox;
+
+public class MacOSUIFactory implements UIFactory {
+    @Override
+    public Button createButton(String text) { return new MacOSButton(text); }
+
+    @Override
+    public TextField createTextField(String placeholder) { return new MacOSTextField(placeholder); }
+
+    @Override
+    public Checkbox createCheckbox(String label) { return new MacOSCheckbox(label); }
+
+    @Override
+    public String getPlatformName() { return "macOS Sonoma"; }
+}</code></pre>
+
+<h3>UIFactoryProvider.java (Super Factory)</h3>
+<pre><code>package com.nbi.ui.factory;
+
+public class UIFactoryProvider {
+
+    public static UIFactory getFactory(String platform) {
+        if (platform == null) {
+            throw new IllegalArgumentException("Platform cannot be null");
+        }
+
+        switch (platform.toLowerCase()) {
+            case "windows":
+                return new WindowsUIFactory();
+            case "macos":
+            case "mac":
+                return new MacOSUIFactory();
+            default:
+                throw new IllegalArgumentException(
+                    "Unsupported platform: " + platform
+                    + ". Supported: windows, macos");
+        }
+    }
+}</code></pre>
+
+<h3>LoginScreen.java</h3>
+<pre><code>package com.nbi.ui.screen;
+
+import com.nbi.ui.factory.UIFactory;
+import com.nbi.ui.product.Button;
+import com.nbi.ui.product.TextField;
+import com.nbi.ui.product.Checkbox;
+
+public class LoginScreen {
+    private final UIFactory factory;
+    private final TextField usernameField;
+    private final TextField passwordField;
+    private final Checkbox rememberMe;
+    private final Button loginButton;
+
+    public LoginScreen(UIFactory factory) {
+        this.factory = factory;
+        this.usernameField = factory.createTextField("Enter username");
+        this.passwordField = factory.createTextField("Enter password");
+        this.rememberMe = factory.createCheckbox("Remember me");
+        this.loginButton = factory.createButton("Login");
+    }
+
+    public void render() {
+        System.out.println("--- Login Screen (" + factory.getPlatformName() + ") ---");
+        usernameField.render();
+        passwordField.render();
+        rememberMe.render();
+        loginButton.render();
+    }
+
+    public void simulateLogin(String username, String password) {
+        usernameField.setValue(username);
+        passwordField.setValue(password);
+        rememberMe.toggle();
+
+        System.out.println("\nAfter user input:");
+        usernameField.render();
+        passwordField.render();
+        rememberMe.render();
+
+        loginButton.onClick(() ->
+            System.out.println("  Logging in as: " + usernameField.getValue()));
+    }
+}</code></pre>
+
+<h3>DashboardScreen.java</h3>
+<pre><code>package com.nbi.ui.screen;
+
+import com.nbi.ui.factory.UIFactory;
+import com.nbi.ui.product.Button;
+import com.nbi.ui.product.Checkbox;
+
+public class DashboardScreen {
+    private final UIFactory factory;
+    private final Button transferButton;
+    private final Button balanceButton;
+    private final Checkbox notificationsCheckbox;
+
+    public DashboardScreen(UIFactory factory) {
+        this.factory = factory;
+        this.transferButton = factory.createButton("Transfer Money");
+        this.balanceButton = factory.createButton("Check Balance");
+        this.notificationsCheckbox = factory.createCheckbox("Enable notifications");
+    }
+
+    public void render() {
+        System.out.println("--- Dashboard (" + factory.getPlatformName() + ") ---");
+        transferButton.render();
+        balanceButton.render();
+        notificationsCheckbox.render();
+    }
+}</code></pre>
+
+<h3>Application.java</h3>
+<pre><code>package com.nbi.ui;
+
+import com.nbi.ui.factory.UIFactory;
+import com.nbi.ui.factory.UIFactoryProvider;
+import com.nbi.ui.screen.LoginScreen;
+import com.nbi.ui.screen.DashboardScreen;
+import java.io.InputStream;
+import java.util.Properties;
+
+public class Application {
+    public static void main(String[] args) {
+        // Read platform from config
+        String platform = readPlatform();
+        System.out.println("Platform: " + platform);
+        System.out.println();
+
+        // Get factory for the platform
+        UIFactory factory = UIFactoryProvider.getFactory(platform);
+
+        // Scenario 1: Render Login Screen
+        LoginScreen loginScreen = new LoginScreen(factory);
+        loginScreen.render();
+        System.out.println();
+
+        // Scenario 2: Simulate user login
+        loginScreen.simulateLogin("rajesh.kumar", "nbi@2026");
+        System.out.println();
+
+        // Scenario 3: Render Dashboard
+        DashboardScreen dashboard = new DashboardScreen(factory);
+        dashboard.render();
+        System.out.println();
+
+        // Scenario 4: Switch platform at runtime
+        System.out.println("=== Switching to macOS ===");
+        UIFactory macFactory = UIFactoryProvider.getFactory("macos");
+        LoginScreen macLogin = new LoginScreen(macFactory);
+        macLogin.render();
+        System.out.println();
+
+        DashboardScreen macDash = new DashboardScreen(macFactory);
+        macDash.render();
+    }
+
+    private static String readPlatform() {
+        try (InputStream is = Application.class.getClassLoader()
+                .getResourceAsStream("ui.properties")) {
+            if (is != null) {
+                Properties props = new Properties();
+                props.load(is);
+                return props.getProperty("ui.platform", "windows");
+            }
+        } catch (Exception e) {
+            System.out.println("Could not read config, defaulting to windows");
+        }
+        return "windows";
+    }
+}</code></pre>
+
+<h3>Expected Output</h3>
+<div class="output">Platform: windows
+
+--- Login Screen (Windows 11) ---
+  [Windows TextField] |Enter username|
+  [Windows TextField] |Enter password|
+  [Windows Checkbox] [ ] Remember me
+  [Windows Button] [ Login ]
+
+After user input:
+  [Windows TextField] |rajesh.kumar|
+  [Windows TextField] |nbi@2026|
+  [Windows Checkbox] [x] Remember me
+  [Windows Button] clicked: Login
+  Logging in as: rajesh.kumar
+
+--- Dashboard (Windows 11) ---
+  [Windows Button] [ Transfer Money ]
+  [Windows Button] [ Check Balance ]
+  [Windows Checkbox] [ ] Enable notifications
+
+=== Switching to macOS ===
+--- Login Screen (macOS Sonoma) ---
+  (macOS TextField) [Enter username]
+  (macOS TextField) [Enter password]
+  (macOS Checkbox) ( ) Remember me
+  (macOS Button) ( Login )
+
+--- Dashboard (macOS Sonoma) ---
+  (macOS Button) ( Transfer Money )
+  (macOS Button) ( Check Balance )
+  (macOS Checkbox) ( ) Enable notifications</div>
+
+<h3>UIFactoryProviderTest.java</h3>
+<pre><code>package com.nbi.ui.factory;
+
+import com.nbi.ui.product.Button;
+import com.nbi.ui.product.TextField;
+import com.nbi.ui.product.Checkbox;
+import com.nbi.ui.product.windows.WindowsButton;
+import com.nbi.ui.product.macos.MacOSButton;
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class UIFactoryProviderTest {
+
+    @Test
+    void getFactory_returnsWindowsFactory() {
+        UIFactory factory = UIFactoryProvider.getFactory("windows");
+        Button btn = factory.createButton("Test");
+        assertTrue(btn instanceof WindowsButton);
+    }
+
+    @Test
+    void getFactory_returnsMacOSFactory() {
+        UIFactory factory = UIFactoryProvider.getFactory("macos");
+        Button btn = factory.createButton("Test");
+        assertTrue(btn instanceof MacOSButton);
+    }
+
+    @Test
+    void getFactory_isCaseInsensitive() {
+        UIFactory f1 = UIFactoryProvider.getFactory("WINDOWS");
+        UIFactory f2 = UIFactoryProvider.getFactory("windows");
+        assertEquals(f1.getPlatformName(), f2.getPlatformName());
+    }
+
+    @Test
+    void getFactory_throwsForNull() {
+        assertThrows(IllegalArgumentException.class,
+            () -> UIFactoryProvider.getFactory(null));
+    }
+
+    @Test
+    void getFactory_throwsForUnsupported() {
+        assertThrows(IllegalArgumentException.class,
+            () -> UIFactoryProvider.getFactory("linux"));
+    }
+
+    @Test
+    void windowsFactory_createsConsistentFamily() {
+        UIFactory factory = UIFactoryProvider.getFactory("windows");
+        assertNotNull(factory.createButton("btn"));
+        assertNotNull(factory.createTextField("field"));
+        assertNotNull(factory.createCheckbox("check"));
+    }
+
+    @Test
+    void macFactory_createsConsistentFamily() {
+        UIFactory factory = UIFactoryProvider.getFactory("macos");
+        assertNotNull(factory.createButton("btn"));
+        assertNotNull(factory.createTextField("field"));
+        assertNotNull(factory.createCheckbox("check"));
+    }
+
+    @Test
+    void productsFromSameFactory_areConsistent() {
+        UIFactory winFactory = UIFactoryProvider.getFactory("windows");
+        UIFactory macFactory = UIFactoryProvider.getFactory("macos");
+
+        // Windows products should be Windows type
+        assertTrue(winFactory.createButton("x") instanceof WindowsButton);
+        // macOS products should be macOS type
+        assertTrue(macFactory.createButton("x") instanceof MacOSButton);
+    }
+}</code></pre>
+
+<h3>Key observations from the project</h3>
+<div class="card">
+<ol>
+<li><strong>LoginScreen and DashboardScreen never import platform-specific classes.</strong> They work only with <code>UIFactory</code>, <code>Button</code>, <code>TextField</code>, <code>Checkbox</code> interfaces.</li>
+<li><strong>Switching platforms requires changing one config value</strong> (<code>ui.platform=macos</code>). Zero code changes.</li>
+<li><strong>Adding Linux support:</strong> Create <code>LinuxButton</code>, <code>LinuxTextField</code>, <code>LinuxCheckbox</code>, <code>LinuxUIFactory</code>, and add one case to <code>UIFactoryProvider</code>. No existing file is modified.</li>
+<li><strong>Products within a family are consistent.</strong> WindowsUIFactory only creates Windows components. You cannot accidentally mix a WindowsButton with a MacOSTextField.</li>
+<li><strong>The super factory hides all concrete factories.</strong> The client calls <code>UIFactoryProvider.getFactory("windows")</code> and gets back a <code>UIFactory</code> interface. It never knows about <code>WindowsUIFactory</code>.</li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>7. When to Use and When NOT to Use</h2>
+<!-- ================================================================ -->
+
+<h3>When to use Abstract Factory</h3>
+<table>
+<tr><th>Scenario</th><th>Example</th><th>Why Abstract Factory</th></tr>
+<tr><td>Multiple product families</td><td>JDBC vs Hibernate DAO implementations</td><td>Each family has multiple related products that must work together</td></tr>
+<tr><td>Cross-platform UI</td><td>Windows vs macOS vs Linux components</td><td>Buttons, fields, checkboxes must all be from the same platform</td></tr>
+<tr><td>Theme systems</td><td>Light theme vs Dark theme components</td><td>All themed components must match</td></tr>
+<tr><td>Multi-vendor integration</td><td>AWS vs Azure cloud services</td><td>Storage, compute, and messaging must all be from the same vendor</td></tr>
+<tr><td>Test vs Production</td><td>Real services vs Mock services</td><td>All dependencies must be consistently real or mock</td></tr>
+</table>
+
+<h3>When NOT to use Abstract Factory</h3>
+<table>
+<tr><th>Scenario</th><th>Why NOT</th><th>Use Instead</th></tr>
+<tr><td>Single product type</td><td>Only one product, not a family</td><td>Simple Factory or Factory Method</td></tr>
+<tr><td>Products are independent</td><td>Button and database connection are unrelated</td><td>Separate factories</td></tr>
+<tr><td>Only one family exists</td><td>No need for abstraction over one implementation</td><td>Direct instantiation</td></tr>
+<tr><td>Simple application</td><td>Abstract Factory adds many classes for simple cases</td><td>Simple Factory</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>8. Quick Reference Card</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<table>
+<tr><th>Aspect</th><th>Simple Factory</th><th>Factory Method</th><th>Abstract Factory</th></tr>
+<tr><td>GOF Pattern?</td><td>No (informal)</td><td>Yes</td><td>Yes</td></tr>
+<tr><td>Creates</td><td>One product type</td><td>One product type</td><td>Family of products</td></tr>
+<tr><td>Factories</td><td>1 factory class</td><td>N factory subclasses</td><td>N family factories</td></tr>
+<tr><td>Extension</td><td>Modify factory (violates OCP)</td><td>Add factory subclass</td><td>Add entire factory family</td></tr>
+<tr><td>Consistency</td><td>Not guaranteed</td><td>Per-factory</td><td>Entire family consistent</td></tr>
+<tr><td>Complexity</td><td>Low</td><td>Medium</td><td>High</td></tr>
+<tr><td>JDK example</td><td>Calendar.getInstance()</td><td>Collection.iterator()</td><td>javax.xml.parsers.DocumentBuilderFactory</td></tr>
+</table>
+</div>
+
+<!-- ================================================================ -->
+<h2>9. Interview Questions</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<ol>
+<li>What is the Abstract Factory pattern? How is it different from Factory Method?</li>
+<li>Why is Abstract Factory called "Factory of Factories"?</li>
+<li>Give a real-world scenario where Abstract Factory is applicable.</li>
+<li>How does Abstract Factory ensure product family consistency?</li>
+<li>Design a DAO layer using Abstract Factory that supports JDBC and Hibernate.</li>
+<li>How would you add a new product family (e.g., Linux UI) to an Abstract Factory?</li>
+<li>What is the relationship between Abstract Factory and Dependency Injection?</li>
+<li>How does Spring Framework implement the Abstract Factory pattern?</li>
+<li>What are the disadvantages of Abstract Factory?</li>
+<li>Can Abstract Factory be combined with Singleton? When would you do this?</li>
+<li>Design a cross-platform notification system (email, SMS, push) using Abstract Factory.</li>
+<li>How would you use properties file or reflection to make Abstract Factory fully configurable?</li>
+</ol>
+</div>
+
+</body>
+</html>

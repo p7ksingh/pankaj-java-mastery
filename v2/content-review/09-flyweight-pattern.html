@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flyweight Design Pattern in Java - Complete Tutorial | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px}
+h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}
+h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}
+p,li{font-size:14px;margin-bottom:8px}
+ul,ol{margin-left:24px;margin-bottom:12px}
+pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}
+code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}
+pre code{background:none;padding:0}
+.meta{font-size:13px;color:#999;margin-bottom:24px}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
+.tag-s{background:#fce7f3;color:#9d174d}.tag-g{background:#e8f8f0;color:#27ae60}.tag-m{background:#fff3e0;color:#e67e22}
+.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.box-blue{border-color:#4A90D9;background:#eff6ff}
+.box-red{border-color:#e74c3c;background:#fef2f2}
+.box-green{border-color:#27ae60;background:#f0fdf4}
+.box-orange{border-color:#e67e22;background:#fffbeb}
+.box-purple{border-color:#8b5cf6;background:#f5f3ff}
+.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}
+th{background:#2d3748;color:#fff;font-weight:600}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-s">Structural</span>
+<span class="tag tag-g">GOF Pattern</span>
+<span class="tag tag-m">Medium</span>
+
+<h1>Flyweight Design Pattern in Java</h1>
+<p class="meta">Complete Tutorial | 10 Sections | Full Game Sprite Rendering Project with HLD and LLD | Intrinsic vs Extrinsic State | Shape Drawing Example | String Pool and Integer Cache | Multiple Scenarios | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>1. What is Flyweight Pattern?</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Flyweight pattern is a <strong>GOF Structural Pattern</strong>. Flyweight means reducing weight. According to GOF, the flyweight design pattern object is: "Use sharing to support large numbers of fine-grained objects efficiently."</p>
+<p><strong>One line:</strong> Create minimum objects (if possible one object per class) and keep them in cache memory for reuse, instead of creating new objects every time.</p>
+</div>
+
+<p>Flyweight design pattern is a structural design pattern like Facade and Adapter. It is used when we need to create a lot of objects of a class. Since every object consumes memory space that can be crucial for low memory devices (mobile devices, embedded systems), the Flyweight pattern reduces the load on memory by sharing objects.</p>
+
+<h3>Key concepts: Intrinsic vs Extrinsic properties</h3>
+
+<p>To apply Flyweight pattern, we need to divide object properties into <strong>intrinsic (sharable)</strong> and <strong>extrinsic (non-sharable)</strong> properties. Intrinsic properties make the object unique. Extrinsic properties are set by client code as method call arguments and used to perform different operations.</p>
+
+<table>
+<tr><th>Property Type</th><th>Description</th><th>Where Stored</th><th>Circle Example</th></tr>
+<tr><td><strong>Intrinsic (sharable)</strong></td><td>Common for all objects or all method calls. Does not change.</td><td>Inside the flyweight object (member variable)</td><td><code>label = "circle"</code></td></tr>
+<tr><td><strong>Extrinsic (non-sharable)</strong></td><td>Unique per context. Given by client app as method parameters.</td><td>Passed by client at runtime</td><td><code>radius</code>, <code>fillColor</code>, <code>lineStyle</code></td></tr>
+</table>
+
+<div class="diagram">Circle class with intrinsic/extrinsic separation:
+
+public class Circle {
+    private String label;    // INTRINSIC (sharable data)
+        label = "circle";
+
+    public void draw(int radius, String fillColor, String lineStyle) {
+                         // EXTRINSIC (non-sharable data, per call)
+        ...
+    }
+}
+
+Cache (HashMap):           Calls:
++--------+-----------+     obj.draw(10);    O (small circle)
+| "circle"| Circle obj|     obj.draw(20);    O (medium circle)
++--------+-----------+     obj.draw(30);    O (large circle)
+One object, many uses!     All 3 use the SAME cached Circle object</div>
+
+<h3>Factors before applying Flyweight</h3>
+<ol>
+<li>The number of objects to be created by application should be <strong>huge</strong></li>
+<li>The object creation is <strong>heavy on memory</strong> and it can be time-consuming too</li>
+<li>The object properties can be divided into <strong>intrinsic</strong> and <strong>extrinsic</strong> properties. Extrinsic properties of an object should be defined by the client program</li>
+</ol>
+
+<!-- ================================================================ -->
+<h2>2. The Problem</h2>
+<!-- ================================================================ -->
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Problem</div>
+<p>Consider a paint application on a smart mobile device. A user can draw shapes: circles, triangles, squares. Mobiles have limited memory. If we create a new object for every shape drawn, the memory fills up fast. Drawing 1000 circles creates 1000 Circle objects. Drawing 1000 squares creates 1000 more. 2000 objects for something that could be served by just 2.</p>
+</div>
+
+<h3>Problem code (without Flyweight)</h3>
+<pre><code>package com.nt.test;
+
+import com.nt.comp.Circle;
+import com.nt.comp.Square;
+
+public class FlyweightProblemDPTest {
+    public static void main(String[] args) {
+
+        // Creating 1000 objects for Circle class
+        System.out.println("=======Drawing Circle Shapes========");
+        for (int i = 0; i < 1000; i++) {
+            Circle circle = new Circle();           // NEW object every time!
+            circle.draw(i, "red", "dashed");
+        }
+
+        // Creating 1000 objects for Square class
+        System.out.println("=======Drawing Square Shapes========");
+        for (int i = 0; i < 1000; i++) {
+            Square square = new Square();           // NEW object every time!
+            square.draw(i + 10, "blue", "dashed");
+        }
+
+        // Total: 2000 objects created! Massive memory waste.
+    }
+}</code></pre>
+
+<div class="output">Circle:: constructor
+Circle:: constructor
+Circle:: constructor
+... (1000 times!)
+Square:: constructor
+Square:: constructor
+... (1000 times!)
+Total: 2000 constructor calls, 2000 objects in memory</div>
+
+<!-- ================================================================ -->
+<h2>3. The Solution: Flyweight Factory with Cache</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Solution</div>
+<p>Implement a <strong>Factory class with caching logic</strong> to create one object for each concrete class and to reuse the object by keeping the objects in cache/buffer memory. This is nothing but the Flyweight Pattern.</p>
+<p>We need to keep the created objects for Circle, Square in cache memory and reuse those objects to create more Circle shapes and more Square shapes.</p>
+</div>
+
+<h3>Shape.java (Component Interface)</h3>
+<pre><code>package com.nt.comp;
+
+public interface Shape {
+    void draw(int arg0, String fillColor, String lineStyle);
+}</code></pre>
+
+<h3>Circle.java (Concrete class with intrinsic data)</h3>
+<pre><code>package com.nt.comp;
+
+public class Circle implements Shape {
+    private String label;   // intrinsic data (sharable)
+
+    public Circle() {
+        System.out.println("Circle:: 0-param constructor");
+        label = "circle";
+    }
+
+    @Override
+    public void draw(int radius, String fillColor, String lineStyle) {
+        // extrinsic data passed per call
+        System.out.println("drawing Circle with radius:" + radius
+            + " having fillColor:" + fillColor
+            + " and line Style:" + lineStyle);
+    }
+}</code></pre>
+
+<h3>Square.java</h3>
+<pre><code>package com.nt.comp;
+
+public class Square implements Shape {
+    private String label;   // intrinsic data (sharable)
+
+    public Square() {
+        System.out.println("Square:: 0-param constructor");
+        label = "square";
+    }
+
+    @Override
+    public void draw(int sideLength, String fillColor, String lineStyle) {
+        // extrinsic data
+        System.out.println("drawing Square with side length:" + sideLength
+            + " having fillColor:" + fillColor
+            + " and line Style:" + lineStyle);
+    }
+}</code></pre>
+
+<h3>ShapeFactory.java (Flyweight Factory with HashMap cache)</h3>
+<pre><code>package com.nt.map;
+
+import java.util.HashMap;
+import com.nt.comp.Circle;
+import com.nt.comp.Shape;
+import com.nt.comp.Square;
+
+public class ShapeFactory {
+    private static HashMap&lt;String, Shape&gt; cache = new HashMap&lt;&gt;();
+
+    public static Shape getShape(String type) {
+        Shape shape = cache.get(type);
+
+        if (shape == null) {
+            // Object not in cache, create and store it
+            if (type.equalsIgnoreCase("circle")) {
+                shape = new Circle();
+            } else if (type.equalsIgnoreCase("square")) {
+                shape = new Square();
+            } else {
+                throw new IllegalArgumentException("Unknown shape type: " + type);
+            }
+            cache.put(type, shape);
+            System.out.println(type + " object created and cached");
+        }
+
+        return shape;  // return cached object
+    }
+}</code></pre>
+
+<h3>Solution client code (using ShapeFactory)</h3>
+<pre><code>package com.nt.test;
+
+import com.nt.comp.Shape;
+import com.nt.map.ShapeFactory;
+
+public class FlyweightDPTest {
+    public static void main(String[] args) {
+
+        // Reuses the SAME cached Circle object 1000 times
+        System.out.println("=======Drawing Circle Shapes========");
+        for (int i = 0; i < 1000; i++) {
+            Shape circle = ShapeFactory.getShape("circle");
+            circle.draw(i, "red", "dotted");
+        }
+
+        // Reuses the SAME cached Square object 1000 times
+        System.out.println("=======Drawing Square Shapes========");
+        for (int i = 0; i < 1000; i++) {
+            Shape square = ShapeFactory.getShape("square");
+            square.draw(i + 10, "green", "solid");
+        }
+
+        // Total: only 2 objects created for 2000 draw calls!
+    }
+}</code></pre>
+
+<div class="output">Circle:: 0-param constructor
+circle object created and cached
+drawing Circle with radius:0 having fillColor:red and line Style:dotted
+drawing Circle with radius:1 having fillColor:red and line Style:dotted
+... (998 more draws, NO more constructor calls)
+
+Square:: 0-param constructor
+square object created and cached
+drawing Square with side length:10 having fillColor:green and line Style:solid
+... (999 more draws, NO more constructor calls)
+
+Total: 2 constructor calls, 2 objects in memory (instead of 2000)</div>
+
+<div class="diagram">Cache (HashMap&lt;String, Shape&gt;):
++----------+--------------------+
+| Key      | Value              |
++----------+--------------------+
+| "circle" | Circle obj (one)   |  <-- serves ALL 1000 circle draws
+| "square" | Square obj (one)   |  <-- serves ALL 1000 square draws
++----------+--------------------+
+
+Memory saved: 1998 objects x ~100 bytes each = ~200 KB saved</div>
+
+<!-- ================================================================ -->
+<h2>4. Flyweight in Spring Framework</h2>
+<!-- ================================================================ -->
+
+<div class="box box-purple">
+<div class="box-label" style="color:#6d28d9">Spring and Flyweight</div>
+<p>The IOC container of Spring manages the singleton scope spring bean class objects in the internal cache of the IOC container for reusability. So we can say there is Flyweight DP in Spring.</p>
+<p>When you call <code>factory.getBean("myService")</code> multiple times for a singleton-scoped bean, Spring returns the same cached object every time. This is the Flyweight pattern applied at the framework level.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>5. Pre-defined Flyweight Examples in Java</h2>
+<!-- ================================================================ -->
+
+<table>
+<tr><th>Example</th><th>Intrinsic (cached)</th><th>Extrinsic (per use)</th></tr>
+<tr><td><code>String Pool</code></td><td>String literal value. <code>"hello"</code> is created once in the pool.</td><td>Reference variable name</td></tr>
+<tr><td><code>Integer.valueOf()</code></td><td>Integer objects for values -128 to 127 are cached</td><td>Variable assignment context</td></tr>
+<tr><td><code>Boolean.TRUE / FALSE</code></td><td>Two Boolean objects cached</td><td>Usage context</td></tr>
+<tr><td><code>Character.valueOf()</code></td><td>Characters 0-127 cached</td><td>Usage context</td></tr>
+<tr><td>Spring Singleton Beans</td><td>Bean instance in IOC container</td><td>Method parameters per request</td></tr>
+</table>
+
+<pre><code>// String Pool as Flyweight
+String s1 = "hello";      // created in String Pool
+String s2 = "hello";      // reuses the SAME object from pool
+System.out.println(s1 == s2);  // true (same object)
+
+String s3 = new String("hello");  // new object on heap (bypasses pool)
+System.out.println(s1 == s3);     // false (different objects)
+
+// Integer Cache as Flyweight
+Integer a = Integer.valueOf(100);   // cached
+Integer b = Integer.valueOf(100);   // reuses cached
+System.out.println(a == b);        // true (same object, within -128 to 127)
+
+Integer c = Integer.valueOf(200);   // NOT cached (outside range)
+Integer d = Integer.valueOf(200);   // new object
+System.out.println(c == d);        // false (different objects)</code></pre>
+
+<!-- ================================================================ -->
+<h2>6. Full-Length Industry Project: Game Sprite Rendering Engine</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Business Scenario</div>
+<p>A 2D game renders a forest scene with thousands of trees, rocks, and bushes. Each tree type (Oak, Pine, Birch) has the same texture, mesh data, and colour (intrinsic properties that consume heavy memory). But each tree instance is placed at a different position (x, y) with a different scale (extrinsic properties that are lightweight). Without Flyweight, rendering 10,000 trees would load 10,000 copies of the same texture. With Flyweight, we load 3 textures (one per tree type) and share them across all 10,000 instances.</p>
+</div>
+
+<h3>High-Level Design (HLD)</h3>
+
+<div class="diagram">
++---------------------------------------------------+
+|              GAME LOOP                             |
+|  GameEngine                                        |
+|    - renders forest scene with 10,000 sprites      |
+|    - for each sprite: get from factory, draw at pos|
++----------------------------+----------------------+
+                             |
+                             v
++---------------------------------------------------+
+|          FLYWEIGHT FACTORY                         |
+|  SpriteFactory                                     |
+|    - cache: HashMap&lt;String, Sprite&gt;               |
+|    - getSprite("oak_tree"): Sprite                 |
+|    - getSprite("pine_tree"): Sprite                |
+|    - returns cached instance or creates new        |
++---------------------------------------------------+
+                             |
+                             v
++---------------------------------------------------+
+|          FLYWEIGHT OBJECTS                          |
+|  Sprite (interface)                                |
+|    + render(x, y, scale): void                     |
+|         |                                          |
+|    +----+----+----+                                |
+|    |    |    |    |                                 |
+|  OakTree PineTree Birch  Rock  Bush                |
+|  Sprite  Sprite   Sprite Sprite Sprite             |
+|  (intrinsic: texture, mesh, colour)                |
+|  (extrinsic: x, y, scale passed per render)        |
++---------------------------------------------------+
+</div>
+
+<h3>Low-Level Design (LLD)</h3>
+
+<div class="diagram">
++-------------------------------------------------------+
+| Sprite (interface)                                    |
++-------------------------------------------------------+
+| + render(x: int, y: int, scale: double): void         |
+| + getType(): String                                    |
+| + getMemorySize(): int  (shows texture size in KB)     |
++-------------------------------------------------------+
+         ^              ^               ^
+         |              |               |
++----------------+ +----------------+ +----------------+
+| TreeSprite     | | RockSprite     | | BushSprite     |
++----------------+ +----------------+ +----------------+
+| - type: String | | - type: String | | - type: String |
+| - texture: String (intrinsic, heavy)                  |
+| - meshData: String (intrinsic, heavy)                 |
+| - baseColor: String (intrinsic)                       |
++----------------+ +----------------+ +----------------+
+
++-------------------------------------------------------+
+| SpriteFactory (Flyweight Factory)                     |
++-------------------------------------------------------+
+| - cache: Map&lt;String, Sprite&gt;      [static]           |
++-------------------------------------------------------+
+| + getSprite(type): Sprite          [static]           |
+| + getCacheSize(): int              [static]           |
+| + getCacheStats(): String          [static]           |
++-------------------------------------------------------+
+
++-------------------------------------------------------+
+| SceneObject (uses flyweight + extrinsic data)         |
++-------------------------------------------------------+
+| - sprite: Sprite     [shared flyweight reference]     |
+| - x: int             [extrinsic - position]           |
+| - y: int             [extrinsic - position]           |
+| - scale: double      [extrinsic - size]               |
++-------------------------------------------------------+
+| + render(): void                                      |
++-------------------------------------------------------+
+</div>
+
+<h3>Project Structure</h3>
+<div class="ps">forest-game-engine/
+├── src/
+│   └── main/java/com/game/forest/
+│       ├── sprite/
+│       │   ├── Sprite.java                 (flyweight interface)
+│       │   ├── TreeSprite.java             (concrete flyweight)
+│       │   ├── RockSprite.java
+│       │   └── BushSprite.java
+│       ├── factory/
+│       │   └── SpriteFactory.java          (flyweight factory with cache)
+│       ├── scene/
+│       │   └── SceneObject.java            (extrinsic state holder)
+│       ├── engine/
+│       │   └── GameEngine.java             (renders the scene)
+│       └── Application.java
+├── src/
+│   └── test/java/com/game/forest/
+│       └── factory/
+│           └── SpriteFactoryTest.java
+└── pom.xml</div>
+
+<h3>Sprite.java (Flyweight interface)</h3>
+<pre><code>package com.game.forest.sprite;
+
+public interface Sprite {
+    void render(int x, int y, double scale);
+    String getType();
+    int getMemorySize();
+}</code></pre>
+
+<h3>TreeSprite.java (Concrete flyweight)</h3>
+<pre><code>package com.game.forest.sprite;
+
+public class TreeSprite implements Sprite {
+    private final String type;          // intrinsic
+    private final String texture;       // intrinsic (heavy: simulates loaded texture data)
+    private final String meshData;      // intrinsic (heavy: simulates 3D mesh)
+    private final String baseColor;     // intrinsic
+
+    public TreeSprite(String type) {
+        this.type = type;
+        // Simulate loading heavy texture and mesh data
+        this.texture = "texture_" + type + "_2048x2048px_RGB";
+        this.meshData = "mesh_" + type + "_15000_polygons";
+        this.baseColor = type.contains("pine") ? "dark_green" : "green";
+        System.out.println("TreeSprite created: " + type
+            + " (texture: " + getMemorySize() + " KB loaded)");
+    }
+
+    @Override
+    public void render(int x, int y, double scale) {
+        System.out.println("  Render " + type + " at (" + x + "," + y
+            + ") scale:" + scale + " [shared texture:" + texture + "]");
+    }
+
+    @Override
+    public String getType() { return type; }
+
+    @Override
+    public int getMemorySize() { return 2048; }
+}</code></pre>
+
+<h3>RockSprite.java</h3>
+<pre><code>package com.game.forest.sprite;
+
+public class RockSprite implements Sprite {
+    private final String type;
+    private final String texture;
+    private final String meshData;
+
+    public RockSprite(String type) {
+        this.type = type;
+        this.texture = "texture_" + type + "_1024x1024px";
+        this.meshData = "mesh_" + type + "_5000_polygons";
+        System.out.println("RockSprite created: " + type
+            + " (texture: " + getMemorySize() + " KB loaded)");
+    }
+
+    @Override
+    public void render(int x, int y, double scale) {
+        System.out.println("  Render " + type + " at (" + x + "," + y
+            + ") scale:" + scale);
+    }
+
+    @Override
+    public String getType() { return type; }
+
+    @Override
+    public int getMemorySize() { return 1024; }
+}</code></pre>
+
+<h3>BushSprite.java</h3>
+<pre><code>package com.game.forest.sprite;
+
+public class BushSprite implements Sprite {
+    private final String type;
+    private final String texture;
+
+    public BushSprite(String type) {
+        this.type = type;
+        this.texture = "texture_" + type + "_512x512px";
+        System.out.println("BushSprite created: " + type
+            + " (texture: " + getMemorySize() + " KB loaded)");
+    }
+
+    @Override
+    public void render(int x, int y, double scale) {
+        System.out.println("  Render " + type + " at (" + x + "," + y
+            + ") scale:" + scale);
+    }
+
+    @Override
+    public String getType() { return type; }
+
+    @Override
+    public int getMemorySize() { return 512; }
+}</code></pre>
+
+<h3>SpriteFactory.java (Flyweight Factory with cache)</h3>
+<pre><code>package com.game.forest.factory;
+
+import com.game.forest.sprite.*;
+import java.util.HashMap;
+import java.util.Map;
+
+public class SpriteFactory {
+    private static final Map&lt;String, Sprite&gt; cache = new HashMap&lt;&gt;();
+    private static int cacheHits = 0;
+    private static int cacheMisses = 0;
+
+    public static Sprite getSprite(String type) {
+        Sprite sprite = cache.get(type);
+
+        if (sprite != null) {
+            cacheHits++;
+            return sprite;
+        }
+
+        // Cache miss: create new sprite
+        cacheMisses++;
+        switch (type) {
+            case "oak_tree":
+            case "pine_tree":
+            case "birch_tree":
+                sprite = new TreeSprite(type);
+                break;
+            case "small_rock":
+            case "large_rock":
+                sprite = new RockSprite(type);
+                break;
+            case "green_bush":
+            case "flower_bush":
+                sprite = new BushSprite(type);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown sprite type: " + type);
+        }
+
+        cache.put(type, sprite);
+        return sprite;
+    }
+
+    public static int getCacheSize() {
+        return cache.size();
+    }
+
+    public static String getCacheStats() {
+        int totalMemory = cache.values().stream()
+            .mapToInt(Sprite::getMemorySize).sum();
+        return "Cache: " + cache.size() + " sprites | "
+            + "Hits: " + cacheHits + " | Misses: " + cacheMisses + " | "
+            + "Memory: " + totalMemory + " KB";
+    }
+}</code></pre>
+
+<h3>SceneObject.java (holds extrinsic state)</h3>
+<pre><code>package com.game.forest.scene;
+
+import com.game.forest.sprite.Sprite;
+
+public class SceneObject {
+    private final Sprite sprite;   // shared flyweight reference
+    private final int x;           // extrinsic: position
+    private final int y;           // extrinsic: position
+    private final double scale;    // extrinsic: size
+
+    public SceneObject(Sprite sprite, int x, int y, double scale) {
+        this.sprite = sprite;
+        this.x = x;
+        this.y = y;
+        this.scale = scale;
+    }
+
+    public void render() {
+        sprite.render(x, y, scale);
+    }
+}</code></pre>
+
+<h3>GameEngine.java</h3>
+<pre><code>package com.game.forest.engine;
+
+import com.game.forest.factory.SpriteFactory;
+import com.game.forest.scene.SceneObject;
+import com.game.forest.sprite.Sprite;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
+public class GameEngine {
+    private final List&lt;SceneObject&gt; sceneObjects = new ArrayList&lt;&gt;();
+    private final Random random = new Random(42);
+
+    private static final String[] SPRITE_TYPES = {
+        "oak_tree", "pine_tree", "birch_tree",
+        "small_rock", "large_rock",
+        "green_bush", "flower_bush"
+    };
+
+    public void generateForest(int objectCount) {
+        System.out.println("Generating forest with " + objectCount + " objects...\n");
+
+        for (int i = 0; i < objectCount; i++) {
+            String type = SPRITE_TYPES[random.nextInt(SPRITE_TYPES.length)];
+            Sprite sprite = SpriteFactory.getSprite(type);
+
+            int x = random.nextInt(1920);
+            int y = random.nextInt(1080);
+            double scale = 0.5 + random.nextDouble() * 1.5;
+
+            sceneObjects.add(new SceneObject(sprite, x, y, scale));
+        }
+    }
+
+    public void renderScene(int maxRender) {
+        System.out.println("\nRendering first " + maxRender + " objects:");
+        for (int i = 0; i < Math.min(maxRender, sceneObjects.size()); i++) {
+            sceneObjects.get(i).render();
+        }
+    }
+
+    public void printStats(int totalObjects) {
+        System.out.println("\n=== Performance Stats ===");
+        System.out.println("Total scene objects: " + totalObjects);
+        System.out.println("Unique sprites created: " + SpriteFactory.getCacheSize());
+        System.out.println(SpriteFactory.getCacheStats());
+
+        // Without flyweight
+        int avgSpriteSize = 1500; // average KB per sprite
+        long withoutFlyweight = (long) totalObjects * avgSpriteSize;
+        int withFlyweight = SpriteFactory.getCacheSize() * avgSpriteSize;
+        System.out.println("\nMemory WITHOUT Flyweight: " + withoutFlyweight + " KB ("
+            + (withoutFlyweight / 1024) + " MB)");
+        System.out.println("Memory WITH Flyweight:    " + withFlyweight + " KB ("
+            + (withFlyweight / 1024) + " MB)");
+        System.out.println("Memory saved: "
+            + ((withoutFlyweight - withFlyweight) * 100 / withoutFlyweight) + "%");
+    }
+}</code></pre>
+
+<h3>Application.java</h3>
+<pre><code>package com.game.forest;
+
+import com.game.forest.engine.GameEngine;
+
+public class Application {
+    public static void main(String[] args) {
+        GameEngine engine = new GameEngine();
+
+        int totalObjects = 10000;
+        engine.generateForest(totalObjects);
+        engine.renderScene(10);
+        engine.printStats(totalObjects);
+    }
+}</code></pre>
+
+<h3>Expected Output</h3>
+<div class="output">Generating forest with 10000 objects...
+
+TreeSprite created: pine_tree (texture: 2048 KB loaded)
+TreeSprite created: oak_tree (texture: 2048 KB loaded)
+BushSprite created: green_bush (texture: 512 KB loaded)
+RockSprite created: small_rock (texture: 1024 KB loaded)
+TreeSprite created: birch_tree (texture: 2048 KB loaded)
+RockSprite created: large_rock (texture: 1024 KB loaded)
+BushSprite created: flower_bush (texture: 512 KB loaded)
+
+Rendering first 10 objects:
+  Render pine_tree at (1142,503) scale:1.23 [shared texture:texture_pine_tree_2048x2048px_RGB]
+  Render oak_tree at (887,291) scale:0.85 [shared texture:texture_oak_tree_2048x2048px_RGB]
+  Render green_bush at (342,912) scale:1.67 [shared texture:texture_green_bush_512x512px]
+  Render small_rock at (1567,102) scale:0.55 [shared texture:texture_small_rock_1024x1024px]
+  Render pine_tree at (201,775) scale:1.12 [shared texture:texture_pine_tree_2048x2048px_RGB]
+  Render birch_tree at (1890,445) scale:0.92 [shared texture:texture_birch_tree_2048x2048px_RGB]
+  Render oak_tree at (678,623) scale:1.45 [shared texture:texture_oak_tree_2048x2048px_RGB]
+  Render large_rock at (1234,88) scale:0.71 [shared texture:texture_large_rock_1024x1024px]
+  Render flower_bush at (456,999) scale:1.88 [shared texture:texture_flower_bush_512x512px]
+  Render pine_tree at (890,345) scale:1.05 [shared texture:texture_pine_tree_2048x2048px_RGB]
+
+=== Performance Stats ===
+Total scene objects: 10000
+Unique sprites created: 7
+Cache: 7 sprites | Hits: 9993 | Misses: 7 | Memory: 9216 KB
+
+Memory WITHOUT Flyweight: 15000000 KB (14648 MB)
+Memory WITH Flyweight:    10500 KB (10 MB)
+Memory saved: 99%</div>
+
+<h3>Key observations from the project</h3>
+<div class="card">
+<ol>
+<li><strong>7 sprite objects serve 10,000 scene objects.</strong> Only 7 constructors called (one per sprite type). 9,993 cache hits. 99% memory saved.</li>
+<li><strong>Intrinsic state (texture, mesh, colour) is shared.</strong> All oak trees use the same 2048 KB texture. Loading it 10,000 times would consume 14+ GB of memory.</li>
+<li><strong>Extrinsic state (x, y, scale) is stored in SceneObject.</strong> Each of the 10,000 scene objects holds only 3 lightweight values (16 bytes each), not the heavy texture data.</li>
+<li><strong>SpriteFactory acts as the Flyweight Factory.</strong> It checks the cache first. On miss, it creates and caches. On hit, it returns the cached object. The client never calls <code>new</code> directly.</li>
+<li><strong>Cache stats provide visibility.</strong> The factory tracks hits, misses, and total memory. This is useful for monitoring in production games.</li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>7. When to Use and When NOT to Use</h2>
+<!-- ================================================================ -->
+
+<h3>When to use Flyweight</h3>
+<table>
+<tr><th>Scenario</th><th>Example</th><th>Why Flyweight</th></tr>
+<tr><td>Large number of similar objects</td><td>Game sprites, document characters, map tiles</td><td>Share common data, pass unique data per use</td></tr>
+<tr><td>Memory-constrained environments</td><td>Mobile apps, embedded systems, IoT</td><td>Reduce object count dramatically</td></tr>
+<tr><td>Object creation is expensive</td><td>Loading textures, parsing configs, DB connections</td><td>Create once, reuse many times via cache</td></tr>
+<tr><td>Most properties can be extrinsic</td><td>Position, size, color passed per call</td><td>Shared object + external context = many virtual objects</td></tr>
+<tr><td>Caching and pooling</td><td>String pool, Integer cache, connection pool</td><td>JVM and frameworks use Flyweight internally</td></tr>
+</table>
+
+<h3>When NOT to use Flyweight</h3>
+<table>
+<tr><th>Scenario</th><th>Why NOT</th><th>Use Instead</th></tr>
+<tr><td>Few objects needed</td><td>Caching overhead not worth it for 10 objects</td><td>Direct creation</td></tr>
+<tr><td>Each object is unique</td><td>No intrinsic state to share</td><td>Normal objects</td></tr>
+<tr><td>Thread safety required</td><td>Shared mutable state needs synchronization, adding complexity</td><td>Immutable objects or thread-local</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>8. Flyweight vs Singleton vs Object Pool</h2>
+<!-- ================================================================ -->
+
+<table>
+<tr><th>Aspect</th><th>Flyweight</th><th>Singleton</th><th>Object Pool</th></tr>
+<tr><td>Objects</td><td>One per type (many types cached)</td><td>One per class (only one instance)</td><td>Fixed pool of reusable objects</td></tr>
+<tr><td>Cache</td><td>HashMap of shared objects</td><td>Single static reference</td><td>Queue/list of available objects</td></tr>
+<tr><td>State</td><td>Intrinsic shared + extrinsic per call</td><td>All state in one object</td><td>Each object has its own state</td></tr>
+<tr><td>Use case</td><td>Many similar objects (shapes, sprites)</td><td>One global instance (config, logger)</td><td>Expensive objects (DB connections, threads)</td></tr>
+<tr><td>JDK example</td><td>String pool, Integer cache</td><td>Runtime.getRuntime()</td><td>Thread pool (ExecutorService)</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>9. Quick Reference Card</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<table>
+<tr><th>Component</th><th>Role</th><th>In Game Project</th><th>In Shape Example</th></tr>
+<tr><td>Flyweight Interface</td><td>Common type for shared objects</td><td><code>Sprite</code></td><td><code>Shape</code></td></tr>
+<tr><td>Concrete Flyweight</td><td>Shared object with intrinsic state</td><td><code>TreeSprite</code>, <code>RockSprite</code></td><td><code>Circle</code>, <code>Square</code></td></tr>
+<tr><td>Flyweight Factory</td><td>Creates and caches flyweight objects</td><td><code>SpriteFactory</code></td><td><code>ShapeFactory</code></td></tr>
+<tr><td>Extrinsic State</td><td>Per-use data passed by client</td><td><code>SceneObject</code> (x, y, scale)</td><td>Method params (radius, color)</td></tr>
+<tr><td>Intrinsic State</td><td>Shared data stored in flyweight</td><td>texture, meshData, baseColor</td><td>label ("circle"/"square")</td></tr>
+</table>
+</div>
+
+<!-- ================================================================ -->
+<h2>10. Interview Questions</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<ol>
+<li>What is the Flyweight pattern? Give a real-world example.</li>
+<li>What is the difference between intrinsic and extrinsic state?</li>
+<li>How does the String Pool in Java demonstrate the Flyweight pattern?</li>
+<li>How does <code>Integer.valueOf()</code> use Flyweight internally?</li>
+<li>What is the role of the Flyweight Factory?</li>
+<li>What is the difference between Flyweight and Singleton?</li>
+<li>What is the difference between Flyweight and Object Pool?</li>
+<li>How does Spring IoC container use the Flyweight pattern?</li>
+<li>Design a text editor character rendering system using Flyweight.</li>
+<li>What are the four factors to consider before applying Flyweight?</li>
+<li>Can Flyweight objects be mutable? What are the risks?</li>
+<li>How would you make a Flyweight Factory thread-safe?</li>
+</ol>
+</div>
+
+</body>
+</html>

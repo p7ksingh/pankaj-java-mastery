@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Intercepting Filter and Front Controller Patterns | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}h1{font-size:28px;font-weight:800;margin-bottom:8px}h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}p,li{font-size:14px;margin-bottom:8px}ul,ol{margin-left:24px;margin-bottom:12px}pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}pre code{background:none;padding:0}.meta{font-size:13px;color:#999;margin-bottom:24px}.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}.tag-j{background:#fef3c7;color:#92400e}.tag-p{background:#fce7f3;color:#9d174d}.tag-m{background:#fff3e0;color:#e67e22}.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}.box-blue{border-color:#4A90D9;background:#eff6ff}.box-red{border-color:#e74c3c;background:#fef2f2}.box-green{border-color:#27ae60;background:#f0fdf4}.box-orange{border-color:#e67e22;background:#fffbeb}.box-purple{border-color:#8b5cf6;background:#f5f3ff}.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}table{border-collapse:collapse;margin:12px 0;width:100%}th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}th{background:#2d3748;color:#fff;font-weight:600}.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-j">JEE Pattern</span>
+<span class="tag tag-p">Presentation Tier</span>
+<span class="tag tag-m">Medium</span>
+
+<h1>Intercepting Filter and Front Controller Patterns</h1>
+<p class="meta">Two JEE Presentation Tier Patterns | Filter Chain Architecture | Central Entry Point | View Helper | Session Check Filter | Complete Web Application Example | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>Intercepting Filter Pattern</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>Intercepting Filter is a special web comp of Java web application. It traps all requests and responses to apply <strong>pre-request processing logics</strong> and <strong>post-response generation logics</strong>.</p>
+<p>If we need additional and optional logics having ability to enable or disable, we take the support of Intercepting Filters.</p>
+<p>Servlet filter API is given supporting Intercepting Filter Design pattern because the servlet filter comps are capable of trapping requests, responses, and applying both pre-request processing and post-response generation logics.</p>
+</div>
+
+<h3>Filter Structure</h3>
+
+<div class="diagram">Filter Chain Architecture:
+
+client (browser)  request  FilterManager       Target comp
+     (a)  -------> (b) ------>  Servlet/JSP    (c1)
+                         |        comp
+                   FilterChain
+                    |  Filter1  |
+  (d)              |           |  If multiple filter comps are
+response  <-----  |  Filter2  |  applied on servlet comp/jsp
+                   |           |  comp, in which order the
+                   |  Filter3  |  request is mapped to filters
+                   |           |  will be finishing the response
+                   FilterChain   in reverse order
+
+If 3 filters are applied on the target comp(servlet/jsp):
+the FilterChain object of 1st filter comp holds 2nd filter info.
+Similarly filter chain object of 2nd filter comp holds
+target servlet/jsp comp info.</div>
+
+<h3>Participant Components</h3>
+<table>
+<tr><th>Component</th><th>Role</th></tr>
+<tr><td><strong>FilterManager</strong></td><td>The filter manager manages filter processing. It creates the FilterChain with applicable filters in an order and initiates the processing.</td></tr>
+<tr><td><strong>FilterChain</strong></td><td>It is the collection of independent filters. An ordered collection of filters to be executed.</td></tr>
+<tr><td><strong>Filter</strong></td><td>These are the filters that are mapped to the Target. The individual filter that is mapped to the Target.</td></tr>
+<tr><td><strong>Target</strong></td><td>The target is the final resource for processing by the client (servlet/jsp/html comp).</td></tr>
+<tr><td><strong>Client</strong></td><td>The client is the one who sends the request for the target (browser).</td></tr>
+</table>
+
+<h3>Three Types of Filters</h3>
+<ol type="a">
+<li><strong>request filter:</strong> traps both request and response but contains only pre-request processing logic</li>
+<li><strong>response filter:</strong> traps both request and response but contains only post-response generation logic</li>
+<li><strong>request-response filter:</strong> traps both request and response and also contains both pre-request processing logic and post-response generation logics</li>
+</ol>
+
+<h3>Examples of Filters</h3>
+<ul>
+<li>Network security, authentication (<strong>request filter</strong>)</li>
+<li>Auth-authorization and enabling into applications (<strong>request filter or response filter</strong>)</li>
+<li>Debugging (<strong>request, response filter</strong>)</li>
+<li>Pre-processing and monitoring specific clients (<strong>request filter, response filter</strong>)</li>
+<li>Convert input encoding streams (<strong>request filter</strong>)</li>
+<li>Is the client IP address from a locale source (<strong>request filter</strong>)</li>
+<li>Convert output encoding streams (<strong>response filter</strong>)</li>
+<li>Does the HTML Pass a valid validator (<strong>request filter</strong>)</li>
+<li>Body output or removed transparently in ciphertext and request (<strong>request filter, response filter</strong>)</li>
+<li>Data compression (<strong>request or response filter</strong>)</li>
+<li>Implement security using protocol or format (<strong>request filter</strong>)</li>
+<li>Performance Test Filter (<strong>request response filter</strong>)</li>
+</ul>
+
+<h3>Developing a Filter</h3>
+<p>To develop a filter comp in servlet 6.x version:</p>
+<ul>
+<li>option 1: Take a class implementing <code>jakarta.servlet.Filter</code> and provide implementation for 3 methods</li>
+<li>option 2: Take a class extending from <code>jakarta.servlet.GenericFilter</code> and provide implementation</li>
+<li>option 3: Take a class extending from <code>jakarta.servlet.http.HttpFilter</code> and provide implementation (init, doFilter, or destroy methods)</li>
+</ul>
+
+<h3>Session Check Filter Example</h3>
+<p>If user tries login to certain web comp without performing login activity by typing its URL, the request should not be allowed to get into that web comp. The user should get the login page to begin the login activity first. This is achieved by developing a Filter comp that checks whether the logged in user is having ValidSession or not.</p>
+
+<pre><code>// InvalidSessionCheckFilter.java
+package com.nt.filter;
+
+import jakarta.servlet.*;
+import jakarta.servlet.annotation.WebFilter;
+import jakarta.servlet.http.*;
+
+@WebFilter("/*")
+public class InvalidSessionCheckFilter implements Filter {
+
+    @Override
+    public void doFilter(ServletRequest req,
+                          ServletResponse res,
+                          FilterChain chain) throws Exception {
+        System.out.println("InvalidSessionCheckFilter.doFilter()");
+
+        // Get access to Session
+        HttpSession ses = ((HttpServletRequest) req).getSession(false);
+
+        if (ses != null && ses.getAttribute("userDetails") != null) {
+            // Valid session: allow request to proceed
+            chain.doFilter(req, res);
+        } else {
+            // Invalid session: redirect to login
+            req.setAttribute("errorMsg", "You need to sign in first");
+            RequestDispatcher rd = req.getRequestDispatcher("login.jsp");
+            rd.forward(req, res);
+        }
+    }
+}</code></pre>
+
+<!-- ================================================================ -->
+<h2>View Helper Pattern</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>In JEE applications the most recommended technology for view comps is JSP. The Java code placed in JSP page is script code. The code that can not be executed independently and must be embedded with either other technology code for execution is called script code. View script code is called script code because it has to be embedded with HTML code. View code placed in JSP tags is called scriptlet code.</p>
+</div>
+
+<h3>Limitations of placing Java code in JSP page</h3>
+<ol type="a">
+<li>Makes the programmer mix presentation logic (HTML code) with business logic code (Java code). So any modification in presentation logic code will affect the business logic code.</li>
+<li>Clear separation between presentation logic and business logics will not be there.</li>
+<li>Becomes difficult for UI developer (no Java skills) to develop/maintain UI tags by mixing them with Java code.</li>
+<li>Kills the readability of JSP page, i.e., reading JSP page that is having Java code, JSP tags and HTML tags becomes very much problematic for the programmers.</li>
+<li>If same Java code placed in multiple JSP pages, there is no reusability for Java code.</li>
+<li>JSP says develop the JSP pages as scriptless (Java code less) JSP pages. But placing Java code in JSP pages is against JSP programming principles.</li>
+</ol>
+
+<h3>Solution: Make JSP pages Java-code-less</h3>
+<p>To overcome all these problems, make JSP pages Java code less / scriptless JSP pages by using the following options:</p>
+<ol type="a">
+<li>HTML tags</li>
+<li>JSP standard tags (scriptlet, expression, declaration)</li>
+<li>Scripting tags (JSP actions)</li>
+<li>EL code (Expression Language)</li>
+<li>JSTL JSP tags (JSP Standard Tag Library)</li>
+<li>Third-party JSP tags (Struts JSP page, Spring MVC JSP tags, etc.)</li>
+<li><strong>Custom JSP tags</strong> (View Helper pattern)</li>
+</ol>
+
+<p>Except Custom JSP tags, the remaining all options are ready-made tags or facilities. Custom tags development by developing tag handler classes for custom JSP tags is called <strong>View Helper DP implementation</strong>.</p>
+
+<p>For each custom JSP tag there will be one tag handler class defining the functionality, i.e., this tag handler class is acting as <strong>helper comp for view comp</strong>. So the process of developing custom tags falls under View Helper design pattern implementation.</p>
+
+<h4>Custom JSP Tag Library Development Steps</h4>
+<ol>
+<li>Design JSP tagLibrary having JSP tags (define tags: <code>&lt;abc&gt;</code>, <code>&lt;xyz&gt;</code>)</li>
+<li>Develop tag handler classes (AbcTag.java extends TagSupport, XyzTag.java extends TagSupport)</li>
+<li>Clip JSP tags in TLD file (tag library descriptor file) in WEB-INF folder - maps tags to tag handler classes</li>
+<li>Import JSP tagLibrary to JSP page and use the JSP tags in JSP page</li>
+</ol>
+
+<!-- ================================================================ -->
+<h2>Front Controller Pattern</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Front Controller is a <strong>JEE Presentation Tier Pattern</strong>. It provides a centralized entry point for all requests in a web application. Instead of having multiple servlets each handling their own URLs, one single FrontController Servlet receives ALL requests and dispatches them to appropriate handlers.</p>
+</div>
+
+<h3>Problem: Multiple Controller Servlets</h3>
+<div class="diagram">Problem: Inside the web app if every request resource of the whole use case
+  gets its own individual Servlet as the Controller, this will increase
+  number of Servlet comps, and each Servlet has some common code
+  that is duplicated across all.
+
+request1 --> Servlet1 (registration)
+request2 --> Servlet2 (login)
+request3 --> Servlet3 (search)
+request4 --> Servlet4 (payment)
+
+Each servlet has duplicated:
+- logging, security, auditing actions
+- error handling
+- common response headers</div>
+
+<h3>Solution: Single Front Controller</h3>
+
+<div class="diagram">Solution: One FrontController Servlet handles ALL requests
+
+request1 --> |                     |
+request2 --> | FrontController     | --> Handler1 (registration)
+request3 --> | (single servlet)    | --> Handler2 (login)
+request4 --> |                     | --> Handler3 (search)
+             |                     | --> Handler4 (payment)
+
+The FrontController:
+1. Receives ALL requests at a single entry point
+2. Applies common logic (logging, security, error handling)
+3. Determines which handler/command to invoke
+4. Dispatches to the appropriate handler
+5. Manages view navigation (forward to JSP)</div>
+
+<h3>Front Controller Responsibilities</h3>
+<table>
+<tr><th>Responsibility</th><th>Description</th></tr>
+<tr><td>Delegation Management</td><td>Front Controller decides Controller/Listener to call based on the URI request</td></tr>
+<tr><td>Command Processing</td><td>Front Controller DS has some classes for every (1) place to process the requests and call Command/Listener classes</td></tr>
+<tr><td>Object Management</td><td>Model/Controller/Handler: View store and manage the generated results</td></tr>
+<tr><td>Display/View Management</td><td>All requests going to generate/access different output views/using the same views through FrontControllerServlet is called Display Management</td></tr>
+<tr><td>Transaction Management</td><td>BusinessDelegate module: code to start command-class logic to do/start view-entity</td></tr>
+<tr><td>View Management</td><td>BusinessDelegate module: code to start and send command-class logic to do/start view-entity, and to display front-end active on result: Task Management</td></tr>
+</table>
+
+<h3>Implementation</h3>
+
+<pre><code>// FrontController pattern using Command pattern
+
+// Command interface
+public interface Command {
+    String execute(HttpServletRequest req, HttpServletResponse res)
+        throws Exception;
+}
+
+// Concrete commands
+public class RegistrationCommand implements Command {
+    public String execute(HttpServletRequest req, HttpServletResponse res)
+        throws Exception {
+        // registration logic
+        return "registration_success.jsp";
+    }
+}
+
+public class LoginCommand implements Command {
+    public String execute(HttpServletRequest req, HttpServletResponse res)
+        throws Exception {
+        String uname = req.getParameter("uname");
+        String pwd = req.getParameter("pwd");
+        // validate credentials
+        if (isValid(uname, pwd)) {
+            return "home.jsp";
+        }
+        req.setAttribute("errorMsg", "Invalid Credentials");
+        return "login.jsp";
+    }
+}
+
+// CommandFactory
+public class CommandFactory {
+    private static Map&lt;String, Command&gt; commands = new HashMap&lt;&gt;();
+    static {
+        commands.put("/register", new RegistrationCommand());
+        commands.put("/login", new LoginCommand());
+        commands.put("/search", new SearchCommand());
+    }
+
+    public static Command getCommand(String path) {
+        Command cmd = commands.get(path);
+        if (cmd == null) throw new RuntimeException("No command for: " + path);
+        return cmd;
+    }
+}
+
+// FrontControllerServlet
+@WebServlet("/*")
+public class FrontControllerServlet extends HttpServlet {
+
+    @Override
+    public void doGet(HttpServletRequest req, HttpServletResponse res)
+        throws ServletException, IOException {
+        processRequest(req, res);
+    }
+
+    @Override
+    public void doPost(HttpServletRequest req, HttpServletResponse res)
+        throws ServletException, IOException {
+        processRequest(req, res);
+    }
+
+    private void processRequest(HttpServletRequest req, HttpServletResponse res)
+        throws ServletException, IOException {
+        // 1. Log the request
+        System.out.println("Request: " + req.getServletPath());
+
+        try {
+            // 2. Get the appropriate command
+            Command command = CommandFactory.getCommand(req.getServletPath());
+
+            // 3. Execute the command
+            String viewPage = command.execute(req, res);
+
+            // 4. Forward to the view
+            RequestDispatcher rd = req.getRequestDispatcher(viewPage);
+            rd.forward(req, res);
+
+        } catch (Exception e) {
+            req.setAttribute("errorMsg", e.getMessage());
+            req.getRequestDispatcher("error.jsp").forward(req, res);
+        }
+    }
+}</code></pre>
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Modern Equivalents</div>
+<ul>
+<li><strong>Spring MVC DispatcherServlet:</strong> The ultimate Front Controller. All requests go through DispatcherServlet, which dispatches to @Controller methods based on @RequestMapping.</li>
+<li><strong>Struts ActionServlet:</strong> Earlier Front Controller implementation in Struts framework.</li>
+<li><strong>JAX-RS Application:</strong> REST-based Front Controller.</li>
+<li>Front, JSP, and Servlet are designed based on Servlet 6.x, Tomcat 10.x+ (Jakarta namespace), not Servlet 4.x (javax namespace).</li>
+<li>In MVC architecture layered app, FrontController is positioned between view comps and business delegate comp representing monitoring, controller and navigation logic. Controller means input/output/navigation management and monitoring.</li>
+</ul>
+</div>
+
+<h3>Front Controller flow in our architecture</h3>
+<div class="diagram">A to J Steps:
+
+(a) browser gives request to web application which first goes
+(b) to FrontController Servlet (via intercepting filter if any)
+(c) FrontControllerServlet receives the request and stores
+    the form data to VO class obj (or reads parameters)
+(d) invoke the business delegate method by passing VO class obj
+(e) The FrontController Servlet used the command pattern to get handler method (code = d)
+(f) the command object finds the appropriate handler for the request
+(g) BusinessDelegate/Service processes the request
+(h) the result is returned to command to FrontControllerServlet
+(i) FrontController Maps the key to JSP page and uses same servlet functions to display output
+(j) presentation page is displayed from service/command/business management to client
+
+NOTE: Exception Map (the key JSP should not use same servlet functions for
+displaying output only for Error pages. The MVC pattern can be placed
+in this pattern by dispatching the error to error management view.)</div>
+
+<!-- ================================================================ -->
+<h2>Comparison Table</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<table>
+<tr><th>Aspect</th><th>Intercepting Filter</th><th>View Helper</th><th>Front Controller</th></tr>
+<tr><td>Tier</td><td>Presentation</td><td>Presentation</td><td>Presentation</td></tr>
+<tr><td>Purpose</td><td>Pre/post processing of requests/responses</td><td>Remove Java code from JSP, use custom tags</td><td>Single entry point for all requests</td></tr>
+<tr><td>Component</td><td>Servlet Filter</td><td>Custom JSP Tag + Tag Handler</td><td>Single Servlet (DispatcherServlet)</td></tr>
+<tr><td>Chain</td><td>FilterChain (multiple filters in order)</td><td>Tag Library (multiple tags)</td><td>Command pattern (multiple handlers)</td></tr>
+<tr><td>Modern equivalent</td><td>Spring HandlerInterceptor, Middleware</td><td>Thymeleaf, React components</td><td>Spring DispatcherServlet</td></tr>
+</table>
+</div>
+
+<!-- ================================================================ -->
+<h2>Interview Questions</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<ol>
+<li>What is the Intercepting Filter pattern? How does a Servlet Filter implement it?</li>
+<li>What are the three types of filters (request, response, request-response)?</li>
+<li>How does FilterChain work? What is the order of filter execution?</li>
+<li>What is the Front Controller pattern? Why is a single entry point better than multiple servlets?</li>
+<li>How does Spring DispatcherServlet implement the Front Controller pattern?</li>
+<li>What is the Command pattern and how does it work with Front Controller?</li>
+<li>What is the View Helper pattern? How do custom JSP tags implement it?</li>
+<li>How do you develop a session-check filter to protect web pages?</li>
+<li>What is the difference between Filter and Interceptor in Spring?</li>
+<li>Design a Front Controller for a banking web application with login, transfer, and statement pages.</li>
+<li>How does the Intercepting Filter pattern relate to the Chain of Responsibility pattern?</li>
+<li>What are the advantages of using Front Controller over multiple individual servlets?</li>
+</ol>
+</div>
+
+</body>
+</html>

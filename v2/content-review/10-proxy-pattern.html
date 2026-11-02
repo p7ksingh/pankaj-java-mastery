@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proxy Design Pattern in Java - Complete Tutorial | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px}
+h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}
+h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}
+p,li{font-size:14px;margin-bottom:8px}
+ul,ol{margin-left:24px;margin-bottom:12px}
+pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}
+code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}
+pre code{background:none;padding:0}
+.meta{font-size:13px;color:#999;margin-bottom:24px}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
+.tag-s{background:#fce7f3;color:#9d174d}.tag-g{background:#e8f8f0;color:#27ae60}.tag-h{background:#fee2e2;color:#991b1b}
+.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.box-blue{border-color:#4A90D9;background:#eff6ff}
+.box-red{border-color:#e74c3c;background:#fef2f2}
+.box-green{border-color:#27ae60;background:#f0fdf4}
+.box-orange{border-color:#e67e22;background:#fffbeb}
+.box-purple{border-color:#8b5cf6;background:#f5f3ff}
+.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}
+th{background:#2d3748;color:#fff;font-weight:600}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-s">Structural</span>
+<span class="tag tag-g">GOF Pattern</span>
+<span class="tag tag-h">Hard</span>
+
+<h1>Proxy Design Pattern in Java</h1>
+<p class="meta">Complete Tutorial | 12 Sections | Full API Gateway Project with HLD and LLD | Protection Proxy + Virtual Proxy + Dynamic Proxy | CGLIB and JDK Proxy | Spring AOP Connection | Multiple Scenarios | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>1. What is Proxy Pattern?</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Proxy pattern is a <strong>GOF Structural Pattern</strong>. A Proxy represents a dummy acting as real with additional functionalities. It provides a surrogate or placeholder for another object to control access to it.</p>
+<p><strong>One line:</strong> The proxy object gives the feeling of working with the real object, but adds additional functionalities (security, caching, logging) that are not in the original implementation.</p>
+</div>
+
+<h3>Real-world analogies</h3>
+<ul>
+<li><strong>Film industry:</strong> A stunt double (proxy) acts in place of the real actor for dangerous scenes. The audience sees the same character, but the actual work is done by the proxy with additional safety measures.</li>
+<li><strong>Embassy:</strong> The embassy acts as a proxy for the home country government. You interact with the embassy (proxy) instead of going to the actual government offices.</li>
+<li><strong>ATM:</strong> The ATM is a proxy for the bank. You interact with the ATM, which controls access to your bank account with security checks.</li>
+<li><strong>Internet Proxy Server:</strong> Controls access to websites, caches content, logs activity.</li>
+</ul>
+
+<h3>Three types of Proxy</h3>
+<table>
+<tr><th>Type</th><th>Purpose</th><th>Example</th></tr>
+<tr><td><strong>Protection Proxy</strong></td><td>Controls access based on permissions/authorization. Adds security layer before the real object.</td><td>Bank service proxy checks if user is authorized before allowing withdrawal</td></tr>
+<tr><td><strong>Virtual Proxy</strong></td><td>Lazy loading. Creates the expensive real object only when actually needed.</td><td>Image proxy loads the actual image only when display() is called</td></tr>
+<tr><td><strong>Remote Proxy</strong></td><td>Represents an object in a different address space (different JVM, different server).</td><td>RMI stub acts as local proxy for a remote object</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>2. The Problem</h2>
+<!-- ================================================================ -->
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Problem</div>
+<p>When clients directly access a service object, there is no way to add cross-cutting concerns like:</p>
+<ul>
+<li>Authentication and authorization checks before method calls</li>
+<li>Logging of all method calls for auditing</li>
+<li>Caching responses to avoid repeated expensive operations</li>
+<li>Lazy initialization of heavy resources</li>
+<li>Rate limiting to prevent abuse</li>
+</ul>
+<p>Adding these concerns directly to the service class violates Single Responsibility Principle. The service should focus on business logic, not security or logging.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>3. Protection Proxy: Bank Service Example</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Scenario</div>
+<p>A BankService has methods to check balance and withdraw money. The proxy adds authorization: only authenticated users with the correct role can access these methods. The real BankService has no security logic; the proxy handles it.</p>
+</div>
+
+<h3>BankService.java (interface)</h3>
+<pre><code>package com.nt.service;
+
+public interface BankService {
+    String getBalance(String acno, float amount);
+    String addBalance(String acno, float amount);
+}</code></pre>
+
+<h3>BankServiceImpl.java (real implementation)</h3>
+<pre><code>package com.nt.service;
+
+public class BankServiceImpl implements BankService {
+    private float balance;
+
+    public BankServiceImpl() {
+        this.balance = 50000.0f;  // initial balance
+        System.out.println("BankServiceImpl created (real service)");
+    }
+
+    @Override
+    public String getBalance(String acno, float amount) {
+        return "Account: " + acno + " | Balance: Rs " + balance;
+    }
+
+    @Override
+    public String addBalance(String acno, float amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Amount must be positive");
+        }
+        balance += amount;
+        return "Deposited Rs " + amount + " to " + acno + ". New balance: Rs " + balance;
+    }
+}</code></pre>
+
+<h3>ProxyBankService.java (protection proxy)</h3>
+<pre><code>package com.nt.proxy;
+
+import com.nt.service.BankService;
+import com.nt.service.BankServiceImpl;
+
+public class ProxyBankService implements BankService {
+    private BankService realService;
+    private String authenticatedUser;
+    private String role;
+
+    public ProxyBankService(String user, String role) {
+        this.authenticatedUser = user;
+        this.role = role;
+        // Real service created lazily (Virtual Proxy aspect)
+    }
+
+    @Override
+    public String getBalance(String acno, float amount) {
+        // Protection: check authorization
+        if (authenticatedUser == null) {
+            throw new SecurityException("Not authenticated");
+        }
+        // Lazy init real service (Virtual Proxy)
+        if (realService == null) {
+            realService = new BankServiceImpl();
+        }
+        System.out.println("[PROXY] " + authenticatedUser + " accessing balance");
+        return realService.getBalance(acno, amount);
+    }
+
+    @Override
+    public String addBalance(String acno, float amount) {
+        // Protection: only ADMIN can add balance
+        if (!"ADMIN".equalsIgnoreCase(role)) {
+            throw new SecurityException(
+                "Access denied: only ADMIN can add balance. Your role: " + role);
+        }
+        if (realService == null) {
+            realService = new BankServiceImpl();
+        }
+        System.out.println("[PROXY] ADMIN " + authenticatedUser + " adding balance");
+        return realService.addBalance(acno, amount);
+    }
+}</code></pre>
+
+<h3>BankServiceFactory.java</h3>
+<pre><code>package com.nt.factory;
+
+import com.nt.service.BankService;
+import com.nt.proxy.ProxyBankService;
+
+public class BankServiceFactory {
+    public static BankService getService(String user, String role) {
+        return new ProxyBankService(user, role);
+    }
+}</code></pre>
+
+<h3>Client test</h3>
+<pre><code>package com.nt.test;
+
+import com.nt.service.BankService;
+import com.nt.factory.BankServiceFactory;
+
+public class ProxyDPTest {
+    public static void main(String[] args) {
+        // Scenario 1: Authorized user checks balance
+        System.out.println("=== Scenario 1: User checks balance ===");
+        BankService userService = BankServiceFactory.getService("Rajesh", "USER");
+        System.out.println(userService.getBalance("SAV2001", 0));
+
+        System.out.println();
+
+        // Scenario 2: Admin adds balance
+        System.out.println("=== Scenario 2: Admin adds balance ===");
+        BankService adminService = BankServiceFactory.getService("Priya", "ADMIN");
+        System.out.println(adminService.addBalance("SAV2001", 25000));
+
+        System.out.println();
+
+        // Scenario 3: User tries to add balance (denied)
+        System.out.println("=== Scenario 3: User tries admin operation ===");
+        try {
+            userService.addBalance("SAV2001", 10000);
+        } catch (SecurityException e) {
+            System.out.println("BLOCKED: " + e.getMessage());
+        }
+    }
+}</code></pre>
+
+<div class="output">=== Scenario 1: User checks balance ===
+BankServiceImpl created (real service)
+[PROXY] Rajesh accessing balance
+Account: SAV2001 | Balance: Rs 50000.0
+
+=== Scenario 2: Admin adds balance ===
+BankServiceImpl created (real service)
+[PROXY] ADMIN Priya adding balance
+Deposited Rs 25000.0 to SAV2001. New balance: Rs 75000.0
+
+=== Scenario 3: User tries admin operation ===
+BLOCKED: Access denied: only ADMIN can add balance. Your role: USER</div>
+
+<!-- ================================================================ -->
+<h2>4. Two Ways to Generate Proxy Classes</h2>
+<!-- ================================================================ -->
+
+<table>
+<tr><th>Approach</th><th>Description</th><th>When to use</th></tr>
+<tr><td><strong>a) Manual Proxy</strong></td><td>Write a proxy class by hand that implements the same interface. You code the additional logic explicitly.</td><td>Simple cases, few methods, full control</td></tr>
+<tr><td><strong>b) Dynamic Proxy (InMemory)</strong></td><td>Generate proxy class at runtime using CGLIB or JDK libraries. No manual proxy class needed.</td><td>Many methods, cross-cutting concerns (AOP), frameworks</td></tr>
+</table>
+
+<h3>Normal Java class vs InMemory Dynamic class</h3>
+<div class="diagram">Normal Java class:
+  .java (HDD) --javac--> .class (HDD) --JVM--> loads and executes
+                                                 (in JVM Memory of the RAM)
+
+InMemory class / Dynamic class:
+  App execution ---> InMemory class generation ---> Source code compilation ---> Byte code execution
+  (JVM Memory       (source code generation       and byte code generation     (JVM Memory of RAM)
+   of RAM)           in JVM memory of RAM)         (JVM memory of RAM)</div>
+
+<!-- ================================================================ -->
+<h2>5. JDK Dynamic Proxy (InvocationHandler)</h2>
+<!-- ================================================================ -->
+
+<div class="box box-purple">
+<div class="box-label" style="color:#6d28d9">JDK Proxy</div>
+<p>JDK Dynamic Proxy uses <code>java.lang.reflect.Proxy</code> and <code>InvocationHandler</code>. It generates a proxy class at runtime that implements the specified interfaces. Works only with <strong>interface-based</strong> proxying.</p>
+</div>
+
+<pre><code>package com.nt.proxy;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
+import com.nt.service.BankService;
+import com.nt.service.BankServiceImpl;
+
+// InvocationHandler: intercepts all method calls on the proxy
+public class BankServiceInvocationHandler implements InvocationHandler {
+    private final BankService realService;
+    private final String user;
+
+    public BankServiceInvocationHandler(String user) {
+        this.realService = new BankServiceImpl();
+        this.user = user;
+    }
+
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        // Before: logging
+        System.out.println("[JDK PROXY] " + user + " calling " + method.getName());
+
+        // Before: check if method is addBalance, require ADMIN
+        if (method.getName().equals("addBalance")) {
+            System.out.println("[JDK PROXY] Authorization check for addBalance");
+        }
+
+        // Invoke the real method
+        Object result = method.invoke(realService, args);
+
+        // After: logging
+        System.out.println("[JDK PROXY] " + method.getName() + " completed");
+        return result;
+    }
+}
+
+// Factory to create JDK Dynamic Proxy
+package com.nt.factory;
+
+import java.lang.reflect.Proxy;
+import com.nt.service.BankService;
+import com.nt.proxy.BankServiceInvocationHandler;
+
+public class JdkProxyFactory {
+    public static BankService createProxy(String user) {
+        BankServiceInvocationHandler handler = new BankServiceInvocationHandler(user);
+
+        return (BankService) Proxy.newProxyInstance(
+            BankService.class.getClassLoader(),
+            new Class[]{BankService.class},  // must be interface(s)
+            handler
+        );
+    }
+}
+
+// Client
+BankService proxy = JdkProxyFactory.createProxy("Rajesh");
+System.out.println(proxy.getBalance("SAV2001", 0));</code></pre>
+
+<div class="output">BankServiceImpl created (real service)
+[JDK PROXY] Rajesh calling getBalance
+[JDK PROXY] getBalance completed
+Account: SAV2001 | Balance: Rs 50000.0</div>
+
+<!-- ================================================================ -->
+<h2>6. CGLIB Dynamic Proxy (MethodInterceptor)</h2>
+<!-- ================================================================ -->
+
+<div class="box box-purple">
+<div class="box-label" style="color:#6d28d9">CGLIB Proxy</div>
+<p>CGLIB (Code Generation Library) generates proxy classes by creating a <strong>subclass</strong> of the target class at runtime. Works with both classes and interfaces. Does not require the target to implement an interface. Used internally by Spring AOP, Mockito, and Hibernate.</p>
+</div>
+
+<pre><code>// Step 1: Add CGLIB jars to classpath
+// cglib-3.3.0.jar (https://mvnrepository.com/artifact/cglib/cglib/3.3.0)
+// asm-7.1.jar (https://mvnrepository.com/artifact/org.ow2.asm/asm/7.1)
+
+// Step 2: Create MethodInterceptor
+package com.nt.proxy;
+
+import net.sf.cglib.proxy.MethodInterceptor;
+import net.sf.cglib.proxy.MethodProxy;
+import java.lang.reflect.Method;
+
+public class BankServiceMethodInterceptor implements MethodInterceptor {
+
+    @Override
+    public Object intercept(Object obj, Method method, Object[] args,
+                             MethodProxy methodProxy) throws Throwable {
+        // Before
+        System.out.println("[CGLIB PROXY] Intercepting: " + method.getName());
+
+        // Check: we can validate even more than 4000 lines for the protection
+        if (method.getName().equals("addBalance")) {
+            System.out.println("[CGLIB PROXY] Admin authorization required");
+        }
+
+        // Call the real method
+        Object result = methodProxy.invokeSuper(obj, args);
+
+        // After
+        System.out.println("[CGLIB PROXY] " + method.getName() + " completed");
+        return result;
+    }
+}
+
+// Step 3: Create proxy using Enhancer
+package com.nt.factory;
+
+import net.sf.cglib.proxy.Enhancer;
+import com.nt.service.BankServiceImpl;
+import com.nt.proxy.BankServiceMethodInterceptor;
+
+public class CglibProxyFactory {
+    public static BankServiceImpl createProxy() {
+        Enhancer enhancer = new Enhancer();
+        enhancer.setSuperclass(BankServiceImpl.class);    // target class (no interface needed)
+        enhancer.setCallback(new BankServiceMethodInterceptor());
+        return (BankServiceImpl) enhancer.create();       // generate subclass proxy
+    }
+}</code></pre>
+
+<h3>JDK Proxy vs CGLIB Proxy</h3>
+<table>
+<tr><th>Aspect</th><th>JDK Dynamic Proxy</th><th>CGLIB Proxy</th></tr>
+<tr><td>Mechanism</td><td>Implements interfaces at runtime</td><td>Creates subclass at runtime</td></tr>
+<tr><td>Requires interface?</td><td>Yes (must proxy an interface)</td><td>No (can proxy concrete classes)</td></tr>
+<tr><td>Library</td><td>Built into JDK (java.lang.reflect.Proxy)</td><td>External library (cglib.jar + asm.jar)</td></tr>
+<tr><td>Performance</td><td>Slightly slower (reflection-based)</td><td>Faster (bytecode generation)</td></tr>
+<tr><td>Cannot proxy</td><td>Concrete classes without interface</td><td>Final classes, final methods</td></tr>
+<tr><td>Used by</td><td>Spring AOP (interface-based beans)</td><td>Spring AOP (class-based beans), Mockito, Hibernate</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>7. Connection to Spring AOP</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Spring AOP and Proxy</div>
+<p>Spring AOP (Aspect-Oriented Programming) is built entirely on the Proxy pattern. When you add <code>@Transactional</code>, <code>@Cacheable</code>, <code>@Secured</code>, or custom aspects, Spring creates a proxy around your bean. The proxy intercepts method calls and adds the cross-cutting concern before/after the real method.</p>
+<ul>
+<li>If the bean implements an interface: Spring uses <strong>JDK Dynamic Proxy</strong></li>
+<li>If the bean is a concrete class: Spring uses <strong>CGLIB Proxy</strong></li>
+</ul>
+<p>Mocking frameworks like Mockito also use CGLIB/ByteBuddy to generate proxies for the classes being mocked.</p>
+</div>
+
+<pre><code>// Spring @Transactional creates a proxy around the service
+@Service
+public class TransferService {
+
+    @Transactional  // Spring creates a proxy that wraps this method
+    public void transfer(String from, String to, BigDecimal amount) {
+        // Spring proxy: BEGIN TRANSACTION (before)
+        accountRepository.debit(from, amount);
+        accountRepository.credit(to, amount);
+        // Spring proxy: COMMIT TRANSACTION (after)
+        // Spring proxy: ROLLBACK on exception
+    }
+}
+
+// What Spring does internally:
+// TransferService proxy = CglibProxyFactory.createProxy(TransferService.class);
+// proxy adds: begin transaction -> call real method -> commit/rollback</code></pre>
+
+<!-- ================================================================ -->
+<h2>8. Full-Length Industry Project: API Gateway with Proxy</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Business Scenario</div>
+<p>National Bank of India's microservices architecture needs an API Gateway that sits in front of backend services. The gateway acts as a <strong>proxy</strong> that adds: authentication (protection proxy), request logging (logging proxy), response caching (virtual proxy), and rate limiting. Backend services contain only business logic; the gateway handles all cross-cutting concerns.</p>
+</div>
+
+<h3>High-Level Design (HLD)</h3>
+
+<div class="diagram">
++---------------------------------------------------+
+|              CLIENT LAYER                          |
+|  Mobile App / Browser                              |
+|    |                                               |
+|    v                                               |
++---------------------------------------------------+
+|          API GATEWAY (Proxy Layer)                 |
+|                                                    |
+|  ServiceProxy (implements same interface as real)   |
+|    1. AuthenticationFilter (protection proxy)       |
+|    2. RateLimiter (protection proxy)               |
+|    3. RequestLogger (logging proxy)                |
+|    4. ResponseCache (virtual proxy / caching)      |
+|    5. Delegates to real service                    |
+|    6. ResponseLogger (after proxy)                 |
++---------------------------------------------------+
+                    |
+                    v
++---------------------------------------------------+
+|          BACKEND SERVICES (Real Objects)            |
+|  AccountService   TransferService   LoanService    |
+|  (pure business logic, no security/logging)        |
++---------------------------------------------------+
+</div>
+
+<h3>Low-Level Design (LLD)</h3>
+
+<div class="diagram">
++-------------------------------------------------------+
+| BankingService (interface)                            |
++-------------------------------------------------------+
+| + getAccountBalance(acno): AccountResponse            |
+| + transfer(from, to, amount): TransferResponse        |
+| + getTransactionHistory(acno): List&lt;Transaction&gt;     |
++-------------------------------------------------------+
+         ^                    ^
+         |                    |
++-------------------+  +----------------------------+
+| RealBankingService|  | BankingServiceProxy        |
+| (actual logic)    |  | (implements BankingService) |
++-------------------+  +----------------------------+
+                       | - realService: BankingService|
+                       | - authToken: String          |
+                       | - cache: Map                 |
+                       | - requestCount: AtomicInteger |
+                       | - MAX_REQUESTS: int          |
+                       +----------------------------+
+                       | 1. authenticate()           |
+                       | 2. checkRateLimit()         |
+                       | 3. checkCache()             |
+                       | 4. logRequest()             |
+                       | 5. delegate to realService  |
+                       | 6. cacheResponse()          |
+                       | 7. logResponse()            |
+                       +----------------------------+
+</div>
+
+<h3>Project Structure</h3>
+<div class="ps">nbi-api-gateway/
+├── src/
+│   └── main/java/com/nbi/gateway/
+│       ├── model/
+│       │   ├── AccountResponse.java
+│       │   ├── TransferResponse.java
+│       │   └── Transaction.java
+│       ├── service/
+│       │   ├── BankingService.java          (interface)
+│       │   └── RealBankingService.java      (real implementation)
+│       ├── proxy/
+│       │   └── BankingServiceProxy.java     (proxy with all concerns)
+│       └── Application.java
+├── src/
+│   └── test/java/com/nbi/gateway/
+│       └── proxy/
+│           └── BankingServiceProxyTest.java
+└── pom.xml</div>
+
+<h3>BankingService.java (interface)</h3>
+<pre><code>package com.nbi.gateway.service;
+
+import com.nbi.gateway.model.AccountResponse;
+import com.nbi.gateway.model.TransferResponse;
+import java.math.BigDecimal;
+import java.util.List;
+
+public interface BankingService {
+    AccountResponse getAccountBalance(String accountNo);
+    TransferResponse transfer(String from, String to, BigDecimal amount);
+    List&lt;String&gt; getTransactionHistory(String accountNo);
+}</code></pre>
+
+<h3>Model classes</h3>
+<pre><code>package com.nbi.gateway.model;
+
+import java.math.BigDecimal;
+
+public class AccountResponse {
+    private final String accountNo;
+    private final BigDecimal balance;
+    private final String holderName;
+
+    public AccountResponse(String accountNo, BigDecimal balance, String holderName) {
+        this.accountNo = accountNo;
+        this.balance = balance;
+        this.holderName = holderName;
+    }
+
+    public String getAccountNo() { return accountNo; }
+    public BigDecimal getBalance() { return balance; }
+
+    @Override
+    public String toString() {
+        return "Account: " + accountNo + " | Holder: " + holderName
+            + " | Balance: Rs " + balance;
+    }
+}
+
+public class TransferResponse {
+    private final boolean success;
+    private final String transactionId;
+    private final String message;
+
+    public TransferResponse(boolean success, String transactionId, String message) {
+        this.success = success;
+        this.transactionId = transactionId;
+        this.message = message;
+    }
+
+    public boolean isSuccess() { return success; }
+
+    @Override
+    public String toString() {
+        return (success ? "SUCCESS" : "FAILED") + " | " + transactionId + " | " + message;
+    }
+}</code></pre>
+
+<h3>RealBankingService.java</h3>
+<pre><code>package com.nbi.gateway.service;
+
+import com.nbi.gateway.model.AccountResponse;
+import com.nbi.gateway.model.TransferResponse;
+import java.math.BigDecimal;
+import java.util.Arrays;
+import java.util.List;
+import java.util.UUID;
+
+public class RealBankingService implements BankingService {
+
+    public RealBankingService() {
+        System.out.println("[REAL SERVICE] BankingService initialized");
+    }
+
+    @Override
+    public AccountResponse getAccountBalance(String accountNo) {
+        System.out.println("[REAL SERVICE] Querying database for " + accountNo);
+        // Simulate DB query
+        return new AccountResponse(accountNo, new BigDecimal("250000.00"), "Rajesh Kumar");
+    }
+
+    @Override
+    public TransferResponse transfer(String from, String to, BigDecimal amount) {
+        System.out.println("[REAL SERVICE] Processing transfer: " + from + " -> " + to);
+        String txnId = "TXN-" + UUID.randomUUID().toString().substring(0, 8).toUpperCase();
+        return new TransferResponse(true, txnId,
+            "Transferred Rs " + amount + " from " + from + " to " + to);
+    }
+
+    @Override
+    public List&lt;String&gt; getTransactionHistory(String accountNo) {
+        System.out.println("[REAL SERVICE] Fetching history for " + accountNo);
+        return Arrays.asList(
+            "2026-11-01 | CREDIT | Rs 50,000 | Salary",
+            "2026-11-01 | DEBIT  | Rs 5,000  | UPI Transfer",
+            "2026-10-30 | DEBIT  | Rs 2,500  | Bill Payment"
+        );
+    }
+}</code></pre>
+
+<h3>BankingServiceProxy.java (Proxy with all concerns)</h3>
+<pre><code>package com.nbi.gateway.proxy;
+
+import com.nbi.gateway.model.AccountResponse;
+import com.nbi.gateway.model.TransferResponse;
+import com.nbi.gateway.service.BankingService;
+import com.nbi.gateway.service.RealBankingService;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.atomic.AtomicInteger;
+
+public class BankingServiceProxy implements BankingService {
+    private BankingService realService;          // lazy init (Virtual Proxy)
+    private final String authToken;
+    private final Map&lt;String, Object&gt; cache = new HashMap&lt;&gt;();
+    private final AtomicInteger requestCount = new AtomicInteger(0);
+    private static final int MAX_REQUESTS_PER_MINUTE = 10;
+    private static final DateTimeFormatter FORMATTER =
+        DateTimeFormatter.ofPattern("HH:mm:ss.SSS");
+
+    public BankingServiceProxy(String authToken) {
+        this.authToken = authToken;
+    }
+
+    @Override
+    public AccountResponse getAccountBalance(String accountNo) {
+        String method = "getAccountBalance";
+
+        // 1. Authentication (Protection Proxy)
+        authenticate(method);
+
+        // 2. Rate limiting (Protection Proxy)
+        checkRateLimit(method);
+
+        // 3. Check cache (Virtual Proxy / Caching Proxy)
+        String cacheKey = "balance_" + accountNo;
+        if (cache.containsKey(cacheKey)) {
+            log(method, "CACHE HIT for " + accountNo);
+            return (AccountResponse) cache.get(cacheKey);
+        }
+
+        // 4. Log request
+        log(method, "Request for " + accountNo);
+
+        // 5. Lazy init + delegate to real service
+        AccountResponse response = getRealService().getAccountBalance(accountNo);
+
+        // 6. Cache response
+        cache.put(cacheKey, response);
+        log(method, "Response cached for " + accountNo);
+
+        // 7. Log response
+        log(method, "Response: " + response);
+
+        return response;
+    }
+
+    @Override
+    public TransferResponse transfer(String from, String to, BigDecimal amount) {
+        String method = "transfer";
+
+        authenticate(method);
+        checkRateLimit(method);
+        log(method, "Transfer request: " + from + " -> " + to + " Rs " + amount);
+
+        // Transfers are never cached
+        TransferResponse response = getRealService().transfer(from, to, amount);
+
+        // Invalidate balance cache for both accounts
+        cache.remove("balance_" + from);
+        cache.remove("balance_" + to);
+        log(method, "Balance cache invalidated for " + from + " and " + to);
+        log(method, "Response: " + response);
+
+        return response;
+    }
+
+    @Override
+    public List&lt;String&gt; getTransactionHistory(String accountNo) {
+        String method = "getTransactionHistory";
+
+        authenticate(method);
+        checkRateLimit(method);
+        log(method, "History request for " + accountNo);
+
+        List&lt;String&gt; history = getRealService().getTransactionHistory(accountNo);
+        log(method, "Returned " + history.size() + " transactions");
+
+        return history;
+    }
+
+    // Protection Proxy: authenticate
+    private void authenticate(String method) {
+        if (authToken == null || authToken.isEmpty()) {
+            log(method, "BLOCKED - No auth token");
+            throw new SecurityException("Authentication required. No token provided.");
+        }
+        if (!authToken.startsWith("Bearer ")) {
+            log(method, "BLOCKED - Invalid token format");
+            throw new SecurityException("Invalid token format. Expected: Bearer <token>");
+        }
+        log(method, "Authenticated with token: " + authToken.substring(0, 15) + "...");
+    }
+
+    // Protection Proxy: rate limiting
+    private void checkRateLimit(String method) {
+        int count = requestCount.incrementAndGet();
+        if (count > MAX_REQUESTS_PER_MINUTE) {
+            log(method, "RATE LIMITED - " + count + "/" + MAX_REQUESTS_PER_MINUTE);
+            throw new RuntimeException("Rate limit exceeded. Max " + MAX_REQUESTS_PER_MINUTE
+                + " requests per minute. Try again later.");
+        }
+        log(method, "Rate: " + count + "/" + MAX_REQUESTS_PER_MINUTE);
+    }
+
+    // Virtual Proxy: lazy initialization of real service
+    private BankingService getRealService() {
+        if (realService == null) {
+            realService = new RealBankingService();
+        }
+        return realService;
+    }
+
+    private void log(String method, String message) {
+        String timestamp = LocalDateTime.now().format(FORMATTER);
+        System.out.println("[" + timestamp + "] [PROXY:" + method + "] " + message);
+    }
+}</code></pre>
+
+<h3>Application.java</h3>
+<pre><code>package com.nbi.gateway;
+
+import com.nbi.gateway.model.AccountResponse;
+import com.nbi.gateway.model.TransferResponse;
+import com.nbi.gateway.proxy.BankingServiceProxy;
+import com.nbi.gateway.service.BankingService;
+import java.math.BigDecimal;
+import java.util.List;
+
+public class Application {
+    public static void main(String[] args) {
+
+        // Scenario 1: Authenticated user checks balance
+        System.out.println("=== Scenario 1: Check Balance ===");
+        BankingService service = new BankingServiceProxy("Bearer jwt_token_abc123");
+        AccountResponse balance = service.getAccountBalance("SAV2001");
+        System.out.println("Result: " + balance);
+        System.out.println();
+
+        // Scenario 2: Second call hits cache
+        System.out.println("=== Scenario 2: Cache Hit ===");
+        AccountResponse cached = service.getAccountBalance("SAV2001");
+        System.out.println("Result: " + cached);
+        System.out.println();
+
+        // Scenario 3: Transfer (invalidates cache)
+        System.out.println("=== Scenario 3: Transfer ===");
+        TransferResponse transfer = service.transfer("SAV2001", "CUR3001",
+            new BigDecimal("50000"));
+        System.out.println("Result: " + transfer);
+        System.out.println();
+
+        // Scenario 4: Balance after transfer (cache was invalidated, fetches fresh)
+        System.out.println("=== Scenario 4: Fresh Balance After Transfer ===");
+        AccountResponse freshBalance = service.getAccountBalance("SAV2001");
+        System.out.println("Result: " + freshBalance);
+        System.out.println();
+
+        // Scenario 5: Transaction history
+        System.out.println("=== Scenario 5: Transaction History ===");
+        List&lt;String&gt; history = service.getTransactionHistory("SAV2001");
+        history.forEach(t -> System.out.println("  " + t));
+        System.out.println();
+
+        // Scenario 6: No authentication (blocked)
+        System.out.println("=== Scenario 6: No Auth Token ===");
+        try {
+            BankingService noAuth = new BankingServiceProxy("");
+            noAuth.getAccountBalance("SAV2001");
+        } catch (SecurityException e) {
+            System.out.println("BLOCKED: " + e.getMessage());
+        }
+        System.out.println();
+
+        // Scenario 7: Rate limiting
+        System.out.println("=== Scenario 7: Rate Limiting ===");
+        BankingService rateLimitTest = new BankingServiceProxy("Bearer test_token");
+        for (int i = 1; i <= 12; i++) {
+            try {
+                rateLimitTest.getAccountBalance("SAV2001");
+            } catch (RuntimeException e) {
+                System.out.println("Request " + i + ": " + e.getMessage());
+            }
+        }
+    }
+}</code></pre>
+
+<h3>Expected Output</h3>
+<div class="output">=== Scenario 1: Check Balance ===
+[18:00:00.001] [PROXY:getAccountBalance] Authenticated with token: Bearer jwt_tok...
+[18:00:00.001] [PROXY:getAccountBalance] Rate: 1/10
+[18:00:00.002] [PROXY:getAccountBalance] Request for SAV2001
+[REAL SERVICE] BankingService initialized
+[REAL SERVICE] Querying database for SAV2001
+[18:00:00.003] [PROXY:getAccountBalance] Response cached for SAV2001
+[18:00:00.003] [PROXY:getAccountBalance] Response: Account: SAV2001 | Holder: Rajesh Kumar | Balance: Rs 250000.00
+Result: Account: SAV2001 | Holder: Rajesh Kumar | Balance: Rs 250000.00
+
+=== Scenario 2: Cache Hit ===
+[18:00:00.004] [PROXY:getAccountBalance] Authenticated with token: Bearer jwt_tok...
+[18:00:00.004] [PROXY:getAccountBalance] Rate: 2/10
+[18:00:00.004] [PROXY:getAccountBalance] CACHE HIT for SAV2001
+Result: Account: SAV2001 | Holder: Rajesh Kumar | Balance: Rs 250000.00
+
+=== Scenario 3: Transfer ===
+[18:00:00.005] [PROXY:transfer] Authenticated with token: Bearer jwt_tok...
+[18:00:00.005] [PROXY:transfer] Rate: 3/10
+[18:00:00.005] [PROXY:transfer] Transfer request: SAV2001 -> CUR3001 Rs 50000
+[REAL SERVICE] Processing transfer: SAV2001 -> CUR3001
+[18:00:00.006] [PROXY:transfer] Balance cache invalidated for SAV2001 and CUR3001
+[18:00:00.006] [PROXY:transfer] Response: SUCCESS | TXN-A1B2C3D4 | Transferred Rs 50000
+Result: SUCCESS | TXN-A1B2C3D4 | Transferred Rs 50000 from SAV2001 to CUR3001
+
+=== Scenario 4: Fresh Balance After Transfer ===
+[18:00:00.007] [PROXY:getAccountBalance] Authenticated with token: Bearer jwt_tok...
+[18:00:00.007] [PROXY:getAccountBalance] Rate: 4/10
+[18:00:00.007] [PROXY:getAccountBalance] Request for SAV2001
+[REAL SERVICE] Querying database for SAV2001
+[18:00:00.008] [PROXY:getAccountBalance] Response cached for SAV2001
+Result: Account: SAV2001 | Holder: Rajesh Kumar | Balance: Rs 250000.00
+
+=== Scenario 5: Transaction History ===
+...
+
+=== Scenario 6: No Auth Token ===
+[18:00:00.010] [PROXY:getAccountBalance] BLOCKED - Invalid token format
+BLOCKED: Invalid token format. Expected: Bearer &lt;token&gt;
+
+=== Scenario 7: Rate Limiting ===
+... (requests 1-10 succeed, requests 11-12 blocked)
+Request 11: Rate limit exceeded. Max 10 requests per minute. Try again later.
+Request 12: Rate limit exceeded. Max 10 requests per minute. Try again later.</div>
+
+<h3>Key observations from the project</h3>
+<div class="card">
+<ol>
+<li><strong>Four proxy concerns in one class:</strong> Authentication (protection), rate limiting (protection), caching (virtual), logging (logging proxy). The real service has zero knowledge of these concerns.</li>
+<li><strong>Lazy initialization:</strong> The <code>RealBankingService</code> is created only on the first actual method call (scenario 1). Before that, only the proxy exists in memory.</li>
+<li><strong>Cache with invalidation:</strong> <code>getAccountBalance</code> caches the response. <code>transfer</code> invalidates the cache for affected accounts. The next balance call fetches fresh data.</li>
+<li><strong>Rate limiting with AtomicInteger:</strong> Thread-safe counter. After 10 requests, further calls are blocked with a clear error message.</li>
+<li><strong>Same interface:</strong> <code>BankingServiceProxy</code> implements <code>BankingService</code>. The client works with the interface and does not know it is talking to a proxy.</li>
+<li><strong>Seven scenarios cover:</strong> Normal flow, cache hit, transfer with cache invalidation, fresh fetch, history, auth failure, rate limiting.</li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>9. When to Use and When NOT to Use</h2>
+<!-- ================================================================ -->
+
+<h3>When to use Proxy</h3>
+<table>
+<tr><th>Scenario</th><th>Proxy Type</th><th>Example</th></tr>
+<tr><td>Access control / security</td><td>Protection Proxy</td><td>Check permissions before allowing method call</td></tr>
+<tr><td>Lazy loading of expensive objects</td><td>Virtual Proxy</td><td>Load image/data only when displayed</td></tr>
+<tr><td>Caching responses</td><td>Caching Proxy</td><td>Return cached result for repeated queries</td></tr>
+<tr><td>Logging and auditing</td><td>Logging Proxy</td><td>Log every method call with timestamp</td></tr>
+<tr><td>Rate limiting</td><td>Protection Proxy</td><td>Limit API calls per client per minute</td></tr>
+<tr><td>Remote object access</td><td>Remote Proxy</td><td>RMI stub, gRPC client, REST client wrapper</td></tr>
+<tr><td>Spring AOP</td><td>Dynamic Proxy</td><td>@Transactional, @Cacheable, @Secured</td></tr>
+</table>
+
+<h3>When NOT to use Proxy</h3>
+<table>
+<tr><th>Scenario</th><th>Why NOT</th><th>Use Instead</th></tr>
+<tr><td>No cross-cutting concerns</td><td>Proxy adds indirection for no benefit</td><td>Direct service call</td></tr>
+<tr><td>Simple decorator needed</td><td>If only adding behaviour, Decorator is simpler</td><td>Decorator pattern</td></tr>
+<tr><td>Performance-critical path</td><td>Proxy adds method call overhead</td><td>Direct call or inline logic</td></tr>
+</table>
+
+<h3>Proxy vs Decorator vs Adapter</h3>
+<table>
+<tr><th>Aspect</th><th>Proxy</th><th>Decorator</th><th>Adapter</th></tr>
+<tr><td>Purpose</td><td>Control access to the object</td><td>Add responsibilities to the object</td><td>Convert interface to another interface</td></tr>
+<tr><td>Same interface?</td><td>Yes (same as real object)</td><td>Yes (same as wrapped object)</td><td>No (converts to target interface)</td></tr>
+<tr><td>Knows real object?</td><td>Yes (creates or holds reference)</td><td>No (wraps any component)</td><td>Yes (wraps the adaptee)</td></tr>
+<tr><td>Stackable?</td><td>Usually single proxy</td><td>Multiple decorators stackable</td><td>Usually single adapter</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>10. Quick Reference Card</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<table>
+<tr><th>Component</th><th>Role</th><th>In API Gateway Project</th></tr>
+<tr><td>Subject Interface</td><td>Common interface for real and proxy</td><td><code>BankingService</code></td></tr>
+<tr><td>Real Subject</td><td>The actual implementation with business logic</td><td><code>RealBankingService</code></td></tr>
+<tr><td>Proxy</td><td>Controls access, adds concerns, delegates to real</td><td><code>BankingServiceProxy</code></td></tr>
+<tr><td>Client</td><td>Uses the interface, unaware of proxy</td><td><code>Application</code></td></tr>
+</table>
+</div>
+
+<!-- ================================================================ -->
+<h2>11. Interview Questions</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<ol>
+<li>What is the Proxy pattern? Give a real-world example.</li>
+<li>What are the three types of Proxy (Protection, Virtual, Remote)?</li>
+<li>What is the difference between JDK Dynamic Proxy and CGLIB Proxy?</li>
+<li>How does Spring AOP use the Proxy pattern internally?</li>
+<li>What happens when you add <code>@Transactional</code> to a Spring bean method?</li>
+<li>What is the difference between Proxy and Decorator patterns?</li>
+<li>Design an API Gateway using the Proxy pattern with authentication and rate limiting.</li>
+<li>What is lazy initialization and how does Virtual Proxy implement it?</li>
+<li>Can you use JDK Dynamic Proxy on a concrete class? Why or why not?</li>
+<li>How does Mockito use CGLIB/ByteBuddy to create mock objects?</li>
+<li>What is the InvocationHandler interface and how does it work?</li>
+<li>What are the disadvantages of the Proxy pattern?</li>
+</ol>
+</div>
+
+</body>
+</html>

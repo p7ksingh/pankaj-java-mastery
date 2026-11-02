@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Business Delegate Pattern in Java - Complete Tutorial | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px}
+h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}
+h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}
+p,li{font-size:14px;margin-bottom:8px}
+ul,ol{margin-left:24px;margin-bottom:12px}
+pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}
+code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}
+pre code{background:none;padding:0}
+.meta{font-size:13px;color:#999;margin-bottom:24px}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
+.tag-j{background:#fef3c7;color:#92400e}.tag-b{background:#dbeafe;color:#1e40af}.tag-h{background:#fee2e2;color:#991b1b}
+.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.box-blue{border-color:#4A90D9;background:#eff6ff}
+.box-red{border-color:#e74c3c;background:#fef2f2}
+.box-green{border-color:#27ae60;background:#f0fdf4}
+.box-orange{border-color:#e67e22;background:#fffbeb}
+.box-purple{border-color:#8b5cf6;background:#f5f3ff}
+.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}
+th{background:#2d3748;color:#fff;font-weight:600}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-j">JEE Pattern</span>
+<span class="tag tag-b">Business Tier</span>
+<span class="tag tag-h">Hard</span>
+
+<h1>Business Delegate Design Pattern in Java</h1>
+<p class="meta">Complete Tutorial | 10 Sections | Full Employee Registration Project with HLD and LLD | VO to BO Conversion | Exception Translation | Transaction Management | Multiple Scenarios | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>1. What is Business Delegate Pattern?</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Business Delegate pattern is a <strong>JEE Business Tier Pattern</strong>. It acts as a bridge between the presentation tier (servlet/controller) and the business tier (service + DAO classes). The Business Delegate and DAO classes together are capable of processing requests and generating results.</p>
+<p><strong>One line:</strong> A class that sits between the controller and the DAO layer, handling data conversion, exception translation, and transaction management so the presentation tier stays loosely coupled from the business tier.</p>
+</div>
+
+<div class="diagram">Web Application Layered Architecture:
+
+view comp (jsp/html)  servlet/controller  (Java class)
+       |               |              Business Delegate  DAO (Java class)
+       v               v                   |                  |
+     request -----> (monitoring    ----> (b.logic)  -----> (Persistence  ----> DB s/w
+     response <---- logic)         <---- (other     <----- logic)        <---- Persistent
+                                          logic)          (CRUD operations)    Data
+
+|---- Presentation tier comps ----|---- Business tier comps --------|
+(view, controller comps are       (Business Delegate + DAO classes are
+ capable of taking requests from   capable of processing requests
+ browser and sending responses     and generating results)
+ back to browser)</div>
+
+<h3>Why loose coupling between tiers?</h3>
+<p>It is always recommended to develop presentation tier and business tier comps as <strong>loosely coupled comps</strong>, i.e., the degree of dependency should be less between both tiers. So the modifications done in presentation tier comps should not affect business tier comps and vice-versa.</p>
+<p>The PM/Project Leader divides team into two parties:</p>
+<ul>
+<li><strong>Party 1: Business tier developers</strong> - uses Java classes or Spring or Hibernate to develop business logic and persistence logic</li>
+<li><strong>Party 2: Presentation tier developers</strong> - uses Servlet/JSP technologies and develops view/controller layer logics</li>
+</ul>
+<p>Since these two parties can work parallelly either by staying in the same company or in two different branches of the same company, we need loose coupling between presentation tier comps and business tier comps.</p>
+
+<!-- ================================================================ -->
+<h2>2. Three Responsibilities of Business Delegate</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Business Delegate in Layered App will be used for 3 operations/use-cases</div>
+<ol type="a">
+<li><strong>Converts VO class object to BO class object</strong> by collecting all inputs from enduser in the form of String values</li>
+<li><strong>Converts DAO class generated technology-specific exception to project-specific user-defined exception</strong></li>
+<li><strong>Provides single JDBC connection object to multiple related DAO classes</strong> for Transaction Management support</li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>3. Responsibility a) VO to BO Conversion</h2>
+<!-- ================================================================ -->
+
+<h3>Problem (without Business Delegate)</h3>
+<div class="diagram">Problem: DTO/VO class changes when Business tier BO class changes
+
+form page (View comp)     Servlet comp      Business tier
+emp name: [____]          read form     EmployeeBussDelegate   DAO
+emp salary: [____]        data to         b.logic            SQL     DB s/w
+emp addr: [____]          DTO class obj   gross,net salary   query
+emp desg: [____]          (c2)            (c3)
+                                          BO class obj
+
+If "salary" column in DB changes from int to float:
+- BO class (Business tier): salary type changes to double
+- DTO class (Presentation tier): ALSO must change to double
+- This kills loose coupling! Presentation tier should NOT know about DB changes.</div>
+
+<pre><code>// Problem: DTO class mirrors BO class types
+public class EmployeeDTO {         // Presentation tier
+    private Integer empno;
+    private String ename;
+    private String eaddr;
+    private String salary;         // If DB changes salary to double,
+    private String desg;           // this must change too!
+    // setters and getters
+}
+
+public class EmployeeBO {          // Business tier
+    private Integer empno;
+    private String ename;
+    private String eaddr;
+    private Integer salary;        // Changed to double in DB
+    private Integer grossSalary;   // Business tier level
+    private Integer netSalary;     // Business tier level
+    // setters and getters
+}</code></pre>
+
+<h3>Solution: Business Delegate converts VO to BO</h3>
+
+<div class="diagram">Solution: Servlet stores ALL inputs as Strings in VO class.
+Business Delegate converts VO to BO as needed.
+
+form page (View comp)     Servlet comp      BusinessDelegate        DAO
+emp name: [____]          read form         b.logic              SQL     DB s/w
+emp salary: [____]        data to           gross,net salary
+emp addr: [____]          VO class obj      Convert VO to
+emp desg: [____]          (all Strings)     BO class obj
+                          NO CHANGES!       as needed for DAO
+
+Employee VO class (Presentation tier):    Employee BO class (Business tier):
+  private String empno;                     private Integer empno;
+  private String ename;    NO CHANGE       private String ename;    change to double
+  private String eaddr;    needed in        private String eaddr;
+  private String salary;   VO class!        private Integer salary;
+  private String desg;     Always String.   private Integer grossSalary; netSalary;
+                                            change to double</code></pre>
+</div>
+
+<p><strong>Key insight:</strong> For any change happened in Business tier DB table, we are forced to modify other business tier comps like BO, DAO, Business Delegate (not a problem because they are in the same tier). But there is no need modifying any code in VO class, Servlet comp of presentation tier, because VO class keeps all the inputs as String values always.</p>
+
+<!-- ================================================================ -->
+<h2>4. Responsibility b) Exception Translation</h2>
+<!-- ================================================================ -->
+
+<h3>Problem (without Business Delegate)</h3>
+<div class="diagram">Problem: Technology-specific exceptions leak to presentation tier
+
+Browser --> View comp --> Servlet comp --> BusinessDelegate --> DAO class --> DB s/w
+                            |                                    |
+                    catches and                          throws SQLException
+                    displays to user                     (if JDBC)
+                                                         OR
+                                                         HibernateException
+                                                         (if Hibernate)
+
+If DAO technology changes from JDBC to Hibernate:
+  SQLException changes to HibernateException
+  --> BusinessDelegate code must change
+  --> Controller/Servlet comp must change!
+  --> This kills loose coupling between tiers.</div>
+
+<h3>Solution: Convert to project-specific exception</h3>
+
+<pre><code>// Custom project-specific exception
+public class InternalProblemException extends Exception {
+    public InternalProblemException(String msg) {
+        super(msg);
+    }
+}
+
+// In BusinessDelegate: catch technology-specific, throw project-specific
+public class EmployeeOperations {
+    // BusinessDelegate class
+
+    public String registerEmployee(EmployeeVO vo) throws InternalProblemException {
+        try {
+            // ... business logic + DAO calls
+        } catch (SQLException sqle) {
+            // Catch technology-specific exception
+            // Convert to project-specific user-defined exception
+            throw new InternalProblemException(sqle.getMessage());
+        }
+    }
+}
+
+// In Servlet: catches ONLY InternalProblemException
+// If DAO changes from JDBC to Hibernate, only BusinessDelegate changes.
+// Servlet code stays the same.
+
+// Controller Servlet code:
+try {
+    // ... business logic
+    // ... invoke service method
+} catch (InternalProblemException ipe) {
+    // project-specific exception, not technology-specific
+    ipe.printStackTrace();
+}</code></pre>
+
+<div class="box box-orange">
+<div class="box-label" style="color:#92400e">Key Benefit</div>
+<p>Because of this code written in BusinessDelegate class, if the technology and exception changes in DAO class, we need to just modify BusinessDelegate class code exception handling. The Servlet comp code exception because business delegate is converting the technology-specific exception to project-specific user-defined exception.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>5. Responsibility c) Transaction Management</h2>
+<!-- ================================================================ -->
+
+<div class="box box-purple">
+<div class="box-label" style="color:#6d28d9">Transaction Management</div>
+<p>The process of combining related operations into single unit and executing them by applying <strong>do everything or nothing</strong> principle is called Transaction Management (Tx Mgmt).</p>
+<ul>
+<li><strong>Use case 1: Transfer Money</strong> - The withdraw and deposit operations should be executed by applying do everything or nothing principle.</li>
+<li><strong>Use case 2: Employee Registration</strong> - Insertion of record in HR DB table AND insertion of record in Finance DB table should be executed by applying do everything or nothing principle.</li>
+</ul>
+</div>
+
+<h4>Transaction Management (TxMgmt) deals with 3 operations:</h4>
+<ol type="a">
+<li><strong>Begin Tx</strong> - <code>con.setAutoCommit(false)</code></li>
+<li><strong>Execute logic</strong> - execute the queries</li>
+<li><strong>Commit or Rollback Tx</strong> - <code>con.commit()</code> or <code>con.rollback()</code></li>
+</ol>
+
+<h3>Problem: Separate connections per DAO</h3>
+<div class="diagram">Problem: Each DAO gets its own JDBC connection
+
+                    EmployeeBusinessDelegate
+form page           |
+  name: [__]        |       HREmployeeDAO          Finance_Employee
+  addr: [__]  -->   |  -->  jdbc conn1  --------> (eno, ename, eaddr, salary)
+  salary: [__]      |       con1.commit()
+                    |       con1.rollback()         HR_Employee
+                    |  -->  FinanceEmployeeDAO  --> (eno, ename, eaddr, salary, netSalary)
+                            jdbc conn2
+                            con2.commit()
+                            con2.rollback()
+
+Since both DAO classes are using their own separate jdbc con objects,
+we CANNOT perform commit and rollback operations on both DB tables at a time
+with the support of Transaction Management.
+
+If HREmployeeDAO succeeds but FinanceEmployeeDAO fails,
+we have an inconsistent state! Cannot rollback HR insert.</div>
+
+<h3>Solution: Single shared connection</h3>
+<div class="diagram">Solution: Business Delegate provides ONE jdbc connection to both DAOs
+
+                    EmployeeBusinessDelegate
+form page           |  gets conn obj             Finance_Employee
+  name: [__]        |  from ConnectionFactory    (eno, ename, eaddr, salary, netSalary)
+  addr: [__]  -->   |       |
+  salary: [__]      |       v
+                    |  HREmployeeDAO ---(conn obj)---> HR_Employee
+                    |       |                          (eno, ename, eaddr, salary)
+                    |  FinanceEmployeeDAO --(conn obj)
+                    |
+                    |  conn.setAutoCommit(false)  // begin tx
+                    |  hrDAO.insertRecord()
+                    |  finDAO.insertRecord()
+                    |  conn.commit()             // both succeed: commit
+                    |  OR
+                    |  conn.rollback()           // any fails: rollback BOTH
+
+We can make both DAO classes using single jdbc con object
+to perform persistence operations of each request, and we can use that
+jdbc con object either to commit (if both DAO have successfully inserted)
+or to rollback (if any DAO has failed to insert the record).</div>
+
+<!-- ================================================================ -->
+<h2>6. Full-Length Industry Project: Employee Registration</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Business Scenario</div>
+<p>When a new employee joins National Bank of India, their data must be inserted into two database tables: <code>HR_Employee</code> (HR department) and <code>Finance_Employee</code> (Finance department with salary details). Both inserts must succeed or both must fail (transaction). The Business Delegate handles: (1) converting VO (all Strings from form) to BO (correct types), (2) catching technology-specific exceptions and throwing project-specific ones, (3) managing the transaction across both DAOs using a shared JDBC connection.</p>
+</div>
+
+<h3>High-Level Design (HLD)</h3>
+
+<div class="diagram">
++----------------------------------------------+
+|          PRESENTATION TIER                    |
+|  Browser Window (employee_register.jsp)       |
+|    emp name: [____]                           |
+|    emp addr: [____]                           |
+|    emp salary: [____]                         |
+|    emp desg: [____]                           |
+|    [Register Employee]                        |
+|                v                              |
+|  MainControllerServlet                        |
+|    - reads form data into EmployeeVO          |
+|    - calls BusinessDelegate method            |
+|    - forwards to show_result.jsp or error.jsp |
++----------------------------------------------+
+                    |
+                    v
++----------------------------------------------+
+|          BUSINESS TIER                        |
+|  EmployeeOperations (BusinessDelegate)        |
+|    - converts EmployeeVO to BO class objects   |
+|    - gets Connection from ConnectionFactory   |
+|    - creates both DAO class objects            |
+|    - invokes methods on both DAO classes       |
+|    - manages transaction (commit/rollback)    |
+|    - catches SQLException, throws             |
+|      InternalProblemException                 |
+|                                               |
+|  HREmployeeDAO          FinanceEmployeeDAO    |
+|    - INSERT into         - INSERT into        |
+|      HR_Employee           Finance_Employee   |
+|    - uses shared conn    - uses shared conn   |
++----------------------------------------------+
+                    |
+                    v
++----------------------------------------------+
+|          DATA TIER                            |
+|  ConnectionFactory                            |
+|    - reads jdbc.properties                    |
+|    - returns Connection                       |
+|                                               |
+|  Oracle/MySQL Database                        |
+|    HR_Employee (eno, ename, eaddr, salary)    |
+|    Finance_Employee (eno, ename, eaddr,       |
+|                      salary, netSalary)       |
++----------------------------------------------+
+</div>
+
+<h3>Low-Level Design (LLD)</h3>
+
+<div class="diagram">
++-----------------------------------------------------+
+| EmployeeVO (Presentation tier - all Strings)        |
++-----------------------------------------------------+
+| - empno: String                                     |
+| - ename: String                                     |
+| - eaddr: String                                     |
+| - salary: String                                    |
+| - desg: String                                      |
++-----------------------------------------------------+
+
++-----------------------------------------------------+
+| HREmployeeBO (Business tier - correct types)        |
++-----------------------------------------------------+
+| - empno: int                                        |
+| - ename: String                                     |
+| - eaddr: String                                     |
+| - salary: double                                    |
++-----------------------------------------------------+
+
++-----------------------------------------------------+
+| FinanceEmployeeBO (Business tier)                   |
++-----------------------------------------------------+
+| - empno: int                                        |
+| - ename: String                                     |
+| - eaddr: String                                     |
+| - salary: double                                    |
+| - netSalary: double                                 |
++-----------------------------------------------------+
+
++-----------------------------------------------------+
+| EmployeeOperations (BusinessDelegate)               |
++-----------------------------------------------------+
+| + registerEmployee(EmployeeVO): String              |
+|   throws InternalProblemException                    |
+|   1. Convert VO to HREmployeeBO + FinanceEmployeeBO |
+|   2. Get Connection from ConnectionFactory           |
+|   3. con.setAutoCommit(false)                        |
+|   4. Create HREmployeeDAO(con)                       |
+|   5. Create FinanceEmployeeDAO(con)                  |
+|   6. hrDAO.insertRecord(hrBO)                        |
+|   7. finDAO.insertRecord(finBO)                      |
+|   8. con.commit() or con.rollback()                  |
+|   9. Catch SQLException -> throw InternalProblem     |
++-----------------------------------------------------+
+
++-----------------------------------------------------+
+| HREmployeeDAO                                       |
++-----------------------------------------------------+
+| - con: Connection (injected by BusinessDelegate)    |
+| - INSERT_QUERY: String [static final]               |
++-----------------------------------------------------+
+| + insertRecord(HREmployeeBO): int                   |
++-----------------------------------------------------+
+
++-----------------------------------------------------+
+| FinanceEmployeeDAO                                  |
++-----------------------------------------------------+
+| - con: Connection (injected by BusinessDelegate)    |
+| - INSERT_QUERY: String [static final]               |
++-----------------------------------------------------+
+| + insertRecord(FinanceEmployeeBO): int              |
++-----------------------------------------------------+
+</div>
+
+<h3>Project Structure</h3>
+<div class="ps">nbi-employee-registration/
+├── src/main/java/com/nbi/employee/
+│   ├── vo/
+│   │   └── EmployeeVO.java                (all String properties)
+│   ├── bo/
+│   │   ├── HREmployeeBO.java             (correct types)
+│   │   └── FinanceEmployeeBO.java
+│   ├── dao/
+│   │   ├── HREmployeeDAO.java
+│   │   └── FinanceEmployeeDAO.java
+│   ├── delegate/
+│   │   └── EmployeeOperations.java        (BusinessDelegate)
+│   ├── exception/
+│   │   └── InternalProblemException.java
+│   ├── factory/
+│   │   └── ConnectionFactory.java
+│   └── Application.java
+├── src/main/resources/
+│   └── jdbc.properties
+└── pom.xml</div>
+
+<h3>EmployeeVO.java (Presentation tier - all Strings)</h3>
+<pre><code>package com.nbi.employee.vo;
+
+public class EmployeeVO {
+    private String empno;
+    private String ename;
+    private String eaddr;
+    private String salary;
+    private String desg;
+
+    // All properties are String regardless of actual DB types.
+    // Presentation tier never changes when DB types change.
+
+    public String getEmpno() { return empno; }
+    public void setEmpno(String empno) { this.empno = empno; }
+    public String getEname() { return ename; }
+    public void setEname(String ename) { this.ename = ename; }
+    public String getEaddr() { return eaddr; }
+    public void setEaddr(String eaddr) { this.eaddr = eaddr; }
+    public String getSalary() { return salary; }
+    public void setSalary(String salary) { this.salary = salary; }
+    public String getDesg() { return desg; }
+    public void setDesg(String desg) { this.desg = desg; }
+}</code></pre>
+
+<h3>HREmployeeBO.java and FinanceEmployeeBO.java</h3>
+<pre><code>// HREmployeeBO.java
+package com.nbi.employee.bo;
+
+public class HREmployeeBO {
+    private int empno;
+    private String ename;
+    private String eaddr;
+    private double salary;
+
+    public HREmployeeBO(int empno, String ename, String eaddr, double salary) {
+        this.empno = empno;
+        this.ename = ename;
+        this.eaddr = eaddr;
+        this.salary = salary;
+    }
+
+    public int getEmpno() { return empno; }
+    public String getEname() { return ename; }
+    public String getEaddr() { return eaddr; }
+    public double getSalary() { return salary; }
+}
+
+// FinanceEmployeeBO.java
+package com.nbi.employee.bo;
+
+public class FinanceEmployeeBO {
+    private int empno;
+    private String ename;
+    private String eaddr;
+    private double salary;
+    private double netSalary;
+
+    public FinanceEmployeeBO(int empno, String ename, String eaddr,
+                              double salary, double netSalary) {
+        this.empno = empno;
+        this.ename = ename;
+        this.eaddr = eaddr;
+        this.salary = salary;
+        this.netSalary = netSalary;
+    }
+
+    public int getEmpno() { return empno; }
+    public String getEname() { return ename; }
+    public String getEaddr() { return eaddr; }
+    public double getSalary() { return salary; }
+    public double getNetSalary() { return netSalary; }
+}</code></pre>
+
+<h3>InternalProblemException.java</h3>
+<pre><code>package com.nbi.employee.exception;
+
+public class InternalProblemException extends Exception {
+    public InternalProblemException(String msg) {
+        super(msg);
+    }
+}</code></pre>
+
+<h3>HREmployeeDAO.java</h3>
+<pre><code>package com.nbi.employee.dao;
+
+import com.nbi.employee.bo.HREmployeeBO;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class HREmployeeDAO {
+    private static final String INSERT_QUERY =
+        "INSERT INTO HR_Employee (empno, ename, eaddr, salary) VALUES (?, ?, ?, ?)";
+
+    private final Connection con;
+
+    // Connection injected by BusinessDelegate (not created internally)
+    public HREmployeeDAO(Connection con) {
+        this.con = con;
+    }
+
+    public int insertRecord(HREmployeeBO bo) throws Exception {
+        PreparedStatement ps = con.prepareStatement(INSERT_QUERY);
+        ps.setInt(1, bo.getEmpno());
+        ps.setString(2, bo.getEname());
+        ps.setString(3, bo.getEaddr());
+        ps.setDouble(4, bo.getSalary());
+        return ps.executeUpdate();
+    }
+}</code></pre>
+
+<h3>FinanceEmployeeDAO.java</h3>
+<pre><code>package com.nbi.employee.dao;
+
+import com.nbi.employee.bo.FinanceEmployeeBO;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+public class FinanceEmployeeDAO {
+    private static final String INSERT_QUERY =
+        "INSERT INTO Finance_Employee (empno, ename, eaddr, salary, net_salary) VALUES (?, ?, ?, ?, ?)";
+
+    private final Connection con;
+
+    public FinanceEmployeeDAO(Connection con) {
+        this.con = con;
+    }
+
+    public int insertRecord(FinanceEmployeeBO bo) throws Exception {
+        PreparedStatement ps = con.prepareStatement(INSERT_QUERY);
+        ps.setInt(1, bo.getEmpno());
+        ps.setString(2, bo.getEname());
+        ps.setString(3, bo.getEaddr());
+        ps.setDouble(4, bo.getSalary());
+        ps.setDouble(5, bo.getNetSalary());
+        return ps.executeUpdate();
+    }
+}</code></pre>
+
+<h3>EmployeeOperations.java (Business Delegate - all 3 responsibilities)</h3>
+<pre><code>package com.nbi.employee.delegate;
+
+import com.nbi.employee.bo.HREmployeeBO;
+import com.nbi.employee.bo.FinanceEmployeeBO;
+import com.nbi.employee.dao.HREmployeeDAO;
+import com.nbi.employee.dao.FinanceEmployeeDAO;
+import com.nbi.employee.exception.InternalProblemException;
+import com.nbi.employee.factory.ConnectionFactory;
+import com.nbi.employee.vo.EmployeeVO;
+import java.sql.Connection;
+
+public class EmployeeOperations {
+
+    public String registerEmployee(EmployeeVO vo) throws InternalProblemException {
+        Connection con = null;
+        try {
+            // RESPONSIBILITY a) Convert VO (all Strings) to BO (correct types)
+            int empno = Integer.parseInt(vo.getEmpno());
+            double salary = Double.parseDouble(vo.getSalary());
+            double netSalary = salary * 0.75;  // business logic: 25% tax
+
+            HREmployeeBO hrBO = new HREmployeeBO(
+                empno, vo.getEname(), vo.getEaddr(), salary);
+            FinanceEmployeeBO finBO = new FinanceEmployeeBO(
+                empno, vo.getEname(), vo.getEaddr(), salary, netSalary);
+
+            // RESPONSIBILITY c) Single connection for Transaction Management
+            con = ConnectionFactory.getConnection();
+            con.setAutoCommit(false);  // BEGIN TRANSACTION
+
+            // Create both DAO classes with SHARED connection
+            HREmployeeDAO hrDAO = new HREmployeeDAO(con);
+            FinanceEmployeeDAO finDAO = new FinanceEmployeeDAO(con);
+
+            // Execute both inserts
+            int hrCount = hrDAO.insertRecord(hrBO);
+            int finCount = finDAO.insertRecord(finBO);
+
+            // Both succeeded: COMMIT
+            con.commit();
+            System.out.println("Transaction committed. HR: " + hrCount
+                + ", Finance: " + finCount);
+            return "Employee registration successful";
+
+        } catch (NumberFormatException nfe) {
+            return "Invalid input format: " + nfe.getMessage();
+
+        } catch (Exception e) {
+            // RESPONSIBILITY b) Convert technology-specific exception
+            // to project-specific user-defined exception
+            try {
+                if (con != null) {
+                    con.rollback();  // ROLLBACK both tables
+                    System.out.println("Transaction rolled back");
+                }
+            } catch (Exception rollbackEx) {
+                rollbackEx.printStackTrace();
+            }
+
+            // Wrap technology-specific exception (SQLException/HibernateException)
+            // into project-specific InternalProblemException
+            throw new InternalProblemException(
+                "Employee registration failed: " + e.getMessage());
+
+        } finally {
+            ConnectionFactory.closeConnection(con);
+        }
+    }
+}</code></pre>
+
+<h3>Application.java (simulates Controller Servlet)</h3>
+<pre><code>package com.nbi.employee;
+
+import com.nbi.employee.delegate.EmployeeOperations;
+import com.nbi.employee.exception.InternalProblemException;
+import com.nbi.employee.vo.EmployeeVO;
+
+public class Application {
+    public static void main(String[] args) {
+        EmployeeOperations delegate = new EmployeeOperations();
+
+        // Scenario 1: Successful registration
+        System.out.println("=== Scenario 1: Successful Registration ===");
+        EmployeeVO vo1 = new EmployeeVO();
+        vo1.setEmpno("1001");
+        vo1.setEname("Rajesh Kumar");
+        vo1.setEaddr("Hyderabad");
+        vo1.setSalary("75000");
+        vo1.setDesg("Senior Developer");
+
+        try {
+            String result = delegate.registerEmployee(vo1);
+            System.out.println("Result: " + result);
+            // forward to show_result.jsp
+        } catch (InternalProblemException ipe) {
+            System.out.println("Error: " + ipe.getMessage());
+            // forward to error.jsp
+        }
+
+        System.out.println();
+
+        // Scenario 2: Invalid input (VO to BO conversion fails)
+        System.out.println("=== Scenario 2: Invalid Salary ===");
+        EmployeeVO vo2 = new EmployeeVO();
+        vo2.setEmpno("1002");
+        vo2.setEname("Priya Singh");
+        vo2.setEaddr("Mumbai");
+        vo2.setSalary("not_a_number");  // invalid!
+        vo2.setDesg("Manager");
+
+        try {
+            String result = delegate.registerEmployee(vo2);
+            System.out.println("Result: " + result);
+        } catch (InternalProblemException ipe) {
+            System.out.println("Error: " + ipe.getMessage());
+        }
+
+        System.out.println();
+
+        // Scenario 3: DB failure (simulated - table doesn't exist)
+        System.out.println("=== Scenario 3: DB Failure ===");
+        try {
+            String result = delegate.registerEmployee(vo1);
+            System.out.println("Result: " + result);
+        } catch (InternalProblemException ipe) {
+            // This is InternalProblemException, NOT SQLException
+            // Controller doesn't know which DB technology is used
+            System.out.println("Error (project-specific): " + ipe.getMessage());
+        }
+    }
+}</code></pre>
+
+<h3>Expected Output</h3>
+<div class="output">=== Scenario 1: Successful Registration ===
+Transaction committed. HR: 1, Finance: 1
+Result: Employee registration successful
+
+=== Scenario 2: Invalid Salary ===
+Result: Invalid input format: For input string: "not_a_number"
+
+=== Scenario 3: DB Failure ===
+Transaction rolled back
+Error (project-specific): Employee registration failed: Table 'HR_Employee' doesn't exist</div>
+
+<h3>Key observations from the project</h3>
+<div class="card">
+<ol>
+<li><strong>VO class has ALL String properties.</strong> Presentation tier never changes when DB column types change. Only BusinessDelegate handles the conversion.</li>
+<li><strong>Shared connection enables transaction.</strong> Both HREmployeeDAO and FinanceEmployeeDAO receive the same Connection object. <code>con.commit()</code> commits both inserts. <code>con.rollback()</code> rolls back both.</li>
+<li><strong>Exception translation protects presentation tier.</strong> Controller catches <code>InternalProblemException</code> (project-specific), never <code>SQLException</code> or <code>HibernateException</code>. If DAO technology changes, only BusinessDelegate's catch block changes.</li>
+<li><strong>Business logic lives in BusinessDelegate.</strong> Net salary calculation (75% of gross) is done here, not in DAO or Controller. DAO has only SQL.</li>
+<li><strong>If FinanceEmployeeDAO fails, HREmployeeDAO insert is also rolled back.</strong> Do everything or nothing principle. Consistent state guaranteed.</li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>7. DB Schema (from course notes)</h2>
+<!-- ================================================================ -->
+
+<pre><code>-- HR Employee table
+CREATE TABLE HR_Employee (
+    empno   NUMBER(10) NOT NULL ENABLE,
+    ename   VARCHAR2(20 BYTE),
+    eaddr   VARCHAR2(20 BYTE),
+    desg    VARCHAR2(20 BYTE),
+    CONSTRAINT HR_Employee_PK PRIMARY KEY (empno)
+);
+
+-- Finance Employee table
+CREATE TABLE Finance_Employee (
+    empno      NUMBER(10) NOT NULL ENABLE,
+    ename      VARCHAR2(20 BYTE),
+    eaddr      VARCHAR2(20 BYTE),
+    desg       VARCHAR2(20 BYTE),
+    salary     FLOAT(126),
+    CONSTRAINT Finance_Employee_PK PRIMARY KEY (empno)
+);
+
+-- Sequence for auto-generated employee IDs
+CREATE SEQUENCE empno_seq MINVALUE 1 MAXVALUE 1000
+    INCREMENT BY 1 START WITH 1 CACHE 20 NOORDER NOCYCLE;</code></pre>
+
+<!-- ================================================================ -->
+<h2>8. When to Use and When NOT to Use</h2>
+<!-- ================================================================ -->
+
+<h3>When to use Business Delegate</h3>
+<table>
+<tr><th>Scenario</th><th>Why</th></tr>
+<tr><td>Multi-tier web application</td><td>Decouples presentation from business tier</td></tr>
+<tr><td>Multiple DAO operations in one request</td><td>Shared connection enables transaction management</td></tr>
+<tr><td>Technology-agnostic error handling</td><td>Converts DB exceptions to project exceptions</td></tr>
+<tr><td>Data format conversion needed</td><td>Converts String VO to typed BO</td></tr>
+<tr><td>Team separation</td><td>Presentation and business teams work independently</td></tr>
+</table>
+
+<h3>When NOT to use</h3>
+<table>
+<tr><th>Scenario</th><th>Alternative</th></tr>
+<tr><td>Spring Boot application</td><td>Spring @Transactional handles transactions. @ControllerAdvice handles exceptions. ModelMapper handles VO-to-BO.</td></tr>
+<tr><td>Single DAO per request</td><td>No need for shared connection or transaction coordination</td></tr>
+<tr><td>Microservice with REST API</td><td>Service layer with DTOs replaces BusinessDelegate</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>9. Quick Reference Card</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<table>
+<tr><th>Responsibility</th><th>What it does</th><th>Without BD</th><th>With BD</th></tr>
+<tr><td>VO to BO</td><td>Converts all-String VO to typed BO</td><td>VO changes when DB types change</td><td>Only BD changes</td></tr>
+<tr><td>Exception translation</td><td>Converts tech exception to project exception</td><td>Controller catches SQLException</td><td>Controller catches project exception</td></tr>
+<tr><td>Transaction Mgmt</td><td>Shared connection, atomic commit/rollback</td><td>Each DAO has own connection</td><td>All DAOs share one connection</td></tr>
+</table>
+</div>
+
+<!-- ================================================================ -->
+<h2>10. Interview Questions</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<ol>
+<li>What is the Business Delegate pattern? What are its three responsibilities?</li>
+<li>Why should VO class properties be all Strings?</li>
+<li>How does Business Delegate achieve loose coupling between presentation and business tiers?</li>
+<li>What is exception translation? Why is it important?</li>
+<li>How does Business Delegate support Transaction Management?</li>
+<li>What is the difference between VO, DTO, and BO classes?</li>
+<li>Why should multiple DAOs in a transaction share a single JDBC connection?</li>
+<li>What happens if con.setAutoCommit(false) is not called?</li>
+<li>How does Spring @Transactional replace the Business Delegate's transaction management?</li>
+<li>Design a Business Delegate for a fund transfer (debit + credit) across two accounts.</li>
+<li>What is the difference between Business Delegate and Service Layer?</li>
+<li>How does Business Delegate handle partial failures in multi-DAO operations?</li>
+</ol>
+</div>
+
+</body>
+</html>

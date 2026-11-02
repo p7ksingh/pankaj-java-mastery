@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Decorator / Wrapper Design Pattern in Java - Complete Tutorial | javabypankaj</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,sans-serif;line-height:1.7;color:#333;background:#f0f2f5;max-width:960px;margin:0 auto;padding:40px 24px}
+h1{font-size:28px;font-weight:800;margin-bottom:8px}
+h2{font-size:22px;font-weight:700;margin-top:48px;margin-bottom:14px;border-bottom:2px solid #e0e0e0;padding-bottom:8px}
+h3{font-size:18px;font-weight:700;margin-top:28px;margin-bottom:8px;color:#2c3e50}
+h4{font-size:15px;font-weight:600;margin-top:20px;margin-bottom:6px}
+p,li{font-size:14px;margin-bottom:8px}
+ul,ol{margin-left:24px;margin-bottom:12px}
+pre{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-size:13px;line-height:1.55;overflow-x:auto;margin:12px 0;font-family:Menlo,Consolas,monospace}
+code{font-family:Menlo,Consolas,monospace;font-size:13px;background:#f0f0f0;padding:1px 5px;border-radius:4px}
+pre code{background:none;padding:0}
+.meta{font-size:13px;color:#999;margin-bottom:24px}
+.tag{display:inline-block;padding:3px 10px;border-radius:12px;font-size:12px;font-weight:600;margin-right:6px}
+.tag-s{background:#fce7f3;color:#9d174d}.tag-g{background:#e8f8f0;color:#27ae60}.tag-m{background:#fff3e0;color:#e67e22}
+.box{border-left:4px solid;border-radius:0 8px 8px 0;padding:16px 20px;margin:16px 0}
+.box-blue{border-color:#4A90D9;background:#eff6ff}
+.box-red{border-color:#e74c3c;background:#fef2f2}
+.box-green{border-color:#27ae60;background:#f0fdf4}
+.box-orange{border-color:#e67e22;background:#fffbeb}
+.box-purple{border-color:#8b5cf6;background:#f5f3ff}
+.box-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+.diagram{background:#fafafa;border:1px solid #ccc;padding:14px;margin:12px 0;font-family:Menlo,monospace;font-size:12px;white-space:pre;line-height:1.4;overflow-x:auto;border-radius:8px}
+table{border-collapse:collapse;margin:12px 0;width:100%}
+th,td{border:1px solid #e0e0e0;padding:8px 12px;font-size:13px;text-align:left}
+th{background:#2d3748;color:#fff;font-weight:600}
+.card{background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);padding:24px;margin:16px 0}
+.ps{background:#1e2533;color:#e6edf3;border-radius:8px;padding:16px;font-family:Menlo,monospace;font-size:13px;line-height:1.6}
+.output{background:#0d1117;color:#58a6ff;border-radius:8px;padding:14px;font-family:Menlo,monospace;font-size:12px;margin:8px 0;border:1px solid #30363d}
+</style>
+</head>
+<body>
+
+<span class="tag tag-s">Structural</span>
+<span class="tag tag-g">GOF Pattern</span>
+<span class="tag tag-m">Medium</span>
+
+<h1>Decorator / Wrapper Design Pattern in Java</h1>
+<p class="meta">Complete Tutorial | 10 Sections | Full Logging Pipeline Project with HLD and LLD | Ice Cream and Dosa Examples | Composition over Inheritance | JDK I/O Streams | Multiple Scenarios | 12 Interview Questions</p>
+
+<!-- ================================================================ -->
+<h2>1. What is Decorator Pattern?</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">Definition</div>
+<p>The Decorator pattern is a <strong>GOF Structural Pattern</strong>, also called the <strong>Wrapper Pattern</strong>. It attaches additional responsibilities to an object dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.</p>
+<p><strong>One line:</strong> Add new responsibilities/functionalities to an existing object as wrappers without affecting the existing object. Uses composition, not inheritance.</p>
+</div>
+
+<!-- ================================================================ -->
+<h2>2. The Problem: Class Explosion via Inheritance</h2>
+<!-- ================================================================ -->
+
+<div class="box box-red">
+<div class="box-label" style="color:#dc2626">Problem</div>
+<p>Using inheritance to add new responsibilities/functionalities on top of an existing object will just increase the number of classes and create huge problems for application users.</p>
+</div>
+
+<h3>Ice cream example</h3>
+<p>An ice cream shop has:</p>
+<ul>
+<li>3 basic flavours: Vanilla, ButterScotch, Strawberry</li>
+<li>4 toppings: DryFruits, Honey, Cookies, ChocoChips</li>
+</ul>
+<p>If we prepare classes by keeping all permutations and combinations in mind: potentially <strong>3 x 4! = 72+ classes</strong>. If basic flavours count and toppings count is increasing, we will end up developing lots of classes satisfying all permutations and combinations.</p>
+
+<pre><code>// Problem: inheritance-based approach (class explosion!)
+
+// Common Interface
+package com.nt.comps;
+public interface Icecream {
+    void prepare();
+}
+
+// Concrete class 1
+package com.nt.comps;
+public class ButterScotchIcecream implements Icecream {
+    @Override
+    public void prepare() {
+        System.out.println("preparing ButterScotch iceCream");
+    }
+}
+
+// Concrete class 2
+package com.nt.comps;
+public class VanilaIcecream implements Icecream {
+    @Override
+    public void prepare() {
+        System.out.println("preparing Vanilla iceCream");
+    }
+}
+
+// Extension via inheritance: DryFruit on Vanilla
+package com.nt.comps;
+public class DryFruitVanilaIcecream extends VanilaIcecream {
+    @Override
+    public void prepare() {
+        System.out.println("preparing Vanilla iceCream");
+        addDryFruits();
+    }
+    public void addDryFruits() {
+        System.out.println("Adding DryFruits.....");
+    }
+}
+
+// Extension via inheritance: Honey + DryFruit on Vanilla
+package com.nt.comps;
+public class HoneyDryFruitVanilaIcecream extends DryFruitVanilaIcecream {
+    @Override
+    public void prepare() {
+        super.prepare();
+        addHoney();
+    }
+    public void addHoney() {
+        System.out.println("Adding Honey.....");
+    }
+}
+
+// ... and many many more classes will come here .....
+// For EVERY combination, we need a new class!</code></pre>
+
+<!-- ================================================================ -->
+<h2>3. The Solution: Decorators as Wrappers</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Solution</div>
+<p>Instead of creating a new class for each combination, wrap the base object with decorator objects. Each decorator adds one responsibility. Decorators can be stacked in any order to create any combination dynamically at runtime.</p>
+</div>
+
+<div class="diagram">Basic Objects (Concrete Components):
+  [Vanilla]    [Strawberry]    [ButterScotch]
+
+Decorators (wrap any component):
+  [DryFruitDecorator]  [HoneyDecorator]  [ChocoChipsDecorator]  [CookiesDecorator]
+
+Customer 1 wants: DryFruit Vanilla IceCream
+  --> new DryFruitDecorator(new VanilaIcecream())
+
+Customer 2 wants: DryFruit + Honey + Cookies ButterScotch IceCream
+  --> new DryFruitDecorator(
+        new HoneyDecorator(
+          new CookiesDecorator(
+            new ButterScotchIcecream())))
+
+No new classes needed! Just stack decorators.</div>
+
+<h3>Four Components</h3>
+<table>
+<tr><th>Component</th><th>Role</th><th>Ice Cream Example</th></tr>
+<tr><td><strong>a) Component Interface</strong></td><td>The common interface implemented by all concrete classes and decorators to make a single type</td><td><code>Icecream</code></td></tr>
+<tr><td><strong>b) Concrete Components</strong></td><td>Classes implementing Component Interface providing basic objects on which we may need to add additional functionalities</td><td><code>VanilaIcecream</code>, <code>ButterScotchIcecream</code>, <code>StrawberryIcecream</code></td></tr>
+<tr><td><strong>c) Abstract Decorator</strong></td><td>The common and abstract super class for all Decorators. Implements Component Interface AND also maintains same interface type variable as the HAS-A property.</td><td><code>IceCreamDecorator</code></td></tr>
+<tr><td><strong>d) Concrete Decorators</strong></td><td>Extends from Abstract Decorator having logics to provide additional functionalities for the Concrete Component classes objects.</td><td><code>DryFruitDecorator</code>, <code>HoneyDecorator</code>, <code>ChocoChipsDecorator</code></td></tr>
+</table>
+
+<div class="diagram">Component Interface: Icecream
+        |
+   +----+----+
+   |         |
+Concrete   Abstract Decorator
+Components  (IceCreamDecorator)
+(Vanilla,    implements Icecream
+Strawberry,  HAS-A Icecream  <--- key: holds reference to wrapped component
+ButterScotch)    |
+              +--+--+--+--+
+              |  |  |  |
+        DryFruit Honey ChocoChips Cookies
+        Decorator Decorator Decorator Decorator</div>
+
+<!-- ================================================================ -->
+<h2>4. Ice Cream Example (Complete Code)</h2>
+<!-- ================================================================ -->
+
+<h3>Component Interface</h3>
+<pre><code>package com.nt.comps;
+
+public interface Icecream {
+    void prepare();
+}</code></pre>
+
+<h3>Concrete Components</h3>
+<pre><code>package com.nt.comps;
+
+public class VanilaIcecream implements Icecream {
+    @Override
+    public void prepare() {
+        System.out.println("Preparing Vanilla Icecream");
+    }
+}
+
+public class ButterScotchIcecream implements Icecream {
+    @Override
+    public void prepare() {
+        System.out.println("Preparing ButterScotch Icecream");
+    }
+}
+
+public class StrawberryIcecream implements Icecream {
+    @Override
+    public void prepare() {
+        System.out.println("Preparing Strawberry Icecream");
+    }
+}</code></pre>
+
+<h3>Abstract Decorator</h3>
+<pre><code>package com.nt.decorators;
+
+import com.nt.comps.Icecream;
+
+public abstract class IceCreamDecorator implements Icecream {
+    protected Icecream icecream;  // HAS-A (wraps another Icecream)
+
+    public IceCreamDecorator(Icecream icecream) {
+        this.icecream = icecream;
+    }
+
+    @Override
+    public void prepare() {
+        icecream.prepare();  // delegate to the wrapped component
+    }
+}</code></pre>
+
+<h3>Concrete Decorators</h3>
+<pre><code>package com.nt.decorators;
+
+import com.nt.comps.Icecream;
+
+public class DryFruitDecorator extends IceCreamDecorator {
+    public DryFruitDecorator(Icecream icecream) {
+        super(icecream);
+    }
+
+    @Override
+    public void prepare() {
+        super.prepare();
+        addDryFruits();
+    }
+
+    private void addDryFruits() {
+        System.out.println("  + Adding Dry Fruits");
+    }
+}
+
+public class HoneyDecorator extends IceCreamDecorator {
+    public HoneyDecorator(Icecream icecream) {
+        super(icecream);
+    }
+
+    @Override
+    public void prepare() {
+        super.prepare();
+        addHoney();
+    }
+
+    private void addHoney() {
+        System.out.println("  + Adding Honey");
+    }
+}
+
+public class ChocoChipsDecorator extends IceCreamDecorator {
+    public ChocoChipsDecorator(Icecream icecream) {
+        super(icecream);
+    }
+
+    @Override
+    public void prepare() {
+        super.prepare();
+        addChocoChips();
+    }
+
+    private void addChocoChips() {
+        System.out.println("  + Adding Choco Chips");
+    }
+}
+
+public class CookiesDecorator extends IceCreamDecorator {
+    public CookiesDecorator(Icecream icecream) {
+        super(icecream);
+    }
+
+    @Override
+    public void prepare() {
+        super.prepare();
+        addCookies();
+    }
+
+    private void addCookies() {
+        System.out.println("  + Adding Cookies");
+    }
+}</code></pre>
+
+<h3>Client test</h3>
+<pre><code>package com.nt.test;
+
+import com.nt.comps.*;
+import com.nt.decorators.*;
+
+public class IceCreamTest {
+    public static void main(String[] args) {
+        // Customer 1: DryFruit Vanilla IceCream
+        System.out.println("=== Customer 1 ===");
+        Icecream c1 = new DryFruitDecorator(new VanilaIcecream());
+        c1.prepare();
+
+        System.out.println();
+
+        // Customer 2: DryFruit + Honey + Cookies ButterScotch
+        System.out.println("=== Customer 2 ===");
+        Icecream c2 = new DryFruitDecorator(
+                         new HoneyDecorator(
+                           new CookiesDecorator(
+                             new ButterScotchIcecream())));
+        c2.prepare();
+
+        System.out.println();
+
+        // Customer 3: ChocoChips Strawberry
+        System.out.println("=== Customer 3 ===");
+        Icecream c3 = new ChocoChipsDecorator(new StrawberryIcecream());
+        c3.prepare();
+    }
+}</code></pre>
+
+<div class="output">=== Customer 1 ===
+Preparing Vanilla Icecream
+  + Adding Dry Fruits
+
+=== Customer 2 ===
+Preparing ButterScotch Icecream
+  + Adding Cookies
+  + Adding Honey
+  + Adding Dry Fruits
+
+=== Customer 3 ===
+Preparing Strawberry Icecream
+  + Adding Choco Chips</div>
+
+<!-- ================================================================ -->
+<h2>5. Dosa Example (UseCase 2 from course)</h2>
+<!-- ================================================================ -->
+
+<table>
+<tr><th>Component</th><th>Classes</th></tr>
+<tr><td>Component Interface</td><td><code>Dosa</code></td></tr>
+<tr><td>Concrete Components</td><td><code>GreenGramDosa</code>, <code>BlackGramDosa</code>, <code>RagiDosa</code>, <code>MilletDosa</code></td></tr>
+<tr><td>Abstract Decorator</td><td><code>BaseDosaDecorator</code></td></tr>
+<tr><td>Concrete Decorators</td><td><code>PaneerDosaDecorator</code>, <code>MasalaDosaDecorator</code>, <code>MixVegDosaDecorator</code>, <code>EggDosaDecorator</code></td></tr>
+</table>
+
+<pre><code>// Component Interface
+package com.nt.dosa;
+
+public interface Dosa {
+    void prepare();
+    double cost();
+}
+
+// Concrete Component
+public class GreenGramDosa implements Dosa {
+    public void prepare() {
+        System.out.println("Preparing GreenGram Dosa (base)");
+    }
+    public double cost() { return 50.0; }
+}
+
+public class BlackGramDosa implements Dosa {
+    public void prepare() {
+        System.out.println("Preparing BlackGram Dosa (base)");
+    }
+    public double cost() { return 40.0; }
+}
+
+// Abstract Decorator
+public abstract class BaseDosaDecorator implements Dosa {
+    protected Dosa dosa;
+    public BaseDosaDecorator(Dosa dosa) { this.dosa = dosa; }
+    public void prepare() { dosa.prepare(); }
+    public double cost() { return dosa.cost(); }
+}
+
+// Concrete Decorators
+public class MasalaDosaDecorator extends BaseDosaDecorator {
+    public MasalaDosaDecorator(Dosa dosa) { super(dosa); }
+    public void prepare() {
+        super.prepare();
+        System.out.println("  + Adding Masala filling");
+    }
+    public double cost() { return super.cost() + 20.0; }
+}
+
+public class PaneerDosaDecorator extends BaseDosaDecorator {
+    public PaneerDosaDecorator(Dosa dosa) { super(dosa); }
+    public void prepare() {
+        super.prepare();
+        System.out.println("  + Adding Paneer topping");
+    }
+    public double cost() { return super.cost() + 30.0; }
+}
+
+public class EggDosaDecorator extends BaseDosaDecorator {
+    public EggDosaDecorator(Dosa dosa) { super(dosa); }
+    public void prepare() {
+        super.prepare();
+        System.out.println("  + Adding Egg layer");
+    }
+    public double cost() { return super.cost() + 15.0; }
+}
+
+// Client
+Dosa order = new PaneerDosaDecorator(new MasalaDosaDecorator(new GreenGramDosa()));
+order.prepare();
+System.out.println("Total cost: Rs " + order.cost());</code></pre>
+
+<div class="output">Preparing GreenGram Dosa (base)
+  + Adding Masala filling
+  + Adding Paneer topping
+Total cost: Rs 100.0</div>
+
+<!-- ================================================================ -->
+<h2>6. Pre-defined Decorator Examples in Java</h2>
+<!-- ================================================================ -->
+
+<div class="box box-blue">
+<div class="box-label" style="color:#2563eb">JDK I/O Streams as Decorators</div>
+<p>The entire <code>java.io</code> stream hierarchy is built on the Decorator pattern. Base streams (FileInputStream, FileOutputStream) are wrapped with decorators (BufferedInputStream, DataInputStream, ObjectInputStream) to add functionality.</p>
+</div>
+
+<pre><code>// Decorator pattern in JDK I/O:
+DataInputStream dis = new DataInputStream(
+                        new FileInputStream("abc.txt"));
+// FileInputStream = concrete component (reads raw bytes)
+// DataInputStream = decorator (adds readInt(), readDouble(), etc.)
+
+DataOutputStream dos = new DataOutputStream(
+                         new FileOutputStream("abc.txt"));
+// FileOutputStream = concrete component (writes raw bytes)
+// DataOutputStream = decorator (adds writeInt(), writeDouble(), etc.)
+
+Scanner scanner = new Scanner(System.in);
+// System.in = concrete component (raw byte stream)
+// Scanner = decorator (adds nextInt(), nextLine(), etc.)</code></pre>
+
+<table>
+<tr><th>Wrapper Class (Decorator)</th><th>Wraps</th><th>Adds</th></tr>
+<tr><td><code>BufferedReader</code></td><td>Reader</td><td>Buffering for efficient reading, readLine()</td></tr>
+<tr><td><code>BufferedWriter</code></td><td>Writer</td><td>Buffering for efficient writing</td></tr>
+<tr><td><code>DataInputStream</code></td><td>InputStream</td><td>readInt(), readDouble(), readUTF()</td></tr>
+<tr><td><code>DataOutputStream</code></td><td>OutputStream</td><td>writeInt(), writeDouble(), writeUTF()</td></tr>
+<tr><td><code>ObjectInputStream</code></td><td>InputStream</td><td>readObject() for deserialization</td></tr>
+<tr><td><code>ObjectOutputStream</code></td><td>OutputStream</td><td>writeObject() for serialization</td></tr>
+<tr><td><code>PrintStream</code></td><td>OutputStream</td><td>print(), println(), printf()</td></tr>
+<tr><td><code>InputStreamReader</code></td><td>InputStream</td><td>Byte-to-character bridge (also Adapter)</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>7. Full-Length Industry Project: Logging Pipeline with Decorators</h2>
+<!-- ================================================================ -->
+
+<div class="box box-green">
+<div class="box-label" style="color:#166534">Business Scenario</div>
+<p>National Bank of India needs a flexible logging system. The base logger writes plain text to a file. Different services need different enhancements: some need timestamps, some need log levels (INFO, ERROR), some need the caller class name, and some need all three. Instead of creating TimestampLogger, LevelLogger, TimestampLevelLogger, TimestampLevelCallerLogger (class explosion), decorators can be stacked as needed.</p>
+</div>
+
+<h3>High-Level Design (HLD)</h3>
+
+<div class="diagram">
++---------------------------------------------------+
+|              SERVICE LAYER                         |
+|  AccountService  -->  needs: timestamp + level     |
+|  TransferService -->  needs: timestamp + level + caller|
+|  AuditService    -->  needs: all + encryption      |
++----------------------------+----------------------+
+                             |
+                             v
++---------------------------------------------------+
+|           DECORATOR PIPELINE                       |
+|                                                    |
+|  Logger (interface)                                |
+|     |                                              |
+|  +--+----+                                         |
+|  |       |                                         |
+|  FileLogger   LoggerDecorator (abstract)           |
+|  (base)         |                                  |
+|             +---+---+---+---+                      |
+|             |   |   |   |                          |
+|           Timestamp Level Caller Encrypt           |
+|           Decorator Decorator Decorator Decorator  |
+|                                                    |
+| Usage: new TimestampDecorator(                     |
+|          new LevelDecorator(                       |
+|            new FileLogger("app.log")))             |
++---------------------------------------------------+
+</div>
+
+<h3>Low-Level Design (LLD)</h3>
+
+<div class="diagram">
++-------------------------------------------------------+
+| Logger (interface)                                    |
++-------------------------------------------------------+
+| + log(message: String): void                          |
+| + close(): void                                       |
++-------------------------------------------------------+
+         ^                    ^
+         |                    |
++------------------+  +---------------------------+
+| FileLogger       |  | LoggerDecorator (abstract) |
+| (concrete comp)  |  | implements Logger          |
+| - writer         |  | - wrapped: Logger  [HAS-A] |
++------------------+  +---------------------------+
+                              ^
+               +--------------+---+---+---+
+               |              |       |       |
+        +------------+ +----------+ +----------+ +-------------+
+        | Timestamp  | | Level    | | Caller   | | Encryption  |
+        | Decorator  | | Decorator| | Decorator| | Decorator   |
+        +------------+ +----------+ +----------+ +-------------+
+        prepends       prepends     prepends     encrypts
+        [timestamp]    [LEVEL]      [ClassName]  sensitive data
+</div>
+
+<h3>Project Structure</h3>
+<div class="ps">nbi-logging-pipeline/
+├── src/
+│   └── main/java/com/nbi/logging/
+│       ├── Logger.java                    (component interface)
+│       ├── FileLogger.java                (concrete component)
+│       ├── LoggerDecorator.java           (abstract decorator)
+│       ├── TimestampDecorator.java        (concrete decorator)
+│       ├── LevelDecorator.java            (concrete decorator)
+│       ├── CallerDecorator.java           (concrete decorator)
+│       ├── EncryptionDecorator.java       (concrete decorator)
+│       └── Application.java
+├── src/
+│   └── test/java/com/nbi/logging/
+│       └── LoggerDecoratorTest.java
+└── pom.xml</div>
+
+<h3>Logger.java (Component Interface)</h3>
+<pre><code>package com.nbi.logging;
+
+public interface Logger {
+    void log(String message);
+    void close();
+}</code></pre>
+
+<h3>FileLogger.java (Concrete Component)</h3>
+<pre><code>package com.nbi.logging;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+public class FileLogger implements Logger {
+    private final PrintWriter writer;
+    private final List&lt;String&gt; logHistory = new ArrayList&lt;&gt;();
+
+    public FileLogger(String filePath) {
+        try {
+            this.writer = new PrintWriter(new FileWriter(filePath, true), true);
+        } catch (IOException e) {
+            throw new RuntimeException("Cannot open log file: " + filePath, e);
+        }
+    }
+
+    @Override
+    public void log(String message) {
+        writer.println(message);
+        System.out.println(message);
+        logHistory.add(message);
+    }
+
+    @Override
+    public void close() {
+        writer.close();
+    }
+
+    public List&lt;String&gt; getLogHistory() {
+        return logHistory;
+    }
+}</code></pre>
+
+<h3>LoggerDecorator.java (Abstract Decorator)</h3>
+<pre><code>package com.nbi.logging;
+
+public abstract class LoggerDecorator implements Logger {
+    protected final Logger wrapped;  // HAS-A (wraps another Logger)
+
+    protected LoggerDecorator(Logger wrapped) {
+        this.wrapped = wrapped;
+    }
+
+    @Override
+    public void log(String message) {
+        wrapped.log(message);  // delegate to wrapped logger
+    }
+
+    @Override
+    public void close() {
+        wrapped.close();
+    }
+}</code></pre>
+
+<h3>TimestampDecorator.java</h3>
+<pre><code>package com.nbi.logging;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class TimestampDecorator extends LoggerDecorator {
+    private static final DateTimeFormatter FORMATTER =
+        DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+
+    public TimestampDecorator(Logger wrapped) {
+        super(wrapped);
+    }
+
+    @Override
+    public void log(String message) {
+        String timestamp = LocalDateTime.now().format(FORMATTER);
+        String decorated = "[" + timestamp + "] " + message;
+        super.log(decorated);
+    }
+}</code></pre>
+
+<h3>LevelDecorator.java</h3>
+<pre><code>package com.nbi.logging;
+
+public class LevelDecorator extends LoggerDecorator {
+    private final String level;
+
+    public LevelDecorator(Logger wrapped, String level) {
+        super(wrapped);
+        this.level = level;
+    }
+
+    @Override
+    public void log(String message) {
+        String decorated = "[" + level + "] " + message;
+        super.log(decorated);
+    }
+}</code></pre>
+
+<h3>CallerDecorator.java</h3>
+<pre><code>package com.nbi.logging;
+
+public class CallerDecorator extends LoggerDecorator {
+    private final String callerClass;
+
+    public CallerDecorator(Logger wrapped, String callerClass) {
+        super(wrapped);
+        this.callerClass = callerClass;
+    }
+
+    @Override
+    public void log(String message) {
+        String decorated = "[" + callerClass + "] " + message;
+        super.log(decorated);
+    }
+}</code></pre>
+
+<h3>EncryptionDecorator.java</h3>
+<pre><code>package com.nbi.logging;
+
+import java.util.Base64;
+
+public class EncryptionDecorator extends LoggerDecorator {
+
+    public EncryptionDecorator(Logger wrapped) {
+        super(wrapped);
+    }
+
+    @Override
+    public void log(String message) {
+        // Simple Base64 encoding to demonstrate concept
+        // In production, use AES or similar encryption
+        String encrypted = Base64.getEncoder().encodeToString(message.getBytes());
+        String decorated = "[ENCRYPTED] " + encrypted;
+        super.log(decorated);
+    }
+}</code></pre>
+
+<h3>Application.java</h3>
+<pre><code>package com.nbi.logging;
+
+public class Application {
+    public static void main(String[] args) {
+        // Scenario 1: Plain file logger (no decorators)
+        System.out.println("=== Scenario 1: Plain Logger ===");
+        Logger plain = new FileLogger("plain.log");
+        plain.log("Application started");
+        plain.log("Processing request");
+        plain.close();
+        System.out.println();
+
+        // Scenario 2: Timestamp + Level (AccountService style)
+        System.out.println("=== Scenario 2: Timestamp + Level ===");
+        Logger accountLogger = new TimestampDecorator(
+                                 new LevelDecorator(
+                                   new FileLogger("account.log"), "INFO"));
+        accountLogger.log("Account SAV2001 balance queried");
+        accountLogger.log("Balance: Rs 250000");
+        accountLogger.close();
+        System.out.println();
+
+        // Scenario 3: Timestamp + Level + Caller (TransferService style)
+        System.out.println("=== Scenario 3: Timestamp + Level + Caller ===");
+        Logger transferLogger = new TimestampDecorator(
+                                  new LevelDecorator(
+                                    new CallerDecorator(
+                                      new FileLogger("transfer.log"),
+                                      "TransferService"), "INFO"));
+        transferLogger.log("Transfer initiated: SAV2001 -> CUR3001");
+        transferLogger.log("Amount: Rs 50000");
+        transferLogger.close();
+        System.out.println();
+
+        // Scenario 4: All decorators including encryption (AuditService style)
+        System.out.println("=== Scenario 4: All + Encryption ===");
+        Logger auditLogger = new TimestampDecorator(
+                               new LevelDecorator(
+                                 new CallerDecorator(
+                                   new EncryptionDecorator(
+                                     new FileLogger("audit.log")),
+                                   "AuditService"), "AUDIT"));
+        auditLogger.log("Sensitive: Customer PAN ABCDE1234F accessed");
+        auditLogger.close();
+        System.out.println();
+
+        // Scenario 5: Different level on same base
+        System.out.println("=== Scenario 5: ERROR level ===");
+        Logger errorLogger = new TimestampDecorator(
+                               new LevelDecorator(
+                                 new FileLogger("error.log"), "ERROR"));
+        errorLogger.log("Database connection failed");
+        errorLogger.close();
+    }
+}</code></pre>
+
+<h3>Expected Output</h3>
+<div class="output">=== Scenario 1: Plain Logger ===
+Application started
+Processing request
+
+=== Scenario 2: Timestamp + Level ===
+[2026-11-02 18:00:00.001] [INFO] Account SAV2001 balance queried
+[2026-11-02 18:00:00.002] [INFO] Balance: Rs 250000
+
+=== Scenario 3: Timestamp + Level + Caller ===
+[2026-11-02 18:00:00.003] [INFO] [TransferService] Transfer initiated: SAV2001 -> CUR3001
+[2026-11-02 18:00:00.004] [INFO] [TransferService] Amount: Rs 50000
+
+=== Scenario 4: All + Encryption ===
+[2026-11-02 18:00:00.005] [AUDIT] [AuditService] [ENCRYPTED] U2Vuc2l0aXZlOiBDdXN0b21lciBQQU4gQUJDREUxMjM0RiBhY2Nlc3NlZA==
+
+=== Scenario 5: ERROR level ===
+[2026-11-02 18:00:00.006] [ERROR] Database connection failed</div>
+
+<h3>Key observations from the project</h3>
+<div class="card">
+<ol>
+<li><strong>No class explosion:</strong> 4 decorators + 1 base logger = 5 classes. Without decorator, we would need: PlainLogger, TimestampLogger, LevelLogger, CallerLogger, TimestampLevelLogger, TimestampCallerLogger, LevelCallerLogger, TimestampLevelCallerLogger, plus encryption variants = 16+ classes.</li>
+<li><strong>Stack any combination:</strong> Each service creates its own pipeline by stacking decorators. AccountService uses Timestamp+Level. TransferService adds Caller. AuditService adds Encryption. No new classes needed.</li>
+<li><strong>Order matters:</strong> Decorators wrap from inside out. The innermost decorator runs first. In scenario 3, CallerDecorator adds class name, then LevelDecorator adds level, then TimestampDecorator adds timestamp.</li>
+<li><strong>Same interface throughout:</strong> FileLogger, TimestampDecorator, LevelDecorator all implement <code>Logger</code>. The client works with <code>Logger</code> type regardless of how many decorators are stacked.</li>
+<li><strong>Open/Closed Principle:</strong> Adding a new decorator (e.g., ThreadNameDecorator) requires only one new class. No existing code changes.</li>
+</ol>
+</div>
+
+<!-- ================================================================ -->
+<h2>8. When to Use and When NOT to Use</h2>
+<!-- ================================================================ -->
+
+<h3>When to use Decorator</h3>
+<table>
+<tr><th>Scenario</th><th>Example</th><th>Why Decorator</th></tr>
+<tr><td>Dynamic feature addition</td><td>Adding toppings to ice cream at runtime</td><td>Customer chooses features dynamically, not at compile time</td></tr>
+<tr><td>I/O stream wrapping</td><td>BufferedReader wrapping FileReader</td><td>Add buffering, data types, encryption to any stream</td></tr>
+<tr><td>Logging enhancements</td><td>Timestamp, level, caller decoration</td><td>Different services need different log formats</td></tr>
+<tr><td>UI component decoration</td><td>Adding scrollbar, border, shadow to a window</td><td>Combine visual features without subclassing</td></tr>
+<tr><td>Middleware pipeline</td><td>Authentication, logging, compression in HTTP</td><td>Stack filters in any order</td></tr>
+</table>
+
+<h3>When NOT to use Decorator</h3>
+<table>
+<tr><th>Scenario</th><th>Why NOT</th><th>Use Instead</th></tr>
+<tr><td>Fixed combinations</td><td>If combinations are known and few, decorator adds complexity</td><td>Simple subclassing</td></tr>
+<tr><td>Identity matters</td><td>Decorated object has different identity (instanceof fails)</td><td>Inheritance</td></tr>
+<tr><td>Too many small decorators</td><td>Debugging a chain of 10 decorators is hard</td><td>Builder or configuration object</td></tr>
+</table>
+
+<h3>Decorator vs Inheritance</h3>
+<table>
+<tr><th>Aspect</th><th>Decorator</th><th>Inheritance</th></tr>
+<tr><td>Mechanism</td><td>Composition (HAS-A)</td><td>IS-A relationship</td></tr>
+<tr><td>When</td><td>Runtime (dynamic)</td><td>Compile time (static)</td></tr>
+<tr><td>Combinations</td><td>Any order, any count</td><td>One fixed hierarchy</td></tr>
+<tr><td>Class count</td><td>N components + M decorators</td><td>N x M combination classes</td></tr>
+<tr><td>Open/Closed</td><td>Yes (add new decorator)</td><td>Partial (add subclass, but hierarchy grows)</td></tr>
+</table>
+
+<!-- ================================================================ -->
+<h2>9. Quick Reference Card</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<table>
+<tr><th>Component</th><th>Role</th><th>In Logging Project</th><th>In Ice Cream</th></tr>
+<tr><td>Component Interface</td><td>Common type for all</td><td><code>Logger</code></td><td><code>Icecream</code></td></tr>
+<tr><td>Concrete Component</td><td>Base object</td><td><code>FileLogger</code></td><td><code>VanilaIcecream</code></td></tr>
+<tr><td>Abstract Decorator</td><td>Wraps + delegates</td><td><code>LoggerDecorator</code></td><td><code>IceCreamDecorator</code></td></tr>
+<tr><td>Concrete Decorator</td><td>Adds one feature</td><td><code>TimestampDecorator</code></td><td><code>DryFruitDecorator</code></td></tr>
+</table>
+</div>
+
+<!-- ================================================================ -->
+<h2>10. Interview Questions</h2>
+<!-- ================================================================ -->
+
+<div class="card">
+<ol>
+<li>What is the Decorator pattern? Give a real-world example.</li>
+<li>How does Decorator solve the class explosion problem?</li>
+<li>What are the four components of the Decorator pattern?</li>
+<li>How does the Java I/O stream library use the Decorator pattern?</li>
+<li>What is the difference between Decorator and Inheritance?</li>
+<li>What is the difference between Decorator and Proxy patterns?</li>
+<li>What is the difference between Decorator and Adapter patterns?</li>
+<li>Can decorators be stacked? What determines the order of execution?</li>
+<li>Design a pizza ordering system using the Decorator pattern (crust + toppings).</li>
+<li>How does <code>BufferedReader</code> act as a decorator for <code>FileReader</code>?</li>
+<li>What are the disadvantages of the Decorator pattern?</li>
+<li>How would you implement a Decorator that adds caching to a data service?</li>
+</ol>
+</div>
+
+</body>
+</html>
