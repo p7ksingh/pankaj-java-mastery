@@ -6,6 +6,7 @@ import { Breadcrumb } from '@/components/layout/Breadcrumb'
 import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { AnswerSection } from '@/components/features/AnswerSection'
+import { BookmarkButton } from '@/components/features/BookmarkButton'
 import styles from './page.module.css'
 
 interface PageProps {
@@ -83,6 +84,7 @@ export default async function QuestionPage({ params }: PageProps) {
         <span className={styles.meta}>
           Question {question.questionNumber} of {topic.questionCount}
         </span>
+        <BookmarkButton questionId={question.id} />
       </div>
       <h1 className={styles.title}>{question.title}</h1>
       <Card className={styles.answerCard}>
