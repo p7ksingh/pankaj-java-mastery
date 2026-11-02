@@ -2,6 +2,7 @@ import { getAllChapters } from '@/lib/data/chapters'
 import { PageHeader } from '@/components/layout/PageHeader'
 import { ChapterTable } from '@/components/features/ChapterTable'
 import { SubmitForm, CommunityList } from '@/components/features/Community'
+import { StructuredData } from '@/components/seo/StructuredData'
 
 export default function HomePage() {
   const chapters = getAllChapters()
@@ -9,6 +10,15 @@ export default function HomePage() {
 
   return (
     <main>
+      <StructuredData
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'WebSite',
+          name: 'javabypankaj',
+          alternateName: ['Java by Pankaj', 'Java Interview Mastery'],
+          url: 'https://www.javabypankaj.live/',
+        }}
+      />
       <PageHeader
         title="Interview Topics"
         stats={[

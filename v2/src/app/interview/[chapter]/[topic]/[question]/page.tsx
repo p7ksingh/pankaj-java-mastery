@@ -8,6 +8,7 @@ import { Badge } from '@/components/ui/Badge'
 import { AnswerSection } from '@/components/features/AnswerSection'
 import { BookmarkButton } from '@/components/features/BookmarkButton'
 import { CompletionCheckbox } from '@/components/features/CompletionCheckbox'
+import { StructuredData } from '@/components/seo/StructuredData'
 import styles from './page.module.css'
 
 interface PageProps {
@@ -70,8 +71,42 @@ export default async function QuestionPage({ params }: PageProps) {
 
   const sectionKeys = Object.keys(question.sections)
 
+  // Extract answer text for structured data
+  const firstSection = question.sections[sectionKeys[0]]
+  const answerText = typeof firstSection === 'string'
+    ? firstSection.slice(0, 500)
+    : (firstSection as { raw?: string }).raw?.slice(0, 500) || ''
+
   return (
     <main>
+      <StructuredData
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'FAQPage',
+          mainEntity: [
+            {
+              '@type': 'Question',
+              name: question.title,
+              acceptedAnswer: {
+                '@type': 'Answer',
+                text: answerText,
+              },
+            },
+          ],
+        }}
+      />
+      <StructuredData
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.javabypankaj.live/' },
+            { '@type': 'ListItem', position: 2, name: chapter.title, item: `https://www.javabypankaj.live/interview/${chapter.slug}/` },
+            { '@type': 'ListItem', position: 3, name: topic.title, item: `https://www.javabypankaj.live/interview/${chapter.slug}/${topicSlug}/` },
+            { '@type': 'ListItem', position: 4, name: question.id },
+          ],
+        }}
+      />
       <Breadcrumb
         items={[
           { label: 'Home', href: '/' },
