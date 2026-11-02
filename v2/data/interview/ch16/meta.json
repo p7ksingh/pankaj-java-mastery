@@ -1,0 +1,279 @@
+{
+  "number": 16,
+  "slug": "advanced-java",
+  "title": "Advanced Java",
+  "topicCount": 45,
+  "questionCount": 71,
+  "topics": [
+    {
+      "index": 0,
+      "slug": "class-and-anonymous",
+      "title": "class & and & anonymous",
+      "questionCount": 5
+    },
+    {
+      "index": 1,
+      "slug": "how-do-classoptionweak-vs-strong-affect-hidden-class-garbage-collection",
+      "title": "How do `ClassOption.WEAK` vs `STRONG` affect hidden-class garbage collection",
+      "questionCount": 1
+    },
+    {
+      "index": 2,
+      "slug": "how-do-hidden-classes-compare-to-dynamically-generated-proxy-classes",
+      "title": "How do hidden classes compare to dynamically generated `Proxy` classes",
+      "questionCount": 1
+    },
+    {
+      "index": 3,
+      "slug": "sealed-class-what",
+      "title": "sealed & class & what",
+      "questionCount": 2
+    },
+    {
+      "index": 4,
+      "slug": "is-listing-all-permitted-subclasses-optional-if-theyre-in-the-same-file",
+      "title": "Is listing all permitted subclasses optional if they're in the same file?",
+      "questionCount": 1
+    },
+    {
+      "index": 5,
+      "slug": "can-a-sealed-class-be-abstract",
+      "title": "Can a sealed class be abstract",
+      "questionCount": 1
+    },
+    {
+      "index": 6,
+      "slug": "how-does-sealing-improve-instanceof-checks-and-exhaustive-switch-pattern-mat",
+      "title": "How does sealing improve `instanceof` checks and exhaustive `switch` pattern mat",
+      "questionCount": 1
+    },
+    {
+      "index": 7,
+      "slug": "sealed-class",
+      "title": "sealed & class",
+      "questionCount": 9
+    },
+    {
+      "index": 8,
+      "slug": "how-does-sealing-interact-with-generics-and-wildcards",
+      "title": "How does sealing interact with generics and wildcards?",
+      "questionCount": 1
+    },
+    {
+      "index": 9,
+      "slug": "vert-reactive-event",
+      "title": "Vert & reactive & event",
+      "questionCount": 2
+    },
+    {
+      "index": 10,
+      "slug": "what-is-rsocket",
+      "title": "What is RSocket",
+      "questionCount": 1
+    },
+    {
+      "index": 11,
+      "slug": "how-do-you-implement-rsocket-error-handling-and-what-happens-on-clientserver-d",
+      "title": "How do you implement RSocket error handling, and what happens on client/server d",
+      "questionCount": 1
+    },
+    {
+      "index": 12,
+      "slug": "explain-backpressure-in-rsocket-and-how-it-differs-from-http2",
+      "title": "Explain backpressure in RSocket and how it differs from HTTP/2",
+      "questionCount": 1
+    },
+    {
+      "index": 13,
+      "slug": "rsocket-client-resumable",
+      "title": "RSocket & client & resumable",
+      "questionCount": 2
+    },
+    {
+      "index": 14,
+      "slug": "can-rsocket-work-in-a-serverless-environment",
+      "title": "Can RSocket work in a serverless environment",
+      "questionCount": 1
+    },
+    {
+      "index": 15,
+      "slug": "what-is-grpc",
+      "title": "What is gRPC",
+      "questionCount": 1
+    },
+    {
+      "index": 16,
+      "slug": "why-does-grpc-rely-on-http2-instead-of-http11-and-what-breaks-with-http11",
+      "title": "Why does gRPC rely on HTTP/2 instead of HTTP/1.1, and what breaks with HTTP/1.1",
+      "questionCount": 1
+    },
+    {
+      "index": 17,
+      "slug": "how-does-grpc-handle-network-failures-differently-from-rest",
+      "title": "How does gRPC handle network failures differently from REST",
+      "questionCount": 1
+    },
+    {
+      "index": 18,
+      "slug": "how-do-you-add-distributed-tracing-to-a-grpc-microservice",
+      "title": "How do you add distributed tracing to a gRPC microservice",
+      "questionCount": 1
+    },
+    {
+      "index": 19,
+      "slug": "can-grpc-be-used-in-a-serverless-environment",
+      "title": "Can gRPC be used in a serverless environment",
+      "questionCount": 1
+    },
+    {
+      "index": 20,
+      "slug": "how-do-you-version-grpc-without-breaking-existing-clients",
+      "title": "How do you version gRPC without breaking existing clients",
+      "questionCount": 1
+    },
+    {
+      "index": 21,
+      "slug": "how-do-you-add-grpc-web-browser-support",
+      "title": "How do you add gRPC-web browser support",
+      "questionCount": 1
+    },
+    {
+      "index": 22,
+      "slug": "how-do-you-configure-mtls",
+      "title": "How do you configure mTLS",
+      "questionCount": 1
+    },
+    {
+      "index": 23,
+      "slug": "and-grpc-interceptor",
+      "title": "and & gRPC & interceptor",
+      "questionCount": 2
+    },
+    {
+      "index": 24,
+      "slug": "what-are-grpc-status-codes",
+      "title": "What are gRPC status codes",
+      "questionCount": 1
+    },
+    {
+      "index": 25,
+      "slug": "the-grpc-and",
+      "title": "the & gRPC & and",
+      "questionCount": 2
+    },
+    {
+      "index": 26,
+      "slug": "design-an-lfu-cache-with-o",
+      "title": "Design an LFU cache with O",
+      "questionCount": 1
+    },
+    {
+      "index": 27,
+      "slug": "and-heap-memory",
+      "title": "and & heap & memory",
+      "questionCount": 3
+    },
+    {
+      "index": 28,
+      "slug": "what-is-type-erasure-in-generics-and-what-does-it-make-impossible",
+      "title": "What is type erasure in generics, and what does it make impossible",
+      "questionCount": 1
+    },
+    {
+      "index": 29,
+      "slug": "are-and-what",
+      "title": "are & and & what",
+      "questionCount": 2
+    },
+    {
+      "index": 30,
+      "slug": "what-are-sequenced-collections-java-21",
+      "title": "What are Sequenced Collections (Java 21",
+      "questionCount": 1
+    },
+    {
+      "index": 31,
+      "slug": "thread-virtual-synchronized",
+      "title": "thread & virtual & synchronized",
+      "questionCount": 2
+    },
+    {
+      "index": 32,
+      "slug": "what-is-structured-concurrency-structuredtaskscope",
+      "title": "What is Structured Concurrency / `StructuredTaskScope`",
+      "questionCount": 1
+    },
+    {
+      "index": 33,
+      "slug": "what-is-the-java-platform-module-system",
+      "title": "What is the Java Platform Module System",
+      "questionCount": 1
+    },
+    {
+      "index": 34,
+      "slug": "what-did-java-10-var-add",
+      "title": "What did Java 10 `var` add",
+      "questionCount": 1
+    },
+    {
+      "index": 35,
+      "slug": "when-should-you-use-var-versus-an-explicit-type",
+      "title": "When should you use `var` versus an explicit type",
+      "questionCount": 1
+    },
+    {
+      "index": 36,
+      "slug": "and-memory-are",
+      "title": "and & memory & are",
+      "questionCount": 4
+    },
+    {
+      "index": 37,
+      "slug": "what-is-project-skara",
+      "title": "What is Project Skara",
+      "questionCount": 1
+    },
+    {
+      "index": 38,
+      "slug": "how-do-the-major-openjdk-projects-work-together-as-a-coherent-platform-evolution",
+      "title": "How do the major OpenJDK projects work TOGETHER as a coherent platform evolution",
+      "questionCount": 1
+    },
+    {
+      "index": 39,
+      "slug": "the-does-graalvm",
+      "title": "the & does & GraalVM",
+      "questionCount": 2
+    },
+    {
+      "index": 40,
+      "slug": "how-does-java-classloading-work-bootstrap-platform-application-loaders-del",
+      "title": "How does Java classloading work (Bootstrap → Platform → Application loaders, del",
+      "questionCount": 1
+    },
+    {
+      "index": 41,
+      "slug": "how-does-serviceloader",
+      "title": "How does `ServiceLoader`",
+      "questionCount": 1
+    },
+    {
+      "index": 42,
+      "slug": "why-does-reflection-hurt-performance",
+      "title": "Why does reflection hurt performance",
+      "questionCount": 1
+    },
+    {
+      "index": 43,
+      "slug": "and-are-lambda",
+      "title": "and & are & lambda",
+      "questionCount": 2
+    },
+    {
+      "index": 44,
+      "slug": "what-is-a-java-agent",
+      "title": "What is a Java Agent",
+      "questionCount": 1
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "number": 14,
+  "slug": "rest-api-web",
+  "title": "REST API & Web",
+  "topicCount": 21,
+  "questionCount": 40,
+  "topics": [
+    {
+      "index": 0,
+      "slug": "the-for-and",
+      "title": "the & for & and",
+      "questionCount": 2
+    },
+    {
+      "index": 1,
+      "slug": "advanced-java",
+      "title": "Advanced Java",
+      "questionCount": 1
+    },
+    {
+      "index": 2,
+      "slug": "are-and-http",
+      "title": "are & and & HTTP",
+      "questionCount": 3
+    },
+    {
+      "index": 3,
+      "slug": "what-is-the-difference-between-put-and-patch",
+      "title": "What is the difference between PUT and PATCH?",
+      "questionCount": 1
+    },
+    {
+      "index": 4,
+      "slug": "explain-the-patch-method-and-json-patch",
+      "title": "Explain the PATCH method and JSON Patch",
+      "questionCount": 1
+    },
+    {
+      "index": 5,
+      "slug": "what-should-a-get-call-return-if-no-entity-is-found",
+      "title": "What should a GET call return if no entity is found",
+      "questionCount": 1
+    },
+    {
+      "index": 6,
+      "slug": "what-are-the-common-http-status-codes-and-their-meanings",
+      "title": "What are the common HTTP status codes and their meanings?",
+      "questionCount": 1
+    },
+    {
+      "index": 7,
+      "slug": "explain-the-http-status-code-classes",
+      "title": "Explain the HTTP status code classes",
+      "questionCount": 1
+    },
+    {
+      "index": 8,
+      "slug": "what-is-http-403-and-when-is-it-used-vs-401",
+      "title": "What is HTTP 403, and when is it used vs 401",
+      "questionCount": 1
+    },
+    {
+      "index": 9,
+      "slug": "error-and-the",
+      "title": "error & and & the",
+      "questionCount": 2
+    },
+    {
+      "index": 10,
+      "slug": "what-is-an-etag-and-how-do-conditional-requests-work",
+      "title": "What is an `ETag` and how do conditional requests work",
+      "questionCount": 1
+    },
+    {
+      "index": 11,
+      "slug": "and-dto-api",
+      "title": "and & DTO & API",
+      "questionCount": 6
+    },
+    {
+      "index": 12,
+      "slug": "hateoas-rest-apis",
+      "title": "HATEOAS & REST & APIs",
+      "questionCount": 2
+    },
+    {
+      "index": 13,
+      "slug": "what-is-an-http-parameter-pollution-hpp-attack",
+      "title": "What is an HTTP Parameter Pollution (HPP) attack",
+      "questionCount": 1
+    },
+    {
+      "index": 14,
+      "slug": "how-do-you-make-an-api-audit-proof-so-every-mutation",
+      "title": "How do you make an API audit-proof so EVERY mutation",
+      "questionCount": 1
+    },
+    {
+      "index": 15,
+      "slug": "and-you-json",
+      "title": "and & you & JSON",
+      "questionCount": 2
+    },
+    {
+      "index": 16,
+      "slug": "what-is-the-difference-between-cookies-small-4-kb-data-stored-client-side-sen",
+      "title": "What is the difference between cookies (small ≤4 KB data stored client-side, sen",
+      "questionCount": 1
+    },
+    {
+      "index": 17,
+      "slug": "and-the-rest",
+      "title": "and & the & REST",
+      "questionCount": 8
+    },
+    {
+      "index": 18,
+      "slug": "what-is-the-difference-between-rest",
+      "title": "What is the difference between REST",
+      "questionCount": 1
+    },
+    {
+      "index": 19,
+      "slug": "client-server-sse",
+      "title": "client & server & SSE",
+      "questionCount": 2
+    },
+    {
+      "index": 20,
+      "slug": "what-is-the-websocket-handshake",
+      "title": "What is the WebSocket handshake",
+      "questionCount": 1
+    }
+  ]
+}

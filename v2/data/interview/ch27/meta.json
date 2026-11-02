@@ -1,0 +1,57 @@
+{
+  "number": 27,
+  "slug": "architecture-patterns",
+  "title": "Architecture & Patterns",
+  "topicCount": 8,
+  "questionCount": 15,
+  "topics": [
+    {
+      "index": 0,
+      "slug": "what-are-the-jvm-memory-areas",
+      "title": "What are the JVM memory areas",
+      "questionCount": 1
+    },
+    {
+      "index": 1,
+      "slug": "gen-young-old",
+      "title": "Gen & Young & Old",
+      "questionCount": 2
+    },
+    {
+      "index": 2,
+      "slug": "low-pause-garbage",
+      "title": "low & pause & garbage",
+      "questionCount": 2
+    },
+    {
+      "index": 3,
+      "slug": "when-should-you-choose-zgc-vs-g1",
+      "title": "When should you choose ZGC vs G1",
+      "questionCount": 1
+    },
+    {
+      "index": 4,
+      "slug": "heap-memory-are",
+      "title": "heap & memory & are",
+      "questionCount": 2
+    },
+    {
+      "index": 5,
+      "slug": "what-is-jit-just-in-time-compilation",
+      "title": "What is JIT (Just-In-Time) compilation",
+      "questionCount": 1
+    },
+    {
+      "index": 6,
+      "slug": "for-thread-threads",
+      "title": "for & thread & threads",
+      "questionCount": 5
+    },
+    {
+      "index": 7,
+      "slug": "what-is-jmh-java-microbenchmark-harness",
+      "title": "What is JMH (Java Microbenchmark Harness)",
+      "questionCount": 1
+    }
+  ]
+}

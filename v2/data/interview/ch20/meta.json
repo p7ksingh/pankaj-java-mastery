@@ -1,0 +1,645 @@
+{
+  "number": 20,
+  "slug": "data-engineering",
+  "title": "Data Engineering",
+  "topicCount": 106,
+  "questionCount": 194,
+  "topics": [
+    {
+      "index": 0,
+      "slug": "what-is-data-engineering",
+      "title": "What is data engineering",
+      "questionCount": 1
+    },
+    {
+      "index": 1,
+      "slug": "what-is-the-difference-between-batch-processing-and-stream-processing",
+      "title": "What is the difference between batch processing and stream processing",
+      "questionCount": 1
+    },
+    {
+      "index": 2,
+      "slug": "what-is-etl",
+      "title": "What is ETL",
+      "questionCount": 1
+    },
+    {
+      "index": 3,
+      "slug": "what-is-a-data-lake",
+      "title": "What is a data lake",
+      "questionCount": 1
+    },
+    {
+      "index": 4,
+      "slug": "for-data-apache",
+      "title": "for & data & Apache",
+      "questionCount": 2
+    },
+    {
+      "index": 5,
+      "slug": "what-is-parquet",
+      "title": "What is Parquet",
+      "questionCount": 1
+    },
+    {
+      "index": 6,
+      "slug": "what-is-a-data-pipeline",
+      "title": "What is a data pipeline",
+      "questionCount": 1
+    },
+    {
+      "index": 7,
+      "slug": "what-is-the-difference-between-oltp-your-production-database-handling-fast-tran",
+      "title": "What is the difference between OLTP (your production database handling fast tran",
+      "questionCount": 1
+    },
+    {
+      "index": 8,
+      "slug": "what-is-schema-on-write",
+      "title": "What is schema-on-write",
+      "questionCount": 1
+    },
+    {
+      "index": 9,
+      "slug": "you-and-pipeline",
+      "title": "you & and & pipeline",
+      "questionCount": 5
+    },
+    {
+      "index": 10,
+      "slug": "what-is-the-spark-pyspark-dataframe-programming-model",
+      "title": "What is the Spark / PySpark DataFrame programming model",
+      "questionCount": 1
+    },
+    {
+      "index": 11,
+      "slug": "and-once-store",
+      "title": "and & once & store",
+      "questionCount": 3
+    },
+    {
+      "index": 12,
+      "slug": "the-and-query",
+      "title": "the & and & query",
+      "questionCount": 3
+    },
+    {
+      "index": 13,
+      "slug": "scenario-design-a-real-time-fraud-detection-data-platform",
+      "title": "(Scenario) Design a real-time fraud-detection data platform",
+      "questionCount": 1
+    },
+    {
+      "index": 14,
+      "slug": "how-do-you-ensure-data-quality-in-a-pipeline",
+      "title": "How do you ensure data quality in a pipeline",
+      "questionCount": 1
+    },
+    {
+      "index": 15,
+      "slug": "what-is-apache-spark-why-was-it-created",
+      "title": "What is Apache Spark, why was it created",
+      "questionCount": 1
+    },
+    {
+      "index": 16,
+      "slug": "and-the-spark",
+      "title": "and & the & Spark",
+      "questionCount": 2
+    },
+    {
+      "index": 17,
+      "slug": "what-are-the-two-categories-of-rdddataframe-operations",
+      "title": "What are the two categories of RDD/DataFrame operations",
+      "questionCount": 1
+    },
+    {
+      "index": 18,
+      "slug": "partition-the-per",
+      "title": "partition & the & per",
+      "questionCount": 4
+    },
+    {
+      "index": 19,
+      "slug": "explain-spark-execution-modes",
+      "title": "Explain Spark execution modes",
+      "questionCount": 1
+    },
+    {
+      "index": 20,
+      "slug": "what-is-the-catalyst-optimizer-and-how-does-it-work",
+      "title": "What is the Catalyst Optimizer and how does it work",
+      "questionCount": 1
+    },
+    {
+      "index": 21,
+      "slug": "what-is-a-spark-stage-how-does-the-dagscheduler-determine-stage-boundaries",
+      "title": "What is a Spark Stage, how does the DAGScheduler determine stage boundaries",
+      "questionCount": 1
+    },
+    {
+      "index": 22,
+      "slug": "what-is-aqe-adaptive-query-execution",
+      "title": "What is AQE (Adaptive Query Execution)",
+      "questionCount": 1
+    },
+    {
+      "index": 23,
+      "slug": "and-shuffle-partitions",
+      "title": "and & shuffle & partitions",
+      "questionCount": 3
+    },
+    {
+      "index": 24,
+      "slug": "and-the-enabled",
+      "title": "and & the & enabled",
+      "questionCount": 4
+    },
+    {
+      "index": 25,
+      "slug": "and-caching-memory",
+      "title": "and & caching & memory",
+      "questionCount": 6
+    },
+    {
+      "index": 26,
+      "slug": "repartition-and-the",
+      "title": "repartition & and & the",
+      "questionCount": 9
+    },
+    {
+      "index": 27,
+      "slug": "bucketing-the-bucket",
+      "title": "bucketing & the & bucket",
+      "questionCount": 2
+    },
+    {
+      "index": 28,
+      "slug": "what-is-predicate-pushdown",
+      "title": "What is predicate pushdown",
+      "questionCount": 1
+    },
+    {
+      "index": 29,
+      "slug": "what-is-projection-pushdown-column-pruning",
+      "title": "What is projection pushdown (column pruning)",
+      "questionCount": 1
+    },
+    {
+      "index": 30,
+      "slug": "and-the-broadcast",
+      "title": "and & the & broadcast",
+      "questionCount": 10
+    },
+    {
+      "index": 31,
+      "slug": "the-skew-data",
+      "title": "the & skew & data",
+      "questionCount": 4
+    },
+    {
+      "index": 32,
+      "slug": "and-for-structured",
+      "title": "and & for & Structured",
+      "questionCount": 8
+    },
+    {
+      "index": 33,
+      "slug": "memory-spark-for",
+      "title": "memory & Spark & for",
+      "questionCount": 3
+    },
+    {
+      "index": 34,
+      "slug": "spark-and-executors",
+      "title": "Spark & and & executors",
+      "questionCount": 2
+    },
+    {
+      "index": 35,
+      "slug": "how-does-spark-handle-schema-inference",
+      "title": "How does Spark handle schema inference",
+      "questionCount": 1
+    },
+    {
+      "index": 36,
+      "slug": "what-are-the-differences-between-avro-row-based-schema-in-file-header-good-fo",
+      "title": "What are the differences between Avro (row-based, schema in file header, good fo",
+      "questionCount": 1
+    },
+    {
+      "index": 37,
+      "slug": "what-is-the-small-files-problem-in-spark",
+      "title": "What is the small-files problem in Spark",
+      "questionCount": 1
+    },
+    {
+      "index": 38,
+      "slug": "what-is-spark-serialization",
+      "title": "What is Spark serialization",
+      "questionCount": 1
+    },
+    {
+      "index": 39,
+      "slug": "what-is-the-difference-between-groupbykey-and-reducebykey",
+      "title": "What is the difference between `groupByKey()` and `reduceByKey()`",
+      "questionCount": 1
+    },
+    {
+      "index": 40,
+      "slug": "what-is-the-difference-between-distinct-and-dropduplicates-in-spark",
+      "title": "What is the difference between `distinct()` and `dropDuplicates()` in Spark",
+      "questionCount": 1
+    },
+    {
+      "index": 41,
+      "slug": "what-are-spark-sql-window-functions",
+      "title": "What are Spark SQL window functions",
+      "questionCount": 1
+    },
+    {
+      "index": 42,
+      "slug": "what-are-spark-temporary-views-createorreplacetempview",
+      "title": "What are Spark temporary views (`createOrReplaceTempView`",
+      "questionCount": 1
+    },
+    {
+      "index": 43,
+      "slug": "what-is-graphx",
+      "title": "What is GraphX",
+      "questionCount": 1
+    },
+    {
+      "index": 44,
+      "slug": "what-is-spark-security",
+      "title": "What is Spark security",
+      "questionCount": 1
+    },
+    {
+      "index": 45,
+      "slug": "what-is-the-spark-web-ui-localhost4040-during-a-running-app-history-server",
+      "title": "What is the Spark Web UI (`localhost:4040` during a running app, History Server ",
+      "questionCount": 1
+    },
+    {
+      "index": 46,
+      "slug": "what-is-delta-lake",
+      "title": "What is Delta Lake",
+      "questionCount": 1
+    },
+    {
+      "index": 47,
+      "slug": "what-is-the-bronze-silver-gold-medallion-architecture",
+      "title": "What is the Bronze → Silver → Gold (Medallion) architecture",
+      "questionCount": 1
+    },
+    {
+      "index": 48,
+      "slug": "what-are-the-key-delta-lake-optimizations",
+      "title": "What are the key Delta Lake optimizations",
+      "questionCount": 1
+    },
+    {
+      "index": 49,
+      "slug": "what-is-delta-lake-time-travel-version-as-of-n-timestamp-as-of-ts",
+      "title": "What is Delta Lake time travel (`VERSION AS OF n`, `TIMESTAMP AS OF ts`)",
+      "questionCount": 1
+    },
+    {
+      "index": 50,
+      "slug": "what-is-delta-lakes-merge-into-upsert",
+      "title": "What is Delta Lake's `MERGE INTO` (upsert)",
+      "questionCount": 1
+    },
+    {
+      "index": 51,
+      "slug": "and-udfs-plain",
+      "title": "and & UDFs & plain",
+      "questionCount": 2
+    },
+    {
+      "index": 52,
+      "slug": "and-explode-are",
+      "title": "and & explode & are",
+      "questionCount": 3
+    },
+    {
+      "index": 53,
+      "slug": "sparkcontext-sparksession-spark",
+      "title": "SparkContext & SparkSession & Spark",
+      "questionCount": 2
+    },
+    {
+      "index": 54,
+      "slug": "how-do-you-read-xml-files-in-spark",
+      "title": "How do you read XML files in Spark",
+      "questionCount": 1
+    },
+    {
+      "index": 55,
+      "slug": "what-is-collect-vs-taken-vs-headn-vs-first",
+      "title": "What is `collect()` vs `take(n)` vs `head(n)` vs `first()`",
+      "questionCount": 1
+    },
+    {
+      "index": 56,
+      "slug": "do-you-need-to-install-spark-on-all-nodes-of-a-yarn-cluster-no",
+      "title": "Do you need to install Spark on all nodes of a YARN cluster (no",
+      "questionCount": 1
+    },
+    {
+      "index": 57,
+      "slug": "memory-and-tungsten",
+      "title": "memory & and & Tungsten",
+      "questionCount": 2
+    },
+    {
+      "index": 58,
+      "slug": "what-is-the-success-file-in-spark",
+      "title": "What is the `_SUCCESS` file in Spark",
+      "questionCount": 1
+    },
+    {
+      "index": 59,
+      "slug": "why-is-withcolumn-in-a-loop-an-anti-pattern",
+      "title": "Why is `withColumn` in a loop an anti-pattern",
+      "questionCount": 1
+    },
+    {
+      "index": 60,
+      "slug": "what-are-non-deterministic-functions-in-spark-rand-uuid-monotonicallyin",
+      "title": "What are non-deterministic functions in Spark (`rand`, `uuid`, `monotonically_in",
+      "questionCount": 1
+    },
+    {
+      "index": 61,
+      "slug": "what-are-sparks-read-modes-for-handling-corrupt-records",
+      "title": "What are Spark's read modes for handling corrupt records",
+      "questionCount": 1
+    },
+    {
+      "index": 62,
+      "slug": "spark-and-lit",
+      "title": "Spark & and & lit",
+      "questionCount": 2
+    },
+    {
+      "index": 63,
+      "slug": "what-does-stage-skipped-mean-in-the-spark-ui",
+      "title": "What does \"Stage Skipped\" mean in the Spark UI",
+      "questionCount": 1
+    },
+    {
+      "index": 64,
+      "slug": "what-is-msck-repair-table",
+      "title": "What is `MSCK REPAIR TABLE`",
+      "questionCount": 1
+    },
+    {
+      "index": 65,
+      "slug": "what-is-py4j",
+      "title": "What is Py4J",
+      "questionCount": 1
+    },
+    {
+      "index": 66,
+      "slug": "is-sparks-sortorderby-stable-no",
+      "title": "Is Spark's `sort()`/`orderBy()` stable (no",
+      "questionCount": 1
+    },
+    {
+      "index": 67,
+      "slug": "what-is-cogroup-in-spark",
+      "title": "What is `cogroup` in Spark",
+      "questionCount": 1
+    },
+    {
+      "index": 68,
+      "slug": "how-do-you-optimize-jdbc-reads-in-spark",
+      "title": "How do you optimize JDBC reads in Spark",
+      "questionCount": 1
+    },
+    {
+      "index": 69,
+      "slug": "what-compression-codecs-does-spark-support",
+      "title": "What compression codecs does Spark support",
+      "questionCount": 1
+    },
+    {
+      "index": 70,
+      "slug": "what-is-sizeestimator",
+      "title": "What is `SizeEstimator`",
+      "questionCount": 1
+    },
+    {
+      "index": 71,
+      "slug": "what-is-pathglobfilter",
+      "title": "What is `pathGlobFilter`",
+      "questionCount": 1
+    },
+    {
+      "index": 72,
+      "slug": "what-is-the-spark-thrift-server-sts",
+      "title": "What is the Spark Thrift Server (STS)",
+      "questionCount": 1
+    },
+    {
+      "index": 73,
+      "slug": "order-unionbyname-spark",
+      "title": "order & unionByName & Spark",
+      "questionCount": 2
+    },
+    {
+      "index": 74,
+      "slug": "what-is-barrier-execution-mode-in-spark",
+      "title": "What is Barrier Execution Mode in Spark",
+      "questionCount": 1
+    },
+    {
+      "index": 75,
+      "slug": "what-is-databricks-and-how-does-it-relate-to-apache-spark",
+      "title": "What is Databricks and how does it relate to Apache Spark",
+      "questionCount": 1
+    },
+    {
+      "index": 76,
+      "slug": "what-are-the-databricks-cluster-types",
+      "title": "What are the Databricks cluster types",
+      "questionCount": 1
+    },
+    {
+      "index": 77,
+      "slug": "what-is-unity-catalog",
+      "title": "What is Unity Catalog",
+      "questionCount": 1
+    },
+    {
+      "index": 78,
+      "slug": "and-for-databricks",
+      "title": "and & for & Databricks",
+      "questionCount": 3
+    },
+    {
+      "index": 79,
+      "slug": "what-is-the-difference-between-databricks-optimize-and-vacuum",
+      "title": "What is the difference between Databricks `OPTIMIZE` and `VACUUM`",
+      "questionCount": 1
+    },
+    {
+      "index": 80,
+      "slug": "explain-flinks-architecture",
+      "title": "Explain Flink's architecture",
+      "questionCount": 1
+    },
+    {
+      "index": 81,
+      "slug": "what-is-the-relationship-between-parallelism-and-task-slots-in-flink",
+      "title": "What is the relationship between parallelism and task slots in Flink",
+      "questionCount": 1
+    },
+    {
+      "index": 82,
+      "slug": "what-is-the-difference-between-flinks-datastream-api",
+      "title": "What is the difference between Flink's DataStream API",
+      "questionCount": 1
+    },
+    {
+      "index": 83,
+      "slug": "what-are-the-flink-deployment-modes",
+      "title": "What are the Flink deployment modes",
+      "questionCount": 1
+    },
+    {
+      "index": 84,
+      "slug": "how-does-flink-compare-to-spark-structured-streaming",
+      "title": "How does Flink compare to Spark Structured Streaming",
+      "questionCount": 1
+    },
+    {
+      "index": 85,
+      "slug": "time-and-when",
+      "title": "time & and & when",
+      "questionCount": 2
+    },
+    {
+      "index": 86,
+      "slug": "what-happens-to-late-events-that-arrive-after-the-watermark-has-passed-the-windo",
+      "title": "What happens to late events that arrive after the watermark has passed the windo",
+      "questionCount": 1
+    },
+    {
+      "index": 87,
+      "slug": "how-do-you-implement-a-custom-watermark-strategy",
+      "title": "How do you implement a custom watermark strategy",
+      "questionCount": 1
+    },
+    {
+      "index": 88,
+      "slug": "what-are-the-window-components-in-detail",
+      "title": "What are the window components in detail",
+      "questionCount": 1
+    },
+    {
+      "index": 89,
+      "slug": "what-is-the-difference-between-eager-watermarks",
+      "title": "What is the difference between eager watermarks",
+      "questionCount": 1
+    },
+    {
+      "index": 90,
+      "slug": "state-and-data",
+      "title": "state & and & data",
+      "questionCount": 3
+    },
+    {
+      "index": 91,
+      "slug": "how-does-flink-checkpointing-work-via-barrier-snapshots",
+      "title": "How does Flink checkpointing work via barrier snapshots",
+      "questionCount": 1
+    },
+    {
+      "index": 92,
+      "slug": "what-is-the-difference-between-aligned-checkpoints",
+      "title": "What is the difference between aligned checkpoints",
+      "questionCount": 1
+    },
+    {
+      "index": 93,
+      "slug": "what-is-the-difference-between-a-flink-checkpoint-and-a-savepoint",
+      "title": "What is the difference between a Flink checkpoint and a savepoint",
+      "questionCount": 1
+    },
+    {
+      "index": 94,
+      "slug": "how-does-flink-achieve-end-to-end-exactly-once-semantics-checkpointed-state-a",
+      "title": "How does Flink achieve end-to-end exactly-once semantics (checkpointed state + a",
+      "questionCount": 1
+    },
+    {
+      "index": 95,
+      "slug": "the-flink-broadcast",
+      "title": "the & Flink & broadcast",
+      "questionCount": 2
+    },
+    {
+      "index": 96,
+      "slug": "and-sql-flink",
+      "title": "and & SQL & Flink",
+      "questionCount": 15
+    },
+    {
+      "index": 97,
+      "slug": "what-is-processfunction-keyedprocessfunction-in-flink",
+      "title": "What is `ProcessFunction` / `KeyedProcessFunction` in Flink",
+      "questionCount": 1
+    },
+    {
+      "index": 98,
+      "slug": "flink-for-using",
+      "title": "Flink & for & using",
+      "questionCount": 3
+    },
+    {
+      "index": 99,
+      "slug": "how-does-flink-handle-serialization",
+      "title": "How does Flink handle serialization",
+      "questionCount": 1
+    },
+    {
+      "index": 100,
+      "slug": "what-is-flinks-memory-model-for-taskmanagers",
+      "title": "What is Flink's memory model for TaskManagers",
+      "questionCount": 1
+    },
+    {
+      "index": 101,
+      "slug": "how-do-you-monitor-flink-jobs",
+      "title": "How do you monitor Flink jobs",
+      "questionCount": 1
+    },
+    {
+      "index": 102,
+      "slug": "and-flink-sql",
+      "title": "and & Flink & SQL",
+      "questionCount": 6
+    },
+    {
+      "index": 103,
+      "slug": "how-does-kinesis-data-analytics-integrate-with-aws-lambda",
+      "title": "How does Kinesis Data Analytics integrate with AWS Lambda",
+      "questionCount": 1
+    },
+    {
+      "index": 104,
+      "slug": "what-is-amazon-msk-managed-streaming-for-apache-kafka-vs-kinesis-data-streams",
+      "title": "What is Amazon MSK (Managed Streaming for Apache Kafka) vs Kinesis Data Streams",
+      "questionCount": 1
+    },
+    {
+      "index": 105,
+      "slug": "what-are-the-advantages-of-using-kinesis-data-analytics-managed-flink-over-sel",
+      "title": "What are the advantages of using Kinesis Data Analytics (managed Flink) over sel",
+      "questionCount": 1
+    }
+  ]
+}

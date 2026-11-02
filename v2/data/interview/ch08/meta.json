@@ -1,0 +1,39 @@
+{
+  "number": 8,
+  "slug": "transactions",
+  "title": "Transactions",
+  "topicCount": 5,
+  "questionCount": 32,
+  "topics": [
+    {
+      "index": 0,
+      "slug": "and-the-how",
+      "title": "and & the & how",
+      "questionCount": 12
+    },
+    {
+      "index": 1,
+      "slug": "the-use-and",
+      "title": "the & use & and",
+      "questionCount": 3
+    },
+    {
+      "index": 2,
+      "slug": "why-is-using-requiresnew-synchronous-rest-calls-to-mimic-a-saga-an-anti-patte",
+      "title": "Why is using REQUIRES_NEW + synchronous REST calls to mimic a Saga an anti-patte",
+      "questionCount": 1
+    },
+    {
+      "index": 3,
+      "slug": "and-the-does",
+      "title": "and & the & does",
+      "questionCount": 8
+    },
+    {
+      "index": 4,
+      "slug": "the-transactional-and",
+      "title": "the & Transactional & and",
+      "questionCount": 8
+    }
+  ]
+}

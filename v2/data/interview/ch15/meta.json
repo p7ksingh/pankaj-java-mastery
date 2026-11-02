@@ -1,0 +1,165 @@
+{
+  "number": 15,
+  "slug": "design-patterns-principles",
+  "title": "Design Patterns & Principles",
+  "topicCount": 26,
+  "questionCount": 33,
+  "topics": [
+    {
+      "index": 0,
+      "slug": "and-the-are",
+      "title": "and & the & are",
+      "questionCount": 2
+    },
+    {
+      "index": 1,
+      "slug": "for-class-not",
+      "title": "for & class & not",
+      "questionCount": 2
+    },
+    {
+      "index": 2,
+      "slug": "explain-the-singleton-pattern-and-the-thread-safe-ways-to-implement-it-in-java",
+      "title": "Explain the Singleton pattern and the thread-safe ways to implement it in Java",
+      "questionCount": 1
+    },
+    {
+      "index": 3,
+      "slug": "the-factory-and",
+      "title": "the & Factory & and",
+      "questionCount": 2
+    },
+    {
+      "index": 4,
+      "slug": "the-design-pattern",
+      "title": "the & design & pattern",
+      "questionCount": 2
+    },
+    {
+      "index": 5,
+      "slug": "the-singleton-you",
+      "title": "the & Singleton & you",
+      "questionCount": 2
+    },
+    {
+      "index": 6,
+      "slug": "explain-the-structural-patterns-adapter",
+      "title": "Explain the structural patterns Adapter",
+      "questionCount": 1
+    },
+    {
+      "index": 7,
+      "slug": "explain-the-behavioral-patterns-observer",
+      "title": "Explain the behavioral patterns Observer",
+      "questionCount": 1
+    },
+    {
+      "index": 8,
+      "slug": "what-is-the-strategy-pattern-where-does-it-appear-in-the-java-standard-library",
+      "title": "What is the Strategy pattern, where does it appear in the Java standard library,",
+      "questionCount": 1
+    },
+    {
+      "index": 9,
+      "slug": "scenario-you-have-an-existing-login-api-and-must-add-otp-captcha-and-usernam",
+      "title": "(Scenario) You have an existing login API and must add OTP, CAPTCHA, and usernam",
+      "questionCount": 1
+    },
+    {
+      "index": 10,
+      "slug": "what-is-the-observer-pattern",
+      "title": "What is the Observer pattern",
+      "questionCount": 1
+    },
+    {
+      "index": 11,
+      "slug": "what-is-the-command-pattern",
+      "title": "What is the Command pattern",
+      "questionCount": 1
+    },
+    {
+      "index": 12,
+      "slug": "explain-the-chain-of-responsibility-design-pattern",
+      "title": "Explain the Chain of Responsibility design pattern",
+      "questionCount": 1
+    },
+    {
+      "index": 13,
+      "slug": "explain-the-circuit-breaker-pattern-states",
+      "title": "Explain the Circuit Breaker pattern states",
+      "questionCount": 1
+    },
+    {
+      "index": 14,
+      "slug": "explain-the-saga-pattern-in-depth",
+      "title": "Explain the Saga pattern in depth",
+      "questionCount": 1
+    },
+    {
+      "index": 15,
+      "slug": "explain-inversion-of-control",
+      "title": "Explain Inversion of Control",
+      "questionCount": 1
+    },
+    {
+      "index": 16,
+      "slug": "explain-each-solid-principle-with-violations-and-fixes",
+      "title": "Explain each SOLID principle with violations and fixes",
+      "questionCount": 1
+    },
+    {
+      "index": 17,
+      "slug": "and-the-dry",
+      "title": "and & the & DRY",
+      "questionCount": 2
+    },
+    {
+      "index": 18,
+      "slug": "how-do-you-create-an-immutable-class-in-java",
+      "title": "How do you create an immutable class in Java",
+      "questionCount": 1
+    },
+    {
+      "index": 19,
+      "slug": "explain-time-complexity-and-space-complexity",
+      "title": "Explain time complexity and space complexity",
+      "questionCount": 1
+    },
+    {
+      "index": 20,
+      "slug": "for-the-prototype-pattern-what-is-the-shallow-clone-trap-and-why-is-a-copy-con",
+      "title": "For the Prototype pattern, what is the shallow-clone trap, and why is a copy con",
+      "questionCount": 1
+    },
+    {
+      "index": 21,
+      "slug": "how-does-java-io",
+      "title": "How does Java I/O",
+      "questionCount": 1
+    },
+    {
+      "index": 22,
+      "slug": "explain-the-proxy-pattern-types",
+      "title": "Explain the Proxy pattern types",
+      "questionCount": 1
+    },
+    {
+      "index": 23,
+      "slug": "the-and-pattern",
+      "title": "the & and & pattern",
+      "questionCount": 2
+    },
+    {
+      "index": 24,
+      "slug": "in-lld-how-do-you-model-state-and-behavior-cleanly",
+      "title": "In LLD, how do you model state and behavior cleanly",
+      "questionCount": 1
+    },
+    {
+      "index": 25,
+      "slug": "why-is-dont-over-engineer-a-core-lld-skill",
+      "title": "Why is \"don't over-engineer\" a core LLD skill",
+      "questionCount": 1
+    }
+  ]
+}

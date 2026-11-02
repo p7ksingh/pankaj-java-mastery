@@ -1,0 +1,255 @@
+{
+  "number": 12,
+  "slug": "devops-build-git-tooling",
+  "title": "DevOps, Build, Git & Tooling",
+  "topicCount": 41,
+  "questionCount": 58,
+  "topics": [
+    {
+      "index": 0,
+      "slug": "and-banking-docker",
+      "title": "and & banking & Docker",
+      "questionCount": 2
+    },
+    {
+      "index": 1,
+      "slug": "what-is-terraform",
+      "title": "What is Terraform",
+      "questionCount": 1
+    },
+    {
+      "index": 2,
+      "slug": "state-and-terraform",
+      "title": "state & and & terraform",
+      "questionCount": 2
+    },
+    {
+      "index": 3,
+      "slug": "what-are-the-core-concepts-of-aws-cloudformation",
+      "title": "What are the core concepts of AWS CloudFormation",
+      "questionCount": 1
+    },
+    {
+      "index": 4,
+      "slug": "what-are-the-differences-between-maven-and-gradle",
+      "title": "What are the differences between Maven and Gradle?",
+      "questionCount": 1
+    },
+    {
+      "index": 5,
+      "slug": "why-do-we-use-maven",
+      "title": "Why do we use Maven",
+      "questionCount": 1
+    },
+    {
+      "index": 6,
+      "slug": "what-are-the-phases-of-the-maven-build-lifecycle-validate-compile-test",
+      "title": "What are the phases of the Maven build lifecycle (`validate` → `compile` → `test",
+      "questionCount": 1
+    },
+    {
+      "index": 7,
+      "slug": "and-history-for",
+      "title": "and & history & for",
+      "questionCount": 5
+    },
+    {
+      "index": 8,
+      "slug": "code-you-reviews",
+      "title": "code & you & reviews",
+      "questionCount": 2
+    },
+    {
+      "index": 9,
+      "slug": "what-is-an-architecture-decision-record-adr-and-a-technical-rfc",
+      "title": "What is an Architecture Decision Record (ADR) and a technical RFC",
+      "questionCount": 1
+    },
+    {
+      "index": 10,
+      "slug": "and-the-how",
+      "title": "and & the & how",
+      "questionCount": 5
+    },
+    {
+      "index": 11,
+      "slug": "what-is-the-difference-between-a-liveness-probe-and-a-readiness-probe-and-how-d",
+      "title": "What is the difference between a liveness probe and a readiness probe, and how d",
+      "questionCount": 1
+    },
+    {
+      "index": 12,
+      "slug": "how-is-kibana-configured-in-your-project",
+      "title": "How is Kibana configured in your project",
+      "questionCount": 1
+    },
+    {
+      "index": 13,
+      "slug": "what-is-elasticsearch-and-how-does-it-search-internally",
+      "title": "What is Elasticsearch, and how does it search internally",
+      "questionCount": 1
+    },
+    {
+      "index": 14,
+      "slug": "the-default-mapping",
+      "title": "the & default & mapping",
+      "questionCount": 2
+    },
+    {
+      "index": 15,
+      "slug": "what-is-liquibase-and-how-does-it-manage-database-schema-version-control",
+      "title": "What is Liquibase, and how does it manage database schema version control",
+      "questionCount": 1
+    },
+    {
+      "index": 16,
+      "slug": "what-is-agile-and-what-is-sdlc",
+      "title": "What is AGILE and what is SDLC",
+      "questionCount": 1
+    },
+    {
+      "index": 17,
+      "slug": "the-heap-size",
+      "title": "the & heap & size",
+      "questionCount": 2
+    },
+    {
+      "index": 18,
+      "slug": "how-does-g1gc-work",
+      "title": "How does G1GC work",
+      "questionCount": 1
+    },
+    {
+      "index": 19,
+      "slug": "what-is-the-g1-humongous-object-problem",
+      "title": "What is the G1 \"humongous object\" problem",
+      "questionCount": 1
+    },
+    {
+      "index": 20,
+      "slug": "how-does-zgc-achieve-sub-millisecond-pauses",
+      "title": "How does ZGC achieve sub-millisecond pauses",
+      "questionCount": 1
+    },
+    {
+      "index": 21,
+      "slug": "the-and-zgc",
+      "title": "the & and & ZGC",
+      "questionCount": 3
+    },
+    {
+      "index": 22,
+      "slug": "what-is-epsilon-gc",
+      "title": "What is Epsilon GC",
+      "questionCount": 1
+    },
+    {
+      "index": 23,
+      "slug": "the-jvm-are",
+      "title": "the & JVM & are",
+      "questionCount": 2
+    },
+    {
+      "index": 24,
+      "slug": "what-jvm-monitoring-tools-do-you-use-in-production",
+      "title": "What JVM monitoring tools do you use in production",
+      "questionCount": 1
+    },
+    {
+      "index": 25,
+      "slug": "what-is-devsecops-and-shift-left-and-why-does-moving-security-into-the-pipeli",
+      "title": "What is DevSecOps and \"shift left\", and why does moving security into the pipeli",
+      "questionCount": 1
+    },
+    {
+      "index": 26,
+      "slug": "what-is-the-difference-between-sast",
+      "title": "What is the difference between SAST",
+      "questionCount": 1
+    },
+    {
+      "index": 27,
+      "slug": "what-is-an-sbom",
+      "title": "What is an SBOM",
+      "questionCount": 1
+    },
+    {
+      "index": 28,
+      "slug": "how-do-you-secure-the-cicd-pipeline-itself",
+      "title": "How do you secure the CI/CD pipeline itself",
+      "questionCount": 1
+    },
+    {
+      "index": 29,
+      "slug": "should-a-failing-security-scan-block-the-build",
+      "title": "Should a failing security scan block the build",
+      "questionCount": 1
+    },
+    {
+      "index": 30,
+      "slug": "explain-the-shared-responsibility-model-and-why-most-cloud-breaches-are-on-the",
+      "title": "Explain the Shared Responsibility Model, and why most cloud breaches are on the ",
+      "questionCount": 1
+    },
+    {
+      "index": 31,
+      "slug": "what-is-the-well-architected-framework",
+      "title": "What is the Well-Architected Framework",
+      "questionCount": 1
+    },
+    {
+      "index": 32,
+      "slug": "what-are-the-disaster-recovery-patterns-and-their-rtorpocost-trade-offs",
+      "title": "What are the disaster-recovery patterns and their RTO/RPO/cost trade-offs",
+      "questionCount": 1
+    },
+    {
+      "index": 33,
+      "slug": "what-are-the-7-rs-of-cloud-migration",
+      "title": "What are the 7 Rs of cloud migration",
+      "questionCount": 1
+    },
+    {
+      "index": 34,
+      "slug": "what-is-the-difference-between-aws-systems-manager-ssm",
+      "title": "What is the difference between AWS Systems Manager (SSM",
+      "questionCount": 1
+    },
+    {
+      "index": 35,
+      "slug": "what-causes-a-cloudformation-stack-to-get-stuck-in-updaterollbackfailed",
+      "title": "What causes a CloudFormation stack to get stuck in `UPDATE_ROLLBACK_FAILED`",
+      "questionCount": 1
+    },
+    {
+      "index": 36,
+      "slug": "how-do-you-write-a-production-dockerfile-for-a-spring-boot-app",
+      "title": "How do you write a production Dockerfile for a Spring Boot app",
+      "questionCount": 1
+    },
+    {
+      "index": 37,
+      "slug": "you-deploy-kubernetes",
+      "title": "you & deploy & Kubernetes",
+      "questionCount": 2
+    },
+    {
+      "index": 38,
+      "slug": "scenario-how-do-you-let-an-aws-lambda-in-account-b-use-an-amazon-efs-owned-by",
+      "title": "(Scenario) How do you let an AWS Lambda in Account B use an Amazon EFS owned by ",
+      "questionCount": 1
+    },
+    {
+      "index": 39,
+      "slug": "when-do-you-use-okhttp-mockwebserver-a-real-local-http-server-to-test-outboun",
+      "title": "When do you use OkHttp `MockWebServer` (a real local HTTP server to test outboun",
+      "questionCount": 1
+    },
+    {
+      "index": 40,
+      "slug": "why-must-you-subscribe-to-a-reactive-chain-in-tests",
+      "title": "Why must you subscribe to a reactive chain in tests",
+      "questionCount": 1
+    }
+  ]
+}

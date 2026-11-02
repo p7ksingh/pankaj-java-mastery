@@ -1,0 +1,639 @@
+{
+  "number": 10,
+  "slug": "microservices",
+  "title": "Microservices",
+  "topicCount": 105,
+  "questionCount": 194,
+  "topics": [
+    {
+      "index": 0,
+      "slug": "microservices-api-service",
+      "title": "microservices & API & Service",
+      "questionCount": 8
+    },
+    {
+      "index": 1,
+      "slug": "explain-the-decomposition-design-pattern",
+      "title": "Explain the Decomposition design pattern",
+      "questionCount": 1
+    },
+    {
+      "index": 2,
+      "slug": "and-the-are",
+      "title": "and & the & are",
+      "questionCount": 7
+    },
+    {
+      "index": 3,
+      "slug": "the-call-pattern",
+      "title": "the & call & pattern",
+      "questionCount": 2
+    },
+    {
+      "index": 4,
+      "slug": "api-gateway-its",
+      "title": "API & Gateway & its",
+      "questionCount": 2
+    },
+    {
+      "index": 5,
+      "slug": "when-a-request-reaches-the-gateway-and-the-target-service-is-down-how-do-you-ha",
+      "title": "When a request reaches the gateway and the target service is down, how do you ha",
+      "questionCount": 1
+    },
+    {
+      "index": 6,
+      "slug": "how-do-you-dynamically-route-requests-to-different-backends-at-runtime-in-spring",
+      "title": "How do you dynamically route requests to different backends at runtime in Spring",
+      "questionCount": 1
+    },
+    {
+      "index": 7,
+      "slug": "api-gateway-you",
+      "title": "API & Gateway & you",
+      "questionCount": 6
+    },
+    {
+      "index": 8,
+      "slug": "the-and-verification",
+      "title": "the & and & verification",
+      "questionCount": 4
+    },
+    {
+      "index": 9,
+      "slug": "how-do-you-cut-per-request-overhead-at-the-gateway",
+      "title": "How do you cut per-request overhead at the gateway",
+      "questionCount": 1
+    },
+    {
+      "index": 10,
+      "slug": "service-and-registry",
+      "title": "service & and & registry",
+      "questionCount": 4
+    },
+    {
+      "index": 11,
+      "slug": "you-scaling-monitoring",
+      "title": "you & scaling & monitoring",
+      "questionCount": 3
+    },
+    {
+      "index": 12,
+      "slug": "what-is-scaling-and-what-is-the-difference-between-vertical-scaling",
+      "title": "What is scaling, and what is the difference between vertical scaling",
+      "questionCount": 1
+    },
+    {
+      "index": 13,
+      "slug": "scaling-the-you",
+      "title": "scaling & the & you",
+      "questionCount": 2
+    },
+    {
+      "index": 14,
+      "slug": "why-should-you-first-clarify-what-1-million-users-means",
+      "title": "Why should you first clarify what \"1 million users\" means",
+      "questionCount": 1
+    },
+    {
+      "index": 15,
+      "slug": "and-the-you",
+      "title": "and & the & you",
+      "questionCount": 3
+    },
+    {
+      "index": 16,
+      "slug": "bucket-the-rate",
+      "title": "bucket & the & rate",
+      "questionCount": 2
+    },
+    {
+      "index": 17,
+      "slug": "azure-load-balancer",
+      "title": "Azure & load & balancer",
+      "questionCount": 2
+    },
+    {
+      "index": 18,
+      "slug": "why-are-technical-trace-ids-alone-insufficient-for-long-running-async-workflows",
+      "title": "Why are technical trace IDs alone insufficient for long-running async workflows,",
+      "questionCount": 1
+    },
+    {
+      "index": 19,
+      "slug": "the-and-service",
+      "title": "the & and & service",
+      "questionCount": 5
+    },
+    {
+      "index": 20,
+      "slug": "what-is-the-two-generals-problem-two-parties-over-an-unreliable-channel-can-nev",
+      "title": "What is the Two Generals Problem (two parties over an unreliable channel can nev",
+      "questionCount": 1
+    },
+    {
+      "index": 21,
+      "slug": "why-cant-you-rely-on-wall-clock-timestamps-to-order-events-across-distributed-n",
+      "title": "Why can't you rely on wall-clock timestamps to order events across distributed n",
+      "questionCount": 1
+    },
+    {
+      "index": 22,
+      "slug": "the-and-event",
+      "title": "the & and & event",
+      "questionCount": 2
+    },
+    {
+      "index": 23,
+      "slug": "the-event-and",
+      "title": "the & event & and",
+      "questionCount": 3
+    },
+    {
+      "index": 24,
+      "slug": "in-a-searchorderpaymentdelivery-system",
+      "title": "In a Search/Order/Payment/Delivery system",
+      "questionCount": 1
+    },
+    {
+      "index": 25,
+      "slug": "the-and-you",
+      "title": "the & and & you",
+      "questionCount": 3
+    },
+    {
+      "index": 26,
+      "slug": "what-is-event-sourcing",
+      "title": "What is Event Sourcing",
+      "questionCount": 1
+    },
+    {
+      "index": 27,
+      "slug": "and-the-for",
+      "title": "and & the & for",
+      "questionCount": 3
+    },
+    {
+      "index": 28,
+      "slug": "thread-and-communication",
+      "title": "thread & and & communication",
+      "questionCount": 2
+    },
+    {
+      "index": 29,
+      "slug": "explain-the-execution-flow-of-a-parent-task-that-spawns-multiple-child-tasks-and",
+      "title": "Explain the execution flow of a parent task that spawns multiple child tasks and",
+      "questionCount": 1
+    },
+    {
+      "index": 30,
+      "slug": "how-do-you-migrate-a-live-workflow-from-synchronous-rest-to-kafka-without-a-flag",
+      "title": "How do you migrate a live workflow from synchronous REST to Kafka without a flag",
+      "questionCount": 1
+    },
+    {
+      "index": 31,
+      "slug": "what-is-idempotency",
+      "title": "What is idempotency",
+      "questionCount": 1
+    },
+    {
+      "index": 32,
+      "slug": "the-and-you-32",
+      "title": "the & and & you",
+      "questionCount": 4
+    },
+    {
+      "index": 33,
+      "slug": "the-and-consumer",
+      "title": "the & and & consumer",
+      "questionCount": 3
+    },
+    {
+      "index": 34,
+      "slug": "how-do-you-handle-a-hot-row-that-many-requests-update-at-once-eg-a-shared-lik",
+      "title": "How do you handle a hot row that many requests update at once (e.g. a shared lik",
+      "questionCount": 1
+    },
+    {
+      "index": 35,
+      "slug": "what-are-the-strategies-for-api-versioning",
+      "title": "What are the strategies for API versioning",
+      "questionCount": 1
+    },
+    {
+      "index": 36,
+      "slug": "how-do-you-safely-evolve-a-contract-used-by-many-services",
+      "title": "How do you safely evolve a contract used by many services",
+      "questionCount": 1
+    },
+    {
+      "index": 37,
+      "slug": "what-is-contract-first-spec-first-api-development",
+      "title": "What is contract-first (spec-first) API development",
+      "questionCount": 1
+    },
+    {
+      "index": 38,
+      "slug": "what-is-the-circuit-breaker-pattern-how-does-resilience4j-implement-it-how-doe",
+      "title": "What is the Circuit Breaker pattern, how does Resilience4j implement it, how doe",
+      "questionCount": 1
+    },
+    {
+      "index": 39,
+      "slug": "how-do-you-secure-a-microservices-architecture",
+      "title": "How do you secure a microservices architecture",
+      "questionCount": 1
+    },
+    {
+      "index": 40,
+      "slug": "jwt-security-you",
+      "title": "JWT & security & you",
+      "questionCount": 2
+    },
+    {
+      "index": 41,
+      "slug": "how-do-you-propagate-security-tokens-from-an-api-gateway-to-downstream-services",
+      "title": "How do you propagate security tokens from an API Gateway to downstream services",
+      "questionCount": 1
+    },
+    {
+      "index": 42,
+      "slug": "how-do-you-secure-sensitive-endpoints-from-brute-force-attacks",
+      "title": "How do you secure sensitive endpoints from brute-force attacks",
+      "questionCount": 1
+    },
+    {
+      "index": 43,
+      "slug": "when-service-plane",
+      "title": "when & service & plane",
+      "questionCount": 2
+    },
+    {
+      "index": 44,
+      "slug": "explain-master-slave-architecture",
+      "title": "Explain Master-Slave architecture",
+      "questionCount": 1
+    },
+    {
+      "index": 45,
+      "slug": "and-shard-why",
+      "title": "and & shard & why",
+      "questionCount": 4
+    },
+    {
+      "index": 46,
+      "slug": "scenario-how-would-you-scale-a-key-value-store-toward-1m-requestssec",
+      "title": "(Scenario) How would you scale a key-value store toward ~1M requests/sec",
+      "questionCount": 1
+    },
+    {
+      "index": 47,
+      "slug": "service-microservices-you",
+      "title": "service & microservices & you",
+      "questionCount": 2
+    },
+    {
+      "index": 48,
+      "slug": "explain-the-facade-design-pattern",
+      "title": "Explain the Facade design pattern",
+      "questionCount": 1
+    },
+    {
+      "index": 49,
+      "slug": "the-thread-and",
+      "title": "the & thread & and",
+      "questionCount": 3
+    },
+    {
+      "index": 50,
+      "slug": "how-would-you-design-a-system-like-uber",
+      "title": "How would you design a system like Uber",
+      "questionCount": 1
+    },
+    {
+      "index": 51,
+      "slug": "how-would-you-design-a-url-shortener-short-code-generation",
+      "title": "How would you design a URL shortener (short-code generation",
+      "questionCount": 1
+    },
+    {
+      "index": 52,
+      "slug": "and-the-you-52",
+      "title": "and & the & you",
+      "questionCount": 3
+    },
+    {
+      "index": 53,
+      "slug": "how-would-you-design-a-tamper-evident-audit-log-queryable-1m-eventsday-7-yea",
+      "title": "How would you design a TAMPER-EVIDENT audit log (queryable, 1M events/day, 7-yea",
+      "questionCount": 1
+    },
+    {
+      "index": 54,
+      "slug": "how-would-you-design-an-otp-service-that-survives-a-login-spike-50k-rps-onto-a",
+      "title": "How would you design an OTP service that survives a login spike (50k RPS onto a ",
+      "questionCount": 1
+    },
+    {
+      "index": 55,
+      "slug": "why-is-multi-level-rate-limiting",
+      "title": "Why is multi-level rate limiting",
+      "questionCount": 1
+    },
+    {
+      "index": 56,
+      "slug": "how-would-you-design-a-social-feed-timeline-at-scale-eg-instagramtwitter",
+      "title": "How would you design a social feed / timeline at scale (e.g. Instagram/Twitter)",
+      "questionCount": 1
+    },
+    {
+      "index": 57,
+      "slug": "how-would-you-design-a-system-to-send-1-million-or-100m-push-notifications-wit",
+      "title": "How would you design a system to send 1 million (or 100M) push notifications wit",
+      "questionCount": 1
+    },
+    {
+      "index": 58,
+      "slug": "in-a-large-notification-system-how-do-you-stop-a-bulk-marketing-blast-from-star",
+      "title": "In a large notification system, how do you stop a bulk marketing blast from star",
+      "questionCount": 1
+    },
+    {
+      "index": 59,
+      "slug": "why-should-you-abstract-each-notification-provider-fcmtwiliosendgrid-behind",
+      "title": "Why should you abstract each notification provider (FCM/Twilio/SendGrid) behind ",
+      "questionCount": 1
+    },
+    {
+      "index": 60,
+      "slug": "how-would-you-migrate-master-data-from-a-legacy-system-to-a-custom-cloud-based-s",
+      "title": "How would you migrate master data from a legacy system to a custom cloud-based s",
+      "questionCount": 1
+    },
+    {
+      "index": 61,
+      "slug": "the-file-and",
+      "title": "the & file & and",
+      "questionCount": 3
+    },
+    {
+      "index": 62,
+      "slug": "write-redis-based-distributed-lock-logic-for-a-scheduled-task",
+      "title": "Write Redis-based distributed lock logic for a scheduled task",
+      "questionCount": 1
+    },
+    {
+      "index": 63,
+      "slug": "implement-a-simple-round-robin-load-balancer-in-java",
+      "title": "Implement a simple round-robin load balancer in Java",
+      "questionCount": 1
+    },
+    {
+      "index": 64,
+      "slug": "how-would-you-design-a-real-time-chat-messaging-system-eg-whatsappslack",
+      "title": "How would you design a real-time chat / messaging system (e.g. WhatsApp/Slack)",
+      "questionCount": 1
+    },
+    {
+      "index": 65,
+      "slug": "search-you-the",
+      "title": "search & you & the",
+      "questionCount": 2
+    },
+    {
+      "index": 66,
+      "slug": "how-would-you-design-a-real-time-collaborative-document-editor-like-google-docs",
+      "title": "How would you design a real-time COLLABORATIVE DOCUMENT editor like Google Docs",
+      "questionCount": 1
+    },
+    {
+      "index": 67,
+      "slug": "how-would-you-design-a-recommendation-system",
+      "title": "How would you design a recommendation system",
+      "questionCount": 1
+    },
+    {
+      "index": 68,
+      "slug": "how-would-you-design-a-video-streaming-platform-eg-youtubenetflix",
+      "title": "How would you design a video streaming platform (e.g. YouTube/Netflix)",
+      "questionCount": 1
+    },
+    {
+      "index": 69,
+      "slug": "why-model-an-orders-status-as-an-explicit-state-machine-created-confirmed",
+      "title": "Why model an order's status as an explicit STATE MACHINE (Created → Confirmed → ",
+      "questionCount": 1
+    },
+    {
+      "index": 70,
+      "slug": "what-is-the-difference-between-soa-and-microservices",
+      "title": "What is the difference between SOA and microservices",
+      "questionCount": 1
+    },
+    {
+      "index": 71,
+      "slug": "the-and-outbox",
+      "title": "the & and & outbox",
+      "questionCount": 3
+    },
+    {
+      "index": 72,
+      "slug": "the-architecture-monolith",
+      "title": "the & architecture & Monolith",
+      "questionCount": 2
+    },
+    {
+      "index": 73,
+      "slug": "what-is-the-microkernelplugin-architecture",
+      "title": "What is the Microkernel/Plugin architecture",
+      "questionCount": 1
+    },
+    {
+      "index": 74,
+      "slug": "what-is-space-based-architecture-in-memory-data-grid-to-remove-the-db-bottlenec",
+      "title": "What is Space-Based architecture (in-memory data grid to remove the DB bottlenec",
+      "questionCount": 1
+    },
+    {
+      "index": 75,
+      "slug": "what-is-peer-to-peer-architecture-and-when-is-it-the-right-fit-decentralizatio",
+      "title": "What is Peer-to-Peer architecture, and when is it the right fit (decentralizatio",
+      "questionCount": 1
+    },
+    {
+      "index": 76,
+      "slug": "and-proxy-the",
+      "title": "and & proxy & the",
+      "questionCount": 2
+    },
+    {
+      "index": 77,
+      "slug": "what-load-balancing-algorithms-exist",
+      "title": "What load-balancing algorithms exist",
+      "questionCount": 1
+    },
+    {
+      "index": 78,
+      "slug": "the-does-load",
+      "title": "the & does & load",
+      "questionCount": 2
+    },
+    {
+      "index": 79,
+      "slug": "and-shared-the",
+      "title": "and & shared & the",
+      "questionCount": 3
+    },
+    {
+      "index": 80,
+      "slug": "how-do-you-estimate-how-many-instancespods-are-needed-for-a-target-throughput",
+      "title": "How do you estimate how many instances/pods are needed for a target throughput (",
+      "questionCount": 1
+    },
+    {
+      "index": 81,
+      "slug": "how-do-you-do-a-back-of-envelope-capacity-estimate-in-a-system-design-interview",
+      "title": "How do you do a back-of-envelope capacity estimate in a system-design interview",
+      "questionCount": 1
+    },
+    {
+      "index": 82,
+      "slug": "redis-data-and",
+      "title": "Redis & data & and",
+      "questionCount": 4
+    },
+    {
+      "index": 83,
+      "slug": "why-separate-the-scheduler",
+      "title": "Why separate the scheduler",
+      "questionCount": 1
+    },
+    {
+      "index": 84,
+      "slug": "and-are-cache",
+      "title": "and & are & cache",
+      "questionCount": 2
+    },
+    {
+      "index": 85,
+      "slug": "what-is-refresh-ahead-caching",
+      "title": "What is refresh-ahead caching",
+      "questionCount": 1
+    },
+    {
+      "index": 86,
+      "slug": "why-is-concurrenthashmapcomputeifabsentkey-expensivelambda-a-hot-path-trap",
+      "title": "Why is `ConcurrentHashMap.computeIfAbsent(key, expensiveLambda)` a hot-path trap",
+      "questionCount": 1
+    },
+    {
+      "index": 87,
+      "slug": "the-and-cache",
+      "title": "the & and & cache",
+      "questionCount": 4
+    },
+    {
+      "index": 88,
+      "slug": "why-can-a-fallback-make-a-system-less-reliable-it-silently-shifts-load-to-anoth",
+      "title": "Why can a fallback make a system LESS reliable (it silently shifts load to anoth",
+      "questionCount": 1
+    },
+    {
+      "index": 89,
+      "slug": "why-can-an-unbounded-queue-be-more-dangerous-than-rejecting-requests",
+      "title": "Why can an unbounded queue be more dangerous than rejecting requests",
+      "questionCount": 1
+    },
+    {
+      "index": 90,
+      "slug": "the-and-autoscaling",
+      "title": "the & and & autoscaling",
+      "questionCount": 2
+    },
+    {
+      "index": 91,
+      "slug": "you-service-and",
+      "title": "you & service & and",
+      "questionCount": 2
+    },
+    {
+      "index": 92,
+      "slug": "scenario-postgresql-is-approaching-its-write-capacity",
+      "title": "(Scenario) PostgreSQL is approaching its write capacity",
+      "questionCount": 1
+    },
+    {
+      "index": 93,
+      "slug": "scenario-a-new-architecture-cuts-average-latency-by-40-but-doubles-operationa",
+      "title": "(Scenario) A new architecture cuts average latency by 40% but doubles operationa",
+      "questionCount": 1
+    },
+    {
+      "index": 94,
+      "slug": "when-would-you-deliberately-accept-data-loss",
+      "title": "When would you deliberately accept data loss",
+      "questionCount": 1
+    },
+    {
+      "index": 95,
+      "slug": "scenario-your-architecture-worked-well-at-10-the-original-traffic",
+      "title": "(Scenario) Your architecture worked well at 10× the original traffic",
+      "questionCount": 1
+    },
+    {
+      "index": 96,
+      "slug": "what-separates-a-senior-microservices-answer-from-a-staffprincipal-level-answer",
+      "title": "What separates a senior microservices answer from a staff/principal-level answer",
+      "questionCount": 1
+    },
+    {
+      "index": 97,
+      "slug": "scenario-a-dependency-has-999-availability-but-your-api-is-expected-to-provi",
+      "title": "(Scenario) A dependency has 99.9% availability but your API is expected to provi",
+      "questionCount": 1
+    },
+    {
+      "index": 98,
+      "slug": "why-does-shared-database-access-between-microservices-weaken-the-independence-th",
+      "title": "Why does shared-database access between microservices weaken the independence th",
+      "questionCount": 1
+    },
+    {
+      "index": 99,
+      "slug": "the-and-why",
+      "title": "the & and & why",
+      "questionCount": 7
+    },
+    {
+      "index": 100,
+      "slug": "what-is-the-noisy-neighbor-problem-one-large-tenantcustomer-consuming-shared-r",
+      "title": "What is the noisy-neighbor problem (one large tenant/customer consuming shared r",
+      "questionCount": 1
+    },
+    {
+      "index": 101,
+      "slug": "how-do-you-prevent-one-large-customer-from-hurting-everyone-else-when-your-syste",
+      "title": "How do you prevent one large customer from hurting everyone else when your syste",
+      "questionCount": 1
+    },
+    {
+      "index": 102,
+      "slug": "what-is-the-difference-between-availability-the-system-can-provide-service-when",
+      "title": "What is the difference between availability (the system can provide service when",
+      "questionCount": 1
+    },
+    {
+      "index": 103,
+      "slug": "the-new-and",
+      "title": "the & new & and",
+      "questionCount": 2
+    },
+    {
+      "index": 104,
+      "slug": "the-and-you-104",
+      "title": "the & and & you",
+      "questionCount": 4
+    }
+  ]
+}

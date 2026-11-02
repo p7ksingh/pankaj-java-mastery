@@ -1,0 +1,183 @@
+{
+  "number": 3,
+  "slug": "collections",
+  "title": "Collections",
+  "topicCount": 29,
+  "questionCount": 67,
+  "topics": [
+    {
+      "index": 0,
+      "slug": "collections-the-framework",
+      "title": "Collections & the & Framework",
+      "questionCount": 2
+    },
+    {
+      "index": 1,
+      "slug": "arraylist-linkedlist-use",
+      "title": "ArrayList & LinkedList & use",
+      "questionCount": 8
+    },
+    {
+      "index": 2,
+      "slug": "linkedblockingqueue",
+      "title": "LinkedBlockingQueue",
+      "questionCount": 1
+    },
+    {
+      "index": 3,
+      "slug": "hashmap",
+      "title": "HashMap",
+      "questionCount": 8
+    },
+    {
+      "index": 4,
+      "slug": "hashmap-4",
+      "title": "HashMap",
+      "questionCount": 14
+    },
+    {
+      "index": 5,
+      "slug": "list-copyonwritearraylist-thread",
+      "title": "list & CopyOnWriteArrayList & thread",
+      "questionCount": 2
+    },
+    {
+      "index": 6,
+      "slug": "fail-fast-vs-fail-safe-iteration",
+      "title": "Fail-fast vs fail-safe iteration",
+      "questionCount": 1
+    },
+    {
+      "index": 7,
+      "slug": "iterator-vs-listiterator",
+      "title": "Iterator vs ListIterator",
+      "questionCount": 1
+    },
+    {
+      "index": 8,
+      "slug": "reference-hashmap",
+      "title": "reference & HashMap",
+      "questionCount": 4
+    },
+    {
+      "index": 9,
+      "slug": "how-to-decide-between-set-and-list",
+      "title": "How to decide between Set and List",
+      "questionCount": 1
+    },
+    {
+      "index": 10,
+      "slug": "bigdecimal-compareto-vs-equals",
+      "title": "BigDecimal compareTo vs equals",
+      "questionCount": 1
+    },
+    {
+      "index": 11,
+      "slug": "generics",
+      "title": "Generics",
+      "questionCount": 1
+    },
+    {
+      "index": 12,
+      "slug": "generic-classes",
+      "title": "Generic classes",
+      "questionCount": 1
+    },
+    {
+      "index": 13,
+      "slug": "convert-list-to-set",
+      "title": "Convert List to Set",
+      "questionCount": 1
+    },
+    {
+      "index": 14,
+      "slug": "computeifabsent-putifabsent-merge",
+      "title": "computeIfAbsent & putIfAbsent & merge",
+      "questionCount": 2
+    },
+    {
+      "index": 15,
+      "slug": "removeif-iteratorremove-vs-for-each-remove",
+      "title": "removeIf + Iterator.remove vs for-each remove",
+      "questionCount": 1
+    },
+    {
+      "index": 16,
+      "slug": "list-map-immutable",
+      "title": "List & Map & immutable",
+      "questionCount": 2
+    },
+    {
+      "index": 17,
+      "slug": "enumset-and-enummap",
+      "title": "EnumSet & and & EnumMap",
+      "questionCount": 2
+    },
+    {
+      "index": 18,
+      "slug": "arraysaslist-vs-listof",
+      "title": "Arrays.asList vs List.of",
+      "questionCount": 1
+    },
+    {
+      "index": 19,
+      "slug": "spliterator-tryadvance-trysplit",
+      "title": "Spliterator & tryAdvance & trySplit",
+      "questionCount": 2
+    },
+    {
+      "index": 20,
+      "slug": "queue-throwing-vs-non-throwing-methods",
+      "title": "Queue throwing vs non-throwing methods",
+      "questionCount": 1
+    },
+    {
+      "index": 21,
+      "slug": "arraydeque-replaces-stack",
+      "title": "ArrayDeque & replaces & Stack",
+      "questionCount": 2
+    },
+    {
+      "index": 22,
+      "slug": "transferqueue",
+      "title": "TransferQueue",
+      "questionCount": 1
+    },
+    {
+      "index": 23,
+      "slug": "collectiontoarray",
+      "title": "Collection.toArray()",
+      "questionCount": 1
+    },
+    {
+      "index": 24,
+      "slug": "type-erasure",
+      "title": "Type erasure",
+      "questionCount": 1
+    },
+    {
+      "index": 25,
+      "slug": "raw-types-heap-pollution-safevarargs",
+      "title": "Raw types, heap pollution, @SafeVarargs",
+      "questionCount": 1
+    },
+    {
+      "index": 26,
+      "slug": "wildcard-capture",
+      "title": "Wildcard capture",
+      "questionCount": 1
+    },
+    {
+      "index": 27,
+      "slug": "recursive-generics-self-bounded-types",
+      "title": "Recursive generics / self-bounded types",
+      "questionCount": 1
+    },
+    {
+      "index": 28,
+      "slug": "collections-checkedlist-map",
+      "title": "Collections & checkedList & Map",
+      "questionCount": 2
+    }
+  ]
+}

@@ -1,0 +1,417 @@
+{
+  "number": 6,
+  "slug": "java-8-functional",
+  "title": "Java 8+ Functional",
+  "topicCount": 68,
+  "questionCount": 139,
+  "topics": [
+    {
+      "index": 0,
+      "slug": "why-was-java-8-introduced-over-java-7",
+      "title": "Why was Java 8 introduced over Java 7",
+      "questionCount": 1
+    },
+    {
+      "index": 1,
+      "slug": "the-date-api",
+      "title": "the & Date & API",
+      "questionCount": 2
+    },
+    {
+      "index": 2,
+      "slug": "and-methods-interface",
+      "title": "and & methods & interface",
+      "questionCount": 12
+    },
+    {
+      "index": 3,
+      "slug": "what-is-the-difference-between-predicate",
+      "title": "What is the difference between Predicate",
+      "questionCount": 1
+    },
+    {
+      "index": 4,
+      "slug": "can-you-use-static-methods-in-an-interface",
+      "title": "Can you use static methods in an interface",
+      "questionCount": 1
+    },
+    {
+      "index": 5,
+      "slug": "what-is-a-stream",
+      "title": "What is a Stream",
+      "questionCount": 1
+    },
+    {
+      "index": 6,
+      "slug": "what-are-the-differences-between-predicate",
+      "title": "What are the differences between `Predicate`",
+      "questionCount": 1
+    },
+    {
+      "index": 7,
+      "slug": "and-the-operations",
+      "title": "and & the & operations",
+      "questionCount": 6
+    },
+    {
+      "index": 8,
+      "slug": "what-is-the-difference-between-foreach-and-foreachordered",
+      "title": "What is the difference between forEach and forEachOrdered",
+      "questionCount": 1
+    },
+    {
+      "index": 9,
+      "slug": "and-map-name",
+      "title": "and & map & Name",
+      "questionCount": 2
+    },
+    {
+      "index": 10,
+      "slug": "explain-terminal-operations",
+      "title": "Explain terminal operations",
+      "questionCount": 1
+    },
+    {
+      "index": 11,
+      "slug": "when-should-you-not-use-optional",
+      "title": "When should you NOT use Optional",
+      "questionCount": 1
+    },
+    {
+      "index": 12,
+      "slug": "what-predicate-does-filter",
+      "title": "What `Predicate` does `filter",
+      "questionCount": 1
+    },
+    {
+      "index": 13,
+      "slug": "what-are-the-four-types-of-method-references",
+      "title": "What are the four types of method references",
+      "questionCount": 1
+    },
+    {
+      "index": 14,
+      "slug": "can-you-use-an-external-int-variable-inside-filter",
+      "title": "Can you use an external `int` variable inside `filter",
+      "questionCount": 1
+    },
+    {
+      "index": 15,
+      "slug": "and-the-streams",
+      "title": "and & the & streams",
+      "questionCount": 10
+    },
+    {
+      "index": 16,
+      "slug": "what-is-the-difference-between-foreach",
+      "title": "What is the difference between forEach",
+      "questionCount": 1
+    },
+    {
+      "index": 17,
+      "slug": "what-is-the-difference-between-findfirst",
+      "title": "What is the difference between findFirst",
+      "questionCount": 1
+    },
+    {
+      "index": 18,
+      "slug": "optional-and-does",
+      "title": "Optional & and & does",
+      "questionCount": 6
+    },
+    {
+      "index": 19,
+      "slug": "what-are-the-four-types-of-method-references-19",
+      "title": "What are the four types of method references",
+      "questionCount": 1
+    },
+    {
+      "index": 20,
+      "slug": "how-does-collectorsgroupingby",
+      "title": "How does Collectors.groupingBy",
+      "questionCount": 1
+    },
+    {
+      "index": 21,
+      "slug": "city-stream-sorted",
+      "title": "city & Stream & sorted",
+      "questionCount": 2
+    },
+    {
+      "index": 22,
+      "slug": "the-and-you",
+      "title": "the & and & you",
+      "questionCount": 5
+    },
+    {
+      "index": 23,
+      "slug": "you-using-streams",
+      "title": "you & using & streams",
+      "questionCount": 15
+    },
+    {
+      "index": 24,
+      "slug": "the-element-and",
+      "title": "the & element & and",
+      "questionCount": 2
+    },
+    {
+      "index": 25,
+      "slug": "what-are-the-benefits-of-functional-programming",
+      "title": "What are the benefits of functional programming",
+      "questionCount": 1
+    },
+    {
+      "index": 26,
+      "slug": "what-new-features-were-introduced-in-java-11",
+      "title": "What new features were introduced in Java 11",
+      "questionCount": 1
+    },
+    {
+      "index": 27,
+      "slug": "how-do-you-call-a-rest-api-with-the-java-11-httpclient",
+      "title": "How do you call a REST API with the Java 11 HttpClient",
+      "questionCount": 1
+    },
+    {
+      "index": 28,
+      "slug": "how-do-filesreadstringwritestring-stringisblankstriplinesrepeat-and-opti",
+      "title": "How do Files.readString/writeString, String.isBlank/strip/lines/repeat, and Opti",
+      "questionCount": 1
+    },
+    {
+      "index": 29,
+      "slug": "what-is-java-flight-recorder",
+      "title": "What is Java Flight Recorder",
+      "questionCount": 1
+    },
+    {
+      "index": 30,
+      "slug": "why-can-a-java-8-11-upgrade-break-the-build",
+      "title": "Why can a Java 8 → 11 upgrade break the build",
+      "questionCount": 1
+    },
+    {
+      "index": 31,
+      "slug": "how-would-you-migrate-an-application-from-java-8-to-java-17",
+      "title": "How would you migrate an application from Java 8 to Java 17",
+      "questionCount": 1
+    },
+    {
+      "index": 32,
+      "slug": "what-are-the-specific-breaking-changes-when-migrating-java-8-java-17",
+      "title": "What are the specific breaking changes when migrating Java 8 → Java 17",
+      "questionCount": 1
+    },
+    {
+      "index": 33,
+      "slug": "lambda-capture-final",
+      "title": "lambda & capture & final",
+      "questionCount": 2
+    },
+    {
+      "index": 34,
+      "slug": "what-is-the-difference-between-anymatch",
+      "title": "What is the difference between anyMatch",
+      "questionCount": 1
+    },
+    {
+      "index": 35,
+      "slug": "what-is-the-difference-between-takewhile-and-dropwhile",
+      "title": "What is the difference between takeWhile and dropWhile",
+      "questionCount": 1
+    },
+    {
+      "index": 36,
+      "slug": "what-does-collectorspartitioningby-do-and-how-is-it-different-from-groupingby",
+      "title": "What does Collectors.partitioningBy do, and how is it different from groupingBy",
+      "questionCount": 1
+    },
+    {
+      "index": 37,
+      "slug": "what-is-collectorsmapping-used-for-as-a-downstream-collector",
+      "title": "What is Collectors.mapping used for as a downstream collector",
+      "questionCount": 1
+    },
+    {
+      "index": 38,
+      "slug": "how-do-you-write-a-custom-collector-with-collectorof",
+      "title": "How do you write a custom collector with Collector.of",
+      "questionCount": 1
+    },
+    {
+      "index": 39,
+      "slug": "how-do-you-get-minmaxsumaveragecount-in-a-single-pass-with-summarystatistics",
+      "title": "How do you get min/max/sum/average/count in a single pass with summaryStatistics",
+      "questionCount": 1
+    },
+    {
+      "index": 40,
+      "slug": "stream-and-why",
+      "title": "Stream & and & why",
+      "questionCount": 4
+    },
+    {
+      "index": 41,
+      "slug": "and-they-bound",
+      "title": "and & they & bound",
+      "questionCount": 4
+    },
+    {
+      "index": 42,
+      "slug": "what-did-java-21-add-overall-and-why-is-java-21-a-common-upgrade-target",
+      "title": "What did Java 21 add overall, and why is Java 21 a common upgrade target",
+      "questionCount": 1
+    },
+    {
+      "index": 43,
+      "slug": "what-is-structured-concurrency",
+      "title": "What is Structured Concurrency",
+      "questionCount": 1
+    },
+    {
+      "index": 44,
+      "slug": "what-is-scopedvalue",
+      "title": "What is ScopedValue",
+      "questionCount": 1
+    },
+    {
+      "index": 45,
+      "slug": "what-are-text-blocks-and-when-are-they-useful",
+      "title": "What are Text Blocks, and when are they useful",
+      "questionCount": 1
+    },
+    {
+      "index": 46,
+      "slug": "what-are-switch-expressions",
+      "title": "What are switch expressions",
+      "questionCount": 1
+    },
+    {
+      "index": 47,
+      "slug": "what-are-helpful-nullpointerexceptions",
+      "title": "What are Helpful NullPointerExceptions",
+      "questionCount": 1
+    },
+    {
+      "index": 48,
+      "slug": "what-did-java-17-add-overall-and-why-do-teams-adopt-it",
+      "title": "What did Java 17 add overall, and why do teams adopt it",
+      "questionCount": 1
+    },
+    {
+      "index": 49,
+      "slug": "what-are-stable-values-jep-502",
+      "title": "What are Stable Values (JEP 502)",
+      "questionCount": 1
+    },
+    {
+      "index": 50,
+      "slug": "what-are-primitive-types-in-patterns",
+      "title": "What are Primitive Types in Patterns",
+      "questionCount": 1
+    },
+    {
+      "index": 51,
+      "slug": "what-are-module-import-declarations",
+      "title": "What are Module Import Declarations",
+      "questionCount": 1
+    },
+    {
+      "index": 52,
+      "slug": "what-are-flexible-constructor-bodies-jep-513",
+      "title": "What are Flexible Constructor Bodies (JEP 513",
+      "questionCount": 1
+    },
+    {
+      "index": 53,
+      "slug": "what-are-the-vector-api",
+      "title": "What are the Vector API",
+      "questionCount": 1
+    },
+    {
+      "index": 54,
+      "slug": "what-is-http3-support-in-the-jdk-httpclient",
+      "title": "What is HTTP/3 support in the JDK HttpClient",
+      "questionCount": 1
+    },
+    {
+      "index": 55,
+      "slug": "what-are-unnamed-variables-and-patterns",
+      "title": "What are unnamed variables and patterns",
+      "questionCount": 1
+    },
+    {
+      "index": 56,
+      "slug": "what-is-project-leyden-aiming-to-improve",
+      "title": "What is Project Leyden aiming to improve",
+      "questionCount": 1
+    },
+    {
+      "index": 57,
+      "slug": "how-does-collectorsjoining",
+      "title": "How does Collectors.joining",
+      "questionCount": 1
+    },
+    {
+      "index": 58,
+      "slug": "and-does-collectors",
+      "title": "and & does & Collectors",
+      "questionCount": 2
+    },
+    {
+      "index": 59,
+      "slug": "comparator-and-for",
+      "title": "Comparator & and & for",
+      "questionCount": 2
+    },
+    {
+      "index": 60,
+      "slug": "stream-optional-does",
+      "title": "stream & Optional & does",
+      "questionCount": 2
+    },
+    {
+      "index": 61,
+      "slug": "the-and-final",
+      "title": "the & and & final",
+      "questionCount": 3
+    },
+    {
+      "index": 62,
+      "slug": "and-map-they",
+      "title": "and & Map & they",
+      "questionCount": 4
+    },
+    {
+      "index": 63,
+      "slug": "what-is-the-stringjoiner-class",
+      "title": "What is the StringJoiner class",
+      "questionCount": 1
+    },
+    {
+      "index": 64,
+      "slug": "and-stream-the",
+      "title": "and & Stream & the",
+      "questionCount": 5
+    },
+    {
+      "index": 65,
+      "slug": "how-do-the-toarray-overloads-work",
+      "title": "How do the toArray() overloads work",
+      "questionCount": 1
+    },
+    {
+      "index": 66,
+      "slug": "what-are-stream-characteristics-spliterator-flags",
+      "title": "What are stream characteristics / Spliterator flags",
+      "questionCount": 1
+    },
+    {
+      "index": 67,
+      "slug": "what-are-java-records",
+      "title": "What are Java Records",
+      "questionCount": 1
+    }
+  ]
+}

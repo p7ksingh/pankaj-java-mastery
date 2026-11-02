@@ -1,0 +1,135 @@
+{
+  "number": 2,
+  "slug": "oop",
+  "title": "OOP",
+  "topicCount": 21,
+  "questionCount": 32,
+  "topics": [
+    {
+      "index": 0,
+      "slug": "oop-encapsulation-abstraction",
+      "title": "OOP & encapsulation & abstraction",
+      "questionCount": 4
+    },
+    {
+      "index": 1,
+      "slug": "and-the-method",
+      "title": "and & the & method",
+      "questionCount": 4
+    },
+    {
+      "index": 2,
+      "slug": "the-abstract-class",
+      "title": "the & abstract & class",
+      "questionCount": 2
+    },
+    {
+      "index": 3,
+      "slug": "what-is-the-difference-between-this-and-super-in-java",
+      "title": "What is the difference between this and super in Java?",
+      "questionCount": 1
+    },
+    {
+      "index": 4,
+      "slug": "can-we-achieve-multiple-inheritance-in-java-why-is-multiple-class-inheritance-d",
+      "title": "Can we achieve multiple inheritance in Java, why is multiple class inheritance d",
+      "questionCount": 1
+    },
+    {
+      "index": 5,
+      "slug": "what-is-a-constructor-and-can-a-constructor-be-private",
+      "title": "What is a constructor, and can a constructor be private",
+      "questionCount": 1
+    },
+    {
+      "index": 6,
+      "slug": "what-is-the-difference-between-a-shallow-copy-and-a-deep-copy",
+      "title": "What is the difference between a shallow copy and a deep copy",
+      "questionCount": 1
+    },
+    {
+      "index": 7,
+      "slug": "what-is-the-instanceof-operator-and-how-does-pattern-matching-for-instanceof",
+      "title": "What is the instanceof operator, and how does pattern matching for instanceof",
+      "questionCount": 1
+    },
+    {
+      "index": 8,
+      "slug": "what-is-a-marker-interface-and-what-are-some-examples",
+      "title": "What is a marker interface, and what are some examples",
+      "questionCount": 1
+    },
+    {
+      "index": 9,
+      "slug": "what-is-the-difference-between-composition",
+      "title": "What is the difference between composition",
+      "questionCount": 1
+    },
+    {
+      "index": 10,
+      "slug": "the-does-add",
+      "title": "the & does & add",
+      "questionCount": 2
+    },
+    {
+      "index": 11,
+      "slug": "what-is-aggregation",
+      "title": "What is aggregation",
+      "questionCount": 1
+    },
+    {
+      "index": 12,
+      "slug": "what-is-a-covariant-return-type",
+      "title": "What is a covariant return type",
+      "questionCount": 1
+    },
+    {
+      "index": 13,
+      "slug": "what-is-the-difference-between-method-hiding",
+      "title": "What is the difference between method hiding",
+      "questionCount": 1
+    },
+    {
+      "index": 14,
+      "slug": "sealed-oop-final",
+      "title": "sealed & OOP & final",
+      "questionCount": 2
+    },
+    {
+      "index": 15,
+      "slug": "what-is-the-difference-between-association-uses-a-aggregation-has-a-part-ou",
+      "title": "What is the difference between association (uses-a), aggregation (has-a, part ou",
+      "questionCount": 1
+    },
+    {
+      "index": 16,
+      "slug": "what-is-tight-coupling-vs-loose-coupling",
+      "title": "What is tight coupling vs loose coupling",
+      "questionCount": 1
+    },
+    {
+      "index": 17,
+      "slug": "what-is-cohesion-why-is-high-cohesion-a-design-goal-srp",
+      "title": "What is cohesion, why is HIGH cohesion a design goal (SRP",
+      "questionCount": 1
+    },
+    {
+      "index": 18,
+      "slug": "methods-and-the",
+      "title": "methods & and & the",
+      "questionCount": 2
+    },
+    {
+      "index": 19,
+      "slug": "you-abstract-class",
+      "title": "you & abstract & class",
+      "questionCount": 2
+    },
+    {
+      "index": 20,
+      "slug": "what-is-the-delegation-pattern",
+      "title": "What is the delegation pattern",
+      "questionCount": 1
+    }
+  ]
+}

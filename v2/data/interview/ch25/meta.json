@@ -1,0 +1,147 @@
+{
+  "number": 25,
+  "slug": "security",
+  "title": "Security",
+  "topicCount": 23,
+  "questionCount": 24,
+  "topics": [
+    {
+      "index": 0,
+      "slug": "what-are-the-steps",
+      "title": "What are the steps",
+      "questionCount": 1
+    },
+    {
+      "index": 1,
+      "slug": "which-solid-principles-matter-most-in-lld",
+      "title": "Which SOLID principles matter most in LLD",
+      "questionCount": 1
+    },
+    {
+      "index": 2,
+      "slug": "design-car-nearest",
+      "title": "Design & car & nearest",
+      "questionCount": 2
+    },
+    {
+      "index": 3,
+      "slug": "design-a-library-management-system",
+      "title": "Design a Library Management System",
+      "questionCount": 1
+    },
+    {
+      "index": 4,
+      "slug": "design-a-chess-game",
+      "title": "Design a Chess Game",
+      "questionCount": 1
+    },
+    {
+      "index": 5,
+      "slug": "design-a-vending-machine",
+      "title": "Design a Vending Machine",
+      "questionCount": 1
+    },
+    {
+      "index": 6,
+      "slug": "design-a-hotel-booking-system",
+      "title": "Design a Hotel Booking System",
+      "questionCount": 1
+    },
+    {
+      "index": 7,
+      "slug": "design-a-food-delivery-app-like-swiggyzomato",
+      "title": "Design a Food Delivery App (like Swiggy/Zomato)",
+      "questionCount": 1
+    },
+    {
+      "index": 8,
+      "slug": "design-a-movie-ticket-booking-system-like-bookmyshow",
+      "title": "Design a Movie Ticket Booking System (like BookMyShow)",
+      "questionCount": 1
+    },
+    {
+      "index": 9,
+      "slug": "design-an-atm-machine",
+      "title": "Design an ATM Machine",
+      "questionCount": 1
+    },
+    {
+      "index": 10,
+      "slug": "design-a-file-system",
+      "title": "Design a File System",
+      "questionCount": 1
+    },
+    {
+      "index": 11,
+      "slug": "design-a-logging-framework",
+      "title": "Design a Logging Framework",
+      "questionCount": 1
+    },
+    {
+      "index": 12,
+      "slug": "design-an-online-shopping-cart",
+      "title": "Design an Online Shopping Cart",
+      "questionCount": 1
+    },
+    {
+      "index": 13,
+      "slug": "singleton",
+      "title": "Singleton",
+      "questionCount": 1
+    },
+    {
+      "index": 14,
+      "slug": "factory-method",
+      "title": "Factory Method",
+      "questionCount": 1
+    },
+    {
+      "index": 15,
+      "slug": "strategy",
+      "title": "Strategy",
+      "questionCount": 1
+    },
+    {
+      "index": 16,
+      "slug": "observer",
+      "title": "Observer",
+      "questionCount": 1
+    },
+    {
+      "index": 17,
+      "slug": "state",
+      "title": "State",
+      "questionCount": 1
+    },
+    {
+      "index": 18,
+      "slug": "decorator",
+      "title": "Decorator",
+      "questionCount": 1
+    },
+    {
+      "index": 19,
+      "slug": "builder",
+      "title": "Builder",
+      "questionCount": 1
+    },
+    {
+      "index": 20,
+      "slug": "adapter",
+      "title": "Adapter",
+      "questionCount": 1
+    },
+    {
+      "index": 21,
+      "slug": "command",
+      "title": "Command",
+      "questionCount": 1
+    },
+    {
+      "index": 22,
+      "slug": "chain-of-responsibility",
+      "title": "Chain of Responsibility",
+      "questionCount": 1
+    }
+  ]
+}

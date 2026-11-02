@@ -1,0 +1,237 @@
+{
+  "number": 11,
+  "slug": "kafka-messaging",
+  "title": "Kafka & Messaging",
+  "topicCount": 38,
+  "questionCount": 91,
+  "topics": [
+    {
+      "index": 0,
+      "slug": "kafka-and-for",
+      "title": "Kafka & and & for",
+      "questionCount": 10
+    },
+    {
+      "index": 1,
+      "slug": "what-is-the-role-of-leader-and-follower-replicas-and-what-is-the-in-sync-replic",
+      "title": "What is the role of leader and follower replicas, and what is the in-sync replic",
+      "questionCount": 1
+    },
+    {
+      "index": 2,
+      "slug": "what-is-the-replication-factor-in-kafka",
+      "title": "What is the replication factor in Kafka",
+      "questionCount": 1
+    },
+    {
+      "index": 3,
+      "slug": "what-is-fault-tolerance-and-how-is-it-achieved-using-the-replication-factor",
+      "title": "What is fault tolerance, and how is it achieved using the replication factor",
+      "questionCount": 1
+    },
+    {
+      "index": 4,
+      "slug": "what-replaced-zookeeper-in-kafka-40",
+      "title": "What replaced ZooKeeper in Kafka 4.0",
+      "questionCount": 1
+    },
+    {
+      "index": 5,
+      "slug": "what-are-the-three-delivery-semantics",
+      "title": "What are the three delivery semantics",
+      "questionCount": 1
+    },
+    {
+      "index": 6,
+      "slug": "what-is-the-difference-between-log-retention-and-log-compaction",
+      "title": "What is the difference between log retention and log compaction?",
+      "questionCount": 1
+    },
+    {
+      "index": 7,
+      "slug": "what-happens-if-a-producer-sends-a-message-but-no-consumers-are-subscribed",
+      "title": "What happens if a producer sends a message but no consumers are subscribed",
+      "questionCount": 1
+    },
+    {
+      "index": 8,
+      "slug": "the-and-schema",
+      "title": "the & and & Schema",
+      "questionCount": 3
+    },
+    {
+      "index": 9,
+      "slug": "key-and-you",
+      "title": "key & and & you",
+      "questionCount": 2
+    },
+    {
+      "index": 10,
+      "slug": "what-is-the-difference-between-the-eager-and-cooperative-sticky-rebalance-protoc",
+      "title": "What is the difference between the eager and cooperative-sticky rebalance protoc",
+      "questionCount": 1
+    },
+    {
+      "index": 11,
+      "slug": "idempotent-producer-and",
+      "title": "idempotent & producer & and",
+      "questionCount": 2
+    },
+    {
+      "index": 12,
+      "slug": "how-do-you-handle-a-poison-pill-message-that-keeps-failing",
+      "title": "How do you handle a poison-pill message that keeps failing",
+      "questionCount": 1
+    },
+    {
+      "index": 13,
+      "slug": "the-retry-dlq",
+      "title": "the & retry & DLQ",
+      "questionCount": 4
+    },
+    {
+      "index": 14,
+      "slug": "does-and-consumer",
+      "title": "does & and & consumer",
+      "questionCount": 2
+    },
+    {
+      "index": 15,
+      "slug": "what-is-mininsyncreplicas",
+      "title": "What is `min.insync.replicas`",
+      "questionCount": 1
+    },
+    {
+      "index": 16,
+      "slug": "how-do-you-configure-producersconsumers-for-guaranteed-delivery",
+      "title": "How do you configure producers/consumers for guaranteed delivery",
+      "questionCount": 1
+    },
+    {
+      "index": 17,
+      "slug": "what-is-the-default-message-size-in-kafka",
+      "title": "What is the default message size in Kafka",
+      "questionCount": 1
+    },
+    {
+      "index": 18,
+      "slug": "what-parameters-must-be-configured-for-message-flow-from-producer-to-broker-to-c",
+      "title": "What parameters must be configured for message flow from producer to broker to c",
+      "questionCount": 1
+    },
+    {
+      "index": 19,
+      "slug": "what-happens-if-a-message-exceeds-the-default-size",
+      "title": "What happens if a message exceeds the default size",
+      "questionCount": 1
+    },
+    {
+      "index": 20,
+      "slug": "compression-and-end",
+      "title": "compression & and & end",
+      "questionCount": 3
+    },
+    {
+      "index": 21,
+      "slug": "how-many-partitions-should-a-topic-have",
+      "title": "How many partitions should a topic have",
+      "questionCount": 1
+    },
+    {
+      "index": 22,
+      "slug": "active-you-kafka",
+      "title": "active & you & Kafka",
+      "questionCount": 2
+    },
+    {
+      "index": 23,
+      "slug": "what-is-tiered-storage",
+      "title": "What is tiered storage",
+      "questionCount": 1
+    },
+    {
+      "index": 24,
+      "slug": "kafka-you-secure",
+      "title": "Kafka & you & secure",
+      "questionCount": 2
+    },
+    {
+      "index": 25,
+      "slug": "consumer-the-and",
+      "title": "consumer & the & and",
+      "questionCount": 4
+    },
+    {
+      "index": 26,
+      "slug": "write-kafka-that",
+      "title": "Write & Kafka & that",
+      "questionCount": 2
+    },
+    {
+      "index": 27,
+      "slug": "a-rolling-deployment-triggers-a-rebalance-for-every-pod-restart",
+      "title": "A rolling deployment triggers a rebalance for every pod restart",
+      "questionCount": 1
+    },
+    {
+      "index": 28,
+      "slug": "partition-increasing-topic",
+      "title": "partition & Increasing & topic",
+      "questionCount": 2
+    },
+    {
+      "index": 29,
+      "slug": "with-mininsyncreplicas1-acksall-replication-factor-3",
+      "title": "With `min.insync.replicas=1`, `acks=all`, replication factor 3",
+      "questionCount": 1
+    },
+    {
+      "index": 30,
+      "slug": "a-compacted-topic-still-shows-old-records-for-a-key-you-thought-was-deleted",
+      "title": "A compacted topic still shows old records for a key you thought was deleted",
+      "questionCount": 1
+    },
+    {
+      "index": 31,
+      "slug": "and-the-kafka",
+      "title": "and & the & Kafka",
+      "questionCount": 6
+    },
+    {
+      "index": 32,
+      "slug": "and-the-isolation",
+      "title": "and & the & isolation",
+      "questionCount": 3
+    },
+    {
+      "index": 33,
+      "slug": "why-can-kafka-sustain-very-high-throughput-on-commodity-disks",
+      "title": "Why can Kafka sustain very high throughput on commodity disks",
+      "questionCount": 1
+    },
+    {
+      "index": 34,
+      "slug": "broker-partition-and",
+      "title": "broker & partition & and",
+      "questionCount": 2
+    },
+    {
+      "index": 35,
+      "slug": "what-is-the-difference-between-batch-processing-bounded-data-processed-in-large",
+      "title": "What is the difference between batch processing (bounded data processed in large",
+      "questionCount": 1
+    },
+    {
+      "index": 36,
+      "slug": "the-and-you",
+      "title": "the & and & you",
+      "questionCount": 5
+    },
+    {
+      "index": 37,
+      "slug": "and-kafka-for",
+      "title": "and & Kafka & for",
+      "questionCount": 16
+    }
+  ]
+}

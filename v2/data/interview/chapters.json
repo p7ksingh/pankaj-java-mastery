@@ -1,0 +1,202 @@
+{
+  "totalQuestions": 2506,
+  "totalChapters": 28,
+  "chapters": [
+    {
+      "number": 1,
+      "slug": "core-java",
+      "title": "Core Java",
+      "topicCount": 76,
+      "questionCount": 155
+    },
+    {
+      "number": 2,
+      "slug": "oop",
+      "title": "OOP",
+      "topicCount": 21,
+      "questionCount": 32
+    },
+    {
+      "number": 3,
+      "slug": "collections",
+      "title": "Collections",
+      "topicCount": 29,
+      "questionCount": 67
+    },
+    {
+      "number": 4,
+      "slug": "exception-handling",
+      "title": "Exception Handling",
+      "topicCount": 4,
+      "questionCount": 28
+    },
+    {
+      "number": 5,
+      "slug": "concurrency-multithreading",
+      "title": "Concurrency & Multithreading",
+      "topicCount": 65,
+      "questionCount": 127
+    },
+    {
+      "number": 6,
+      "slug": "java-8-functional",
+      "title": "Java 8+ Functional",
+      "topicCount": 68,
+      "questionCount": 139
+    },
+    {
+      "number": 7,
+      "slug": "spring-spring-boot",
+      "title": "Spring & Spring Boot",
+      "topicCount": 8,
+      "questionCount": 26
+    },
+    {
+      "number": 8,
+      "slug": "transactions",
+      "title": "Transactions",
+      "topicCount": 5,
+      "questionCount": 32
+    },
+    {
+      "number": 9,
+      "slug": "jpa-hibernate",
+      "title": "JPA & Hibernate",
+      "topicCount": 32,
+      "questionCount": 69
+    },
+    {
+      "number": 10,
+      "slug": "microservices",
+      "title": "Microservices",
+      "topicCount": 105,
+      "questionCount": 194
+    },
+    {
+      "number": 11,
+      "slug": "kafka-messaging",
+      "title": "Kafka & Messaging",
+      "topicCount": 38,
+      "questionCount": 91
+    },
+    {
+      "number": 12,
+      "slug": "devops-build-git-tooling",
+      "title": "DevOps, Build, Git & Tooling",
+      "topicCount": 41,
+      "questionCount": 58
+    },
+    {
+      "number": 13,
+      "slug": "database-sql",
+      "title": "Database & SQL",
+      "topicCount": 75,
+      "questionCount": 141
+    },
+    {
+      "number": 14,
+      "slug": "rest-api-web",
+      "title": "REST API & Web",
+      "topicCount": 21,
+      "questionCount": 40
+    },
+    {
+      "number": 15,
+      "slug": "design-patterns-principles",
+      "title": "Design Patterns & Principles",
+      "topicCount": 26,
+      "questionCount": 33
+    },
+    {
+      "number": 16,
+      "slug": "advanced-java",
+      "title": "Advanced Java",
+      "topicCount": 45,
+      "questionCount": 71
+    },
+    {
+      "number": 17,
+      "slug": "coding-problems-dsa-java",
+      "title": "Coding Problems (DSA / Java)",
+      "topicCount": 206,
+      "questionCount": 501
+    },
+    {
+      "number": 18,
+      "slug": "aws-cloud",
+      "title": "AWS & Cloud",
+      "topicCount": 32,
+      "questionCount": 41
+    },
+    {
+      "number": 19,
+      "slug": "devops",
+      "title": "DevOps",
+      "topicCount": 49,
+      "questionCount": 75
+    },
+    {
+      "number": 20,
+      "slug": "data-engineering",
+      "title": "Data Engineering",
+      "topicCount": 106,
+      "questionCount": 194
+    },
+    {
+      "number": 21,
+      "slug": "qa-testing-sdet",
+      "title": "QA, Testing & SDET",
+      "topicCount": 35,
+      "questionCount": 41
+    },
+    {
+      "number": 22,
+      "slug": "java-8-practical-coding",
+      "title": "Java 8 Practical Coding",
+      "topicCount": 58,
+      "questionCount": 204
+    },
+    {
+      "number": 23,
+      "slug": "behavioral-hr-star-method",
+      "title": "Behavioral / HR (STAR Method)",
+      "topicCount": 35,
+      "questionCount": 37
+    },
+    {
+      "number": 24,
+      "slug": "system-design",
+      "title": "System Design",
+      "topicCount": 30,
+      "questionCount": 35
+    },
+    {
+      "number": 25,
+      "slug": "security",
+      "title": "Security",
+      "topicCount": 23,
+      "questionCount": 24
+    },
+    {
+      "number": 26,
+      "slug": "jvm-internals",
+      "title": "JVM Internals",
+      "topicCount": 19,
+      "questionCount": 20
+    },
+    {
+      "number": 27,
+      "slug": "architecture-patterns",
+      "title": "Architecture & Patterns",
+      "topicCount": 8,
+      "questionCount": 15
+    },
+    {
+      "number": 28,
+      "slug": "miscellaneous-advanced",
+      "title": "Miscellaneous / Advanced",
+      "topicCount": 1,
+      "questionCount": 16
+    }
+  ]
+}
