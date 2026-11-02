@@ -1,13 +1,13 @@
 'use client'
 
 import Link from 'next/link'
+import { useDarkMode } from '@/hooks/useDarkMode'
 import styles from './TopBar.module.css'
 
 interface TopBarProps {
   siteName: string
   showSubmit?: boolean
   onSubmitClick?: () => void
-  onThemeToggle?: () => void
   onSearchChange?: (query: string) => void
 }
 
@@ -15,9 +15,10 @@ export function TopBar({
   siteName,
   showSubmit = true,
   onSubmitClick,
-  onThemeToggle,
   onSearchChange,
 }: TopBarProps) {
+  const { isDark, toggle } = useDarkMode()
+
   return (
     <nav className={styles.topbar} aria-label="Main">
       <div className={styles.left}>
@@ -49,10 +50,10 @@ export function TopBar({
         )}
         <button
           className={styles.themeBtn}
-          onClick={onThemeToggle}
-          aria-label="Toggle theme"
+          onClick={toggle}
+          aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
         >
-          &#9789;
+          {isDark ? '\u2600' : '\u263D'}
         </button>
       </div>
     </nav>

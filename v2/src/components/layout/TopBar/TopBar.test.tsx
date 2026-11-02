@@ -30,7 +30,7 @@ describe('TopBar', () => {
 
   it('renders the dark mode toggle', () => {
     render(<TopBar siteName="javabypankaj" />)
-    expect(screen.getByRole('button', { name: /toggle theme/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /switch to dark mode/i })).toBeInTheDocument()
   })
 
   it('renders inside a nav element', () => {
