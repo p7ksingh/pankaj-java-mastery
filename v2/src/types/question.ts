@@ -16,14 +16,14 @@ export interface Question extends QuestionSummary {
 }
 
 /**
- * Sections keyed by their identifier (s1_definition, s2_technical, etc.).
- * Each section contains structured parts: profdef, analogy, oneliner, raw.
+ * Sections keyed by identifier (s1_definition, s2_technical, etc.).
+ * s1_definition is a structured dict. All others are raw markdown strings.
  */
 export interface AnswerSections {
-  [sectionKey: string]: SectionContent
+  [sectionKey: string]: SectionContent | string
 }
 
-/** Content within one answer section. */
+/** Structured content in the definition section. */
 export interface SectionContent {
   profdef: string
   analogy: string
