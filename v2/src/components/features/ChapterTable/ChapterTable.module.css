@@ -1,0 +1,92 @@
+.table {
+  width: 100%;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  background: var(--color-surface);
+}
+
+.table thead tr {
+  background: var(--color-table-header);
+}
+
+.table th {
+  color: #fff;
+  text-align: left;
+  padding: 14px 16px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: middle;
+}
+
+.row:hover td {
+  background: var(--color-hover);
+  cursor: pointer;
+}
+
+.colNum {
+  width: 70px;
+}
+
+.colTopics {
+  width: 130px;
+}
+
+.colQuestions {
+  width: 120px;
+  text-align: center;
+}
+
+.colStatus {
+  width: 120px;
+  text-align: center;
+}
+
+.cellNum {
+  text-align: center;
+}
+
+.cellQuestions {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.cellTopics {
+  text-align: center;
+}
+
+.cellStatus {
+  text-align: center;
+}
+
+.chapterLink {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.chapterLink:hover {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .colStatus {
+    display: none;
+  }
+  .cellStatus {
+    display: none;
+  }
+  .table th,
+  .table td {
+    padding: 12px 10px;
+  }
+}

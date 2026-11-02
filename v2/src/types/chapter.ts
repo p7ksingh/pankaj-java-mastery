@@ -12,11 +12,11 @@ export interface Chapter extends ChapterSummary {
   topics: TopicSummary[]
 }
 
-/** One topic within a chapter. */
+/** One topic within a chapter. questionIds is present in full data, absent in summaries. */
 export interface TopicSummary {
   index: number
   slug: string
   title: string
   questionCount: number
-  questionIds: string[]
+  questionIds?: string[]
 }
