@@ -98,3 +98,198 @@
   background: none;
   padding: 0;
 }
+
+/* Diagram blocks (ASCII art boxes) */
+.content :global(.diagram) {
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
+  border: 1px solid var(--color-border);
+  padding: var(--space-md);
+  margin: var(--space-md) 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  white-space: pre;
+  line-height: 1.5;
+  overflow-x: auto;
+  border-radius: var(--radius-sm);
+}
+
+/* Callout boxes */
+.content :global(.box) {
+  border-left: 4px solid;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: var(--space-md) var(--space-lg);
+  margin: var(--space-md) 0;
+}
+
+.content :global(.box-blue) {
+  border-color: var(--color-link);
+  background: #eff6ff;
+}
+
+.content :global(.box-red) {
+  border-color: var(--color-error);
+  background: #fef2f2;
+}
+
+.content :global(.box-green) {
+  border-color: var(--color-success);
+  background: #f0fdf4;
+}
+
+.content :global(.box-orange) {
+  border-color: var(--color-warning);
+  background: #fffbeb;
+}
+
+.content :global(.box-purple) {
+  border-color: #8b5cf6;
+  background: #f5f3ff;
+}
+
+.content :global(.box-label) {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+/* Output blocks */
+.content :global(.output) {
+  background: #0d1117;
+  color: #58a6ff;
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  margin: var(--space-sm) 0;
+  border: 1px solid #30363d;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+/* Project structure blocks */
+.content :global(.ps) {
+  background: var(--color-code-bg);
+  color: var(--color-code-text);
+  border-radius: var(--radius-sm);
+  padding: var(--space-md);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+/* Card inside content */
+.content :global(.card) {
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-md);
+  margin: var(--space-md) 0;
+}
+
+/* Tags inside content */
+.content :global(.tag) {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.content :global(.tag-c),
+.content :global(.tag-s),
+.content :global(.tag-b) {
+  background: #e8f4fd;
+  color: #2980b9;
+}
+
+.content :global(.tag-g) {
+  background: #e8f8f0;
+  color: #27ae60;
+}
+
+.content :global(.tag-m),
+.content :global(.tag-j) {
+  background: #fff3e0;
+  color: #e67e22;
+}
+
+.content :global(.tag-h) {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.content :global(.tag-ms) {
+  background: #e0e7ff;
+  color: #3730a3;
+}
+
+.content :global(.tag-p) {
+  background: #fce7f3;
+  color: #9d174d;
+}
+
+/* Section boxes inside content */
+.content :global(.section) {
+  border-left: 4px solid;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: var(--space-md);
+  margin: var(--space-md) 0;
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+}
+
+.content :global(.section-concept),
+.content :global(.section-solution) {
+  border-color: var(--color-success);
+  background: #f0fdf4;
+}
+
+.content :global(.section-problem),
+.content :global(.section-warning) {
+  border-color: var(--color-error);
+  background: #fef2f2;
+}
+
+.content :global(.section-best) {
+  border-color: #8b5cf6;
+  background: #f5f3ff;
+}
+
+.content :global(.section-label) {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+}
+
+/* Note blocks */
+.content :global(.note) {
+  border-left: 3px solid var(--color-text-primary);
+  padding: var(--space-sm) var(--space-md);
+  margin: var(--space-md) 0;
+  background: var(--color-hover);
+  font-size: 13px;
+}
+
+/* Meta text */
+.content :global(.meta) {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-lg);
+}
+
+/* Dark mode overrides for content blocks */
+:global(body.dark) .content :global(.box-blue) { background: #1a2744; }
+:global(body.dark) .content :global(.box-red) { background: #2a1a1a; }
+:global(body.dark) .content :global(.box-green) { background: #1a2a1a; }
+:global(body.dark) .content :global(.box-orange) { background: #2a2214; }
+:global(body.dark) .content :global(.box-purple) { background: #221a2e; }
+:global(body.dark) .content :global(.card) { background: var(--color-surface); }
+:global(body.dark) .content :global(.note) { background: var(--color-hover); }
