@@ -30,7 +30,7 @@ export function CommunityList() {
 
   return (
     <div className={styles.listCard}>
-      <h3 className={styles.listTitle}>Community Questions ({questions.length})</h3>
+      <h2 className={styles.listTitle}>Community Questions ({questions.length})</h2>
       <div className={styles.list}>
         {questions.map((q, i) => (
           <div key={i} className={styles.questionCard}>

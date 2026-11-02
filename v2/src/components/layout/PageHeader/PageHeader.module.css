@@ -20,5 +20,8 @@
 .stat {
   font-size: var(--font-size-base);
   font-weight: 600;
-  color: var(--color-link);
+  color: #1a5276;
+  background: #d1e7fd;
+  padding: 4px 12px;
+  border-radius: 12px;
 }

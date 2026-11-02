@@ -25,6 +25,9 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <meta name="theme-color" content="#2d3748" />
+      </head>
       <body>
         <TopBar siteName={SITE_NAME} />
         <div className={styles.page}>{children}</div>

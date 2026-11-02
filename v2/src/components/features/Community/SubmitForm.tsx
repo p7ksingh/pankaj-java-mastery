@@ -39,7 +39,7 @@ export function SubmitForm() {
 
   return (
     <div className={styles.formCard}>
-      <h3 className={styles.formTitle}>Share Your Interview Question</h3>
+      <h2 className={styles.formTitle}>Share Your Interview Question</h2>
       <p className={styles.formDesc}>
         Faced a question in your interview? Share it here and help other developers prepare.
       </p>

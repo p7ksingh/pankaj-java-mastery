@@ -8,7 +8,7 @@
 }
 
 .formTitle {
-  font-size: var(--font-size-md);
+  font-size: var(--font-size-lg);
   font-weight: 700;
   margin-bottom: var(--space-xs);
 }
@@ -43,7 +43,7 @@
 
 .charCount {
   font-weight: 400;
-  color: var(--color-text-muted);
+  color: var(--color-text-secondary);
 }
 
 .textarea {
