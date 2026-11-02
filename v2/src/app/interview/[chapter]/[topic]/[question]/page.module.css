@@ -1,8 +1,3 @@
-/*
- * Question page: Kindle-like reading layout.
- * Warm background, centered content, generous whitespace.
- */
-
 .header {
   display: flex;
   align-items: center;
@@ -29,15 +24,17 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   padding: 40px 48px;
   margin-top: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 @media (max-width: 768px) {
   .answerCard {
-    padding: 24px 20px;
+    padding: 20px 16px;
     border-radius: 12px;
   }
 
   .title {
-    font-size: 22px;
+    font-size: 20px;
   }
 }

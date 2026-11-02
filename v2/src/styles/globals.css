@@ -66,6 +66,9 @@ pre {
   white-space: pre;
   word-break: normal;
   overflow-wrap: normal;
+  font-family: 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'Liberation Mono', monospace;
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
 }
 
 code {

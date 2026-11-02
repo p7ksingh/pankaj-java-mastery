@@ -4,4 +4,11 @@
   padding: var(--space-lg);
   min-height: calc(100vh - var(--topbar-height) - 200px);
   width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: var(--space-md);
+  }
 }
