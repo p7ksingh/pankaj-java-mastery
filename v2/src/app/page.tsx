@@ -1,6 +1,7 @@
 import { getAllChapters } from '@/lib/data/chapters'
 import { PageHeader } from '@/components/layout/PageHeader'
 import { ChapterTable } from '@/components/features/ChapterTable'
+import { SubmitForm, CommunityList } from '@/components/features/Community'
 
 export default function HomePage() {
   const chapters = getAllChapters()
@@ -16,6 +17,8 @@ export default function HomePage() {
         ]}
       />
       <ChapterTable chapters={chapters} />
+      <SubmitForm />
+      <CommunityList />
     </main>
   )
 }
