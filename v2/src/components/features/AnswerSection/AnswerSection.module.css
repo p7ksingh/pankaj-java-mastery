@@ -1,128 +1,234 @@
+/*
+ * Kindle-inspired reading experience.
+ * Optimized for long-form technical content.
+ * Clean, warm, focused. No distractions.
+ */
+
 .section {
-  margin-bottom: var(--space-lg);
+  margin-bottom: 48px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.section:last-child {
+  border-bottom: none;
 }
 
 .label {
-  font-size: var(--font-size-sm);
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   color: var(--color-link);
-  margin-bottom: var(--space-sm);
-  padding-bottom: var(--space-xs);
-  border-bottom: 2px solid var(--color-border);
+  margin-bottom: 16px;
+  padding-bottom: 8px;
 }
 
 .oneliner {
-  font-size: var(--font-size-md);
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 500;
   color: var(--color-text-primary);
-  line-height: 1.5;
-  margin-bottom: var(--space-md);
-  padding: var(--space-md);
-  background: var(--color-hover);
-  border-radius: var(--radius-sm);
-  border-left: 4px solid var(--color-success);
+  line-height: 1.6;
+  margin-bottom: 24px;
+  padding: 20px 24px;
+  background: linear-gradient(135deg, rgba(39, 174, 96, 0.06), rgba(39, 174, 96, 0.02));
+  border-radius: 8px;
+  border-left: 3px solid var(--color-success);
 }
 
+/* Reading body: Kindle-like typography */
 .body {
-  font-size: var(--font-size-base);
-  line-height: 1.7;
-  color: var(--color-text-secondary);
+  font-size: 16px;
+  line-height: 1.9;
+  color: #2c2c2c;
+  max-width: 720px;
+  letter-spacing: 0.01em;
+  word-spacing: 0.05em;
 }
 
+.body p {
+  margin-bottom: 20px;
+}
+
+.body strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+/* Headings inside content */
+.body h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.body h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+/* Code blocks: clean, readable, copyable */
 .body pre {
-  background: var(--color-code-bg);
-  color: var(--color-code-text);
-  border-radius: var(--radius-sm);
-  padding: var(--space-md);
-  font-family: var(--font-mono);
-  font-size: 13px;
-  line-height: 1.55;
+  background: #1b1f27;
+  color: #d4dae5;
+  border-radius: 10px;
+  padding: 20px 24px;
+  font-family: 'Menlo', 'Consolas', 'Monaco', monospace;
+  font-size: 13.5px;
+  line-height: 1.65;
   overflow-x: auto;
-  margin: var(--space-md) 0;
-  white-space: pre;
+  margin: 24px 0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  tab-size: 4;
 }
 
 .body code {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  background: var(--color-code-inline-bg);
-  padding: 1px 5px;
+  font-family: 'Menlo', 'Consolas', 'Monaco', monospace;
+  font-size: 14px;
+  background: rgba(74, 144, 217, 0.08);
+  color: #c0392b;
+  padding: 2px 7px;
   border-radius: 4px;
+  font-weight: 500;
 }
 
 .body pre code {
   background: none;
+  color: inherit;
   padding: 0;
+  font-weight: 400;
+  font-size: 13.5px;
 }
 
-.body strong {
-  color: var(--color-text-primary);
-}
-
+/* Tables: clean, bordered, readable */
 .body table {
   width: 100%;
   border-collapse: collapse;
-  margin: var(--space-md) 0;
-}
-
-.body th,
-.body td {
-  border: 1px solid var(--color-border);
-  padding: var(--space-sm) var(--space-md);
-  font-size: var(--font-size-sm);
-  text-align: left;
+  margin: 24px 0;
+  font-size: 14px;
 }
 
 .body th {
   background: var(--color-table-header);
   color: #fff;
   font-weight: 600;
+  padding: 12px 16px;
+  text-align: left;
+  border: 1px solid var(--color-border);
 }
 
+.body td {
+  padding: 10px 16px;
+  border: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.body tr:hover td {
+  background: var(--color-hover);
+}
+
+/* Lists: proper indentation and spacing */
 .body ul,
 .body ol {
-  margin-left: var(--space-lg);
-  margin-bottom: var(--space-md);
+  margin-left: 24px;
+  margin-bottom: 20px;
 }
 
 .body li {
-  margin-bottom: var(--space-xs);
+  margin-bottom: 8px;
+  line-height: 1.7;
 }
 
-.body p {
-  margin-bottom: var(--space-sm);
+.body li code {
+  font-size: 13px;
 }
 
-.body h3,
-.body h4 {
-  color: var(--color-text-primary);
-  margin-top: var(--space-md);
-  margin-bottom: var(--space-sm);
+/* Diagrams (ASCII art): dark, monospace, preserved spacing */
+.body .diagram,
+.body pre.diagram {
+  background: #1b1f27;
+  color: #8ecae6;
+  border: 1px solid rgba(142, 202, 230, 0.15);
+  border-radius: 10px;
+  padding: 20px 24px;
+  font-family: 'Menlo', 'Consolas', monospace;
+  font-size: 12.5px;
+  line-height: 1.55;
+  white-space: pre;
+  overflow-x: auto;
+  margin: 24px 0;
 }
 
+/* Block quotes / notes */
+.body blockquote {
+  border-left: 3px solid var(--color-warning);
+  padding: 12px 20px;
+  margin: 20px 0;
+  background: rgba(230, 126, 34, 0.04);
+  color: var(--color-text-secondary);
+  font-style: italic;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Remove extra line breaks */
 .body br + br {
   display: none;
 }
 
+/* Analogy: warm, italic, distinct from body */
 .analogy {
+  font-size: 15.5px;
   font-style: italic;
-  font-size: var(--font-size-base);
-  line-height: 1.7;
-  color: var(--color-text-muted);
-  padding: var(--space-md);
-  margin-top: var(--space-sm);
-  background: var(--color-hover);
-  border-radius: var(--radius-sm);
-  border-left: 4px solid var(--color-warning);
+  line-height: 1.85;
+  color: #555;
+  padding: 20px 24px;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  background: linear-gradient(135deg, rgba(230, 126, 34, 0.05), rgba(230, 126, 34, 0.02));
+  border-radius: 8px;
+  border-left: 3px solid var(--color-warning);
+  max-width: 720px;
 }
 
 .analogy code {
-  font-family: var(--font-mono);
-  font-size: 13px;
-  background: var(--color-code-inline-bg);
-  padding: 1px 5px;
+  font-family: 'Menlo', 'Consolas', monospace;
+  font-size: 13.5px;
+  background: rgba(230, 126, 34, 0.1);
+  padding: 2px 6px;
   border-radius: 4px;
   font-style: normal;
+}
+
+/* Dark mode reading adjustments */
+:global(body.dark) .body {
+  color: #c8c8c8;
+}
+
+:global(body.dark) .body strong {
+  color: #e0e0e0;
+}
+
+:global(body.dark) .body h3,
+:global(body.dark) .body h4 {
+  color: #e0e0e0;
+}
+
+:global(body.dark) .body code {
+  background: rgba(74, 144, 217, 0.15);
+  color: #e8a87c;
+}
+
+:global(body.dark) .oneliner {
+  color: #d4d4d4;
+  background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(39, 174, 96, 0.04));
+}
+
+:global(body.dark) .analogy {
+  color: #aaa;
+  background: linear-gradient(135deg, rgba(230, 126, 34, 0.08), rgba(230, 126, 34, 0.03));
 }
