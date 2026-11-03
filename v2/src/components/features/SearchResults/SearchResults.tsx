@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import { loadSearchIndex, filterIndex, type SearchEntry, type SearchResultItem } from '@/lib/data/search'
+import { loadSearchIndex, filterIndex, type SearchEntry, type SearchResult } from '@/lib/data/search'
 import { Badge } from '@/components/ui/Badge'
 import styles from './SearchResults.module.css'
 
@@ -15,9 +15,23 @@ interface SearchResultsProps {
 export function SearchResults({ initialQuery }: SearchResultsProps) {
   const [index, setIndex] = useState<SearchEntry[]>([])
   const [query, setQuery] = useState(initialQuery)
-  const [results, setResults] = useState<SearchResultItem[]>([])
+  const [result, setResult] = useState<SearchResult>({ items: [], suggestion: null })
   const [loading, setLoading] = useState(true)
 
+  // Read query from URL hash on mount and on hash change
+  useEffect(() => {
+    function readHash() {
+      const hash = window.location.hash.slice(1)
+      if (hash) {
+        setQuery(decodeURIComponent(hash))
+      }
+    }
+    readHash()
+    window.addEventListener('hashchange', readHash)
+    return () => window.removeEventListener('hashchange', readHash)
+  }, [])
+
+  // Load search index
   useEffect(() => {
     loadSearchIndex()
       .then((data) => {
@@ -29,16 +43,19 @@ export function SearchResults({ initialQuery }: SearchResultsProps) {
       })
   }, [])
 
+  // Filter results when index or query changes
   useEffect(() => {
     if (index.length === 0) {
       return
     }
-    setResults(filterIndex(index, query, RESULTS_LIMIT))
+    setResult(filterIndex(index, query, RESULTS_LIMIT))
   }, [index, query])
 
-  const handleInput = useCallback((value: string) => {
-    setQuery(value)
-  }, [])
+  function searchSuggestion() {
+    if (result.suggestion) {
+      window.location.hash = encodeURIComponent(result.suggestion)
+    }
+  }
 
   if (loading) {
     return <p className={styles.loading}>Loading search index...</p>
@@ -46,21 +63,29 @@ export function SearchResults({ initialQuery }: SearchResultsProps) {
 
   return (
     <div>
-      <input
-        type="search"
-        className={styles.input}
-        placeholder="Search questions..."
-        value={query}
-        onChange={(e) => handleInput(e.target.value)}
-        autoFocus
-      />
+      {query.length >= 2 ? (
+        <h2 className={styles.heading}>
+          Results for <strong>{query}</strong>
+        </h2>
+      ) : (
+        <p className={styles.hint}>Use the search bar above to find questions.</p>
+      )}
       {query.length >= 2 && (
         <p className={styles.count}>
-          {results.length} result{results.length !== 1 ? 's' : ''} for &quot;{query}&quot;
+          {result.items.length} result{result.items.length !== 1 ? 's' : ''}
+        </p>
+      )}
+      {result.suggestion && (
+        <p className={styles.suggestion}>
+          Did you mean:{' '}
+          <button className={styles.suggestionLink} onClick={searchSuggestion}>
+            {result.suggestion}
+          </button>
+          ?
         </p>
       )}
       <div className={styles.list}>
-        {results.map((r) => (
+        {result.items.map((r) => (
           <Link key={r.id + r.url} href={r.url} className={styles.row}>
             <Badge variant="question">{r.id}</Badge>
             <div className={styles.info}>
@@ -70,6 +95,9 @@ export function SearchResults({ initialQuery }: SearchResultsProps) {
           </Link>
         ))}
       </div>
+      {query.length >= 2 && result.items.length === 0 && !result.suggestion && (
+        <p className={styles.empty}>No results found. Try a different keyword.</p>
+      )}
     </div>
   )
 }

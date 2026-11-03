@@ -13,19 +13,9 @@ describe('TopBar', () => {
     expect(link).toHaveAttribute('href', '/')
   })
 
-  it('renders the search input', () => {
+  it('renders the search icon button', () => {
     render(<TopBar siteName="javabypankaj" />)
-    expect(screen.getByPlaceholderText('Search questions...')).toBeInTheDocument()
-  })
-
-  it('renders the submit button when showSubmit is true', () => {
-    render(<TopBar siteName="javabypankaj" showSubmit />)
-    expect(screen.getByRole('button', { name: /submit/i })).toBeInTheDocument()
-  })
-
-  it('hides the submit button when showSubmit is false', () => {
-    render(<TopBar siteName="javabypankaj" showSubmit={false} />)
-    expect(screen.queryByRole('button', { name: /submit/i })).not.toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /search/i })).toBeInTheDocument()
   })
 
   it('renders the dark mode toggle', () => {

@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   description: 'Search across 2500+ Java interview questions.',
 }
 
+export const dynamic = 'force-static'
+
 export default function SearchPage() {
   return (
     <main>
