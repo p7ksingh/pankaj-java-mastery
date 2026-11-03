@@ -2,182 +2,187 @@
   "number": 3,
   "slug": "collections",
   "title": "Collections",
-  "topicCount": 29,
+  "topicCount": 14,
   "questionCount": 67,
   "topics": [
     {
       "index": 0,
-      "slug": "collections-the-framework",
-      "title": "Collections & the & Framework",
-      "questionCount": 2
+      "slug": "collections-overview",
+      "title": "Collections Framework Overview",
+      "questionCount": 4,
+      "questionIds": [
+        "Q137",
+        "Q138",
+        "Q178-collections",
+        "Q197-collections"
+      ]
     },
     {
       "index": 1,
-      "slug": "arraylist-linkedlist-use",
-      "title": "ArrayList & LinkedList & use",
-      "questionCount": 8
+      "slug": "list-arraylist-linkedlist",
+      "title": "List — ArrayList & LinkedList",
+      "questionCount": 7,
+      "questionIds": [
+        "Q139",
+        "Q140",
+        "Q141",
+        "Q142",
+        "Q143",
+        "Q144",
+        "Q145"
+      ]
     },
     {
       "index": 2,
-      "slug": "linkedblockingqueue",
-      "title": "LinkedBlockingQueue",
-      "questionCount": 1
+      "slug": "queue-deque-stack",
+      "title": "Queue, Deque & Stack",
+      "questionCount": 8,
+      "questionIds": [
+        "Q146",
+        "Q147",
+        "Q170",
+        "Q171",
+        "Q193-collections",
+        "Q194-collections",
+        "Q195-collections",
+        "Q196-collections"
+      ]
     },
     {
       "index": 3,
-      "slug": "hashmap",
-      "title": "HashMap",
-      "questionCount": 8
+      "slug": "hashmap-internals",
+      "title": "HashMap Internals",
+      "questionCount": 10,
+      "questionIds": [
+        "Q148",
+        "Q149",
+        "Q150",
+        "Q151",
+        "Q152",
+        "Q153",
+        "Q154",
+        "Q155",
+        "Q156",
+        "Q203-collections"
+      ]
     },
     {
       "index": 4,
-      "slug": "hashmap-4",
-      "title": "HashMap",
-      "questionCount": 14
+      "slug": "linkedhashmap-treemap",
+      "title": "LinkedHashMap, TreeMap & Map Comparisons",
+      "questionCount": 6,
+      "questionIds": [
+        "Q158",
+        "Q159",
+        "Q160",
+        "Q161",
+        "Q162",
+        "Q163"
+      ]
     },
     {
       "index": 5,
-      "slug": "list-copyonwritearraylist-thread",
-      "title": "list & CopyOnWriteArrayList & thread",
-      "questionCount": 2
+      "slug": "set-hashset-treeset",
+      "title": "Set — HashSet, LinkedHashSet, TreeSet",
+      "questionCount": 5,
+      "questionIds": [
+        "Q157",
+        "Q164",
+        "Q165",
+        "Q166",
+        "Q182-collections"
+      ]
     },
     {
       "index": 6,
-      "slug": "fail-fast-vs-fail-safe-iteration",
-      "title": "Fail-fast vs fail-safe iteration",
-      "questionCount": 1
+      "slug": "comparable-comparator",
+      "title": "Comparable & Comparator",
+      "questionCount": 4,
+      "questionIds": [
+        "Q167",
+        "Q168",
+        "Q169",
+        "Q179-collections"
+      ]
     },
     {
       "index": 7,
-      "slug": "iterator-vs-listiterator",
-      "title": "Iterator vs ListIterator",
-      "questionCount": 1
+      "slug": "iterator-and-removal",
+      "title": "Iterator & Removing During Iteration",
+      "questionCount": 3,
+      "questionIds": [
+        "Q172",
+        "Q173",
+        "Q185-collections"
+      ]
     },
     {
       "index": 8,
-      "slug": "reference-hashmap",
-      "title": "reference & HashMap",
-      "questionCount": 4
+      "slug": "map-operations",
+      "title": "Map Operations — compute, merge, putIfAbsent",
+      "questionCount": 2,
+      "questionIds": [
+        "Q183-collections",
+        "Q184-collections"
+      ]
     },
     {
       "index": 9,
-      "slug": "how-to-decide-between-set-and-list",
-      "title": "How to decide between Set and List",
-      "questionCount": 1
+      "slug": "immutable-collections",
+      "title": "Immutable Collections",
+      "questionCount": 3,
+      "questionIds": [
+        "Q186-collections",
+        "Q187-collections",
+        "Q190-collections"
+      ]
     },
     {
       "index": 10,
-      "slug": "bigdecimal-compareto-vs-equals",
-      "title": "BigDecimal compareTo vs equals",
-      "questionCount": 1
+      "slug": "generics-and-type-safety",
+      "title": "Generics & Type Safety",
+      "questionCount": 7,
+      "questionIds": [
+        "Q180-collections",
+        "Q181-collections",
+        "Q198-collections",
+        "Q199-collections",
+        "Q200-collections",
+        "Q201-collections",
+        "Q202-collections"
+      ]
     },
     {
       "index": 11,
-      "slug": "generics",
-      "title": "Generics",
-      "questionCount": 1
+      "slug": "special-maps-and-collections",
+      "title": "Special Maps & Collections",
+      "questionCount": 5,
+      "questionIds": [
+        "Q174",
+        "Q175",
+        "Q177-collections",
+        "Q188-collections",
+        "Q189-collections"
+      ]
     },
     {
       "index": 12,
-      "slug": "generic-classes",
-      "title": "Generic classes",
-      "questionCount": 1
+      "slug": "spliterator",
+      "title": "Spliterator",
+      "questionCount": 2,
+      "questionIds": [
+        "Q191-collections",
+        "Q192-collections"
+      ]
     },
     {
       "index": 13,
-      "slug": "convert-list-to-set",
-      "title": "Convert List to Set",
-      "questionCount": 1
-    },
-    {
-      "index": 14,
-      "slug": "computeifabsent-putifabsent-merge",
-      "title": "computeIfAbsent & putIfAbsent & merge",
-      "questionCount": 2
-    },
-    {
-      "index": 15,
-      "slug": "removeif-iteratorremove-vs-for-each-remove",
-      "title": "removeIf + Iterator.remove vs for-each remove",
-      "questionCount": 1
-    },
-    {
-      "index": 16,
-      "slug": "list-map-immutable",
-      "title": "List & Map & immutable",
-      "questionCount": 2
-    },
-    {
-      "index": 17,
-      "slug": "enumset-and-enummap",
-      "title": "EnumSet & and & EnumMap",
-      "questionCount": 2
-    },
-    {
-      "index": 18,
-      "slug": "arraysaslist-vs-listof",
-      "title": "Arrays.asList vs List.of",
-      "questionCount": 1
-    },
-    {
-      "index": 19,
-      "slug": "spliterator-tryadvance-trysplit",
-      "title": "Spliterator & tryAdvance & trySplit",
-      "questionCount": 2
-    },
-    {
-      "index": 20,
-      "slug": "queue-throwing-vs-non-throwing-methods",
-      "title": "Queue throwing vs non-throwing methods",
-      "questionCount": 1
-    },
-    {
-      "index": 21,
-      "slug": "arraydeque-replaces-stack",
-      "title": "ArrayDeque & replaces & Stack",
-      "questionCount": 2
-    },
-    {
-      "index": 22,
-      "slug": "transferqueue",
-      "title": "TransferQueue",
-      "questionCount": 1
-    },
-    {
-      "index": 23,
-      "slug": "collectiontoarray",
-      "title": "Collection.toArray()",
-      "questionCount": 1
-    },
-    {
-      "index": 24,
-      "slug": "type-erasure",
-      "title": "Type erasure",
-      "questionCount": 1
-    },
-    {
-      "index": 25,
-      "slug": "raw-types-heap-pollution-safevarargs",
-      "title": "Raw types, heap pollution, @SafeVarargs",
-      "questionCount": 1
-    },
-    {
-      "index": 26,
-      "slug": "wildcard-capture",
-      "title": "Wildcard capture",
-      "questionCount": 1
-    },
-    {
-      "index": 27,
-      "slug": "recursive-generics-self-bounded-types",
-      "title": "Recursive generics / self-bounded types",
-      "questionCount": 1
-    },
-    {
-      "index": 28,
-      "slug": "collections-checkedlist-map",
-      "title": "Collections & checkedList & Map",
-      "questionCount": 2
+      "slug": "build-your-own-hashmap",
+      "title": "Build Your Own HashMap",
+      "questionCount": 1,
+      "questionIds": [
+        "Q176"
+      ]
     }
   ]
 }

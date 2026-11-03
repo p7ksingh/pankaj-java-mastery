@@ -1,1245 +1,653 @@
 {
   "number": 17,
-  "slug": "coding-problems-dsa-java",
-  "title": "Coding Problems (DSA / Java)",
-  "topicCount": 206,
-  "questionCount": 501,
+  "slug": "dsa-coding",
+  "title": "Coding Problems — DSA",
+  "topicCount": 19,
+  "questionCount": 492,
   "topics": [
     {
       "index": 0,
-      "slug": "what-is-the-star-method-and-how-do-you-use-it-to-answer-behavioral-interview-qu",
-      "title": "What is the STAR method, and how do you use it to answer behavioral interview qu",
-      "questionCount": 1
+      "slug": "beginner",
+      "title": "Beginner — I/O, Arithmetic, Loops",
+      "questionCount": 30,
+      "questionIds": [
+        "Q1365",
+        "Q1367",
+        "Q1403",
+        "Q1411",
+        "Q1406",
+        "Q1383",
+        "Q1804",
+        "Q1838",
+        "Q1784",
+        "Q1701",
+        "Q1678",
+        "Q1484",
+        "Q1729",
+        "Q1739",
+        "Q1743",
+        "Q2625",
+        "Q2626",
+        "Q2627",
+        "Q2628",
+        "Q2629",
+        "Q2630",
+        "Q2631",
+        "Q2632",
+        "Q2633",
+        "Q2634",
+        "Q2635",
+        "Q2637",
+        "Q2638",
+        "Q2639",
+        "Q2640"
+      ]
     },
     {
       "index": 1,
-      "slug": "design-a-payment-gateway-for-a-bank-explain-the-end-to-end-architecture",
-      "title": "Design a payment gateway for a bank. Explain the end-to-end architecture",
-      "questionCount": 1
+      "slug": "arrays",
+      "title": "Arrays",
+      "questionCount": 109,
+      "questionIds": [
+        "Q1369",
+        "Q1551",
+        "Q1552",
+        "Q1360",
+        "Q1361",
+        "Q1362",
+        "Q1363",
+        "Q1364",
+        "Q1366",
+        "Q1415",
+        "Q1416",
+        "Q1417",
+        "Q1609",
+        "Q1413",
+        "Q1414",
+        "Q1628",
+        "Q1561",
+        "Q1563",
+        "Q1606",
+        "Q1676",
+        "Q1680",
+        "Q1375",
+        "Q1430",
+        "Q1431",
+        "Q1432",
+        "Q1433",
+        "Q1434",
+        "Q1435",
+        "Q1437",
+        "Q1455",
+        "Q1456",
+        "Q1426",
+        "Q1381",
+        "Q1636",
+        "Q1419",
+        "Q1464",
+        "Q1465",
+        "Q1379",
+        "Q1439",
+        "Q1498",
+        "Q1499",
+        "Q1500",
+        "Q1501",
+        "Q1503",
+        "Q1792",
+        "Q1795",
+        "Q1805",
+        "Q1782",
+        "Q1783",
+        "Q1787",
+        "Q1788",
+        "Q1789",
+        "Q1790",
+        "Q1691",
+        "Q1692",
+        "Q1697",
+        "Q1698",
+        "Q1699",
+        "Q1700",
+        "Q1702",
+        "Q1703",
+        "Q1704",
+        "Q1705",
+        "Q1706",
+        "Q1707",
+        "Q1721",
+        "Q1722",
+        "Q1723",
+        "Q1724",
+        "Q1665",
+        "Q1668",
+        "Q1672",
+        "Q1761",
+        "Q1762",
+        "Q1764",
+        "Q1765",
+        "Q1766",
+        "Q1767",
+        "Q1768",
+        "Q1769",
+        "Q1770",
+        "Q1771",
+        "Q1772",
+        "Q1487",
+        "Q1490",
+        "Q1491",
+        "Q1492",
+        "Q1387",
+        "Q1388",
+        "Q1749",
+        "Q1577",
+        "Q1684",
+        "Q1685",
+        "Q1686",
+        "Q1508",
+        "Q1593",
+        "Q1611",
+        "Q1682",
+        "Q1473",
+        "Q1478",
+        "Q1482",
+        "Q1483",
+        "Q1485",
+        "Q1727",
+        "Q1495",
+        "Q1518",
+        "Q1533",
+        "Q1534",
+        "Q1688"
+      ]
     },
     {
       "index": 2,
-      "slug": "explain-how-you-secure-a-banking-rest-api-using-oauth2-and-jwt",
-      "title": "Explain how you secure a banking REST API using OAuth2 and JWT",
-      "questionCount": 1
+      "slug": "strings",
+      "title": "Strings",
+      "questionCount": 61,
+      "questionIds": [
+        "Q1368",
+        "Q1370",
+        "Q1371",
+        "Q1372",
+        "Q1373",
+        "Q1596",
+        "Q1441",
+        "Q1442",
+        "Q1404",
+        "Q1436",
+        "Q1554",
+        "Q1468",
+        "Q1569",
+        "Q1687",
+        "Q1602",
+        "Q1613",
+        "Q1585",
+        "Q1586",
+        "Q1675",
+        "Q1443",
+        "Q1444",
+        "Q1445",
+        "Q1446",
+        "Q1466",
+        "Q1467",
+        "Q1470",
+        "Q1447",
+        "Q1448",
+        "Q1449",
+        "Q1408",
+        "Q1409",
+        "Q1410",
+        "Q1440",
+        "Q1810",
+        "Q1811",
+        "Q1812",
+        "Q1813",
+        "Q1814",
+        "Q1815",
+        "Q1816",
+        "Q1817",
+        "Q1820",
+        "Q1821",
+        "Q1826",
+        "Q1829",
+        "Q1830",
+        "Q1780",
+        "Q1689",
+        "Q1690",
+        "Q1693",
+        "Q1694",
+        "Q1695",
+        "Q1696",
+        "Q1751",
+        "Q1580",
+        "Q1591",
+        "Q1594",
+        "Q1760",
+        "Q1458",
+        "Q1452",
+        "Q1453"
+      ]
     },
     {
       "index": 3,
-      "slug": "explain-the-jvm-internals",
-      "title": "Explain the JVM internals",
-      "questionCount": 1
+      "slug": "linked-list",
+      "title": "Linked List",
+      "questionCount": 24,
+      "questionIds": [
+        "Q1633",
+        "Q1627",
+        "Q1555",
+        "Q1374",
+        "Q1376",
+        "Q1377",
+        "Q1834",
+        "Q1785",
+        "Q1474",
+        "Q1475",
+        "Q1479",
+        "Q1480",
+        "Q1481",
+        "Q1486",
+        "Q1732",
+        "Q1735",
+        "Q1736",
+        "Q1742",
+        "Q1520",
+        "Q1521",
+        "Q1522",
+        "Q1523",
+        "Q1526",
+        "Q1527"
+      ]
     },
     {
       "index": 4,
-      "slug": "solve-common-coding-and-dsa-interview-problems-in-a-finance-context",
-      "title": "Solve common coding and DSA interview problems in a finance context",
-      "questionCount": 1
+      "slug": "stack-queue",
+      "title": "Stack & Queue",
+      "questionCount": 20,
+      "questionIds": [
+        "Q1605",
+        "Q1604",
+        "Q1621",
+        "Q1504",
+        "Q1568",
+        "Q1507",
+        "Q1607",
+        "Q1638",
+        "Q1635",
+        "Q1380",
+        "Q1505",
+        "Q1506",
+        "Q1378",
+        "Q1752",
+        "Q1509",
+        "Q1510",
+        "Q1515",
+        "Q1516",
+        "Q1450",
+        "Q1451"
+      ]
     },
     {
       "index": 5,
-      "slug": "demonstrate-practical-java-8-stream-api-usage-on-a-finance-domain-model",
-      "title": "Demonstrate practical Java 8 Stream API usage on a finance domain model",
-      "questionCount": 1
+      "slug": "hashmap-problems",
+      "title": "HashMap & HashSet Problems",
+      "questionCount": 17,
+      "questionIds": [
+        "Q1427",
+        "Q1460",
+        "Q1634",
+        "Q1421",
+        "Q1477",
+        "Q1541",
+        "Q1562",
+        "Q1564",
+        "Q1566",
+        "Q792",
+        "Q1502",
+        "Q1716",
+        "Q1717",
+        "Q1718",
+        "Q1667",
+        "Q1386",
+        "Q1422"
+      ]
     },
     {
       "index": 6,
-      "slug": "array",
-      "title": "array",
-      "questionCount": 8
+      "slug": "two-pointers",
+      "title": "Two Pointers",
+      "questionCount": 10,
+      "questionIds": [
+        "Q1428",
+        "Q1459",
+        "Q1454",
+        "Q1542",
+        "Q1666",
+        "Q1669",
+        "Q1670",
+        "Q1671",
+        "Q1429",
+        "Q1461"
+      ]
     },
     {
       "index": 7,
-      "slug": "and-string-use",
-      "title": "and & string & use",
-      "questionCount": 6
+      "slug": "sliding-window",
+      "title": "Sliding Window",
+      "questionCount": 7,
+      "questionIds": [
+        "Q1469",
+        "Q1425",
+        "Q1463",
+        "Q1471",
+        "Q1472",
+        "Q1745",
+        "Q1511"
+      ]
     },
     {
       "index": 8,
-      "slug": "linked-list-nodes",
-      "title": "linked & list & nodes",
-      "questionCount": 4
+      "slug": "binary-search",
+      "title": "Binary Search",
+      "questionCount": 14,
+      "questionIds": [
+        "Q1390",
+        "Q1620",
+        "Q1496",
+        "Q1755",
+        "Q1493",
+        "Q1637",
+        "Q1629",
+        "Q1399",
+        "Q1400",
+        "Q1401",
+        "Q1488",
+        "Q1489",
+        "Q1494",
+        "Q1517"
+      ]
     },
     {
       "index": 9,
-      "slug": "stack-top-add",
-      "title": "stack & top & add",
-      "questionCount": 2
+      "slug": "sorting",
+      "title": "Sorting & Searching",
+      "questionCount": 22,
+      "questionIds": [
+        "Q1626",
+        "Q1615",
+        "Q838",
+        "Q1537",
+        "Q1624",
+        "Q1625",
+        "Q1535",
+        "Q1610",
+        "Q1395",
+        "Q1396",
+        "Q1397",
+        "Q1398",
+        "Q1424",
+        "Q1462",
+        "Q1822",
+        "Q1776",
+        "Q1781",
+        "Q1786",
+        "Q1710",
+        "Q1713",
+        "Q1673",
+        "Q1581"
+      ]
     },
     {
       "index": 10,
-      "slug": "queue-add-the",
-      "title": "queue & add & the",
-      "questionCount": 2
+      "slug": "recursion-backtracking",
+      "title": "Recursion & Backtracking",
+      "questionCount": 23,
+      "questionIds": [
+        "Q1619",
+        "Q1617",
+        "Q1618",
+        "Q1412",
+        "Q1616",
+        "Q1565",
+        "Q1567",
+        "Q1584",
+        "Q1571",
+        "Q1385",
+        "Q1382",
+        "Q1842",
+        "Q1793",
+        "Q1794",
+        "Q1799",
+        "Q1748",
+        "Q1750",
+        "Q1757",
+        "Q1758",
+        "Q1759",
+        "Q1531",
+        "Q1631",
+        "Q1572"
+      ]
     },
     {
       "index": 11,
-      "slug": "recursive-fib-function",
-      "title": "recursive & fib & function",
-      "questionCount": 3
+      "slug": "dynamic-programming",
+      "title": "Dynamic Programming",
+      "questionCount": 31,
+      "questionIds": [
+        "Q1578",
+        "Q1579",
+        "Q1558",
+        "Q1598",
+        "Q1599",
+        "Q1840",
+        "Q1600",
+        "Q1583",
+        "Q1601",
+        "Q1582",
+        "Q1573",
+        "Q1384",
+        "Q1841",
+        "Q1844",
+        "Q1846",
+        "Q1791",
+        "Q1797",
+        "Q1800",
+        "Q1802",
+        "Q1803",
+        "Q1808",
+        "Q1818",
+        "Q1836",
+        "Q1849",
+        "Q1850",
+        "Q1837",
+        "Q1839",
+        "Q1854",
+        "Q1575",
+        "Q1592",
+        "Q1574"
+      ]
     },
     {
       "index": 12,
-      "slug": "print-numbers-1-to-n-using-recursion",
-      "title": "Print numbers 1 to N using recursion",
-      "questionCount": 1
+      "slug": "trees",
+      "title": "Trees & BST",
+      "questionCount": 25,
+      "questionIds": [
+        "Q1603",
+        "Q1549",
+        "Q1389",
+        "Q1391",
+        "Q1394",
+        "Q1756",
+        "Q1612",
+        "Q1588",
+        "Q1828",
+        "Q1726",
+        "Q1728",
+        "Q1730",
+        "Q1731",
+        "Q1733",
+        "Q1734",
+        "Q1737",
+        "Q1738",
+        "Q1740",
+        "Q1512",
+        "Q1513",
+        "Q1514",
+        "Q1519",
+        "Q1524",
+        "Q1525",
+        "Q1528"
+      ]
     },
     {
       "index": 13,
-      "slug": "the-each-element",
-      "title": "the & each & element",
-      "questionCount": 3
+      "slug": "graphs",
+      "title": "Graphs",
+      "questionCount": 23,
+      "questionIds": [
+        "Q1679",
+        "Q1557",
+        "Q1547",
+        "Q1548",
+        "Q1550",
+        "Q1553",
+        "Q1614",
+        "Q1393",
+        "Q1632",
+        "Q1570",
+        "Q1545",
+        "Q1546",
+        "Q1543",
+        "Q1540",
+        "Q1544",
+        "Q1476",
+        "Q1556",
+        "Q1827",
+        "Q1833",
+        "Q1677",
+        "Q1590",
+        "Q1530",
+        "Q1392"
+      ]
     },
     {
       "index": 14,
-      "slug": "binary-tree-child",
-      "title": "binary & tree & child",
-      "questionCount": 3
+      "slug": "greedy",
+      "title": "Greedy",
+      "questionCount": 12,
+      "questionIds": [
+        "Q1622",
+        "Q1623",
+        "Q1806",
+        "Q1746",
+        "Q1747",
+        "Q1709",
+        "Q1711",
+        "Q1712",
+        "Q1851",
+        "Q1852",
+        "Q1853",
+        "Q1589"
+      ]
     },
     {
       "index": 15,
-      "slug": "what-is-a-graph",
-      "title": "What is a graph",
-      "questionCount": 1
+      "slug": "math-bit",
+      "title": "Math & Bit Manipulation",
+      "questionCount": 6,
+      "questionIds": [
+        "Q1405",
+        "Q1420",
+        "Q1714",
+        "Q1715",
+        "Q1773",
+        "Q1774"
+      ]
     },
     {
       "index": 16,
-      "slug": "first-search-first",
-      "title": "First & Search & first",
-      "questionCount": 2
+      "slug": "matrix",
+      "title": "Matrix",
+      "questionCount": 4,
+      "questionIds": [
+        "Q1587",
+        "Q1630",
+        "Q1847",
+        "Q1725"
+      ]
     },
     {
       "index": 17,
-      "slug": "search-the-implement",
-      "title": "search & the & Implement",
-      "questionCount": 7
+      "slug": "pattern-printing",
+      "title": "Pattern Printing",
+      "questionCount": 2,
+      "questionIds": [
+        "Q1529",
+        "Q761"
+      ]
     },
     {
       "index": 18,
-      "slug": "fizzbuzz",
-      "title": "FizzBuzz",
-      "questionCount": 1
-    },
-    {
-      "index": 19,
-      "slug": "check-number-palindrome",
-      "title": "Check & number & palindrome",
-      "questionCount": 2
-    },
-    {
-      "index": 20,
-      "slug": "find-the-gcd",
-      "title": "Find the GCD",
-      "questionCount": 1
-    },
-    {
-      "index": 21,
-      "slug": "print-all-prime-numbers-up-to-n-sieve-of-eratosthenes",
-      "title": "Print all prime numbers up to N (Sieve of Eratosthenes",
-      "questionCount": 1
-    },
-    {
-      "index": 22,
-      "slug": "swap-two-numbers-without-using-a-third-variable-using-xor-a-a-b-b-a",
-      "title": "Swap two numbers without using a third variable (using XOR: `a = a ^ b; b = a ^ ",
-      "questionCount": 1
-    },
-    {
-      "index": 23,
-      "slug": "string-from",
-      "title": "string & from",
-      "questionCount": 3
-    },
-    {
-      "index": 24,
-      "slug": "print-a-right-angled-triangle-pattern-of-stars-using-nested-loops",
-      "title": "Print a right-angled triangle pattern of stars using nested loops.",
-      "questionCount": 1
-    },
-    {
-      "index": 25,
-      "slug": "find-the-power-of-a-number",
-      "title": "Find the power of a number",
-      "questionCount": 1
-    },
-    {
-      "index": 26,
-      "slug": "find-the-largest",
-      "title": "Find & the & largest",
-      "questionCount": 2
-    },
-    {
-      "index": 27,
-      "slug": "array-place-from",
-      "title": "array & place & from",
-      "questionCount": 3
-    },
-    {
-      "index": 28,
-      "slug": "move-all-zeros-to-the-end-while-preserving-order",
-      "title": "Move all zeros to the end while preserving order",
-      "questionCount": 1
-    },
-    {
-      "index": 29,
-      "slug": "rotate-an-array-by-k-positions",
-      "title": "Rotate an array by K positions",
-      "questionCount": 1
-    },
-    {
-      "index": 30,
-      "slug": "find-the-missing-number-in-1n",
-      "title": "Find the missing number in 1..N",
-      "questionCount": 1
-    },
-    {
-      "index": 31,
-      "slug": "contains-duplicate",
-      "title": "Contains Duplicate",
-      "questionCount": 1
-    },
-    {
-      "index": 32,
-      "slug": "two-sum",
-      "title": "Two Sum",
-      "questionCount": 1
-    },
-    {
-      "index": 33,
-      "slug": "best-time-to-buy-and-sell-stock",
-      "title": "Best Time to Buy and Sell Stock",
-      "questionCount": 1
-    },
-    {
-      "index": 34,
-      "slug": "sort-0s-1s-2s-in-one-pass-dutch-national-flag",
-      "title": "Sort 0s, 1s, 2s in one pass (Dutch National Flag",
-      "questionCount": 1
-    },
-    {
-      "index": 35,
-      "slug": "max-consecutive-ones",
-      "title": "Max Consecutive Ones",
-      "questionCount": 1
-    },
-    {
-      "index": 36,
-      "slug": "product-of-array-except-self",
-      "title": "Product of Array Except Self",
-      "questionCount": 1
-    },
-    {
-      "index": 37,
-      "slug": "3sum",
-      "title": "3Sum",
-      "questionCount": 1
-    },
-    {
-      "index": 38,
-      "slug": "container-with-most-water",
-      "title": "Container With Most Water",
-      "questionCount": 1
-    },
-    {
-      "index": 39,
-      "slug": "trapping-rain-water",
-      "title": "Trapping Rain Water",
-      "questionCount": 1
-    },
-    {
-      "index": 40,
-      "slug": "maximum-subarray-kadanes-algorithm-running-sum-reset-w",
-      "title": "Maximum Subarray / Kadane's Algorithm — running sum, reset w",
-      "questionCount": 6
-    },
-    {
-      "index": 41,
-      "slug": "encode-and-decode-strings",
-      "title": "Encode and Decode Strings",
-      "questionCount": 1
-    },
-    {
-      "index": 42,
-      "slug": "median-of-two-sorted-arrays",
-      "title": "Median of Two Sorted Arrays",
-      "questionCount": 1
-    },
-    {
-      "index": 43,
-      "slug": "largest-number-from-a-list-of-integers",
-      "title": "Largest number from a list of integers",
-      "questionCount": 1
-    },
-    {
-      "index": 44,
-      "slug": "string-two-pointer",
-      "title": "string & two & pointer",
-      "questionCount": 2
-    },
-    {
-      "index": 45,
-      "slug": "character-first-non",
-      "title": "character & First & non",
-      "questionCount": 2
-    },
-    {
-      "index": 46,
-      "slug": "group-anagrams",
-      "title": "Group Anagrams",
-      "questionCount": 1
-    },
-    {
-      "index": 47,
-      "slug": "longest-common-prefix",
-      "title": "Longest Common Prefix",
-      "questionCount": 1
-    },
-    {
-      "index": 48,
-      "slug": "longest-repeating-sliding",
-      "title": "Longest & Repeating & sliding",
-      "questionCount": 2
-    },
-    {
-      "index": 49,
-      "slug": "palindromic-substring-expand",
-      "title": "Palindromic & Substring & expand",
-      "questionCount": 3
-    },
-    {
-      "index": 50,
-      "slug": "valid-parentheses-stack",
-      "title": "Valid & Parentheses & stack",
-      "questionCount": 2
-    },
-    {
-      "index": 51,
-      "slug": "valid-parenthesis-string",
-      "title": "Valid & Parenthesis & String",
-      "questionCount": 2
-    },
-    {
-      "index": 52,
-      "slug": "explain-the-two-pointers-technique",
-      "title": "Explain the Two Pointers technique",
-      "questionCount": 1
-    },
-    {
-      "index": 53,
-      "slug": "pointer-sum-sorted",
-      "title": "pointer & Sum & sorted",
-      "questionCount": 2
-    },
-    {
-      "index": 54,
-      "slug": "move-zeroes",
-      "title": "Move Zeroes",
-      "questionCount": 1
-    },
-    {
-      "index": 55,
-      "slug": "valid-palindrome",
-      "title": "Valid Palindrome",
-      "questionCount": 1
-    },
-    {
-      "index": 56,
-      "slug": "container-with-most-water-56",
-      "title": "Container With Most Water",
-      "questionCount": 1
-    },
-    {
-      "index": 57,
-      "slug": "3sum-57",
-      "title": "3Sum",
-      "questionCount": 1
-    },
-    {
-      "index": 58,
-      "slug": "trapping-rain-water-58",
-      "title": "Trapping Rain Water",
-      "questionCount": 1
-    },
-    {
-      "index": 59,
-      "slug": "sort-colors-dutch-national-flag",
-      "title": "Sort Colors (Dutch National Flag)",
-      "questionCount": 1
-    },
-    {
-      "index": 60,
-      "slug": "size-window-fixed",
-      "title": "size & window & fixed",
-      "questionCount": 3
-    },
-    {
-      "index": 61,
-      "slug": "longest-repeating-window",
-      "title": "Longest & Repeating & window",
-      "questionCount": 2
-    },
-    {
-      "index": 62,
-      "slug": "find-all-anagrams-in-a-string",
-      "title": "Find All Anagrams in a String",
-      "questionCount": 1
-    },
-    {
-      "index": 63,
-      "slug": "fruit-into-baskets-longest-with-at-most-k-distinct",
-      "title": "Fruit Into Baskets / Longest with At Most K Distinct",
-      "questionCount": 1
-    },
-    {
-      "index": 64,
-      "slug": "minimum-window-substring",
-      "title": "Minimum Window Substring",
-      "questionCount": 1
-    },
-    {
-      "index": 65,
-      "slug": "sliding-window-maximum",
-      "title": "Sliding & Window & Maximum",
-      "questionCount": 2
-    },
-    {
-      "index": 66,
-      "slug": "the-linked-list",
-      "title": "the & linked & list",
-      "questionCount": 3
-    },
-    {
-      "index": 67,
-      "slug": "happy-number",
-      "title": "Happy Number",
-      "questionCount": 1
-    },
-    {
-      "index": 68,
-      "slug": "find-the-duplicate-number",
-      "title": "Find the Duplicate Number",
-      "questionCount": 1
-    },
-    {
-      "index": 69,
-      "slug": "the-list-and",
-      "title": "the & list & and",
-      "questionCount": 9
-    },
-    {
-      "index": 70,
-      "slug": "the-array-target",
-      "title": "the & array & target",
-      "questionCount": 6
-    },
-    {
-      "index": 71,
-      "slug": "koko-has-piles-of-bananas-and-h-hours-before-the-guards-return-each-hour-she-ea",
-      "title": "Koko has piles of bananas and h hours before the guards return. Each hour she ea",
-      "questionCount": 1
-    },
-    {
-      "index": 72,
-      "slug": "the-order-given",
-      "title": "the & order & Given",
-      "questionCount": 2
-    },
-    {
-      "index": 73,
-      "slug": "given-a-non-negative-integer",
-      "title": "Given a non-negative integer",
-      "questionCount": 1
-    },
-    {
-      "index": 74,
-      "slug": "explain-the-prefix-sum-technique-how-does-precomputing-cumulative-sums-let-you",
-      "title": "Explain the prefix sum technique. How does precomputing cumulative sums let you ",
-      "questionCount": 1
-    },
-    {
-      "index": 75,
-      "slug": "the-and-array",
-      "title": "the & and & array",
-      "questionCount": 6
-    },
-    {
-      "index": 76,
-      "slug": "given-a-string-containing-just-the-characters-and-d",
-      "title": "Given a string containing just the characters `(`, `)`, `{`, `}`, `[` and `]`, d",
-      "questionCount": 1
-    },
-    {
-      "index": 77,
-      "slug": "stack-first-using",
-      "title": "stack & first & using",
-      "questionCount": 2
-    },
-    {
-      "index": 78,
-      "slug": "given-an-arithmetic-expression-in-reverse-polish",
-      "title": "Given an arithmetic expression in Reverse Polish",
-      "questionCount": 1
-    },
-    {
-      "index": 79,
-      "slug": "the-given-each",
-      "title": "the & Given & each",
-      "questionCount": 4
-    },
-    {
-      "index": 80,
-      "slug": "the-tree-and",
-      "title": "the & tree & and",
-      "questionCount": 19
-    },
-    {
-      "index": 81,
-      "slug": "the-words-root",
-      "title": "the & words & root",
-      "questionCount": 2
-    },
-    {
-      "index": 82,
-      "slug": "value-the-given",
-      "title": "value & the & Given",
-      "questionCount": 2
-    },
-    {
-      "index": 83,
-      "slug": "given-k-sorted-linked-lists",
-      "title": "Given K sorted linked lists",
-      "questionCount": 1
-    },
-    {
-      "index": 84,
-      "slug": "design-a-data-structure-that-supports-adding-integers-from-a-stream-and-returnin",
-      "title": "Design a data structure that supports adding integers from a stream and returnin",
-      "questionCount": 1
-    },
-    {
-      "index": 85,
-      "slug": "design-a-class-that-is-initialized-with-a-value-k-and-an-initial-list-of-numbers",
-      "title": "Design a class that is initialized with a value K and an initial list of numbers",
-      "questionCount": 1
-    },
-    {
-      "index": 86,
-      "slug": "given-an-array-of-points-on-a-plane-and-a-value-k-return-the-k-points-closest-t",
-      "title": "Given an array of points on a plane and a value K, return the K points closest t",
-      "questionCount": 1
-    },
-    {
-      "index": 87,
-      "slug": "given-a-list-of-tasks-represented-by-characters-and-a-cooldown-value-n-where-th",
-      "title": "Given a list of tasks represented by characters and a cooldown value N, where th",
-      "questionCount": 1
-    },
-    {
-      "index": 88,
-      "slug": "given-a-two-dimensional-grid-of-1s",
-      "title": "Given a two-dimensional grid of '1's",
-      "questionCount": 1
-    },
-    {
-      "index": 89,
-      "slug": "given-a-reference-to-a-node-in-a-connected-undirected-graph",
-      "title": "Given a reference to a node in a connected undirected graph",
-      "questionCount": 1
-    },
-    {
-      "index": 90,
-      "slug": "given-a-grid-of-cell-heights",
-      "title": "Given a grid of cell heights",
-      "questionCount": 1
-    },
-    {
-      "index": 91,
-      "slug": "given-a-grid-where-each-cell-is-empty",
-      "title": "Given a grid where each cell is empty",
-      "questionCount": 1
-    },
-    {
-      "index": 92,
-      "slug": "given-an-image-as-a-grid-of-pixel-colors",
-      "title": "Given an image as a grid of pixel colors",
-      "questionCount": 1
-    },
-    {
-      "index": 93,
-      "slug": "given-a-begin-word",
-      "title": "Given a begin word",
-      "questionCount": 1
-    },
-    {
-      "index": 94,
-      "slug": "given-a-board-of-x-and-o",
-      "title": "Given a board of 'X' and 'O'",
-      "questionCount": 1
-    },
-    {
-      "index": 95,
-      "slug": "and-the-courses",
-      "title": "and & the & courses",
-      "questionCount": 7
-    },
-    {
-      "index": 96,
-      "slug": "explain-the-union-find-disjoint-set-data-structure-how-do-find",
-      "title": "Explain the Union-Find / Disjoint Set data structure. How do find",
-      "questionCount": 1
-    },
-    {
-      "index": 97,
-      "slug": "given-n-nodes-and-a-list-of-undirected-edges",
-      "title": "Given n nodes and a list of undirected edges",
-      "questionCount": 1
-    },
-    {
-      "index": 98,
-      "slug": "in-a-graph-that-started-as-a-tree-with-n-nodes-and-had-one-extra-edge-added-ret",
-      "title": "In a graph that started as a tree with n nodes and had one extra edge added, ret",
-      "questionCount": 1
-    },
-    {
-      "index": 99,
-      "slug": "and-grid-land",
-      "title": "and & grid & land",
-      "questionCount": 2
-    },
-    {
-      "index": 100,
-      "slug": "given-accounts-where-each-is-a-name-followed-by-emails",
-      "title": "Given accounts where each is a name followed by emails",
-      "questionCount": 1
-    },
-    {
-      "index": 101,
-      "slug": "given-an-nn-adjacency-matrix-where-isconnectedij-1-means-city-i-and-city",
-      "title": "Given an n×n adjacency matrix where isConnected[i][j] = 1 means city i and city ",
-      "questionCount": 1
-    },
-    {
-      "index": 102,
-      "slug": "given-all-return",
-      "title": "Given & all & return",
-      "questionCount": 8
-    },
-    {
-      "index": 103,
-      "slug": "given-a-string",
-      "title": "Given a string",
-      "questionCount": 1
-    },
-    {
-      "index": 104,
-      "slug": "given-a-2d-board-of-characters-and-a-word",
-      "title": "Given a 2D board of characters and a word",
-      "questionCount": 1
-    },
-    {
-      "index": 105,
-      "slug": "place-n-queens-on-an-nn-chessboard-so-that-no-two-queens-attack-each-other-and",
-      "title": "Place n queens on an n×n chessboard so that no two queens attack each other, and",
-      "questionCount": 1
-    },
-    {
-      "index": 106,
-      "slug": "write-a-program-to-solve-a-99-sudoku-board-by-filling-empty-cells-so-that-every",
-      "title": "Write a program to solve a 9×9 Sudoku board by filling empty cells so that every",
-      "questionCount": 1
-    },
-    {
-      "index": 107,
-      "slug": "how-do-you-recognize-that-a-problem-should-be-solved-with-dynamic-programming-e",
-      "title": "How do you recognize that a problem should be solved with dynamic programming? E",
-      "questionCount": 1
-    },
-    {
-      "index": 108,
-      "slug": "you-can-climb-1-or-2-steps-at-a-time-in-how-many-distinct-ways-can-you-reach-th",
-      "title": "You can climb 1 or 2 steps at a time. In how many distinct ways can you reach th",
-      "questionCount": 1
-    },
-    {
-      "index": 109,
-      "slug": "the-given-array",
-      "title": "the & Given & array",
-      "questionCount": 3
-    },
-    {
-      "index": 110,
-      "slug": "amount-that-given",
-      "title": "amount & that & Given",
-      "questionCount": 2
-    },
-    {
-      "index": 111,
-      "slug": "the-given-return",
-      "title": "the & Given & return",
-      "questionCount": 2
-    },
-    {
-      "index": 112,
-      "slug": "given-two-strings",
-      "title": "Given two strings",
-      "questionCount": 1
-    },
-    {
-      "index": 113,
-      "slug": "given-item-weights-and-values-and-a-knapsack-capacity-maximize-total-value-wher",
-      "title": "Given item weights and values and a knapsack capacity, maximize total value wher",
-      "questionCount": 1
-    },
-    {
-      "index": 114,
-      "slug": "given-can-string",
-      "title": "Given & can & string",
-      "questionCount": 3
-    },
-    {
-      "index": 115,
-      "slug": "right-the-top",
-      "title": "right & the & top",
-      "questionCount": 2
-    },
-    {
-      "index": 116,
-      "slug": "the-given-array-116",
-      "title": "the & Given & array",
-      "questionCount": 2
-    },
-    {
-      "index": 117,
-      "slug": "the-given-return-117",
-      "title": "the & Given & return",
-      "questionCount": 4
-    },
-    {
-      "index": 118,
-      "slug": "given-an-array-of-non-negative-integers-and-a-target",
-      "title": "Given an array of non-negative integers and a target",
-      "questionCount": 1
-    },
-    {
-      "index": 119,
-      "slug": "and-the-matches",
-      "title": "and & the & matches",
-      "questionCount": 4
-    },
-    {
-      "index": 120,
-      "slug": "given-balloons-with-values",
-      "title": "Given balloons with values",
-      "questionCount": 1
-    },
-    {
-      "index": 121,
-      "slug": "given-the-dimensions-of-a-chain-of-matrices",
-      "title": "Given the dimensions of a chain of matrices",
-      "questionCount": 1
-    },
-    {
-      "index": 122,
-      "slug": "given-a-string-of-only",
-      "title": "Given a string of only '",
-      "questionCount": 1
-    },
-    {
-      "index": 123,
-      "slug": "a-robot-moves-only-right-or-down-on-an-m-by-n-grid-where-some-cells-are-blocked",
-      "title": "A robot moves only right or down on an m by n grid where some cells are blocked",
-      "questionCount": 1
-    },
-    {
-      "index": 124,
-      "slug": "explain-cyclic-sort-given-an-array-containing-numbers-in-the-range-1-n",
-      "title": "Explain Cyclic Sort. Given an array containing numbers in the range [1, n]",
-      "questionCount": 1
-    },
-    {
-      "index": 125,
-      "slug": "given-a-string-containing-the-bracket-characters-round",
-      "title": "Given a string containing the bracket characters round",
-      "questionCount": 1
-    },
-    {
-      "index": 126,
-      "slug": "given-an-array-containing-n-distinct-numbers-taken-from-the-range-0-n-find-t",
-      "title": "Given an array containing n distinct numbers taken from the range [0, n], find t",
-      "questionCount": 1
-    },
-    {
-      "index": 127,
-      "slug": "design-a-stack-that-supports-push",
-      "title": "Design a stack that supports push",
-      "questionCount": 1
-    },
-    {
-      "index": 128,
-      "slug": "given-an-array-of-n-integers-where-each-value-is-in-the-range-1-n-and-some-va",
-      "title": "Given an array of n integers where each value is in the range [1, n] and some va",
-      "questionCount": 1
-    },
-    {
-      "index": 129,
-      "slug": "given-an-arithmetic-expression-in-reverse-polish-notation",
-      "title": "Given an arithmetic expression in Reverse Polish Notation",
-      "questionCount": 1
-    },
-    {
-      "index": 130,
-      "slug": "given-an-array-of-n1-integers-where-each-value-is-in-the-range-1-n-exactly",
-      "title": "Given an array of n+1 integers where each value is in the range [1, n], exactly ",
-      "questionCount": 1
-    },
-    {
-      "index": 131,
-      "slug": "implement-a-first-in-first-out-queue-using-only-two-last-in-first-out-stacks",
-      "title": "Implement a first-in-first-out queue using only two last-in-first-out stacks",
-      "questionCount": 1
-    },
-    {
-      "index": 132,
-      "slug": "given-an-unsorted-integer-array-find-the-smallest-missing-positive-integer-in-o",
-      "title": "Given an unsorted integer array, find the smallest missing positive integer in O",
-      "questionCount": 1
-    },
-    {
-      "index": 133,
-      "slug": "design-a-fixed-capacity-cache-that-evicts-the-least-recently-used-entry-when-ful",
-      "title": "Design a fixed-capacity cache that evicts the least recently used entry when ful",
-      "questionCount": 1
-    },
-    {
-      "index": 134,
-      "slug": "element-given-array",
-      "title": "element & Given & array",
-      "questionCount": 2
-    },
-    {
-      "index": 135,
-      "slug": "write-a-function-that-counts-the-number-of-set-bits",
-      "title": "Write a function that counts the number of set bits",
-      "questionCount": 1
-    },
-    {
-      "index": 136,
-      "slug": "given-k-sorted-lists-merge-them-into-one-sorted-list-efficiently-using-a-priori",
-      "title": "Given k sorted lists, merge them into one sorted list efficiently using a priori",
-      "questionCount": 1
-    },
-    {
-      "index": 137,
-      "slug": "the-given-return-137",
-      "title": "the & Given & return",
-      "questionCount": 2
-    },
-    {
-      "index": 138,
-      "slug": "reverse-the-bits-of-a-given-32-bit-unsigned-integer-for-example",
-      "title": "Reverse the bits of a given 32-bit unsigned integer. For example",
-      "questionCount": 1
-    },
-    {
-      "index": 139,
-      "slug": "implement-a-trie-supporting-inserting-a-word",
-      "title": "Implement a trie supporting inserting a word",
-      "questionCount": 1
-    },
-    {
-      "index": 140,
-      "slug": "given-an-array-containing-n-distinct-numbers-taken-from-the-range-0",
-      "title": "Given an array containing n distinct numbers taken from the range [0",
-      "questionCount": 1
-    },
-    {
-      "index": 141,
-      "slug": "implement-the-union-find",
-      "title": "Implement the union-find",
-      "questionCount": 1
-    },
-    {
-      "index": 142,
-      "slug": "determine-whether-a-given-integer-is-a-power-of-two-solve-in-o",
-      "title": "Determine whether a given integer is a power of two. Solve in O",
-      "questionCount": 1
-    },
-    {
-      "index": 143,
-      "slug": "given-a-two-dimensional-grid-of-land-and-water-cells",
-      "title": "Given a two-dimensional grid of land and water cells",
-      "questionCount": 1
-    },
-    {
-      "index": 144,
-      "slug": "compute-the-sum-of-two-integers-a-and-b-without-using-the-or",
-      "title": "Compute the sum of two integers a and b without using the + or",
-      "questionCount": 1
-    },
-    {
-      "index": 145,
-      "slug": "sort-order-and",
-      "title": "Sort & order & and",
-      "questionCount": 2
-    },
-    {
-      "index": 146,
-      "slug": "given-a-set-of-distinct-elements",
-      "title": "Given a set of distinct elements",
-      "questionCount": 1
-    },
-    {
-      "index": 147,
-      "slug": "explain-merge-sort-why-is-it-o",
-      "title": "Explain Merge Sort. Why is it O",
-      "questionCount": 1
-    },
-    {
-      "index": 148,
-      "slug": "given-a-set-of-distinct-elements-generate-all-possible-orderings",
-      "title": "Given a set of distinct elements, generate all possible orderings",
-      "questionCount": 1
-    },
-    {
-      "index": 149,
-      "slug": "explain-quick-sort-why-is-it-o",
-      "title": "Explain Quick Sort. Why is it O",
-      "questionCount": 1
-    },
-    {
-      "index": 150,
-      "slug": "given-a-set-of-distinct-positive-numbers-and-a-target",
-      "title": "Given a set of distinct positive numbers and a target",
-      "questionCount": 1
-    },
-    {
-      "index": 151,
-      "slug": "explain-heap-sort-how-does-building-the-heap-take-o",
-      "title": "Explain Heap Sort. How does building the heap take O",
-      "questionCount": 1
-    },
-    {
-      "index": 152,
-      "slug": "place-n-queens-on-an-n-by-n-chessboard-so-that-no-two-queens-attack-each-other",
-      "title": "Place n queens on an n-by-n chessboard so that no two queens attack each other",
-      "questionCount": 1
-    },
-    {
-      "index": 153,
-      "slug": "explain-counting-sort-and-radix-sort-why-are-they-o",
-      "title": "Explain Counting Sort and Radix Sort. Why are they O",
-      "questionCount": 1
-    },
-    {
-      "index": 154,
-      "slug": "given-a-grid-of-characters-and-a-word",
-      "title": "Given a grid of characters and a word",
-      "questionCount": 1
-    },
-    {
-      "index": 155,
-      "slug": "explain-dijkstras-shortest-path-algorithm-why-does-it-require-non-negative-edg",
-      "title": "Explain Dijkstra's shortest path algorithm. Why does it require non-negative edg",
-      "questionCount": 1
-    },
-    {
-      "index": 156,
-      "slug": "given-n-pairs-of-parentheses-generate-all-combinations-of-well-formed",
-      "title": "Given n pairs of parentheses, generate all combinations of well-formed",
-      "questionCount": 1
-    },
-    {
-      "index": 157,
-      "slug": "explain-bellman-ford-how-does-it-handle-negative-edge-weights-how-does-it-dete",
-      "title": "Explain Bellman-Ford. How does it handle negative edge weights, how does it dete",
-      "questionCount": 1
-    },
-    {
-      "index": 158,
-      "slug": "given-a-collection-of-intervals",
-      "title": "Given a collection of intervals",
-      "questionCount": 1
-    },
-    {
-      "index": 159,
-      "slug": "given-a-network-of-n-nodes-and-directed-travel-times",
-      "title": "Given a network of n nodes and directed travel times",
-      "questionCount": 1
-    },
-    {
-      "index": 160,
-      "slug": "given-a-set-of-meetings-with-start-and-end-times",
-      "title": "Given a set of meetings with start and end times",
-      "questionCount": 1
-    },
-    {
-      "index": 161,
-      "slug": "explain-the-knuth-morris-pratt-string-matching-algorithm-what-is-the-failure",
-      "title": "Explain the Knuth-Morris-Pratt string matching algorithm. What is the failure",
-      "questionCount": 1
-    },
-    {
-      "index": 162,
-      "slug": "implement-the-quick-sort-algorithm",
-      "title": "Implement the quick sort algorithm",
-      "questionCount": 1
-    },
-    {
-      "index": 163,
-      "slug": "explain-the-rabin-karp-string-matching-algorithm-how-does-the-rolling-hash-work",
-      "title": "Explain the Rabin-Karp string matching algorithm. How does the rolling hash work",
-      "questionCount": 1
-    },
-    {
-      "index": 164,
-      "slug": "implement-the-merge-sort-algorithm",
-      "title": "Implement the merge sort algorithm",
-      "questionCount": 1
-    },
-    {
-      "index": 165,
-      "slug": "compare-kmp",
-      "title": "Compare KMP",
-      "questionCount": 1
-    },
-    {
-      "index": 166,
-      "slug": "implement-heap-sort-using-a-binary-heap",
-      "title": "Implement heap sort using a binary heap",
-      "questionCount": 1
-    },
-    {
-      "index": 167,
-      "slug": "rotate-an-n-by-n-matrix-90-degrees-clockwise-in-place-explain-why-transpose-fol",
-      "title": "Rotate an n by n matrix 90 degrees clockwise in place. Explain why transpose fol",
-      "questionCount": 1
-    },
-    {
-      "index": 168,
-      "slug": "determine-whether-a-singly-linked-list-contains-a-cycle",
-      "title": "Determine whether a singly linked list contains a cycle",
-      "questionCount": 1
-    },
-    {
-      "index": 169,
-      "slug": "given-an-m-by-n-matrix",
-      "title": "Given an m by n matrix",
-      "questionCount": 1
-    },
-    {
-      "index": 170,
-      "slug": "given-a-singly-linked-list",
-      "title": "Given a singly linked list",
-      "questionCount": 1
-    },
-    {
-      "index": 171,
-      "slug": "search-a-2d-matrix",
-      "title": "Search a 2D Matrix",
-      "questionCount": 1
-    },
-    {
-      "index": 172,
-      "slug": "set-matrix-zeroes",
-      "title": "Set Matrix Zeroes",
-      "questionCount": 1
-    },
-    {
-      "index": 173,
-      "slug": "word-search",
-      "title": "Word Search",
-      "questionCount": 1
-    },
-    {
-      "index": 174,
-      "slug": "flood-fill",
-      "title": "Flood Fill",
-      "questionCount": 1
-    },
-    {
-      "index": 175,
-      "slug": "cache-hashmap-lru",
-      "title": "Cache & HashMap & LRU",
-      "questionCount": 2
-    },
-    {
-      "index": 176,
-      "slug": "min-stack",
-      "title": "Min Stack",
-      "questionCount": 1
-    },
-    {
-      "index": 177,
-      "slug": "randomizedset-array-hashmap",
-      "title": "RandomizedSet & array & HashMap",
-      "questionCount": 2
-    },
-    {
-      "index": 178,
-      "slug": "implement-queue-using-stacks-stack-using-queues",
-      "title": "Implement Queue using Stacks / Stack using Queues.",
-      "questionCount": 1
-    },
-    {
-      "index": 179,
-      "slug": "cache-with-ttl-and-versioned-expiry",
-      "title": "Cache with TTL and Versioned Expiry",
-      "questionCount": 1
-    },
-    {
-      "index": 180,
-      "slug": "the-array-and",
-      "title": "the & array & and",
-      "questionCount": 10
-    },
-    {
-      "index": 181,
-      "slug": "given-two-strings-that-may-contain-the-backspace-character",
-      "title": "Given two strings that may contain the backspace character",
-      "questionCount": 1
-    },
-    {
-      "index": 182,
-      "slug": "given-an-array-find-the-length-of-the-shortest-contiguous-subarray-that-if-sor",
-      "title": "Given an array, find the length of the shortest contiguous subarray that, if sor",
-      "questionCount": 1
-    },
-    {
-      "index": 183,
-      "slug": "the-cycle-list",
-      "title": "the & cycle & list",
-      "questionCount": 2
-    },
-    {
-      "index": 184,
-      "slug": "a-happy-number-is-defined-by-repeatedly-replacing-a-number-with-the-sum-of-the-s",
-      "title": "A happy number is defined by repeatedly replacing a number with the sum of the s",
-      "questionCount": 1
-    },
-    {
-      "index": 185,
-      "slug": "given-an-array-of-n-plus-1-integers-where-each-integer-is-between-1-and-n-inclus",
-      "title": "Given an array of n plus 1 integers where each integer is between 1 and n inclus",
-      "questionCount": 1
-    },
-    {
-      "index": 186,
-      "slug": "the-given-singly",
-      "title": "the & Given & singly",
-      "questionCount": 3
-    },
-    {
-      "index": 187,
-      "slug": "the-given-array-187",
-      "title": "the & Given & array",
-      "questionCount": 3
-    },
-    {
-      "index": 188,
-      "slug": "given-a-string-and-a-number-k-find-the-length-of-the-longest-substring-that-con",
-      "title": "Given a string and a number k, find the length of the longest substring that con",
-      "questionCount": 1
-    },
-    {
-      "index": 189,
-      "slug": "you-have-two-baskets-and-want-to-collect-fruits-from-a-row-of-trees-where-each",
-      "title": "You have two baskets and want to collect fruits from a row of trees, where each ",
-      "questionCount": 1
-    },
-    {
-      "index": 190,
-      "slug": "the-and-with",
-      "title": "the & and & with",
-      "questionCount": 37
-    },
-    {
-      "index": 191,
-      "slug": "the-node-tree",
-      "title": "the & node & tree",
-      "questionCount": 18
-    },
-    {
-      "index": 192,
-      "slug": "the-and-interval",
-      "title": "the & and & interval",
-      "questionCount": 4
-    },
-    {
-      "index": 193,
-      "slug": "the-generate-all",
-      "title": "the & generate & all",
-      "questionCount": 6
-    },
-    {
-      "index": 194,
-      "slug": "given-a-string-expression-of-numbers-and-the-operators-plus",
-      "title": "Given a string expression of numbers and the operators plus",
-      "questionCount": 1
-    },
-    {
-      "index": 195,
-      "slug": "given-number-structurally",
-      "title": "Given & number & structurally",
-      "questionCount": 2
-    },
-    {
-      "index": 196,
-      "slug": "the-that-and",
-      "title": "the & that & and",
-      "questionCount": 4
-    },
-    {
-      "index": 197,
-      "slug": "the-array-how",
-      "title": "the & array & how",
-      "questionCount": 14
-    },
-    {
-      "index": 198,
-      "slug": "the-and-how",
-      "title": "the & and & how",
-      "questionCount": 7
-    },
-    {
-      "index": 199,
-      "slug": "the-and-sorted",
-      "title": "the & and & sorted",
-      "questionCount": 9
-    },
-    {
-      "index": 200,
-      "slug": "the-and-complexity",
-      "title": "the & and & complexity",
-      "questionCount": 46
-    },
-    {
-      "index": 201,
-      "slug": "the-and-each",
-      "title": "the & and & each",
-      "questionCount": 3
-    },
-    {
-      "index": 202,
-      "slug": "explain-the-concept-of-tabulation-in-dynamic-programming",
-      "title": "Explain the concept of tabulation in dynamic programming",
-      "questionCount": 1
-    },
-    {
-      "index": 203,
-      "slug": "the-and-case",
-      "title": "the & and & case",
-      "questionCount": 8
-    },
-    {
-      "index": 204,
-      "slug": "the-and-cut",
-      "title": "the & and & cut",
-      "questionCount": 2
-    },
-    {
-      "index": 205,
-      "slug": "the-and-with-205",
-      "title": "the & and & with",
-      "questionCount": 4
+      "slug": "misc-coding",
+      "title": "Miscellaneous Coding",
+      "questionCount": 52,
+      "questionIds": [
+        "Q1597",
+        "Q1423",
+        "Q1639",
+        "Q1536",
+        "Q1608",
+        "Q767",
+        "Q776",
+        "Q780",
+        "Q1497",
+        "Q1402",
+        "Q1539",
+        "Q1754",
+        "Q1559",
+        "Q1595",
+        "Q1538",
+        "Q1560",
+        "Q1438",
+        "Q1418",
+        "Q1457",
+        "Q1407",
+        "Q1843",
+        "Q1845",
+        "Q1848",
+        "Q1796",
+        "Q1798",
+        "Q1801",
+        "Q1807",
+        "Q1809",
+        "Q1819",
+        "Q1823",
+        "Q1824",
+        "Q1825",
+        "Q1831",
+        "Q1832",
+        "Q1835",
+        "Q1775",
+        "Q1777",
+        "Q1778",
+        "Q1779",
+        "Q1744",
+        "Q1708",
+        "Q1719",
+        "Q1720",
+        "Q1674",
+        "Q1763",
+        "Q1753",
+        "Q1576",
+        "Q1681",
+        "Q1683",
+        "Q1741",
+        "Q1532",
+        "Q2636"
+      ]
     }
   ]
 }

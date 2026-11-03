@@ -3,13 +3,13 @@
   "slug": "completablefuture-thenapply-vs-thencompose-vs-thencombine",
   "questionNumber": 247,
   "title": "CompletableFuture — thenApply vs thenCompose vs thenCombine",
-  "shortTitle": "CompletableFuture — thenApply vs thenCompose vs thenCombine",
+  "shortTitle": "thenApply vs thenCompose vs thenCombine?",
   "chapterNumber": 5,
   "chapterSlug": "concurrency-multithreading",
   "chapterTitle": "Concurrency & Multithreading",
-  "topicIndex": 14,
+  "topicIndex": 13,
   "topicSlug": "completablefuture",
-  "topicTitle": "CompletableFuture",
+  "topicTitle": "CompletableFuture & Resilience",
   "sections": {
     "s1_definition": {
       "profdef": "`CompletableFuture<T>` (Java 8) is an asynchronous computation pipeline — chain multiple async steps without blocking. **thenApply(Function)** = transform the result synchronously: `CF<String>` → apply function → `CF<Integer>`. Like `map()` in streams. **thenCompose(Function)** = chain another async operation: `CF<String>` → function returns `CF<Integer>` → flattened to `CF<Integer>`. Like `flatMap()` in streams. Without compose: you'd get `CF<CF<Integer>>` (nested). **thenCombine(CF, BiFunction)** = combine TWO independent futures: `CF<A>` + `CF<B>` → function(A, B) → `CF<C>`. Both run in parallel, combine when both done.",
@@ -27,5 +27,10 @@
     "s5c_hld": "```\n  ═══ HLD — Async Loan Approval Pipeline ═══\n\n  ┌──────────┐  REST   ┌─────────────────────────────────┐\n  │ Client   │────────→│  Loan Service (CompletableFuture)│\n  └──────────┘         │                                   │\n                       │  supplyAsync: fetch customer       │\n                       │       ↓ thenCompose               │\n                       │  fetchCreditScore (async, 300ms)  │\n                       │       ↓ thenCombine (parallel!)   │\n                       │  fetchPropertyValue (async, 200ms)│\n                       │       ↓                           │\n                       │  score≥700 && property>10L → OK   │\n                       │  Total: ~300ms (not 600ms!)       │\n                       └───────────────────────────────────┘\n```",
     "s5d_lld": "```\n  ═══ LLD — CompletableFuture API ═══\n\n  ┌──────────────────────────────────────┐\n  │  CompletableFuture<T>                 │\n  │  ─────────────────────────────────── │\n  │  Creation:                            │\n  │  + supplyAsync(Supplier): CF<T>      │  async with result\n  │  + runAsync(Runnable): CF<Void>      │  async no result\n  │  ─────────────────────────────────── │\n  │  Transform:                           │\n  │  + thenApply(fn): CF<U>             │  sync: T→U (map)\n  │  + thenCompose(fn): CF<U>           │  async: T→CF<U> (flatMap)\n  │  + thenCombine(cf, fn): CF<V>       │  merge: (T,U)→V\n  │  ─────────────────────────────────── │\n  │  Consume:                             │\n  │  + thenAccept(Consumer): CF<Void>    │  use result, no return\n  │  + thenRun(Runnable): CF<Void>       │  run after, ignore result\n  │  ─────────────────────────────────── │\n  │  Error:                               │\n  │  + exceptionally(fn): CF<T>          │  recover from error\n  │  + handle(fn): CF<U>                 │  handle both ok+error\n  │  + whenComplete(fn): CF<T>           │  side-effect\n  │  ─────────────────────────────────── │\n  │  Combine:                             │\n  │  + allOf(CF...): CF<Void>            │  wait for ALL\n  │  + anyOf(CF...): CF<Object>          │  first to complete\n  └──────────────────────────────────────┘\n\n  thenApply vs thenCompose:\n  thenApply:   T → U         (sync function)   → CF<U>\n  thenCompose: T → CF<U>     (async function)  → CF<U> (flattened!)\n  thenApply with async fn: T → CF<U> → CF<CF<U>> (NESTED! wrong!)\n```",
     "s6_takeaway": "CompletableFuture enables non-blocking async pipelines. `thenApply` transforms the result synchronously — like `map()` in streams: `CF<String>` → parseInt → `CF<Integer>`. `thenCompose` chains another async operation — like `flatMap()`: `CF<String>` → function returns `CF<Integer>` → flattened to `CF<Integer>`. Without compose, you'd get `CF<CF<Integer>>` (nested). `thenCombine` merges two independent futures running in parallel — when BOTH complete, combine their results.\n\nError handling: `exceptionally(ex -> fallback)` recovers from errors. `handle((result, ex) -> ...)` handles both success and failure. `allOf(cf1, cf2, cf3)` waits for all. `anyOf(cf1, cf2)` returns the first to complete. Async variants (`thenApplyAsync`) run the function on a separate thread. In banking: loan approval — fetch credit score (thenCompose, 300ms async) + fetch property value (parallel, 200ms) + combine (thenCombine) → total 300ms instead of 600ms sequential. Non-blocking: the calling thread is never blocked.\n\n---"
-  }
+  },
+  "keyPoints": [
+    "thenApply: transform result (map)",
+    "thenCompose: chain async (flatMap)",
+    "thenCombine: combine two independent CFs"
+  ]
 }

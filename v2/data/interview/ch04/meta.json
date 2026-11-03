@@ -2,32 +2,116 @@
   "number": 4,
   "slug": "exception-handling",
   "title": "Exception Handling",
-  "topicCount": 4,
+  "topicCount": 10,
   "questionCount": 28,
   "topics": [
     {
       "index": 0,
-      "slug": "what-is-the-difference-between-a-checked-and-an-unchecked-exception",
-      "title": "What is the difference between a checked and an unchecked exception",
-      "questionCount": 1
+      "slug": "exception-fundamentals",
+      "title": "Exception Handling Fundamentals",
+      "questionCount": 4,
+      "questionIds": [
+        "Q186",
+        "Q177",
+        "Q178",
+        "Q183"
+      ]
     },
     {
       "index": 1,
-      "slug": "what-is-the-difference-between-throw-and-throws-in-java",
-      "title": "What is the difference between throw and throws in Java?",
-      "questionCount": 1
+      "slug": "try-catch-finally",
+      "title": "try-catch-finally",
+      "questionCount": 4,
+      "questionIds": [
+        "Q179",
+        "Q180",
+        "Q188",
+        "Q189"
+      ]
     },
     {
       "index": 2,
-      "slug": "and-exception-catch",
-      "title": "and & exception & catch",
-      "questionCount": 21
+      "slug": "try-with-resources",
+      "title": "try-with-resources & Suppressed Exceptions",
+      "questionCount": 2,
+      "questionIds": [
+        "Q181",
+        "Q182"
+      ]
     },
     {
       "index": 3,
-      "slug": "and-does-how",
-      "title": "and & does & how",
-      "questionCount": 5
+      "slug": "custom-exceptions",
+      "title": "Custom Exceptions",
+      "questionCount": 1,
+      "questionIds": [
+        "Q193"
+      ]
+    },
+    {
+      "index": 4,
+      "slug": "exception-chaining-and-stack-traces",
+      "title": "Exception Chaining & Stack Traces",
+      "questionCount": 4,
+      "questionIds": [
+        "Q184",
+        "Q185",
+        "Q190",
+        "Q191"
+      ]
+    },
+    {
+      "index": 5,
+      "slug": "best-practices",
+      "title": "Exception Best Practices",
+      "questionCount": 4,
+      "questionIds": [
+        "Q192",
+        "Q194",
+        "Q195",
+        "Q196"
+      ]
+    },
+    {
+      "index": 6,
+      "slug": "spring-exception-handling",
+      "title": "Spring Exception Handling",
+      "questionCount": 1,
+      "questionIds": [
+        "Q187"
+      ]
+    },
+    {
+      "index": 7,
+      "slug": "exceptions-in-constructors-and-static",
+      "title": "Exceptions in Constructors & Static Init",
+      "questionCount": 2,
+      "questionIds": [
+        "Q197",
+        "Q198"
+      ]
+    },
+    {
+      "index": 8,
+      "slug": "common-runtime-exceptions",
+      "title": "Common Runtime Exceptions",
+      "questionCount": 4,
+      "questionIds": [
+        "Q199",
+        "Q200",
+        "Q201",
+        "Q202"
+      ]
+    },
+    {
+      "index": 9,
+      "slug": "jvm-exception-internals",
+      "title": "JVM Exception Internals",
+      "questionCount": 2,
+      "questionIds": [
+        "Q203",
+        "Q204"
+      ]
     }
   ]
 }

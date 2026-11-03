@@ -2,13 +2,13 @@ import { getQuestionsByTopic, getQuestionById, getQuestionIdsForTopic } from './
 
 describe('getQuestionsByTopic', () => {
   it('returns questions for a valid topic', () => {
-    const questions = getQuestionsByTopic(1, 'what-is-the-difference-between-the-jdk')
+    const questions = getQuestionsByTopic(1, 'jdk-jre-jvm')
     expect(questions.length).toBeGreaterThan(0)
     expect(questions[0].id).toBe('Q1')
   })
 
   it('returns questions sorted by question number', () => {
-    const questions = getQuestionsByTopic(1, 'what-does-the-final-keyword-mean-when-applied-to-a-class')
+    const questions = getQuestionsByTopic(1, 'keywords-final')
     for (let i = 1; i < questions.length; i++) {
       expect(questions[i].questionNumber).toBeGreaterThanOrEqual(questions[i - 1].questionNumber)
     }
@@ -23,7 +23,7 @@ describe('getQuestionsByTopic', () => {
   })
 
   it('returns summaries with required fields', () => {
-    const questions = getQuestionsByTopic(1, 'what-is-the-difference-between-the-jdk')
+    const questions = getQuestionsByTopic(1, 'jdk-jre-jvm')
     const q = questions[0]
     expect(q.id).toBeTruthy()
     expect(q.slug).toBeTruthy()
@@ -36,7 +36,7 @@ describe('getQuestionsByTopic', () => {
 
 describe('getQuestionById', () => {
   it('returns a question with sections for a valid ID', () => {
-    const q = getQuestionById(1, 'what-is-the-difference-between-the-jdk', 'Q1')
+    const q = getQuestionById(1, 'jdk-jre-jvm', 'Q1')
     expect(q).not.toBeNull()
     expect(q?.id).toBe('Q1')
     expect(q?.sections).toBeDefined()
@@ -44,7 +44,7 @@ describe('getQuestionById', () => {
   })
 
   it('returns null for nonexistent question ID', () => {
-    expect(getQuestionById(1, 'what-is-the-difference-between-the-jdk', 'Q9999')).toBeNull()
+    expect(getQuestionById(1, 'jdk-jre-jvm', 'Q9999')).toBeNull()
   })
 
   it('returns null for nonexistent topic', () => {
@@ -54,7 +54,7 @@ describe('getQuestionById', () => {
 
 describe('getQuestionIdsForTopic', () => {
   it('returns an array of question IDs', () => {
-    const ids = getQuestionIdsForTopic(1, 'what-is-the-difference-between-the-jdk')
+    const ids = getQuestionIdsForTopic(1, 'jdk-jre-jvm')
     expect(ids).toContain('Q1')
   })
 

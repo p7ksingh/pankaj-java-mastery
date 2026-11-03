@@ -1,219 +1,110 @@
 {
   "number": 23,
-  "slug": "behavioral-hr-star-method",
-  "title": "Behavioral / HR (STAR Method)",
-  "topicCount": 35,
+  "slug": "behavioral-hr",
+  "title": "Behavioral / HR — STAR Method",
+  "topicCount": 8,
   "questionCount": 37,
   "topics": [
     {
       "index": 0,
-      "slug": "tell-me-about-yourself",
-      "title": "Tell me about yourself",
-      "questionCount": 1
+      "slug": "self-introduction",
+      "title": "Self Introduction",
+      "questionCount": 8,
+      "questionIds": [
+        "Q2488",
+        "Q2485",
+        "Q2480",
+        "Q2483",
+        "Q2487",
+        "Q2470",
+        "Q2472",
+        "Q2471"
+      ]
     },
     {
       "index": 1,
-      "slug": "why-are-you-looking-for-a-new-job-why-are-you-leaving-your-current-company",
-      "title": "Why are you looking for a new job / Why are you leaving your current company?",
-      "questionCount": 1
+      "slug": "strengths-weaknesses",
+      "title": "Strengths & Weaknesses",
+      "questionCount": 2,
+      "questionIds": [
+        "Q2473",
+        "Q2474"
+      ]
     },
     {
       "index": 2,
-      "slug": "where-do-you-see-yourself-in-3-5-years",
-      "title": "Where do you see yourself in 3-5 years?",
-      "questionCount": 1
+      "slug": "company-questions",
+      "title": "Why This Company",
+      "questionCount": 3,
+      "questionIds": [
+        "Q2477",
+        "Q2476",
+        "Q2475"
+      ]
     },
     {
       "index": 3,
-      "slug": "what-is-your-biggest-strength-and-how-has-it-helped-you-at-work",
-      "title": "What is your biggest strength and how has it helped you at work?",
-      "questionCount": 1
+      "slug": "salary-logistics",
+      "title": "Salary & Logistics",
+      "questionCount": 2,
+      "questionIds": [
+        "Q2479",
+        "Q2478"
+      ]
     },
     {
       "index": 4,
-      "slug": "what-is-your-biggest-weakness-and-what-are-you-doing-to-improve-it",
-      "title": "What is your biggest weakness and what are you doing to improve it?",
-      "questionCount": 1
+      "slug": "technical-scenarios",
+      "title": "Technical STAR Scenarios",
+      "questionCount": 4,
+      "questionIds": [
+        "Q2482",
+        "Q2491",
+        "Q2481",
+        "Q2495"
+      ]
     },
     {
       "index": 5,
-      "slug": "why-should-we-hire-you-over-other-candidates",
-      "title": "Why should we hire you over other candidates?",
-      "questionCount": 1
+      "slug": "learning-growth",
+      "title": "Learning & Growth",
+      "questionCount": 5,
+      "questionIds": [
+        "Q2484",
+        "Q2503",
+        "Q2494",
+        "Q2490",
+        "Q2492"
+      ]
     },
     {
       "index": 6,
-      "slug": "why-do-you-want-to-join-this-company-specifically",
-      "title": "Why do you want to join THIS company specifically?",
-      "questionCount": 1
+      "slug": "team-conflict",
+      "title": "Team, Conflict & Leadership",
+      "questionCount": 3,
+      "questionIds": [
+        "Q2493",
+        "Q2489",
+        "Q2498"
+      ]
     },
     {
       "index": 7,
-      "slug": "what-do-you-know-about-our-company-product-team",
-      "title": "What do you know about our company / product / team?",
-      "questionCount": 1
-    },
-    {
-      "index": 8,
-      "slug": "what-is-your-expected-salary-and-how-did-you-arrive-at-that-number",
-      "title": "What is your expected salary and how did you arrive at that number?",
-      "questionCount": 1
-    },
-    {
-      "index": 9,
-      "slug": "are-you-comfortable-with-the-work-location-hybrid-remote-model",
-      "title": "Are you comfortable with the work location / hybrid / remote model?",
-      "questionCount": 1
-    },
-    {
-      "index": 10,
-      "slug": "tell-me-about-a-time-you-had-to-make-a-tough-technical-decision",
-      "title": "Tell me about a time you had to make a tough technical decision",
-      "questionCount": 1
-    },
-    {
-      "index": 11,
-      "slug": "describe-a-time-you-fixed-a-critical-production-bug-under-pressure",
-      "title": "Describe a time you fixed a critical production bug under pressure",
-      "questionCount": 1
-    },
-    {
-      "index": 12,
-      "slug": "describe-a-critical-production-issue-you-handled-end-to-end-using-the-star-metho",
-      "title": "Describe a critical production issue you handled end to end using the STAR metho",
-      "questionCount": 1
-    },
-    {
-      "index": 13,
-      "slug": "tell-me-about-a-time-you-improved-the-performance-of-a-slow-system",
-      "title": "Tell me about a time you improved the performance of a slow system",
-      "questionCount": 1
-    },
-    {
-      "index": 14,
-      "slug": "describe-a-project-where-you-had-to-learn-a-new-technology-quickly",
-      "title": "Describe a project where you had to learn a new technology quickly",
-      "questionCount": 1
-    },
-    {
-      "index": 15,
-      "slug": "tell-me-about-a-time-you-had-to-choose-between-two-technologies-or-frameworks",
-      "title": "Tell me about a time you had to choose between two technologies or frameworks",
-      "questionCount": 1
-    },
-    {
-      "index": 16,
-      "slug": "describe-a-time-you-built-something-from-scratch-vs-using-an-existing-solution",
-      "title": "Describe a time you built something from scratch vs using an existing solution",
-      "questionCount": 1
-    },
-    {
-      "index": 17,
-      "slug": "tell-me-about-the-most-complex-system-you-have-designed-or-worked-on",
-      "title": "Tell me about the most complex system you have designed or worked on",
-      "questionCount": 1
-    },
-    {
-      "index": 18,
-      "slug": "tell-me-about-a-time-you-disagreed-with-a-teammate-or-manager",
-      "title": "Tell me about a time you disagreed with a teammate or manager",
-      "questionCount": 1
-    },
-    {
-      "index": 19,
-      "slug": "describe-a-time-you-had-to-work-with-a-difficult-person",
-      "title": "Describe a time you had to work with a difficult person",
-      "questionCount": 1
-    },
-    {
-      "index": 20,
-      "slug": "tell-me-about-a-time-you-helped-a-junior-developer-or-mentored-someone",
-      "title": "Tell me about a time you helped a junior developer or mentored someone",
-      "questionCount": 1
-    },
-    {
-      "index": 21,
-      "slug": "describe-a-time-when-your-team-missed-a-deadline",
-      "title": "Describe a time when your team missed a deadline",
-      "questionCount": 1
-    },
-    {
-      "index": 22,
-      "slug": "tell-me-about-a-time-you-received-negative-feedback",
-      "title": "Tell me about a time you received negative feedback",
-      "questionCount": 1
-    },
-    {
-      "index": 23,
-      "slug": "describe-a-time-you-had-to-convince-your-team-to-adopt-a-different-approach",
-      "title": "Describe a time you had to convince your team to adopt a different approach",
-      "questionCount": 1
-    },
-    {
-      "index": 24,
-      "slug": "tell-me-about-a-time-you-failed-at-something",
-      "title": "Tell me about a time you failed at something",
-      "questionCount": 1
-    },
-    {
-      "index": 25,
-      "slug": "describe-a-time-you-made-a-mistake-that-affected-production",
-      "title": "Describe a time you made a mistake that affected production",
-      "questionCount": 1
-    },
-    {
-      "index": 26,
-      "slug": "tell-me-about-a-time-you-underestimated-the-effort-of-a-task",
-      "title": "Tell me about a time you underestimated the effort of a task",
-      "questionCount": 1
-    },
-    {
-      "index": 27,
-      "slug": "describe-a-time-you-took-ownership-of-something-that-was-not-your-responsibility",
-      "title": "Describe a time you took ownership of something that was not your responsibility",
-      "questionCount": 1
-    },
-    {
-      "index": 28,
-      "slug": "tell-me-about-a-time-you-led-a-project-or-initiative",
-      "title": "Tell me about a time you led a project or initiative",
-      "questionCount": 1
-    },
-    {
-      "index": 29,
-      "slug": "you-time-had",
-      "title": "you & time & had",
-      "questionCount": 2
-    },
-    {
-      "index": 30,
-      "slug": "describe-a-time-you-identified-a-problem-before-anyone-else-noticed-it",
-      "title": "Describe a time you identified a problem before anyone else noticed it",
-      "questionCount": 1
-    },
-    {
-      "index": 31,
-      "slug": "tell-me-about-a-time-you-had-to-balance-quality-with-speed",
-      "title": "Tell me about a time you had to balance quality with speed",
-      "questionCount": 1
-    },
-    {
-      "index": 32,
-      "slug": "describe-a-time-you-drove-a-technical-improvement-or-migration-eg-monolith-t",
-      "title": "Describe a time you drove a technical improvement or migration (e.g., monolith t",
-      "questionCount": 1
-    },
-    {
-      "index": 33,
-      "slug": "what-is-the-star-method",
-      "title": "What is the STAR method",
-      "questionCount": 1
-    },
-    {
-      "index": 34,
-      "slug": "not-can-behavioral",
-      "title": "not & can & behavioral",
-      "questionCount": 2
+      "slug": "general-star",
+      "title": "General STAR Scenarios",
+      "questionCount": 10,
+      "questionIds": [
+        "Q2486",
+        "Q2501",
+        "Q2497",
+        "Q2505",
+        "Q2506",
+        "Q2502",
+        "Q2496",
+        "Q2504",
+        "Q2499",
+        "Q2500"
+      ]
     }
   ]
 }

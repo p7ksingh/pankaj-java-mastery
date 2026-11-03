@@ -1,123 +1,61 @@
 {
   "number": 26,
-  "slug": "jvm-internals",
-  "title": "JVM Internals",
-  "topicCount": 19,
+  "slug": "security",
+  "title": "Security",
+  "topicCount": 4,
   "questionCount": 20,
   "topics": [
     {
       "index": 0,
-      "slug": "what-is-the-difference-between-authentication",
-      "title": "What is the difference between authentication",
-      "questionCount": 1
+      "slug": "auth-basics",
+      "title": "Authentication & Authorization",
+      "questionCount": 4,
+      "questionIds": [
+        "Q2581",
+        "Q2580",
+        "Q2583",
+        "Q2582"
+      ]
     },
     {
       "index": 1,
-      "slug": "what-is-session-based-authentication",
-      "title": "What is session-based authentication",
-      "questionCount": 1
+      "slug": "jwt",
+      "title": "JWT — Structure, Validation, Storage",
+      "questionCount": 4,
+      "questionIds": [
+        "Q2584",
+        "Q2585",
+        "Q2586",
+        "Q2587"
+      ]
     },
     {
       "index": 2,
-      "slug": "what-is-token-based-authentication",
-      "title": "What is token-based authentication",
-      "questionCount": 1
+      "slug": "oauth2-oidc",
+      "title": "OAuth2 & OpenID Connect",
+      "questionCount": 5,
+      "questionIds": [
+        "Q2588",
+        "Q2592",
+        "Q2590",
+        "Q2589",
+        "Q2591"
+      ]
     },
     {
       "index": 3,
-      "slug": "what-is-the-difference-between-rbac-role-based-access-control",
-      "title": "What is the difference between RBAC (Role-Based Access Control",
-      "questionCount": 1
-    },
-    {
-      "index": 4,
-      "slug": "the-checks-jwt",
-      "title": "the & checks & JWT",
-      "questionCount": 2
-    },
-    {
-      "index": 5,
-      "slug": "what-is-an-access-token-vs-refresh-token",
-      "title": "What is an access token vs refresh token",
-      "questionCount": 1
-    },
-    {
-      "index": 6,
-      "slug": "where-should-you-store-jwt-in-the-browser",
-      "title": "Where should you store JWT in the browser",
-      "questionCount": 1
-    },
-    {
-      "index": 7,
-      "slug": "what-is-oauth2",
-      "title": "What is OAuth2",
-      "questionCount": 1
-    },
-    {
-      "index": 8,
-      "slug": "what-is-the-authorization-code-flow",
-      "title": "What is the Authorization Code flow",
-      "questionCount": 1
-    },
-    {
-      "index": 9,
-      "slug": "what-is-pkce-proof-key-for-code-exchange",
-      "title": "What is PKCE (Proof Key for Code Exchange)",
-      "questionCount": 1
-    },
-    {
-      "index": 10,
-      "slug": "what-is-the-client-credentials-flow",
-      "title": "What is the Client Credentials flow",
-      "questionCount": 1
-    },
-    {
-      "index": 11,
-      "slug": "what-is-openid-connect-oidc",
-      "title": "What is OpenID Connect (OIDC)",
-      "questionCount": 1
-    },
-    {
-      "index": 12,
-      "slug": "what-is-sql-injection",
-      "title": "What is SQL Injection",
-      "questionCount": 1
-    },
-    {
-      "index": 13,
-      "slug": "what-is-xss-cross-site-scripting",
-      "title": "What is XSS (Cross-Site Scripting)",
-      "questionCount": 1
-    },
-    {
-      "index": 14,
-      "slug": "what-is-csrf-cross-site-request-forgery",
-      "title": "What is CSRF (Cross-Site Request Forgery)",
-      "questionCount": 1
-    },
-    {
-      "index": 15,
-      "slug": "what-is-broken-authentication",
-      "title": "What is broken authentication",
-      "questionCount": 1
-    },
-    {
-      "index": 16,
-      "slug": "what-is-sensitive-data-exposure",
-      "title": "What is sensitive data exposure",
-      "questionCount": 1
-    },
-    {
-      "index": 17,
-      "slug": "what-is-the-principle-of-least-privilege",
-      "title": "What is the principle of least privilege",
-      "questionCount": 1
-    },
-    {
-      "index": 18,
-      "slug": "what-is-ssrf-server-side-request-forgery",
-      "title": "What is SSRF (Server-Side Request Forgery)",
-      "questionCount": 1
+      "slug": "web-vulnerabilities",
+      "title": "Web Vulnerabilities — SQLi, XSS, CSRF, SSRF",
+      "questionCount": 7,
+      "questionIds": [
+        "Q2596",
+        "Q2595",
+        "Q2597",
+        "Q2593",
+        "Q2599",
+        "Q2598",
+        "Q2594"
+      ]
     }
   ]
 }

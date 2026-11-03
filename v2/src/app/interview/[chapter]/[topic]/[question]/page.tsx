@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import { getAllChapters, getChapterBySlug } from '@/lib/data/chapters'
 import { getQuestionsByTopic, getQuestionById } from '@/lib/data/questions'
 import { Breadcrumb } from '@/components/layout/Breadcrumb'
-import { Card } from '@/components/ui/Card'
 import { Badge } from '@/components/ui/Badge'
 import { AnswerSection } from '@/components/features/AnswerSection'
 import { BookmarkButton } from '@/components/features/BookmarkButton'
@@ -71,14 +70,13 @@ export default async function QuestionPage({ params }: PageProps) {
 
   const sectionKeys = Object.keys(question.sections)
 
-  // Extract answer text for structured data
   const firstSection = question.sections[sectionKeys[0]]
   const answerText = typeof firstSection === 'string'
     ? firstSection.slice(0, 500)
     : (firstSection as { raw?: string }).raw?.slice(0, 500) || ''
 
   return (
-    <main>
+    <main className={styles.reading}>
       <StructuredData
         data={{
           '@context': 'https://schema.org',
@@ -122,13 +120,23 @@ export default async function QuestionPage({ params }: PageProps) {
         </span>
         <BookmarkButton questionId={question.id} />
       </div>
-      <h1 className={styles.title}>{question.title}</h1>
+      <h1 className={styles.title}>{question.shortTitle}</h1>
+      {question.keyPoints && question.keyPoints.length > 0 && (
+        <ul className={styles.keyPoints}>
+          <div className={styles.keyPointsHead}>
+            Key Concepts
+          </div>
+          {question.keyPoints.map((point, i) => (
+            <li key={i}>{point}</li>
+          ))}
+        </ul>
+      )}
       <CompletionCheckbox questionId={question.id} />
-      <Card className={styles.answerCard}>
+      <article className={styles.article}>
         {sectionKeys.map((key) => (
           <AnswerSection key={key} sectionKey={key} content={question.sections[key]} />
         ))}
-      </Card>
+      </article>
     </main>
   )
 }

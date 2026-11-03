@@ -2,8 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { loadSearchIndex, filterIndex } from '@/lib/data/search'
-import type { SearchEntry, SearchResultItem } from '@/lib/data/search'
+import { loadSearchIndex, filterIndex, type SearchEntry, type SearchResultItem } from '@/lib/data/search'
 import { Badge } from '@/components/ui/Badge'
 import styles from './SearchResults.module.css'
 

@@ -68,7 +68,7 @@
 }
 
 .chapterLink {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--color-text-primary);
   text-decoration: none;
 }
@@ -76,6 +76,7 @@
 .chapterLink:hover {
   color: var(--color-link);
   text-decoration: none;
+  font-weight: 800;
 }
 
 @media (max-width: 768px) {

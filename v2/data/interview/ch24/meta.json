@@ -2,188 +2,90 @@
   "number": 24,
   "slug": "system-design",
   "title": "System Design",
-  "topicCount": 30,
+  "topicCount": 6,
   "questionCount": 35,
   "topics": [
     {
       "index": 0,
-      "slug": "what-are-the-4-steps-of-a-system-design-interview",
-      "title": "What are the 4 steps of a system design interview",
-      "questionCount": 1
+      "slug": "approach",
+      "title": "System Design Approach & Estimation",
+      "questionCount": 3,
+      "questionIds": [
+        "Q2511",
+        "Q2512",
+        "Q2510"
+      ]
     },
     {
       "index": 1,
-      "slug": "how-to-do-back-of-envelope-estimation",
-      "title": "How to do back-of-envelope estimation",
-      "questionCount": 1
+      "slug": "concepts",
+      "title": "System Design Concepts",
+      "questionCount": 16,
+      "questionIds": [
+        "Q2528",
+        "Q2529",
+        "Q2544",
+        "Q2531",
+        "Q2537",
+        "Q2534",
+        "Q2535",
+        "Q2520",
+        "Q2527",
+        "Q2540",
+        "Q2536",
+        "Q2538",
+        "Q2543",
+        "Q2539",
+        "Q2541",
+        "Q2542"
+      ]
     },
     {
       "index": 2,
-      "slug": "what-are-functional-requirements-what-the-system-does-vs-non-functional-requir",
-      "title": "What are functional requirements (what the system DOES) vs non-functional requir",
-      "questionCount": 1
+      "slug": "design-problems",
+      "title": "System Design Problems",
+      "questionCount": 13,
+      "questionIds": [
+        "Q2516",
+        "Q2522",
+        "Q2525",
+        "Q2521",
+        "Q2517",
+        "Q2515",
+        "Q2518",
+        "Q2519",
+        "Q2523",
+        "Q2526",
+        "Q2524",
+        "Q2513",
+        "Q2514"
+      ]
     },
     {
       "index": 3,
-      "slug": "design-url-redis",
-      "title": "Design & URL & Redis",
-      "questionCount": 2
+      "slug": "messaging",
+      "title": "Messaging — Kafka vs RabbitMQ vs SQS",
+      "questionCount": 1,
+      "questionIds": [
+        "Q2530"
+      ]
     },
     {
       "index": 4,
-      "slug": "design-a-notification-system",
-      "title": "Design a Notification System",
-      "questionCount": 1
+      "slug": "database-choice",
+      "title": "Database Choice",
+      "questionCount": 0,
+      "questionIds": []
     },
     {
       "index": 5,
-      "slug": "design-a-chatmessaging-system-like-whatsapp",
-      "title": "Design a Chat/Messaging System (like WhatsApp)",
-      "questionCount": 1
-    },
-    {
-      "index": 6,
-      "slug": "design-a-news-feed-timeline-like-twitterinstagram",
-      "title": "Design a News Feed / Timeline (like Twitter/Instagram)",
-      "questionCount": 1
-    },
-    {
-      "index": 7,
-      "slug": "design-a-payment-system",
-      "title": "Design a Payment System",
-      "questionCount": 1
-    },
-    {
-      "index": 8,
-      "slug": "design-a-ride-sharing-system-like-uberola",
-      "title": "Design a Ride-Sharing System (like Uber/Ola)",
-      "questionCount": 1
-    },
-    {
-      "index": 9,
-      "slug": "design-a-distributed-cache-like-redismemcached",
-      "title": "Design a Distributed Cache (like Redis/Memcached)",
-      "questionCount": 1
-    },
-    {
-      "index": 10,
-      "slug": "design-a-file-storage-system-like-google-drives3",
-      "title": "Design a File Storage System (like Google Drive/S3)",
-      "questionCount": 1
-    },
-    {
-      "index": 11,
-      "slug": "design-a-digital-wallet-system-like-paytmgoogle-pay",
-      "title": "Design a Digital Wallet System (like Paytm/Google Pay)",
-      "questionCount": 1
-    },
-    {
-      "index": 12,
-      "slug": "design-a-search-autocomplete-typeahead",
-      "title": "Design a Search Autocomplete / Typeahead",
-      "questionCount": 1
-    },
-    {
-      "index": 13,
-      "slug": "design-a-video-streaming-platform-like-youtubenetflix",
-      "title": "Design a Video Streaming Platform (like YouTube/Netflix)",
-      "questionCount": 1
-    },
-    {
-      "index": 14,
-      "slug": "design-a-distributed-task-scheduler-like-cron-at-scale",
-      "title": "Design a Distributed Task Scheduler (like cron at scale)",
-      "questionCount": 1
-    },
-    {
-      "index": 15,
-      "slug": "design-a-top-k-trending-real-time-leaderboard-system",
-      "title": "Design a Top-K Trending / Real-Time Leaderboard System",
-      "questionCount": 1
-    },
-    {
-      "index": 16,
-      "slug": "load-balancer",
-      "title": "Load Balancer",
-      "questionCount": 1
-    },
-    {
-      "index": 17,
-      "slug": "and-content-cdn",
-      "title": "and & content & CDN",
-      "questionCount": 2
-    },
-    {
-      "index": 18,
-      "slug": "message-queue-event-streaming",
-      "title": "Message Queue / Event Streaming",
-      "questionCount": 1
-    },
-    {
-      "index": 19,
-      "slug": "cache-write-for",
-      "title": "cache & write & for",
-      "questionCount": 2
-    },
-    {
-      "index": 20,
-      "slug": "api-gateway",
-      "title": "API Gateway",
-      "questionCount": 1
-    },
-    {
-      "index": 21,
-      "slug": "data-across-shard",
-      "title": "data & across & shard",
-      "questionCount": 2
-    },
-    {
-      "index": 22,
-      "slug": "replication",
-      "title": "Replication",
-      "questionCount": 1
-    },
-    {
-      "index": 23,
-      "slug": "cap-theorem-in-practice",
-      "title": "CAP Theorem in practice",
-      "questionCount": 1
-    },
-    {
-      "index": 24,
-      "slug": "sql-vs-nosql",
-      "title": "SQL vs NoSQL",
-      "questionCount": 1
-    },
-    {
-      "index": 25,
-      "slug": "synchronous-vs-asynchronous-communication",
-      "title": "Synchronous vs Asynchronous communication",
-      "questionCount": 1
-    },
-    {
-      "index": 26,
-      "slug": "push-vs-pull-model",
-      "title": "Push vs Pull model",
-      "questionCount": 1
-    },
-    {
-      "index": 27,
-      "slug": "when-better-team",
-      "title": "when & better & team",
-      "questionCount": 2
-    },
-    {
-      "index": 28,
-      "slug": "strong-consistency-vs-eventual-consistency",
-      "title": "Strong consistency vs Eventual consistency",
-      "questionCount": 1
-    },
-    {
-      "index": 29,
-      "slug": "batch-processing-vs-stream-processing",
-      "title": "Batch processing vs Stream processing",
-      "questionCount": 1
+      "slug": "api-gateway-sd",
+      "title": "API Gateway in System Design",
+      "questionCount": 2,
+      "questionIds": [
+        "Q2533",
+        "Q2532"
+      ]
     }
   ]
 }

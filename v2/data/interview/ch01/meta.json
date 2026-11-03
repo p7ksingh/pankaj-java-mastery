@@ -2,464 +2,434 @@
   "number": 1,
   "slug": "core-java",
   "title": "Core Java",
-  "topicCount": 76,
-  "questionCount": 155,
+  "topicCount": 32,
+  "questionCount": 170,
   "topics": [
     {
       "index": 0,
-      "slug": "what-is-the-difference-between-the-jdk",
-      "title": "What is the difference between the JDK",
-      "questionCount": 1
+      "slug": "jdk-jre-jvm",
+      "title": "JDK, JRE & JVM",
+      "questionCount": 4,
+      "questionIds": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ]
     },
     {
       "index": 1,
-      "slug": "jvm-bytecode-the",
-      "title": "JVM & bytecode & the",
-      "questionCount": 3
+      "slug": "variables-scope-var",
+      "title": "Variables, Scope & var",
+      "questionCount": 3,
+      "questionIds": [
+        "Q33",
+        "Q34",
+        "Q141"
+      ]
     },
     {
       "index": 2,
-      "slug": "what-is-the-difference-between-and-equals",
-      "title": "What is the difference between == and .equals",
-      "questionCount": 1
+      "slug": "primitive-types-wrappers",
+      "title": "Primitive Types & Wrappers",
+      "questionCount": 11,
+      "questionIds": [
+        "Q27",
+        "Q28",
+        "Q29",
+        "Q30",
+        "Q31",
+        "Q32",
+        "Q121",
+        "Q122",
+        "Q132",
+        "Q133",
+        "Q134"
+      ]
     },
     {
       "index": 3,
-      "slug": "final-and-the",
-      "title": "final & and & the",
-      "questionCount": 4
+      "slug": "operators-expressions",
+      "title": "Operators & Expressions",
+      "questionCount": 9,
+      "questionIds": [
+        "Q5",
+        "Q41",
+        "Q123",
+        "Q124",
+        "Q125",
+        "Q126",
+        "Q127",
+        "Q128",
+        "Q129"
+      ]
     },
     {
       "index": 4,
-      "slug": "static-the-variables",
-      "title": "static & the & variables",
-      "questionCount": 4
+      "slug": "main-method",
+      "title": "The main Method",
+      "questionCount": 5,
+      "questionIds": [
+        "Q35",
+        "Q36",
+        "Q37",
+        "Q38",
+        "Q40"
+      ]
     },
     {
       "index": 5,
-      "slug": "what-are-the-four-access-modifiers-and-their-exact-visibility",
-      "title": "What are the four access modifiers and their exact visibility",
-      "questionCount": 1
+      "slug": "access-modifiers",
+      "title": "Access Modifiers",
+      "questionCount": 1,
+      "questionIds": [
+        "Q14"
+      ]
     },
     {
       "index": 6,
-      "slug": "and-string-immutable",
-      "title": "and & String & immutable",
-      "questionCount": 12
+      "slug": "keywords-final",
+      "title": "Keywords — final",
+      "questionCount": 4,
+      "questionIds": [
+        "Q6",
+        "Q7",
+        "Q8",
+        "Q9"
+      ]
     },
     {
       "index": 7,
-      "slug": "for-does-and",
-      "title": "for & does & and",
-      "questionCount": 3
+      "slug": "keywords-static",
+      "title": "Keywords — static",
+      "questionCount": 4,
+      "questionIds": [
+        "Q10",
+        "Q11",
+        "Q12",
+        "Q13"
+      ]
     },
     {
       "index": 8,
-      "slug": "integer-and-does",
-      "title": "Integer & and & does",
-      "questionCount": 2
+      "slug": "methods-varargs",
+      "title": "Methods & Varargs",
+      "questionCount": 3,
+      "questionIds": [
+        "Q39",
+        "Q62",
+        "Q63"
+      ]
     },
     {
       "index": 9,
-      "slug": "in-which-exact-cases-can-unboxing-cause-a-nullpointerexception",
-      "title": "In which exact cases can unboxing cause a `NullPointerException`",
-      "questionCount": 1
+      "slug": "constructors-this-super",
+      "title": "Constructors & this/super",
+      "questionCount": 3,
+      "questionIds": [
+        "Q145",
+        "Q153",
+        "Q154"
+      ]
     },
     {
       "index": 10,
-      "slug": "what-are-the-rules-for-declaring",
-      "title": "What are the rules for declaring",
-      "questionCount": 1
+      "slug": "enum",
+      "title": "Enum",
+      "questionCount": 2,
+      "questionIds": [
+        "Q66",
+        "Q67"
+      ]
     },
     {
       "index": 11,
-      "slug": "the-main-and",
-      "title": "the & main & and",
-      "questionCount": 5
+      "slug": "string-and-string-pool",
+      "title": "String & String Pool",
+      "questionCount": 12,
+      "questionIds": [
+        "Q19",
+        "Q20",
+        "Q21",
+        "Q22",
+        "Q23",
+        "Q24",
+        "Q25",
+        "Q26",
+        "Q92",
+        "Q120",
+        "Q135",
+        "Q136"
+      ]
     },
     {
       "index": 12,
-      "slug": "are-varargs-the",
-      "title": "are & varargs & the",
-      "questionCount": 2
+      "slug": "immutability",
+      "title": "Immutability",
+      "questionCount": 4,
+      "questionIds": [
+        "Q15",
+        "Q16",
+        "Q17",
+        "Q18"
+      ]
     },
     {
       "index": 13,
-      "slug": "is-int-i-09-a-valid-statement-no",
-      "title": "Is `int i = 09;` a valid statement (no",
-      "questionCount": 1
+      "slug": "arrays",
+      "title": "Arrays",
+      "questionCount": 4,
+      "questionIds": [
+        "Q137",
+        "Q138",
+        "Q139",
+        "Q140"
+      ]
     },
     {
       "index": 14,
-      "slug": "transient-and-the",
-      "title": "transient & and & the",
-      "questionCount": 6
+      "slug": "object-class-equals-hashcode",
+      "title": "Object Class, equals & hashCode",
+      "questionCount": 9,
+      "questionIds": [
+        "Q53",
+        "Q54",
+        "Q55",
+        "Q56",
+        "Q57",
+        "Q58",
+        "Q59",
+        "Q60",
+        "Q61"
+      ]
     },
     {
       "index": 15,
-      "slug": "what-is-serialversionuid-and-why-does-it-matter",
-      "title": "What is `serialVersionUID` and why does it matter?",
-      "questionCount": 1
+      "slug": "upcasting-dispatch",
+      "title": "Upcasting & Dispatch",
+      "questionCount": 2,
+      "questionIds": [
+        "Q64",
+        "Q65"
+      ]
     },
     {
       "index": 16,
-      "slug": "the-and-serialization",
-      "title": "the & and & serialization",
-      "questionCount": 4
+      "slug": "pass-by-value-references",
+      "title": "Pass-by-Value & References",
+      "questionCount": 2,
+      "questionIds": [
+        "Q84",
+        "Q85"
+      ]
     },
     {
       "index": 17,
-      "slug": "equals-and-the",
-      "title": "equals & and & the",
-      "questionCount": 7
+      "slug": "object-cloning",
+      "title": "Object Cloning",
+      "questionCount": 2,
+      "questionIds": [
+        "Q90",
+        "Q91"
+      ]
     },
     {
       "index": 18,
-      "slug": "why-do-senior-developers-avoid-scattering-if-x-null-checks-and-what-do-t",
-      "title": "Why do senior developers avoid scattering `if (x != null)` checks, and what do t",
-      "questionCount": 1
+      "slug": "inner-classes",
+      "title": "Inner Classes",
+      "questionCount": 2,
+      "questionIds": [
+        "Q88",
+        "Q89"
+      ]
     },
     {
       "index": 19,
-      "slug": "why-does-and-even-equals",
-      "title": "Why does `==` and even `.equals",
-      "questionCount": 1
+      "slug": "marker-interface",
+      "title": "Marker Interface",
+      "questionCount": 1,
+      "questionIds": [
+        "Q87"
+      ]
     },
     {
       "index": 20,
-      "slug": "can-you-override-private-and-static-methods-in-java",
-      "title": "Can you override `private` and `static` methods in Java",
-      "questionCount": 1
+      "slug": "exception-hierarchy",
+      "title": "Exception Hierarchy",
+      "questionCount": 2,
+      "questionIds": [
+        "Q68",
+        "Q69"
+      ]
     },
     {
       "index": 21,
-      "slug": "with-two-overloaded-methods",
-      "title": "With two overloaded methods",
-      "questionCount": 1
+      "slug": "io-and-system",
+      "title": "I/O & System",
+      "questionCount": 3,
+      "questionIds": [
+        "Q70",
+        "Q130",
+        "Q131"
+      ]
     },
     {
       "index": 22,
-      "slug": "explain-b-b-new-a",
-      "title": "Explain `B b = new A",
-      "questionCount": 1
+      "slug": "serialization",
+      "title": "Serialization & transient",
+      "questionCount": 11,
+      "questionIds": [
+        "Q42",
+        "Q43",
+        "Q44",
+        "Q45",
+        "Q46",
+        "Q47",
+        "Q48",
+        "Q49",
+        "Q50",
+        "Q51",
+        "Q52"
+      ]
     },
     {
       "index": 23,
-      "slug": "what-is-a-base-class",
-      "title": "What is a base class",
-      "questionCount": 1
+      "slug": "annotations",
+      "title": "Annotations",
+      "questionCount": 3,
+      "questionIds": [
+        "Q142",
+        "Q143",
+        "Q146"
+      ]
     },
     {
       "index": 24,
-      "slug": "and-constant-enum",
-      "title": "and & constant & enum",
-      "questionCount": 2
+      "slug": "recursion",
+      "title": "Recursion",
+      "questionCount": 1,
+      "questionIds": [
+        "Q86"
+      ]
     },
     {
       "index": 25,
-      "slug": "custom-how-you",
-      "title": "custom & how & you",
-      "questionCount": 2
+      "slug": "reflection-object-creation",
+      "title": "Reflection & Object Creation",
+      "questionCount": 2,
+      "questionIds": [
+        "Q118",
+        "Q119"
+      ]
     },
     {
       "index": 26,
-      "slug": "what-is-the-difference-between-systemout",
-      "title": "What is the difference between `System.out`",
-      "questionCount": 1
+      "slug": "interface-evolution",
+      "title": "Interface Evolution",
+      "questionCount": 1,
+      "questionIds": [
+        "Q155"
+      ]
     },
     {
       "index": 27,
-      "slug": "what-is-a-class-loader-and-what-are-the-types",
-      "title": "What is a class loader, and what are the types",
-      "questionCount": 1
+      "slug": "classloading-compilation",
+      "title": "Class Loading & Compilation",
+      "questionCount": 4,
+      "questionIds": [
+        "Q71",
+        "Q72",
+        "Q147",
+        "Q148"
+      ]
     },
     {
       "index": 28,
-      "slug": "explain-the-class-loader-delegation",
-      "title": "Explain the class-loader delegation",
-      "questionCount": 1
+      "slug": "memory-management-gc",
+      "title": "Memory Management & GC",
+      "questionCount": 21,
+      "questionIds": [
+        "Q73",
+        "Q74",
+        "Q75",
+        "Q76",
+        "Q77",
+        "Q78",
+        "Q79",
+        "Q80",
+        "Q81",
+        "Q82",
+        "Q83",
+        "Q94",
+        "Q95",
+        "Q96",
+        "Q97",
+        "Q98",
+        "Q99",
+        "Q100",
+        "Q101",
+        "Q102",
+        "Q152"
+      ]
     },
     {
       "index": 29,
-      "slug": "and-memory-the",
-      "title": "and & memory & the",
-      "questionCount": 8
+      "slug": "jvm-internals-advanced",
+      "title": "JVM Internals — Advanced",
+      "questionCount": 10,
+      "questionIds": [
+        "Q103",
+        "Q104",
+        "Q105",
+        "Q106",
+        "Q107",
+        "Q108",
+        "Q109",
+        "Q110",
+        "Q111",
+        "Q112"
+      ]
     },
     {
       "index": 30,
-      "slug": "explain-systemgc",
-      "title": "Explain `System.gc()`",
-      "questionCount": 1
+      "slug": "jvm-tuning-troubleshooting",
+      "title": "JVM Tuning & Troubleshooting",
+      "questionCount": 15,
+      "questionIds": [
+        "Q2605",
+        "Q2606",
+        "Q2607",
+        "Q2608",
+        "Q2609",
+        "Q2610",
+        "Q2611",
+        "Q2612",
+        "Q2613",
+        "Q2614",
+        "Q2615",
+        "Q2616",
+        "Q2617",
+        "Q2618",
+        "Q2619"
+      ]
     },
     {
       "index": 31,
-      "slug": "outofmemoryerror-oom-heap",
-      "title": "OutOfMemoryError & OOM & heap",
-      "questionCount": 2
-    },
-    {
-      "index": 32,
-      "slug": "explain-pass-by-value-vs-pass-by-reference",
-      "title": "Explain pass-by-value vs pass-by-reference",
-      "questionCount": 1
-    },
-    {
-      "index": 33,
-      "slug": "why-does-java-not-expose-explicitraw-pointers-no-pointer-arithmetic-reference",
-      "title": "Why does Java not expose explicit/raw pointers (no pointer arithmetic, reference",
-      "questionCount": 1
-    },
-    {
-      "index": 34,
-      "slug": "what-is-a-recursive-program",
-      "title": "What is a recursive program",
-      "questionCount": 1
-    },
-    {
-      "index": 35,
-      "slug": "what-is-a-marker-interface-what-are-examples",
-      "title": "What is a marker interface, what are examples",
-      "questionCount": 1
-    },
-    {
-      "index": 36,
-      "slug": "class-why-and",
-      "title": "class & why & and",
-      "questionCount": 2
-    },
-    {
-      "index": 37,
-      "slug": "copy-object-cloning",
-      "title": "copy & object & cloning",
-      "questionCount": 2
-    },
-    {
-      "index": 38,
-      "slug": "immutable-the-are",
-      "title": "immutable & the & are",
-      "questionCount": 2
-    },
-    {
-      "index": 39,
-      "slug": "and-memory-how",
-      "title": "and & memory & how",
-      "questionCount": 3
-    },
-    {
-      "index": 40,
-      "slug": "what-triggers-a-full-gc",
-      "title": "What triggers a Full GC",
-      "questionCount": 1
-    },
-    {
-      "index": 41,
-      "slug": "what-is-the-practical-difference-between-minor-gc",
-      "title": "What is the practical difference between Minor GC",
-      "questionCount": 1
-    },
-    {
-      "index": 42,
-      "slug": "what-is-object-promotion-what-causes-premature-promotion",
-      "title": "What is object promotion, what causes premature promotion",
-      "questionCount": 1
-    },
-    {
-      "index": 43,
-      "slug": "heap-the-and",
-      "title": "heap & the & and",
-      "questionCount": 3
-    },
-    {
-      "index": 44,
-      "slug": "and-how-does",
-      "title": "and & how & does",
-      "questionCount": 3
-    },
-    {
-      "index": 45,
-      "slug": "are-why-heap",
-      "title": "are & why & heap",
-      "questionCount": 2
-    },
-    {
-      "index": 46,
-      "slug": "what-is-a-safepoint-what-is-time-to-safepoint",
-      "title": "What is a safepoint, what is Time-To-Safepoint",
-      "questionCount": 1
-    },
-    {
-      "index": 47,
-      "slug": "what-is-g1-string-deduplication",
-      "title": "What is G1 String Deduplication",
-      "questionCount": 1
-    },
-    {
-      "index": 48,
-      "slug": "why-is-finalize",
-      "title": "Why is `finalize",
-      "questionCount": 1
-    },
-    {
-      "index": 49,
-      "slug": "are-and-what",
-      "title": "are & and & what",
-      "questionCount": 2
-    },
-    {
-      "index": 50,
-      "slug": "predict-the-output-a-parent-type-reference-pointing-to-a-child-object-calling-a",
-      "title": "Predict the output: a parent-type reference pointing to a child object calling a",
-      "questionCount": 1
-    },
-    {
-      "index": 51,
       "slug": "predict-the-output",
-      "title": "Predict & the & output",
-      "questionCount": 2
-    },
-    {
-      "index": 52,
-      "slug": "predict-the-output-value-nullstring",
-      "title": "Predict the output: `\"Value: \" + nullString`",
-      "questionCount": 1
-    },
-    {
-      "index": 53,
-      "slug": "what-happens-if-you-call-start",
-      "title": "What happens if you call `start",
-      "questionCount": 1
-    },
-    {
-      "index": 54,
-      "slug": "and-are-the",
-      "title": "and & are & the",
-      "questionCount": 3
-    },
-    {
-      "index": 55,
-      "slug": "what-are-the-wrapper-classes-for-the-eight-primitives-why-are-they-needed",
-      "title": "What are the wrapper classes for the eight primitives, why are they needed",
-      "questionCount": 1
-    },
-    {
-      "index": 56,
-      "slug": "what-happens-when-you-parse-an-invalid-number",
-      "title": "What happens when you parse an invalid number",
-      "questionCount": 1
-    },
-    {
-      "index": 57,
-      "slug": "what-is-the-difference-between-the-logical-short-circuit",
-      "title": "What is the difference between the logical `&&`/`||` (short-circuit",
-      "questionCount": 1
-    },
-    {
-      "index": 58,
-      "slug": "what-are-the-bitwise-operators-and-the-shift-operators",
-      "title": "What are the bitwise operators (`&`, `|`, `^`, `~`) and the shift operators",
-      "questionCount": 1
-    },
-    {
-      "index": 59,
-      "slug": "what-is-the-ternary-conditional-operator",
-      "title": "What is the ternary conditional operator",
-      "questionCount": 1
-    },
-    {
-      "index": 60,
-      "slug": "what-are-the-looping-constructs",
-      "title": "What are the looping constructs",
-      "questionCount": 1
-    },
-    {
-      "index": 61,
-      "slug": "what-is-the-difference-between-a-classic-switch-statement",
-      "title": "What is the difference between a classic `switch` statement",
-      "questionCount": 1
-    },
-    {
-      "index": 62,
-      "slug": "what-does-the-math-class-provide",
-      "title": "What does the `Math` class provide",
-      "questionCount": 1
-    },
-    {
-      "index": 63,
-      "slug": "how-do-you-detect-and-avoid-integer-overflow",
-      "title": "How do you detect and avoid integer overflow",
-      "questionCount": 1
-    },
-    {
-      "index": 64,
-      "slug": "the-and-you",
-      "title": "the & and & you",
-      "questionCount": 2
-    },
-    {
-      "index": 65,
-      "slug": "what-is-the-char-type-16-bit-unsigned-utf-16-code-unit-range-065535-why-c",
-      "title": "What is the `char` type (16-bit unsigned UTF-16 code unit, range 0–65535), why c",
-      "questionCount": 1
-    },
-    {
-      "index": 66,
-      "slug": "int-char-implicit",
-      "title": "int & char & implicit",
-      "questionCount": 2
-    },
-    {
-      "index": 67,
-      "slug": "and-the-int",
-      "title": "and & the & int",
-      "questionCount": 7
-    },
-    {
-      "index": 68,
-      "slug": "are-the-annotations",
-      "title": "are & the & annotations",
-      "questionCount": 2
-    },
-    {
-      "index": 69,
-      "slug": "the-and-return",
-      "title": "the & and & return",
-      "questionCount": 2
-    },
-    {
-      "index": 70,
-      "slug": "and-the-class",
-      "title": "and & the & class",
-      "questionCount": 2
-    },
-    {
-      "index": 71,
-      "slug": "what-are-packages-namespacedirectory-grouping-the-naming-convention-reverse",
-      "title": "What are packages (namespace/directory grouping), the naming convention (reverse",
-      "questionCount": 1
-    },
-    {
-      "index": 72,
-      "slug": "what-does-null-instanceof-anytype-return",
-      "title": "What does `null instanceof AnyType` return",
-      "questionCount": 1
-    },
-    {
-      "index": 73,
-      "slug": "the-finally-try",
-      "title": "the & finally & try",
-      "questionCount": 2
-    },
-    {
-      "index": 74,
-      "slug": "what-makes-an-object-eligible-for-garbage-collection",
-      "title": "What makes an object eligible for garbage collection",
-      "questionCount": 1
-    },
-    {
-      "index": 75,
-      "slug": "methods-constructor-the",
-      "title": "methods & constructor & the",
-      "questionCount": 3
+      "title": "Predict the Output",
+      "questionCount": 10,
+      "questionIds": [
+        "Q93",
+        "Q113",
+        "Q114",
+        "Q115",
+        "Q116",
+        "Q117",
+        "Q144",
+        "Q149",
+        "Q150",
+        "Q151"
+      ]
     }
   ]
 }

@@ -1,13 +1,13 @@
 {
-  "totalQuestions": 2506,
-  "totalChapters": 28,
+  "totalQuestions": 2466,
+  "totalChapters": 23,
   "chapters": [
     {
       "number": 1,
       "slug": "core-java",
       "title": "Core Java",
-      "topicCount": 76,
-      "questionCount": 155
+      "topicCount": 32,
+      "questionCount": 170
     },
     {
       "number": 2,
@@ -39,10 +39,10 @@
     },
     {
       "number": 6,
-      "slug": "java-8-functional",
-      "title": "Java 8+ Functional",
-      "topicCount": 68,
-      "questionCount": 139
+      "slug": "java-streams-lambda-functional",
+      "title": "Java Streams, Lambda & Functional Programming",
+      "topicCount": 30,
+      "questionCount": 328
     },
     {
       "number": 7,
@@ -81,10 +81,10 @@
     },
     {
       "number": 12,
-      "slug": "devops-build-git-tooling",
-      "title": "DevOps, Build, Git & Tooling",
-      "topicCount": 41,
-      "questionCount": 58
+      "slug": "devops-cicd-tooling",
+      "title": "DevOps, CI/CD & Tooling",
+      "topicCount": 15,
+      "questionCount": 133
     },
     {
       "number": 13,
@@ -95,108 +95,73 @@
     },
     {
       "number": 14,
-      "slug": "rest-api-web",
+      "slug": "rest-api",
       "title": "REST API & Web",
-      "topicCount": 21,
+      "topicCount": 8,
       "questionCount": 40
     },
     {
       "number": 15,
-      "slug": "design-patterns-principles",
-      "title": "Design Patterns & Principles",
-      "topicCount": 26,
-      "questionCount": 33
+      "slug": "design-patterns-lld",
+      "title": "Design Patterns & LLD",
+      "topicCount": 10,
+      "questionCount": 57
     },
     {
       "number": 16,
       "slug": "advanced-java",
       "title": "Advanced Java",
-      "topicCount": 45,
+      "topicCount": 6,
       "questionCount": 71
     },
     {
       "number": 17,
-      "slug": "coding-problems-dsa-java",
-      "title": "Coding Problems (DSA / Java)",
-      "topicCount": 206,
-      "questionCount": 501
+      "slug": "dsa-coding",
+      "title": "Coding Problems — DSA",
+      "topicCount": 19,
+      "questionCount": 492
     },
     {
       "number": 18,
       "slug": "aws-cloud",
       "title": "AWS & Cloud",
-      "topicCount": 32,
+      "topicCount": 13,
       "questionCount": 41
-    },
-    {
-      "number": 19,
-      "slug": "devops",
-      "title": "DevOps",
-      "topicCount": 49,
-      "questionCount": 75
     },
     {
       "number": 20,
       "slug": "data-engineering",
       "title": "Data Engineering",
-      "topicCount": 106,
+      "topicCount": 12,
       "questionCount": 194
     },
     {
       "number": 21,
-      "slug": "qa-testing-sdet",
+      "slug": "qa-testing",
       "title": "QA, Testing & SDET",
-      "topicCount": 35,
+      "topicCount": 9,
       "questionCount": 41
     },
     {
-      "number": 22,
-      "slug": "java-8-practical-coding",
-      "title": "Java 8 Practical Coding",
-      "topicCount": 58,
-      "questionCount": 204
-    },
-    {
       "number": 23,
-      "slug": "behavioral-hr-star-method",
-      "title": "Behavioral / HR (STAR Method)",
-      "topicCount": 35,
+      "slug": "behavioral-hr",
+      "title": "Behavioral / HR — STAR Method",
+      "topicCount": 8,
       "questionCount": 37
     },
     {
       "number": 24,
       "slug": "system-design",
       "title": "System Design",
-      "topicCount": 30,
+      "topicCount": 6,
       "questionCount": 35
     },
     {
-      "number": 25,
+      "number": 26,
       "slug": "security",
       "title": "Security",
-      "topicCount": 23,
-      "questionCount": 24
-    },
-    {
-      "number": 26,
-      "slug": "jvm-internals",
-      "title": "JVM Internals",
-      "topicCount": 19,
+      "topicCount": 4,
       "questionCount": 20
-    },
-    {
-      "number": 27,
-      "slug": "architecture-patterns",
-      "title": "Architecture & Patterns",
-      "topicCount": 8,
-      "questionCount": 15
-    },
-    {
-      "number": 28,
-      "slug": "miscellaneous-advanced",
-      "title": "Miscellaneous / Advanced",
-      "topicCount": 1,
-      "questionCount": 16
     }
   ]
 }

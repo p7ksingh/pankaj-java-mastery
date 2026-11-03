@@ -1,7 +1,6 @@
 import { getAllChapters } from '@/lib/data/chapters'
 import { PageHeader } from '@/components/layout/PageHeader'
 import { ChapterTable } from '@/components/features/ChapterTable'
-import { SubmitForm, CommunityList } from '@/components/features/Community'
 import { StructuredData } from '@/components/seo/StructuredData'
 
 export default function HomePage() {
@@ -27,8 +26,6 @@ export default function HomePage() {
         ]}
       />
       <ChapterTable chapters={chapters} />
-      <SubmitForm />
-      <CommunityList />
     </main>
   )
 }

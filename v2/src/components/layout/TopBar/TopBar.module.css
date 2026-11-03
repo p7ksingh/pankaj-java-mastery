@@ -21,28 +21,23 @@
   display: flex;
   align-items: center;
   gap: 12px;
-}
-
-.logo {
-  width: 34px;
-  height: 34px;
-  border-radius: var(--radius-full);
-  background: var(--color-brand);
-  display: grid;
-  place-items: center;
-  font-size: 18px;
   transition: transform 0.2s;
 }
 
-.logoLink:hover .logo {
-  transform: scale(1.1);
-  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.3);
+.logoLink:hover {
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+.logo {
+  color: #fff;
+  flex-shrink: 0;
 }
 
 .brand {
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.3px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   color: #fff;
 }
 

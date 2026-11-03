@@ -1,0 +1,37 @@
+{
+  "id": "Q2304",
+  "slug": "use-intstreamrangeclosed1-100-to-compute-the-sum-of-first-100-numbers",
+  "questionNumber": 2304,
+  "title": "Use `IntStream.rangeClosed(1, 100)` to compute the sum of first 100 numbers.",
+  "shortTitle": "Use IntStream.rangeClosed(1, 100) to compute the sum of first 100 numbers",
+  "chapterNumber": 6,
+  "chapterSlug": "java-streams-lambda-functional",
+  "chapterTitle": "Java Streams, Lambda & Functional Programming",
+  "topicIndex": 14,
+  "topicSlug": "stream-creation",
+  "topicTitle": "Stream Creation & Utilities",
+  "sections": {
+    "s1_definition": {
+      "profdef": "`IntStream.rangeClosed(startInclusive, endInclusive)` produces a sequential primitive stream from start to end where both bounds are included. Calling `sum()` on it returns the arithmetic total as an `int`.",
+      "analogy": "Priya wants to total all slip numbers from one to one hundred, and she wants one hundred itself counted too. She asks for a closed range that includes both ends, then presses the total button.",
+      "oneliner": "`IntStream.rangeClosed(1, 100).sum()` returns 5050 because both bounds are inclusive.",
+      "raw": "**Professional definition:** `IntStream.rangeClosed(startInclusive, endInclusive)` produces a sequential primitive stream from start to end where both bounds are included. Calling `sum()` on it returns the arithmetic total as an `int`.\n\n**In simple words (banking analogy):** Priya wants to total all slip numbers from one to one hundred, and she wants one hundred itself counted too. She asks for a closed range that includes both ends, then presses the total button.\n\n**One line to remember:** `IntStream.rangeClosed(1, 100).sum()` returns 5050 because both bounds are inclusive."
+    },
+    "s2_technical": "`rangeClosed(1, 100)` includes both one and one hundred, producing exactly one hundred values, unlike `range(1, 100)` which would stop at ninety-nine. This inclusive behaviour is what you want when the upper bound is a real data point rather than an exclusive limit.\n\nCalling `sum()` on the IntStream adds all the values and returns a primitive int, which for one through one hundred is 5050, matching the classic formula n times n plus one over two. Because the stream is primitive, there is no boxing, so this is efficient even for large ranges.\n\nThe senior nuance is that for very large ranges the int sum could overflow silently, so if the total might exceed about two billion you should map to a `LongStream` with `asLongStream()` before summing. Choosing between range and rangeClosed is a correctness decision, and choosing int versus long sum is an overflow-safety decision.",
+    "s3_banking": "Problem 1 — A reconciliation job at the National Bank of India must total the first one hundred sequential voucher amounts of equal value to verify a control figure.\n\nThis is exactly what rangeClosed plus sum does — it includes both bounds to produce one hundred values and totals them in one pass.\n\nThe code defines a `VoucherService.sumFirst` method and a demo.",
+    "s4a_structure": "```\nvoucher-service/\n├── pom.xml\n└── src/main/java/com/bank/voucher/\n    ├── RangeClosedDemo.java\n    └── service/VoucherService.java\n```",
+    "s4d_java": "```java\n// ─── File: src/main/java/com/bank/voucher/RangeClosedDemo.java ───\npackage com.bank.voucher;\n\nimport java.util.logging.*;\n\npublic class RangeClosedDemo {\n    private static final Logger log = Logger.getLogger(\"Voucher\");\n    static {\n        ConsoleHandler h = new ConsoleHandler();\n        h.setFormatter(new SimpleFormatter());\n        log.setUseParentHandlers(false);\n        log.addHandler(h);\n    }\n\n    public static void main(String[] args) {\n        VoucherService service = new VoucherService();\n        int total = service.sumFirst(100);\n        log.info(() -> \"Sum of first 100 = \" + total);   // 5050\n    }\n}\n\n// ─── Would be in service/VoucherService.java ───\nclass VoucherService {\n    int sumFirst(int n) {\n        return java.util.stream.IntStream.rangeClosed(1, n)  // 1..n inclusive\n            .sum();                                           // int total\n    }\n    // overflow-safe variant for large n\n    long sumFirstLong(int n) {\n        return java.util.stream.IntStream.rangeClosed(1, n)\n            .asLongStream()                                   // widen to avoid overflow\n            .sum();\n    }\n}\n```",
+    "s4e_build": "```bash\njavac -d out src/main/java/com/bank/voucher/RangeClosedDemo.java\njava -cp out com.bank.voucher.RangeClosedDemo\n```",
+    "s5_journey": "Step 1: rangeClosed(1, 100) produces every int from one through one hundred, one hundred values in total because both ends are inclusive.\n\nStep 2: sum walks the primitive stream and accumulates the running total.\n\nStep 3: The total reaches 5050, returned as a plain int.\n\n```\nINFO: Sum of first 100 = 5050\n```",
+    "s5b_flow": "```\n  IntStream.rangeClosed(1, 100)\n    │ → 1,2,3,...,99,100  (both ends included)\n    │ sum()\n    ▼\n  5050\n```",
+    "s5c_hld": "```\n  ═══ HLD — Reconciliation Control Total ═══\n\n  ┌──────────────────┐ ──total──→ ┌──────────────┐\n  │ VoucherService   │            │ Control check│\n  │ rangeClosed→sum  │            └──────────────┘\n  └──────────────────┘\n```",
+    "s5d_lld": "```\n  ═══ LLD — rangeClosed + sum ═══\n\n  ┌─ inclusivity + overflow ───────────────────────────────────┐\n  │ rangeClosed(1,100) → 1..100 (100 values, both inclusive)   │\n  │ range(1,100)       → 1..99  (99 values, end exclusive)     │\n  │ sum(): int → fast, no boxing                               │\n  │ large n risk: int overflow silently → asLongStream().sum() │\n  └─────────────────────────────────────────────────────────────┘\n\n  ┌───────────────────────────────┐\n  │         VoucherService        │\n  │  + sumFirst(int): int         │ rangeClosed→sum\n  │  + sumFirstLong(int): long    │ asLongStream→sum\n  └───────────────────────────────┘\n\n  Call chain:\n  1. IntStream.rangeClosed(1, n)\n  2. sum() → int (or asLongStream().sum())\n```",
+    "s6_takeaway": "IntStream dot rangeClosed takes a start and an end that are both inclusive, so rangeClosed of one and one hundred produces exactly one hundred values, whereas plain range would stop at ninety-nine because its end is exclusive. I choose rangeClosed whenever the upper bound is a genuine data point rather than an exclusive limit, and because the stream is primitive there is no boxing as the numbers flow.\n\nCalling sum on that stream totals the values and returns a primitive int, which for one through one hundred is five thousand and fifty, matching the classic formula n times n plus one over two. In my work at the National Bank of India I used this pattern in a reconciliation job to produce a control total quickly and in a single pass.\n\nThe senior point I always raise is overflow. An int sum can silently wrap around if the total exceeds roughly two billion, so for large ranges I widen the stream with asLongStream before summing. So two decisions matter: range versus rangeClosed for correctness of the bounds, and int versus long for overflow safety of the total.\n\n---"
+  },
+  "keyPoints": [
+    "Stream.of(a,b,c), Stream.generate(supplier), Stream.iterate(seed, f)",
+    "IntStream.range(0,10), IntStream.rangeClosed(1,10)",
+    "Stream.iterate(0, n->n<100, n->n+1) — Java 9 predicate form",
+    "Stream.ofNullable(val) — 0 or 1 element stream from nullable"
+  ]
+}

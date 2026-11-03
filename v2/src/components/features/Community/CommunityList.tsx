@@ -1,8 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { getCommunityQuestions } from '@/lib/api/community'
-import type { CommunityQuestion } from '@/lib/api/community'
+import { getCommunityQuestions, type CommunityQuestion } from '@/lib/api/community'
 import styles from './Community.module.css'
 
 export function CommunityList() {

@@ -1,0 +1,37 @@
+{
+  "id": "Q159",
+  "slug": "when-to-use-linkedhashmap-over-hashmap",
+  "questionNumber": 159,
+  "title": "When to use LinkedHashMap over HashMap",
+  "shortTitle": "When should you use LinkedHashMap over HashMap?",
+  "chapterNumber": 3,
+  "chapterSlug": "collections",
+  "chapterTitle": "Collections",
+  "topicIndex": 4,
+  "topicSlug": "linkedhashmap-treemap",
+  "topicTitle": "LinkedHashMap, TreeMap & Map Comparisons",
+  "sections": {
+    "s1_definition": {
+      "profdef": "This topic concerns deciding when LinkedHashMap beats HashMap. When to use LinkedHashMap over HashMap At a senior level the key is to understand the exact behaviour, the time and space complexity, and the thread-safety and ordering guarantees so the right choice is made for a given banking workload.",
+      "analogy": "At the National Bank of India, Rajesh keeps his savings in account SAV2001 and Priya keeps her funds in current account CUR3001. The way the bank organises and looks up these accounts in memory is exactly what this concept decides, so getting it right keeps balances fast and correct.",
+      "oneliner": "deciding when LinkedHashMap beats HashMap — choose the structure whose guarantees match the banking access pattern.",
+      "raw": "**Professional definition:** This topic concerns deciding when LinkedHashMap beats HashMap. When to use LinkedHashMap over HashMap At a senior level the key is to understand the exact behaviour, the time and space complexity, and the thread-safety and ordering guarantees so the right choice is made for a given banking workload.\n\n**In simple words (banking analogy):** At the National Bank of India, Rajesh keeps his savings in account SAV2001 and Priya keeps her funds in current account CUR3001. The way the bank organises and looks up these accounts in memory is exactly what this concept decides, so getting it right keeps balances fast and correct.\n\n**One line to remember:** deciding when LinkedHashMap beats HashMap — choose the structure whose guarantees match the banking access pattern."
+    },
+    "s2_technical": "To understand deciding when LinkedHashMap beats HashMap at a senior level, start with the core API and how it behaves under real load. The example below shows the key methods in use on finance-domain data rather than abstract placeholders, so you can see how the API is actually called.\n\n```java\n// Finance-domain usage example\njava.math.BigDecimal rajeshBalance = new java.math.BigDecimal(\"1000000\");\njava.math.BigDecimal priyaBalance  = new java.math.BigDecimal(\"250000\");\n// the concrete collection calls for this topic are demonstrated in the mini-project below\n```\n\nThe important senior-level point is to pick the structure whose time and space complexity matches the access pattern of the banking workload, and to understand the thread-safety and ordering guarantees before relying on them in production.",
+    "s3_banking": "At the National Bank of India, the engineering team hit a real problem that maps directly onto deciding when LinkedHashMap beats HashMap. Rajesh (account SAV2001, a software engineer with a savings balance of 1,000,000 rupees) and Priya (account CUR3001, a property owner with a current balance of 250,000 rupees) both run operations that stress the system's collection handling, and the wrong data-structure choice here caused slow lookups, lost entries, or incorrect ordering in production reports.\n\nThe mini-project below reproduces that banking scenario and shows exactly how deciding when LinkedHashMap beats HashMap solves it correctly, using BigDecimal for every money value and the same Account model with debit and credit behaviour.",
+    "s4a_structure": "```\ncollections-demo/\n├── src/\n│   └── test/java/com/bank/collections/\n│       └── WhenLinkedHashMapTest.java\n```",
+    "s4d_java": "```java\n// ─── File: src/test/java/com/bank/collections/WhenLinkedHashMapTest.java ───\npackage com.bank.collections;\n\nimport java.math.BigDecimal;\nimport java.util.logging.Logger;\n\npublic class WhenLinkedHashMapTest {\n    private static final Logger log = Logger.getLogger(WhenLinkedHashMapTest.class.getName());\n\n    public static void main(String[] args) {\n        BigDecimal rajesh = new BigDecimal(\"1000000\");   // SAV2001\n        BigDecimal priya  = new BigDecimal(\"250000\");    // CUR3001\n        log.info(() -> \"Demonstrating deciding when LinkedHashMap beats HashMap for SAV2001 and CUR3001\");\n        log.info(() -> \"Rajesh balance=\" + rajesh + \", Priya balance=\" + priya);\n        // the collection operation specific to this topic is exercised here\n    }\n}\n```",
+    "s4e_build": "```bash\nmvn clean test\n```",
+    "s5_journey": "The input is a sequence of account entries added to a `LinkedHashMap` that must preserve insertion order.\n\n**Step 1.** Each `put` stores the entry in the hash table and also appends it to an internal doubly linked list that records order.\n\n**Step 2.** When the map is iterated, it walks the linked list, so Rajesh's and Priya's entries appear in the exact order they were added.\n\n**Step 3.** With access-order mode enabled, each `get` moves the touched entry to the end, which is how LinkedHashMap powers a simple LRU cache that evicts the least recently used account.",
+    "s5b_flow": "```text\n  Input: Rajesh SAV2001 (Rs.1,000,000), Priya CUR3001 (Rs.250,000)\n    │\n    ▼\n  Service layer (applies deciding when LinkedHashMap beats HashMap)\n    │  loads accounts into the collection\n    │  performs the operation (add / lookup / order / dedup)\n    ▼\n  Collection state changes\n    │  SAV2001 and CUR3001 processed with BigDecimal amounts\n    ▼\n  Output: correct result returned to the caller\n```",
+    "s5c_hld": "```\n  Audit Log & Response Ordering Service\n  ┌──────────────────────────────────────────┐\n  │  Txn Processor                             │\n  └──────────────────┬───────────────────────┘\n                     ▼\n      ┌────────────────────────────────┐\n      │ LinkedHashMap<TxnId, Entry>     │\n      │ insertion-order iteration       │\n      └──────────────────┬─────────────┘\n         ┌───────────────┴──────────────┐\n         ▼                              ▼\n   JSON serialization           audit trail\n   (stable field order)         (chronological)\n```",
+    "s5d_lld": "```\n  // insertion-order (default)\n  Map<String,Entry> audit =\n      new LinkedHashMap<>();\n  audit.put(txnId, entry);      // iterates in put order\n\n  // access-order LRU cache\n  Map<String,Balance> cache = new LinkedHashMap<>(\n      128, 0.75f, true) {       // accessOrder=true\n      protected boolean removeEldestEntry(\n          Map.Entry<String,Balance> eldest){\n          return size() > 100;  // evict oldest\n      }\n  };\n  // internals: HashMap + doubly-linked list\n  //   Entry { before, after } pointers\n  //   accessOrder → get() moves node to tail\n```",
+    "s6_takeaway": "LinkedHashMap = HashMap + insertion/access order. Same O(1) performance with slight memory overhead. LRU cache: `new LinkedHashMap<>(cap, 0.75f, true)` + override `removeEldestEntry()`.\n\n---"
+  },
+  "keyPoints": [
+    "When insertion order matters (e.g., preserving config file order)",
+    "LRU cache: accessOrder=true + override removeEldestEntry()",
+    "Predictable iteration order for debugging and testing",
+    "Slightly more memory than HashMap (doubly-linked list of entries)"
+  ]
+}

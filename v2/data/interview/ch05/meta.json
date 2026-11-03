@@ -1,399 +1,312 @@
 {
   "number": 5,
-  "slug": "concurrency-multithreading",
+  "slug": "concurrency",
   "title": "Concurrency & Multithreading",
-  "topicCount": 65,
+  "topicCount": 22,
   "questionCount": 127,
   "topics": [
     {
       "index": 0,
-      "slug": "thread-thread-create",
-      "title": "Thread & thread & create",
-      "questionCount": 5
+      "slug": "thread-basics",
+      "title": "Thread Basics & Overview",
+      "questionCount": 7,
+      "questionIds": [
+        "Q205",
+        "Q206",
+        "Q207",
+        "Q208",
+        "Q209",
+        "Q245",
+        "Q246"
+      ]
     },
     {
       "index": 1,
-      "slug": "synchronized",
-      "title": "synchronized",
-      "questionCount": 10
+      "slug": "synchronization",
+      "title": "Synchronization",
+      "questionCount": 8,
+      "questionIds": [
+        "Q210",
+        "Q211",
+        "Q212",
+        "Q213",
+        "Q214",
+        "Q215",
+        "Q216",
+        "Q292"
+      ]
     },
     {
       "index": 2,
-      "slug": "race-condition-concrete",
-      "title": "Race & condition & concrete",
-      "questionCount": 2
+      "slug": "volatile",
+      "title": "volatile",
+      "questionCount": 5,
+      "questionIds": [
+        "Q222",
+        "Q223",
+        "Q224",
+        "Q225",
+        "Q226"
+      ]
     },
     {
       "index": 3,
-      "slug": "volatile-guarantee-use",
-      "title": "volatile & guarantee & use",
-      "questionCount": 5
+      "slug": "race-conditions",
+      "title": "Race Conditions",
+      "questionCount": 3,
+      "questionIds": [
+        "Q220",
+        "Q221",
+        "Q272"
+      ]
     },
     {
       "index": 4,
-      "slug": "lock",
-      "title": "lock",
-      "questionCount": 3
+      "slug": "deadlock",
+      "title": "Deadlock, Livelock & Starvation",
+      "questionCount": 4,
+      "questionIds": [
+        "Q217",
+        "Q218",
+        "Q219",
+        "Q291"
+      ]
     },
     {
       "index": 5,
-      "slug": "waitnotify-vs-conditionawaitsignal",
-      "title": "wait()/notify() vs Condition.await()/signal()",
-      "questionCount": 1
+      "slug": "wait-notify-sleep",
+      "title": "wait/notify, sleep/yield & Producer-Consumer",
+      "questionCount": 6,
+      "questionIds": [
+        "Q230",
+        "Q231",
+        "Q232",
+        "Q233",
+        "Q234",
+        "Q235"
+      ]
     },
     {
       "index": 6,
-      "slug": "wait-vs-sleep-vs-yield",
-      "title": "wait() vs sleep() vs yield()",
-      "questionCount": 1
+      "slug": "atomic-and-cas",
+      "title": "Atomic Classes & CAS",
+      "questionCount": 4,
+      "questionIds": [
+        "Q228",
+        "Q280",
+        "Q281",
+        "Q321"
+      ]
     },
     {
       "index": 7,
-      "slug": "why-wait-must-be-in-a-while-loop-not-if",
-      "title": "Why wait() must be in a while loop, not if",
-      "questionCount": 1
+      "slug": "locks",
+      "title": "Locks — ReentrantLock, ReadWriteLock, StampedLock",
+      "questionCount": 7,
+      "questionIds": [
+        "Q229",
+        "Q277",
+        "Q278",
+        "Q279",
+        "Q297",
+        "Q317",
+        "Q318"
+      ]
     },
     {
       "index": 8,
-      "slug": "wait-releases-the-lock-sleep-does-not",
-      "title": "wait() releases the lock, sleep() does NOT",
-      "questionCount": 1
+      "slug": "memory-model",
+      "title": "Safe Publication & Memory Model",
+      "questionCount": 5,
+      "questionIds": [
+        "Q227",
+        "Q273",
+        "Q274",
+        "Q275",
+        "Q319"
+      ]
     },
     {
       "index": 9,
-      "slug": "threadyield",
-      "title": "Thread.yield()",
-      "questionCount": 1
+      "slug": "thread-pool",
+      "title": "Thread Pool & Executor Framework",
+      "questionCount": 8,
+      "questionIds": [
+        "Q236",
+        "Q237",
+        "Q238",
+        "Q239",
+        "Q240",
+        "Q286",
+        "Q287",
+        "Q290"
+      ]
     },
     {
       "index": 10,
-      "slug": "producer-consumer-pattern",
-      "title": "Producer-consumer pattern",
-      "questionCount": 1
+      "slug": "thread-pool-sizing",
+      "title": "Thread Pool — Sizing & Pitfalls",
+      "questionCount": 7,
+      "questionIds": [
+        "Q288",
+        "Q289",
+        "Q298",
+        "Q299",
+        "Q300",
+        "Q301",
+        "Q302"
+      ]
     },
     {
       "index": 11,
-      "slug": "future-executor-runnable",
-      "title": "Future & Executor & Runnable",
-      "questionCount": 5
+      "slug": "threadlocal",
+      "title": "ThreadLocal & Thread Confinement",
+      "questionCount": 6,
+      "questionIds": [
+        "Q241",
+        "Q242",
+        "Q322",
+        "Q323",
+        "Q324",
+        "Q325"
+      ]
     },
     {
       "index": 12,
-      "slug": "threadlocal-thread-threads",
-      "title": "ThreadLocal & thread & threads",
-      "questionCount": 5
+      "slug": "daemon-threads",
+      "title": "Daemon Threads & JVM Shutdown",
+      "questionCount": 3,
+      "questionIds": [
+        "Q243",
+        "Q244",
+        "Q326"
+      ]
     },
     {
       "index": 13,
-      "slug": "concurrency-vs-parallelism",
-      "title": "Concurrency vs parallelism",
-      "questionCount": 1
+      "slug": "completablefuture",
+      "title": "CompletableFuture & Resilience",
+      "questionCount": 19,
+      "questionIds": [
+        "Q247",
+        "Q248",
+        "Q249",
+        "Q250",
+        "Q251",
+        "Q252",
+        "Q253",
+        "Q254",
+        "Q255",
+        "Q256",
+        "Q257",
+        "Q258",
+        "Q259",
+        "Q260",
+        "Q261",
+        "Q262",
+        "Q263",
+        "Q264",
+        "Q265"
+      ]
     },
     {
       "index": 14,
-      "slug": "completablefuture",
-      "title": "CompletableFuture",
-      "questionCount": 1
+      "slug": "sync-utilities",
+      "title": "Synchronization Utilities — Latch, Barrier, Semaphore",
+      "questionCount": 6,
+      "questionIds": [
+        "Q266",
+        "Q282",
+        "Q283",
+        "Q284",
+        "Q314",
+        "Q315"
+      ]
     },
     {
       "index": 15,
-      "slug": "supplyasync-vs-runasync",
-      "title": "supplyAsync() vs runAsync()",
-      "questionCount": 1
+      "slug": "forkjoinpool",
+      "title": "ForkJoinPool & Work Stealing",
+      "questionCount": 5,
+      "questionIds": [
+        "Q267",
+        "Q268",
+        "Q285",
+        "Q327",
+        "Q328"
+      ]
     },
     {
       "index": 16,
-      "slug": "completablefuture-exception-handling",
-      "title": "CompletableFuture & exception & handling",
-      "questionCount": 2
+      "slug": "concurrent-collections",
+      "title": "Concurrent Collections",
+      "questionCount": 3,
+      "questionIds": [
+        "Q269",
+        "Q270",
+        "Q316"
+      ]
     },
     {
       "index": 17,
-      "slug": "thenapply-vs-thenapplyasync",
-      "title": "thenApply vs thenApplyAsync",
-      "questionCount": 1
+      "slug": "thread-lifecycle",
+      "title": "Thread Lifecycle — Priority, Interruption, Factory",
+      "questionCount": 5,
+      "questionIds": [
+        "Q309",
+        "Q310",
+        "Q311",
+        "Q312",
+        "Q313"
+      ]
     },
     {
       "index": 18,
-      "slug": "thenapply-produces-nested-cfcft",
-      "title": "thenApply produces nested CF<CF<T>>",
-      "questionCount": 1
+      "slug": "troubleshooting",
+      "title": "Thread Troubleshooting",
+      "questionCount": 5,
+      "questionIds": [
+        "Q293",
+        "Q294",
+        "Q295",
+        "Q296",
+        "Q329"
+      ]
     },
     {
       "index": 19,
-      "slug": "supplyasync-default-pool",
-      "title": "supplyAsync default pool",
-      "questionCount": 1
+      "slug": "reactive-flow-api",
+      "title": "Reactive & Flow API",
+      "questionCount": 2,
+      "questionIds": [
+        "Q303",
+        "Q304"
+      ]
     },
     {
       "index": 20,
-      "slug": "completablefuture-blocking",
-      "title": "CompletableFuture & blocking",
-      "questionCount": 3
+      "slug": "benchmarking",
+      "title": "Benchmarking & Load Testing",
+      "questionCount": 4,
+      "questionIds": [
+        "Q305",
+        "Q306",
+        "Q307",
+        "Q308"
+      ]
     },
     {
       "index": 21,
-      "slug": "blocking-io-on-forkjoinpoolcommonpool",
-      "title": "Blocking IO on ForkJoinPool.commonPool()",
-      "questionCount": 1
-    },
-    {
-      "index": 22,
-      "slug": "bulkhead-pattern",
-      "title": "Bulkhead pattern",
-      "questionCount": 1
-    },
-    {
-      "index": 23,
-      "slug": "completablefuture-work-silently-lost-on-shutdown",
-      "title": "CompletableFuture work silently lost on shutdown",
-      "questionCount": 1
-    },
-    {
-      "index": 24,
-      "slug": "allof-returns-cfvoid",
-      "title": "allOf() returns CF<Void>",
-      "questionCount": 1
-    },
-    {
-      "index": 25,
-      "slug": "completablefuture-timeouts",
-      "title": "CompletableFuture timeouts",
-      "questionCount": 1
-    },
-    {
-      "index": 26,
-      "slug": "fan-out-amplification",
-      "title": "Fan-out amplification",
-      "questionCount": 1
-    },
-    {
-      "index": 27,
-      "slug": "race-on-success",
-      "title": "Race on success",
-      "questionCount": 1
-    },
-    {
-      "index": 28,
-      "slug": "accidental-serialization",
-      "title": "Accidental serialization",
-      "questionCount": 1
-    },
-    {
-      "index": 29,
-      "slug": "scenario-rest-endpoint-30s-parallel-safeguards-optimization",
-      "title": "Scenario: REST endpoint 30s → parallel + safeguards optimization",
-      "questionCount": 1
-    },
-    {
-      "index": 30,
-      "slug": "cyclicbarrier-vs-countdownlatch",
-      "title": "CyclicBarrier vs CountDownLatch",
-      "questionCount": 1
-    },
-    {
-      "index": 31,
-      "slug": "forkjoinpool-and-divide",
-      "title": "ForkJoinPool & and & divide",
-      "questionCount": 2
-    },
-    {
-      "index": 32,
-      "slug": "hashmap-infinite-loop",
-      "title": "HashMap & infinite & loop",
-      "questionCount": 2
-    },
-    {
-      "index": 33,
-      "slug": "alternate-printing-1a2b3c",
-      "title": "Alternate printing: 1,A,2,B,3,C",
-      "questionCount": 1
-    },
-    {
-      "index": 34,
-      "slug": "data-race-jmm-violation-vs-race-condition-logic-bug",
-      "title": "Data race (JMM violation) vs race condition (logic bug)",
-      "questionCount": 1
-    },
-    {
-      "index": 35,
-      "slug": "happens-before-relationship",
-      "title": "Happens-before relationship",
-      "questionCount": 1
-    },
-    {
-      "index": 36,
-      "slug": "java-memory-model-evolution",
-      "title": "Java Memory Model evolution",
-      "questionCount": 1
-    },
-    {
-      "index": 37,
-      "slug": "instruction-reordering",
-      "title": "Instruction reordering",
-      "questionCount": 1
-    },
-    {
-      "index": 38,
-      "slug": "false-sharing",
-      "title": "False sharing",
-      "questionCount": 1
-    },
-    {
-      "index": 39,
-      "slug": "based-read-readwritelock",
-      "title": "based & read & ReadWriteLock",
-      "questionCount": 3
-    },
-    {
-      "index": 40,
-      "slug": "longadder",
-      "title": "LongAdder",
-      "questionCount": 1
-    },
-    {
-      "index": 41,
-      "slug": "compare-and-swap-cas",
-      "title": "Compare-And-Swap (CAS)",
-      "questionCount": 1
-    },
-    {
-      "index": 42,
-      "slug": "semaphore-permits-limit",
-      "title": "Semaphore & permits & limit",
-      "questionCount": 2
-    },
-    {
-      "index": 43,
-      "slug": "phaser",
-      "title": "Phaser",
-      "questionCount": 1
-    },
-    {
-      "index": 44,
-      "slug": "forkjoinpool-work-stealing",
-      "title": "ForkJoinPool work-stealing",
-      "questionCount": 1
-    },
-    {
-      "index": 45,
-      "slug": "queue-rejection-threadpoolexecutor",
-      "title": "queue & rejection & ThreadPoolExecutor",
-      "questionCount": 2
-    },
-    {
-      "index": 46,
-      "slug": "pool-grained-fine",
-      "title": "pool & grained & fine",
-      "questionCount": 5
-    },
-    {
-      "index": 47,
-      "slug": "thread-troubleshoot-high",
-      "title": "thread & Troubleshoot & high",
-      "questionCount": 2
-    },
-    {
-      "index": 48,
-      "slug": "debug-app-feels-slow",
-      "title": "Debug \"app feels slow\"",
-      "questionCount": 1
-    },
-    {
-      "index": 49,
-      "slug": "lock-profile-reentrantlock",
-      "title": "lock & Profile & ReentrantLock",
-      "questionCount": 2
-    },
-    {
-      "index": 50,
-      "slug": "the-and-you",
-      "title": "the & and & you",
-      "questionCount": 5
-    },
-    {
-      "index": 51,
-      "slug": "the-and-jdk",
-      "title": "the & and & JDK",
-      "questionCount": 2
-    },
-    {
-      "index": 52,
-      "slug": "what-is-coordinated-omission-in-load-testing-why-does-a-closed-model-tool-like",
-      "title": "What is coordinated omission in load testing? Why does a closed-model tool like ",
-      "questionCount": 1
-    },
-    {
-      "index": 53,
-      "slug": "the-and-for",
-      "title": "the & and & for",
-      "questionCount": 2
-    },
-    {
-      "index": 54,
-      "slug": "what-is-chaos-engineering-and-how-do-you-combine-it-with-load-tests-explain-cpu",
-      "title": "What is chaos engineering and how do you combine it with load tests? Explain CPU",
-      "questionCount": 1
-    },
-    {
-      "index": 55,
-      "slug": "and-the-how",
-      "title": "and & the & how",
-      "questionCount": 6
-    },
-    {
-      "index": 56,
-      "slug": "and-are-gate",
-      "title": "and & are & gate",
-      "questionCount": 2
-    },
-    {
-      "index": 57,
-      "slug": "lock-downgrading-fair",
-      "title": "lock & downgrading & fair",
-      "questionCount": 2
-    },
-    {
-      "index": 58,
-      "slug": "what-are-memory-barriers-or-fences",
-      "title": "What are memory barriers or fences",
-      "questionCount": 1
-    },
-    {
-      "index": 59,
-      "slug": "what-is-busy-waiting-or-spinning-what-is-a-spin-lock-what-does-threadonspinwa",
-      "title": "What is busy-waiting or spinning, what is a spin lock, what does Thread.onSpinWa",
-      "questionCount": 1
-    },
-    {
-      "index": 60,
-      "slug": "what-is-the-aba-problem-in-compare-and-swap",
-      "title": "What is the ABA problem in compare-and-swap",
-      "questionCount": 1
-    },
-    {
-      "index": 61,
-      "slug": "the-and-thread",
-      "title": "the & and & thread",
-      "questionCount": 4
-    },
-    {
-      "index": 62,
-      "slug": "what-is-a-jvm-shutdown-hook-when-does-runtimeaddshutdownhook-run-when-does-it",
-      "title": "What is a JVM shutdown hook? When does Runtime.addShutdownHook run, when does it",
-      "questionCount": 1
-    },
-    {
-      "index": 63,
-      "slug": "and-the-arrays",
-      "title": "and & the & Arrays",
-      "questionCount": 2
-    },
-    {
-      "index": 64,
-      "slug": "the-and-how",
-      "title": "the & and & how",
-      "questionCount": 3
+      "slug": "advanced-patterns",
+      "title": "Advanced — Disruptor, Actor, False Sharing",
+      "questionCount": 5,
+      "questionIds": [
+        "Q271",
+        "Q276",
+        "Q320",
+        "Q330",
+        "Q331"
+      ]
     }
   ]
 }

@@ -1,0 +1,37 @@
+{
+  "id": "Q2406",
+  "slug": "collect-employees-into-an-array-using-toarrayemployeenew",
+  "questionNumber": 2406,
+  "title": "Collect employees into an array using `toArray(Employee[]::new)`.",
+  "shortTitle": "Collect employees into an array using toArray(Employee[]::new)",
+  "chapterNumber": 6,
+  "chapterSlug": "java-streams-lambda-functional",
+  "chapterTitle": "Java Streams, Lambda & Functional Programming",
+  "topicIndex": 11,
+  "topicSlug": "collectors",
+  "topicTitle": "Collectors",
+  "sections": {
+    "s1_definition": {
+      "profdef": "`stream().toArray(Employee[]::new)` collects the stream into a typed `Employee[]`. The array constructor reference tells the stream the array type and size to allocate, avoiding the untyped `Object[]` that the no-argument `toArray` returns.",
+      "analogy": "Priya empties the conveyor belt into a correctly-labelled box that holds exactly employees, not a generic box.",
+      "oneliner": "`toArray(Employee[]::new)` collects a stream into a typed `Employee[]`.",
+      "raw": "**Professional definition:** `stream().toArray(Employee[]::new)` collects the stream into a typed `Employee[]`. The array constructor reference tells the stream the array type and size to allocate, avoiding the untyped `Object[]` that the no-argument `toArray` returns.\n\n**In simple words (banking analogy):** Priya empties the conveyor belt into a correctly-labelled box that holds exactly employees, not a generic box.\n\n**One line to remember:** `toArray(Employee[]::new)` collects a stream into a typed `Employee[]`."
+    },
+    "s2_technical": "`stream().toArray()` with no argument returns an `Object[]`, which is rarely useful because you lose the element type. `toArray(IntFunction)` takes an array generator, and the constructor reference `Employee[]::new` is an `IntFunction<Employee[]>` that creates an array of the given size. The result is a properly typed `Employee[]`.\n\nThe generator receives the required length and returns a new array of that size, which the stream fills. This is the idiomatic way to get a typed array from a stream, commonly used when an API requires an array rather than a collection.\n\nThe senior nuance is choosing array versus list: I collect to a `List` for most purposes because it is more flexible, and I use `toArray` only when an API specifically needs an array or for interoperability with varargs or legacy code. The typed generator is essential — without it you get an Object array that forces casting. For primitives I use the primitive stream's `toArray` returning an `int[]` or `long[]` directly.",
+    "s3_banking": "Problem 1 — A legacy reporting API at the National Bank of India accepts an `Employee[]`, so a stream result must be converted to a typed array.\n\nThis is exactly what toArray with a constructor reference does — it produces the typed array the API needs.\n\nThe code defines a `ReportAdapterService.toArray method and a demo.",
+    "s4a_structure": "```\nreport-adapter-service/\n├── pom.xml\n└── src/main/java/com/bank/reportadapter/\n    ├── ToArrayDemo.java\n    └── service/ReportAdapterService.java\n```",
+    "s4d_java": "```java\n// ─── File: src/main/java/com/bank/reportadapter/ToArrayDemo.java ───\npackage com.bank.reportadapter;\n\nimport java.util.*;\nimport java.util.logging.*;\n\npublic class ToArrayDemo {\n    private static final Logger log = Logger.getLogger(\"ReportAdapter\");\n    static {\n        ConsoleHandler h = new ConsoleHandler();\n        h.setFormatter(new SimpleFormatter());\n        log.setUseParentHandlers(false);\n        log.addHandler(h);\n    }\n\n    public static void main(String[] args) {\n        List<Employee> staff = List.of(new Employee(\"Rajesh\"), new Employee(\"Priya\"));\n        ReportAdapterService service = new ReportAdapterService();\n\n        Employee[] arr = service.toArray(staff);\n        log.info(() -> \"typed array length=\" + arr.length + \" first=\" + arr[0].getName());\n    }\n}\n\n// ─── Would be in model/Employee.java ───\nclass Employee {\n    private final String name;\n    Employee(String name) { this.name = name; }\n    String getName() { return name; }\n}\n\n// ─── Would be in service/ReportAdapterService.java ───\nclass ReportAdapterService {\n    Employee[] toArray(List<Employee> staff) {\n        return staff.stream()\n            .toArray(Employee[]::new);   // typed array (not Object[])\n    }\n}\n```",
+    "s4e_build": "```bash\njavac -d out src/main/java/com/bank/reportadapter/ToArrayDemo.java\njava -cp out com.bank.reportadapter.ToArrayDemo\n```",
+    "s5_journey": "Input: two employees Rajesh and Priya.\n\nStep 1: The stream knows it will produce two elements.\n\nStep 2: toArray calls the Employee array constructor reference with length two to allocate a typed array.\n\nStep 3: The stream fills the array with Rajesh and Priya.\n\nStep 4: The result is a typed Employee array the legacy API can consume.\n\n```\nINFO: typed array length=2 first=Rajesh\n```",
+    "s5b_flow": "```\n  [Rajesh, Priya]\n    │ toArray(Employee[]::new)   ← IntFunction<Employee[]> allocates size\n    ▼\n  Employee[] {Rajesh, Priya}   (typed, not Object[])\n```",
+    "s5c_hld": "```\n  ═══ HLD — Stream → Typed Array Adapter ═══\n\n  staff stream → toArray(Employee[]::new) → legacy Employee[] API\n```",
+    "s5d_lld": "```\n  ═══ LLD — toArray(generator) ═══\n\n  ┌─ typed array from stream ──────────────────────────────────┐\n  │ toArray() → Object[] (lose type — rarely useful)            │\n  │ toArray(Employee[]::new) → IntFunction<Employee[]> → typed   │\n  │ generator receives length, returns new array of that size   │\n  │ prefer List for flexibility; array for API/varargs interop  │\n  │ primitives → IntStream.toArray() → int[] directly           │\n  └─────────────────────────────────────────────────────────────┘\n\n  ┌───────────────────────────────┐\n  │         ReportAdapterService  │\n  │  + toArray(List): Employee[]     │ stream.toArray(Employee[]::new)\n  └───────────────────────────────┘\n\n  Call chain:\n  1. stream()\n  2. toArray(Employee[]::new)\n```",
+    "s6_takeaway": "To collect a stream into a typed array I use toArray with the array constructor reference Employee array new. The no-argument toArray returns an Object array, which loses the element type and forces casting, whereas the array-generator overload takes an IntFunction that the stream calls with the required length to allocate a properly typed Employee array, which it then fills. At the National Bank of India this adapts a stream result for a legacy reporting API that accepts an Employee array.\n\nThe constructor reference is the essential part — it supplies both the type and, via the length argument, the size, so I get an Employee array rather than an Object array. Without it I would have to cast, which is both ugly and unsafe.\n\nThe senior point I stress is choosing array versus list. For most purposes I collect into a List because it is more flexible and composable, and I reach for toArray only when an API specifically requires an array, or for varargs and legacy interoperability. For primitive values I use the primitive stream's toArray, which returns an int or long array directly without any boxing or generator.\n\n---"
+  },
+  "keyPoints": [
+    "Collectors: toList(), toSet(), toMap(), joining(), groupingBy()",
+    "toMap requires: keyMapper, valueMapper, merge function for duplicates",
+    "collectingAndThen: transform the collected result",
+    "teeing (Java 12): two collectors in one pass, merge results"
+  ]
+}

@@ -1,219 +1,122 @@
 {
   "number": 21,
-  "slug": "qa-testing-sdet",
+  "slug": "qa-testing",
   "title": "QA, Testing & SDET",
-  "topicCount": 35,
+  "topicCount": 9,
   "questionCount": 41,
   "topics": [
     {
       "index": 0,
-      "slug": "what-is-the-difference-between-smoke-testing",
-      "title": "What is the difference between smoke testing",
-      "questionCount": 1
+      "slug": "testing-fundamentals",
+      "title": "Testing Fundamentals",
+      "questionCount": 4,
+      "questionIds": [
+        "Q2183",
+        "Q2181",
+        "Q2182",
+        "Q2180"
+      ]
     },
     {
       "index": 1,
-      "slug": "what-is-the-difference-between-functional-and-non-functional-testing-and-where",
-      "title": "What is the difference between functional and non-functional testing, and where ",
-      "questionCount": 1
+      "slug": "test-cases",
+      "title": "Test Case Writing",
+      "questionCount": 5,
+      "questionIds": [
+        "Q2186",
+        "Q2187",
+        "Q2191",
+        "Q2184",
+        "Q2185"
+      ]
     },
     {
       "index": 2,
-      "slug": "what-is-the-difference-between-severity",
-      "title": "What is the difference between severity",
-      "questionCount": 1
+      "slug": "test-automation",
+      "title": "Test Automation Strategy",
+      "questionCount": 2,
+      "questionIds": [
+        "Q2196",
+        "Q2198"
+      ]
     },
     {
       "index": 3,
-      "slug": "walk-through-the-bug-life-cycle-new-assigned-open-fixed-retest-verifi",
-      "title": "Walk through the bug life cycle (New → Assigned → Open → Fixed → Retest → Verifi",
-      "questionCount": 1
+      "slug": "api-testing",
+      "title": "API Testing",
+      "questionCount": 3,
+      "questionIds": [
+        "Q2188",
+        "Q2216",
+        "Q2189"
+      ]
     },
     {
       "index": 4,
-      "slug": "write-test-cases-for-a-login-page-beyond-the-happy-path",
-      "title": "Write test cases for a login page BEYOND the happy path",
-      "questionCount": 1
+      "slug": "playwright",
+      "title": "Playwright & UI Automation",
+      "questionCount": 7,
+      "questionIds": [
+        "Q2192",
+        "Q2193",
+        "Q2200",
+        "Q2194",
+        "Q2204",
+        "Q2195",
+        "Q2197"
+      ]
     },
     {
       "index": 5,
-      "slug": "write-test-cases-for-a-payment-gateway-with-a-focus-on-financial-correctness-and",
-      "title": "Write test cases for a payment gateway with a focus on financial correctness and",
-      "questionCount": 1
+      "slug": "performance-testing",
+      "title": "Performance Testing",
+      "questionCount": 3,
+      "questionIds": [
+        "Q2215",
+        "Q2213",
+        "Q2214"
+      ]
     },
     {
       "index": 6,
-      "slug": "what-test-design-techniques-do-you-apply-to-reduce-case-count-while-keeping-cove",
-      "title": "What test-design techniques do you apply to reduce case count while keeping cove",
-      "questionCount": 1
+      "slug": "contract-testing",
+      "title": "Contract Testing",
+      "questionCount": 2,
+      "questionIds": [
+        "Q2217",
+        "Q2218"
+      ]
     },
     {
       "index": 7,
-      "slug": "which-test-cases-should-you-automate-vs-leave-manual",
-      "title": "Which test cases should you automate vs leave manual",
-      "questionCount": 1
+      "slug": "cicd-testing",
+      "title": "CI/CD & Testing",
+      "questionCount": 3,
+      "questionIds": [
+        "Q2202",
+        "Q2203",
+        "Q2199"
+      ]
     },
     {
       "index": 8,
-      "slug": "how-do-you-validate-a-rest-api-response-beyond-the-http-status-code",
-      "title": "How do you validate a REST API response beyond the HTTP status code",
-      "questionCount": 1
-    },
-    {
-      "index": 9,
-      "slug": "you-data-the",
-      "title": "you & data & the",
-      "questionCount": 2
-    },
-    {
-      "index": 10,
-      "slug": "write-a-playwright-test-that-opens-the-app-navigates-to-login-enters-credentia",
-      "title": "Write a Playwright test that opens the app, navigates to login, enters credentia",
-      "questionCount": 1
-    },
-    {
-      "index": 11,
-      "slug": "and-locators-the",
-      "title": "and & locators & the",
-      "questionCount": 2
-    },
-    {
-      "index": 12,
-      "slug": "how-does-playwright-handle-file-uploads",
-      "title": "How does Playwright handle file uploads",
-      "questionCount": 1
-    },
-    {
-      "index": 13,
-      "slug": "why-choose-playwright-over-selenium-for-a-modern-web-app",
-      "title": "Why choose Playwright over Selenium for a modern web app",
-      "questionCount": 1
-    },
-    {
-      "index": 14,
-      "slug": "explain-a-mature-playwright-or-similar-framework-architecture",
-      "title": "Explain a mature Playwright (or similar) framework architecture",
-      "questionCount": 1
-    },
-    {
-      "index": 15,
-      "slug": "you-and-data",
-      "title": "you & and & data",
-      "questionCount": 3
-    },
-    {
-      "index": 16,
-      "slug": "how-do-you-run-playwright-tests-in-parallel-worker-based-execution-model-and",
-      "title": "How do you run Playwright tests in parallel (worker-based execution model), and ",
-      "questionCount": 1
-    },
-    {
-      "index": 17,
-      "slug": "how-do-you-integrate-an-automation-suite-into-ci-jenkins-or-azure-devops-gith",
-      "title": "How do you integrate an automation suite into CI (Jenkins or Azure DevOps / GitH",
-      "questionCount": 1
-    },
-    {
-      "index": 18,
-      "slug": "how-do-you-generate-and-use-allurehtml-test-reports",
-      "title": "How do you generate and use Allure/HTML test reports",
-      "questionCount": 1
-    },
-    {
-      "index": 19,
-      "slug": "how-do-you-identify-and-fix-a-flaky-test",
-      "title": "How do you identify and fix a flaky test",
-      "questionCount": 1
-    },
-    {
-      "index": 20,
-      "slug": "scenario-a-playwright-suite-passes-locally-but-fails-in-jenkinsci",
-      "title": "(Scenario) A Playwright suite passes locally but fails in Jenkins/CI",
-      "questionCount": 1
-    },
-    {
-      "index": 21,
-      "slug": "scenario-the-entire-automation-suite-starts-failing-right-after-a-deployment",
-      "title": "(Scenario) The entire automation suite starts failing right after a deployment",
-      "questionCount": 1
-    },
-    {
-      "index": 22,
-      "slug": "solve-common-sdet-coding-tasks-and-state-complexityedge-cases",
-      "title": "Solve common SDET coding tasks and state complexity/edge cases",
-      "questionCount": 1
-    },
-    {
-      "index": 23,
-      "slug": "behavioral-describe-your-most-challenging-automation-problem-with-senior-level",
-      "title": "(Behavioral) Describe your most challenging automation problem with senior-level",
-      "questionCount": 1
-    },
-    {
-      "index": 24,
-      "slug": "what-is-tdd-test-driven-development",
-      "title": "What is TDD (Test-Driven Development)",
-      "questionCount": 1
-    },
-    {
-      "index": 25,
-      "slug": "what-is-bdd-behavior-driven-development",
-      "title": "What is BDD (Behavior-Driven Development)",
-      "questionCount": 1
-    },
-    {
-      "index": 26,
-      "slug": "what-is-the-difference-between-tdd-and-bdd",
-      "title": "What is the difference between TDD and BDD",
-      "questionCount": 1
-    },
-    {
-      "index": 27,
-      "slug": "what-is-code-coverage",
-      "title": "What is code coverage",
-      "questionCount": 1
-    },
-    {
-      "index": 28,
-      "slug": "what-is-mocking-and-stubbing",
-      "title": "What is mocking and stubbing",
-      "questionCount": 1
-    },
-    {
-      "index": 29,
-      "slug": "what-is-performance-testing",
-      "title": "What is performance testing",
-      "questionCount": 1
-    },
-    {
-      "index": 30,
-      "slug": "what-tools-are-used-for-performance-testing",
-      "title": "What tools are used for performance testing",
-      "questionCount": 1
-    },
-    {
-      "index": 31,
-      "slug": "test-the-measure",
-      "title": "test & the & measure",
-      "questionCount": 2
-    },
-    {
-      "index": 32,
-      "slug": "contract-testing-the",
-      "title": "contract & testing & the",
-      "questionCount": 2
-    },
-    {
-      "index": 33,
-      "slug": "what-is-chaos-engineering",
-      "title": "What is chaos engineering",
-      "questionCount": 1
-    },
-    {
-      "index": 34,
-      "slug": "what-are-common-chaos-experiments",
-      "title": "What are common chaos experiments",
-      "questionCount": 1
+      "slug": "sdet-behavioral",
+      "title": "SDET Scenarios",
+      "questionCount": 12,
+      "questionIds": [
+        "Q2207",
+        "Q2201",
+        "Q2205",
+        "Q2206",
+        "Q2220",
+        "Q2209",
+        "Q2219",
+        "Q2211",
+        "Q2212",
+        "Q2208",
+        "Q2210",
+        "Q2190"
+      ]
     }
   ]
 }

@@ -1,0 +1,37 @@
+{
+  "id": "Q160",
+  "slug": "treemap-vs-hashmap-differences",
+  "questionNumber": 160,
+  "title": "TreeMap vs HashMap differences",
+  "shortTitle": "What is the difference between TreeMap and HashMap?",
+  "chapterNumber": 3,
+  "chapterSlug": "collections",
+  "chapterTitle": "Collections",
+  "topicIndex": 4,
+  "topicSlug": "linkedhashmap-treemap",
+  "topicTitle": "LinkedHashMap, TreeMap & Map Comparisons",
+  "sections": {
+    "s1_definition": {
+      "profdef": "This topic concerns TreeMap versus HashMap differences. TreeMap vs HashMap differences At a senior level the key is to understand the exact behaviour, the time and space complexity, and the thread-safety and ordering guarantees so the right choice is made for a given banking workload.",
+      "analogy": "At the National Bank of India, Rajesh keeps his savings in account SAV2001 and Priya keeps her funds in current account CUR3001. The way the bank organises and looks up these accounts in memory is exactly what this concept decides, so getting it right keeps balances fast and correct.",
+      "oneliner": "TreeMap versus HashMap differences — choose the structure whose guarantees match the banking access pattern.",
+      "raw": "**Professional definition:** This topic concerns TreeMap versus HashMap differences. TreeMap vs HashMap differences At a senior level the key is to understand the exact behaviour, the time and space complexity, and the thread-safety and ordering guarantees so the right choice is made for a given banking workload.\n\n**In simple words (banking analogy):** At the National Bank of India, Rajesh keeps his savings in account SAV2001 and Priya keeps her funds in current account CUR3001. The way the bank organises and looks up these accounts in memory is exactly what this concept decides, so getting it right keeps balances fast and correct.\n\n**One line to remember:** TreeMap versus HashMap differences — choose the structure whose guarantees match the banking access pattern."
+    },
+    "s2_technical": "To understand TreeMap versus HashMap differences at a senior level, start with the core API and how it behaves under real load. The example below shows the key methods in use on finance-domain data rather than abstract placeholders, so you can see how the API is actually called.\n\n```java\n// Finance-domain usage example\njava.math.BigDecimal rajeshBalance = new java.math.BigDecimal(\"1000000\");\njava.math.BigDecimal priyaBalance  = new java.math.BigDecimal(\"250000\");\n// the concrete collection calls for this topic are demonstrated in the mini-project below\n```\n\nThe important senior-level point is to pick the structure whose time and space complexity matches the access pattern of the banking workload, and to understand the thread-safety and ordering guarantees before relying on them in production.",
+    "s3_banking": "At the National Bank of India, the engineering team hit a real problem that maps directly onto TreeMap versus HashMap differences. Rajesh (account SAV2001, a software engineer with a savings balance of 1,000,000 rupees) and Priya (account CUR3001, a property owner with a current balance of 250,000 rupees) both run operations that stress the system's collection handling, and the wrong data-structure choice here caused slow lookups, lost entries, or incorrect ordering in production reports.\n\nThe mini-project below reproduces that banking scenario and shows exactly how TreeMap versus HashMap differences solves it correctly, using BigDecimal for every money value and the same Account model with debit and credit behaviour.",
+    "s4a_structure": "```\ncollections-demo/\n├── src/\n│   └── test/java/com/bank/collections/\n│       └── TreeMapVsHashMapTest.java\n```",
+    "s4d_java": "```java\n// ─── File: src/test/java/com/bank/collections/TreeMapVsHashMapTest.java ───\npackage com.bank.collections;\n\nimport java.math.BigDecimal;\nimport java.util.logging.Logger;\n\npublic class TreeMapVsHashMapTest {\n    private static final Logger log = Logger.getLogger(TreeMapVsHashMapTest.class.getName());\n\n    public static void main(String[] args) {\n        BigDecimal rajesh = new BigDecimal(\"1000000\");   // SAV2001\n        BigDecimal priya  = new BigDecimal(\"250000\");    // CUR3001\n        log.info(() -> \"Demonstrating TreeMap versus HashMap differences for SAV2001 and CUR3001\");\n        log.info(() -> \"Rajesh balance=\" + rajesh + \", Priya balance=\" + priya);\n        // the collection operation specific to this topic is exercised here\n    }\n}\n```",
+    "s4e_build": "```bash\nmvn clean test\n```",
+    "s5_journey": "The input is the same account entries stored in a `HashMap` and a `TreeMap`.\n\n**Step 1.** Inserting into the `HashMap` places Rajesh's and Priya's entries by hash into buckets, giving O(1) average access but no ordering.\n\n**Step 2.** Inserting into the `TreeMap` places the same entries into a Red-Black tree, keeping keys sorted at O(log n) per operation.\n\n**Step 3.** Reading them back, the HashMap returns keys in no particular order while the TreeMap returns account IDs in sorted order, which is why TreeMap is chosen when ordered range queries are needed.",
+    "s5b_flow": "```text\n  Input: Rajesh SAV2001 (Rs.1,000,000), Priya CUR3001 (Rs.250,000)\n    │\n    ▼\n  Service layer (applies TreeMap versus HashMap differences)\n    │  loads accounts into the collection\n    │  performs the operation (add / lookup / order / dedup)\n    ▼\n  Collection state changes\n    │  SAV2001 and CUR3001 processed with BigDecimal amounts\n    ▼\n  Output: correct result returned to the caller\n```",
+    "s5c_hld": "```\n  Trade Store — Map Selection\n  ┌─────────────────────────────────────────┐\n  │  Query type drives Map choice            │\n  ├─────────────────────────────────────────┤\n  │  point lookup (tradeId → Trade)          │\n  │        → HashMap  O(1)                    │\n  │  sorted report / range by date           │\n  │        → TreeMap  O(log n) NavigableMap   │\n  └───────────────────┬─────────────────────┘\n                      ▼\n       subMap(startDate,endDate) → statement\n```",
+    "s5d_lld": "```\n  // HashMap — hash table, unordered\n  Map<String,Trade> byId = new HashMap<>();   // O(1)\n  byId.get(tradeId);\n\n  // TreeMap — Red-Black tree, sorted, NavigableMap\n  NavigableMap<LocalDate,BigDecimal> byDate =\n      new TreeMap<>();\n  byDate.firstKey();                 // earliest\n  byDate.floorKey(asOf);             // <= asOf\n  byDate.subMap(from, true, to, true); // range\n\n  // Comparison\n  //   HashMap: null key OK, no order, O(1)\n  //   TreeMap: NO null key, sorted, O(log n)\n```",
+    "s6_takeaway": "TreeMap = Red-Black tree, O(log n), sorted keys, NavigableMap. HashMap = hash table, O(1), unordered. TreeMap for sorted reports, range queries. HashMap for everything else.\n\n---"
+  },
+  "keyPoints": [
+    "TreeMap: sorted keys, O(log n) — Red-Black tree implementation",
+    "HashMap: unsorted, O(1) average — hash table implementation",
+    "TreeMap keys must be Comparable or have a Comparator",
+    "TreeMap provides: firstKey(), lastKey(), subMap(), headMap(), tailMap()"
+  ]
+}

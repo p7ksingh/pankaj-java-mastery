@@ -4,7 +4,7 @@ describe('getAllChapters', () => {
   it('returns an array of chapter summaries', () => {
     const chapters = getAllChapters()
     expect(Array.isArray(chapters)).toBe(true)
-    expect(chapters.length).toBe(28)
+    expect(chapters.length).toBe(23)
   })
 
   it('returns chapters with required fields', () => {

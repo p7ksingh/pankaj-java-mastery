@@ -12,3 +12,9 @@
     padding: var(--space-md);
   }
 }
+
+@media (max-width: 480px) {
+  .page {
+    padding: 12px;
+  }
+}

@@ -4,7 +4,7 @@ import { Breadcrumb } from './Breadcrumb'
 describe('Breadcrumb', () => {
   it('renders a single item without a link', () => {
     render(<Breadcrumb items={[{ label: 'Home' }]} />)
-    expect(screen.getByText('Home')).toBeInTheDocument()
+    expect(screen.getByRole('navigation', { name: 'Breadcrumb' })).toBeInTheDocument()
     expect(screen.queryByRole('link')).not.toBeInTheDocument()
   })
 
@@ -20,7 +20,7 @@ describe('Breadcrumb', () => {
     )
     const links = screen.getAllByRole('link')
     expect(links).toHaveLength(2)
-    expect(links[0]).toHaveTextContent('Home')
+    expect(links[0]).toHaveAttribute('aria-label', 'Home')
     expect(links[1]).toHaveTextContent('Core Java')
     expect(screen.getByText('Collections')).toBeInTheDocument()
   })

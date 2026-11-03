@@ -2,458 +2,285 @@
   "number": 13,
   "slug": "database-sql",
   "title": "Database & SQL",
-  "topicCount": 75,
+  "topicCount": 17,
   "questionCount": 141,
   "topics": [
     {
       "index": 0,
-      "slug": "index-and-the",
-      "title": "index & and & the",
-      "questionCount": 14
+      "slug": "sql-basics",
+      "title": "SQL Basics — SELECT, WHERE, ORDER BY",
+      "questionCount": 8,
+      "questionIds": [
+        "Q1164",
+        "Q1165",
+        "Q1092",
+        "Q1130",
+        "Q1131",
+        "Q1117",
+        "Q1098",
+        "Q1074"
+      ]
     },
     {
       "index": 1,
-      "slug": "what-are-the-uuidv7-caveats",
-      "title": "What are the UUIDv7 caveats",
-      "questionCount": 1
+      "slug": "joins",
+      "title": "Joins — INNER, LEFT, RIGHT, FULL, CROSS",
+      "questionCount": 12,
+      "questionIds": [
+        "Q1155",
+        "Q1104",
+        "Q1138",
+        "Q1173",
+        "Q1174",
+        "Q1157",
+        "Q1099",
+        "Q1100",
+        "Q1101",
+        "Q1112",
+        "Q1148",
+        "Q1107"
+      ]
     },
     {
       "index": 2,
-      "slug": "query-you-slow",
-      "title": "query & you & slow",
-      "questionCount": 6
+      "slug": "aggregation",
+      "title": "Aggregation — GROUP BY, HAVING, COUNT, SUM",
+      "questionCount": 10,
+      "questionIds": [
+        "Q1084",
+        "Q1137",
+        "Q1139",
+        "Q1140",
+        "Q1113",
+        "Q1146",
+        "Q1147",
+        "Q1103",
+        "Q1102",
+        "Q1096"
+      ]
     },
     {
       "index": 3,
-      "slug": "why-does-limit-offset-pagination-get-slower-on-deep-pages-the-db-scans-an",
-      "title": "Why does `LIMIT ... OFFSET` pagination get slower on deep pages (the DB scans an",
-      "questionCount": 1
+      "slug": "subqueries-cte",
+      "title": "Subqueries & CTEs",
+      "questionCount": 7,
+      "questionIds": [
+        "Q1105",
+        "Q1163",
+        "Q1171",
+        "Q1172",
+        "Q1078",
+        "Q1162",
+        "Q1109"
+      ]
     },
     {
       "index": 4,
-      "slug": "and-the-oltp",
-      "title": "and & the & OLTP",
-      "questionCount": 2
+      "slug": "window-functions",
+      "title": "Window Functions — ROW_NUMBER, RANK, LEAD, LAG",
+      "questionCount": 8,
+      "questionIds": [
+        "Q1116",
+        "Q1114",
+        "Q1077",
+        "Q1142",
+        "Q1144",
+        "Q1145",
+        "Q1108",
+        "Q1097"
+      ]
     },
     {
       "index": 5,
-      "slug": "why-is-where-col-like-term-slow-leading-wildcard-forces-a-full-scan-and",
-      "title": "Why is `WHERE col LIKE '%term%'` slow (leading wildcard forces a full scan), and",
-      "questionCount": 1
+      "slug": "indexing",
+      "title": "Indexing",
+      "questionCount": 18,
+      "questionIds": [
+        "Q1177",
+        "Q1178",
+        "Q1181",
+        "Q1154",
+        "Q1050",
+        "Q1051",
+        "Q1052",
+        "Q1053",
+        "Q1054",
+        "Q1055",
+        "Q1056",
+        "Q1057",
+        "Q1058",
+        "Q1059",
+        "Q1060",
+        "Q1061",
+        "Q1062",
+        "Q1063"
+      ]
     },
     {
       "index": 6,
-      "slug": "and-shard-you",
-      "title": "and & shard & you",
-      "questionCount": 2
+      "slug": "transactions-acid",
+      "title": "Transactions & ACID",
+      "questionCount": 4,
+      "questionIds": [
+        "Q1151",
+        "Q1158",
+        "Q1159",
+        "Q1085"
+      ]
     },
     {
       "index": 7,
-      "slug": "the-reads-read",
-      "title": "the & reads & read",
-      "questionCount": 2
+      "slug": "normalization-schema",
+      "title": "Normalization & Schema Design",
+      "questionCount": 7,
+      "questionIds": [
+        "Q1180",
+        "Q1156",
+        "Q1093",
+        "Q1120",
+        "Q1121",
+        "Q1094",
+        "Q1091"
+      ]
     },
     {
       "index": 8,
-      "slug": "the-partitioning-partitions",
-      "title": "the & partitioning & partitions",
-      "questionCount": 3
+      "slug": "sql-vs-nosql",
+      "title": "SQL vs NoSQL",
+      "questionCount": 2,
+      "questionIds": [
+        "Q1082",
+        "Q1083"
+      ]
     },
     {
       "index": 9,
-      "slug": "and-between-are",
-      "title": "and & between & are",
-      "questionCount": 2
+      "slug": "connection-pooling",
+      "title": "Connection Pooling",
+      "questionCount": 6,
+      "questionIds": [
+        "Q1086",
+        "Q1087",
+        "Q1088",
+        "Q1089",
+        "Q1090",
+        "Q1069"
+      ]
     },
     {
       "index": 10,
-      "slug": "how-do-you-write-a-custom-methodquery-in-mongodb",
-      "title": "How do you write a custom method/query in MongoDB",
-      "questionCount": 1
+      "slug": "query-optimization",
+      "title": "Query Optimization & EXPLAIN",
+      "questionCount": 5,
+      "questionIds": [
+        "Q1095",
+        "Q1066",
+        "Q1067",
+        "Q1160",
+        "Q1161"
+      ]
     },
     {
       "index": 11,
-      "slug": "what-is-acid-and-what-is-base",
-      "title": "What is ACID and what is BASE",
-      "questionCount": 1
+      "slug": "sharding-partitioning",
+      "title": "Sharding & Partitioning",
+      "questionCount": 7,
+      "questionIds": [
+        "Q1076",
+        "Q1167",
+        "Q1188",
+        "Q1189",
+        "Q1079",
+        "Q1080",
+        "Q1081"
+      ]
     },
     {
       "index": 12,
-      "slug": "database-connection-pool",
-      "title": "database & connection & pool",
-      "questionCount": 5
+      "slug": "database-internals",
+      "title": "Database Internals — B-tree, MVCC, WAL",
+      "questionCount": 1,
+      "questionIds": [
+        "Q1073"
+      ]
     },
     {
       "index": 13,
-      "slug": "what-is-the-difference-between-a-primary-key-and-a-unique-key",
-      "title": "What is the difference between a primary key and a unique key?",
-      "questionCount": 1
+      "slug": "stored-procedures",
+      "title": "Stored Procedures, Views & Triggers",
+      "questionCount": 6,
+      "questionIds": [
+        "Q1176",
+        "Q1126",
+        "Q1125",
+        "Q1127",
+        "Q1123",
+        "Q1122"
+      ]
     },
     {
       "index": 14,
-      "slug": "key-and-surrogate",
-      "title": "key & and & surrogate",
-      "questionCount": 2
+      "slug": "migrations",
+      "title": "Migrations & Schema Changes",
+      "questionCount": 1,
+      "questionIds": [
+        "Q1153"
+      ]
     },
     {
       "index": 15,
-      "slug": "what-is-a-foreign-key",
-      "title": "What is a foreign key",
-      "questionCount": 1
+      "slug": "practical-sql",
+      "title": "Practical SQL Queries",
+      "questionCount": 34,
+      "questionIds": [
+        "Q1179",
+        "Q1075",
+        "Q1072",
+        "Q1135",
+        "Q1168",
+        "Q1169",
+        "Q1106",
+        "Q1175",
+        "Q1141",
+        "Q1134",
+        "Q1065",
+        "Q1068",
+        "Q1070",
+        "Q1186",
+        "Q1187",
+        "Q1132",
+        "Q1133",
+        "Q1115",
+        "Q1110",
+        "Q1111",
+        "Q1143",
+        "Q1185",
+        "Q1064",
+        "Q1170",
+        "Q1128",
+        "Q1166",
+        "Q1190",
+        "Q1124",
+        "Q1129",
+        "Q1118",
+        "Q1152",
+        "Q1119",
+        "Q1136",
+        "Q1071"
+      ]
     },
     {
       "index": 16,
-      "slug": "explain-one-to-one",
-      "title": "Explain One-to-One",
-      "questionCount": 1
-    },
-    {
-      "index": 17,
-      "slug": "what-is-the-difference-between-the-where-and-having-clauses",
-      "title": "What is the difference between the `WHERE` and `HAVING` clauses?",
-      "questionCount": 1
-    },
-    {
-      "index": 18,
-      "slug": "what-is-the-difference-between-rank",
-      "title": "What is the difference between `RANK`",
-      "questionCount": 1
-    },
-    {
-      "index": 19,
-      "slug": "what-are-the-differences-between-union",
-      "title": "What are the differences between `UNION`",
-      "questionCount": 1
-    },
-    {
-      "index": 20,
-      "slug": "the-join-all",
-      "title": "the & JOIN & all",
-      "questionCount": 3
-    },
-    {
-      "index": 21,
-      "slug": "what-is-a-pivot-operation",
-      "title": "What is a PIVOT operation",
-      "questionCount": 1
-    },
-    {
-      "index": 22,
-      "slug": "what-are-aggregation-functions-and-what-is-the-difference-between-count",
-      "title": "What are aggregation functions, and what is the difference between `COUNT",
-      "questionCount": 1
-    },
-    {
-      "index": 23,
-      "slug": "count-counts-null",
-      "title": "COUNT & counts & NULL",
-      "questionCount": 2
-    },
-    {
-      "index": 24,
-      "slug": "explain-the-exists-operator",
-      "title": "Explain the `EXISTS` operator",
-      "questionCount": 1
-    },
-    {
-      "index": 25,
-      "slug": "when-you-only-need-to-check-that-a-related-row-exists-a-semi-join-why-is-exi",
-      "title": "When you only need to check that a related row exists (a semi-join), why is `EXI",
-      "questionCount": 1
-    },
-    {
-      "index": 26,
-      "slug": "what-are-sql-window-functions-over-partition-by-order-by-and-how",
-      "title": "What are SQL window functions (`OVER (PARTITION BY ... ORDER BY ...)`), and how ",
-      "questionCount": 1
-    },
-    {
-      "index": 27,
-      "slug": "what-is-a-cte",
-      "title": "What is a CTE",
-      "questionCount": 1
-    },
-    {
-      "index": 28,
-      "slug": "the-where-and",
-      "title": "the & WHERE & and",
-      "questionCount": 4
-    },
-    {
-      "index": 29,
-      "slug": "the-per-group",
-      "title": "the & per & group",
-      "questionCount": 2
-    },
-    {
-      "index": 30,
-      "slug": "for-find-customers-whose-latest-order-was-cancelled-why-must-you-rank-first-a",
-      "title": "For \"find customers whose LATEST order was cancelled\", why must you rank first a",
-      "questionCount": 1
-    },
-    {
-      "index": 31,
-      "slug": "what-are-the-differences-between-drop",
-      "title": "What are the differences between DROP",
-      "questionCount": 1
-    },
-    {
-      "index": 32,
-      "slug": "what-is-the-max-limit-of-varchar",
-      "title": "What is the max limit of VARCHAR",
-      "questionCount": 1
-    },
-    {
-      "index": 33,
-      "slug": "what-is-the-postgresql-equivalent-of-oracles-clob-data-type",
-      "title": "What is the PostgreSQL equivalent of Oracle's `CLOB` data type",
-      "questionCount": 1
-    },
-    {
-      "index": 34,
-      "slug": "what-are-the-differences-between-2nf-and-3nf",
-      "title": "What are the differences between 2NF and 3NF?",
-      "questionCount": 1
-    },
-    {
-      "index": 35,
-      "slug": "what-are-the-normal-forms",
-      "title": "What are the normal forms",
-      "questionCount": 1
-    },
-    {
-      "index": 36,
-      "slug": "what-is-the-purpose-of-using-views-in-sql",
-      "title": "What is the purpose of using Views in SQL",
-      "questionCount": 1
-    },
-    {
-      "index": 37,
-      "slug": "what-is-the-difference-between-a-plain-view-a-stored-query-computed-on-every-a",
-      "title": "What is the difference between a plain view (a stored query, computed on every a",
-      "questionCount": 1
-    },
-    {
-      "index": 38,
-      "slug": "what-is-dimensional-modeling-for-analytics",
-      "title": "What is dimensional modeling for analytics",
-      "questionCount": 1
-    },
-    {
-      "index": 39,
-      "slug": "what-is-a-stored-procedure-its-benefits-and-types",
-      "title": "What is a stored procedure, its benefits, and types",
-      "questionCount": 1
-    },
-    {
-      "index": 40,
-      "slug": "scenario-write-a-stored-procedure-that-accepts-two-input-parameters-uses-them",
-      "title": "(Scenario) Write a stored procedure that accepts two input parameters, uses them",
-      "questionCount": 1
-    },
-    {
-      "index": 41,
-      "slug": "what-is-a-trigger",
-      "title": "What is a trigger",
-      "questionCount": 1
-    },
-    {
-      "index": 42,
-      "slug": "what-is-a-cursor-when-is-it-used",
-      "title": "What is a cursor, when is it used",
-      "questionCount": 1
-    },
-    {
-      "index": 43,
-      "slug": "what-is-sql-injection-its-consequences-and-how-do-you-prevent-it",
-      "title": "What is SQL injection, its consequences, and how do you prevent it",
-      "questionCount": 1
-    },
-    {
-      "index": 44,
-      "slug": "the-locks-row",
-      "title": "the & locks & row",
-      "questionCount": 4
-    },
-    {
-      "index": 45,
-      "slug": "how-do-you-handle-time-zones-for-queries-meant-to-run-at-a-specific-time",
-      "title": "How do you handle time zones for queries meant to run at a specific time",
-      "questionCount": 1
-    },
-    {
-      "index": 46,
-      "slug": "can-you-set-a-default-time-zone-for-the-entire-application",
-      "title": "Can you set a default time zone for the entire application",
-      "questionCount": 1
-    },
-    {
-      "index": 47,
-      "slug": "which-http-method-do-you-prefer-for-passing-sensitive-data-like-aadhaarpan",
-      "title": "Which HTTP method do you prefer for passing sensitive data like Aadhaar/PAN",
-      "questionCount": 1
-    },
-    {
-      "index": 48,
-      "slug": "query-each-find",
-      "title": "query & each & find",
-      "questionCount": 4
-    },
-    {
-      "index": 49,
-      "slug": "given-an-employee",
-      "title": "Given an `employee",
-      "questionCount": 1
-    },
-    {
-      "index": 50,
-      "slug": "the-with-write",
-      "title": "the & with & Write",
-      "questionCount": 7
-    },
-    {
-      "index": 51,
-      "slug": "explain-the-cap-theorem",
-      "title": "Explain the CAP theorem",
-      "questionCount": 1
-    },
-    {
-      "index": 52,
-      "slug": "why-is-pick-consistency-or-availability-an-oversimplification-and-why-should",
-      "title": "Why is \"pick consistency OR availability\" an oversimplification, and why should ",
-      "questionCount": 1
-    },
-    {
-      "index": 53,
-      "slug": "explain-the-acid-properties",
-      "title": "Explain the ACID properties",
-      "questionCount": 1
-    },
-    {
-      "index": 54,
-      "slug": "what-is-the-pacelc-theorem-and-how-does-it-extend-cap",
-      "title": "What is the PACELC theorem and how does it extend CAP",
-      "questionCount": 1
-    },
-    {
-      "index": 55,
-      "slug": "how-do-you-change-a-schema-on-a-large-production-table-without-downtime-using-th",
-      "title": "How do you change a schema on a large production table without downtime using th",
-      "questionCount": 1
-    },
-    {
-      "index": 56,
-      "slug": "and-the-for",
-      "title": "and & the & for",
-      "questionCount": 3
-    },
-    {
-      "index": 57,
-      "slug": "the-and-transaction",
-      "title": "the & and & transaction",
-      "questionCount": 3
-    },
-    {
-      "index": 58,
-      "slug": "the-table-index",
-      "title": "the & table & index",
-      "questionCount": 2
-    },
-    {
-      "index": 59,
-      "slug": "what-are-temporary-tables-create-temporary-table-session-scoped-auto-droppe",
-      "title": "What are temporary tables (`CREATE TEMPORARY TABLE`, session-scoped, auto-droppe",
-      "questionCount": 1
-    },
-    {
-      "index": 60,
-      "slug": "insert-and-conflict",
-      "title": "INSERT & and & CONFLICT",
-      "questionCount": 3
-    },
-    {
-      "index": 61,
-      "slug": "what-is-a-database-sequence-create-sequence-nextval-how-does-it-differ-f",
-      "title": "What is a database sequence (`CREATE SEQUENCE`, `nextval`), how does it differ f",
-      "questionCount": 1
-    },
-    {
-      "index": 62,
-      "slug": "how-do-you-generate-globally-unique-ids-across-shards",
-      "title": "How do you generate globally-unique IDs across shards",
-      "questionCount": 1
-    },
-    {
-      "index": 63,
-      "slug": "check-the-sql",
-      "title": "CHECK & the & SQL",
-      "questionCount": 2
-    },
-    {
-      "index": 64,
-      "slug": "what-happens-if-you-add-a-not-null-constraint-to-a-column-that-already-contain",
-      "title": "What happens if you add a `NOT NULL` constraint to a column that already contain",
-      "questionCount": 1
-    },
-    {
-      "index": 65,
-      "slug": "subquery-correlated-from",
-      "title": "subquery & correlated & FROM",
-      "questionCount": 4
-    },
-    {
-      "index": 66,
-      "slug": "give-an-example-for-each-department-get-the-top-3-highest-paid-employees-using",
-      "title": "Give an example: for each department, get the top-3 highest-paid employees using",
-      "questionCount": 1
-    },
-    {
-      "index": 67,
-      "slug": "and-json-the",
-      "title": "and & JSON & the",
-      "questionCount": 6
-    },
-    {
-      "index": 68,
-      "slug": "what-is-the-difference-between-synchronous-replication-primary-waits-for-replic",
-      "title": "What is the difference between synchronous replication (primary waits for replic",
-      "questionCount": 1
-    },
-    {
-      "index": 69,
-      "slug": "what-is-the-difference-between-physicalstreaming-replication",
-      "title": "What is the difference between physical/streaming replication",
-      "questionCount": 1
-    },
-    {
-      "index": 70,
-      "slug": "what-are-common-replication-topologies",
-      "title": "What are common replication topologies",
-      "questionCount": 1
-    },
-    {
-      "index": 71,
-      "slug": "what-are-the-types-of-database-backups",
-      "title": "What are the types of database backups",
-      "questionCount": 1
-    },
-    {
-      "index": 72,
-      "slug": "restore-backup-wal",
-      "title": "restore & backup & WAL",
-      "questionCount": 2
-    },
-    {
-      "index": 73,
-      "slug": "shard-the-based",
-      "title": "shard & the & based",
-      "questionCount": 2
-    },
-    {
-      "index": 74,
-      "slug": "what-is-consistent-hashing-how-does-it-minimize-data-movement-when-addingremov",
-      "title": "What is consistent hashing, how does it minimize data movement when adding/remov",
-      "questionCount": 1
+      "slug": "advanced-database",
+      "title": "Advanced — Replication, Consistency, CAP",
+      "questionCount": 5,
+      "questionIds": [
+        "Q1149",
+        "Q1184",
+        "Q1183",
+        "Q1182",
+        "Q1150"
+      ]
     }
   ]
 }

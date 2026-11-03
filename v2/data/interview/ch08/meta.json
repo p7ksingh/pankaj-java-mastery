@@ -2,38 +2,120 @@
   "number": 8,
   "slug": "transactions",
   "title": "Transactions",
-  "topicCount": 5,
+  "topicCount": 10,
   "questionCount": 32,
   "topics": [
     {
       "index": 0,
-      "slug": "and-the-how",
-      "title": "and & the & how",
-      "questionCount": 12
+      "slug": "transactional-basics",
+      "title": "@Transactional Basics",
+      "questionCount": 7,
+      "questionIds": [
+        "Q576",
+        "Q576b",
+        "Q576c",
+        "Q576d",
+        "Q570",
+        "Q573",
+        "Q574"
+      ]
     },
     {
       "index": 1,
-      "slug": "the-use-and",
-      "title": "the & use & and",
-      "questionCount": 3
+      "slug": "declarative-vs-programmatic",
+      "title": "Declarative vs Programmatic",
+      "questionCount": 2,
+      "questionIds": [
+        "Q569",
+        "Q585"
+      ]
     },
     {
       "index": 2,
-      "slug": "why-is-using-requiresnew-synchronous-rest-calls-to-mimic-a-saga-an-anti-patte",
-      "title": "Why is using REQUIRES_NEW + synchronous REST calls to mimic a Saga an anti-patte",
-      "questionCount": 1
+      "slug": "isolation-levels",
+      "title": "Isolation Levels & MVCC",
+      "questionCount": 3,
+      "questionIds": [
+        "Q577",
+        "Q577b",
+        "Q581"
+      ]
     },
     {
       "index": 3,
-      "slug": "and-the-does",
-      "title": "and & the & does",
-      "questionCount": 8
+      "slug": "propagation",
+      "title": "Transaction Propagation",
+      "questionCount": 4,
+      "questionIds": [
+        "Q578",
+        "Q578b",
+        "Q578c",
+        "Q578d"
+      ]
     },
     {
       "index": 4,
-      "slug": "the-transactional-and",
-      "title": "the & Transactional & and",
-      "questionCount": 8
+      "slug": "rollback-and-pitfalls",
+      "title": "Rollback Rules & Pitfalls",
+      "questionCount": 5,
+      "questionIds": [
+        "Q579",
+        "Q579b",
+        "Q579c",
+        "Q596",
+        "Q597"
+      ]
+    },
+    {
+      "index": 5,
+      "slug": "deadlocks-and-locking",
+      "title": "Deadlocks & Locking",
+      "questionCount": 2,
+      "questionIds": [
+        "Q580",
+        "Q583"
+      ]
+    },
+    {
+      "index": 6,
+      "slug": "events-and-callbacks",
+      "title": "Events & Transaction Callbacks",
+      "questionCount": 3,
+      "questionIds": [
+        "Q571",
+        "Q587",
+        "Q595"
+      ]
+    },
+    {
+      "index": 7,
+      "slug": "multiple-datasources",
+      "title": "Multiple DataSources",
+      "questionCount": 2,
+      "questionIds": [
+        "Q584",
+        "Q591"
+      ]
+    },
+    {
+      "index": 8,
+      "slug": "distributed-transactions",
+      "title": "Distributed Transactions & Saga",
+      "questionCount": 2,
+      "questionIds": [
+        "Q572",
+        "Q589"
+      ]
+    },
+    {
+      "index": 9,
+      "slug": "internals",
+      "title": "Transaction Internals",
+      "questionCount": 2,
+      "questionIds": [
+        "Q582",
+        "Q582b"
+      ]
     }
   ]
 }

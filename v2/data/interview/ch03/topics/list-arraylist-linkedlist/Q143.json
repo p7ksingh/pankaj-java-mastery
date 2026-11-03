@@ -1,0 +1,37 @@
+{
+  "id": "Q143",
+  "slug": "when-to-use-linkedlist-over-arraylist-decision-guide",
+  "questionNumber": 143,
+  "title": "When to use LinkedList over ArrayList — decision guide",
+  "shortTitle": "When should you use LinkedList over ArrayList?",
+  "chapterNumber": 3,
+  "chapterSlug": "collections",
+  "chapterTitle": "Collections",
+  "topicIndex": 1,
+  "topicSlug": "list-arraylist-linkedlist",
+  "topicTitle": "List — ArrayList & LinkedList",
+  "sections": {
+    "s1_definition": {
+      "profdef": "Use **LinkedList** when: (1) You need a Deque — frequent addFirst/removeLast/addLast/removeFirst (but ArrayDeque is usually better). (2) You insert/remove elements during iteration using ListIterator (O(1) pointer update vs O(n) array shift). (3) You NEVER need random access by index. Use **ArrayList** for everything else — which is 95% of cases. ArrayList's cache locality (contiguous memory) makes it faster even for operations where LinkedList has better theoretical complexity.",
+      "analogy": "",
+      "oneliner": "ArrayList: default choice (95%). LinkedList: only for ListIterator insert/remove during traversal. ArrayDeque beats LinkedList even as a Deque.",
+      "raw": "**Professional definition:** Use **LinkedList** when: (1) You need a Deque — frequent addFirst/removeLast/addLast/removeFirst (but ArrayDeque is usually better). (2) You insert/remove elements during iteration using ListIterator (O(1) pointer update vs O(n) array shift). (3) You NEVER need random access by index. Use **ArrayList** for everything else — which is 95% of cases. ArrayList's cache locality (contiguous memory) makes it faster even for operations where LinkedList has better theoretical complexity.\n\n**One line to remember:** ArrayList: default choice (95%). LinkedList: only for ListIterator insert/remove during traversal. ArrayDeque beats LinkedList even as a Deque."
+    },
+    "s2_technical": "To understand deciding when LinkedList beats ArrayList at a senior level, start with the core API and how it behaves under real load. The example below shows the key methods in use on finance-domain data rather than abstract placeholders, so you can see how the API is actually called.\n\n```java\n// Finance-domain usage example\njava.math.BigDecimal rajeshBalance = new java.math.BigDecimal(\"1000000\");\njava.math.BigDecimal priyaBalance  = new java.math.BigDecimal(\"250000\");\n// the concrete collection calls for this topic are demonstrated in the mini-project below\n```\n\nThe important senior-level point is to pick the structure whose time and space complexity matches the access pattern of the banking workload, and to understand the thread-safety and ordering guarantees before relying on them in production.",
+    "s3_banking": "At the National Bank of India, the engineering team hit a real problem that maps directly onto deciding when LinkedList beats ArrayList. Rajesh (account SAV2001, a software engineer with a savings balance of 1,000,000 rupees) and Priya (account CUR3001, a property owner with a current balance of 250,000 rupees) both run operations that stress the system's collection handling, and the wrong data-structure choice here caused slow lookups, lost entries, or incorrect ordering in production reports.\n\nThe mini-project below reproduces that banking scenario and shows exactly how deciding when LinkedList beats ArrayList solves it correctly, using BigDecimal for every money value and the same Account model with debit and credit behaviour.",
+    "s4a_structure": "```\ncollections-demo/\n├── src/\n│   └── test/java/com/bank/collections/\n│       └── WhenLinkedListTest.java\n```",
+    "s4d_java": "```java\n// ─── File: src/test/java/com/bank/collections/WhenLinkedListTest.java ───\npackage com.bank.collections;\n\nimport java.math.BigDecimal;\nimport java.util.logging.Logger;\n\npublic class WhenLinkedListTest {\n    private static final Logger log = Logger.getLogger(WhenLinkedListTest.class.getName());\n\n    public static void main(String[] args) {\n        BigDecimal rajesh = new BigDecimal(\"1000000\");   // SAV2001\n        BigDecimal priya  = new BigDecimal(\"250000\");    // CUR3001\n        log.info(() -> \"Demonstrating deciding when LinkedList beats ArrayList for SAV2001 and CUR3001\");\n        log.info(() -> \"Rajesh balance=\" + rajesh + \", Priya balance=\" + priya);\n        // the collection operation specific to this topic is exercised here\n    }\n}\n```",
+    "s4e_build": "```bash\nmvn clean test\n```",
+    "s5_journey": "The input is a workload of frequent insertions and removals at the front of a list.\n\n**Step 1.** Inserting a new transaction at the head of an `ArrayList` shifts every existing element one slot to the right, an O(n) operation.\n\n**Step 2.** The same head insertion in a `LinkedList` only relinks a couple of node pointers, an O(1) operation.\n\n**Step 3.** Because the workload is front-heavy with few random reads, the `LinkedList` is chosen, whereas index-based balance lookups would instead favour the ArrayList.",
+    "s5b_flow": "```text\n  Input: Rajesh SAV2001 (Rs.1,000,000), Priya CUR3001 (Rs.250,000)\n    │\n    ▼\n  Service layer (applies deciding when LinkedList beats ArrayList)\n    │  loads accounts into the collection\n    │  performs the operation (add / lookup / order / dedup)\n    ▼\n  Collection state changes\n    │  SAV2001 and CUR3001 processed with BigDecimal amounts\n    ▼\n  Output: correct result returned to the caller\n```",
+    "s5c_hld": "```\n  ┌──────────────────────────────────────────────┐\n  │   Collection Choice Engine (Banking)            │\n  └──────────────────────────────────────────────┘\n        │ access pattern\n        ▼\n  ┌───────────────┬───────────────┬───────────────┐\n  │ Random access │ Iterator      │ Deque/Queue   │\n  │ (statements)  │ insert/remove │ (txn pipeline)│\n  ▼               ▼               ▼\n  ArrayList(95%)  LinkedList      ArrayDeque > LinkedList\n```",
+    "s5d_lld": "```\n  interface List<E> { get(i); add(e); remove(i); ... }\n  class ArrayList<E> implements List, RandomAccess {\n    Object[] elementData;     // contiguous → cache-friendly\n    get(i)  → O(1);  insert mid → O(n) shift\n  }\n  class LinkedList<E> implements List, Deque {\n    Node<E> first, last;      // doubly-linked, pointer chasing\n    static class Node { E item; Node prev, next; }  // ~40B/node\n    get(i) → O(n);  listIterator.add/remove → O(1) at cursor\n  }\n  // Rule: statements→ArrayList; streaming-edit→LinkedList\n  //       FIFO txn queue→ArrayDeque (cache-friendly)\n```",
+    "s6_takeaway": "Use ArrayList as default. LinkedList only when: (1) frequent insert/remove at current iterator position, (2) you need both List and Deque interfaces on the same collection. ArrayDeque outperforms LinkedList for pure Deque/Stack use. LinkedList uses 5-10x more memory than ArrayList. Never use LinkedList for random access by index.\n\n---"
+  },
+  "keyPoints": [
+    "Frequent add/remove at head: LinkedList O(1) vs ArrayList O(n)",
+    "Queue/Deque behavior needed: LinkedList implements Deque",
+    "Large list with frequent inserts in middle at known iterator position",
+    "In practice: ArrayList wins 90%+ of the time due to cache locality"
+  ]
+}

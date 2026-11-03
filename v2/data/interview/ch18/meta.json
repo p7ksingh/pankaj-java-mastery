@@ -2,200 +2,152 @@
   "number": 18,
   "slug": "aws-cloud",
   "title": "AWS & Cloud",
-  "topicCount": 32,
+  "topicCount": 13,
   "questionCount": 41,
   "topics": [
     {
       "index": 0,
-      "slug": "what-is-aws-and-what-is-the-difference-between-a-region-an-availability-zone",
-      "title": "What is AWS, and what is the difference between a Region, an Availability Zone",
-      "questionCount": 1
+      "slug": "aws-overview",
+      "title": "AWS Overview — Regions, AZs",
+      "questionCount": 1,
+      "questionIds": [
+        "Q1860"
+      ]
     },
     {
       "index": 1,
-      "slug": "what-is-iam",
-      "title": "What is IAM",
-      "questionCount": 1
+      "slug": "iam",
+      "title": "IAM — Users, Roles, Policies",
+      "questionCount": 5,
+      "questionIds": [
+        "Q1891",
+        "Q1861",
+        "Q1863",
+        "Q1864",
+        "Q1862"
+      ]
     },
     {
       "index": 2,
-      "slug": "when-do-you-use-an-iam-role-instead-of-an-iam-user-temporary-credentials-via-st",
-      "title": "When do you use an IAM Role instead of an IAM User (temporary credentials via ST",
-      "questionCount": 1
+      "slug": "ec2",
+      "title": "EC2 & Compute",
+      "questionCount": 7,
+      "questionIds": [
+        "Q1892",
+        "Q1870",
+        "Q1868",
+        "Q1865",
+        "Q1866",
+        "Q1888",
+        "Q1869"
+      ]
     },
     {
       "index": 3,
-      "slug": "what-is-the-difference-between-authentication-and-authorization-in-iam-and-how",
-      "title": "What is the difference between authentication and authorization in IAM, and how ",
-      "questionCount": 1
+      "slug": "vpc-networking",
+      "title": "VPC & Networking",
+      "questionCount": 8,
+      "questionIds": [
+        "Q1871",
+        "Q1872",
+        "Q1867",
+        "Q1879",
+        "Q1876",
+        "Q1873",
+        "Q1875",
+        "Q1874"
+      ]
     },
     {
       "index": 4,
-      "slug": "what-is-the-principle-of-least-privilege-and-how-do-you-scope-a-policy-to-a-sin",
-      "title": "What is the principle of least privilege, and how do you scope a policy to a sin",
-      "questionCount": 1
+      "slug": "s3-storage",
+      "title": "S3 & Storage",
+      "questionCount": 5,
+      "questionIds": [
+        "Q1894",
+        "Q1887",
+        "Q1884",
+        "Q1886",
+        "Q1885"
+      ]
     },
     {
       "index": 5,
-      "slug": "instance-key-what",
-      "title": "instance & key & what",
-      "questionCount": 2
+      "slug": "rds-database",
+      "title": "RDS & Database",
+      "questionCount": 2,
+      "questionIds": [
+        "Q1890",
+        "Q1889"
+      ]
     },
     {
       "index": 6,
-      "slug": "instance-how-level",
-      "title": "instance & how & level",
-      "questionCount": 2
+      "slug": "load-balancing",
+      "title": "Load Balancing & Auto Scaling",
+      "questionCount": 2,
+      "questionIds": [
+        "Q1883",
+        "Q1881"
+      ]
     },
     {
       "index": 7,
-      "slug": "what-is-a-private-ec2-instance",
-      "title": "What is a private EC2 instance",
-      "questionCount": 1
+      "slug": "route53-dns",
+      "title": "Route 53 & DNS",
+      "questionCount": 1,
+      "questionIds": [
+        "Q1882"
+      ]
     },
     {
       "index": 8,
-      "slug": "how-do-you-check-who-logged-into-an-ec2-instance-and-inspect-its-logs-without-cl",
-      "title": "How do you check who logged into an EC2 instance and inspect its logs without Cl",
-      "questionCount": 1
+      "slug": "monitoring",
+      "title": "CloudWatch & Monitoring",
+      "questionCount": 1,
+      "questionIds": [
+        "Q1878"
+      ]
     },
     {
       "index": 9,
-      "slug": "gateway-subnet-what",
-      "title": "Gateway & subnet & what",
-      "questionCount": 2
+      "slug": "lambda",
+      "title": "Lambda & Serverless",
+      "questionCount": 2,
+      "questionIds": [
+        "Q1893",
+        "Q1897"
+      ]
     },
     {
       "index": 10,
-      "slug": "what-is-a-route-table",
-      "title": "What is a route table",
-      "questionCount": 1
+      "slug": "containers",
+      "title": "ECS, EKS & Containers",
+      "questionCount": 1,
+      "questionIds": [
+        "Q1898"
+      ]
     },
     {
       "index": 11,
-      "slug": "what-is-vpc-peering-why-is-it-non-transitive-and-scenario-two-vpcs-are-peere",
-      "title": "What is VPC peering, why is it non-transitive, and (scenario) two VPCs are peere",
-      "questionCount": 1
+      "slug": "iac",
+      "title": "CloudFormation & SAM",
+      "questionCount": 0,
+      "questionIds": []
     },
     {
       "index": 12,
-      "slug": "what-is-a-vpc-endpoint",
-      "title": "What is a VPC Endpoint",
-      "questionCount": 1
-    },
-    {
-      "index": 13,
-      "slug": "vpc-cidr-and",
-      "title": "VPC & CIDR & and",
-      "questionCount": 2
-    },
-    {
-      "index": 14,
-      "slug": "what-is-an-aws-transit-gateway-and-how-does-it-enable-a-hub-and-spoke-topology",
-      "title": "What is an AWS Transit Gateway, and how does it enable a hub-and-spoke topology ",
-      "questionCount": 1
-    },
-    {
-      "index": 15,
-      "slug": "route-table-attachment",
-      "title": "route & table & attachment",
-      "questionCount": 2
-    },
-    {
-      "index": 16,
-      "slug": "what-are-the-aws-load-balancer-types",
-      "title": "What are the AWS load balancer types",
-      "questionCount": 1
-    },
-    {
-      "index": 17,
-      "slug": "what-is-route-53-what-are-its-routing-policies",
-      "title": "What is Route 53, what are its routing policies",
-      "questionCount": 1
-    },
-    {
-      "index": 18,
-      "slug": "how-do-you-map-a-domain-name-to-a-load-balancer",
-      "title": "How do you map a domain name to a load balancer",
-      "questionCount": 1
-    },
-    {
-      "index": 19,
-      "slug": "what-is-ebs-what-are-the-volume-types",
-      "title": "What is EBS, what are the volume types",
-      "questionCount": 1
-    },
-    {
-      "index": 20,
-      "slug": "what-is-s3-what-are-its-storage-classes",
-      "title": "What is S3, what are its storage classes",
-      "questionCount": 1
-    },
-    {
-      "index": 21,
-      "slug": "what-is-s3-versioning-how-does-it-protect-against-accidental-overwritedelete",
-      "title": "What is S3 versioning, how does it protect against accidental overwrite/delete",
-      "questionCount": 1
-    },
-    {
-      "index": 22,
-      "slug": "how-do-you-secure-an-s3-bucket",
-      "title": "How do you secure an S3 bucket",
-      "questionCount": 1
-    },
-    {
-      "index": 23,
-      "slug": "read-rds-and",
-      "title": "read & RDS & and",
-      "questionCount": 2
-    },
-    {
-      "index": 24,
-      "slug": "database-rds-the",
-      "title": "database & RDS & the",
-      "questionCount": 2
-    },
-    {
-      "index": 25,
-      "slug": "and-lambda-you",
-      "title": "and & Lambda & you",
-      "questionCount": 3
-    },
-    {
-      "index": 26,
-      "slug": "what-is-the-aws-well-architected-framework",
-      "title": "What is the AWS Well-Architected Framework",
-      "questionCount": 1
-    },
-    {
-      "index": 27,
-      "slug": "what-is-disaster-recovery-on-aws",
-      "title": "What is disaster recovery on AWS",
-      "questionCount": 1
-    },
-    {
-      "index": 28,
-      "slug": "what-are-common-serverless-patterns",
-      "title": "What are common serverless patterns",
-      "questionCount": 1
-    },
-    {
-      "index": 29,
-      "slug": "what-is-the-difference-between-ecs-and-eks",
-      "title": "What is the difference between ECS and EKS",
-      "questionCount": 1
-    },
-    {
-      "index": 30,
-      "slug": "how-do-you-optimize-aws-costs",
-      "title": "How do you optimize AWS costs",
-      "questionCount": 1
-    },
-    {
-      "index": 31,
-      "slug": "what-is-a-multi-account-aws-strategy",
-      "title": "What is a multi-account AWS strategy",
-      "questionCount": 1
+      "slug": "advanced-aws",
+      "title": "Advanced AWS",
+      "questionCount": 6,
+      "questionIds": [
+        "Q1899",
+        "Q1880",
+        "Q1877",
+        "Q1900",
+        "Q1896",
+        "Q1895"
+      ]
     }
   ]
 }

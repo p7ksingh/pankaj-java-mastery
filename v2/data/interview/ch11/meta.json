@@ -2,236 +2,219 @@
   "number": 11,
   "slug": "kafka-messaging",
   "title": "Kafka & Messaging",
-  "topicCount": 38,
+  "topicCount": 15,
   "questionCount": 91,
   "topics": [
     {
       "index": 0,
-      "slug": "kafka-and-for",
-      "title": "Kafka & and & for",
-      "questionCount": 10
+      "slug": "kafka-fundamentals",
+      "title": "Kafka Fundamentals — Topics, Partitions, Offsets",
+      "questionCount": 18,
+      "questionIds": [
+        "Q941",
+        "Q984",
+        "Q985",
+        "Q986",
+        "Q987",
+        "Q989",
+        "Q963",
+        "Q937",
+        "Q939",
+        "Q901",
+        "Q903",
+        "Q904",
+        "Q908",
+        "Q943",
+        "Q944",
+        "Q952",
+        "Q942",
+        "Q965"
+      ]
     },
     {
       "index": 1,
-      "slug": "what-is-the-role-of-leader-and-follower-replicas-and-what-is-the-in-sync-replic",
-      "title": "What is the role of leader and follower replicas, and what is the in-sync replic",
-      "questionCount": 1
+      "slug": "consumer-groups",
+      "title": "Consumer Groups & Rebalancing",
+      "questionCount": 5,
+      "questionIds": [
+        "Q951",
+        "Q960",
+        "Q906",
+        "Q907",
+        "Q921"
+      ]
     },
     {
       "index": 2,
-      "slug": "what-is-the-replication-factor-in-kafka",
-      "title": "What is the replication factor in Kafka",
-      "questionCount": 1
+      "slug": "replication",
+      "title": "Replication & Fault Tolerance",
+      "questionCount": 13,
+      "questionIds": [
+        "Q940",
+        "Q964",
+        "Q967",
+        "Q918",
+        "Q971",
+        "Q972",
+        "Q935",
+        "Q911",
+        "Q931",
+        "Q933",
+        "Q910",
+        "Q909",
+        "Q954"
+      ]
     },
     {
       "index": 3,
-      "slug": "what-is-fault-tolerance-and-how-is-it-achieved-using-the-replication-factor",
-      "title": "What is fault tolerance, and how is it achieved using the replication factor",
-      "questionCount": 1
+      "slug": "delivery-semantics",
+      "title": "Delivery Semantics & Exactly-Once",
+      "questionCount": 10,
+      "questionIds": [
+        "Q974",
+        "Q956",
+        "Q958",
+        "Q938",
+        "Q945",
+        "Q932",
+        "Q922",
+        "Q923",
+        "Q970",
+        "Q913"
+      ]
     },
     {
       "index": 4,
-      "slug": "what-replaced-zookeeper-in-kafka-40",
-      "title": "What replaced ZooKeeper in Kafka 4.0",
-      "questionCount": 1
+      "slug": "producer-config",
+      "title": "Producer — Config, Acks, Batching",
+      "questionCount": 10,
+      "questionIds": [
+        "Q978",
+        "Q957",
+        "Q936",
+        "Q920",
+        "Q953",
+        "Q925",
+        "Q926",
+        "Q915",
+        "Q968",
+        "Q934"
+      ]
     },
     {
       "index": 5,
-      "slug": "what-are-the-three-delivery-semantics",
-      "title": "What are the three delivery semantics",
-      "questionCount": 1
+      "slug": "consumer-config",
+      "title": "Consumer — Commits, Polling, Deserialization",
+      "questionCount": 7,
+      "questionIds": [
+        "Q959",
+        "Q946",
+        "Q947",
+        "Q948",
+        "Q929",
+        "Q905",
+        "Q950"
+      ]
     },
     {
       "index": 6,
-      "slug": "what-is-the-difference-between-log-retention-and-log-compaction",
-      "title": "What is the difference between log retention and log compaction?",
-      "questionCount": 1
+      "slug": "kafka-streams",
+      "title": "Kafka Streams",
+      "questionCount": 2,
+      "questionIds": [
+        "Q980",
+        "Q949"
+      ]
     },
     {
       "index": 7,
-      "slug": "what-happens-if-a-producer-sends-a-message-but-no-consumers-are-subscribed",
-      "title": "What happens if a producer sends a message but no consumers are subscribed",
-      "questionCount": 1
+      "slug": "kafka-connect",
+      "title": "Kafka Connect",
+      "questionCount": 4,
+      "questionIds": [
+        "Q977",
+        "Q979",
+        "Q981",
+        "Q982"
+      ]
     },
     {
       "index": 8,
-      "slug": "the-and-schema",
-      "title": "the & and & Schema",
-      "questionCount": 3
+      "slug": "spring-kafka",
+      "title": "Spring Kafka Integration",
+      "questionCount": 2,
+      "questionIds": [
+        "Q975",
+        "Q969"
+      ]
     },
     {
       "index": 9,
-      "slug": "key-and-you",
-      "title": "key & and & you",
-      "questionCount": 2
+      "slug": "schema-registry",
+      "title": "Schema Registry & Avro",
+      "questionCount": 2,
+      "questionIds": [
+        "Q916",
+        "Q917"
+      ]
     },
     {
       "index": 10,
-      "slug": "what-is-the-difference-between-the-eager-and-cooperative-sticky-rebalance-protoc",
-      "title": "What is the difference between the eager and cooperative-sticky rebalance protoc",
-      "questionCount": 1
+      "slug": "compaction-retention",
+      "title": "Compaction & Retention",
+      "questionCount": 5,
+      "questionIds": [
+        "Q955",
+        "Q962",
+        "Q961",
+        "Q966",
+        "Q914"
+      ]
     },
     {
       "index": 11,
-      "slug": "idempotent-producer-and",
-      "title": "idempotent & producer & and",
-      "questionCount": 2
+      "slug": "error-handling-dlt",
+      "title": "Error Handling & Dead Letter Topics",
+      "questionCount": 6,
+      "questionIds": [
+        "Q976",
+        "Q924",
+        "Q653",
+        "Q973",
+        "Q927",
+        "Q928"
+      ]
     },
     {
       "index": 12,
-      "slug": "how-do-you-handle-a-poison-pill-message-that-keeps-failing",
-      "title": "How do you handle a poison-pill message that keeps failing",
-      "questionCount": 1
+      "slug": "kafka-comparison",
+      "title": "Kafka vs RabbitMQ vs SQS vs Pulsar",
+      "questionCount": 5,
+      "questionIds": [
+        "Q983",
+        "Q988",
+        "Q900",
+        "Q902",
+        "Q919"
+      ]
     },
     {
       "index": 13,
-      "slug": "the-retry-dlq",
-      "title": "the & retry & DLQ",
-      "questionCount": 4
+      "slug": "troubleshooting",
+      "title": "Troubleshooting & Operations",
+      "questionCount": 1,
+      "questionIds": [
+        "Q930"
+      ]
     },
     {
       "index": 14,
-      "slug": "does-and-consumer",
-      "title": "does & and & consumer",
-      "questionCount": 2
-    },
-    {
-      "index": 15,
-      "slug": "what-is-mininsyncreplicas",
-      "title": "What is `min.insync.replicas`",
-      "questionCount": 1
-    },
-    {
-      "index": 16,
-      "slug": "how-do-you-configure-producersconsumers-for-guaranteed-delivery",
-      "title": "How do you configure producers/consumers for guaranteed delivery",
-      "questionCount": 1
-    },
-    {
-      "index": 17,
-      "slug": "what-is-the-default-message-size-in-kafka",
-      "title": "What is the default message size in Kafka",
-      "questionCount": 1
-    },
-    {
-      "index": 18,
-      "slug": "what-parameters-must-be-configured-for-message-flow-from-producer-to-broker-to-c",
-      "title": "What parameters must be configured for message flow from producer to broker to c",
-      "questionCount": 1
-    },
-    {
-      "index": 19,
-      "slug": "what-happens-if-a-message-exceeds-the-default-size",
-      "title": "What happens if a message exceeds the default size",
-      "questionCount": 1
-    },
-    {
-      "index": 20,
-      "slug": "compression-and-end",
-      "title": "compression & and & end",
-      "questionCount": 3
-    },
-    {
-      "index": 21,
-      "slug": "how-many-partitions-should-a-topic-have",
-      "title": "How many partitions should a topic have",
-      "questionCount": 1
-    },
-    {
-      "index": 22,
-      "slug": "active-you-kafka",
-      "title": "active & you & Kafka",
-      "questionCount": 2
-    },
-    {
-      "index": 23,
-      "slug": "what-is-tiered-storage",
-      "title": "What is tiered storage",
-      "questionCount": 1
-    },
-    {
-      "index": 24,
-      "slug": "kafka-you-secure",
-      "title": "Kafka & you & secure",
-      "questionCount": 2
-    },
-    {
-      "index": 25,
-      "slug": "consumer-the-and",
-      "title": "consumer & the & and",
-      "questionCount": 4
-    },
-    {
-      "index": 26,
-      "slug": "write-kafka-that",
-      "title": "Write & Kafka & that",
-      "questionCount": 2
-    },
-    {
-      "index": 27,
-      "slug": "a-rolling-deployment-triggers-a-rebalance-for-every-pod-restart",
-      "title": "A rolling deployment triggers a rebalance for every pod restart",
-      "questionCount": 1
-    },
-    {
-      "index": 28,
-      "slug": "partition-increasing-topic",
-      "title": "partition & Increasing & topic",
-      "questionCount": 2
-    },
-    {
-      "index": 29,
-      "slug": "with-mininsyncreplicas1-acksall-replication-factor-3",
-      "title": "With `min.insync.replicas=1`, `acks=all`, replication factor 3",
-      "questionCount": 1
-    },
-    {
-      "index": 30,
-      "slug": "a-compacted-topic-still-shows-old-records-for-a-key-you-thought-was-deleted",
-      "title": "A compacted topic still shows old records for a key you thought was deleted",
-      "questionCount": 1
-    },
-    {
-      "index": 31,
-      "slug": "and-the-kafka",
-      "title": "and & the & Kafka",
-      "questionCount": 6
-    },
-    {
-      "index": 32,
-      "slug": "and-the-isolation",
-      "title": "and & the & isolation",
-      "questionCount": 3
-    },
-    {
-      "index": 33,
-      "slug": "why-can-kafka-sustain-very-high-throughput-on-commodity-disks",
-      "title": "Why can Kafka sustain very high throughput on commodity disks",
-      "questionCount": 1
-    },
-    {
-      "index": 34,
-      "slug": "broker-partition-and",
-      "title": "broker & partition & and",
-      "questionCount": 2
-    },
-    {
-      "index": 35,
-      "slug": "what-is-the-difference-between-batch-processing-bounded-data-processed-in-large",
-      "title": "What is the difference between batch processing (bounded data processed in large",
-      "questionCount": 1
-    },
-    {
-      "index": 36,
-      "slug": "the-and-you",
-      "title": "the & and & you",
-      "questionCount": 5
-    },
-    {
-      "index": 37,
-      "slug": "and-kafka-for",
-      "title": "and & Kafka & for",
-      "questionCount": 16
+      "slug": "advanced-kafka",
+      "title": "Advanced Kafka — Security, Tuning, Patterns",
+      "questionCount": 1,
+      "questionIds": [
+        "Q912"
+      ]
     }
   ]
 }

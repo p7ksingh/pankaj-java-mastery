@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { Logo } from '@/components/ui/Logo'
 import { useDarkMode } from '@/hooks/useDarkMode'
 import styles from './TopBar.module.css'
 
@@ -23,7 +24,7 @@ export function TopBar({
     <nav className={styles.topbar} aria-label="Main">
       <div className={styles.left}>
         <Link href="/" className={styles.logoLink} title="Go to Home">
-          <span className={styles.logo}>&#9749;</span>
+          <Logo size={34} className={styles.logo} />
           <span className={styles.brand}>{siteName}</span>
         </Link>
       </div>

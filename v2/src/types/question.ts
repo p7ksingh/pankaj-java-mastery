@@ -12,6 +12,7 @@ export interface QuestionSummary {
 
 /** Full question with all answer sections. */
 export interface Question extends QuestionSummary {
+  keyPoints?: string[]
   sections: AnswerSections
 }
 

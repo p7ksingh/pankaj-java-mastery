@@ -24,7 +24,12 @@
   text-decoration: none;
 }
 
+.questionRow:hover .questionTitle {
+  font-weight: 800;
+  color: var(--color-link);
+}
+
 .questionTitle {
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--font-size-base);
 }

@@ -1,57 +1,139 @@
 {
   "number": 7,
-  "slug": "spring-spring-boot",
+  "slug": "spring-boot",
   "title": "Spring & Spring Boot",
-  "topicCount": 8,
+  "topicCount": 13,
   "questionCount": 26,
   "topics": [
     {
       "index": 0,
-      "slug": "the-and-spring",
-      "title": "the & and & Spring",
-      "questionCount": 3
+      "slug": "ioc-and-bean-lifecycle",
+      "title": "IoC Container & Bean Lifecycle",
+      "questionCount": 4,
+      "questionIds": [
+        "Q421",
+        "Q422",
+        "Q423",
+        "Q428"
+      ]
     },
     {
       "index": 1,
-      "slug": "what-are-all-mechanisms-to-resolve-multiple-beans-of-the-same-type",
-      "title": "What are all mechanisms to resolve multiple beans of the same type",
-      "questionCount": 1
+      "slug": "dependency-injection",
+      "title": "Dependency Injection",
+      "questionCount": 3,
+      "questionIds": [
+        "Q424",
+        "Q425",
+        "Q426"
+      ]
     },
     {
       "index": 2,
-      "slug": "the-are-constructor",
-      "title": "the & are & constructor",
-      "questionCount": 2
+      "slug": "bean-types-and-stereotypes",
+      "title": "Bean Types & Stereotypes",
+      "questionCount": 2,
+      "questionIds": [
+        "Q429",
+        "Q432"
+      ]
     },
     {
       "index": 3,
-      "slug": "you-and-spring",
-      "title": "you & and & Spring",
-      "questionCount": 10
+      "slug": "web-layer",
+      "title": "Web Layer — Controllers & Request Mapping",
+      "questionCount": 3,
+      "questionIds": [
+        "Q427",
+        "Q430",
+        "Q431"
+      ]
     },
     {
       "index": 4,
-      "slug": "what-is-aop",
-      "title": "What is AOP",
-      "questionCount": 1
+      "slug": "configuration-and-profiles",
+      "title": "Configuration & Profiles",
+      "questionCount": 2,
+      "questionIds": [
+        "Q433",
+        "Q434"
+      ]
     },
     {
       "index": 5,
-      "slug": "you-spring-redis",
-      "title": "you & Spring & Redis",
-      "questionCount": 5
+      "slug": "aop",
+      "title": "AOP — Aspect-Oriented Programming",
+      "questionCount": 1,
+      "questionIds": [
+        "Q437"
+      ]
     },
     {
       "index": 6,
-      "slug": "why-does-transactional-on-private-method-do-nothing-why-does-async-self-invok",
-      "title": "Why does @Transactional on private method do nothing? Why does @Async self-invok",
-      "questionCount": 1
+      "slug": "caching",
+      "title": "Caching — Spring Cache & Redis",
+      "questionCount": 1,
+      "questionIds": [
+        "Q438"
+      ]
     },
     {
       "index": 7,
-      "slug": "spring-webflux-work",
-      "title": "Spring & WebFlux & work",
-      "questionCount": 3
+      "slug": "testing",
+      "title": "Testing — Unit, Integration, Testcontainers",
+      "questionCount": 1,
+      "questionIds": [
+        "Q439"
+      ]
+    },
+    {
+      "index": 8,
+      "slug": "security",
+      "title": "Spring Security — JWT, OAuth2, CSRF/CORS",
+      "questionCount": 3,
+      "questionIds": [
+        "Q440",
+        "Q441",
+        "Q445"
+      ]
+    },
+    {
+      "index": 9,
+      "slug": "logging-and-monitoring",
+      "title": "Logging & Monitoring",
+      "questionCount": 2,
+      "questionIds": [
+        "Q435",
+        "Q436"
+      ]
+    },
+    {
+      "index": 10,
+      "slug": "proxy-and-internals",
+      "title": "Proxy, @Transactional Pitfalls & Internals",
+      "questionCount": 2,
+      "questionIds": [
+        "Q443",
+        "Q444"
+      ]
+    },
+    {
+      "index": 11,
+      "slug": "performance-and-debugging",
+      "title": "Performance & Debugging",
+      "questionCount": 1,
+      "questionIds": [
+        "Q442"
+      ]
+    },
+    {
+      "index": 12,
+      "slug": "advanced-spring",
+      "title": "Advanced — WebFlux, WebSocket, Virtual Threads",
+      "questionCount": 1,
+      "questionIds": [
+        "Q446"
+      ]
     }
   ]
 }

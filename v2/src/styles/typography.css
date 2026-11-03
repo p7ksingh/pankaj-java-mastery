@@ -1,36 +1,43 @@
-/* Font imports and typographic scale. */
+/* Bold sans headings, serif body. Matches screenshot style. */
 
-/* Heading scale */
 h1 {
+  font-family: var(--font-family);
   font-size: var(--font-size-2xl);
   font-weight: 800;
-  line-height: 1.25;
-  color: var(--color-text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
 }
 
 h2 {
+  font-family: var(--font-family);
   font-size: var(--font-size-xl);
-  font-weight: 700;
-  line-height: 1.3;
-  color: var(--color-text-primary);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
 }
 
 h3 {
+  font-family: var(--font-family);
   font-size: var(--font-size-lg);
-  font-weight: 700;
-  line-height: 1.35;
-  color: var(--color-text-primary);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
 }
 
 h4 {
+  font-family: var(--font-family);
   font-size: var(--font-size-md);
-  font-weight: 600;
-  line-height: 1.4;
-  color: var(--color-text-primary);
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: #1a1a1a;
 }
 
 p {
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--color-text-secondary);
 }
 
@@ -41,4 +48,16 @@ small {
 
 strong {
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 24px; }
+  h2 { font-size: 20px; }
+  h3 { font-size: 18px; }
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 22px; }
+  h2 { font-size: 19px; }
+  h3 { font-size: 17px; }
 }

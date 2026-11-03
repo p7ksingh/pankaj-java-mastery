@@ -16,6 +16,7 @@ interface RawQuestion {
   topicIndex: number
   topicSlug: string
   topicTitle: string
+  keyPoints?: string[]
   sections: Record<string, unknown>
 }
 
@@ -83,7 +84,7 @@ function toSummary(raw: RawQuestion): QuestionSummary {
 function toQuestion(raw: RawQuestion): Question {
   return {
     ...toSummary(raw),
-    // Validated during data split. Cast is safe.
+    keyPoints: raw.keyPoints || [],
     sections: raw.sections as AnswerSections,
   }
 }

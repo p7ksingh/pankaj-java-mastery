@@ -2,200 +2,213 @@
   "number": 9,
   "slug": "jpa-hibernate",
   "title": "JPA & Hibernate",
-  "topicCount": 32,
+  "topicCount": 17,
   "questionCount": 69,
   "topics": [
     {
       "index": 0,
-      "slug": "hibernate-jpa-advantages",
-      "title": "Hibernate & JPA & Advantages",
-      "questionCount": 3
+      "slug": "jpa-fundamentals",
+      "title": "JPA Fundamentals",
+      "questionCount": 5,
+      "questionIds": [
+        "Q592",
+        "Q596",
+        "Q634",
+        "Q635",
+        "Q667"
+      ]
     },
     {
       "index": 1,
-      "slug": "what-are-the-4-entity-states",
-      "title": "What are the 4 entity states",
-      "questionCount": 1
+      "slug": "n-plus-1-and-fetching",
+      "title": "N+1 Problem & Fetching",
+      "questionCount": 2,
+      "questionIds": [
+        "Q593",
+        "Q594"
+      ]
     },
     {
       "index": 2,
-      "slug": "why-do-very-large-in-clauses-eg-findbyidinlistlong-ids-with-10k-ids-hurt",
-      "title": "Why do very large IN clauses (e.g. findByIdIn(List<Long> ids) with 10K ids) hurt",
-      "questionCount": 1
+      "slug": "entity-relationships",
+      "title": "Entity Mapping — Relationships",
+      "questionCount": 5,
+      "questionIds": [
+        "Q629",
+        "Q652",
+        "Q659",
+        "Q660",
+        "Q676"
+      ]
     },
     {
       "index": 3,
-      "slug": "how-do-you-perform-pagination-and-sorting-in-jpa",
-      "title": "How do you perform pagination and sorting in JPA",
-      "questionCount": 1
+      "slug": "entity-keys-columns",
+      "title": "Entity Mapping — Keys, Columns & Annotations",
+      "questionCount": 8,
+      "questionIds": [
+        "Q630",
+        "Q631",
+        "Q632",
+        "Q633",
+        "Q653",
+        "Q654",
+        "Q655",
+        "Q656"
+      ]
     },
     {
       "index": 4,
-      "slug": "what-does-transactional",
-      "title": "What does @Transactional",
-      "questionCount": 1
+      "slug": "entity-embeddable-inheritance",
+      "title": "Embeddable, Inheritance & Secondary Tables",
+      "questionCount": 5,
+      "questionIds": [
+        "Q657",
+        "Q658",
+        "Q680",
+        "Q681",
+        "Q682"
+      ]
     },
     {
       "index": 5,
-      "slug": "and-the-interface",
-      "title": "and & the & interface",
-      "questionCount": 3
+      "slug": "spring-data-repositories",
+      "title": "Spring Data Repositories",
+      "questionCount": 4,
+      "questionIds": [
+        "Q624",
+        "Q625",
+        "Q647",
+        "Q648"
+      ]
     },
     {
       "index": 6,
-      "slug": "and-jpa-you",
-      "title": "and & JPA & you",
-      "questionCount": 10
+      "slug": "queries",
+      "title": "Queries — JPQL, Native, Derived, Criteria",
+      "questionCount": 6,
+      "questionIds": [
+        "Q626",
+        "Q627",
+        "Q649",
+        "Q650",
+        "Q683",
+        "Q684"
+      ]
     },
     {
       "index": 7,
-      "slug": "and-jpa-you-7",
-      "title": "and & JPA & you",
-      "questionCount": 9
+      "slug": "projections",
+      "title": "Projections — Interface, DTO, Dynamic",
+      "questionCount": 4,
+      "questionIds": [
+        "Q623",
+        "Q628",
+        "Q646",
+        "Q651"
+      ]
     },
     {
       "index": 8,
-      "slug": "what-does-transactional-8",
-      "title": "What does @Transactional",
-      "questionCount": 1
+      "slug": "entity-lifecycle-auditing",
+      "title": "Entity Lifecycle & Auditing",
+      "questionCount": 2,
+      "questionIds": [
+        "Q636",
+        "Q637"
+      ]
     },
     {
       "index": 9,
-      "slug": "and-the-how",
-      "title": "and & the & how",
-      "questionCount": 3
+      "slug": "locking",
+      "title": "Locking — Optimistic & Pessimistic",
+      "questionCount": 4,
+      "questionIds": [
+        "Q638",
+        "Q639",
+        "Q640",
+        "Q641"
+      ]
     },
     {
       "index": 10,
-      "slug": "and-are-jpa",
-      "title": "and & are & JPA",
-      "questionCount": 3
+      "slug": "pagination-sorting",
+      "title": "Pagination & Sorting",
+      "questionCount": 3,
+      "questionIds": [
+        "Q621",
+        "Q642",
+        "Q644"
+      ]
     },
     {
       "index": 11,
-      "slug": "how-do-you-map-a-two-table-parent-child-relationship-with-onetomany",
-      "title": "How do you map a two-table parent-child relationship with @OneToMany",
-      "questionCount": 1
+      "slug": "performance",
+      "title": "Performance — Large IN, Dirty Checking, OSIV",
+      "questionCount": 6,
+      "questionIds": [
+        "Q620",
+        "Q622",
+        "Q643",
+        "Q645",
+        "Q673",
+        "Q674"
+      ]
     },
     {
       "index": 12,
-      "slug": "how-do-you-model-a-composite-primary-key-in-jpa",
-      "title": "How do you model a composite primary key in JPA",
-      "questionCount": 1
+      "slug": "flush-persist-cache",
+      "title": "Flush, Persist & Cache",
+      "questionCount": 5,
+      "questionIds": [
+        "Q668",
+        "Q669",
+        "Q670",
+        "Q671",
+        "Q672"
+      ]
     },
     {
       "index": 13,
-      "slug": "how-does-and",
-      "title": "how & does & and",
-      "questionCount": 2
+      "slug": "cascade-soft-delete",
+      "title": "Cascade, Orphan Removal & Soft Delete",
+      "questionCount": 2,
+      "questionIds": [
+        "Q675",
+        "Q677"
+      ]
     },
     {
       "index": 14,
-      "slug": "how-does-column-control-field-to-column-mapping",
-      "title": "How does @Column control field-to-column mapping",
-      "questionCount": 1
+      "slug": "batch-processing",
+      "title": "Batch Processing",
+      "questionCount": 2,
+      "questionIds": [
+        "Q678",
+        "Q679"
+      ]
     },
     {
       "index": 15,
-      "slug": "what-is-secondarytable",
-      "title": "What is @SecondaryTable",
-      "questionCount": 1
+      "slug": "multi-database",
+      "title": "Multi-Database & Migration",
+      "questionCount": 2,
+      "questionIds": [
+        "Q661",
+        "Q662"
+      ]
     },
     {
       "index": 16,
-      "slug": "why-does-a-random-uuidv4-primary-key-hurt-write-performance",
-      "title": "Why does a random UUIDv4 primary key hurt write performance",
-      "questionCount": 1
-    },
-    {
-      "index": 17,
-      "slug": "cascade-end-jpa",
-      "title": "cascade & end & JPA",
-      "questionCount": 2
-    },
-    {
-      "index": 18,
-      "slug": "spring-boot-application",
-      "title": "Spring & Boot & application",
-      "questionCount": 2
-    },
-    {
-      "index": 19,
-      "slug": "how-do-you-process-a-very-large-dataset-inside-a-scheduled-job-without-running",
-      "title": "How do you process a very large dataset inside a @Scheduled job without running ",
-      "questionCount": 1
-    },
-    {
-      "index": 20,
-      "slug": "you-and-spring",
-      "title": "you & and & Spring",
-      "questionCount": 3
-    },
-    {
-      "index": 21,
-      "slug": "what-is-the-jpa-persistence-context",
-      "title": "What is the JPA persistence context",
-      "questionCount": 1
-    },
-    {
-      "index": 22,
-      "slug": "what-is-the-difference-between-sessionevict",
-      "title": "What is the difference between session.evict",
-      "questionCount": 1
-    },
-    {
-      "index": 23,
-      "slug": "the-difference-between",
-      "title": "the & difference & between",
-      "questionCount": 2
-    },
-    {
-      "index": 24,
-      "slug": "why-does-calling-save",
-      "title": "Why does calling save",
-      "questionCount": 1
-    },
-    {
-      "index": 25,
-      "slug": "what-are-the-hibernate-flush-modes",
-      "title": "What are the Hibernate flush modes",
-      "questionCount": 1
-    },
-    {
-      "index": 26,
-      "slug": "what-is-open-session-in-view",
-      "title": "What is Open-Session-In-View",
-      "questionCount": 1
-    },
-    {
-      "index": 27,
-      "slug": "why-does-a-hibernate-update-set-every-column-even-when-only-one-changed-how-doe",
-      "title": "Why does a Hibernate UPDATE set every column even when only one changed? How doe",
-      "questionCount": 1
-    },
-    {
-      "index": 28,
-      "slug": "you-and-jpa",
-      "title": "you & and & JPA",
-      "questionCount": 2
-    },
-    {
-      "index": 29,
-      "slug": "how-do-you-implement-soft-delete-in-hibernate-using-sqldelete",
-      "title": "How do you implement soft delete in Hibernate using @SQLDelete",
-      "questionCount": 1
-    },
-    {
-      "index": 30,
-      "slug": "why-does-a-naive-save",
-      "title": "Why does a naive save",
-      "questionCount": 1
-    },
-    {
-      "index": 31,
-      "slug": "and-are-jpa-31",
-      "title": "and & are & JPA",
-      "questionCount": 6
+      "slug": "scheduling",
+      "title": "Scheduling — @Scheduled, ShedLock, Retry",
+      "questionCount": 4,
+      "questionIds": [
+        "Q663",
+        "Q664",
+        "Q665",
+        "Q666"
+      ]
     }
   ]
 }

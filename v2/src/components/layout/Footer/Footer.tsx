@@ -1,3 +1,4 @@
+import { Logo } from '@/components/ui/Logo'
 import styles from './Footer.module.css'
 
 interface FooterProps {
@@ -18,7 +19,7 @@ export function Footer({ siteName, tagline, siteUrl, social }: FooterProps) {
     <footer className={styles.footer}>
       <div className={styles.top}>
         <div className={styles.brandGroup}>
-          <span className={styles.logo}>&#9749;</span>
+          <Logo size={44} className={styles.logo} />
           <div>
             <div className={styles.name}>{siteName}</div>
             <div className={styles.tagline}>{tagline}</div>

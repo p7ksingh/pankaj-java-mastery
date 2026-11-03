@@ -1,0 +1,37 @@
+{
+  "id": "Q2404",
+  "slug": "collect-employee-names-into-a-setstring-removing-duplicates",
+  "questionNumber": 2404,
+  "title": "Collect employee names into a `Set<String>` (removing duplicates).",
+  "shortTitle": "Collect employee names into a Set<String> (removing duplicates)",
+  "chapterNumber": 6,
+  "chapterSlug": "java-streams-lambda-functional",
+  "chapterTitle": "Java Streams, Lambda & Functional Programming",
+  "topicIndex": 11,
+  "topicSlug": "collectors",
+  "topicTitle": "Collectors",
+  "sections": {
+    "s1_definition": {
+      "profdef": "`map(Employee::getName).collect(Collectors.toSet())` gathers names into a `Set`, which inherently removes duplicates because a set holds each distinct value once.",
+      "analogy": "Priya lists the unique names of employees — if two people have the same name, it appears only once.",
+      "oneliner": "`map(name).collect(toSet())` collects distinct names, dropping duplicates automatically.",
+      "raw": "**Professional definition:** `map(Employee::getName).collect(Collectors.toSet())` gathers names into a `Set`, which inherently removes duplicates because a set holds each distinct value once.\n\n**In simple words (banking analogy):** Priya lists the unique names of employees — if two people have the same name, it appears only once.\n\n**One line to remember:** `map(name).collect(toSet())` collects distinct names, dropping duplicates automatically."
+    },
+    "s2_technical": "`staff.stream().map(Employee::getName).collect(Collectors.toSet())` maps each employee to a name and collects into a `Set<String>`. Because a set stores each element once by equals and hashCode, duplicate names are automatically dropped — no explicit distinct is needed.\n\n`toSet` returns a HashSet by default, so iteration order is unspecified. If I need sorted or insertion order I use `toCollection(TreeSet::new)` or `toCollection(LinkedHashSet::new)`. The deduplication relies on String's correct equals and hashCode, which it has.\n\nThe senior nuance is that `toSet` gives no ordering guarantee and no control over the concrete type, so when ordering or a specific set type matters I use `toCollection` with a supplier. `toSet` deduplicating is equivalent to `distinct().collect(toList())` but expresses the set intent directly. For custom objects, deduplication depends entirely on their equals and hashCode being correct.",
+    "s3_banking": "Problem 1 — A mailing list at the National Bank of India needs the set of distinct employee names, with duplicates removed.\n\nThis is exactly what collecting to a set does — it keeps each name once.\n\nThe code defines a `MailingListService.distinctNames method and a demo.",
+    "s4a_structure": "```\nmailing-list-service/\n├── pom.xml\n└── src/main/java/com/bank/mailinglist/\n    ├── ToSetDemo.java\n    └── service/MailingListService.java\n```",
+    "s4d_java": "```java\n// ─── File: src/main/java/com/bank/mailinglist/ToSetDemo.java ───\npackage com.bank.mailinglist;\n\nimport java.util.*;\nimport java.util.logging.*;\n\npublic class ToSetDemo {\n    private static final Logger log = Logger.getLogger(\"MailingList\");\n    static {\n        ConsoleHandler h = new ConsoleHandler();\n        h.setFormatter(new SimpleFormatter());\n        log.setUseParentHandlers(false);\n        log.addHandler(h);\n    }\n\n    public static void main(String[] args) {\n        List<Employee> staff = List.of(\n            new Employee(\"Rajesh\"), new Employee(\"Priya\"),\n            new Employee(\"Rajesh\"));  // duplicate name\n        MailingListService service = new MailingListService();\n\n        Set<String> names = service.distinctNames(staff);\n        log.info(() -> \"Distinct names: \" + names + \" (size=\" + names.size() + \")\");\n    }\n}\n\n// ─── Would be in model/Employee.java ───\nclass Employee {\n    private final String name;\n    Employee(String name) { this.name = name; }\n    String getName() { return name; }\n}\n\n// ─── Would be in service/MailingListService.java ───\nclass MailingListService {\n    Set<String> distinctNames(List<Employee> staff) {\n        return staff.stream()\n            .map(Employee::getName)\n            .collect(java.util.stream.Collectors.toSet());   // Set auto-dedupes\n    }\n}\n```",
+    "s4e_build": "```bash\njavac -d out src/main/java/com/bank/mailinglist/ToSetDemo.java\njava -cp out com.bank.mailinglist.ToSetDemo\n```",
+    "s5_journey": "Input: Rajesh, Priya, and a second Rajesh.\n\nStep 1: map extracts the three names.\n\nStep 2: toSet collects them into a HashSet.\n\nStep 3: The second Rajesh is a duplicate by equals and hashCode, so it is not added again.\n\nStep 4: The set contains two distinct names.\n\n```\nINFO: Distinct names: [Rajesh, Priya] (size=2)\n```",
+    "s5b_flow": "```\n  [Rajesh, Priya, Rajesh]\n    │ map(getName)\n    │ collect(toSet)   ← duplicate Rajesh dropped\n    ▼\n  {Rajesh, Priya}  (size 2)\n```",
+    "s5c_hld": "```\n  ═══ HLD — Distinct Name Set ═══\n\n  staff → map(name) → collect(toSet) → mailing list (unique)\n```",
+    "s5d_lld": "```\n  ═══ LLD — Collectors.toSet ═══\n\n  ┌─ auto-dedupe ──────────────────────────────────────────────┐\n  │ map(name).collect(toSet()) → Set<String> (duplicates gone)  │\n  │ dedup by equals()/hashCode() → String has correct ones      │\n  │ toSet = HashSet (unordered, type not guaranteed)            │\n  │ ordered/typed → toCollection(TreeSet::new / LinkedHashSet)  │\n  │ equivalent to distinct().collect(toList) but set-intent     │\n  └─────────────────────────────────────────────────────────────┘\n\n  ┌───────────────────────────────┐\n  │          MailingListService   │\n  │  + distinctNames(List): Set      │ map(name).collect(toSet)\n  └───────────────────────────────┘\n\n  Call chain:\n  1. map(Employee::getName)\n  2. collect(toSet())\n```",
+    "s6_takeaway": "To collect distinct employee names I map each employee to its name and collect with Collectors toSet, which gathers them into a set. Because a set stores each element only once by equals and hashCode, duplicate names are removed automatically — I do not need an explicit distinct step. At the National Bank of India this backs a mailing list that needs each name once.\n\ntoSet returns a HashSet by default, so there is no ordering guarantee and no control over the concrete type. When ordering matters I use toCollection with a TreeSet supplier for sorted order or a LinkedHashSet supplier for insertion order instead. The deduplication relies on correct equals and hashCode, which String provides.\n\nThe senior point I stress is that for custom objects, deduplication is only as good as their equals and hashCode — if those are not implemented correctly, the set will not dedupe as expected. toSet expresses the set intent directly and is equivalent to calling distinct and collecting to a list, but it communicates that I want uniqueness as the primary goal. When I need a specific set type or ordering, toCollection with a supplier is the tool.\n\n---"
+  },
+  "keyPoints": [
+    "Collectors: toList(), toSet(), toMap(), joining(), groupingBy()",
+    "toMap requires: keyMapper, valueMapper, merge function for duplicates",
+    "collectingAndThen: transform the collected result",
+    "teeing (Java 12): two collectors in one pass, merge results"
+  ]
+}

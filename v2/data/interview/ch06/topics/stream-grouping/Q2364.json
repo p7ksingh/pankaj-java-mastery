@@ -1,0 +1,37 @@
+{
+  "id": "Q2364",
+  "slug": "separate-odd-and-even-numbers-from-a-list-using-partitioningby",
+  "questionNumber": 2364,
+  "title": "Separate odd and even numbers from a list using `partitioningBy`.",
+  "shortTitle": "Separate odd and even numbers from a list using partitioningBy",
+  "chapterNumber": 6,
+  "chapterSlug": "java-streams-lambda-functional",
+  "chapterTitle": "Java Streams, Lambda & Functional Programming",
+  "topicIndex": 10,
+  "topicSlug": "stream-grouping",
+  "topicTitle": "Stream — Grouping & Partitioning",
+  "sections": {
+    "s1_definition": {
+      "profdef": "`Collectors.partitioningBy(predicate)` splits a stream into exactly two groups keyed by true and false. With an even predicate, true holds the even numbers and false the odd ones, producing `Map<Boolean, List<Integer>>`.",
+      "analogy": "Priya splits a pile of numbers into two trays — one for evens, one for odds.",
+      "oneliner": "`partitioningBy(n -> n % 2 == 0)` splits numbers into an even (true) and odd (false) list.",
+      "raw": "**Professional definition:** `Collectors.partitioningBy(predicate)` splits a stream into exactly two groups keyed by true and false. With an even predicate, true holds the even numbers and false the odd ones, producing `Map<Boolean, List<Integer>>`.\n\n**In simple words (banking analogy):** Priya splits a pile of numbers into two trays — one for evens, one for odds.\n\n**One line to remember:** `partitioningBy(n -> n % 2 == 0)` splits numbers into an even (true) and odd (false) list."
+    },
+    "s2_technical": "`list.stream().collect(Collectors.partitioningBy(n -> n % 2 == 0))` applies the boolean predicate to each element and places it in the true or false bucket, returning `Map<Boolean, List<Integer>>`. partitioningBy always produces both keys, so even if all numbers are odd, the true list exists as an empty list.\n\nThis guaranteed two-key result is the main advantage over `groupingBy` on a boolean, which could omit an empty side. You read `map.get(true)` for evens and `map.get(false)` for odds. A downstream collector can be nested, for example counting to get counts per parity.\n\nThe senior nuance is choosing partitioningBy specifically for binary splits: it is slightly more efficient and guarantees both keys, which avoids null checks on a missing side. It is the right tool whenever the classification is genuinely two-valued — pass or fail, even or odd, eligible or not. For more than two categories I use groupingBy instead.",
+    "s3_banking": "Problem 1 — A routing step at the National Bank of India splits transaction ids into even and odd for two parallel processing lanes.\n\nThis is exactly what partitioningBy does — it divides the ids into the true and false lanes in one pass.\n\nThe code defines a `ParityService.splitParity` method and a demo.",
+    "s4a_structure": "```\nparity-service/\n├── pom.xml\n└── src/main/java/com/bank/parity/\n    ├── PartitionDemo.java\n    └── service/ParityService.java\n```",
+    "s4d_java": "```java\n// ─── File: src/main/java/com/bank/parity/PartitionDemo.java ───\npackage com.bank.parity;\n\nimport java.util.*;\nimport java.util.logging.*;\n\npublic class PartitionDemo {\n    private static final Logger log = Logger.getLogger(\"Parity\");\n    static {\n        ConsoleHandler h = new ConsoleHandler();\n        h.setFormatter(new SimpleFormatter());\n        log.setUseParentHandlers(false);\n        log.addHandler(h);\n    }\n\n    public static void main(String[] args) {\n        List<Integer> ids = List.of(101, 102, 103, 104, 105);\n        ParityService service = new ParityService();\n\n        Map<Boolean, List<Integer>> split = service.splitParity(ids);\n        log.info(() -> \"even (true) : \" + split.get(true));\n        log.info(() -> \"odd  (false): \" + split.get(false));\n    }\n}\n\n// ─── Would be in service/ParityService.java ───\nclass ParityService {\n    Map<Boolean, List<Integer>> splitParity(List<Integer> ids) {\n        return ids.stream()\n            .collect(java.util.stream.Collectors.partitioningBy(n -> n % 2 == 0)); // true=even\n    }\n}\n```",
+    "s4e_build": "```bash\njavac -d out src/main/java/com/bank/parity/PartitionDemo.java\njava -cp out com.bank.parity.PartitionDemo\n```",
+    "s5_journey": "Input: 101, 102, 103, 104, 105.\n\nStep 1: partitioningBy tests each id against the even predicate.\n\nStep 2: 102 and 104 are even, so they go into the true bucket.\n\nStep 3: 101, 103, 105 are odd, so they go into the false bucket.\n\nStep 4: The result has both keys present, true with the evens and false with the odds.\n\n```\nINFO: even (true) : [102, 104]\nINFO: odd  (false): [101, 103, 105]\n```",
+    "s5b_flow": "```\n  [101, 102, 103, 104, 105]\n    │ partitioningBy(n % 2 == 0)\n    ▼\n  {true=[102, 104], false=[101, 103, 105]}   ← both keys always present\n```",
+    "s5c_hld": "```\n  ═══ HLD — Parity Routing ═══\n\n  ┌──────────┐ ┌──────────────────┐ ──true──→ even lane\n  │ ids      │→│ ParityService    │ ──false─→ odd lane\n  │ list     │ │ partitioningBy   │\n  └──────────┘ └──────────────────┘\n```",
+    "s5d_lld": "```\n  ═══ LLD — partitioningBy ═══\n\n  ┌─ binary split ─────────────────────────────────────────────┐\n  │ partitioningBy(predicate) → Map<Boolean, List<T>>          │\n  │ ALWAYS has true + false keys (even if one empty)           │\n  │ vs groupingBy(boolean) which may omit an empty side        │\n  │ nest downstream (counting, mapping) if needed              │\n  │ use for genuine 2-way splits; >2 categories → groupingBy   │\n  └─────────────────────────────────────────────────────────────┘\n\n  ┌───────────────────────────────┐\n  │           ParityService       │\n  │  + splitParity(List): Map       │ partitioningBy(isEven)\n  └───────────────────────────────┘\n\n  Call chain:\n  1. stream()\n  2. collect(partitioningBy(n % 2 == 0))\n  3. Map<Boolean, List<Integer>>\n```",
+    "s6_takeaway": "To split numbers into even and odd I collect with partitioningBy passing an even predicate, which divides the stream into exactly two buckets keyed by true and false — the evens under true and the odds under false — giving a map of Boolean to list. The defining feature of partitioningBy is that it always produces both keys, so even if every number is odd the true list still exists as an empty list.\n\nThat guarantee is why I choose partitioningBy over grouping on a boolean: grouping could omit an empty side and force me to null-check a missing key, whereas partitioningBy lets me safely read both lanes. At the National Bank of India I used this in a routing step to split transaction ids into even and odd for two parallel processing lanes.\n\nThe senior point I stress is to reach for partitioningBy specifically when the classification is genuinely two-valued — pass or fail, even or odd, eligible or not — because it is slightly more efficient and self-documents the binary nature of the split. The moment there are more than two categories I switch to groupingBy. I can also nest a downstream collector inside partitioningBy, such as counting, to get counts per side instead of the full lists.\n\n---"
+  },
+  "keyPoints": [
+    "Collectors.groupingBy(classifier) groups elements into Map",
+    "Multi-level: groupingBy(dept, groupingBy(city))",
+    "Downstream collectors: counting(), averagingDouble(), maxBy()",
+    "partitioningBy(predicate): boolean two-bucket split"
+  ]
+}
