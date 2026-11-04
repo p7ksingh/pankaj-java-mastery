@@ -1,7 +1,7 @@
 {
   "id": "Q920",
   "slug": "producer-partitioning-strategies-round-robin-hash-of-key-custom-and-their-effect-on-ordering-and-load",
-  "questionNumber": 920,
+  "questionNumber": 2,
   "title": "What are the producer partitioning strategies (round-robin when no key, hash-of-key for ordering per key, custom `Partitioner`), and how does each affect ordering and load distribution?",
   "shortTitle": "Producer partitioning strategies (round-robin, hash-of-key, custom) and their effect on ordering and load",
   "chapterNumber": 11,

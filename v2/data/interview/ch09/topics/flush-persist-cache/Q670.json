@@ -1,7 +1,7 @@
 {
   "id": "Q670",
   "slug": "flush-vs-commit-flush-pushes-sql-to-the-db-commit-finalizes-the-transaction",
-  "questionNumber": 670,
+  "questionNumber": 3,
   "title": "What is the difference between flush and commit in JPA/Hibernate? Can data that is flushed but not committed be rolled back?",
   "shortTitle": "What is flush vs commit?",
   "chapterNumber": 9,

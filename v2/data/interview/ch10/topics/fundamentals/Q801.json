@@ -1,7 +1,7 @@
 {
   "id": "Q801",
   "slug": "explain-the-full-flow-of-a-microservices-application-end-to-end",
-  "questionNumber": 801,
+  "questionNumber": 6,
   "title": "Explain the full flow of a microservices application (client → API Gateway → service discovery → service → DB → inter-service calls → response → logging/tracing).",
   "shortTitle": "Explain the full flow of a microservices application end to end",
   "chapterNumber": 10,

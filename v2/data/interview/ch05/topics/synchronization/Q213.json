@@ -1,7 +1,7 @@
 {
   "id": "Q213",
   "slug": "static-synchronized-vs-instance-synchronized-different-locks-can-run-simultaneously",
-  "questionNumber": 213,
+  "questionNumber": 4,
   "title": "Static synchronized vs instance synchronized — different locks, can run simultaneously",
   "shortTitle": "What is static vs instance synchronized?",
   "chapterNumber": 5,

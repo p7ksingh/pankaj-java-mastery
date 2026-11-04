@@ -1,7 +1,7 @@
 {
   "id": "Q1089",
   "slug": "why-does-an-app-report-connection-pool-exhausted-while-the-database-sits-mostly-idle",
-  "questionNumber": 1089,
+  "questionNumber": 5,
   "title": "Why does an application report \"connection pool exhausted\" while the database sits mostly idle (connections held by long/idle-in-transaction sessions, often an external call made inside a transaction), and how does `idle_in_transaction_session_timeout` help?",
   "shortTitle": "Why does an app report \"connection pool exhausted\" while the database sits mostly idle?",
   "chapterNumber": 13,

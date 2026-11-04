@@ -1,7 +1,7 @@
 {
   "id": "Q2011",
   "slug": "what-is-an-rdd-and-why-immutability-matters",
-  "questionNumber": 2011,
+  "questionNumber": 6,
   "title": "What is an RDD (Resilient Distributed Dataset) — immutable, partitioned, lazily evaluated, fault-tolerant through lineage — and why is immutability important (thread-safety, deterministic recomputation, functional programming style)?",
   "shortTitle": "What is an RDD and why immutability matters",
   "chapterNumber": 20,

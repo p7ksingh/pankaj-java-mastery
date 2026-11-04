@@ -1,7 +1,7 @@
 {
   "id": "Q1746",
   "slug": "maximize-capital-two-heaps-greedy-project-selection",
-  "questionNumber": 1746,
+  "questionNumber": 7,
   "title": "You are given an initial capital and a list of projects, each with a capital requirement and a profit. You can complete at most K projects, and completing a project adds its profit to your capital, which can then fund later projects. Choose projects to maximize final capital. Explain the two-heap greedy approach.",
   "shortTitle": "Maximize Capital (Two Heaps — Greedy Project Selection)",
   "chapterNumber": 17,

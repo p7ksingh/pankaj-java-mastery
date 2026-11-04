@@ -1,7 +1,7 @@
 {
   "id": "Q2195",
   "slug": "why-choose-playwright-over-selenium-for-a-modern-web-app",
-  "questionNumber": 2195,
+  "questionNumber": 4,
   "title": "Why choose Playwright over Selenium for a modern web app — auto-waiting, true cross-browser (Chromium/Firefox/WebKit), parallel execution with workers, network interception/mocking, isolated browser contexts, tracing, built-in screenshots/videos, and better debugging — and why is \"it's newer\" not an acceptable answer?",
   "shortTitle": "Why choose Playwright over Selenium for a modern web app",
   "chapterNumber": 21,

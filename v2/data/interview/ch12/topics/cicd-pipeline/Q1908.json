@@ -1,7 +1,7 @@
 {
   "id": "Q1908",
   "slug": "avoiding-a-separate-pipeline-per-microservice-shared-libraries-templated-pipelines-and-per-branch-environment-routing",
-  "questionNumber": 1908,
+  "questionNumber": 30,
   "title": "How do you avoid writing a separate pipeline for every one of thousands of microservices — Jenkins Shared Libraries (reusable Groovy steps in a versioned repo) and generic parameterized/templated pipelines (one `Jenkinsfile` + per-service config) — and how do you trigger the right environment pipeline per branch (dev→Dev, qa→QA) with approvals/gates before Prod?",
   "shortTitle": "Avoiding a Separate Pipeline per Microservice — Shared Libraries, Templated Pipelines, and Per-Branch Environment Routing",
   "chapterNumber": 12,

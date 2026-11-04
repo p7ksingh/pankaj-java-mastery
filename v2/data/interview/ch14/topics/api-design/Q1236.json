@@ -1,7 +1,7 @@
 {
   "id": "Q1236",
   "slug": "what-is-the-websocket-handshake",
-  "questionNumber": 1236,
+  "questionNumber": 22,
   "title": "What is the WebSocket handshake — starts as an HTTP request with `Upgrade: websocket` header, server responds with 101 Switching Protocols, then both sides can send messages freely?",
   "shortTitle": "What is the WebSocket handshake",
   "chapterNumber": 14,

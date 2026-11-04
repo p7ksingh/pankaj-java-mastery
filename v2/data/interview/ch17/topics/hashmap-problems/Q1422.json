@@ -1,7 +1,7 @@
 {
   "id": "Q1422",
   "slug": "two-sum-return-indices-of-a-pair-summing-to-target",
-  "questionNumber": 1422,
+  "questionNumber": 4,
   "title": "Two Sum — return indices of pair summing to target (HashMap of complement).",
   "shortTitle": "Two Sum — Return Indices of a Pair Summing to Target",
   "chapterNumber": 17,

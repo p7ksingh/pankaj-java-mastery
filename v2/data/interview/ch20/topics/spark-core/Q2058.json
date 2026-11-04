@@ -1,7 +1,7 @@
 {
   "id": "Q2058",
   "slug": "salting-spreading-a-hot-key-across-partitions-and-the-trade-off",
-  "questionNumber": 2058,
+  "questionNumber": 36,
   "title": "What is salting — adding a random suffix to the skewed join key (e.g., `key_0`, `key_1`, ..., `key_N`) to distribute the hot key across N partitions, then joining with an exploded version of the other table — and what is the trade-off (duplicates the other side N times)?",
   "shortTitle": "Salting — spreading a hot key across partitions, and the trade-off",
   "chapterNumber": 20,

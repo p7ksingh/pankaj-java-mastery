@@ -1,7 +1,7 @@
 {
   "id": "Q1756",
   "slug": "count-of-structurally-unique-bsts-how-many-shapes-exist",
-  "questionNumber": 1756,
+  "questionNumber": 24,
   "title": "Given a number N, count how many structurally unique binary search trees can store values 1 through N, without generating them. Explain the dynamic-programming recurrence derived from choosing each root.",
   "shortTitle": "Count of Structurally Unique BSTs (How Many Shapes Exist)",
   "chapterNumber": 17,

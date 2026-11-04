@@ -1,7 +1,7 @@
 {
   "id": "Q1738",
   "slug": "all-paths-for-a-sum-collect-every-root-to-leaf-path-matching-a-target",
-  "questionNumber": 1738,
+  "questionNumber": 22,
   "title": "Given a binary tree and a target sum, find all root-to-leaf paths where the sum of the node values equals the target. Return the list of paths, and explain how backtracking lets you reuse one working list instead of copying at every node.",
   "shortTitle": "All Paths for a Sum (Collect Every Root-to-Leaf Path Matching a Target)",
   "chapterNumber": 17,

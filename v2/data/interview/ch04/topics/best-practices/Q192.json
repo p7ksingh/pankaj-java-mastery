@@ -1,7 +1,7 @@
 {
   "id": "Q192",
   "slug": "assert-keyword-internal-invariants-disabled-by-default-never-for-public-api-validation",
-  "questionNumber": 192,
+  "questionNumber": 1,
   "title": "What is the assert keyword, how does it differ from exceptions, and why should you never use assert for public method argument validation?",
   "shortTitle": "What is the assert keyword in Java?",
   "chapterNumber": 4,

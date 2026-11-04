@@ -1,7 +1,7 @@
 {
   "id": "Q227",
   "slug": "safe-publication-ensuring-other-threads-see-a-fully-constructed-object-not-a-partial-one",
-  "questionNumber": 227,
+  "questionNumber": 1,
   "title": "Safe publication — ensuring other threads see a fully-constructed object, not a partial one",
   "shortTitle": "What is safe publication?",
   "chapterNumber": 5,

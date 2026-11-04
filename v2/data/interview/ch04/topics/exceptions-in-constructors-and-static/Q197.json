@@ -1,7 +1,7 @@
 {
   "id": "Q197",
   "slug": "exception-in-constructor-partial-construction-resource-leaks-cleanup",
-  "questionNumber": 197,
+  "questionNumber": 1,
   "title": "What happens when exception is thrown in constructor — object never assigned, partially-constructed object cannot leak — and how to prevent resource leaks?",
   "shortTitle": "What happens when an exception occurs in a constructor?",
   "chapterNumber": 4,

@@ -1,7 +1,7 @@
 {
   "id": "Q378",
   "slug": "java-811-upgrade-removed-java-eecorba-modules-breaking-builds",
-  "questionNumber": 378,
+  "questionNumber": 5,
   "title": "Why can a Java 8 → 11 upgrade break the build (removed Java EE / CORBA modules now needing explicit dependencies)?",
   "shortTitle": "What breaks when upgrading Java 8 to 11?",
   "chapterNumber": 6,

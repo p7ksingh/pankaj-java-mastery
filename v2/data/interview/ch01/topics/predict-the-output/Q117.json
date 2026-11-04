@@ -1,7 +1,7 @@
 {
   "id": "Q117",
   "slug": "what-happens-if-you-call-start-twice-on-the-same-thread",
-  "questionNumber": 117,
+  "questionNumber": 6,
   "title": "What happens if you call `start()` twice on the same Thread (`IllegalThreadStateException`)?",
   "shortTitle": "What happens if you call start() twice on the same Thread?",
   "chapterNumber": 1,

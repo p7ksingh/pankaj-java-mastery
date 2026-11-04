@@ -27,6 +27,19 @@ function run(): void {
   // Search page
   entries.push({ url: '/search/', priority: '0.5', changefreq: 'monthly' })
 
+  // Learn pages
+  entries.push({ url: '/learn/', priority: '0.8', changefreq: 'monthly' })
+  entries.push({ url: '/learn/design-patterns/', priority: '0.8', changefreq: 'monthly' })
+
+  const learnDir = path.resolve(__dirname, '../data/learn/design-patterns')
+  if (fs.existsSync(learnDir)) {
+    const patternFiles = fs.readdirSync(learnDir).filter((f: string) => f.endsWith('.json'))
+    for (const file of patternFiles) {
+      const slug = file.replace('.json', '')
+      entries.push({ url: `/learn/design-patterns/${slug}/`, priority: '0.7', changefreq: 'monthly' })
+    }
+  }
+
   // Load chapters
   const chaptersFile = path.join(DATA_DIR, 'chapters.json')
   const chapters = JSON.parse(fs.readFileSync(chaptersFile, 'utf-8')).chapters
@@ -76,12 +89,13 @@ function run(): void {
   }
 
   // Build XML
+  const today = new Date().toISOString().split('T')[0]
   const xml = [
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ...entries.map(
       (e) =>
-        `  <url><loc>${SITE_URL}${e.url}</loc><changefreq>${e.changefreq}</changefreq><priority>${e.priority}</priority></url>`,
+        `  <url><loc>${SITE_URL}${e.url}</loc><lastmod>${today}</lastmod><changefreq>${e.changefreq}</changefreq><priority>${e.priority}</priority></url>`,
     ),
     '</urlset>',
     '',

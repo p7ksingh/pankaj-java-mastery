@@ -1,7 +1,7 @@
 {
   "id": "Q2066",
   "slug": "checkpointing-in-structured-streaming",
-  "questionNumber": 2066,
+  "questionNumber": 7,
   "title": "What is checkpointing in Structured Streaming (`option(\"checkpointLocation\", path)`) — it persists offsets, state, and metadata to reliable storage for fault recovery — and what happens if you change your query logic and restart from an existing checkpoint (may fail if incompatible)?",
   "shortTitle": "Checkpointing in Structured Streaming",
   "chapterNumber": 20,

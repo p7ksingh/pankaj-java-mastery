@@ -1,7 +1,7 @@
 {
   "id": "Q322",
   "slug": "inheritablethreadlocal-child-inherits-parents-value-dangerous-in-pools",
-  "questionNumber": 322,
+  "questionNumber": 3,
   "title": "What is InheritableThreadLocal, how does a child thread inherit the parent's value, and why is it dangerous in thread pools where the parent is the pool creator rather than the task submitter?",
   "shortTitle": "What is InheritableThreadLocal?",
   "chapterNumber": 5,

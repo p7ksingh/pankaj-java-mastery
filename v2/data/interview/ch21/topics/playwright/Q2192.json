@@ -1,7 +1,7 @@
 {
   "id": "Q2192",
   "slug": "building-stable-locators-when-the-app-generates-dynamic-ids",
-  "questionNumber": 2192,
+  "questionNumber": 1,
   "title": "How do you build stable locators when the app generates dynamic IDs/attributes — prefer user-facing, accessibility-based locators (`getByRole`, `getByLabel`, `getByText`, `getByTestId`) over brittle CSS/XPath tied to generated values — and why do stable locators reduce flakiness and maintenance?",
   "shortTitle": "Building stable locators when the app generates dynamic IDs",
   "chapterNumber": 21,

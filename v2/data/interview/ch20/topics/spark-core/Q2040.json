@@ -1,7 +1,7 @@
 {
   "id": "Q2040",
   "slug": "static-partition-pruning-vs-dynamic-partition-pruning-dpp",
-  "questionNumber": 2040,
+  "questionNumber": 25,
   "title": "What is static partition pruning (filter value is known at compile time, e.g., `WHERE country = 'India'`) vs dynamic partition pruning (DPP — filter value is derived at runtime from another table, e.g., a join filter, Spark 3.0+)?",
   "shortTitle": "Static partition pruning vs dynamic partition pruning (DPP)",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q1497",
   "slug": "explain-prefix-sum-precompute-cumulative-sums-for-o1-range-queries",
-  "questionNumber": 1497,
+  "questionNumber": 10,
   "title": "Explain the prefix sum technique. How does precomputing cumulative sums let you answer range sum queries in constant time, and when should you use it?",
   "shortTitle": "Explain Prefix Sum — Precompute Cumulative Sums for O(1) Range Queries",
   "chapterNumber": 17,

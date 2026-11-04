@@ -1,7 +1,7 @@
 {
   "id": "Q67",
   "slug": "how-does-an-enum-with-an-abstract-method-implement-the-strategy-pattern-and-replace-an-if-elseswitch",
-  "questionNumber": 67,
+  "questionNumber": 2,
   "title": "How does an enum with an ABSTRACT method (each constant provides its own body, i.e. constant-specific class bodies) implement the Strategy pattern and replace an `if-else`/`switch` on a type — `Operation.PLUS.apply(a,b)` dispatching to the constant's override — and why is this cleaner and exhaustive compared to a switch?",
   "shortTitle": "How does an enum with an abstract method implement the Strategy pattern?",
   "chapterNumber": 1,

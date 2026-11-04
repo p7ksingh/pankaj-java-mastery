@@ -1,7 +1,7 @@
 {
   "id": "Q1514",
   "slug": "invertmirror-binary-tree-swap-left-and-right-recursively",
-  "questionNumber": 1514,
+  "questionNumber": 6,
   "title": "Given the root of a binary tree, invert it so that the left and right children of every node are swapped, producing a mirror image of the original tree.",
   "shortTitle": "Invert/Mirror Binary Tree — swap left and right recursively",
   "chapterNumber": 17,

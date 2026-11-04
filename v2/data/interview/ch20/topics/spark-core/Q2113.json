@@ -1,7 +1,7 @@
 {
   "id": "Q2113",
   "slug": "how-do-you-optimize-jdbc-reads-and-writes-in-spark",
-  "questionNumber": 2113,
+  "questionNumber": 66,
   "title": "How do you optimize JDBC reads in Spark — `numPartitions` (parallel connections), `partitionColumn`/`lowerBound`/`upperBound` (range-based parallel reads), `fetchsize` (rows per round trip), and supplying a `query` or `dbtable` with pushdown filters — and how does Spark handle JDBC writes (each task opens its own connection, no cross-task transaction; `isolationLevel` applies per connection)?",
   "shortTitle": "How do you optimize JDBC reads and writes in Spark",
   "chapterNumber": 20,

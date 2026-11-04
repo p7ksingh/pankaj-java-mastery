@@ -1,7 +1,7 @@
 {
   "id": "Q1774",
   "slug": "flip-and-invert-an-image-flip-each-row-horizontally-then-invert-with-xor",
-  "questionNumber": 1774,
+  "questionNumber": 6,
   "title": "Given a binary matrix, produce a new matrix where each row is first reversed horizontally and then each bit is inverted. Explain how XOR with one performs the inversion and how reversing and inverting can be fused in a single pass.",
   "shortTitle": "Flip and Invert an Image (Flip Each Row Horizontally Then Invert with XOR)",
   "chapterNumber": 17,

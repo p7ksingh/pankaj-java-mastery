@@ -1,7 +1,7 @@
 {
   "id": "Q1249",
   "slug": "what-is-the-singleton-pattern-and-how-to-write-a-thread-safe-lazy-implementation",
-  "questionNumber": 1249,
+  "questionNumber": 7,
   "title": "What is the Singleton pattern, and how do you write a thread-safe, lazily initialized implementation (eager, lazy, synchronized, double-checked locking with volatile, Bill Pugh holder, enum)?",
   "shortTitle": "What is the Singleton pattern and how to write a thread-safe lazy implementation",
   "chapterNumber": 15,

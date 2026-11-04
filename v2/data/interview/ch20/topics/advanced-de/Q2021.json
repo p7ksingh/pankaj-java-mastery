@@ -1,7 +1,7 @@
 {
   "id": "Q2021",
   "slug": "aqes-three-major-optimizations",
-  "questionNumber": 2021,
+  "questionNumber": 4,
   "title": "Explain AQE's three major optimizations: (1) post-shuffle partition coalescing (combines many small partitions into fewer larger ones), (2) skew join optimization (detects and splits oversized partitions), (3) dynamic join strategy change (e.g., converting a shuffle join to a broadcast join based on actual data size).",
   "shortTitle": "AQE's three major optimizations",
   "chapterNumber": 20,

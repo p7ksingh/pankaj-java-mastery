@@ -1,7 +1,7 @@
 {
   "id": "Q1340",
   "slug": "what-are-the-major-openjdk-projects-and-what-does-each-change",
-  "questionNumber": 1340,
+  "questionNumber": 32,
   "title": "What are the major OpenJDK projects and what does each change — Loom (virtual threads + structured concurrency), Valhalla (value/primitive classes to flatten objects and kill boxing overhead), Panama (Foreign Function & Memory API + Vector API for native interop and SIMD), Amber (incremental language features: records, sealed types, pattern matching, text blocks), and Leyden (faster startup via AOT/CDS)?",
   "shortTitle": "What are the major OpenJDK projects and what does each change?",
   "chapterNumber": 16,

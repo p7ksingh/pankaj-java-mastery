@@ -1,7 +1,7 @@
 {
   "id": "Q635",
   "slug": "entitymanager-operations-persistmergeremovefind-and-jpql-createquery",
-  "questionNumber": 635,
+  "questionNumber": 4,
   "title": "Explain the core EntityManager operations including persist, merge, remove, find, and JPQL querying with createQuery, getSingleResult/getResultList, and parameter binding.",
   "shortTitle": "What are the core EntityManager operations?",
   "chapterNumber": 9,

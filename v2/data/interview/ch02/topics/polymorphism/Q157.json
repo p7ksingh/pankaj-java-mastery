@@ -1,7 +1,7 @@
 {
   "id": "Q157",
   "slug": "method-hiding-static-vs-method-overriding-instance-resolution-mechanism",
-  "questionNumber": 157,
+  "questionNumber": 6,
   "title": "What is the difference between method hiding (static) and method overriding (instance), and how does the resolution mechanism differ (compile-time reference type vs runtime object type)?",
   "shortTitle": "What is method hiding vs method overriding?",
   "chapterNumber": 2,

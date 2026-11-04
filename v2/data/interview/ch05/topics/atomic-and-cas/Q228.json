@@ -1,7 +1,7 @@
 {
   "id": "Q228",
   "slug": "atomicinteger-lock-free-thread-safety-via-cas-compare-and-swap-when-to-use",
-  "questionNumber": 228,
+  "questionNumber": 1,
   "title": "AtomicInteger — lock-free thread safety via CAS (Compare-And-Swap), when to use",
   "shortTitle": "What is AtomicInteger and CAS?",
   "chapterNumber": 5,

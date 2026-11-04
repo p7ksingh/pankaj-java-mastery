@@ -1,7 +1,7 @@
 {
   "id": "Q1334",
   "slug": "what-is-the-java-platform-module-system-jpms-and-what-do-the-module-infojava-directives-do",
-  "questionNumber": 1334,
+  "questionNumber": 1,
   "title": "What is the Java Platform Module System (JPMS, Java 9), what directives does `module-info.java` use (requires/exports/opens/provides/uses), and when is adopting it worth the friction?",
   "shortTitle": "What is the Java Platform Module System (JPMS), and what do the module-info.java directives do?",
   "chapterNumber": 16,

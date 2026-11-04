@@ -1,7 +1,7 @@
 {
   "id": "Q1339",
   "slug": "what-are-the-ways-to-read-a-very-large-text-file-in-java-and-their-trade-offs",
-  "questionNumber": 1339,
+  "questionNumber": 31,
   "title": "What are the ways to read a very large text file in Java and their trade-offs — `Scanner` is slow (avoid for big files); `BufferedReader.readLine()` is the simple memory-friendly baseline; `Files.lines(path)` gives a lazy, streaming `Stream<String>` (must be closed — it holds a file handle); low-level `FileChannel` + `ByteBuffer` or a `MappedByteBuffer` (memory-mapped) are fastest for huge files but require manual byte→text handling — and what is the ONE rule that matters most regardless of API (STREAM/process line-by-line or in bounded chunks, never load the whole file into a `List`/`String` in memory, or you risk an `OutOfMemoryError`)?",
   "shortTitle": "What are the ways to read a very large text file in Java, and their trade-offs?",
   "chapterNumber": 16,

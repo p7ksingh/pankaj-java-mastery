@@ -1,7 +1,7 @@
 {
   "id": "Q162",
   "slug": "cohesion-high-cohesion-srp-focused-class-vs-low-cohesion-god-class",
-  "questionNumber": 162,
+  "questionNumber": 2,
   "title": "What is cohesion, why is HIGH cohesion a design goal (SRP — each class does one thing), and what does LOW cohesion look like (God class doing unrelated tasks)?",
   "shortTitle": "What is cohesion and why is high cohesion a design goal?",
   "chapterNumber": 2,

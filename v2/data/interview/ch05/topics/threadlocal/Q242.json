@@ -1,7 +1,7 @@
 {
   "id": "Q242",
   "slug": "simpledateformat-is-not-thread-safe-mutable-calendar-state-threadlocal-fix-datetimeformatter-best",
-  "questionNumber": 242,
+  "questionNumber": 2,
   "title": "SimpleDateFormat is NOT thread-safe — mutable Calendar state, ThreadLocal fix, DateTimeFormatter best",
   "shortTitle": "Why is SimpleDateFormat not thread-safe?",
   "chapterNumber": 5,

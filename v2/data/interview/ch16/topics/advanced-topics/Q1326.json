@@ -1,7 +1,7 @@
 {
   "id": "Q1326",
   "slug": "a-services-rss-grows-but-heap-dumps-and-gc-logs-look-clean-how-do-you-investigate-an-off-heap-leak",
-  "questionNumber": 1326,
+  "questionNumber": 20,
   "title": "(Scenario) A service's RSS memory grows steadily but heap dumps and GC logs look CLEAN — how do you investigate an OFF-HEAP leak (it's not on the Java heap, so MAP/heap-dump tools won't show it): check direct/native memory with Native Memory Tracking (`-XX:NativeMemoryTracking`, `jcmd VM.native_memory`), leaked `DirectByteBuffer`s / Netty pooled buffers (missing release), unclosed native resources (JNI, mmap, zip/deflate), thread-stack growth, and Metaspace/classloader leaks — and how do `-XX:MaxDirectMemorySize` and tools like `pmap`/async-profiler help?",
   "shortTitle": "A service's RSS grows but heap dumps and GC logs look clean — how do you investigate an off-heap leak?",
   "chapterNumber": 16,

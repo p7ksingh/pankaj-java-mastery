@@ -1,7 +1,7 @@
 {
   "id": "Q1033",
   "slug": "should-a-failing-security-scan-block-the-build-how-do-you-choose-blocking-criteria-remediation-slas-by-severity-and-an-auditable-exception-process",
-  "questionNumber": 1033,
+  "questionNumber": 20,
   "title": "Should a failing security scan block the build — how do you choose blocking criteria, remediation SLAs by severity, and an auditable exception process?",
   "shortTitle": "Should a failing security scan block the build — how do you choose blocking criteria, remediation SLAs by severity, and an auditable exception process?",
   "chapterNumber": 12,

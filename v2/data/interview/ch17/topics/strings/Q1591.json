@@ -1,7 +1,7 @@
 {
   "id": "Q1591",
   "slug": "longest-palindromic-substring-expand-around-center",
-  "questionNumber": 1591,
+  "questionNumber": 33,
   "title": "Given a string, return the longest contiguous substring that reads the same forwards and backwards.",
   "shortTitle": "Longest Palindromic Substring — expand around center",
   "chapterNumber": 17,

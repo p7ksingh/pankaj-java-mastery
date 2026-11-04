@@ -1,7 +1,7 @@
 {
   "id": "Q338",
   "slug": "flatmap-use-cases-flatten-nested-collections-split-values-optionalstream-nested-data",
-  "questionNumber": 338,
+  "questionNumber": 2,
   "title": "What are the use cases of flatMap() (flatten nested collections, split to multiple values, Optional::stream, stream of streams, nested data)?",
   "shortTitle": "flatMap use cases — flatten nested collections, split values, Optional::stream, nested data",
   "chapterNumber": 6,

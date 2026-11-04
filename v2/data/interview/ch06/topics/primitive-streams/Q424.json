@@ -1,7 +1,7 @@
 {
   "id": "Q424",
   "slug": "intstream-longstream-doublestream-no-boxing-sumaveragerange-conversion-methods",
-  "questionNumber": 424,
+  "questionNumber": 1,
   "title": "What are the primitive stream types IntStream, LongStream, and DoubleStream, why do they exist (avoid boxing, expose sum/average/range/summaryStatistics), and how do you convert between object and primitive streams (mapToInt/mapToLong/mapToDouble/mapToObj/asLongStream/boxed)?",
   "shortTitle": "What are IntStream, LongStream, DoubleStream?",
   "chapterNumber": 6,

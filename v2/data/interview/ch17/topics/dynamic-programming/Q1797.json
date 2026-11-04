@@ -1,7 +1,7 @@
 {
   "id": "Q1797",
   "slug": "unbounded-knapsack-maximize-value-with-unlimited-copies-of-each-item",
-  "questionNumber": 1797,
+  "questionNumber": 16,
   "title": "Given weights and profits of N items and a knapsack capacity C, maximize total profit where each item can be used any number of times. Explain the Unbounded Knapsack dynamic programming pattern, how it differs from 0/1, the complexity, and a banking use case.",
   "shortTitle": "Unbounded Knapsack (Maximize Value with Unlimited Copies of Each Item)",
   "chapterNumber": 17,

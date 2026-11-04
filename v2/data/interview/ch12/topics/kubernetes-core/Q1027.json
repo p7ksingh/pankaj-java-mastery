@@ -1,7 +1,7 @@
 {
   "id": "Q1027",
   "slug": "how-the-jvm-behaves-in-containers-and-kubernetes-usecontainersupport-maxrampercentage-requestlimit-exitonoutofmemoryerror-and-what-went-wrong-before-container-awareness",
-  "questionNumber": 1027,
+  "questionNumber": 3,
   "title": "How does the JVM behave in containers/Kubernetes (UseContainerSupport, MaxRAMPercentage, request=limit, ExitOnOutOfMemoryError), and what went wrong before container awareness?",
   "shortTitle": "How the JVM behaves in containers and Kubernetes — UseContainerSupport, MaxRAMPercentage, request=limit, ExitOnOutOfMemoryError — and what went wrong before container awareness",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q1740",
   "slug": "path-with-given-sequence-does-a-root-to-leaf-path-match-an-exact-sequence",
-  "questionNumber": 1740,
+  "questionNumber": 23,
   "title": "Given a binary tree and an array of numbers representing a sequence, determine whether there exists a root-to-leaf path such that the node values along the path exactly match the sequence in order and length. Explain how an index into the sequence tracks progress during the depth-first search.",
   "shortTitle": "Path With Given Sequence (Does a Root-to-Leaf Path Match an Exact Sequence?)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q201",
   "slug": "iae-vs-ise-bad-argument-vs-wrong-state-objectsrequirenonnull-preconditions",
-  "questionNumber": 201,
+  "questionNumber": 3,
   "title": "When to throw IllegalArgumentException vs IllegalStateException, and how do Objects.requireNonNull and Guava's Preconditions fit in?",
   "shortTitle": "What is IllegalArgumentException vs IllegalStateException?",
   "chapterNumber": 4,

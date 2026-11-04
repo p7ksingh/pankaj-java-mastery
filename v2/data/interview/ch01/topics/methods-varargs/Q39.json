@@ -1,7 +1,7 @@
 {
   "id": "Q39",
   "slug": "what-are-varargs-how-they-are-represented-internally-and-the-rules",
-  "questionNumber": 39,
+  "questionNumber": 1,
   "title": "What are varargs in Java, how are they represented internally, and what are the rules for using them in a method signature?",
   "shortTitle": "What are varargs and what are the rules?",
   "chapterNumber": 1,

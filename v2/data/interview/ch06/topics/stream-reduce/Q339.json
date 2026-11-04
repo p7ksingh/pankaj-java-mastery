@@ -1,7 +1,7 @@
 {
   "id": "Q339",
   "slug": "foreach-vs-foreachordered-ordering-guarantees-in-parallel-streams",
-  "questionNumber": 339,
+  "questionNumber": 2,
   "title": "What is the difference between forEach() and forEachOrdered()?",
   "shortTitle": "forEach() vs forEachOrdered() — ordering guarantees in parallel streams",
   "chapterNumber": 6,

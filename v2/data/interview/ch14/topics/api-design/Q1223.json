@@ -1,7 +1,7 @@
 {
   "id": "Q1223",
   "slug": "how-do-you-compare-two-json-strings-logically-rather-than-as-raw-strings",
-  "questionNumber": 1223,
+  "questionNumber": 12,
   "title": "How do you compare two JSON strings logically (parse to `JsonNode`/`Map` with `ObjectMapper.readTree` and compare the trees) rather than comparing raw strings, and why does raw-string comparison fail (key order, whitespace, formatting)?",
   "shortTitle": "How do you compare two JSON strings logically rather than as raw strings",
   "chapterNumber": 14,

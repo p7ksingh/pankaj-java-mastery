@@ -1,7 +1,7 @@
 {
   "id": "Q1841",
   "slug": "01-knapsack-tabulation-bottom-up-table-with-space-optimisation",
-  "questionNumber": 1841,
+  "questionNumber": 26,
   "title": "Solve the 0/1 Knapsack problem bottom-up with a table instead of recursion, then reduce the table to a single row. Explain the recurrence, the reverse-capacity iteration, the operations, the complexity, and a banking use case.",
   "shortTitle": "0/1 Knapsack Tabulation (Bottom-Up Table with Space Optimisation)",
   "chapterNumber": 17,

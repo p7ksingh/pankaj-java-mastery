@@ -1,7 +1,7 @@
 {
   "id": "Q1485",
   "slug": "copy-list-with-random-pointer-interleave-clones-or-hashmap",
-  "questionNumber": 1485,
+  "questionNumber": 36,
   "title": "A linked list is given where each node has a next pointer and an additional random pointer that can point to any node in the list or to null. Construct a deep copy of the list such that the copied nodes mirror the next and random structure without referencing any original node.",
   "shortTitle": "Copy List With Random Pointer — Interleave Clones or HashMap",
   "chapterNumber": 17,

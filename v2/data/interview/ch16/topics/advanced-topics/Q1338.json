@@ -1,7 +1,7 @@
 {
   "id": "Q1338",
   "slug": "what-are-memory-mapped-files-how-do-they-work-and-when-are-they-useful",
-  "questionNumber": 1338,
+  "questionNumber": 30,
   "title": "What are memory-mapped files (`FileChannel.map` → `MappedByteBuffer`), how do they map a file region into memory for OS-paged, zero-copy access, and when are they useful (very large files, high-throughput I/O, inter-process shared memory)?",
   "shortTitle": "What are memory-mapped files, how do they work, and when are they useful?",
   "chapterNumber": 16,

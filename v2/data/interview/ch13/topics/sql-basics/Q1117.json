@@ -1,7 +1,7 @@
 {
   "id": "Q1117",
   "slug": "differences-between-drop-truncate-and-delete",
-  "questionNumber": 1117,
+  "questionNumber": 4,
   "title": "What are the differences between DROP, TRUNCATE, and DELETE?",
   "shortTitle": "Differences Between DROP, TRUNCATE, and DELETE",
   "chapterNumber": 13,

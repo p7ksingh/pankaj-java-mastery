@@ -1,7 +1,7 @@
 {
   "id": "Q629",
   "slug": "connecting-two-tables-onetomany-manytoone-joincolumn-mappedby",
-  "questionNumber": 629,
+  "questionNumber": 1,
   "title": "How do you connect two tables in Hibernate/JPA, and which annotations (@OneToMany, @ManyToOne, @JoinColumn, mappedBy) do you use?",
   "shortTitle": "How do you connect two tables with @OneToMany?",
   "chapterNumber": 9,

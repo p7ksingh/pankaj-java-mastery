@@ -1,7 +1,7 @@
 {
   "id": "Q653",
   "slug": "kafka-producerconsumer-partitions-consumer-groups-exactly-once-dlt-spring-kafka",
-  "questionNumber": 653,
+  "questionNumber": 1,
   "title": "What is Kafka? Topics, partitions, offsets? Consumer groups? Producer acks/idempotence? At-least-once/at-most-once/exactly-once? Dead Letter Topic? Kafka Streams? Schema Registry? Kafka Connect? Spring Kafka (@KafkaListener, KafkaTemplate)?",
   "shortTitle": "Kafka — producer/consumer, partitions, consumer groups, exactly-once, DLT, Spring Kafka",
   "chapterNumber": 11,

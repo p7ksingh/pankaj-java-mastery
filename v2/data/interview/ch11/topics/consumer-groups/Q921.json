@@ -1,7 +1,7 @@
 {
   "id": "Q921",
   "slug": "eager-versus-cooperative-sticky-rebalance-protocols",
-  "questionNumber": 921,
+  "questionNumber": 3,
   "title": "What is the difference between the eager and cooperative-sticky rebalance protocols?",
   "shortTitle": "Eager versus cooperative-sticky rebalance protocols",
   "chapterNumber": 11,

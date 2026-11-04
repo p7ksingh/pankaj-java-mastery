@@ -1,7 +1,7 @@
 {
   "id": "Q1915",
   "slug": "docker-image-versus-container-and-what-is-inside-an-image",
-  "questionNumber": 1915,
+  "questionNumber": 2,
   "title": "What is the difference between a Docker image and a Docker container, and what is actually inside an image (layers, base image, app, dependencies)?",
   "shortTitle": "Docker Image Versus Container and What Is Inside an Image",
   "chapterNumber": 12,

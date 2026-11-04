@@ -1,7 +1,7 @@
 {
   "id": "Q1811",
   "slug": "count-of-palindromic-substrings-total-number-of-contiguous-palindromes",
-  "questionNumber": 1811,
+  "questionNumber": 50,
   "title": "Given a string, count how many of its contiguous substrings are palindromes, counting each position separately even if the content repeats. Explain the Palindromic Subsequence DP pattern applied to counting, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Count of Palindromic Substrings (Total Number of Contiguous Palindromes)",
   "chapterNumber": 17,

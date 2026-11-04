@@ -1,7 +1,7 @@
 {
   "id": "Q917",
   "slug": "json-vs-avro-vs-protobuf-for-kafka-and-how-the-schema-registry-serializer-works-magic-byte-schema-id",
-  "questionNumber": 917,
+  "questionNumber": 2,
   "title": "What are the trade-offs between JSON, Avro, and Protobuf for Kafka messages, and how does the Avro/Protobuf serializer work with the Schema Registry (the record carries a magic byte + schema id, not the full schema; the \"Unknown magic byte\" error means a non-schema-registry record — e.g. old JSON — was read with an Avro deserializer)?",
   "shortTitle": "JSON vs Avro vs Protobuf for Kafka, and how the Schema Registry serializer works (magic byte + schema id)",
   "chapterNumber": 11,

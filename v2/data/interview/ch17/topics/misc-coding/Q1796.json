@@ -1,7 +1,7 @@
 {
   "id": "Q1796",
   "slug": "target-sum-assign-plus-and-minus-signs-to-reach-a-target",
-  "questionNumber": 1796,
+  "questionNumber": 37,
   "title": "Given a set of positive numbers and a target T, assign a plus or minus sign to each number so that the signed total equals T, and count the number of ways to do so. Explain how this reduces to Count of Subset Sum, the DP technique, the complexity, and a banking use case.",
   "shortTitle": "Target Sum (Assign Plus and Minus Signs to Reach a Target)",
   "chapterNumber": 17,

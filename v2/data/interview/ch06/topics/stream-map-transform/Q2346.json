@@ -1,7 +1,7 @@
 {
   "id": "Q2346",
   "slug": "count-the-occurrences-of-each-character-in-a-string-into-mapcharacter-long",
-  "questionNumber": 2346,
+  "questionNumber": 31,
   "title": "Count the occurrences of each character in a string → `Map<Character, Long>`.",
   "shortTitle": "Count the occurrences of each character in a string into Map<Character, Long>",
   "chapterNumber": 6,

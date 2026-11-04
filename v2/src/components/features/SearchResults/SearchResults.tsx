@@ -90,7 +90,7 @@ export function SearchResults({ initialQuery }: SearchResultsProps) {
             <Badge variant="question">{r.id}</Badge>
             <div className={styles.info}>
               <span className={styles.title}>{highlightMatch(r.title, query)}</span>
-              <span className={styles.chapter}>{r.chapter}</span>
+              <span className={styles.chapter}>{r.chapter} › {r.topic}</span>
             </div>
           </Link>
         ))}

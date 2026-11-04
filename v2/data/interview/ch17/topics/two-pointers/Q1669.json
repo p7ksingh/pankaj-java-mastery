@@ -1,7 +1,7 @@
 {
   "id": "Q1669",
   "slug": "triplet-sum-to-zero-3sum-with-two-pointers",
-  "questionNumber": 1669,
+  "questionNumber": 8,
   "title": "Given an array of numbers, find all unique triplets that add up to zero. Each triplet must be unique, and the solution should avoid duplicates. (LeetCode: 3Sum)",
   "shortTitle": "Triplet Sum to Zero (3Sum with Two Pointers)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1390",
   "slug": "what-is-a-binary-search-tree-bst",
-  "questionNumber": 1390,
+  "questionNumber": 1,
   "title": "What is a binary search tree (BST) — a binary tree where left child < parent < right child; this makes searching fast.",
   "shortTitle": "What is a Binary Search Tree (BST)?",
   "chapterNumber": 17,

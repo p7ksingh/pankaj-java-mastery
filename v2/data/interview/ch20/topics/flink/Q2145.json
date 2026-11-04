@@ -1,7 +1,7 @@
 {
   "id": "Q2145",
   "slug": "how-does-flink-achieve-end-to-end-exactly-once",
-  "questionNumber": 2145,
+  "questionNumber": 9,
   "title": "How does Flink achieve end-to-end exactly-once semantics (checkpointed state + a two-phase-commit sink via TwoPhaseCommitSinkFunction to Kafka/JDBC/Iceberg — pre-commit on checkpoint, commit on checkpoint-complete)?",
   "shortTitle": "How does Flink achieve end-to-end exactly-once",
   "chapterNumber": 20,

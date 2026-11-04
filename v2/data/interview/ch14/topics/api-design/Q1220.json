@@ -1,7 +1,7 @@
 {
   "id": "Q1220",
   "slug": "what-is-an-http-parameter-pollution-hpp-attack-and-how-do-you-remediate-it",
-  "questionNumber": 1220,
+  "questionNumber": 9,
   "title": "What is an HTTP Parameter Pollution (HPP) attack — supplying a parameter multiple times (`?role=user&role=admin`) so different layers (gateway, framework, backend) disagree on which value wins, bypassing validation/authorization — and how do you remediate it (reject or canonicalize duplicate params, validate against a strict schema, be explicit about first-vs-last-wins semantics)?",
   "shortTitle": "What is an HTTP Parameter Pollution (HPP) attack and how do you remediate it",
   "chapterNumber": 14,

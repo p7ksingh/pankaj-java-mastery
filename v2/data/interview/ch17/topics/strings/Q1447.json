@@ -1,7 +1,7 @@
 {
   "id": "Q1447",
   "slug": "longest-palindromic-substring-expand-around-center-on",
-  "questionNumber": 1447,
+  "questionNumber": 18,
   "title": "Longest Palindromic Substring — expand-around-center O(n²) or Manacher's O(n).",
   "shortTitle": "Longest Palindromic Substring — Expand Around Center O(n²)",
   "chapterNumber": 17,

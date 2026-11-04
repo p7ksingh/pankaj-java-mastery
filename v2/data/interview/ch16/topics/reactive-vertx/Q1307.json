@@ -1,7 +1,7 @@
 {
   "id": "Q1307",
   "slug": "how-do-you-scale-an-rsocket-service-in-kubernetes-stickyconsistent-hash-lb-client-side-lb-hpa-on-connections-resumable-sessions-keep-alive-tuning",
-  "questionNumber": 1307,
+  "questionNumber": 6,
   "title": "How do you scale an RSocket service in Kubernetes (sticky/consistent-hash LB, client-side LB, HPA on connections, resumable sessions, keep-alive tuning)?",
   "shortTitle": "How do you scale an RSocket service in Kubernetes (sticky/consistent-hash LB, client-side LB, HPA on connections, resumable sessions, keep-alive tuning)?",
   "chapterNumber": 16,

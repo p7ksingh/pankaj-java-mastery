@@ -1,7 +1,7 @@
 {
   "id": "Q677",
   "slug": "soft-delete-sqldelete-wheresqlrestriction-filter-softdelete",
-  "questionNumber": 677,
+  "questionNumber": 2,
   "title": "How do you implement soft delete in Hibernate using @SQLDelete, @Where/@SQLRestriction, @Filter, and the newer @SoftDelete? What are the trade-offs?",
   "shortTitle": "How do you implement soft delete?",
   "chapterNumber": 9,

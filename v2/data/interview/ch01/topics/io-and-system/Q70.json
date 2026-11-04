@@ -1,7 +1,7 @@
 {
   "id": "Q70",
   "slug": "what-is-the-difference-between-systemout-systemerr-and-systemin-and-can-out-and-err-be-redirected-separately",
-  "questionNumber": 70,
+  "questionNumber": 1,
   "title": "What is the difference between `System.out`, `System.err`, and `System.in`, and can `System.out` and `System.err` be redirected separately?",
   "shortTitle": "What is the difference between System.out, System.err, and System.in?",
   "chapterNumber": 1,

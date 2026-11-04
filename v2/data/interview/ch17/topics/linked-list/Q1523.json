@@ -1,7 +1,7 @@
 {
   "id": "Q1523",
   "slug": "subtree-of-another-tree-recursive-comparison-at-every-node",
-  "questionNumber": 1523,
+  "questionNumber": 13,
   "title": "Given the roots of two binary trees root and subRoot, return true if there is a subtree of root with the same structure and values as subRoot.",
   "shortTitle": "Subtree of Another Tree — recursive comparison at every node",
   "chapterNumber": 17,

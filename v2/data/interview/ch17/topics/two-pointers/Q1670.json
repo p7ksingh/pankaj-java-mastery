@@ -1,7 +1,7 @@
 {
   "id": "Q1670",
   "slug": "triplet-sum-close-to-target-3sum-closest",
-  "questionNumber": 1670,
+  "questionNumber": 9,
   "title": "Given an array of numbers and a target value, find the triplet whose sum is closest to the target and return that sum. (LeetCode: 3Sum Closest)",
   "shortTitle": "Triplet Sum Close to Target (3Sum Closest)",
   "chapterNumber": 17,

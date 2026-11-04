@@ -1,7 +1,7 @@
 {
   "id": "Q2246",
   "slug": "given-a-mapstring-listemployee-department-employees-flatten-all-employees-into-one-list",
-  "questionNumber": 2246,
+  "questionNumber": 6,
   "title": "Given a `Map<String, List<Employee>>` (department to employees), flatten all employees into one list.",
   "shortTitle": "Given a Map<String, List<Employee>> (department → employees), flatten all employees into one list",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q1744",
   "slug": "find-the-median-of-a-number-stream-two-heaps",
-  "questionNumber": 1744,
+  "questionNumber": 29,
   "title": "Design a data structure that accepts a continuous stream of numbers and can return the median of all numbers seen so far at any time. Insertion and median-query should both be efficient. Explain the two-heap technique.",
   "shortTitle": "Find the Median of a Number Stream (Two Heaps)",
   "chapterNumber": 17,

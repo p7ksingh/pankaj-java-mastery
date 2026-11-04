@@ -1,7 +1,7 @@
 {
   "id": "Q1574",
   "slug": "climbing-stairs-dpi-dpi-1-dpi-2",
-  "questionNumber": 1574,
+  "questionNumber": 4,
   "title": "You can climb 1 or 2 steps at a time. In how many distinct ways can you reach the top of n stairs?",
   "shortTitle": "Climbing Stairs — dp[i] = dp[i-1] + dp[i-2]",
   "chapterNumber": 17,

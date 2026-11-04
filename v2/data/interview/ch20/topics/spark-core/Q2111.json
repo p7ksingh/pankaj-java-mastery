@@ -1,7 +1,7 @@
 {
   "id": "Q2111",
   "slug": "is-sparks-sortorderby-stable",
-  "questionNumber": 2111,
+  "questionNumber": 64,
   "title": "Is Spark's `sort()`/`orderBy()` stable (no — Spark does not preserve the original order of rows with equal sort keys due to distributed sorting; simulate stable sort by adding a tie-breaker column like `monotonically_increasing_id`)?",
   "shortTitle": "Is Spark's `sort()`/`orderBy()` stable",
   "chapterNumber": 20,

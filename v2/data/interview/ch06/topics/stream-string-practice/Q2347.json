@@ -1,7 +1,7 @@
 {
   "id": "Q2347",
   "slug": "reverse-a-string-using-chars-and-stringbuilder",
-  "questionNumber": 2347,
+  "questionNumber": 8,
   "title": "Reverse a string using `chars()` and `StringBuilder`.",
   "shortTitle": "Reverse a string using chars() and StringBuilder",
   "chapterNumber": 6,

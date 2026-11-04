@@ -1,7 +1,7 @@
 {
   "id": "Q1348",
   "slug": "how-are-lambda-expressions-implemented-at-the-bytecode-level",
-  "questionNumber": 1348,
+  "questionNumber": 39,
   "title": "How are lambda expressions implemented at the bytecode level (`invokedynamic` + a runtime-generated function object via `LambdaMetafactory`), and why is that cheaper than an anonymous-class instance per lambda?",
   "shortTitle": "How are lambda expressions implemented at the bytecode level?",
   "chapterNumber": 16,

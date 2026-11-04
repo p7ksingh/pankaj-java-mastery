@@ -1,7 +1,7 @@
 {
   "id": "Q2231",
   "slug": "filter-employees-whose-salary-is-between-40000-and-80000-inclusive-range",
-  "questionNumber": 2231,
+  "questionNumber": 10,
   "title": "Filter employees whose salary is between 40,000 and 80,000 (inclusive range).",
   "shortTitle": "Filter employees whose salary is between 40,000 and 80,000 (inclusive range)",
   "chapterNumber": 6,

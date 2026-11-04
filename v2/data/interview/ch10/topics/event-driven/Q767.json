@@ -1,7 +1,7 @@
 {
   "id": "Q767",
   "slug": "explain-cqrs-and-when-to-use-it",
-  "questionNumber": 767,
+  "questionNumber": 6,
   "title": "Explain CQRS (Command Query Responsibility Segregation) and when to use it — separate the write model (command side: receives commands, enforces business rules via aggregates, emits domain events) from the read model (query side: denormalized projections optimized for specific query shapes) — and why does this separation help (write model optimized for consistency/invariants, read model optimized for query performance without fat joins or full aggregate loading, each side scales independently)?",
   "shortTitle": "Explain CQRS and when to use it",
   "chapterNumber": 10,

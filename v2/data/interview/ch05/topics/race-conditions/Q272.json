@@ -1,7 +1,7 @@
 {
   "id": "Q272",
   "slug": "data-race-jmm-violation-vs-race-condition-logic-bug-can-one-exist-without-the-other",
-  "questionNumber": 272,
+  "questionNumber": 3,
   "title": "Data race (JMM violation) vs race condition (logic bug) — can one exist without the other?",
   "shortTitle": "What is data race vs race condition?",
   "chapterNumber": 5,

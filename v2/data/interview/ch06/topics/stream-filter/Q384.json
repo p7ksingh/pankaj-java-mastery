@@ -1,7 +1,7 @@
 {
   "id": "Q384",
   "slug": "takewhile-vs-dropwhile-java-9-prefix-based-vs-filter-whole-stream",
-  "questionNumber": 384,
+  "questionNumber": 5,
   "title": "What is the difference between takeWhile and dropWhile (Java 9+), and how do they differ from filter (they stop/skip based on a prefix, not the whole stream)?",
   "shortTitle": "takeWhile vs dropWhile (Java 9) — prefix-based vs filter (whole stream)",
   "chapterNumber": 6,

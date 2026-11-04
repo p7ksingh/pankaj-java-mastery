@@ -1,7 +1,7 @@
 {
   "id": "Q578",
   "slug": "transaction-propagation-required-requiresnew-mandatory-nested-with-real-use-cases",
-  "questionNumber": 578,
+  "questionNumber": 1,
   "title": "Explain all @Transactional propagation levels (REQUIRED, REQUIRES_NEW, SUPPORTS, MANDATORY, NEVER, NESTED) with real-world use cases (especially REQUIRES_NEW for audit logs).",
   "shortTitle": "What are transaction propagation levels?",
   "chapterNumber": 8,

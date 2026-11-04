@@ -1,7 +1,7 @@
 {
   "id": "Q342",
   "slug": "optionalof-vs-optionalofnullable-npe-on-null-vs-empty-optional",
-  "questionNumber": 342,
+  "questionNumber": 2,
   "title": "How does Optional.of() work, and how does it differ from Optional.ofNullable() (NPE on null vs empty Optional)?",
   "shortTitle": "Optional.of() vs Optional.ofNullable()?",
   "chapterNumber": 6,

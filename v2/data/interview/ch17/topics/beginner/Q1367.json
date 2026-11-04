@@ -1,7 +1,7 @@
 {
   "id": "Q1367",
   "slug": "print-even-and-odd-numbers-separately-from-an-array",
-  "questionNumber": 1367,
+  "questionNumber": 2,
   "title": "Print even and odd numbers separately from an array (check `num % 2 == 0`).",
   "shortTitle": "Print even and odd numbers separately from an array",
   "chapterNumber": 17,

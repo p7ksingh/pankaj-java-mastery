@@ -1,7 +1,7 @@
 {
   "id": "Q2083",
   "slug": "spark-security",
-  "questionNumber": 2083,
+  "questionNumber": 48,
   "title": "What is Spark security — authentication (Kerberos), authorization (RBAC / Ranger / table ACLs), encryption at rest (HDFS/S3 encryption) and in transit (SSL/TLS for RPC and shuffle), and network isolation — and how do you secure a production Spark cluster?",
   "shortTitle": "Spark security",
   "chapterNumber": 20,

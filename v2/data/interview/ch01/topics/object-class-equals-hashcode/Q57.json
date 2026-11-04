@@ -1,7 +1,7 @@
 {
   "id": "Q57",
   "slug": "if-you-override-hashcode-to-always-return-a-constant-how-it-impacts-a-hashmap-or-hashset",
-  "questionNumber": 57,
+  "questionNumber": 5,
   "title": "If you override `hashCode()` to always return a constant (e.g. 0 or 1), how does it impact a HashMap/HashSet (all entries in one bucket, O(n) lookups)?",
   "shortTitle": "What if hashCode() always returns a constant?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q313",
   "slug": "java-8-base64-api-encodingdecoding-url-safe-mime-encoding-vs-encryption",
-  "questionNumber": 313,
+  "questionNumber": 2,
   "title": "What is the Java 8 Base64 API (getEncoder/getDecoder, URL-safe, MIME variants), when do you use Base64, and why is it encoding NOT encryption?",
   "shortTitle": "What is the Java 8 Base64 API?",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q1119",
   "slug": "postgresql-equivalent-of-oracles-clob-data-type-text",
-  "questionNumber": 1119,
+  "questionNumber": 13,
   "title": "What is the PostgreSQL equivalent of Oracle's `CLOB` data type (`TEXT`)?",
   "shortTitle": "PostgreSQL Equivalent of Oracle's CLOB Data Type (TEXT)",
   "chapterNumber": 13,

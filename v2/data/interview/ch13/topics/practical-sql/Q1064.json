@@ -1,7 +1,7 @@
 {
   "id": "Q1064",
   "slug": "what-are-the-uuidv7-caveats",
-  "questionNumber": 1064,
+  "questionNumber": 1,
   "title": "What are the UUIDv7 caveats — it is NOT a distributed sequence or global causal ordering (clock skew across nodes), it should be stored compactly (`BINARY(16)` / native `uuid`) not `CHAR(36)`, and it leaks creation time so it is an identifier, NOT a secret/auth token?",
   "shortTitle": "What are the UUIDv7 caveats",
   "chapterNumber": 13,

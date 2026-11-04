@@ -1,7 +1,7 @@
 {
   "id": "Q24",
   "slug": "thread-safety-in-stringbuffer-compared-to-string-and-stringbuilder",
-  "questionNumber": 24,
+  "questionNumber": 6,
   "title": "Describe thread-safety in StringBuffer and how it compares to String and StringBuilder.",
   "shortTitle": "How is StringBuffer thread-safe compared to String and StringBuilder?",
   "chapterNumber": 1,

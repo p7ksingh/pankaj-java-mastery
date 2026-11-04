@@ -1,7 +1,7 @@
 {
   "id": "Q2089",
   "slug": "delta-lake-merge-into-upsert",
-  "questionNumber": 2089,
+  "questionNumber": 2,
   "title": "What is Delta Lake's `MERGE INTO` (upsert) — atomically match rows and INSERT/UPDATE/DELETE in one statement — and how does it compare to a manual read-check-write pattern (MERGE is atomic and handles concurrency)?",
   "shortTitle": "Delta Lake MERGE INTO (upsert)",
   "chapterNumber": 20,

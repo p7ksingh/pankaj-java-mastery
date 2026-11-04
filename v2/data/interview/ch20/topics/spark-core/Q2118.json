@@ -1,7 +1,7 @@
 {
   "id": "Q2118",
   "slug": "what-is-union-vs-unionbyname-in-spark",
-  "questionNumber": 2118,
+  "questionNumber": 69,
   "title": "What is `union()` vs `unionByName()` in Spark — `union` matches columns by position (breaks if order differs), `unionByName` matches by column name (safe even if order differs, supports `allowMissingColumns=True` in Spark 3.1+) — and why should you always prefer `unionByName`?",
   "shortTitle": "What is `union()` vs `unionByName()` in Spark",
   "chapterNumber": 20,

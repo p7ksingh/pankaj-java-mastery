@@ -1,7 +1,7 @@
 {
   "id": "Q1495",
   "slug": "median-of-two-sorted-arrays-binary-search-partition",
-  "questionNumber": 1495,
+  "questionNumber": 41,
   "title": "Given two sorted arrays, find the median of the combined sorted order of all elements in O(log(min(m, n))) time, without actually merging the arrays.",
   "shortTitle": "Median of Two Sorted Arrays — Binary Search Partition",
   "chapterNumber": 17,

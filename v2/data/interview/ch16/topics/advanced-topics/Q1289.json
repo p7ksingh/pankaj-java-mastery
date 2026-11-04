@@ -1,7 +1,7 @@
 {
   "id": "Q1289",
   "slug": "is-listing-all-permitted-subclasses-optional-if-theyre-in-the-same-file",
-  "questionNumber": 1289,
+  "questionNumber": 1,
   "title": "Is listing all permitted subclasses optional if they're in the same file?",
   "shortTitle": "Is listing all permitted subclasses optional if they're in the same file?",
   "chapterNumber": 16,

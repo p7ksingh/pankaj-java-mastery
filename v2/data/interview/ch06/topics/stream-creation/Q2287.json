@@ -1,7 +1,7 @@
 {
   "id": "Q2287",
   "slug": "generate-account-numbers-and-iterate-by-index-using-intstreamrangeclosed",
-  "questionNumber": 2287,
+  "questionNumber": 9,
   "title": "Use `IntStream.rangeClosed` to generate a sequence of account numbers and to iterate a list by index (so you can pair each employee with its position). Explain `range` versus `rangeClosed`, `mapToObj`, and when index-based iteration is appropriate.",
   "shortTitle": "Generate account numbers and iterate by index using IntStream.rangeClosed",
   "chapterNumber": 6,

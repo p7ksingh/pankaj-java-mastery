@@ -1,7 +1,7 @@
 {
   "id": "Q1816",
   "slug": "longest-common-subsequence-longest-ordered-sequence-shared-by-two-strings",
-  "questionNumber": 1816,
+  "questionNumber": 55,
   "title": "Given two strings, find the length of the longest subsequence common to both, where a subsequence keeps relative order but need not be contiguous. Explain the Longest Common Substring DP pattern applied to subsequences, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Longest Common Subsequence (Longest Ordered Sequence Shared by Two Strings)",
   "chapterNumber": 17,

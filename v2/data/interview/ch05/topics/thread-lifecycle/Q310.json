@@ -1,7 +1,7 @@
 {
   "id": "Q310",
   "slug": "cooperative-interruption-interrupt-sets-the-flag-isinterrupted-reads-interrupted-reads-and-clears",
-  "questionNumber": 310,
+  "questionNumber": 2,
   "title": "Explain cooperative thread interruption in Java. What does Thread.interrupt() do, what is the difference between isInterrupted() and the static interrupted(), and why is interruption a polite request rather than a forced stop?",
   "shortTitle": "What is cooperative interruption?",
   "chapterNumber": 5,

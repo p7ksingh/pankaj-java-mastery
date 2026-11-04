@@ -1,7 +1,7 @@
 {
   "id": "Q101",
   "slug": "walk-through-the-eclipse-mat-heap-dump-investigation-workflow-for-a-suspected-leak",
-  "questionNumber": 101,
+  "questionNumber": 19,
   "title": "Walk through the Eclipse MAT heap-dump investigation WORKFLOW for a suspected leak — run the Leak Suspect Report, open the dominator tree sorted by retained heap, inspect the biggest accumulator, use \"Path to GC Roots\" to find what keeps it alive, and compare two dumps to catch a slow leak — and why is the right question \"what is RETAINING this memory?\" not \"what is big?\"",
   "shortTitle": "How do you investigate a heap dump with Eclipse MAT?",
   "chapterNumber": 1,

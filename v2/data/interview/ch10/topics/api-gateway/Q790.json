@@ -1,7 +1,7 @@
 {
   "id": "Q790",
   "slug": "how-do-you-propagate-security-tokens-from-an-api-gateway-to-downstream-services",
-  "questionNumber": 790,
+  "questionNumber": 14,
   "title": "How do you propagate security tokens from an API Gateway to downstream services (forward Authorization header, inject claims, token exchange, mTLS)?",
   "shortTitle": "How do you propagate security tokens from an API Gateway to downstream services",
   "chapterNumber": 10,

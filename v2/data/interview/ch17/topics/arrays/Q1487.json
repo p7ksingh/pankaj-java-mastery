@@ -1,7 +1,7 @@
 {
   "id": "Q1487",
   "slug": "classic-binary-search-find-a-target-in-a-sorted-array-in-olog-n",
-  "questionNumber": 1487,
+  "questionNumber": 37,
   "title": "Given a sorted array of integers and a target value, return the index of the target if it is present, otherwise return minus one. The algorithm must run in logarithmic time.",
   "shortTitle": "Classic Binary Search — Find a Target in a Sorted Array in O(log n)",
   "chapterNumber": 17,

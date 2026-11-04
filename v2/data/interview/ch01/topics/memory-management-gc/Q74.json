@@ -1,7 +1,7 @@
 {
   "id": "Q74",
   "slug": "how-is-heap-memory-divided",
-  "questionNumber": 74,
+  "questionNumber": 2,
   "title": "How is heap memory divided (Young Generation with Eden/Survivor, Old Generation, Metaspace)?",
   "shortTitle": "How is heap memory divided?",
   "chapterNumber": 1,

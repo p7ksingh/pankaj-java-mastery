@@ -1,7 +1,7 @@
 {
   "id": "Q2194",
   "slug": "how-playwright-handles-file-uploads",
-  "questionNumber": 2194,
+  "questionNumber": 3,
   "title": "How does Playwright handle file uploads (`setInputFiles()` on a file input, or capturing the `filechooser` event), including single vs multiple files, and how do you verify the correct file was actually uploaded?",
   "shortTitle": "How Playwright handles file uploads",
   "chapterNumber": 21,

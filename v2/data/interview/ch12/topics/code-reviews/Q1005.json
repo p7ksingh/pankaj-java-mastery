@@ -1,7 +1,7 @@
 {
   "id": "Q1005",
   "slug": "operational-documentation-a-production-service-needs-readme-runbooks-troubleshooting-guides-deployment-docs-architecture-diagrams",
-  "questionNumber": 1005,
+  "questionNumber": 4,
   "title": "What operational documentation does a production service need — a README (what the service does, how to build/run/test it, key dependencies), runbooks for on-call (step-by-step procedures for common alerts like \"DB connection pool exhausted\" or \"Kafka consumer lag > 100K\"), troubleshooting guides (how to diagnose common failures with commands and links), deployment documentation (how to deploy, roll back, verify), and architecture diagrams (how this service fits into the bigger system) — and why are runbooks a reliability tool (reduce MTTR, reduce tribal-knowledge dependence, enable any on-call engineer to handle an incident they haven't seen before)?",
   "shortTitle": "Operational documentation a production service needs — README, runbooks, troubleshooting guides, deployment docs, architecture diagrams",
   "chapterNumber": 12,

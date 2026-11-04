@@ -1,7 +1,7 @@
 {
   "id": "Q297",
   "slug": "striped-lock-partitioning-array-of-n-locks-hash-to-stripe-unfair-for-throughput-vs-concurrenthashmap",
-  "questionNumber": 297,
+  "questionNumber": 5,
   "title": "Striped lock partitioning — array of N locks, hash to stripe, unfair for throughput, vs ConcurrentHashMap",
   "shortTitle": "What is striped lock partitioning?",
   "chapterNumber": 5,

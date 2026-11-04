@@ -1,7 +1,7 @@
 {
   "id": "Q151",
   "slug": "marker-interface-serializable-cloneable-remote-what-they-are-and-why-they-exist",
-  "questionNumber": 151,
+  "questionNumber": 1,
   "title": "What is a marker interface, and what are some examples (Serializable, Cloneable, Remote)?",
   "shortTitle": "What is a marker interface?",
   "chapterNumber": 2,

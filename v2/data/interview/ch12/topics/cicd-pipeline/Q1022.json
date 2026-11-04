@@ -1,7 +1,7 @@
 {
   "id": "Q1022",
   "slug": "why-zgc-can-still-show-a-huge-periodic-latency-spike-the-allocation-stall-how-zuncommit-worsens-bursty-workloads-and-how-to-fix-it",
-  "questionNumber": 1022,
+  "questionNumber": 13,
   "title": "Why would ZGC — designed for sub-millisecond pauses — still produce a huge periodic latency spike (an ALLOCATION STALL: the allocation rate outpaces concurrent reclamation so threads are parked until memory frees), how does `ZUncommit` giving heap back to the OS during quiet periods worsen a bursty workload (page faults + zeroing when memory is reclaimed), and how do you fix it (`-Xms == -Xmx` to disable uncommit, `-XX:+AlwaysPreTouch` to fault in all pages at startup, and `-XX:+ZGenerational` to collect the young gen frequently)?",
   "shortTitle": "Why ZGC can still show a huge periodic latency spike — the allocation stall — how ZUncommit worsens bursty workloads, and how to fix it",
   "chapterNumber": 12,

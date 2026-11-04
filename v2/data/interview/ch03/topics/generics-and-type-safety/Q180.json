@@ -1,7 +1,7 @@
 {
-  "id": "Q180-collections",
-  "slug": "generics-compile-time-type-safety-no-explicit-casts",
-  "questionNumber": 180,
+  "id": "Q180",
+  "slug": "generics-compile-time-type-safety-no-explicit",
+  "questionNumber": 1,
   "title": "Generics — compile-time type safety, no explicit casts",
   "shortTitle": "What are generics and why do we need them?",
   "chapterNumber": 3,

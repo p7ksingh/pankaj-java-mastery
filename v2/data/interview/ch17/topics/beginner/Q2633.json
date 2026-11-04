@@ -1,7 +1,7 @@
 {
   "id": "Q2633",
   "slug": "form-triangle-print-yes-if-three-lengths-can-form-a-valid-triangle",
-  "questionNumber": 2633,
+  "questionNumber": 24,
   "title": "Given 3 numbers A, B, and C representing lengths of three lines, draw a flowchart to print Yes if they can form a valid triangle and No otherwise. A triangle is valid if and only if the sum of any two sides is greater than the third (A + B > C and B + C > A and C + A > B). Start, read A, B, C, decision A + B > C AND B + C > A AND C + A > B, Yes print Yes, No print No, End. Input: 3 4 5, Expected Output: Yes (e.g. 1 2 10 -> No).",
   "shortTitle": "Form Triangle — print Yes if three lengths can form a valid triangle",
   "chapterNumber": 17,

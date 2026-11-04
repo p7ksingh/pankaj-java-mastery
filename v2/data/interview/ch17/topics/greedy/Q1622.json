@@ -1,7 +1,7 @@
 {
   "id": "Q1622",
   "slug": "merge-overlapping-intervals",
-  "questionNumber": 1622,
+  "questionNumber": 2,
   "title": "Given a collection of intervals, merge all overlapping intervals and return the non-overlapping intervals that cover the same ranges.",
   "shortTitle": "Merge Overlapping Intervals",
   "chapterNumber": 17,

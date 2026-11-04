@@ -1,7 +1,7 @@
 {
   "id": "Q1567",
   "slug": "letter-combinations-of-a-phone-number",
-  "questionNumber": 1567,
+  "questionNumber": 6,
   "title": "Given a string of digits 2–9, return all letter combinations the number could spell, based on the classic phone keypad mapping.",
   "shortTitle": "Letter Combinations of a Phone Number",
   "chapterNumber": 17,

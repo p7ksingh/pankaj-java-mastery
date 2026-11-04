@@ -1,7 +1,7 @@
 {
   "id": "Q2141",
   "slug": "what-are-flink-state-backends",
-  "questionNumber": 2141,
+  "questionNumber": 15,
   "title": "What are Flink state backends — HashMapStateBackend (in-memory, fast, limited by JVM heap) vs EmbeddedRocksDBStateBackend (on-disk, handles very large state, slower per-access) — and how do you choose (state size vs latency requirements)?",
   "shortTitle": "What are Flink state backends",
   "chapterNumber": 20,

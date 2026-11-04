@@ -1,7 +1,7 @@
 {
   "id": "Q1826",
   "slug": "alien-dictionary-derive-character-order-from-a-sorted-word-list",
-  "questionNumber": 1826,
+  "questionNumber": 59,
   "title": "Given a list of words sorted according to an unknown alphabet, derive a valid ordering of the characters in that alphabet. Explain how the Topological Sort pattern solves it, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Alien Dictionary (Derive Character Order from a Sorted Word List)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1668",
   "slug": "squaring-a-sorted-array-two-pointers-from-the-ends",
-  "questionNumber": 1668,
+  "questionNumber": 63,
   "title": "Given an array sorted in non-decreasing order that may contain negative numbers, return a new array of the squares of each number, also sorted in non-decreasing order. Aim for linear time. (LeetCode: Squares of a Sorted Array)",
   "shortTitle": "Squaring a Sorted Array (Two Pointers from the Ends)",
   "chapterNumber": 17,

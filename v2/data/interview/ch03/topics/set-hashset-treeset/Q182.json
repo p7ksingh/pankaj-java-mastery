@@ -1,7 +1,7 @@
 {
-  "id": "Q182-collections",
-  "slug": "convert-list-to-set-what-happens-to-duplicates",
-  "questionNumber": 182,
+  "id": "Q182",
+  "slug": "convert-list-to-set-what-happens-to",
+  "questionNumber": 5,
   "title": "Convert List to Set — what happens to duplicates",
   "shortTitle": "What happens when you convert List to Set?",
   "chapterNumber": 3,

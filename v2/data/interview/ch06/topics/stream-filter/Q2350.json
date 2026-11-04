@@ -1,7 +1,7 @@
 {
   "id": "Q2350",
   "slug": "find-duplicate-characters-in-a-string-using-groupingby-counting-and-filtering-count-1",
-  "questionNumber": 2350,
+  "questionNumber": 17,
   "title": "Find duplicate characters in a string using `Collectors.groupingBy` + `Collectors.counting()` and filtering count > 1.",
   "shortTitle": "Find duplicate characters in a string using groupingBy + counting and filtering count > 1",
   "chapterNumber": 6,

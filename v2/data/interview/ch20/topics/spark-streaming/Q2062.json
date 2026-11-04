@@ -1,7 +1,7 @@
 {
   "id": "Q2062",
   "slug": "the-three-output-modes-in-structured-streaming",
-  "questionNumber": 2062,
+  "questionNumber": 3,
   "title": "What are the three output modes in Structured Streaming — Append (only new rows), Complete (entire result table rewritten, for aggregations), Update (only changed rows) — and when do you use each?",
   "shortTitle": "The three output modes in Structured Streaming",
   "chapterNumber": 20,

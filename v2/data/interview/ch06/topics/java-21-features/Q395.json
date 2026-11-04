@@ -1,7 +1,7 @@
 {
   "id": "Q395",
   "slug": "why-pooling-virtual-threads-is-an-anti-pattern-semaphore-for-bounded-concurrency",
-  "questionNumber": 395,
+  "questionNumber": 3,
   "title": "Why is pooling virtual threads an anti-pattern (they're cheap — one-per-task is intended), and when you need to bound concurrency why use a Semaphore instead of a thread pool?",
   "shortTitle": "Why is pooling virtual threads an anti-pattern?",
   "chapterNumber": 6,

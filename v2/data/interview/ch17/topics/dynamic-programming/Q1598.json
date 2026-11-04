@@ -1,7 +1,7 @@
 {
   "id": "Q1598",
   "slug": "regular-expression-matching-and-with-dp",
-  "questionNumber": 1598,
+  "questionNumber": 11,
   "title": "Implement regular expression matching where '.' matches any single character and '*' matches zero or more of the preceding element, over the entire input string.",
   "shortTitle": "Regular Expression Matching — '.' and '*' with DP",
   "chapterNumber": 17,

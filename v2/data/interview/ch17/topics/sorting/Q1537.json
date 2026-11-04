@@ -1,7 +1,7 @@
 {
   "id": "Q1537",
   "slug": "kth-largest-in-a-stream-maintain-a-min-heap-of-size-k",
-  "questionNumber": 1537,
+  "questionNumber": 9,
   "title": "Design a class that is initialized with a value K and an initial list of numbers, and supports an add operation that inserts a new number and returns the Kth largest element among all numbers seen so far.",
   "shortTitle": "Kth Largest in a Stream — maintain a min-heap of size K",
   "chapterNumber": 17,

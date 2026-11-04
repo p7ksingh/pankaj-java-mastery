@@ -1,7 +1,7 @@
 {
   "id": "Q282",
   "slug": "semaphore-permits-limit-concurrent-access-binary-semaphore-vs-synchronized",
-  "questionNumber": 282,
+  "questionNumber": 2,
   "title": "Semaphore — permits, limit concurrent access, binary semaphore vs synchronized",
   "shortTitle": "What is a Semaphore?",
   "chapterNumber": 5,

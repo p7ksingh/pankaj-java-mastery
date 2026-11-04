@@ -1,7 +1,7 @@
 {
   "id": "Q1131",
   "slug": "locking-reads-select-for-update-for-share-and-why-not-everywhere",
-  "questionNumber": 1131,
+  "questionNumber": 6,
   "title": "What is a locking read (`SELECT ... FOR UPDATE` / `FOR SHARE` in InnoDB), how does it hold row locks until commit/rollback so a read-check-then-update sequence (e.g. read stock → verify → decrement) is protected from competing transactions, and why should you NOT use `FOR UPDATE` everywhere (it increases contention — lock only where correctness truly requires it)?",
   "shortTitle": "Locking Reads (SELECT ... FOR UPDATE / FOR SHARE) and Why Not Everywhere",
   "chapterNumber": 13,

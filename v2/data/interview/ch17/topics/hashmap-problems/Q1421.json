@@ -1,7 +1,7 @@
 {
   "id": "Q1421",
   "slug": "contains-duplicate-check-using-a-hashset-in-on",
-  "questionNumber": 1421,
+  "questionNumber": 3,
   "title": "Contains Duplicate — check using HashSet in O(n).",
   "shortTitle": "Contains Duplicate — Check Using a HashSet in O(n)",
   "chapterNumber": 17,

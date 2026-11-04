@@ -1,7 +1,7 @@
 {
   "id": "Q1068",
   "slug": "a-query-that-was-50ms-suddenly-takes-10-seconds-troubleshoot-from-evidence",
-  "questionNumber": 1068,
+  "questionNumber": 3,
   "title": "(Scenario) A query that normally takes 50 ms suddenly takes 10 seconds — how do you troubleshoot it starting from EVIDENCE (compare the execution plan now vs before, index usage, stale/outdated statistics, lock contention, skewed query parameters, data growth, recent schema changes, DB resource utilization) and why is \"just add an index\" the wrong reflex before you've found WHAT CHANGED?",
   "shortTitle": "A query that was 50ms suddenly takes 10 seconds — troubleshoot from evidence",
   "chapterNumber": 13,

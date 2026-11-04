@@ -1,7 +1,7 @@
 {
   "id": "Q2044",
   "slug": "requirements-for-effective-bucketing-and-its-caveats",
-  "questionNumber": 2044,
+  "questionNumber": 2,
   "title": "What are the requirements for effective bucketing (high-cardinality columns, align with join/group keys), and what is the caveat (bucketing metadata must be registered in the catalog via `saveAsTable`; not supported for Delta tables)?",
   "shortTitle": "Requirements for effective bucketing and its caveats",
   "chapterNumber": 20,

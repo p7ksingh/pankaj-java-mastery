@@ -1,7 +1,7 @@
 {
   "id": "Q1820",
   "slug": "shortest-common-supersequence-shortest-string-containing-both-as-subsequences",
-  "questionNumber": 1820,
+  "questionNumber": 57,
   "title": "Given two strings, find the length of the shortest string that has both of them as subsequences. Explain how the Longest Common Substring pattern through the longest common subsequence solves it, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Shortest Common Supersequence (Shortest String Containing Both as Subsequences)",
   "chapterNumber": 17,

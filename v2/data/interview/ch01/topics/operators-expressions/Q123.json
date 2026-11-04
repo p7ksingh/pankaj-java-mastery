@@ -1,7 +1,7 @@
 {
   "id": "Q123",
   "slug": "what-is-the-difference-between-logical-and-bitwise-and-when-does-it-cause-a-bug",
-  "questionNumber": 123,
+  "questionNumber": 3,
   "title": "What is the difference between the logical `&&`/`||` (short-circuit — the right operand may not be evaluated) and the bitwise `&`/`|` (always evaluate both, and on integers do bit-level AND/OR), and when does the distinction cause a bug (a side effect / null-guard on the right-hand side)?",
   "shortTitle": "What is the difference between && and & in Java?",
   "chapterNumber": 1,

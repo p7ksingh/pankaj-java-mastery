@@ -1,7 +1,7 @@
 {
   "id": "Q659",
   "slug": "user-order-onetomany-relationship-mapping-a-complete-worked-example",
-  "questionNumber": 659,
+  "questionNumber": 3,
   "title": "How do you map a User-to-Order one-to-many relationship end to end in JPA, including the owning side, cascade, orphan removal, fetch type, and keeping both sides in sync?",
   "shortTitle": "User-Order @OneToMany — a complete worked example",
   "chapterNumber": 9,

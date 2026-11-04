@@ -1,7 +1,7 @@
 {
   "id": "Q1614",
   "slug": "count-the-number-of-islands-grid-dfs-flood-fill",
-  "questionNumber": 1614,
+  "questionNumber": 18,
   "title": "Given a two-dimensional grid of land and water cells, count how many separate islands exist, where an island is land connected horizontally or vertically.",
   "shortTitle": "Count the Number of Islands (Grid DFS Flood Fill)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1018",
   "slug": "why-increasing-the-heap-size-can-make-performance-worse-and-why-just-raise-xmx-is-often-the-wrong-first-response",
-  "questionNumber": 1018,
+  "questionNumber": 9,
   "title": "Why can increasing the heap size actually make performance WORSE (longer stop-the-world pauses for collectors that scan more live memory, especially with high allocation rates), and why is \"just raise `-Xmx`\" often the wrong first response?",
   "shortTitle": "Why increasing the heap size can make performance WORSE, and why \"just raise `-Xmx`\" is often the wrong first response",
   "chapterNumber": 12,

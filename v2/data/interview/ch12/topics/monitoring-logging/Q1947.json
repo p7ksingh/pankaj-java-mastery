@@ -1,7 +1,7 @@
 {
   "id": "Q1947",
   "slug": "the-three-pillars-of-observability-metrics-logs-traces-and-how-they-complement-each-other",
-  "questionNumber": 1947,
+  "questionNumber": 4,
   "title": "What are the three pillars of observability (metrics, logs, traces), and how do they complement each other in a distributed system?",
   "shortTitle": "The three pillars of observability (metrics, logs, traces) and how they complement each other",
   "chapterNumber": 12,

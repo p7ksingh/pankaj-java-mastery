@@ -1,7 +1,7 @@
 {
   "id": "Q1129",
   "slug": "sql-injection-consequences-and-prevention",
-  "questionNumber": 1129,
+  "questionNumber": 16,
   "title": "What is SQL injection, its consequences, and how do you prevent it (prepared statements, validation, ORM, least privilege)?",
   "shortTitle": "SQL Injection — Consequences and Prevention",
   "chapterNumber": 13,

@@ -1,7 +1,7 @@
 {
   "id": "Q2527",
   "slug": "load-balancer",
-  "questionNumber": 2527,
+  "questionNumber": 2,
   "title": "Load Balancer — what it does (distributes traffic), types (L4 vs L7), algorithms (round-robin, least connections, IP hash), health checks, and when to use (every production system needs one).",
   "shortTitle": "Load Balancer",
   "chapterNumber": 24,

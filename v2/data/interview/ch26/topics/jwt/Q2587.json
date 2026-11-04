@@ -1,7 +1,7 @@
 {
   "id": "Q2587",
   "slug": "where-to-store-jwt-in-the-browser-httponly-cookie-vs-localstorage-vs-sessionstorage",
-  "questionNumber": 2587,
+  "questionNumber": 4,
   "title": "Where should you store JWT in the browser — HttpOnly + Secure + SameSite cookie (safest) vs localStorage (vulnerable to XSS) vs sessionStorage — and why?",
   "shortTitle": "Where to Store JWT in the Browser (HttpOnly Cookie vs localStorage vs sessionStorage)",
   "chapterNumber": 26,

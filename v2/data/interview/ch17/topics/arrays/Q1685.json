@@ -1,7 +1,7 @@
 {
   "id": "Q1685",
   "slug": "maximum-sum-subarray-of-size-k-fixed-size-sliding-window",
-  "questionNumber": 1685,
+  "questionNumber": 69,
   "title": "Given an array of positive numbers and a window size k, find the maximum sum of any contiguous subarray of exactly k elements. (GeeksforGeeks: Max Sum Subarray of size K)",
   "shortTitle": "Maximum Sum Subarray of Size K (Fixed-Size Sliding Window)",
   "chapterNumber": 17,

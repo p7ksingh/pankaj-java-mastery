@@ -1,7 +1,7 @@
 {
   "id": "Q2135",
   "slug": "what-happens-to-late-events-in-flink",
-  "questionNumber": 2135,
+  "questionNumber": 7,
   "title": "What happens to late events that arrive after the watermark has passed the window's end — they are dropped by default, or handled via allowed lateness (window stays open longer) or side outputs (late events routed to a separate stream for special handling)?",
   "shortTitle": "What happens to late events in Flink",
   "chapterNumber": 20,

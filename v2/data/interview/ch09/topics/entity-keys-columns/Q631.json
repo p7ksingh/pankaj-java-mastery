@@ -1,7 +1,7 @@
 {
   "id": "Q631",
   "slug": "elementcollection-vs-onetomany-value-collections-collectiontable-delete-all-reinsert",
-  "questionNumber": 631,
+  "questionNumber": 2,
   "title": "When do you use @ElementCollection instead of @OneToMany — for basic values (List<String>) or @Embeddable value objects (List<Address>) with no identity — how does JPA store it, why is UPDATE expensive (delete-all + reinsert), and why is it poor for large collections?",
   "shortTitle": "What is @ElementCollection vs @OneToMany?",
   "chapterNumber": 9,

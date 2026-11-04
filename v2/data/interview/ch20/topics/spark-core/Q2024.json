@@ -1,7 +1,7 @@
 {
   "id": "Q2024",
   "slug": "how-aqe-dynamically-changes-join-strategies-and-the-local-shuffle-reader",
-  "questionNumber": 2024,
+  "questionNumber": 12,
   "title": "How does AQE dynamically change join strategies — after an earlier stage executes and Spark discovers the actual table size is small enough, it can switch from a shuffle join to a broadcast join — and what is the local shuffle reader optimization?",
   "shortTitle": "How AQE dynamically changes join strategies and the local shuffle reader",
   "chapterNumber": 20,

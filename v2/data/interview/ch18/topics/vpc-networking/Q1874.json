@@ -1,7 +1,7 @@
 {
   "id": "Q1874",
   "slug": "vpc-peering-non-transitivity-and-a-connectivity-scenario",
-  "questionNumber": 1874,
+  "questionNumber": 5,
   "title": "What is VPC peering, why is it non-transitive, and (scenario) two VPCs are peered but one EC2 still cannot reach another — how do you fix it (route tables on both sides, security groups, NACLs, non-overlapping CIDRs)?",
   "shortTitle": "VPC Peering, Non-Transitivity, and a Connectivity Scenario",
   "chapterNumber": 18,

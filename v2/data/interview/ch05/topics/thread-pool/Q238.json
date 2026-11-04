@@ -1,7 +1,7 @@
 {
   "id": "Q238",
   "slug": "callable-vs-runnable-return-value-checked-exceptions-future-when-to-use-each",
-  "questionNumber": 238,
+  "questionNumber": 3,
   "title": "Callable vs Runnable — return value, checked exceptions, Future, when to use each",
   "shortTitle": "Callable vs Runnable?",
   "chapterNumber": 5,

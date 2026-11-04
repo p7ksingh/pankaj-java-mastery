@@ -1,7 +1,7 @@
 {
   "id": "Q433",
   "slug": "spring-boot-startup-flow-dispatcherservlet-creatingrunningdeploying-graceful-shutdown",
-  "questionNumber": 433,
+  "questionNumber": 1,
   "title": "How does Spring Boot initialize? What is DispatcherServlet? How do you create, build, run, deploy? How do you avoid dropping requests during deployment (graceful shutdown)?",
   "shortTitle": "What is the Spring Boot startup flow?",
   "chapterNumber": 7,

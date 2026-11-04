@@ -1,7 +1,7 @@
 {
   "id": "Q125",
   "slug": "what-is-the-ternary-conditional-operator-how-is-its-type-inferred-and-what-is-the-autoboxing-npe-trap",
-  "questionNumber": 125,
+  "questionNumber": 5,
   "title": "What is the ternary conditional operator (`cond ? a : b`), how does its type get inferred, and what is the surprising autoboxing/NPE trap when the two branches are an `Integer` and an `int` (the whole expression is unboxed to `int`, so a `null` branch throws NPE)?",
   "shortTitle": "What is the ternary conditional operator?",
   "chapterNumber": 1,

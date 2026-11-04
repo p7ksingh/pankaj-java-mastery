@@ -1,7 +1,7 @@
 {
   "id": "Q2168",
   "slug": "what-is-flinks-memory-model-for-taskmanagers-and-how-do-you-tune-it",
-  "questionNumber": 2168,
+  "questionNumber": 27,
   "title": "What is Flink's memory model for TaskManagers — JVM Heap (framework + task), Off-Heap (managed memory for RocksDB/sorting + network buffers + JVM metaspace/overhead) — and how do you tune `taskmanager.memory.process.size`, `taskmanager.memory.managed.fraction`, and `taskmanager.memory.network.fraction`?",
   "shortTitle": "What is Flink's memory model for TaskManagers and how do you tune it",
   "chapterNumber": 20,

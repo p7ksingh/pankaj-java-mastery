@@ -1,7 +1,7 @@
 {
   "id": "Q60",
   "slug": "why-senior-developers-avoid-scattering-null-checks-and-what-they-do-instead",
-  "questionNumber": 60,
+  "questionNumber": 8,
   "title": "Why do senior developers avoid scattering `if (x != null)` checks, and what do they do instead — treat null as a design smell and push null handling to the boundaries (requireNonNull, enforce invariants, return empty collections/Optional, Null Object pattern, keep Optional for return values)?",
   "shortTitle": "Why do senior developers avoid scattering null checks?",
   "chapterNumber": 1,

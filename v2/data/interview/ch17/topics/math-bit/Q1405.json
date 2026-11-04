@@ -1,7 +1,7 @@
 {
   "id": "Q1405",
   "slug": "find-the-gcd-of-two-numbers-using-the-euclidean-algorithm",
-  "questionNumber": 1405,
+  "questionNumber": 1,
   "title": "Find the GCD (Greatest Common Divisor) of two numbers using Euclidean algorithm (`gcd(a,b) = gcd(b, a%b)`, base: `gcd(a,0) = a`).",
   "shortTitle": "Find the GCD of Two Numbers Using the Euclidean Algorithm",
   "chapterNumber": 17,

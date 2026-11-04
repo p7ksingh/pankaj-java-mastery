@@ -1,7 +1,7 @@
 {
   "id": "Q808",
   "slug": "how-would-you-design-an-end-to-end-payment-order-system",
-  "questionNumber": 808,
+  "questionNumber": 27,
   "title": "How would you design an end-to-end payment / order system (synchronous vs Kafka flow, where transaction boundaries live, handling payment and inventory failures with Saga + compensation, idempotent order creation to avoid duplicates, monitoring, and scaling)?",
   "shortTitle": "How would you design an end-to-end payment / order system",
   "chapterNumber": 10,

@@ -1,7 +1,7 @@
 {
   "id": "Q1060",
   "slug": "what-is-a-partial-index-and-when-is-it-worth-it",
-  "questionNumber": 1060,
+  "questionNumber": 11,
   "title": "What is a partial index (indexing only rows matching a condition, e.g. `WHERE deleted = false`), and when is it worth it?",
   "shortTitle": "What is a partial index, and when is it worth it",
   "chapterNumber": 13,

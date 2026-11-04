@@ -1,7 +1,7 @@
 {
   "id": "Q1371",
   "slug": "count-vowels-and-consonants-in-a-string",
-  "questionNumber": 1371,
+  "questionNumber": 3,
   "title": "Count vowels and consonants in a string (loop through each character, check if a/e/i/o/u).",
   "shortTitle": "Count vowels and consonants in a string",
   "chapterNumber": 17,

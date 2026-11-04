@@ -1,7 +1,7 @@
 {
   "id": "Q1452",
   "slug": "valid-parenthesis-string-with-wildcard-greedy-minmax-open-count-range",
-  "questionNumber": 1452,
+  "questionNumber": 21,
   "title": "Valid Parenthesis String with `*` wildcard — greedy min/max open-count range.",
   "shortTitle": "Valid Parenthesis String With `*` Wildcard — Greedy Min/Max Open-Count Range",
   "chapterNumber": 17,

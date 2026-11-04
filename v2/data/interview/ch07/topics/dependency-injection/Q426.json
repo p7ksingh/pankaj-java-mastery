@@ -1,7 +1,7 @@
 {
   "id": "Q426",
   "slug": "autowired-vs-resource-vs-inject-resolution-order-constructor-limitation-when-to-use-each",
-  "questionNumber": 426,
+  "questionNumber": 3,
   "title": "What are the differences between @Autowired, @Resource, and @Inject? What is the exact resolution ORDER? Why can @Resource NOT do constructor injection? When is each the right choice?",
   "shortTitle": "What is @Autowired vs @Resource vs @Inject?",
   "chapterNumber": 7,

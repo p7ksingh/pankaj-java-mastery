@@ -1,7 +1,7 @@
 {
   "id": "Q2112",
   "slug": "what-is-cogroup-in-spark",
-  "questionNumber": 2112,
+  "questionNumber": 65,
   "title": "What is `cogroup` in Spark — groups two key-value RDDs by key and returns `(key, Iterable[V1], Iterable[V2])` — and when is it useful (processing both sides of a join without flattening)?",
   "shortTitle": "What is `cogroup` in Spark",
   "chapterNumber": 20,

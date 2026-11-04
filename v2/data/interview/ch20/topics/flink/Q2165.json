@@ -1,7 +1,7 @@
 {
   "id": "Q2165",
   "slug": "what-is-flink-cdc-change-data-capture",
-  "questionNumber": 2165,
+  "questionNumber": 24,
   "title": "What is Flink CDC (Change Data Capture) — connectors (e.g., `flink-cdc-connectors` using Debezium) that stream database changes (INSERT/UPDATE/DELETE) from MySQL/PostgreSQL/MongoDB into Flink as a changelog stream for real-time ETL/sync?",
   "shortTitle": "What is Flink CDC (Change Data Capture)",
   "chapterNumber": 20,

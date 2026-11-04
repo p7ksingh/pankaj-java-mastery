@@ -1,7 +1,7 @@
 {
   "id": "Q2132",
   "slug": "how-does-flink-compare-to-spark-structured-streaming",
-  "questionNumber": 2132,
+  "questionNumber": 71,
   "title": "How does Flink compare to Spark Structured Streaming (true record-at-a-time vs micro-batch, native event-time support, lower latency, richer state primitives in Flink vs Spark's larger ecosystem and batch-first design)?",
   "shortTitle": "How does Flink compare to Spark Structured Streaming",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q654",
   "slug": "elementcollection-vs-onetomany-value-objects-vs-entity-relationships",
-  "questionNumber": 654,
+  "questionNumber": 6,
   "title": "What is @ElementCollection, how does it differ from @OneToMany, and when do you use embeddable value objects versus entity relationships?",
   "shortTitle": "@ElementCollection vs @OneToMany — value vs entity?",
   "chapterNumber": 9,

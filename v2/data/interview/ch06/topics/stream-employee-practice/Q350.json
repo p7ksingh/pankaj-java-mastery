@@ -1,7 +1,7 @@
 {
   "id": "Q350",
   "slug": "group-employees-by-field-citydepartment-filter-by-cityage-using-streams",
-  "questionNumber": 350,
+  "questionNumber": 1,
   "title": "Group employees by field (city/department) + filter by city/age using streams",
   "shortTitle": "Group employees by field (city/department) + filter by city/age using streams",
   "chapterNumber": 6,

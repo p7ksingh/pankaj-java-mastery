@@ -1,7 +1,7 @@
 {
   "id": "Q188",
   "slug": "multiple-catch-blocks-ordering-specific-before-general-multi-catch",
-  "questionNumber": 188,
+  "questionNumber": 3,
   "title": "Can a single try have multiple catch blocks, and why must more specific exceptions be caught before more general ones (unreachable-catch compile error)?",
   "shortTitle": "How do multiple catch blocks work?",
   "chapterNumber": 4,

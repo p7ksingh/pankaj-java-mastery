@@ -1,7 +1,7 @@
 {
   "id": "Q1914",
   "slug": "roles-of-common-cicd-tools-sonarqube-trivygrype-nexusartifactory-and-sast-vs-dast",
-  "questionNumber": 1914,
+  "questionNumber": 34,
   "title": "What roles do common CI/CD tools play in a pipeline — SonarQube (static code analysis, coverage, quality gates that fail the build), Trivy/Grype (image & dependency vulnerability scanning), Nexus/Artifactory (artifact/registry repository), and SAST vs DAST (static source scanning vs scanning a running app)?",
   "shortTitle": "Roles of Common CI/CD Tools — SonarQube, Trivy/Grype, Nexus/Artifactory, and SAST vs DAST",
   "chapterNumber": 12,

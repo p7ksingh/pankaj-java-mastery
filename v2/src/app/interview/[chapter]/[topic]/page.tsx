@@ -6,6 +6,7 @@ import { getQuestionsByTopic } from '@/lib/data/questions'
 import { Breadcrumb } from '@/components/layout/Breadcrumb'
 import { PageHeader } from '@/components/layout/PageHeader'
 import { Badge } from '@/components/ui/Badge'
+import { StructuredData } from '@/components/seo/StructuredData'
 import styles from './page.module.css'
 
 interface PageProps {
@@ -40,8 +41,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Not Found' }
   }
   return {
-    title: `${topic.title} | ${chapter.title} | javabypankaj`,
+    title: `${topic.title} | ${chapter.title}`,
     description: `${topic.questionCount} interview questions on ${topic.title} in ${chapter.title} with code and ready-to-speak answers.`,
+    alternates: { canonical: `/interview/${chSlug}/${topicSlug}/` },
+    openGraph: {
+      title: `${topic.title} | ${chapter.title} | javabypankaj`,
+      description: `${topic.questionCount} interview questions on ${topic.title} in ${chapter.title} with code and ready-to-speak answers.`,
+    },
   }
 }
 
@@ -63,6 +69,17 @@ export default async function TopicPage({ params }: PageProps) {
 
   return (
     <main>
+      <StructuredData
+        data={{
+          '@context': 'https://schema.org',
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.javabypankaj.live/' },
+            { '@type': 'ListItem', position: 2, name: chapter.title, item: `https://www.javabypankaj.live/interview/${chapter.slug}/` },
+            { '@type': 'ListItem', position: 3, name: topic.title },
+          ],
+        }}
+      />
       <Breadcrumb
         items={[
           { label: 'Home', href: '/' },

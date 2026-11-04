@@ -1,7 +1,7 @@
 {
   "id": "Q383",
   "slug": "anymatch-vs-allmatch-vs-nonematch-short-circuiting-behavior",
-  "questionNumber": 383,
+  "questionNumber": 4,
   "title": "What is the difference between anyMatch(), allMatch(), and noneMatch(), and how does each short-circuit?",
   "shortTitle": "anyMatch vs allMatch vs noneMatch — short-circuiting behavior",
   "chapterNumber": 6,

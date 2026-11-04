@@ -1,7 +1,7 @@
 {
   "id": "Q1772",
   "slug": "two-single-numbers-find-the-two-elements-that-each-appear-once",
-  "questionNumber": 1772,
+  "questionNumber": 100,
   "title": "In an array where every number appears twice except two numbers that each appear once, find both single numbers using constant extra space. Explain how a distinguishing set bit splits the array into two groups.",
   "shortTitle": "Two Single Numbers (Find the Two Elements That Each Appear Once)",
   "chapterNumber": 17,

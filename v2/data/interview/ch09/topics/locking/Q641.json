@@ -1,7 +1,7 @@
 {
   "id": "Q641",
   "slug": "lock-annotation-lockmodetype-and-when-to-choose-pessimistic-over-optimistic",
-  "questionNumber": 641,
+  "questionNumber": 4,
   "title": "How does the @Lock annotation and LockModeType work in Spring Data JPA, and when should you choose pessimistic locking over optimistic?",
   "shortTitle": "What is @Lock and LockModeType?",
   "chapterNumber": 9,

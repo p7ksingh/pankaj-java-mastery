@@ -1,7 +1,7 @@
 {
   "id": "Q1467",
   "slug": "longest-repeating-character-replacement-window-where-size-maxfreq-k",
-  "questionNumber": 1467,
+  "questionNumber": 25,
   "title": "Longest Repeating Character Replacement — window where `size - maxFreq ≤ K`.",
   "shortTitle": "Longest Repeating Character Replacement — Window Where size − maxFreq ≤ K",
   "chapterNumber": 17,

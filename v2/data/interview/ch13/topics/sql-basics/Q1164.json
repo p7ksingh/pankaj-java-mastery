@@ -1,7 +1,7 @@
 {
   "id": "Q1164",
   "slug": "upsert-insert-or-update-atomically",
-  "questionNumber": 1164,
+  "questionNumber": 7,
   "title": "What is an UPSERT (insert-or-update in one atomic statement) — `INSERT ... ON CONFLICT DO UPDATE` (PostgreSQL), `INSERT ... ON DUPLICATE KEY UPDATE` (MySQL), or the SQL-standard `MERGE` — and why is it safer than a separate SELECT-then-INSERT/UPDATE (race condition under concurrency)?",
   "shortTitle": "UPSERT — Insert-or-Update Atomically",
   "chapterNumber": 13,

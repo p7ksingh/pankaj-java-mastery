@@ -1,7 +1,7 @@
 {
   "id": "Q154",
   "slug": "why-returning-a-live-internal-collection-from-a-getter-breaks-encapsulation-defensive-copy-fix",
-  "questionNumber": 154,
+  "questionNumber": 1,
   "title": "Why does a private field with a getter that returns the live internal collection (e.g. getPermissions() returning the backing List) NOT give real encapsulation (caller can mutate via getPermissions().add()), and how do you fix it (unmodifiableList or defensive copy)?",
   "shortTitle": "Why does returning a live collection break encapsulation?",
   "chapterNumber": 2,

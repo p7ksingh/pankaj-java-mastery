@@ -1,7 +1,7 @@
 {
   "id": "Q2617",
   "slug": "how-to-diagnose-thread-deadlock",
-  "questionNumber": 2617,
+  "questionNumber": 13,
   "title": "How to diagnose thread deadlock — thread dump shows threads in BLOCKED state waiting for each other's locks — fix by consistent lock ordering, shorter critical sections, or using `tryLock` with timeout?",
   "shortTitle": "How do you diagnose a thread deadlock?",
   "chapterNumber": 1,

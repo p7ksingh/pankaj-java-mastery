@@ -1,7 +1,7 @@
 {
   "id": "Q2157",
   "slug": "how-do-you-perform-a-stream-to-stream-join-in-flink-sql-and-why-bound-state-with-a-time-constraint",
-  "questionNumber": 2157,
+  "questionNumber": 21,
   "title": "How do you perform a stream-to-stream join in Flink SQL (`SELECT ... FROM orders o JOIN shipments s ON o.order_id = s.order_id WHERE ...`), and why must you specify a time constraint (`AND o.order_time BETWEEN s.ship_time - INTERVAL '4' HOUR AND s.ship_time`) to bound state?",
   "shortTitle": "How do you perform a stream-to-stream join in Flink SQL and why bound state with a time constraint",
   "chapterNumber": 20,

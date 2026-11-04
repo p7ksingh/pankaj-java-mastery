@@ -1,7 +1,7 @@
 {
   "id": "Q1745",
   "slug": "sliding-window-median-two-heaps-with-lazy-deletion",
-  "questionNumber": 1745,
+  "questionNumber": 7,
   "title": "Given an array of numbers and a window size K, find the median of every contiguous window of size K as the window slides from left to right. Explain how two heaps with lazy deletion maintain the window median efficiently.",
   "shortTitle": "Sliding Window Median (Two Heaps with Lazy Deletion)",
   "chapterNumber": 17,

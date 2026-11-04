@@ -1,7 +1,7 @@
 {
   "id": "Q1176",
   "slug": "common-sql-string-functions-and-cross-database-syntax-differences",
-  "questionNumber": 1176,
+  "questionNumber": 6,
   "title": "What are the common SQL string functions — `CONCAT` / `||`, `SUBSTRING` / `SUBSTR`, `LENGTH` / `CHAR_LENGTH`, `TRIM` / `LTRIM` / `RTRIM`, `UPPER` / `LOWER`, `REPLACE`, `POSITION` / `INSTR`, `LEFT` / `RIGHT`, `LPAD` / `RPAD`, `REVERSE` — and how does syntax vary across MySQL / PostgreSQL / Oracle?",
   "shortTitle": "Common SQL string functions and cross-database syntax differences",
   "chapterNumber": 13,

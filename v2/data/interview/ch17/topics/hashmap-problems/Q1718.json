@@ -1,7 +1,7 @@
 {
   "id": "Q1718",
   "slug": "find-the-corrupt-pair-one-duplicate-and-one-missing-in-1n",
-  "questionNumber": 1718,
+  "questionNumber": 17,
   "title": "You have an array of `n` numbers that should hold each value `1..n` exactly once, but due to corruption one number got duplicated which caused another number to go missing. Return the pair `[duplicate, missing]` in O(n) time and O(1) space.",
   "shortTitle": "Find the Corrupt Pair (One Duplicate and One Missing in 1..n)",
   "chapterNumber": 17,

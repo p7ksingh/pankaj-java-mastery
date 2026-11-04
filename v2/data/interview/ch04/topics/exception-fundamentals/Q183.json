@@ -1,7 +1,7 @@
 {
   "id": "Q183",
   "slug": "error-vs-exception-jvm-errors-vs-application-exceptions",
-  "questionNumber": 183,
+  "questionNumber": 3,
   "title": "What is the difference between an Error and an Exception?",
   "shortTitle": "What is the difference between Error and Exception?",
   "chapterNumber": 4,

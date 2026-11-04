@@ -1,7 +1,7 @@
 {
   "id": "Q396",
   "slug": "virtual-threads-dont-change-system-capacity-db-pool-cpu-rate-limits-still-constrain",
-  "questionNumber": 396,
+  "questionNumber": 4,
   "title": "Why do virtual threads change the concurrency model but NOT the system capacity — DB pool, CPU, downstream limits remain — and why is backpressure and measuring bottlenecks essential?",
   "shortTitle": "Do virtual threads change system capacity?",
   "chapterNumber": 6,

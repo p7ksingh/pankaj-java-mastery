@@ -1,7 +1,7 @@
 {
   "id": "Q2036",
   "slug": "coalescen-shuffletrue-why-it-becomes-equivalent-to-repartitionn",
-  "questionNumber": 2036,
+  "questionNumber": 21,
   "title": "What is `coalesce(n, shuffle=true)` and why is it equivalent to `repartition(n)`?",
   "shortTitle": "`coalesce(n, shuffle=true)` — why it becomes equivalent to `repartition(n)`",
   "chapterNumber": 20,

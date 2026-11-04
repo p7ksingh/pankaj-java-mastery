@@ -1,7 +1,7 @@
 {
   "id": "Q1521",
   "slug": "diameter-of-binary-tree-max-leftdepth-rightdepth-at-any-node",
-  "questionNumber": 1521,
+  "questionNumber": 11,
   "title": "Given the root of a binary tree, return the length of its diameter, which is the number of edges on the longest path between any two nodes, and this path may or may not pass through the root.",
   "shortTitle": "Diameter of Binary Tree — max leftDepth + rightDepth at any node",
   "chapterNumber": 17,

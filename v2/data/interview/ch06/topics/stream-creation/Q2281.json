@@ -1,7 +1,7 @@
 {
   "id": "Q2281",
   "slug": "generate-a-fixed-number-of-unique-transaction-reference-numbers-using-streamgenerate",
-  "questionNumber": 2281,
+  "questionNumber": 8,
   "title": "Using `Stream.generate`, produce a fixed number of unique transaction reference numbers for a payment batch. Explain how `Stream.generate` differs from `Stream.iterate`, why it is infinite, and how `limit` bounds it.",
   "shortTitle": "Generate a fixed number of unique transaction reference numbers using Stream.generate",
   "chapterNumber": 6,

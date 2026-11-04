@@ -1,7 +1,7 @@
 {
   "id": "Q431",
   "slug": "streammapmulti-java-16-push-0n-elements-imperatively-vs-flatmap",
-  "questionNumber": 431,
+  "questionNumber": 4,
   "title": "What is Stream.mapMulti (Java 16) — it pushes 0..N elements to a Consumer instead of returning a sub-stream like flatMap — when is it more efficient, and how do you use it?",
   "shortTitle": "Stream.mapMulti (Java 16) — push 0..N elements imperatively, vs flatMap",
   "chapterNumber": 6,

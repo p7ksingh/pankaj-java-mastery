@@ -1,7 +1,7 @@
 {
   "id": "Q2087",
   "slug": "delta-lake-optimizations-optimize-zorder-auto-compaction-vacuum-data-skipping",
-  "questionNumber": 2087,
+  "questionNumber": 50,
   "title": "What are the key Delta Lake optimizations — `OPTIMIZE` (compacts small files), `ZORDER BY` (co-locates data for filter columns, improves data skipping), auto-compaction, optimized writes, `VACUUM` (removes old unreferenced files) — and how does data skipping use per-file min/max stats?",
   "shortTitle": "Delta Lake optimizations — OPTIMIZE, ZORDER, auto-compaction, VACUUM, data skipping",
   "chapterNumber": 20,

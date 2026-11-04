@@ -1,7 +1,7 @@
 {
   "id": "Q1700",
   "slug": "maximum-subarray-sum-with-one-deletion",
-  "questionNumber": 1700,
+  "questionNumber": 77,
   "title": "Given an array of integers that may include negatives, find the maximum sum of a contiguous non-empty subarray where you are allowed to delete at most one element from it. Solve it with a two-state Kadane-style dynamic programming pass and demonstrate with a complete banking mini-project.",
   "shortTitle": "Maximum Subarray Sum with One Deletion",
   "chapterNumber": 17,

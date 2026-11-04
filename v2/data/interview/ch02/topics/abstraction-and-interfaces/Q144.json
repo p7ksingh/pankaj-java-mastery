@@ -1,7 +1,7 @@
 {
   "id": "Q144",
   "slug": "abstract-class-vs-interface-in-java-8-when-does-the-choice-actually-matter",
-  "questionNumber": 144,
+  "questionNumber": 1,
   "title": "What is the difference between an abstract class and an interface in Java 8+, and when does the choice between them actually matter?",
   "shortTitle": "What is the difference between abstract class and interface?",
   "chapterNumber": 2,

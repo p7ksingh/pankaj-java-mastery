@@ -1,7 +1,7 @@
 {
   "id": "Q2325",
   "slug": "rewrite-a-b-acomparetob-as-stringcompareto",
-  "questionNumber": 2325,
+  "questionNumber": 3,
   "title": "Rewrite `(a, b) -> a.compareTo(b)` as `String::compareTo`.",
   "shortTitle": "Rewrite (a, b) -> a.compareTo(b) as String::compareTo",
   "chapterNumber": 6,

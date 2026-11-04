@@ -1,7 +1,7 @@
 {
   "id": "Q2064",
   "slug": "what-is-a-watermark-in-structured-streaming",
-  "questionNumber": 2064,
+  "questionNumber": 5,
   "title": "What is a watermark (`withWatermark(\"event_time\", \"10 minutes\")`) — it tells Spark how late data can arrive before being dropped and state for old windows is cleaned up — and why is it essential for bounding state in stateful streaming queries?",
   "shortTitle": "What is a watermark in Structured Streaming",
   "chapterNumber": 20,

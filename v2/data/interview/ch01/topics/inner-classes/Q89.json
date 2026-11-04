@@ -1,7 +1,7 @@
 {
   "id": "Q89",
   "slug": "can-you-make-a-class-private-and-why",
-  "questionNumber": 89,
+  "questionNumber": 2,
   "title": "Can you make a class `private` (only nested classes, not top-level) and why?",
   "shortTitle": "Can you make a class private?",
   "chapterNumber": 1,

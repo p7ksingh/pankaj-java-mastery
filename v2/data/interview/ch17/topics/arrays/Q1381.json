@@ -1,7 +1,7 @@
 {
   "id": "Q1381",
   "slug": "implement-a-queue-using-an-array",
-  "questionNumber": 1381,
+  "questionNumber": 10,
   "title": "Implement a queue using an array — enqueue (add at back), dequeue (remove from front).",
   "shortTitle": "Implement a Queue using an Array",
   "chapterNumber": 17,

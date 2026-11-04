@@ -1,7 +1,7 @@
 {
   "id": "Q1843",
   "slug": "target-sum-count-ways-to-assign-plus-and-minus-signs",
-  "questionNumber": 1843,
+  "questionNumber": 49,
   "title": "Given an array of non-negative integers and a target, count the number of ways to assign a plus or minus sign to each number so the signed sum equals the target. Explain the reduction to a subset-count problem, the dynamic programming, the complexity, and a banking use case.",
   "shortTitle": "Target Sum (Count Ways to Assign Plus and Minus Signs)",
   "chapterNumber": 17,

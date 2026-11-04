@@ -1,7 +1,7 @@
 {
   "id": "Q2417",
   "slug": "why-is-liststreamfiltercount-sometimes-more-efficient-than-collecttolistsize",
-  "questionNumber": 2417,
+  "questionNumber": 3,
   "title": "Why is `list.stream().filter(...).count()` sometimes more efficient than `list.stream().filter(...).collect(toList()).size()`?",
   "shortTitle": "Why is list.stream().filter(...).count() sometimes more efficient than collect(toList()).size()?",
   "chapterNumber": 6,

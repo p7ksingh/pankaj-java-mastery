@@ -1,7 +1,7 @@
 {
   "id": "Q1542",
   "slug": "pacific-atlantic-water-flow-multi-source-bfsdfs-from-both-oceans",
-  "questionNumber": 1542,
+  "questionNumber": 6,
   "title": "Given a grid of cell heights, water can flow from a cell to a neighbor of equal or lower height. The Pacific borders the top and left edges, the Atlantic the bottom and right. Return all cells from which water can reach both oceans.",
   "shortTitle": "Pacific Atlantic Water Flow — multi-source BFS/DFS from both oceans",
   "chapterNumber": 17,

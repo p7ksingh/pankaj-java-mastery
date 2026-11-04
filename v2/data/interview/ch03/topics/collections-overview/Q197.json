@@ -1,7 +1,7 @@
 {
-  "id": "Q197-collections",
-  "slug": "collectiontoarray-object-vs-typed-toarrayt-vs-toarrayintfunction-classcastexception-gotcha",
-  "questionNumber": 197,
+  "id": "Q197",
+  "slug": "collectiontoarray-object-vs-typed-toarrayt-vs-toarrayintfunction-classcastexception",
+  "questionNumber": 4,
   "title": "Collection.toArray() — Object[] vs typed toArray(T[]) vs toArray(IntFunction), ClassCastException gotcha",
   "shortTitle": "How does Collection.toArray() work?",
   "chapterNumber": 3,

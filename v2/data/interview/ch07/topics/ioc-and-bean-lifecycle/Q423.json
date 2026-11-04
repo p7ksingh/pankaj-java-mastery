@@ -1,7 +1,7 @@
 {
   "id": "Q423",
   "slug": "circular-dependencies-three-level-cache-constructor-failure-and-how-to-fix",
-  "questionNumber": 423,
+  "questionNumber": 3,
   "title": "How does Spring handle circular dependencies, why does constructor injection fail, what changed in Spring Boot 2.6+, and how do you resolve it (redesign, @Lazy, events)?",
   "shortTitle": "How does Spring handle circular dependencies?",
   "chapterNumber": 7,

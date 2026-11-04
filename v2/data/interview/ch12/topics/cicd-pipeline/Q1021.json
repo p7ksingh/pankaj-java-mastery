@@ -1,7 +1,7 @@
 {
   "id": "Q1021",
   "slug": "how-zgc-achieves-sub-millisecond-pauses-colored-pointers-load-barriers-concurrent-relocation-self-healing-references-and-what-generational-zgc-is",
-  "questionNumber": 1021,
+  "questionNumber": 12,
   "title": "How does ZGC achieve sub-millisecond pauses (colored pointers, load barriers, concurrent relocation, self-healing references), and what is Generational ZGC (Java 21 opt-in → 23 default → 24 exclusive via JEP 490)?",
   "shortTitle": "How ZGC achieves sub-millisecond pauses — colored pointers, load barriers, concurrent relocation, self-healing references — and what Generational ZGC is",
   "chapterNumber": 12,

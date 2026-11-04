@@ -1,7 +1,7 @@
 {
   "id": "Q112",
   "slug": "what-is-weakhashmap-what-are-its-pitfalls-and-when-do-you-use-it",
-  "questionNumber": 112,
+  "questionNumber": 10,
   "title": "What is `WeakHashMap`, what are its pitfalls (interned String keys never collected, lazy entry removal, not thread-safe), and when do you use it?",
   "shortTitle": "What is WeakHashMap?",
   "chapterNumber": 1,

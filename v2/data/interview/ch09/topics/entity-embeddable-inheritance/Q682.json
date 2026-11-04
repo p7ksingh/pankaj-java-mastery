@@ -1,7 +1,7 @@
 {
   "id": "Q682",
   "slug": "jpa-inheritance-strategies-singletable-vs-joined-vs-tableperclass",
-  "questionNumber": 682,
+  "questionNumber": 5,
   "title": "What are the JPA inheritance strategies SINGLE_TABLE, JOINED, and TABLE_PER_CLASS? How does each map tables, and what are the trade-offs?",
   "shortTitle": "What are JPA inheritance strategies?",
   "chapterNumber": 9,

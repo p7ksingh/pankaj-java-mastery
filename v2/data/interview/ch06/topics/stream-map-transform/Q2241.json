@@ -1,7 +1,7 @@
 {
   "id": "Q2241",
   "slug": "convert-a-list-of-csv-lines-namedepartmentsalary-into-a-listemployee-by-splitting-each-line-and-constructing-objects-inside-map",
-  "questionNumber": 2241,
+  "questionNumber": 9,
   "title": "Convert a list of CSV lines (\"name,department,salary\") into a `List<Employee>` by splitting each line and constructing objects inside `map()`.",
   "shortTitle": "Convert a list of CSV lines (\"name,department,salary\") into a List<Employee> by splitting each line and constructing objects inside map()",
   "chapterNumber": 6,

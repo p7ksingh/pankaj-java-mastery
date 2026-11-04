@@ -1,7 +1,7 @@
 {
   "id": "Q998",
   "slug": "git-rebasing-what-it-is-advantages-when-to-use-and-the-risks-of-rewriting-history",
-  "questionNumber": 998,
+  "questionNumber": 2,
   "title": "What is rebasing in Git, what are its advantages, when do you use it, and what are the risks of rewriting history?",
   "shortTitle": "Git rebasing — what it is, advantages, when to use, and the risks of rewriting history",
   "chapterNumber": 12,

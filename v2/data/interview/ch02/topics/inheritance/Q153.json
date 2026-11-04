@@ -1,7 +1,7 @@
 {
   "id": "Q153",
   "slug": "fragile-base-class-problem-stack-extends-arraylist-leaks-methods-composition-fix",
-  "questionNumber": 153,
+  "questionNumber": 3,
   "title": "What is the fragile base class problem — why does Stack extends ArrayList leak methods like add(index, item) that break the LIFO contract, and how does composition fix it?",
   "shortTitle": "What is the fragile base class problem?",
   "chapterNumber": 2,

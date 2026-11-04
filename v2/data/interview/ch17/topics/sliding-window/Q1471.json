@@ -1,7 +1,7 @@
 {
   "id": "Q1471",
   "slug": "sliding-window-maximum-monotonic-deque-maintaining-decreasing-order",
-  "questionNumber": 1471,
+  "questionNumber": 4,
   "title": "Sliding Window Maximum — monotonic deque maintaining decreasing order.",
   "shortTitle": "Sliding Window Maximum — Monotonic Deque Maintaining Decreasing Order",
   "chapterNumber": 17,

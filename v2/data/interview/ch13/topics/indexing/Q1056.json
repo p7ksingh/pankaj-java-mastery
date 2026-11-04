@@ -1,7 +1,7 @@
 {
   "id": "Q1056",
   "slug": "why-are-searches-with-primary-keys-faster-indexing-unique-constraint-b-tree-clustered-index-no-extra-sorting",
-  "questionNumber": 1056,
+  "questionNumber": 7,
   "title": "Why are searches with primary keys faster (indexing, unique constraint, B-tree, clustered index, no extra sorting)?",
   "shortTitle": "Why are searches with primary keys faster — indexing, unique constraint, B-tree, clustered index, no extra sorting",
   "chapterNumber": 13,

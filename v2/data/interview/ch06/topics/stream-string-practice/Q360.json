@@ -1,7 +1,7 @@
 {
   "id": "Q360",
   "slug": "first-non-repeating-character-in-a-string-using-streams",
-  "questionNumber": 360,
+  "questionNumber": 1,
   "title": "How do you find the first non-repeating character in a string using streams?",
   "shortTitle": "First non-repeating character in a string using streams",
   "chapterNumber": 6,

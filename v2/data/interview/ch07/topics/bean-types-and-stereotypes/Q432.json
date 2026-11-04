@@ -1,7 +1,7 @@
 {
   "id": "Q432",
   "slug": "conditional-annotations-springbootapplication-and-spring-boot-vs-spring-framework-vs-spring-mvc",
-  "questionNumber": 432,
+  "questionNumber": 2,
   "title": "What is @Conditional and its variants? What is the difference between @SpringBootApplication and @EnableAutoConfiguration? What are the differences between Spring Boot, Spring Framework, and Spring MVC?",
   "shortTitle": "What are @Conditional and @SpringBootApplication?",
   "chapterNumber": 7,

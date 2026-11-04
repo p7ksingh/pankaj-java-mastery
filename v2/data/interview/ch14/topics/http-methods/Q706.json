@@ -1,7 +1,7 @@
 {
   "id": "Q706",
   "slug": "rest-api-error-handling-pagination-versioning-idempotency-content-negotiation",
-  "questionNumber": 706,
+  "questionNumber": 1,
   "title": "Explain how a production REST API handles the five concerns that interviewers probe together — structured error handling (RFC 9457 Problem Details with correct status codes), pagination for large result sets (why cursor/keyset beats offset at depth), API versioning (URL path, header, media-type), idempotency (idempotent HTTP methods plus the Idempotency-Key header for safe retries of POST), and content negotiation (the Accept and Content-Type headers choosing JSON vs XML) — and show how they fit together in real finance code.",
   "shortTitle": "REST API — error handling, pagination, versioning, idempotency, content negotiation",
   "chapterNumber": 14,

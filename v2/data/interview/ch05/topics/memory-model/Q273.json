@@ -1,7 +1,7 @@
 {
   "id": "Q273",
   "slug": "happens-before-relationship-all-rules-why-threads-read-stale-values-without-it",
-  "questionNumber": 273,
+  "questionNumber": 2,
   "title": "Happens-before relationship — all rules, why threads read stale values without it",
   "shortTitle": "What is happens-before?",
   "chapterNumber": 5,

@@ -1,7 +1,7 @@
 {
   "id": "Q329",
   "slug": "stream-reuse-after-terminal-illegalstateexception-supplierstreamt-workaround",
-  "questionNumber": 329,
+  "questionNumber": 4,
   "title": "Can you reuse a stream after a terminal operation, and what is the workaround (`Supplier<Stream<T>>`)?",
   "shortTitle": "Can you reuse a stream after terminal operation?",
   "chapterNumber": 6,

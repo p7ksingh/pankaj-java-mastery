@@ -1,7 +1,7 @@
 {
   "id": "Q49",
   "slug": "how-to-serialize-an-object-to-a-byte-stream-and-why-json-avro-or-protobuf-is-preferred-for-microservices",
-  "questionNumber": 49,
+  "questionNumber": 8,
   "title": "How do you actually serialize an object to a byte stream and read it back (`ObjectOutputStream.writeObject` / `ObjectInputStream.readObject`, `ByteArrayOutputStream`), and why is JSON/Avro/Protobuf preferred over Java serialization for microservice communication?",
   "shortTitle": "How do you serialize an object to a byte stream?",
   "chapterNumber": 1,

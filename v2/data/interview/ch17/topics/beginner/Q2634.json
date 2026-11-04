@@ -1,7 +1,7 @@
 {
   "id": "Q2634",
   "slug": "understanding-loop-product-compute-n-using-a-loop",
-  "questionNumber": 2634,
+  "questionNumber": 25,
   "title": "Given a single non-negative integer N, draw a flowchart that uses a loop to calculate and print N factorial (N!), the product of all integers from 1 to N inclusive. Start, read N, initialize product = 1 and i = 1, loop while i <= N doing product = product * i and i = i + 1, print product, End. Special case: 0! = 1, the loop does not execute. Input: 4, Expected Output: 24.",
   "shortTitle": "Understanding Loop (Product) — compute N! using a loop",
   "chapterNumber": 17,

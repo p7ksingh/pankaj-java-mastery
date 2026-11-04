@@ -1,7 +1,7 @@
 {
   "id": "Q1097",
   "slug": "what-is-the-difference-between-rank-denserank-and-rownumber",
-  "questionNumber": 1097,
+  "questionNumber": 2,
   "title": "What is the difference between `RANK`, `DENSE_RANK`, and `ROW_NUMBER`?",
   "shortTitle": "What is the difference between RANK, DENSE_RANK, and ROW_NUMBER?",
   "chapterNumber": 13,

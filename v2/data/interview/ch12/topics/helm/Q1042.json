@@ -1,7 +1,7 @@
 {
   "id": "Q1042",
   "slug": "what-helm-adds-over-raw-kubernetes-manifests-templating-values-upgrade-install-rollback-per-environment-values-and-when-to-reach-for-it",
-  "questionNumber": 1042,
+  "questionNumber": 1,
   "title": "What does Helm add over raw Kubernetes manifests (templating + values, `upgrade --install`, rollback, per-environment values), and when do you reach for it?",
   "shortTitle": "What Helm adds over raw Kubernetes manifests — templating, values, upgrade --install, rollback, per-environment values — and when to reach for it",
   "chapterNumber": 12,

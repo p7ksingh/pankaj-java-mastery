@@ -1,7 +1,7 @@
 {
   "id": "Q2218",
   "slug": "why-contract-testing-is-important-in-microservices",
-  "questionNumber": 2218,
+  "questionNumber": 2,
   "title": "Why is contract testing important in microservices — if Service A changes its API response and Service B depends on it, things break; contract tests catch this BEFORE deployment?",
   "shortTitle": "Why contract testing is important in microservices",
   "chapterNumber": 21,

@@ -1,7 +1,7 @@
 {
   "id": "Q1500",
   "slug": "contiguous-array-equal-zeros-and-ones-convert-zero-to-minus-one-prefix-sum-plus-hashmap",
-  "questionNumber": 1500,
+  "questionNumber": 44,
   "title": "Given a binary array of zeros and ones, find the length of the longest contiguous subarray that contains an equal number of zeros and ones.",
   "shortTitle": "Contiguous Array (Equal Zeros and Ones) — Convert Zero to Minus One, Prefix Sum Plus HashMap",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q2025",
   "slug": "common-aqe-configuration-parameters-and-pitfalls",
-  "questionNumber": 2025,
+  "questionNumber": 5,
   "title": "What are common AQE configuration parameters (`spark.sql.adaptive.enabled`, `spark.sql.adaptive.skewJoin.enabled`, `spark.sql.adaptive.coalescePartitions.enabled`) and common AQE pitfalls (assuming it's always enabled, changing thresholds blindly, assuming it solves all skew)?",
   "shortTitle": "Common AQE configuration parameters and pitfalls",
   "chapterNumber": 20,

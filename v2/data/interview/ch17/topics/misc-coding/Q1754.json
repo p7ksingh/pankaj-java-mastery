@@ -1,7 +1,7 @@
 {
   "id": "Q1754",
   "slug": "evaluate-expression-different-ways-to-group-numbers-and-operators",
-  "questionNumber": 1754,
+  "questionNumber": 31,
   "title": "Given a string expression of numbers and the operators plus, minus, and multiply, compute all possible results from different ways of grouping the numbers and operators with parentheses. Explain the divide-and-conquer recursion that splits at each operator.",
   "shortTitle": "Evaluate Expression (Different Ways to Group Numbers and Operators)",
   "chapterNumber": 17,

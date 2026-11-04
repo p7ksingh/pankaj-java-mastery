@@ -1,7 +1,7 @@
 {
   "id": "Q1322",
   "slug": "how-does-grpc-load-balancing-work-why-does-an-l4-load-balancer-fail-and-what-are-the-fixes",
-  "questionNumber": 1322,
+  "questionNumber": 16,
   "title": "How does gRPC load balancing work — why does a standard L4 (TCP) load balancer fail for gRPC (HTTP/2 multiplexes all requests over ONE long-lived connection, so the LB sends all traffic to one backend) — and what are the fixes: an L7 (application-layer) load balancer that inspects HTTP/2 frames (Envoy, Istio, AWS ALB with gRPC support), or client-side load balancing where the client discovers backends (via DNS, service registry, or xDS) and distributes calls itself (`round_robin` / `pick_first` policies in the gRPC channel)?",
   "shortTitle": "How does gRPC load balancing work, why does an L4 load balancer fail, and what are the fixes?",
   "chapterNumber": 16,

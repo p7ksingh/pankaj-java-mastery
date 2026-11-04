@@ -1,7 +1,7 @@
 {
   "id": "Q1258",
   "slug": "circuit-breaker-pattern-closed-open-half-open-states-tuning-pitfalls-and-when-it-is-harmful",
-  "questionNumber": 1258,
+  "questionNumber": 6,
   "title": "Explain the Circuit Breaker pattern states (Closed/Open/Half-Open), how you tune thresholds/timeouts/reset-time, whether the breaker can be a single point of failure, how to prevent cascading failures across chained breakers, pitfalls in async/Kafka systems, the fallback-depends-on-failing-service trap, adaptive breakers, and when a breaker is harmful.",
   "shortTitle": "Circuit Breaker pattern — Closed, Open, Half-Open states, tuning, pitfalls, and when it is harmful",
   "chapterNumber": 15,

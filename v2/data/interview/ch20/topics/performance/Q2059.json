@@ -1,7 +1,7 @@
 {
   "id": "Q2059",
   "slug": "when-to-use-aqe-skew-handling-vs-manual-salting",
-  "questionNumber": 2059,
+  "questionNumber": 7,
   "title": "When should you use AQE skew handling vs manual salting — AQE is the first thing to try (automatic, no code change), but if AQE doesn't sufficiently address the skew (both sides skewed on same key, or non-join skew like groupBy), salting or isolate-and-broadcast the hot keys may be needed?",
   "shortTitle": "When to use AQE skew handling vs manual salting",
   "chapterNumber": 20,

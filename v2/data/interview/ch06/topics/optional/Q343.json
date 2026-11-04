@@ -1,7 +1,7 @@
 {
   "id": "Q343",
   "slug": "orelse-vs-orelseget-eager-vs-lazy-default-when-the-difference-matters",
-  "questionNumber": 343,
+  "questionNumber": 3,
   "title": "What is the difference between Optional.orElse() and Optional.orElseGet(), and when does the difference matter?",
   "shortTitle": "orElse() vs orElseGet()?",
   "chapterNumber": 6,

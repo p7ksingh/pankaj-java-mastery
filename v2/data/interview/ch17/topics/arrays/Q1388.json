@@ -1,7 +1,7 @@
 {
   "id": "Q1388",
   "slug": "find-duplicate-elements-in-an-array-using-hashset",
-  "questionNumber": 1388,
+  "questionNumber": 12,
   "title": "Find duplicate elements in an array using HashSet (add each element to set; if `add()` returns false, it is a duplicate).",
   "shortTitle": "Find Duplicate Elements in an Array Using HashSet",
   "chapterNumber": 17,

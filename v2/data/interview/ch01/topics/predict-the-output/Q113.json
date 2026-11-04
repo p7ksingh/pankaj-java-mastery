@@ -1,7 +1,7 @@
 {
   "id": "Q113",
   "slug": "predict-the-output-a-parent-type-reference-to-a-child-object-calling-a-same-signature-static-method",
-  "questionNumber": 113,
+  "questionNumber": 2,
   "title": "Predict the output: a parent-type reference pointing to a child object calling a static method with the same signature — why does it print the parent's version (static method hiding, compile-time binding)?",
   "shortTitle": "Predict the output: parent reference calling static method",
   "chapterNumber": 1,

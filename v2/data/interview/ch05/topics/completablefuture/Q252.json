@@ -1,7 +1,7 @@
 {
   "id": "Q252",
   "slug": "thenapply-produces-nested-cfcft-thencompose-flattens-flatmap-for-futures",
-  "questionNumber": 252,
+  "questionNumber": 6,
   "title": "thenApply produces nested CF<CF<T>> — thenCompose flattens (flatMap for futures)",
   "shortTitle": "Why thenApply produces nested CF<CF<T>>?",
   "chapterNumber": 5,

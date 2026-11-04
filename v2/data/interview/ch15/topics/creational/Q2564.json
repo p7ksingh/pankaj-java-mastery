@@ -1,7 +1,7 @@
 {
   "id": "Q2564",
   "slug": "design-using-the-singleton-pattern",
-  "questionNumber": 2564,
+  "questionNumber": 10,
   "title": "Singleton — Logger, Config manager, Database connection pool.",
   "shortTitle": "Design using the Singleton pattern",
   "chapterNumber": 15,

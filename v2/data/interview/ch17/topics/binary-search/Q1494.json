@@ -1,7 +1,7 @@
 {
   "id": "Q1494",
   "slug": "capacity-to-ship-packages-within-d-days-binary-search-on-the-answer",
-  "questionNumber": 1494,
+  "questionNumber": 8,
   "title": "Given package weights in loading order and D days, find the minimum ship capacity per day so that all packages are shipped within D days. Packages must be shipped in the given order and cannot be split across ships.",
   "shortTitle": "Capacity to Ship Packages Within D Days — Binary Search on the Answer",
   "chapterNumber": 17,

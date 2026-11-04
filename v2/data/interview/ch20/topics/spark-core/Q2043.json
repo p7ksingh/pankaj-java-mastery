@@ -1,7 +1,7 @@
 {
   "id": "Q2043",
   "slug": "how-bucketing-optimizes-queries-bucket-pruning-shuffle-free-aggregation-bucket-aware-join",
-  "questionNumber": 2043,
+  "questionNumber": 28,
   "title": "How does bucketing optimize queries — bucket pruning (filter on bucketing column → Spark reads only relevant buckets), shuffle-free aggregation (groupBy on bucketing column), and shuffle-free/bucket-aware join (two tables bucketed on the same column with same bucket count)?",
   "shortTitle": "How bucketing optimizes queries — bucket pruning, shuffle-free aggregation, bucket-aware join",
   "chapterNumber": 20,

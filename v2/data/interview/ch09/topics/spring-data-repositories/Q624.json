@@ -1,7 +1,7 @@
 {
   "id": "Q624",
   "slug": "crudrepository-vs-jparepository-hierarchy-methods-when-to-use-which",
-  "questionNumber": 624,
+  "questionNumber": 1,
   "title": "What is the difference between CrudRepository and JpaRepository?",
   "shortTitle": "CrudRepository vs JpaRepository?",
   "chapterNumber": 9,

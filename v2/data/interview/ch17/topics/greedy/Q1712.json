@@ -1,7 +1,7 @@
 {
   "id": "Q1712",
   "slug": "overlapping-intervals-determine-if-any-two-intervals-overlap",
-  "questionNumber": 1712,
+  "questionNumber": 6,
   "title": "Given a set of intervals each with a start and an end, determine whether any two of them overlap. Solve it with the sort-then-adjacent-check merge-intervals pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Overlapping Intervals (Determine If Any Two Intervals Overlap)",
   "chapterNumber": 17,

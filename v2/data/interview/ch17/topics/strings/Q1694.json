@@ -1,7 +1,7 @@
 {
   "id": "Q1694",
   "slug": "challenge-1-permutation-in-a-string-does-s-contain-a-permutation-of-p",
-  "questionNumber": 1694,
+  "questionNumber": 43,
   "title": "Given a string s and a pattern p, determine whether s contains any permutation of p as a contiguous substring. Solve it with the fixed-size sliding window pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Challenge 1: Permutation in a String (Does s Contain a Permutation of p)",
   "chapterNumber": 17,

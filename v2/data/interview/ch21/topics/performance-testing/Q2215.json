@@ -1,7 +1,7 @@
 {
   "id": "Q2215",
   "slug": "key-metrics-to-measure-in-performance-testing",
-  "questionNumber": 2215,
+  "questionNumber": 3,
   "title": "What are the key metrics to measure — Response Time (how long one request takes), Throughput (requests per second), Error Rate (% of failed requests), Latency percentiles (p50, p95, p99 — p99 is more important than average)?",
   "shortTitle": "Key metrics to measure in performance testing",
   "chapterNumber": 21,

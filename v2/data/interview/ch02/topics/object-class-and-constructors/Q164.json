@@ -1,7 +1,7 @@
 {
   "id": "Q164",
   "slug": "object-methods-beyond-equalshashcodetostring-getclass-clone-waitnotify-finalize",
-  "questionNumber": 164,
+  "questionNumber": 5,
   "title": "Beyond equals/hashCode/toString, what do the other Object methods do — getClass(), clone(), wait()/notify()/notifyAll(), finalize() — and why must wait/notify be called from synchronized?",
   "shortTitle": "What do the Object methods beyond equals/hashCode do?",
   "chapterNumber": 2,

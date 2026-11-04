@@ -1,7 +1,7 @@
 {
   "id": "Q29",
   "slug": "how-numeric-promotion-and-casting-work-for-primitives",
-  "questionNumber": 29,
+  "questionNumber": 3,
   "title": "How does numeric promotion and casting work for primitives (binary operations promote operands to at least `int` — so `byte + byte` yields `int`, `char`/`short` promote to `int`, mixing with `long`/`float`/`double` promotes up), what needs an explicit narrowing cast (and the resulting truncation/overflow), and why does `byte b = b + 1;` not compile while `b += 1;` does (compound assignment has an implicit cast)?",
   "shortTitle": "How do numeric promotion and casting work for primitives?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q1373",
   "slug": "find-the-first-non-repeating-character-in-a-string",
-  "questionNumber": 1373,
+  "questionNumber": 5,
   "title": "Find the first non-repeating character in a string (use a LinkedHashMap to count frequency, then find first with count 1).",
   "shortTitle": "Find the first non-repeating character in a string",
   "chapterNumber": 17,

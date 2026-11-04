@@ -1,7 +1,7 @@
 {
   "id": "Q232",
   "slug": "why-wait-must-be-in-a-while-loop-not-if-spurious-wake-ups-state-change-between-notify-and-reacquire",
-  "questionNumber": 232,
+  "questionNumber": 3,
   "title": "Why wait() must be in a while loop, not if — spurious wake-ups + state change between notify and reacquire",
   "shortTitle": "Why must wait() be in a while loop?",
   "chapterNumber": 5,

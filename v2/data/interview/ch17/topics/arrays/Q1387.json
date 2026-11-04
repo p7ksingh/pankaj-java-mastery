@@ -1,7 +1,7 @@
 {
   "id": "Q1387",
   "slug": "count-the-frequency-of-each-element-in-an-array-using-hashmap",
-  "questionNumber": 1387,
+  "questionNumber": 11,
   "title": "Count the frequency of each element in an array using HashMap (loop through array, for each element increment its count in the map).",
   "shortTitle": "Count the Frequency of Each Element in an Array Using HashMap",
   "chapterNumber": 17,

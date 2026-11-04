@@ -1,7 +1,7 @@
 {
   "id": "Q2323",
   "slug": "find-the-key-with-the-maximum-value-in-a-map",
-  "questionNumber": 2323,
+  "questionNumber": 26,
   "title": "Find the key with the maximum value in a map using `Collections.max(map.entrySet(), Map.Entry.comparingByValue())` or streams.",
   "shortTitle": "Find the key with the maximum value in a map",
   "chapterNumber": 6,

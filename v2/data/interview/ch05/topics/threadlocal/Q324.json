@@ -1,7 +1,7 @@
 {
   "id": "Q324",
   "slug": "the-this-escaping-problem-publishing-a-partially-constructed-object-during-construction",
-  "questionNumber": 324,
+  "questionNumber": 5,
   "title": "What is the \"this escape\" problem during object construction? How does a listener registration or thread start leak a partially constructed object, and how do you fix it with a static factory method or post-construction initialization?",
   "shortTitle": "What is the this-escaping problem?",
   "chapterNumber": 5,

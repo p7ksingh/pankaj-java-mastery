@@ -1,7 +1,7 @@
 {
   "id": "Q434",
   "slug": "records-immutable-data-carriers-auto-generated-methods-when-to-use",
-  "questionNumber": 434,
+  "questionNumber": 1,
   "title": "What are Java Records (Java 16), what do they auto-generate, and when should you use them vs regular classes?",
   "shortTitle": "What are Java Records?",
   "chapterNumber": 6,

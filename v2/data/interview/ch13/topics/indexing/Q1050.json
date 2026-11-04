@@ -1,7 +1,7 @@
 {
   "id": "Q1050",
   "slug": "what-is-an-index-in-sql-the-types-primary-unique-non-unique-composite-clustered-vs-non-clustered-and-how-to-create-one-with-create-index",
-  "questionNumber": 1050,
+  "questionNumber": 1,
   "title": "What is an index in SQL, what are the types (primary, unique, non-unique, composite, clustered vs non-clustered), and how do you create one with `CREATE INDEX`?",
   "shortTitle": "What is an index in SQL, the types (primary, unique, non-unique, composite, clustered vs non-clustered), and how to create one with `CREATE INDEX`",
   "chapterNumber": 13,

@@ -1,7 +1,7 @@
 {
   "id": "Q2155",
   "slug": "what-is-a-temporal-join-in-flink-sql",
-  "questionNumber": 2155,
+  "questionNumber": 17,
   "title": "What is a temporal join in Flink SQL — joining a streaming table with a versioned/temporal table (e.g., currency exchange rates that change over time) using FOR SYSTEM_TIME AS OF — and how does it differ from a regular stream-stream join?",
   "shortTitle": "What is a temporal join in Flink SQL",
   "chapterNumber": 20,

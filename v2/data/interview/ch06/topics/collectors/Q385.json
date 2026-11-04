@@ -1,7 +1,7 @@
 {
   "id": "Q385",
   "slug": "collectorspartitioningby-boolean-two-bucket-split-vs-groupingby",
-  "questionNumber": 385,
+  "questionNumber": 2,
   "title": "What does Collectors.partitioningBy do, and how is it different from groupingBy (always exactly two boolean buckets)?",
   "shortTitle": "Collectors.partitioningBy — boolean two-bucket split vs groupingBy",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q233",
   "slug": "wait-releases-the-lock-sleep-does-not-why-this-asymmetry-matters-for-progress",
-  "questionNumber": 233,
+  "questionNumber": 4,
   "title": "wait() releases the lock, sleep() does NOT — why this asymmetry matters for progress",
   "shortTitle": "Why does wait() release the lock but sleep() does not?",
   "chapterNumber": 5,

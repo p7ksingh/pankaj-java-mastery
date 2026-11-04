@@ -1,7 +1,7 @@
 {
   "id": "Q2086",
   "slug": "bronze-silver-gold-medallion-architecture",
-  "questionNumber": 2086,
+  "questionNumber": 11,
   "title": "What is the Bronze → Silver → Gold (Medallion) architecture — Bronze (raw/ingested data, append-only), Silver (cleaned/validated/deduplicated), Gold (business-level aggregates/features, ready for consumption) — and why does each layer being rebuildable from the one below it give you reliability?",
   "shortTitle": "Bronze → Silver → Gold (Medallion) architecture",
   "chapterNumber": 20,

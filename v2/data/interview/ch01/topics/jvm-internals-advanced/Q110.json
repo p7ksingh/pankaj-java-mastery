@@ -1,7 +1,7 @@
 {
   "id": "Q110",
   "slug": "why-is-finalize-deprecated-and-how-does-javalangrefcleaner-replace-it-safely",
-  "questionNumber": 110,
+  "questionNumber": 8,
   "title": "Why is `finalize()` deprecated (unpredictable timing, resurrection, double-GC, swallowed exceptions), and how does `java.lang.ref.Cleaner` (Java 9+) replace it safely?",
   "shortTitle": "Why is finalize() deprecated and what replaces it?",
   "chapterNumber": 1,

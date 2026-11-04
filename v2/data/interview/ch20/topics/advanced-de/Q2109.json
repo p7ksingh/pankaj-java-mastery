@@ -1,7 +1,7 @@
 {
   "id": "Q2109",
   "slug": "what-is-msck-repair-table",
-  "questionNumber": 2109,
+  "questionNumber": 18,
   "title": "What is `MSCK REPAIR TABLE` — a command to sync partition metadata between the file system (HDFS/S3) and the metastore when partitions are added or removed outside of Spark SQL?",
   "shortTitle": "What is `MSCK REPAIR TABLE`",
   "chapterNumber": 20,

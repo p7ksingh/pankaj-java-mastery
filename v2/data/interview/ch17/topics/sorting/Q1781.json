@@ -1,7 +1,7 @@
 {
   "id": "Q1781",
   "slug": "kth-largest-number-in-a-stream-maintain-the-kth-largest-as-numbers-arrive",
-  "questionNumber": 1781,
+  "questionNumber": 20,
   "title": "Design a class that, given a value K and an initial list of numbers, returns the Kth largest number each time a new number is added to the stream. Explain how a min-heap of size K supports this efficiently.",
   "shortTitle": "Kth Largest Number in a Stream (Maintain the Kth Largest as Numbers Arrive)",
   "chapterNumber": 17,

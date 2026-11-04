@@ -1,7 +1,7 @@
 {
   "id": "Q1065",
   "slug": "how-do-you-measure-database-performance",
-  "questionNumber": 1065,
+  "questionNumber": 2,
   "title": "How do you measure database performance (query time, throughput, connections, I/O, CPU, cache hit ratio, slow query logs, execution plans)?",
   "shortTitle": "How do you measure database performance",
   "chapterNumber": 13,

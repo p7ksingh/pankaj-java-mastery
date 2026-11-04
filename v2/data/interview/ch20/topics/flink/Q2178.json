@@ -1,7 +1,7 @@
 {
   "id": "Q2178",
   "slug": "what-are-the-advantages-of-kinesis-data-analytics-managed-flink-over-self-managed-flink-and-the-trade-offs",
-  "questionNumber": 2178,
+  "questionNumber": 33,
   "title": "What are the advantages of using Kinesis Data Analytics (managed Flink) over self-managed Flink — no infrastructure management, auto-scaling, seamless AWS integration (S3/Glue/Lambda/CloudWatch), pay-per-use — and what are the trade-offs (less customization, vendor lock-in)?",
   "shortTitle": "What are the advantages of Kinesis Data Analytics (managed Flink) over self-managed Flink, and the trade-offs",
   "chapterNumber": 20,

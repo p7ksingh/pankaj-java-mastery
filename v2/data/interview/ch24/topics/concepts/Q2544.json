@@ -1,7 +1,7 @@
 {
   "id": "Q2544",
   "slug": "batch-processing-vs-stream-processing",
-  "questionNumber": 2544,
+  "questionNumber": 16,
   "title": "Batch processing vs Stream processing — Spark batch for historical analysis, Flink/Kafka Streams for real-time.",
   "shortTitle": "Batch Processing vs Stream Processing",
   "chapterNumber": 24,

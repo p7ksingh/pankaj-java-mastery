@@ -1,7 +1,7 @@
 {
   "id": "Q2095",
   "slug": "sparkcontext-vs-sparksession",
-  "questionNumber": 2095,
+  "questionNumber": 53,
   "title": "What is SparkContext vs SparkSession — SparkContext (Spark 1.x entry point, manages RDDs, cluster connection; only one per JVM) vs SparkSession (Spark 2.0+ unified entry point, wraps SparkContext + SQLContext + HiveContext; access SparkContext via `spark.sparkContext`) — and why is SparkSession the modern standard?",
   "shortTitle": "SparkContext vs SparkSession",
   "chapterNumber": 20,

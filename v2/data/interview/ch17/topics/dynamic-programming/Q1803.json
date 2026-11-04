@@ -1,7 +1,7 @@
 {
   "id": "Q1803",
   "slug": "staircase-count-ways-to-climb-n-stairs-taking-1-2-or-3-steps",
-  "questionNumber": 1803,
+  "questionNumber": 19,
   "title": "Given a staircase of N steps, count the number of distinct ways to reach the top if you can take one, two, or three steps at a time. Explain the Fibonacci Numbers DP pattern, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Staircase (Count Ways to Climb N Stairs Taking 1, 2, or 3 Steps)",
   "chapterNumber": 17,

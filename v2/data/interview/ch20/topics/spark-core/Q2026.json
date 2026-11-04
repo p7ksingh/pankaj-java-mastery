@@ -1,7 +1,7 @@
 {
   "id": "Q2026",
   "slug": "caching-in-spark-and-why-cache-is-lazy",
-  "questionNumber": 2026,
+  "questionNumber": 13,
   "title": "What is caching in Spark — keeping computed partitions available on executors for reuse to avoid recomputation — and why is `cache()` lazy (no computation happens until an action triggers it)?",
   "shortTitle": "Caching in Spark and why cache() is lazy",
   "chapterNumber": 20,

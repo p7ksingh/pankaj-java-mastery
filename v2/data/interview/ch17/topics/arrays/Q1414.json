@@ -1,7 +1,7 @@
 {
   "id": "Q1414",
   "slug": "find-the-second-largest-element-without-sorting",
-  "questionNumber": 1414,
+  "questionNumber": 14,
   "title": "Find the second-largest element without sorting (track top two in one pass).",
   "shortTitle": "Find the Second-Largest Element Without Sorting",
   "chapterNumber": 17,

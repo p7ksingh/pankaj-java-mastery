@@ -1,7 +1,7 @@
 {
   "id": "Q22",
   "slug": "how-string-concatenation-works-internally",
-  "questionNumber": 22,
+  "questionNumber": 4,
   "title": "How does String concatenation work internally (compiler using StringBuilder, constant folding for compile-time constants, and why to use StringBuilder in loops)?",
   "shortTitle": "How does String concatenation work internally?",
   "chapterNumber": 1,

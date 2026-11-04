@@ -1,7 +1,7 @@
 {
   "id": "Q2003",
   "slug": "oltp-vs-olap-systems-in-depth-row-store-vs-column-store-normalized-vs-star",
-  "questionNumber": 2003,
+  "questionNumber": 8,
   "title": "What is the difference between OLTP and OLAP systems (row-store transactional DB vs column-store analytical store, normalized vs star/snowflake schema, point writes vs large scans), and why do you separate them rather than running analytics on the production DB?",
   "shortTitle": "OLTP vs OLAP systems in depth (row-store vs column-store, normalized vs star)",
   "chapterNumber": 20,

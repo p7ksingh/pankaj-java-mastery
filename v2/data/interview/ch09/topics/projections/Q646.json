@@ -1,7 +1,7 @@
 {
   "id": "Q646",
   "slug": "jpa-projections-interface-classdto-dynamic-performance-comparison",
-  "questionNumber": 646,
+  "questionNumber": 3,
   "title": "What are JPA projections, how do interface, class/DTO, and dynamic projections differ, and how do they compare in performance?",
   "shortTitle": "JPA projections performance comparison?",
   "chapterNumber": 9,

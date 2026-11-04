@@ -1,7 +1,7 @@
 {
   "id": "Q1415",
   "slug": "reverse-an-array-in-place",
-  "questionNumber": 1415,
+  "questionNumber": 15,
   "title": "Reverse an array in-place (two-pointer swap from ends).",
   "shortTitle": "Reverse an Array In-Place",
   "chapterNumber": 17,

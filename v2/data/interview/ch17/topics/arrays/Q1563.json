@@ -1,7 +1,7 @@
 {
   "id": "Q1563",
   "slug": "permutations-backtracking-with-a-used-array",
-  "questionNumber": 1563,
+  "questionNumber": 54,
   "title": "Given an array of distinct integers, return all possible orderings (permutations) using backtracking.",
   "shortTitle": "Permutations — backtracking with a used[] array",
   "chapterNumber": 17,

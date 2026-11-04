@@ -1,7 +1,7 @@
 {
   "id": "Q2568",
   "slug": "design-using-the-state-pattern",
-  "questionNumber": 2568,
+  "questionNumber": 10,
   "title": "State — vending machine states, order status transitions, elevator states.",
   "shortTitle": "Design using the State pattern",
   "chapterNumber": 15,

@@ -1,7 +1,7 @@
 {
   "id": "Q1004",
   "slug": "architecture-decision-records-adr-and-technical-rfcs-what-they-are-and-why-version-control-them",
-  "questionNumber": 1004,
+  "questionNumber": 3,
   "title": "What is an Architecture Decision Record (ADR) and a technical RFC — an ADR documents a specific architecture decision (context/problem, decision made, consequences, alternatives considered) while an RFC is a broader proposal for a significant change seeking feedback before commitment — why should both be version-controlled alongside the code (decisions are traceable, new team members understand WHY things are the way they are, prevents re-debating settled decisions), and what makes a good ADR (concise context, clear decision, honest trade-offs)?",
   "shortTitle": "Architecture Decision Records (ADR) and technical RFCs — what they are and why version-control them",
   "chapterNumber": 12,

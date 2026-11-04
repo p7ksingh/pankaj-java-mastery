@@ -1,7 +1,7 @@
 {
   "id": "Q1453",
   "slug": "check-if-two-strings-are-rotations-of-each-other-s1s1-contains-s2",
-  "questionNumber": 1453,
+  "questionNumber": 22,
   "title": "Check if two strings are rotations of each other (`s1+s1` contains `s2`).",
   "shortTitle": "Check If Two Strings Are Rotations of Each Other — s1+s1 Contains s2",
   "chapterNumber": 17,

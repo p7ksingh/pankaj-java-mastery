@@ -1,7 +1,7 @@
 {
   "id": "Q2627",
   "slug": "average-read-three-numbers-and-print-their-average",
-  "questionNumber": 2627,
+  "questionNumber": 18,
   "title": "Given three numbers, draw a flowchart to calculate and print their average value. Start, read A, read B, read C, sum = A + B + C, average = sum / 3, print average, End. Input: 10 20 30, Expected Output: 20.",
   "shortTitle": "Average — read three numbers and print their average",
   "chapterNumber": 17,

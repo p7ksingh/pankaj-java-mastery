@@ -1,7 +1,7 @@
 {
   "id": "Q2511",
   "slug": "back-of-envelope-estimation-qps-storage-bandwidth-servers",
-  "questionNumber": 2511,
+  "questionNumber": 2,
   "title": "How to do back-of-envelope estimation — estimate QPS (queries per second), storage needs, bandwidth, and number of servers needed for a given scenario?",
   "shortTitle": "Back-of-Envelope Estimation (QPS, Storage, Bandwidth, Servers)",
   "chapterNumber": 24,

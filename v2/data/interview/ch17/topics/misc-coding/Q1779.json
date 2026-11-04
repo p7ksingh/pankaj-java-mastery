@@ -1,7 +1,7 @@
 {
   "id": "Q1779",
   "slug": "top-k-frequent-numbers-find-the-k-most-frequently-occurring-numbers",
-  "questionNumber": 1779,
+  "questionNumber": 36,
   "title": "Given an unsorted array of numbers, find the K numbers that appear most frequently. Explain how a frequency map plus a min-heap keyed on frequency finds them efficiently.",
   "shortTitle": "Top K Frequent Numbers (Find the K Most Frequently Occurring Numbers)",
   "chapterNumber": 17,

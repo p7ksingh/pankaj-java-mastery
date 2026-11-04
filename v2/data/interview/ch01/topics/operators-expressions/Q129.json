@@ -1,7 +1,7 @@
 {
   "id": "Q129",
   "slug": "how-do-you-detect-and-avoid-integer-overflow-and-why-is-integermaxvalue-1-a-negative-number",
-  "questionNumber": 129,
+  "questionNumber": 9,
   "title": "How do you detect and avoid integer overflow (`Math.addExact`/`multiplyExact` throw on overflow, vs silent wraparound), and why is `Integer.MAX_VALUE + 1` a negative number?",
   "shortTitle": "How do you detect and avoid integer overflow?",
   "chapterNumber": 1,

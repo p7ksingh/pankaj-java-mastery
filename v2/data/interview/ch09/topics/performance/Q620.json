@@ -1,7 +1,7 @@
 {
   "id": "Q620",
   "slug": "why-large-in-clauses-hurt-performance-chunking-temp-tables-server-side-filtering",
-  "questionNumber": 620,
+  "questionNumber": 1,
   "title": "Why do very large IN clauses (e.g. findByIdIn(List<Long> ids) with 10K ids) hurt — huge SQL, poor plans, cache-busting, DB limits — and how do you fix it (chunk into batches, temp table, server-side filter)?",
   "shortTitle": "Why do large IN clauses hurt performance?",
   "chapterNumber": 9,

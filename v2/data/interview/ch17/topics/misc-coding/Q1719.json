@@ -1,7 +1,7 @@
 {
   "id": "Q1719",
   "slug": "find-the-smallest-missing-positive-number-first-absent-positive-integer",
-  "questionNumber": 1719,
+  "questionNumber": 26,
   "title": "Given an unsorted array that may contain duplicates, negatives, and zero, find the smallest positive integer (starting from 1) that does not appear in the array, in O(n) time and O(1) extra space.",
   "shortTitle": "Find the Smallest Missing Positive Number (First Absent Positive Integer)",
   "chapterNumber": 17,

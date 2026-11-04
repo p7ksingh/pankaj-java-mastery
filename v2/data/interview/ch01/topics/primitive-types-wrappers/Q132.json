@@ -1,7 +1,7 @@
 {
   "id": "Q132",
   "slug": "what-is-the-char-type-why-can-it-hold-only-a-bmp-character-and-how-do-surrogate-pairs-and-code-points-handle-emoji",
-  "questionNumber": 132,
+  "questionNumber": 9,
   "title": "What is the `char` type (16-bit unsigned UTF-16 code unit, range 0–65535), why can a `char` hold only a BMP character (supplementary characters like emoji require a surrogate pair — two `char`s), and how do `Character.isHighSurrogate`, `Character.toCodePoint`, and `String.codePointAt` handle characters outside the BMP?",
   "shortTitle": "What is the char type and how does Java handle Unicode?",
   "chapterNumber": 1,

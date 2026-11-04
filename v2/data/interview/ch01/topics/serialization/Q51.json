@@ -1,7 +1,7 @@
 {
   "id": "Q51",
   "slug": "if-a-parent-class-is-serializable-how-to-restrict-serialization-of-the-child-class",
-  "questionNumber": 51,
+  "questionNumber": 10,
   "title": "If a parent class is `Serializable`, how do you restrict serialization of the child class (throw `NotSerializableException` in `writeObject`/`readObject`)?",
   "shortTitle": "How do you prevent a child class from being serialized?",
   "chapterNumber": 1,

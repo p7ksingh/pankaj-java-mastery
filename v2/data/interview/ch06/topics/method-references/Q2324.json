@@ -1,7 +1,7 @@
 {
   "id": "Q2324",
   "slug": "rewrite-a-lambda-e-egetname-as-a-method-reference-employeegetname",
-  "questionNumber": 2324,
+  "questionNumber": 2,
   "title": "Rewrite a lambda `e -> e.getName()` as a method reference `Employee::getName`.",
   "shortTitle": "Rewrite a lambda e -> e.getName() as a method reference Employee::getName",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q1291",
   "slug": "how-does-sealing-improve-instanceof-checks-and-exhaustive-switch-pattern-matching",
-  "questionNumber": 1291,
+  "questionNumber": 2,
   "title": "How does sealing improve `instanceof` checks and exhaustive `switch` pattern matching?",
   "shortTitle": "How does sealing improve `instanceof` checks and exhaustive `switch` pattern matching?",
   "chapterNumber": 16,

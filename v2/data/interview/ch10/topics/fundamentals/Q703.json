@@ -1,7 +1,7 @@
 {
   "id": "Q703",
   "slug": "three-microservices-design-patterns-in-detail",
-  "questionNumber": 703,
+  "questionNumber": 4,
   "title": "Explain any three microservices design patterns in detail (e.g. API Gateway, Circuit Breaker, Database-per-Service).",
   "shortTitle": "Three microservices design patterns in detail",
   "chapterNumber": 10,

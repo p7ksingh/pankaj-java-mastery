@@ -1,7 +1,7 @@
 {
   "id": "Q328",
   "slug": "arraysparallelsort-parallelprefix-and-parallelsetall-the-common-forkjoinpool-behind-parallel-array-operations",
-  "questionNumber": 328,
+  "questionNumber": 5,
   "title": "What are Arrays.parallelSort, Arrays.parallelPrefix and Arrays.parallelSetAll? How do they use the common ForkJoinPool, and when does parallel sorting actually pay off?",
   "shortTitle": "parallelSort, parallelPrefix, parallelSetAll?",
   "chapterNumber": 5,

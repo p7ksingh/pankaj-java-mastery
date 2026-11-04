@@ -1,7 +1,7 @@
 {
   "id": "Q1170",
   "slug": "adding-not-null-to-a-column-that-already-contains-nulls",
-  "questionNumber": 1170,
+  "questionNumber": 28,
   "title": "What happens if you add a `NOT NULL` constraint to a column that already contains NULLs (error — you must backfill first), and how do you do it safely on a large table (add column nullable → backfill in batches → add NOT NULL)?",
   "shortTitle": "Adding NOT NULL to a Column That Already Contains NULLs",
   "chapterNumber": 13,

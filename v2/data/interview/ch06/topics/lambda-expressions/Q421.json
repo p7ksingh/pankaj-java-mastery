@@ -1,7 +1,7 @@
 {
   "id": "Q421",
   "slug": "what-does-a-lambda-close-over-value-capture-vs-variable-binding-mutating-captured-objects",
-  "questionNumber": 421,
+  "questionNumber": 5,
   "title": "What exactly does a Java lambda \"close over\" — it captures the VALUE of a local variable (a copy, hence the effectively-final rule) but can freely read AND mutate the fields of a captured object or this — and how does this differ from a true closure in languages that capture the variable binding itself?",
   "shortTitle": "What does a lambda close over?",
   "chapterNumber": 6,

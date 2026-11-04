@@ -1,7 +1,7 @@
 {
   "id": "Q1063",
   "slug": "what-is-the-uuidv7-structure-how-does-it-give-time-ordering-and-index-locality-and-how-does-it-compare-to-auto-increment-snowflake-and-uuidv4",
-  "questionNumber": 1063,
+  "questionNumber": 14,
   "title": "What is the UUIDv7 structure (48-bit Unix millisecond timestamp prefix + version + variant + random bits, RFC 9562), how does it give approximate time ordering and index locality, and how does it compare to auto-increment (needs the DB sequence), Snowflake (needs worker-id coordination), and UUIDv4 (random, no ordering) — i.e. unique + time-ordered + no coordination?",
   "shortTitle": "What is the UUIDv7 structure, how does it give time ordering and index locality, and how does it compare to auto-increment, Snowflake, and UUIDv4",
   "chapterNumber": 13,

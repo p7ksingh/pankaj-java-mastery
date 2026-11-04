@@ -1,7 +1,7 @@
 {
   "id": "Q438",
   "slug": "spring-cache-redis-cacheable-cacheevict-stampede-prevention-distributed-lock",
-  "questionNumber": 438,
+  "questionNumber": 1,
   "title": "What is caching in Spring Boot (@Cacheable/@CachePut/@CacheEvict)? When to use Redis? L1 vs L2 cache? What is cache stampede and how to prevent it? TTL strategy? Cache key design? Redis data structures? Redis distributed lock? What to do when Redis is unavailable?",
   "shortTitle": "What is Spring Cache with Redis?",
   "chapterNumber": 7,

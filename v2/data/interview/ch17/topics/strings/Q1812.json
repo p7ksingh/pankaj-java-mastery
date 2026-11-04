@@ -1,7 +1,7 @@
 {
   "id": "Q1812",
   "slug": "minimum-deletions-to-make-a-string-palindrome-fewest-removals-for-symmetry",
-  "questionNumber": 1812,
+  "questionNumber": 51,
   "title": "Given a string, find the minimum number of character deletions needed to make it a palindrome. Explain how the Palindromic Subsequence DP pattern solves it, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Minimum Deletions to Make a String Palindrome (Fewest Removals for Symmetry)",
   "chapterNumber": 17,

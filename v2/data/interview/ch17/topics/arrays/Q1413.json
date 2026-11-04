@@ -1,7 +1,7 @@
 {
   "id": "Q1413",
   "slug": "find-the-largest-and-smallest-element-in-an-array",
-  "questionNumber": 1413,
+  "questionNumber": 13,
   "title": "Find the largest / smallest element in an array (single pass, O(n)).",
   "shortTitle": "Find the Largest and Smallest Element in an Array",
   "chapterNumber": 17,

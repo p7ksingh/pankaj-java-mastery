@@ -1,7 +1,7 @@
 {
   "id": "Q740",
   "slug": "how-do-you-evolve-an-architecture-from-1-user-to-1m-users",
-  "questionNumber": 740,
+  "questionNumber": 5,
   "title": "How do you evolve an architecture from 1 user to 1M+ users as each component becomes the bottleneck (optimize queries/indexes → stateless app + load balancer → cache + read replicas + CDN → async message queue + rate limiting → microservices/sharding → auto-scaling + multi-region), and why is the principle \"start simple → measure → find the bottleneck → scale → repeat\"?",
   "shortTitle": "How do you evolve an architecture from 1 user to 1M+ users",
   "chapterNumber": 10,

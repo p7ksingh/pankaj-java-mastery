@@ -1,7 +1,7 @@
 {
   "id": "Q1973",
   "slug": "what-a-feature-flag-is-and-why-it-is-useful",
-  "questionNumber": 1973,
+  "questionNumber": 50,
   "title": "What is a feature flag — a way to turn features on/off without deploying new code (using tools like LaunchDarkly or simple config) — and why is it useful (test in production, gradual rollout, instant rollback)?",
   "shortTitle": "What a feature flag is and why it is useful",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q781",
   "slug": "why-does-a-naive-if-alreadyprocessedid-process-markprocessedid-dedup-still-double-process",
-  "questionNumber": 781,
+  "questionNumber": 19,
   "title": "Why does a naive `if (!alreadyProcessed(id)) { process(); markProcessed(id); }` dedup still double-process under concurrency or on crash, and what are the two fixes — make the dedup write atomic (`INSERT ... ` with a `UNIQUE(event_id)` constraint so only one consumer wins) and commit the business update and the dedup record in the SAME database transaction (so a crash after the update but before marking cannot cause reprocessing to re-apply it)?",
   "shortTitle": "Why does a naive `if (!alreadyProcessed(id)) { process(); markProcessed(id); }` dedup still double-process",
   "chapterNumber": 10,

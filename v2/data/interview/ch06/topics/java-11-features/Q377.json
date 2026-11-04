@@ -1,7 +1,7 @@
 {
   "id": "Q377",
   "slug": "java-flight-recorder-jfr-low-overhead-production-profiling",
-  "questionNumber": 377,
+  "questionNumber": 4,
   "title": "What is Java Flight Recorder (JFR), and how do you use it for low-overhead production profiling (GC, allocations, thread contention, hotspots)?",
   "shortTitle": "What is Java Flight Recorder?",
   "chapterNumber": 6,

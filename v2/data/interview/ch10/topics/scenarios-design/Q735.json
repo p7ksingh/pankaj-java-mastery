@@ -1,7 +1,7 @@
 {
   "id": "Q735",
   "slug": "how-do-you-keep-the-application-available-during-a-huge-surge-in-traffic",
-  "questionNumber": 735,
+  "questionNumber": 3,
   "title": "How do you keep the application available during a huge surge in traffic (horizontal scaling, auto-scaling, caching, async processing, DB scaling, monitoring)?",
   "shortTitle": "How do you keep the application available during a huge surge in traffic",
   "chapterNumber": 10,

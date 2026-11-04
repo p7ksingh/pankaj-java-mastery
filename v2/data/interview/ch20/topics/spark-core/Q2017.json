@@ -1,7 +1,7 @@
 {
   "id": "Q2017",
   "slug": "spark-execution-modes-cluster-client-local",
-  "questionNumber": 2017,
+  "questionNumber": 9,
   "title": "Explain Spark execution modes — Cluster mode (driver runs on a worker node, production standard), Client mode (driver on submitter machine, interactive/notebook use), Local mode (single JVM, testing/debugging) — and when to use each.",
   "shortTitle": "Spark execution modes — cluster, client, local",
   "chapterNumber": 20,

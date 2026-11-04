@@ -1,7 +1,7 @@
 {
   "id": "Q1966",
   "slug": "shell-script-that-checks-cpu-memory-and-disk-utilization-and-alerts-if-any-exceeds-a-threshold",
-  "questionNumber": 1966,
+  "questionNumber": 9,
   "title": "Write a shell script that checks CPU, memory, and disk utilization and alerts if any exceeds a threshold (e.g. 80%).",
   "shortTitle": "Shell script that checks CPU, memory, and disk utilization and alerts if any exceeds a threshold",
   "chapterNumber": 12,

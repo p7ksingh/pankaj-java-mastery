@@ -1,7 +1,7 @@
 {
   "id": "Q2237",
   "slug": "create-a-list-of-employeedtoname-department-from-the-employee-list-using-map",
-  "questionNumber": 2237,
+  "questionNumber": 5,
   "title": "Create a list of `EmployeeDTO(name, department)` from the employee list using `map()`.",
   "shortTitle": "Create a list of EmployeeDTO(name, department) from the employee list using map()",
   "chapterNumber": 6,

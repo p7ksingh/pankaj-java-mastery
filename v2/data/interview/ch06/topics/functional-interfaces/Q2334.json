@@ -1,7 +1,7 @@
 {
   "id": "Q2334",
   "slug": "write-a-unaryoperatorstring-that-trims-and-lowercases-a-name",
-  "questionNumber": 2334,
+  "questionNumber": 11,
   "title": "Write a `UnaryOperator<String>` that trims and lowercases a name.",
   "shortTitle": "Write a UnaryOperator<String> that trims and lowercases a name",
   "chapterNumber": 6,

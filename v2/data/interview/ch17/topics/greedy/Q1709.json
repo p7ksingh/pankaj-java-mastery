@@ -1,7 +1,7 @@
 {
   "id": "Q1709",
   "slug": "merge-intervals-combine-all-overlapping-intervals",
-  "questionNumber": 1709,
+  "questionNumber": 4,
   "title": "Given a list of intervals each with a start and an end, merge all overlapping intervals and return the list of non-overlapping intervals that cover the same ranges. Solve it with the sort-then-sweep merge-intervals pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Merge Intervals (Combine All Overlapping Intervals)",
   "chapterNumber": 17,

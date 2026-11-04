@@ -1,7 +1,7 @@
 {
   "id": "Q287",
   "slug": "queueing-vs-rejection-unbounded-queue-oom-bounded-fail-fast-custom-rejectedexecutionhandler",
-  "questionNumber": 287,
+  "questionNumber": 7,
   "title": "Queueing vs rejection — unbounded queue OOM, bounded fail-fast, custom RejectedExecutionHandler",
   "shortTitle": "Queueing vs rejection?",
   "chapterNumber": 5,

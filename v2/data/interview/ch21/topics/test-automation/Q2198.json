@@ -1,7 +1,7 @@
 {
   "id": "Q2198",
   "slug": "structuring-a-frameworks-folders-and-justifying-why-each-exists",
-  "questionNumber": 2198,
+  "questionNumber": 2,
   "title": "How do you structure a framework's folders (`tests/ pages/ fixtures/ utils/ data/ config/ api/ reports/`) and justify WHY each exists for maintainability and scalability rather than just listing them?",
   "shortTitle": "Structuring a framework's folders and justifying why each exists",
   "chapterNumber": 21,

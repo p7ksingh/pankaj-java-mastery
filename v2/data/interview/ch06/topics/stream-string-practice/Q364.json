@@ -1,7 +1,7 @@
 {
   "id": "Q364",
   "slug": "frequency-count-of-each-string-in-a-list-using-streams",
-  "questionNumber": 364,
+  "questionNumber": 5,
   "title": "How do you compute the frequency (count) of each string in a list using streams?",
   "shortTitle": "Frequency count of each string in a list using streams",
   "chapterNumber": 6,

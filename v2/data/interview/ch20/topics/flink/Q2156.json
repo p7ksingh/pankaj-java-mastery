@@ -1,7 +1,7 @@
 {
   "id": "Q2156",
   "slug": "what-is-matchrecognize-in-flink-sql",
-  "questionNumber": 2156,
+  "questionNumber": 18,
   "title": "What is MATCH_RECOGNIZE in Flink SQL — SQL-based Complex Event Processing that lets you detect patterns in a stream using regular-expression-like syntax (PATTERN (A B+ C) with DEFINE A AS ...) — and give a use case (detect price drop then sustained low then recovery in stock data)?",
   "shortTitle": "What is MATCH_RECOGNIZE in Flink SQL",
   "chapterNumber": 20,

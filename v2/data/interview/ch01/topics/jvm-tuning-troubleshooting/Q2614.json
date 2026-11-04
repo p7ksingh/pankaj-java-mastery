@@ -1,7 +1,7 @@
 {
   "id": "Q2614",
   "slug": "how-to-profile-a-java-application",
-  "questionNumber": 2614,
+  "questionNumber": 10,
   "title": "How to profile a Java application — JFR (Java Flight Recorder) for low-overhead production profiling, JMC (Java Mission Control) for analysis, VisualVM for heap/thread inspection, async-profiler for CPU/allocation profiling?",
   "shortTitle": "How do you profile a Java application?",
   "chapterNumber": 1,

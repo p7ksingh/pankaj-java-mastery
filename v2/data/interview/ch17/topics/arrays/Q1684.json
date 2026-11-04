@@ -1,7 +1,7 @@
 {
   "id": "Q1684",
   "slug": "cycle-in-a-circular-array-directional-fast-slow-pointers",
-  "questionNumber": 1684,
+  "questionNumber": 68,
   "title": "Given a circular array of non-zero integers where each value tells you how many steps to jump forward (positive) or backward (negative), determine whether there is a cycle. A valid cycle must have all movements in the same direction and a length greater than one. (LeetCode: Circular Array Loop)",
   "shortTitle": "Cycle in a Circular Array (Directional Fast-Slow Pointers)",
   "chapterNumber": 17,

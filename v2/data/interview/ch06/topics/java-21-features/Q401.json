@@ -1,7 +1,7 @@
 {
   "id": "Q401",
   "slug": "switch-expressions-arrow-syntax-yield-exhaustiveness-no-fall-through",
-  "questionNumber": 401,
+  "questionNumber": 9,
   "title": "What are switch expressions (arrow syntax, yield, exhaustiveness) and how do they reduce fall-through bugs vs classic switch?",
   "shortTitle": "What are switch expressions?",
   "chapterNumber": 6,

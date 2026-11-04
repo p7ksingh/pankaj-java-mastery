@@ -1,7 +1,7 @@
 {
   "id": "Q1994",
   "slug": "schema-on-write-vs-schema-on-read",
-  "questionNumber": 1994,
+  "questionNumber": 6,
   "title": "What is schema-on-write (define the structure BEFORE storing data, like SQL tables) vs schema-on-read (store raw data first, define structure WHEN you read it, like data lake files)?",
   "shortTitle": "Schema-on-write vs schema-on-read",
   "chapterNumber": 20,

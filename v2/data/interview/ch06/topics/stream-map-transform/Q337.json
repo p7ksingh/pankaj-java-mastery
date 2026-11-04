@@ -1,7 +1,7 @@
 {
   "id": "Q337",
   "slug": "map-vs-reduce-transformation-vs-aggregation",
-  "questionNumber": 337,
+  "questionNumber": 1,
   "title": "What is the difference between map() and reduce() in streams?",
   "shortTitle": "map() vs reduce() — transformation vs aggregation",
   "chapterNumber": 6,

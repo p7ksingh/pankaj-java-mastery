@@ -1,7 +1,7 @@
 {
   "id": "Q2048",
   "slug": "why-minmax-and-dictionary-filtering-fail-on-high-cardinality-unsorted-columns-and-how-bloom-filters-help",
-  "questionNumber": 2048,
+  "questionNumber": 3,
   "title": "Why are min/max statistics and dictionary filtering ineffective for high-cardinality unsorted columns (wide min/max range, huge dictionaries), and how do bloom filters help (compact bitset, \"definitely not present\" → skip, \"probably present\" → read)?",
   "shortTitle": "Why min/max and dictionary filtering fail on high-cardinality unsorted columns, and how bloom filters help",
   "chapterNumber": 20,

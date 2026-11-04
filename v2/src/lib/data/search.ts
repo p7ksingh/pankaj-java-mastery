@@ -1,16 +1,20 @@
-/** Client-side search over the pre-built index with fuzzy matching. */
+/** Client-side full-content search with fuzzy matching. */
 
 export interface SearchEntry {
   id: string
-  t: string
-  ch: string
-  u: string
+  t: string   // title
+  ch: string  // chapter
+  tp?: string // topic
+  u: string   // url
+  k?: string  // keywords from all content
+  kp?: string // key points
 }
 
 export interface SearchResultItem {
   id: string
   title: string
   chapter: string
+  topic: string
   url: string
   score: number
 }
@@ -33,10 +37,9 @@ export async function loadSearchIndex(): Promise<SearchEntry[]> {
 }
 
 /**
- * Searches the index with relevance ranking and fuzzy fallback.
- * 1. Exact/substring match first (fast, precise)
- * 2. If no results → fuzzy bigram match (handles typos)
- * Returns items sorted best-match-first + optional spelling suggestion.
+ * Full-content search with relevance ranking and fuzzy fallback.
+ * Searches: title → key points → topic name → keywords (all content) → ID
+ * Best matches on top.
  */
 export function filterIndex(index: SearchEntry[], query: string, limit: number): SearchResult {
   if (!query || query.length < 2) {
@@ -44,52 +47,88 @@ export function filterIndex(index: SearchEntry[], query: string, limit: number):
   }
 
   const lower = query.toLowerCase()
+  const queryWords = lower.split(/\s+/).filter((w) => w.length >= 2)
 
-  // --- Pass 1: Exact / substring matching ---
-  const exact = exactMatch(index, lower, limit)
-  if (exact.length > 0) {
-    return { items: exact, suggestion: null }
-  }
-
-  // --- Pass 2: Fuzzy matching (typo tolerance) ---
-  return fuzzyMatch(index, lower, limit)
-}
-
-/** Exact and substring matching with relevance scoring. */
-function exactMatch(index: SearchEntry[], lower: string, limit: number): SearchResultItem[] {
-  const results: SearchResultItem[] = []
+  // --- Pass 1: Score every entry ---
+  const scored: SearchResultItem[] = []
 
   for (const entry of index) {
     const titleLower = entry.t.toLowerCase()
     const idLower = entry.id.toLowerCase()
+    const keywordsLower = (entry.k || '').toLowerCase()
+    const keyPointsLower = (entry.kp || '').toLowerCase()
+    const topicLower = (entry.tp || '').toLowerCase()
     let score = 0
 
+    // Title matches (highest priority)
     if (titleLower === lower) {
       score = 100
     } else if (titleLower.startsWith(lower)) {
-      score = 80
-    } else if (idLower === lower) {
-      score = 75
+      score = 90
     } else if (new RegExp(`\\b${escapeRegex(lower)}\\b`).test(titleLower)) {
-      score = 60
+      score = 80
     } else if (titleLower.includes(lower)) {
-      score = 40
-    } else if (idLower.includes(lower)) {
-      score = 20
+      score = 70
+    }
+
+    // ID exact match
+    if (idLower === lower) {
+      score = Math.max(score, 85)
+    }
+
+    // Key points match
+    if (score === 0 && keyPointsLower.includes(lower)) {
+      score = 55
+    }
+
+    // Topic name match
+    if (score === 0 && topicLower.includes(lower)) {
+      score = 50
+    }
+
+    // Full content keywords match
+    if (score === 0 && keywordsLower) {
+      // Check if ALL query words appear in keywords
+      const allWordsMatch = queryWords.every((w) => keywordsLower.includes(w))
+      if (allWordsMatch) {
+        score = 45
+      } else {
+        // Check how many query words match
+        const matchCount = queryWords.filter((w) => keywordsLower.includes(w)).length
+        if (matchCount > 0) {
+          score = 20 + Math.round((matchCount / queryWords.length) * 20)
+        }
+      }
+    }
+
+    // Chapter name match (lowest)
+    if (score === 0 && entry.ch.toLowerCase().includes(lower)) {
+      score = 15
     }
 
     if (score > 0) {
-      results.push({ id: entry.id, title: entry.t, chapter: entry.ch, url: entry.u, score })
+      scored.push({
+        id: entry.id,
+        title: entry.t,
+        chapter: entry.ch,
+        topic: entry.tp || '',
+        url: entry.u,
+        score,
+      })
     }
   }
 
-  results.sort((a, b) => b.score - a.score)
-  return results.slice(0, limit)
+  if (scored.length > 0) {
+    scored.sort((a, b) => b.score - a.score)
+    return { items: scored.slice(0, limit), suggestion: null }
+  }
+
+  // --- Pass 2: Fuzzy matching (typo tolerance) ---
+  return fuzzyMatch(index, lower, queryWords, limit)
 }
 
-/** Fuzzy matching using bigram similarity — handles typos like "cuncurrent" → "concurrent". */
-function fuzzyMatch(index: SearchEntry[], lower: string, limit: number): SearchResult {
-  const queryWords = lower.split(/\s+/).filter((w) => w.length >= 2)
+/** Fuzzy matching using bigram similarity */
+function fuzzyMatch(index: SearchEntry[], _lower: string, queryWords: string[], limit: number): SearchResult {
   if (queryWords.length === 0) {
     return { items: [], suggestion: null }
   }
@@ -100,13 +139,13 @@ function fuzzyMatch(index: SearchEntry[], lower: string, limit: number): SearchR
 
   for (const entry of index) {
     const titleLower = entry.t.toLowerCase()
-    const titleWords = titleLower.split(/[\s,?!.()[\]{}:;/\\-]+/).filter((w) => w.length >= 2)
+    const allText = titleLower + ' ' + (entry.kp || '').toLowerCase() + ' ' + (entry.k || '').toLowerCase()
+    const allWords = allText.split(/[\s,?!.()[\]{}:;/\\-]+/).filter((w) => w.length >= 2)
 
-    // For each query word, find the best matching title word
     let totalSim = 0
     for (const qw of queryWords) {
       let bestWordSim = 0
-      for (const tw of titleWords) {
+      for (const tw of allWords) {
         const sim = bigramSimilarity(qw, tw)
         if (sim > bestWordSim) {
           bestWordSim = sim
@@ -117,10 +156,16 @@ function fuzzyMatch(index: SearchEntry[], lower: string, limit: number): SearchR
 
     const avgSim = totalSim / queryWords.length
 
-    // Threshold: at least 40% bigram similarity on average
     if (avgSim >= 0.4) {
       const score = Math.round(avgSim * 100)
-      scored.push({ id: entry.id, title: entry.t, chapter: entry.ch, url: entry.u, score })
+      scored.push({
+        id: entry.id,
+        title: entry.t,
+        chapter: entry.ch,
+        topic: entry.tp || '',
+        url: entry.u,
+        score,
+      })
       if (score > bestScore) {
         bestScore = score
         bestTitle = entry.t
@@ -131,7 +176,6 @@ function fuzzyMatch(index: SearchEntry[], lower: string, limit: number): SearchR
   scored.sort((a, b) => b.score - a.score)
   const items = scored.slice(0, limit)
 
-  // Build suggestion from the best matching title's words
   let suggestion: string | null = null
   if (items.length > 0 && bestTitle) {
     suggestion = buildSuggestion(queryWords, bestTitle)
@@ -140,10 +184,6 @@ function fuzzyMatch(index: SearchEntry[], lower: string, limit: number): SearchR
   return { items, suggestion }
 }
 
-/**
- * Bigram similarity (Dice coefficient).
- * "cuncurrent" vs "concurrent" → ~0.78 (high match despite typo)
- */
 function bigramSimilarity(a: string, b: string): number {
   if (a.length < 2 || b.length < 2) {
     return 0
@@ -165,7 +205,6 @@ function bigramSimilarity(a: string, b: string): number {
   return (2 * matches) / (setA.size + setB.size)
 }
 
-/** Builds a "Did you mean: concurrent" suggestion from the best matching title. */
 function buildSuggestion(queryWords: string[], bestTitle: string): string | null {
   const titleWords = bestTitle.toLowerCase().split(/[\s,?!.()[\]{}:;/\\-]+/).filter((w) => w.length >= 2)
   const corrected: string[] = []
@@ -184,7 +223,6 @@ function buildSuggestion(queryWords: string[], bestTitle: string): string | null
   }
 
   const suggestion = corrected.join(' ')
-  // Only suggest if it's actually different from the query
   if (suggestion !== queryWords.join(' ')) {
     return suggestion
   }

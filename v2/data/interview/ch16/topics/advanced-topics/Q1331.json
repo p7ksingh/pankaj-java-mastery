@@ -1,7 +1,7 @@
 {
   "id": "Q1331",
   "slug": "how-does-virtual-thread-pinning-happen-and-why-replace-synchronized-with-reentrantlock-in-virtual-thread-heavy-code",
-  "questionNumber": 1331,
+  "questionNumber": 24,
   "title": "How does virtual-thread pinning happen (blocking I/O inside a `synchronized` block pins the carrier thread), and why replace `synchronized` with `ReentrantLock` in virtual-thread-heavy code?",
   "shortTitle": "How does virtual-thread pinning happen, and why replace synchronized with ReentrantLock in virtual-thread-heavy code?",
   "chapterNumber": 16,

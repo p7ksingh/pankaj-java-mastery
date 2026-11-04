@@ -1,7 +1,7 @@
 {
   "id": "Q640",
   "slug": "version-optimistic-locking-internals-and-retry-on-optimisticlockingfailure",
-  "questionNumber": 640,
+  "questionNumber": 3,
   "title": "How does @Version optimistic locking work internally, and how do you handle ObjectOptimisticLockingFailureException with retries?",
   "shortTitle": "How does @Version optimistic locking work internally?",
   "chapterNumber": 9,

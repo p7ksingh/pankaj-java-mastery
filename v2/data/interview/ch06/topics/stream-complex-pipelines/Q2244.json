@@ -1,7 +1,7 @@
 {
   "id": "Q2244",
   "slug": "given-a-listcompany-listdepartment-listemployee-extract-all-employee-names-across-all-companies",
-  "questionNumber": 2244,
+  "questionNumber": 1,
   "title": "Given a `List<Company>` which contains `List<Department>` which contains `List<Employee>`, extract all employee names across all companies.",
   "shortTitle": "Given a List<Company> → List<Department> → List<Employee>, extract all employee names across all companies",
   "chapterNumber": 6,

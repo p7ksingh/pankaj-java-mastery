@@ -1,7 +1,7 @@
 {
   "id": "Q1852",
   "slug": "jump-game-can-you-reach-the-last-index-with-a-greedy-reach",
-  "questionNumber": 1852,
+  "questionNumber": 11,
   "title": "Given an array where each value is the maximum jump length from that index, determine whether you can reach the last index starting from the first. Explain the greedy farthest-reach approach, the operations, the complexity, and a banking use case.",
   "shortTitle": "Jump Game (Can You Reach the Last Index with a Greedy Reach)",
   "chapterNumber": 17,

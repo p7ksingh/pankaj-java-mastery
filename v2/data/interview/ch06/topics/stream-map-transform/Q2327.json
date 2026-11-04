@@ -1,7 +1,7 @@
 {
   "id": "Q2327",
   "slug": "use-a-static-method-reference-integerparseint-to-convert-a-list-of-string-numbers-to-integers",
-  "questionNumber": 2327,
+  "questionNumber": 27,
   "title": "Use a static method reference `Integer::parseInt` to convert a list of string numbers to integers.",
   "shortTitle": "Use a static method reference Integer::parseInt to convert a list of string numbers to integers",
   "chapterNumber": 6,

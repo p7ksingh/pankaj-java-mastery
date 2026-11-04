@@ -1,7 +1,7 @@
 {
   "id": "Q777",
   "slug": "scenario-what-happens-if-the-application-crashes-after-a-payment-succeeds-but-before-the-response-reaches-the-client",
-  "questionNumber": 777,
+  "questionNumber": 16,
   "title": "(Scenario) What happens if the application crashes AFTER a payment succeeds but BEFORE the response reaches the client (the client retries, risking a double charge), and why does this make server-side idempotency — not client discipline — the only safe design?",
   "shortTitle": "(Scenario) What happens if the application crashes AFTER a payment succeeds but BEFORE the response reaches the client",
   "chapterNumber": 10,

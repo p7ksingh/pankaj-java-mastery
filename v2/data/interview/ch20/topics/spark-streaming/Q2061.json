@@ -1,7 +1,7 @@
 {
   "id": "Q2061",
   "slug": "what-is-structured-streaming-and-how-it-differs-from-dstreams",
-  "questionNumber": 2061,
+  "questionNumber": 2,
   "title": "What is Structured Streaming — a scalable, fault-tolerant stream processing engine built on Spark SQL that treats a stream as an unbounded table and processes it incrementally in micro-batches — and how does it differ from the legacy DStream API (DataFrame/SQL API, Catalyst-optimized, exactly-once, event-time support)?",
   "shortTitle": "What is Structured Streaming and how it differs from DStreams",
   "chapterNumber": 20,

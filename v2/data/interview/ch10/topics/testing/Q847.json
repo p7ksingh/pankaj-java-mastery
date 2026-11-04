@@ -1,7 +1,7 @@
 {
   "id": "Q847",
   "slug": "how-do-you-enforce-architectural-guardrails-as-automated-tests-rather-than-wiki-rules",
-  "questionNumber": 847,
+  "questionNumber": 1,
   "title": "How do you enforce architectural guardrails as automated tests rather than wiki rules — e.g. ArchUnit rules in CI to forbid synchronous service-to-service calls in a transaction's critical path, forbid dual writes (DB + broker without an outbox), forbid controllers calling repositories directly, and enforce layer/package dependencies — and why does codifying these rules prevent architectural drift across a large team?",
   "shortTitle": "How do you enforce architectural guardrails as automated tests rather than wiki rules?",
   "chapterNumber": 10,

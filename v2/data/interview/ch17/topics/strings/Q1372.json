@@ -1,7 +1,7 @@
 {
   "id": "Q1372",
   "slug": "check-if-two-strings-are-anagrams",
-  "questionNumber": 1372,
+  "questionNumber": 4,
   "title": "Check if two strings are anagrams (same letters in different order, e.g., \"listen\" and \"silent\") — sort both and compare, or use character frequency count.",
   "shortTitle": "Check if two strings are anagrams",
   "chapterNumber": 17,

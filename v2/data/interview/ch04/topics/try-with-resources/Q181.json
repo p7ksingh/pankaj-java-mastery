@@ -1,7 +1,7 @@
 {
   "id": "Q181",
   "slug": "try-with-resources-auto-close-autocloseable-resources",
-  "questionNumber": 181,
+  "questionNumber": 1,
   "title": "What is try-with-resources, and how does it automatically close resources that implement AutoCloseable?",
   "shortTitle": "What is try-with-resources?",
   "chapterNumber": 4,

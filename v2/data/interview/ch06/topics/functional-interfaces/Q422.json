@@ -1,7 +1,7 @@
 {
   "id": "Q422",
   "slug": "biconsumer-bipredicate-bifunction-two-argument-fis-map-operations",
-  "questionNumber": 422,
+  "questionNumber": 5,
   "title": "What are BiConsumer<T,U>, BiPredicate<T,U>, and BiFunction<T,U,R>, when do you use these two-argument functional interfaces (e.g. Map.forEach, Map.merge, Map.compute), and how do they relate to their single-argument counterparts?",
   "shortTitle": "What are BiConsumer, BiPredicate, BiFunction?",
   "chapterNumber": 6,

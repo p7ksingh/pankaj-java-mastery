@@ -1,7 +1,7 @@
 {
   "id": "Q1849",
   "slug": "minimum-cost-to-cut-a-stick-interval-dynamic-programming",
-  "questionNumber": 1849,
+  "questionNumber": 29,
   "title": "Given a stick of length L and a set of positions where it must be cut, where each cut costs the length of the piece being cut, find the minimum total cost to make all cuts in any order. Explain the interval dynamic programming, the operations, the complexity, and a banking use case.",
   "shortTitle": "Minimum Cost to Cut a Stick (Interval Dynamic Programming)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q2201",
   "slug": "integrating-an-automation-suite-into-ci-end-to-end-with-secure-secrets",
-  "questionNumber": 2201,
+  "questionNumber": 2,
   "title": "How do you integrate an automation suite into CI (Jenkins or Azure DevOps / GitHub Actions) end to end — Git commit → install dependencies → install browsers → run tests (parallel jobs, per-environment config) → collect artifacts (screenshots, videos, traces) → publish reports → failure notifications — and how do you handle secrets and environment variables securely?",
   "shortTitle": "Integrating an automation suite into CI end to end, with secure secrets",
   "chapterNumber": 21,

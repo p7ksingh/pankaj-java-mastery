@@ -1,7 +1,7 @@
 {
   "id": "Q1824",
   "slug": "tasks-scheduling-order-return-a-valid-order-to-finish-all-tasks",
-  "questionNumber": 1824,
+  "questionNumber": 44,
   "title": "Given a number of tasks and prerequisite pairs, return one valid order in which all tasks can be completed, or an empty result if no such order exists. Explain how the Topological Sort pattern produces the order, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Tasks Scheduling Order (Return a Valid Order to Finish All Tasks)",
   "chapterNumber": 17,

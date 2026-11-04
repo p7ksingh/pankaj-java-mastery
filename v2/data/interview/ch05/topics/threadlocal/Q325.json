@@ -1,7 +1,7 @@
 {
   "id": "Q325",
   "slug": "thread-safe-singleton-implementations-eager-synchronized-getter-double-checked-locking-bill-pugh-holder-and-enum",
-  "questionNumber": 325,
+  "questionNumber": 6,
   "title": "What are the ways to implement a thread-safe Singleton in Java? Compare eager initialization, synchronized getInstance, double-checked locking with volatile, the Bill Pugh holder idiom, and the enum singleton, and say which is preferred.",
   "shortTitle": "Thread-safe Singleton implementations?",
   "chapterNumber": 5,

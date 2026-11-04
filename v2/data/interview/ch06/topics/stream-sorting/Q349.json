@@ -1,7 +1,7 @@
 {
   "id": "Q349",
   "slug": "streamsorted-stateful-intermediate-operation-buffers-all-elements",
-  "questionNumber": 349,
+  "questionNumber": 1,
   "title": "What is Stream.sorted(), and what does \"stateful intermediate operation\" mean?",
   "shortTitle": "Stream.sorted() — stateful intermediate operation, buffers all elements",
   "chapterNumber": 6,

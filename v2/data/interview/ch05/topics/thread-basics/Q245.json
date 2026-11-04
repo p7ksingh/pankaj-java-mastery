@@ -1,7 +1,7 @@
 {
   "id": "Q245",
   "slug": "concurrency-overview-main-tools-thread-runnable-executorservice-synchronized-countdownlatch-cyclicbarrier",
-  "questionNumber": 245,
+  "questionNumber": 6,
   "title": "Concurrency overview — main tools: Thread, Runnable, ExecutorService, synchronized, CountDownLatch, CyclicBarrier",
   "shortTitle": "What are the main concurrency tools in Java?",
   "chapterNumber": 5,

@@ -1,7 +1,7 @@
 {
   "id": "Q1750",
   "slug": "permutations-generate-all-orderings-of-a-distinct-set",
-  "questionNumber": 1750,
+  "questionNumber": 16,
   "title": "Given a set of distinct numbers, generate all possible permutations, meaning every possible ordering. Explain the backtracking technique that fixes one position at a time.",
   "shortTitle": "Permutations (Generate All Orderings of a Distinct Set)",
   "chapterNumber": 17,

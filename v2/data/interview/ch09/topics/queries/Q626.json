@@ -1,7 +1,7 @@
 {
   "id": "Q626",
   "slug": "custom-queries-in-spring-data-jpa-derived-methods-query-jpql-native-sql-modifying",
-  "questionNumber": 626,
+  "questionNumber": 1,
   "title": "Can you write custom queries with Spring Data JPA repositories, and how (derived methods, JPQL @Query, native SQL, @Modifying, named parameters)?",
   "shortTitle": "What are the query options in Spring Data JPA?",
   "chapterNumber": 9,

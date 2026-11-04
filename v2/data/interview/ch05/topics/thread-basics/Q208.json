@@ -1,7 +1,7 @@
 {
   "id": "Q208",
   "slug": "blocked-vs-waiting-thread-states-involuntary-lock-wait-vs-voluntary-signal-wait",
-  "questionNumber": 208,
+  "questionNumber": 4,
   "title": "BLOCKED vs WAITING thread states — involuntary lock wait vs voluntary signal wait",
   "shortTitle": "What is the difference between BLOCKED and WAITING?",
   "chapterNumber": 5,

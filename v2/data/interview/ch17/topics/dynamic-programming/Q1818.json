@@ -1,7 +1,7 @@
 {
   "id": "Q1818",
   "slug": "longest-increasing-subsequence-longest-strictly-rising-ordered-subsequence",
-  "questionNumber": 1818,
+  "questionNumber": 21,
   "title": "Given an array of numbers, find the length of the longest strictly increasing subsequence, where a subsequence keeps relative order but need not be contiguous. Explain the Longest Common Substring pattern connection, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Longest Increasing Subsequence (Longest Strictly Rising Ordered Subsequence)",
   "chapterNumber": 17,

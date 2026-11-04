@@ -1,7 +1,7 @@
 {
   "id": "Q1294",
   "slug": "can-you-serializedeserialize-a-sealed-hierarchy-with-jacksongson-and-what-are-the-caveats",
-  "questionNumber": 1294,
+  "questionNumber": 6,
   "title": "Can you serialize/deserialize a sealed hierarchy with Jackson/Gson, and what are the caveats?",
   "shortTitle": "Can you serialize/deserialize a sealed hierarchy with Jackson/Gson, and what are the caveats?",
   "chapterNumber": 16,

@@ -1,7 +1,7 @@
 {
   "id": "Q341",
   "slug": "optional-explicit-null-handling-avoiding-nullpointerexception",
-  "questionNumber": 341,
+  "questionNumber": 1,
   "title": "What is Optional in Java 8, and how does it make null handling explicit to avoid NullPointerException?",
   "shortTitle": "What is Optional?",
   "chapterNumber": 6,

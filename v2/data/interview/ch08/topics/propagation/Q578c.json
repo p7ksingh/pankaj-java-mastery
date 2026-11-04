@@ -1,7 +1,7 @@
 {
   "id": "Q578c",
   "slug": "ab-ba-row-level-deadlocks-and-hibernateorderinsertsorderupdates",
-  "questionNumber": 578,
+  "questionNumber": 3,
   "title": "How do concurrent transactions updating multiple entities cause AB-BA ROW-LEVEL deadlocks, and how does hibernate.order_inserts/order_updates mitigate them?",
   "shortTitle": "What are AB-BA row-level deadlocks?",
   "chapterNumber": 8,

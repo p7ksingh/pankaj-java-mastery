@@ -1,7 +1,7 @@
 {
   "id": "Q1493",
   "slug": "koko-eating-bananas-binary-search-on-the-answer-with-a-feasibility-check",
-  "questionNumber": 1493,
+  "questionNumber": 7,
   "title": "Koko has piles of bananas and h hours before the guards return. Each hour she eats up to a chosen speed k bananas from one pile. Find the minimum integer speed k such that she can finish all piles within h hours. Run in logarithmic time over the speed.",
   "shortTitle": "Koko Eating Bananas — Binary Search on the Answer With a Feasibility Check",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1611",
   "slug": "find-the-top-k-frequent-elements",
-  "questionNumber": 1611,
+  "questionNumber": 59,
   "title": "Given an array of elements, return the k elements that appear most frequently, using a hash map to count and a heap to select.",
   "shortTitle": "Find the Top K Frequent Elements",
   "chapterNumber": 17,

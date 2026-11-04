@@ -1,7 +1,7 @@
 {
   "id": "Q902",
   "slug": "apache-pulsar-versus-kafka-architecture-and-when-to-prefer-each",
-  "questionNumber": 902,
+  "questionNumber": 2,
   "title": "What is Apache Pulsar and how does it differ architecturally from Kafka — a decoupled design (stateless brokers + Apache BookKeeper for storage + a metadata store) vs Kafka's broker-owns-its-storage model, first-class multi-tenancy via tenant/namespace/topic, built-in geo-replication, and support for BOTH streaming (pub/sub) and queue (competing-consumer) semantics with built-in retry + dead-letter topics — and when would you still prefer Kafka (more mature ecosystem, existing infra, raw throughput)?",
   "shortTitle": "Apache Pulsar versus Kafka — architecture and when to prefer each",
   "chapterNumber": 11,

@@ -1,7 +1,7 @@
 {
   "id": "Q2197",
   "slug": "implementing-the-page-object-model-its-benefits-and-its-limitations",
-  "questionNumber": 2197,
+  "questionNumber": 5,
   "title": "How have you implemented the Page Object Model (separate test logic → page interaction methods → locators), what does it buy you (reusability, maintainability, single place to fix a changed locator), and what are its limitations and how do you avoid them (bloated page classes, duplication → extract components/fixtures/helpers)?",
   "shortTitle": "Implementing the Page Object Model, its benefits, and its limitations",
   "chapterNumber": 21,

@@ -1,7 +1,7 @@
 {
   "id": "Q424",
   "slug": "qualifier-primary-and-resolving-multiple-beans-of-the-same-type",
-  "questionNumber": 424,
+  "questionNumber": 1,
   "title": "What are all mechanisms to resolve multiple beans of the same type (@Primary, @Qualifier, variable name, List/Map injection, @Profile, custom qualifier)? When does NoUniqueBeanDefinitionException occur? What is the difference between @Primary and @Qualifier?",
   "shortTitle": "How do you resolve multiple beans of the same type?",
   "chapterNumber": 7,

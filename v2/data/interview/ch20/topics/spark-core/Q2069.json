@@ -1,7 +1,7 @@
 {
   "id": "Q2069",
   "slug": "sparks-unified-memory-model",
-  "questionNumber": 2069,
+  "questionNumber": 37,
   "title": "Explain Spark's unified memory model — executor memory is split into Execution Memory (shuffles, joins, sorts, aggregations) and Storage Memory (cached/persisted data), with a dynamic boundary between them (`spark.memory.fraction`, `spark.memory.storageFraction`) — and what happens when one side needs more (borrows from the other, evicts if necessary)?",
   "shortTitle": "Spark's unified memory model",
   "chapterNumber": 20,

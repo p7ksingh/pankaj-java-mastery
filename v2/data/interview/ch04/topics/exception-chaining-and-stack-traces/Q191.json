@@ -1,7 +1,7 @@
 {
   "id": "Q191",
   "slug": "fillinstacktrace-why-stack-traces-are-expensive-stackless-exceptions-for-hot-paths",
-  "questionNumber": 191,
+  "questionNumber": 4,
   "title": "What does fillInStackTrace() do, why is capturing a stack trace expensive, and when do you override it / use a stackless exception?",
   "shortTitle": "What is fillInStackTrace() and why are exceptions expensive?",
   "chapterNumber": 4,

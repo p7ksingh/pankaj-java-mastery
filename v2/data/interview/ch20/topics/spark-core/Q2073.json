@@ -1,7 +1,7 @@
 {
   "id": "Q2073",
   "slug": "dynamic-resource-allocation-in-spark",
-  "questionNumber": 2073,
+  "questionNumber": 41,
   "title": "What is dynamic resource allocation (`spark.dynamicAllocation.enabled=true`) — Spark automatically requests/releases executors based on workload demand — and what are the prerequisites (external shuffle service must be running so executors can be removed without losing shuffle files)?",
   "shortTitle": "Dynamic resource allocation in Spark",
   "chapterNumber": 20,

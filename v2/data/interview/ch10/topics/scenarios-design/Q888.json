@@ -1,7 +1,7 @@
 {
   "id": "Q888",
   "slug": "how-would-you-replace-a-legacy-service-without-a-big-bang-migration",
-  "questionNumber": 888,
+  "questionNumber": 66,
   "title": "How would you replace a legacy service without a big-bang migration — find a boundary where traffic or responsibility can move incrementally (a strangler-fig pattern, a compatibility layer, shadow traffic, parallel validation, or consumer-by-consumer cutover) — and why must the design include how the organization RETURNS to the previous state when the new path misbehaves?",
   "shortTitle": "How would you replace a legacy service without a big-bang migration?",
   "chapterNumber": 10,

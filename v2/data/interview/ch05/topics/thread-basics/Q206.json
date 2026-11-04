@@ -1,7 +1,7 @@
 {
   "id": "Q206",
   "slug": "ways-to-create-a-thread-thread-runnable-callableexecutorservice-which-is-preferred",
-  "questionNumber": 206,
+  "questionNumber": 2,
   "title": "Ways to create a thread — Thread, Runnable, Callable/ExecutorService — which is preferred",
   "shortTitle": "What are the ways to create a thread in Java?",
   "chapterNumber": 5,

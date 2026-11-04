@@ -1,7 +1,7 @@
 {
   "id": "Q1636",
   "slug": "randomizedset-array-plus-hashmap-for-o1-insert-remove-getrandom",
-  "questionNumber": 1636,
+  "questionNumber": 61,
   "title": "RandomizedSet — array + HashMap for O(1) insert/remove/getRandom.",
   "shortTitle": "RandomizedSet — array plus HashMap for O(1) insert, remove, getRandom",
   "chapterNumber": 17,

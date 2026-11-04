@@ -1,7 +1,7 @@
 {
   "id": "Q1054",
   "slug": "what-is-a-sargable-predicate-why-wrapping-an-indexed-column-in-a-function-defeats-a-range-scan-and-how-to-rewrite-it",
-  "questionNumber": 1054,
+  "questionNumber": 5,
   "title": "What is a sargable (Search-ARGument-ABLE) predicate, and why does wrapping an indexed column in a function (`WHERE YEAR(created_at) = 2026`, `WHERE DATE(ts) = ...`, `WHERE UPPER(email) = ...`) defeat a normal index range scan — how do you rewrite it as a range (`created_at >= '2026-01-01' AND created_at < '2027-01-01'`) or use a function-based/expression index, and why should you confirm the fix with the execution plan rather than assuming the index is now used?",
   "shortTitle": "What is a sargable predicate, why wrapping an indexed column in a function defeats a range scan, and how to rewrite it",
   "chapterNumber": 13,

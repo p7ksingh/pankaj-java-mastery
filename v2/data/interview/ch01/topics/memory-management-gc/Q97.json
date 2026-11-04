@@ -1,7 +1,7 @@
 {
   "id": "Q97",
   "slug": "what-triggers-a-full-gc-and-why-is-it-dangerous-in-production",
-  "questionNumber": 97,
+  "questionNumber": 15,
   "title": "What triggers a Full GC (Old Gen full, Metaspace full, System.gc(), promotion failure), and why is it dangerous in production (stop-the-world, pause scales with heap)?",
   "shortTitle": "What triggers a Full GC?",
   "chapterNumber": 1,

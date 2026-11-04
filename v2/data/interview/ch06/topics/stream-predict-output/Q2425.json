@@ -1,7 +1,7 @@
 {
   "id": "Q2425",
   "slug": "what-is-the-output-of-intstreamrange0-5maptoobji-areduce-a-b-a-b",
-  "questionNumber": 2425,
+  "questionNumber": 4,
   "title": "What is the output of `IntStream.range(0, 5).mapToObj(i -> \"a\").reduce(\"\", (a, b) -> a + b)`? (`\"aaaaa\"`)",
   "shortTitle": "What is the output of IntStream.range(0, 5).mapToObj(i -> \"a\").reduce(\"\", (a, b) -> a + b)?",
   "chapterNumber": 6,

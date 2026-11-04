@@ -1,7 +1,7 @@
 {
   "id": "Q1911",
   "slug": "scenario-ci-succeeds-but-cd-fails-debugging-where-to-check-logs-and-safe-rollback",
-  "questionNumber": 1911,
+  "questionNumber": 31,
   "title": "The CI stage succeeds but the CD stage fails — how do you debug it, where do you check pipeline logs, and how do you roll back a failed deployment safely?",
   "shortTitle": "Scenario — CI Succeeds but CD Fails: Debugging, Where to Check Logs, and Safe Rollback",
   "chapterNumber": 12,

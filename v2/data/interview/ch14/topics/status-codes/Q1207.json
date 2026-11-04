@@ -1,7 +1,7 @@
 {
   "id": "Q1207",
   "slug": "explain-the-http-status-code-classes-1xx5xx-and-tricky-cases",
-  "questionNumber": 1207,
+  "questionNumber": 2,
   "title": "Explain the HTTP status code classes (1xx–5xx) and tricky cases: 422 vs 400, 204 vs 200 for PUT, 301 vs 308, 405 vs 501 vs 400, 502 vs 503 vs 504, risks of always returning 200, 429 vs 503, whether 304 can have a body, 401 vs 403, and why to avoid 302 for POST redirects.",
   "shortTitle": "Explain the HTTP status code classes (1xx–5xx) and tricky cases",
   "chapterNumber": 14,

@@ -1,7 +1,7 @@
 {
   "id": "Q211",
   "slug": "synchronization-intrinsic-monitors-object-level-locks-prevent-race-conditions",
-  "questionNumber": 211,
+  "questionNumber": 2,
   "title": "Synchronization — intrinsic monitors (object-level locks) prevent race conditions",
   "shortTitle": "How does synchronization work with intrinsic monitors?",
   "chapterNumber": 5,

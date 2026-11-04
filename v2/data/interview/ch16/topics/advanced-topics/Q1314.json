@@ -1,7 +1,7 @@
 {
   "id": "Q1314",
   "slug": "can-grpc-be-used-in-a-serverless-environment-aws-lambda-and-what-are-the-limitations-cold-starts-no-connection-pooling-no-streaming-api-gateway-only-supports-grpc-web",
-  "questionNumber": 1314,
+  "questionNumber": 8,
   "title": "Can gRPC be used in a serverless environment (AWS Lambda), and what are the limitations (cold starts, no connection pooling, no streaming, API Gateway only supports gRPC-Web)?",
   "shortTitle": "Can gRPC be used in a serverless environment (AWS Lambda), and what are the limitations (cold starts, no connection pooling, no streaming, API Gateway only supports gRPC-Web)?",
   "chapterNumber": 16,

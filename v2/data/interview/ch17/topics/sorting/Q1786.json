@@ -1,7 +1,7 @@
 {
   "id": "Q1786",
   "slug": "kth-smallest-number-in-m-sorted-lists-find-the-kth-smallest-across-sorted-lists",
-  "questionNumber": 1786,
+  "questionNumber": 21,
   "title": "Given M sorted lists of numbers, find the Kth smallest number among all of them. Explain the K-way Merge technique, the heap contents, the complexity, and a banking use case.",
   "shortTitle": "Kth Smallest Number in M Sorted Lists (Find the Kth Smallest Across Sorted Lists)",
   "chapterNumber": 17,

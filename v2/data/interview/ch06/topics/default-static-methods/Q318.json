@@ -1,7 +1,7 @@
 {
   "id": "Q318",
   "slug": "default-and-static-methods-in-interfaces-backward-compatibility-foreach-on-collections",
-  "questionNumber": 318,
+  "questionNumber": 1,
   "title": "What are default and static methods in interfaces, and why were default methods added for backward compatibility (e.g. `forEach` on Collections)?",
   "shortTitle": "What are default and static methods in interfaces?",
   "chapterNumber": 6,

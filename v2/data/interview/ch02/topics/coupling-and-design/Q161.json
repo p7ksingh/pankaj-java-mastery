@@ -1,7 +1,7 @@
 {
   "id": "Q161",
   "slug": "tight-coupling-vs-loose-coupling-interfaces-di-testability",
-  "questionNumber": 161,
+  "questionNumber": 2,
   "title": "What is tight coupling vs loose coupling — tight means direct dependency on concrete internals, loose uses interfaces/abstractions and DI — and why does OOP + DI strive for loose coupling?",
   "shortTitle": "What is tight coupling vs loose coupling?",
   "chapterNumber": 2,

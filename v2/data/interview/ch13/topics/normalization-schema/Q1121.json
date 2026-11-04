@@ -1,7 +1,7 @@
 {
   "id": "Q1121",
   "slug": "normal-forms-1nf2nf3nfbcnf-and-denormalization",
-  "questionNumber": 1121,
+  "questionNumber": 5,
   "title": "What are the normal forms (1NF: atomic values, no repeating groups → 2NF: no partial dependency on part of a composite key → 3NF: no transitive dependency → BCNF: every determinant is a candidate key), and what is denormalization (deliberately adding redundancy to speed up reads, trading write cost and consistency)?",
   "shortTitle": "Normal Forms (1NF→2NF→3NF→BCNF) and Denormalization",
   "chapterNumber": 13,

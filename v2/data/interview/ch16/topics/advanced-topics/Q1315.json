@@ -1,7 +1,7 @@
 {
   "id": "Q1315",
   "slug": "how-do-you-version-grpc-without-breaking-existing-clients-dont-change-field-numbers-use-optional-fields-add-new-fieldsmethodsservices-avoid-removingretyping",
-  "questionNumber": 1315,
+  "questionNumber": 9,
   "title": "How do you version gRPC without breaking existing clients (don't change field numbers, use optional fields, add new fields/methods/services, avoid removing/retyping)?",
   "shortTitle": "How do you version gRPC without breaking existing clients (don't change field numbers, use optional fields, add new fields/methods/services, avoid removing/retyping)?",
   "chapterNumber": 16,

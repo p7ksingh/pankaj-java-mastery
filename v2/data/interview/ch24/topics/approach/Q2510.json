@@ -1,7 +1,7 @@
 {
   "id": "Q2510",
   "slug": "the-4-steps-of-a-system-design-interview",
-  "questionNumber": 2510,
+  "questionNumber": 1,
   "title": "What are the 4 steps of a system design interview — (1) Clarify requirements and scope (ask questions first!), (2) High-level design (draw boxes and arrows), (3) Deep dive into key components, (4) Discuss trade-offs, bottlenecks, and scaling?",
   "shortTitle": "The 4 Steps of a System Design Interview",
   "chapterNumber": 24,

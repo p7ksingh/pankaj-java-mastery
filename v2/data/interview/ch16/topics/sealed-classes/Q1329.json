@@ -1,7 +1,7 @@
 {
   "id": "Q1329",
   "slug": "what-are-record-patterns-and-pattern-matching-for-switch-java-21-and-how-do-they-enable-exhaustive-type-safe-deconstruction-of-sealed-hierarchies",
-  "questionNumber": 1329,
+  "questionNumber": 12,
   "title": "What are Record Patterns and pattern matching for `switch` (Java 21), and how do they enable exhaustive, type-safe deconstruction of sealed hierarchies (algebraic data types)?",
   "shortTitle": "What are Record Patterns and pattern matching for switch (Java 21), and how do they enable exhaustive, type-safe deconstruction of sealed hierarchies?",
   "chapterNumber": 16,

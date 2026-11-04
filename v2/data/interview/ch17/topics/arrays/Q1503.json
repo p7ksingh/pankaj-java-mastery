@@ -1,7 +1,7 @@
 {
   "id": "Q1503",
   "slug": "top-k-frequent-elements-hashmap-frequency-plus-min-heap-or-bucket-sort",
-  "questionNumber": 1503,
+  "questionNumber": 46,
   "title": "Given an integer array and an integer K, return the K most frequent elements. The answer may be in any order and the algorithm should be better than O(n log n) where possible.",
   "shortTitle": "Top K Frequent Elements — HashMap Frequency Plus Min-Heap or Bucket Sort",
   "chapterNumber": 17,

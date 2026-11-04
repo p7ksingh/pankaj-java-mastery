@@ -1,7 +1,7 @@
 {
   "id": "Q797",
   "slug": "how-does-sharding-change-queries-and-transactions",
-  "questionNumber": 797,
+  "questionNumber": 7,
   "title": "How does sharding change queries and transactions — why is a single-shard query cheap while a query needing data from every shard becomes an expensive SCATTER-GATHER, why are cross-shard transactions complex (no single-node ACID), and why do sharded designs try to co-locate related data and minimize operations that need global coordination?",
   "shortTitle": "How does sharding change queries and transactions",
   "chapterNumber": 10,

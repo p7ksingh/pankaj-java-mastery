@@ -1,7 +1,7 @@
 {
   "id": "Q2328",
   "slug": "use-an-instance-method-reference-on-a-specific-object-systemoutprintln-for-foreach",
-  "questionNumber": 2328,
+  "questionNumber": 5,
   "title": "Use an instance method reference on a specific object `System.out::println` for `forEach`.",
   "shortTitle": "Use an instance method reference on a specific object System.out::println for forEach",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q1806",
   "slug": "minimum-jumps-with-fee-minimum-cost-to-reach-the-top-paying-a-per-step-fee",
-  "questionNumber": 1806,
+  "questionNumber": 9,
   "title": "Given an array of fees where each index charges a fee to step on it, and you may climb one or two steps at a time starting before the first step, find the minimum total fee to reach the top past the last step. Explain the Fibonacci Numbers DP pattern, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Minimum Jumps with Fee (Minimum Cost to Reach the Top Paying a Per-Step Fee)",
   "chapterNumber": 17,

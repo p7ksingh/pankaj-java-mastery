@@ -1,7 +1,7 @@
 {
   "id": "Q269",
   "slug": "hashmap-cache-concurrency-issues-infinite-loop-lost-updates-thread-safe-alternatives",
-  "questionNumber": 269,
+  "questionNumber": 1,
   "title": "HashMap cache concurrency issues — infinite loop, lost updates, thread-safe alternatives",
   "shortTitle": "What concurrency issues does HashMap cause?",
   "chapterNumber": 5,

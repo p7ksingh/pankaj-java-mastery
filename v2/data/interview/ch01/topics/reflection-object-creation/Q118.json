@@ -1,7 +1,7 @@
 {
   "id": "Q118",
   "slug": "what-are-the-different-ways-to-create-an-object-in-java-and-why-is-classnewinstance-deprecated",
-  "questionNumber": 118,
+  "questionNumber": 1,
   "title": "What are the different ways to create an object in Java (`new`, reflection via `Constructor.newInstance()`, `clone()`, deserialization, factory methods), and why is `Class.newInstance()` deprecated?",
   "shortTitle": "What are the different ways to create an object in Java?",
   "chapterNumber": 1,

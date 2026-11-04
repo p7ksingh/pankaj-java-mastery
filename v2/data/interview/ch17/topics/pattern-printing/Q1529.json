@@ -1,7 +1,7 @@
 {
   "id": "Q1529",
   "slug": "implement-trie-insert-search-startswith",
-  "questionNumber": 1529,
+  "questionNumber": 2,
   "title": "Design and implement a prefix tree (Trie) supporting three operations: insert a word, search whether an exact word exists, and check whether any stored word starts with a given prefix.",
   "shortTitle": "Implement Trie — insert, search, startsWith",
   "chapterNumber": 17,

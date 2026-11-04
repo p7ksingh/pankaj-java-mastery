@@ -1,7 +1,7 @@
 {
   "id": "Q2523",
   "slug": "design-a-search-autocomplete-typeahead",
-  "questionNumber": 2523,
+  "questionNumber": 10,
   "title": "Design a Search Autocomplete / Typeahead — Trie data structure, top-K suggestions, pre-computed results, caching popular queries, real-time updates.",
   "shortTitle": "Design a Search Autocomplete / Typeahead",
   "chapterNumber": 24,

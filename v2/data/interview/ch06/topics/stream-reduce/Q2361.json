@@ -1,7 +1,7 @@
 {
   "id": "Q2361",
   "slug": "compute-the-factorial-of-n-using-longstreamrangeclosed1-nreduce1-mathmultiplyexact",
-  "questionNumber": 2361,
+  "questionNumber": 9,
   "title": "Compute the factorial of N using `LongStream.rangeClosed(1, n).reduce(1, Math::multiplyExact)`.",
   "shortTitle": "Compute the factorial of N using LongStream.rangeClosed(1, n).reduce(1, Math::multiplyExact)",
   "chapterNumber": 6,

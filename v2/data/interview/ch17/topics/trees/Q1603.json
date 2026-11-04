@@ -1,7 +1,7 @@
 {
   "id": "Q1603",
   "slug": "unique-paths-ii-grid-paths-with-obstacles",
-  "questionNumber": 1603,
+  "questionNumber": 13,
   "title": "A robot moves only right or down on an m by n grid where some cells are blocked (marked 1). Count distinct paths from top-left to bottom-right; blocked cells cannot be entered.",
   "shortTitle": "Unique Paths II — grid paths with obstacles",
   "chapterNumber": 17,

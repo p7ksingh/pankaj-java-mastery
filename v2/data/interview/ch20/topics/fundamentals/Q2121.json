@@ -1,7 +1,7 @@
 {
   "id": "Q2121",
   "slug": "what-is-databricks-and-how-does-it-relate-to-apache-spark",
-  "questionNumber": 2121,
+  "questionNumber": 10,
   "title": "What is Databricks and how does it relate to Apache Spark — a unified data + AI platform built by Spark's creators, providing managed Spark clusters, collaborative notebooks, Delta Lake, and integrated ML/LLM tooling?",
   "shortTitle": "What is Databricks and how does it relate to Apache Spark",
   "chapterNumber": 20,

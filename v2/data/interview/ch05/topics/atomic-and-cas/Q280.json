@@ -1,7 +1,7 @@
 {
   "id": "Q280",
   "slug": "longadder-striped-cells-reduces-contention-vs-atomiclong-when-to-prefer",
-  "questionNumber": 280,
+  "questionNumber": 2,
   "title": "LongAdder — striped cells, reduces contention vs AtomicLong, when to prefer",
   "shortTitle": "What is LongAdder?",
   "chapterNumber": 5,

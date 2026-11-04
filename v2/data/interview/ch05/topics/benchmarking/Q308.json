@@ -1,7 +1,7 @@
 {
   "id": "Q308",
   "slug": "chaos-engineering-during-load-tests-fault-injection-slis-and-the-stepspikemttrsoak-playbook",
-  "questionNumber": 308,
+  "questionNumber": 4,
   "title": "What is chaos engineering and how do you combine it with load tests? Explain CPU throttling, network latency injection, tools like Chaos Mesh and Gremlin, the SLIs you watch, and the step, spike, MTTR, and 24-hour soak phases that reveal leaks and buffer exhaustion.",
   "shortTitle": "Chaos engineering during load tests?",
   "chapterNumber": 5,

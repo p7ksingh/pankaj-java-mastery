@@ -1,7 +1,7 @@
 {
   "id": "Q1710",
   "slug": "insert-interval-insert-and-merge-into-a-sorted-interval-list",
-  "questionNumber": 1710,
+  "questionNumber": 17,
   "title": "Given a list of non-overlapping intervals sorted by start and a new interval to insert, insert the new interval and merge any overlaps so the result remains a sorted list of non-overlapping intervals. Solve it with the three-phase merge-intervals pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Insert Interval (Insert and Merge into a Sorted Interval List)",
   "chapterNumber": 17,

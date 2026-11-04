@@ -1,7 +1,7 @@
 {
   "id": "Q14",
   "slug": "the-four-access-modifiers-and-their-exact-visibility",
-  "questionNumber": 14,
+  "questionNumber": 1,
   "title": "What are the four access modifiers and their exact visibility — public (everywhere), protected (same package + subclasses), default/package-private (same package only), private (same class only) — and which are legal on a top-level class (only public or package-private, NOT private/protected)?",
   "shortTitle": "What are the four access modifiers in Java?",
   "chapterNumber": 1,

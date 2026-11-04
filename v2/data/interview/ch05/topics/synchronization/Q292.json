@@ -1,7 +1,7 @@
 {
   "id": "Q292",
   "slug": "coarse-grained-vs-fine-grained-locking-concurrency-trade-off-lock-ordering-makes-fine-grained-safe",
-  "questionNumber": 292,
+  "questionNumber": 8,
   "title": "Coarse-grained vs fine-grained locking — concurrency trade-off, lock ordering makes fine-grained safe",
   "shortTitle": "What is coarse-grained vs fine-grained locking?",
   "chapterNumber": 5,

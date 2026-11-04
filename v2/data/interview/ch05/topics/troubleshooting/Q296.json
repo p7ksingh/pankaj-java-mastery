@@ -1,7 +1,7 @@
 {
   "id": "Q296",
   "slug": "profile-reentrantlock-contention-waiting-not-blocked-jfr-threadpark-async-profiler-lock",
-  "questionNumber": 296,
+  "questionNumber": 4,
   "title": "Profile ReentrantLock contention — WAITING (not BLOCKED), JFR ThreadPark, async-profiler lock",
   "shortTitle": "Profile ReentrantLock contention?",
   "chapterNumber": 5,

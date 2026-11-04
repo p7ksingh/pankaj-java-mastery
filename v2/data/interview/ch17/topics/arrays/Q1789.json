@@ -1,7 +1,7 @@
 {
   "id": "Q1789",
   "slug": "kth-smallest-element-in-a-sorted-matrix-row-and-column-sorted-matrix",
-  "questionNumber": 1789,
+  "questionNumber": 105,
   "title": "Given an N by N matrix where each row and each column is sorted in ascending order, find the Kth smallest element in the matrix. Explain the K-way Merge heap technique, the complexity, and a banking use case.",
   "shortTitle": "Kth Smallest Element in a Sorted Matrix (Row and Column Sorted Matrix)",
   "chapterNumber": 17,

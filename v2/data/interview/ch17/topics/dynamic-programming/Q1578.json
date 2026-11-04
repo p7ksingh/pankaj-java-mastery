@@ -1,7 +1,7 @@
 {
   "id": "Q1578",
   "slug": "coin-change-minimum-coins-to-make-an-amount",
-  "questionNumber": 1578,
+  "questionNumber": 6,
   "title": "Given coin denominations and a target amount, return the fewest number of coins needed to make that amount, or -1 if it cannot be made.",
   "shortTitle": "Coin Change — minimum coins to make an amount",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1565",
   "slug": "combination-sum-reusable-candidates-keep-index-to-dedup",
-  "questionNumber": 1565,
+  "questionNumber": 5,
   "title": "Given distinct candidates and a target, return all unique combinations that sum to target. Each candidate may be used an unlimited number of times.",
   "shortTitle": "Combination Sum — reusable candidates, keep index to dedup",
   "chapterNumber": 17,

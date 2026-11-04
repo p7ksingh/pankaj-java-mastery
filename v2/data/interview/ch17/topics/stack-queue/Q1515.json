@@ -1,7 +1,7 @@
 {
   "id": "Q1515",
   "slug": "binary-tree-level-order-traversal-bfs-with-queue",
-  "questionNumber": 1515,
+  "questionNumber": 11,
   "title": "Given the root of a binary tree, return its level order traversal, meaning the node values grouped level by level from top to bottom, left to right within each level.",
   "shortTitle": "Binary Tree Level Order Traversal — BFS with queue",
   "chapterNumber": 17,

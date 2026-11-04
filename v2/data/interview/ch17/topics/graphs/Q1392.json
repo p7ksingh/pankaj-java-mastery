@@ -1,7 +1,7 @@
 {
   "id": "Q1392",
   "slug": "what-is-a-graph",
-  "questionNumber": 1392,
+  "questionNumber": 1,
   "title": "What is a graph — a collection of nodes (vertices) connected by edges; can be directed (one-way arrows) or undirected (two-way connections).",
   "shortTitle": "What is a Graph?",
   "chapterNumber": 17,

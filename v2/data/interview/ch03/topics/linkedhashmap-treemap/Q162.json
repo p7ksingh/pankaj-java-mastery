@@ -1,7 +1,7 @@
 {
   "id": "Q162",
   "slug": "hashmap-null-key-one-null-key-multiple-null-values",
-  "questionNumber": 162,
+  "questionNumber": 5,
   "title": "HashMap null key — one null key, multiple null values",
   "shortTitle": "How does HashMap handle null keys?",
   "chapterNumber": 3,

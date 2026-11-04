@@ -1,7 +1,7 @@
 {
   "id": "Q251",
   "slug": "thenapply-vs-thenapplyasync-which-thread-runs-the-callback-when-to-use-each",
-  "questionNumber": 251,
+  "questionNumber": 5,
   "title": "thenApply vs thenApplyAsync — which thread runs the callback, when to use each",
   "shortTitle": "thenApply vs thenApplyAsync?",
   "chapterNumber": 5,

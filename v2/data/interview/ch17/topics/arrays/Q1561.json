@@ -1,7 +1,7 @@
 {
   "id": "Q1561",
   "slug": "subsets-include-or-exclude-each-element",
-  "questionNumber": 1561,
+  "questionNumber": 53,
   "title": "Given an array of distinct integers, return all possible subsets (the power set) using backtracking.",
   "shortTitle": "Subsets — include or exclude each element",
   "chapterNumber": 17,

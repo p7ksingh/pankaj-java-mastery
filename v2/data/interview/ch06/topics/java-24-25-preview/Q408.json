@@ -1,7 +1,7 @@
 {
   "id": "Q408",
   "slug": "vector-api-simd-kdf-api-pem-encoding-kem-api-performance-and-security-additions",
-  "questionNumber": 408,
+  "questionNumber": 5,
   "title": "What are the Vector API (SIMD, incubator), Key Derivation Function API (JEP 510), PEM encodings (JEP 470), and KEM API (JEP 452)?",
   "shortTitle": "What are Vector API and security additions?",
   "chapterNumber": 6,

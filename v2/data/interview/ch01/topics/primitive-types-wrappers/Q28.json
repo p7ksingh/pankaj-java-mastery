@@ -1,7 +1,7 @@
 {
   "id": "Q28",
   "slug": "in-which-section-of-memory-are-primitive-data-types-stored",
-  "questionNumber": 28,
+  "questionNumber": 2,
   "title": "In which section of memory are primitive data types stored (stack for locals, heap for instance fields, method area/metaspace for statics)?",
   "shortTitle": "Where are primitive data types stored in memory?",
   "chapterNumber": 1,

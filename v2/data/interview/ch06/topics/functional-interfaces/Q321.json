@@ -1,7 +1,7 @@
 {
   "id": "Q321",
   "slug": "predicate-vs-function-vs-supplier-vs-consumer-the-four-pillars-of-javautilfunction",
-  "questionNumber": 321,
+  "questionNumber": 3,
   "title": "What are the differences between `Predicate`, `Function`, `Supplier`, and `Consumer`?",
   "shortTitle": "Predicate vs Function vs Supplier vs Consumer?",
   "chapterNumber": 6,

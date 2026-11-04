@@ -1,7 +1,7 @@
 {
   "id": "Q300",
   "slug": "why-newcachedthreadpool-is-dangerous-for-long-tasks-and-why-blocking-io-in-the-forkjoin-common-pool-causes-thread-explosion",
-  "questionNumber": 300,
+  "questionNumber": 5,
   "title": "Explain why newCachedThreadPool can be dangerous in production when tasks run long, and why performing blocking IO inside the ForkJoin common pool can cause a compensating-thread explosion. What are the safe alternatives?",
   "shortTitle": "Why is CachedThreadPool dangerous for long tasks?",
   "chapterNumber": 5,

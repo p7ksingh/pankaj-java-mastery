@@ -1,7 +1,7 @@
 {
   "id": "Q2610",
   "slug": "when-should-you-choose-zgc-vs-g1",
-  "questionNumber": 2610,
+  "questionNumber": 6,
   "title": "When should you choose ZGC vs G1 — ZGC for ultra-low latency requirements (real-time systems, trading), G1 for general-purpose production workloads?",
   "shortTitle": "When should you choose ZGC vs G1?",
   "chapterNumber": 1,

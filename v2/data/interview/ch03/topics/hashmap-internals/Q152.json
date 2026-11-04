@@ -1,7 +1,7 @@
 {
   "id": "Q152",
   "slug": "hashmap-collision-handling-chaining-treeify-at-threshold-8",
-  "questionNumber": 152,
+  "questionNumber": 5,
   "title": "HashMap collision handling — chaining → treeify at threshold 8",
   "shortTitle": "How does HashMap handle collisions?",
   "chapterNumber": 3,

@@ -1,7 +1,7 @@
 {
   "id": "Q2114",
   "slug": "what-compression-codecs-does-spark-support",
-  "questionNumber": 2114,
+  "questionNumber": 67,
   "title": "What compression codecs does Spark support — Snappy (fast, default, splittable), ZSTD (better ratio, modern), Gzip (good ratio, slower, not splittable), LZ4 (fast), Bzip2 (best ratio, slowest) — and at what levels can compression be applied (`spark.io.compression.codec`, shuffle, broadcast, checkpoint, event logs, RDD)?",
   "shortTitle": "What compression codecs does Spark support",
   "chapterNumber": 20,

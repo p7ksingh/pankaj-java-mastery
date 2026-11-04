@@ -1,7 +1,7 @@
 {
   "id": "Q2208",
   "slug": "what-is-tdd-test-driven-development-and-the-red-green-refactor-cycle",
-  "questionNumber": 2208,
+  "questionNumber": 6,
   "title": "What is TDD (Test-Driven Development) — write the test FIRST (it fails), then write just enough code to make it pass, then refactor — the Red-Green-Refactor cycle — and why does it help (catches bugs early, better design, acts as documentation)?",
   "shortTitle": "What is TDD (Test-Driven Development) and the Red-Green-Refactor cycle",
   "chapterNumber": 21,

@@ -1,7 +1,7 @@
 {
   "id": "Q1229",
   "slug": "what-is-hateoas-in-practice-and-why-do-most-real-world-rest-apis-skip-it",
-  "questionNumber": 1229,
+  "questionNumber": 4,
   "title": "What is HATEOAS in practice, and why do most real-world REST APIs skip it (complexity vs benefit), preferring OpenAPI/Swagger documentation instead?",
   "shortTitle": "What is HATEOAS in practice and why do most real-world REST APIs skip it",
   "chapterNumber": 14,

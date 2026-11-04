@@ -1,7 +1,7 @@
 {
   "id": "Q2280",
   "slug": "generate-a-schedule-of-installment-due-dates-using-streamiterate-with-a-bounded-limit",
-  "questionNumber": 2280,
+  "questionNumber": 7,
   "title": "Using `Stream.iterate`, generate the next twelve monthly installment due dates for a loan starting from a given date, and separately generate a running balance schedule. Explain `Stream.iterate`, why it is infinite, and how `limit` bounds it.",
   "shortTitle": "Generate a schedule of installment due dates using Stream.iterate with a bounded limit",
   "chapterNumber": 6,

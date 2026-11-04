@@ -1,7 +1,7 @@
 {
   "id": "Q1386",
   "slug": "what-is-a-hashmap",
-  "questionNumber": 1386,
+  "questionNumber": 2,
   "title": "What is a HashMap — a data structure that stores key-value pairs; you give a key, it gives you the value very fast in O(1) average time.",
   "shortTitle": "What is a HashMap?",
   "chapterNumber": 17,

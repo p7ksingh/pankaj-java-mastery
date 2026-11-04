@@ -1,7 +1,7 @@
 {
   "id": "Q2395",
   "slug": "fix-the-parallel-stream-collection-bug-using-collectcollectorstolist",
-  "questionNumber": 2395,
+  "questionNumber": 7,
   "title": "Fix the above bug using `collect(Collectors.toList())` instead of mutating a shared collection.",
   "shortTitle": "Fix the parallel-stream collection bug using collect(Collectors.toList())",
   "chapterNumber": 6,

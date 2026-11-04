@@ -1,7 +1,7 @@
 {
   "id": "Q169",
   "slug": "comparator-implementation-sort-employees-by-age-and-name",
-  "questionNumber": 169,
+  "questionNumber": 3,
   "title": "Comparator implementation — sort employees by age and name",
   "shortTitle": "How do you implement a Comparator to sort employees?",
   "chapterNumber": 3,

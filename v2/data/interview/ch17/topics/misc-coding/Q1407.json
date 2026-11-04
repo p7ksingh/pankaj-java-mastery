@@ -1,7 +1,7 @@
 {
   "id": "Q1407",
   "slug": "swap-two-numbers-without-using-a-third-variable",
-  "questionNumber": 1407,
+  "questionNumber": 5,
   "title": "Swap two numbers without using a third variable (using XOR: `a = a ^ b; b = a ^ b; a = a ^ b` or using addition: `a = a + b; b = a - b; a = a - b`).",
   "shortTitle": "Swap Two Numbers Without Using a Third Variable",
   "chapterNumber": 17,

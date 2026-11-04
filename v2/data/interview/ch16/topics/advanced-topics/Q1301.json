@@ -1,7 +1,7 @@
 {
   "id": "Q1301",
   "slug": "how-does-sealing-interact-with-generics-and-wildcards",
-  "questionNumber": 1301,
+  "questionNumber": 3,
   "title": "How does sealing interact with generics and wildcards?",
   "shortTitle": "How does sealing interact with generics and wildcards?",
   "chapterNumber": 16,

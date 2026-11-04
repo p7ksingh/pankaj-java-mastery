@@ -1,7 +1,7 @@
 {
   "id": "Q1613",
   "slug": "implement-union-find-disjoint-set-union-with-path-compression-and-union-by-rank",
-  "questionNumber": 1613,
+  "questionNumber": 37,
   "title": "Implement the union-find (disjoint set) data structure supporting find and union, with path compression and union by rank, and explain its near-constant time complexity.",
   "shortTitle": "Implement Union-Find (Disjoint Set Union) with Path Compression and Union by Rank",
   "chapterNumber": 17,

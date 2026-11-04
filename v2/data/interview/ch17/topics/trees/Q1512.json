@@ -1,7 +1,7 @@
 {
   "id": "Q1512",
   "slug": "maximum-depth-of-binary-tree-recursive-dfs",
-  "questionNumber": 1512,
+  "questionNumber": 4,
   "title": "Given the root of a binary tree, return its maximum depth, which is the number of nodes along the longest path from the root down to the farthest leaf.",
   "shortTitle": "Maximum Depth of Binary Tree — recursive DFS",
   "chapterNumber": 17,

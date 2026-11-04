@@ -1,7 +1,7 @@
 {
   "id": "Q1445",
   "slug": "longest-substring-without-repeating-characters-sliding-window-hashset",
-  "questionNumber": 1445,
+  "questionNumber": 16,
   "title": "Longest Substring Without Repeating Characters (sliding window + HashSet).",
   "shortTitle": "Longest Substring Without Repeating Characters — Sliding Window + HashSet",
   "chapterNumber": 17,

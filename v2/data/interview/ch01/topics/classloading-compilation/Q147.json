@@ -1,7 +1,7 @@
 {
   "id": "Q147",
   "slug": "what-is-the-java-compilation-and-execution-flow-and-what-is-the-classpath",
-  "questionNumber": 147,
+  "questionNumber": 3,
   "title": "What is the Java compilation and execution flow — `.java` source → `javac` compiler → `.class` bytecode → JVM class loading → bytecode verification → interpretation + JIT compilation → native execution — and what is the classpath (where the JVM/compiler look for `.class` files and JARs)?",
   "shortTitle": "What is the Java compilation and execution flow?",
   "chapterNumber": 1,

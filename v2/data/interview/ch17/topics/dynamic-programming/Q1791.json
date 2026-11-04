@@ -1,7 +1,7 @@
 {
   "id": "Q1791",
   "slug": "01-knapsack-maximize-value-within-a-weight-capacity-each-item-once",
-  "questionNumber": 1791,
+  "questionNumber": 15,
   "title": "Given weights and profits of N items, put a subset of these items into a knapsack of capacity C so that the total profit is maximized, where each item can be used at most once. Explain the 0/1 Knapsack dynamic programming pattern, the table, the complexity, and a banking use case.",
   "shortTitle": "0/1 Knapsack (Maximize Value Within a Weight Capacity, Each Item Once)",
   "chapterNumber": 17,

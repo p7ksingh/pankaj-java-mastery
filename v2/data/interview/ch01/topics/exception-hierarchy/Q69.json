@@ -1,7 +1,7 @@
 {
   "id": "Q69",
   "slug": "explain-the-throwable-class-and-the-full-exception-hierarchy",
-  "questionNumber": 69,
+  "questionNumber": 2,
   "title": "Explain the `Throwable` class and the full exception hierarchy (Throwable → Error / Exception → checked / unchecked).",
   "shortTitle": "What is the Throwable class and the exception hierarchy?",
   "chapterNumber": 1,

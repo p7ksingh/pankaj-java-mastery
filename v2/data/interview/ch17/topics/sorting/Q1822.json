@@ -1,7 +1,7 @@
 {
   "id": "Q1822",
   "slug": "topological-sort-linear-ordering-of-a-directed-acyclic-graph",
-  "questionNumber": 1822,
+  "questionNumber": 22,
   "title": "Given a directed acyclic graph of dependencies, produce a linear ordering of the nodes such that every edge points from an earlier node to a later node. Explain the Topological Sort pattern using Kahn's algorithm, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Topological Sort (Linear Ordering of a Directed Acyclic Graph)",
   "chapterNumber": 17,

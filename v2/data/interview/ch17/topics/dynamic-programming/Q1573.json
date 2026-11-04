@@ -1,7 +1,7 @@
 {
   "id": "Q1573",
   "slug": "how-to-identify-a-dp-problem-overlapping-subproblems-and-optimal-substructure",
-  "questionNumber": 1573,
+  "questionNumber": 3,
   "title": "How do you recognize that a problem should be solved with dynamic programming? Explain overlapping subproblems and optimal substructure, and the difference between memoization and tabulation.",
   "shortTitle": "How to Identify a DP Problem — overlapping subproblems and optimal substructure",
   "chapterNumber": 17,

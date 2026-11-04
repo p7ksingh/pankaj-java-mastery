@@ -1,7 +1,7 @@
 {
   "id": "Q2001",
   "slug": "stateful-stream-processing-and-top-5-symbols-by-volume-every-minute",
-  "questionNumber": 2001,
+  "questionNumber": 3,
   "title": "What is stateful stream processing (keyed state, windowed aggregations, state backends/checkpointing), and how do you compute something like \"top 5 symbols by volume every minute\" over an infinite stream (per-key aggregation + a sliding/tumbling window)?",
   "shortTitle": "Stateful stream processing and \"top 5 symbols by volume every minute\"",
   "chapterNumber": 20,

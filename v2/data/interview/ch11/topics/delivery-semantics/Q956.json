@@ -1,7 +1,7 @@
 {
   "id": "Q956",
   "slug": "does-the-idempotent-producer-protect-you-from-application-level-duplicate-publishes",
-  "questionNumber": 956,
+  "questionNumber": 7,
   "title": "Does the idempotent producer protect you from application-level duplicate publishes?",
   "shortTitle": "Does the idempotent producer protect you from application-level duplicate publishes?",
   "chapterNumber": 11,

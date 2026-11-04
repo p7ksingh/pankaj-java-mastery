@@ -1,7 +1,7 @@
 {
   "id": "Q1347",
   "slug": "why-does-reflection-hurt-performance-yet-remain-essential-and-how-is-it-constrained-under-jpms",
-  "questionNumber": 1347,
+  "questionNumber": 2,
   "title": "Why does reflection hurt performance (bypasses many JIT optimizations, incurs access/security checks) yet remain essential for frameworks, and how is it constrained under JPMS strong encapsulation?",
   "shortTitle": "Why does reflection hurt performance yet remain essential, and how is it constrained under JPMS?",
   "chapterNumber": 16,

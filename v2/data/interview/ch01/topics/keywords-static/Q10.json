@@ -1,7 +1,7 @@
 {
   "id": "Q10",
   "slug": "the-static-keyword-and-why-main-is-static",
-  "questionNumber": 10,
+  "questionNumber": 1,
   "title": "Explain the static keyword (static variables, methods, blocks, nested classes) and why the entry point main is static.",
   "shortTitle": "What is the static keyword and why is main static?",
   "chapterNumber": 1,

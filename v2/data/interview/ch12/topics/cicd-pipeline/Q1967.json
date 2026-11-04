@@ -1,7 +1,7 @@
 {
   "id": "Q1967",
   "slug": "iterating-over-aws-resources-with-boto3-and-what-a-production-script-must-add-beyond-the-happy-path",
-  "questionNumber": 1967,
+  "questionNumber": 47,
   "title": "How do you iterate over AWS resources (e.g. EC2 instances) with Boto3 — the `describe_instances()` → `Reservations` → `Instances` structure — and what must a PRODUCTION script add beyond the happy path (pagination, error handling, filtering, logging, and credentials via the IAM role / credential-provider chain rather than hardcoded keys)?",
   "shortTitle": "Iterating over AWS resources with Boto3 and what a production script must add beyond the happy path",
   "chapterNumber": 12,

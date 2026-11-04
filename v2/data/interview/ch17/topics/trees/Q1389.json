@@ -1,7 +1,7 @@
 {
   "id": "Q1389",
   "slug": "what-is-a-binary-tree",
-  "questionNumber": 1389,
+  "questionNumber": 1,
   "title": "What is a binary tree — each node has at most 2 children (left child and right child); the topmost node is called root.",
   "shortTitle": "What is a Binary Tree?",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q406",
   "slug": "module-imports-jep-511-compact-source-files-instance-main-jep-512",
-  "questionNumber": 406,
+  "questionNumber": 3,
   "title": "What are Module Import Declarations (import module, JEP 511) and Compact Source Files + instance main (JEP 512)?",
   "shortTitle": "What are Module Imports and Compact Source Files?",
   "chapterNumber": 6,

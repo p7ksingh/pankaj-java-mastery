@@ -1,7 +1,7 @@
 {
   "id": "Q2047",
   "slug": "predicate-pushdown-with-parquet-minmax-statistics-dictionary-filtering-bloom-filters",
-  "questionNumber": 2047,
+  "questionNumber": 3,
   "title": "How does predicate pushdown work with Parquet specifically — (1) min/max statistics per column chunk at row-group and page level allow skipping irrelevant row groups, (2) dictionary filtering checks if the filter value exists in the dictionary page, (3) bloom filters provide probabilistic existence checks for high-cardinality columns — and why is sorted data important for min/max effectiveness?",
   "shortTitle": "Predicate pushdown with Parquet — min/max statistics, dictionary filtering, bloom filters",
   "chapterNumber": 20,

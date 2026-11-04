@@ -1,7 +1,7 @@
 {
   "id": "Q1332",
   "slug": "what-are-scoped-values-jep-506-java-25-and-how-are-they-a-saferfaster-alternative-to-threadlocal-for-virtual-thread-workloads",
-  "questionNumber": 1332,
+  "questionNumber": 25,
   "title": "What are Scoped Values (JEP 506, Java 25), and how are they a safer/faster alternative to `ThreadLocal` for virtual-thread workloads?",
   "shortTitle": "What are Scoped Values (JEP 506, Java 25), and how are they a safer/faster alternative to ThreadLocal for virtual-thread workloads?",
   "chapterNumber": 16,

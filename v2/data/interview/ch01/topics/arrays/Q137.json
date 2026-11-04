@@ -1,7 +1,7 @@
 {
   "id": "Q137",
   "slug": "what-are-the-array-declaration-and-initialization-forms-what-are-the-default-element-values-and-why-is-int-a-preferred-over-int-a",
-  "questionNumber": 137,
+  "questionNumber": 1,
   "title": "What are the array declaration and initialization forms (`int[] a = new int[5]`, `int[] a = {1,2,3}`, `int a[]`), what is the default value for each element type (0/false/null), and why is `int[] a` preferred over `int a[]` by convention?",
   "shortTitle": "What are the array declaration and initialization forms in Java?",
   "chapterNumber": 1,

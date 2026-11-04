@@ -1,7 +1,7 @@
 {
   "id": "Q1932",
   "slug": "why-pods-get-oomkilled-even-when-monitoring-looks-normal-and-right-sizing-requestslimits",
-  "questionNumber": 1932,
+  "questionNumber": 12,
   "title": "What causes `OOMKilled` even when monitoring looks normal (container memory limit vs JVM heap/off-heap, container-aware JVM flags), and how do you right-size requests/limits?",
   "shortTitle": "Why Pods Get OOMKilled Even When Monitoring Looks Normal, and Right-Sizing Requests/Limits",
   "chapterNumber": 12,

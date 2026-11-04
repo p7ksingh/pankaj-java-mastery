@@ -1,7 +1,7 @@
 {
   "id": "Q2039",
   "slug": "spark-write-time-partitioning-dfwritepartitionby-and-partition-pruning",
-  "questionNumber": 2039,
+  "questionNumber": 24,
   "title": "What is Spark write-time partitioning (`df.write.partitionBy(\"country\")`) — organizing data into directories by column values — and how does it enable partition pruning (queries filtering on the partition column skip irrelevant directories)?",
   "shortTitle": "Spark write-time partitioning (`df.write.partitionBy`) and partition pruning",
   "chapterNumber": 20,

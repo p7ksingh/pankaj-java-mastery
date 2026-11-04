@@ -1,7 +1,7 @@
 {
   "id": "Q1308",
   "slug": "how-does-rsocket-handle-retries-on-failure-client-retries-resumable-sessions-circuit-breakers",
-  "questionNumber": 1308,
+  "questionNumber": 7,
   "title": "How does RSocket handle retries on failure (client retries, resumable sessions, circuit breakers)?",
   "shortTitle": "How does RSocket handle retries on failure (client retries, resumable sessions, circuit breakers)?",
   "chapterNumber": 16,

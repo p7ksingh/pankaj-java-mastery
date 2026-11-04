@@ -1,7 +1,7 @@
 {
   "id": "Q1486",
   "slug": "intersection-of-two-linked-lists-length-diff-or-two-pass-alignment",
-  "questionNumber": 1486,
+  "questionNumber": 9,
   "title": "Given the heads of two singly linked lists, return the node at which the two lists intersect. If they do not intersect, return null. The intersection is by node identity, not by value, and the lists keep their original structure.",
   "shortTitle": "Intersection of Two Linked Lists — Length Diff or Two-Pass Alignment",
   "chapterNumber": 17,

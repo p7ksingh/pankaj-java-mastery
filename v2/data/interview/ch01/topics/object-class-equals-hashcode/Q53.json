@@ -1,7 +1,7 @@
 {
   "id": "Q53",
   "slug": "the-superclass-of-all-java-classes-and-the-methods-object-provides",
-  "questionNumber": 53,
+  "questionNumber": 1,
   "title": "What is the superclass of all Java classes, what methods does `Object` provide (`toString`, `equals`, `hashCode`, `getClass`, `wait`, `notify`, `notifyAll`, `finalize`), and how many are there?",
   "shortTitle": "What is the superclass of all Java classes?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
-  "id": "Q191-collections",
-  "slug": "spliterator-tryadvance-trysplit-parallel-processing",
-  "questionNumber": 191,
+  "id": "Q191",
+  "slug": "spliterator-tryadvance-trysplit-parallel",
+  "questionNumber": 1,
   "title": "Spliterator — tryAdvance, trySplit, parallel processing",
   "shortTitle": "What is a Spliterator?",
   "chapterNumber": 3,

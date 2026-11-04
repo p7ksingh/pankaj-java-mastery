@@ -1,7 +1,7 @@
 {
   "id": "Q210",
   "slug": "synchronized-method-vs-synchronized-block-scope-lock-object-granularity",
-  "questionNumber": 210,
+  "questionNumber": 1,
   "title": "Synchronized method vs synchronized block — scope, lock object, granularity",
   "shortTitle": "What is synchronized method vs synchronized block?",
   "chapterNumber": 5,

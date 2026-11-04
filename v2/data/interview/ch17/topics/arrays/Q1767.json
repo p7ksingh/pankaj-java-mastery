@@ -1,7 +1,7 @@
 {
   "id": "Q1767",
   "slug": "bitonic-array-maximum-find-the-peak-of-an-array-that-rises-then-falls",
-  "questionNumber": 1767,
+  "questionNumber": 95,
   "title": "A bitonic array strictly increases to a single maximum and then strictly decreases. Find the maximum value using binary search. Explain how comparing the middle element with its right neighbour tells you which side the peak is on.",
   "shortTitle": "Bitonic Array Maximum (Find the Peak of an Array That Rises Then Falls)",
   "chapterNumber": 17,

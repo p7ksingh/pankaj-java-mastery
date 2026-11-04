@@ -1,7 +1,7 @@
 {
   "id": "Q2631",
   "slug": "check-number-print-1-if-positive-1-if-negative-0-if-zero",
-  "questionNumber": 2631,
+  "questionNumber": 22,
   "title": "Given a single number N, draw a flowchart to print 1 if it is positive, -1 if it is negative, and 0 if it equals 0. Start, read N, decision N > 0, Yes print 1, else decision N < 0, Yes print -1, No print 0, End. Input: -8, Expected Output: -1.",
   "shortTitle": "Check Number — print 1 if positive, -1 if negative, 0 if zero",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1847",
   "slug": "unique-paths-count-grid-routes-moving-only-right-or-down",
-  "questionNumber": 1847,
+  "questionNumber": 4,
   "title": "Count the number of distinct paths from the top-left to the bottom-right of an m by n grid, moving only right or down. Explain the dynamic programming recurrence, the single-row optimisation, the complexity, and a banking use case.",
   "shortTitle": "Unique Paths (Count Grid Routes Moving Only Right or Down)",
   "chapterNumber": 17,

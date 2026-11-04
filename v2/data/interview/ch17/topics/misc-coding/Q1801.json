@@ -1,7 +1,7 @@
 {
   "id": "Q1801",
   "slug": "maximum-ribbon-cut-maximize-the-number-of-pieces-of-allowed-lengths",
-  "questionNumber": 1801,
+  "questionNumber": 39,
   "title": "Given a ribbon of length N and a set of allowed cut lengths, cut the ribbon into the maximum number of pieces using only allowed lengths, where each length can be used unlimited times. Return minus one if the ribbon cannot be cut exactly. Explain the Unbounded Knapsack maximization-count DP, the complexity, and a banking use case.",
   "shortTitle": "Maximum Ribbon Cut (Maximize the Number of Pieces of Allowed Lengths)",
   "chapterNumber": 17,

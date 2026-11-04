@@ -1,7 +1,7 @@
 {
   "id": "Q1364",
   "slug": "reverse-an-array",
-  "questionNumber": 1364,
+  "questionNumber": 5,
   "title": "Reverse an array (swap first with last, second with second-last, using two pointers).",
   "shortTitle": "Reverse an array",
   "chapterNumber": 17,

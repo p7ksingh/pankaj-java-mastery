@@ -1,7 +1,7 @@
 {
   "id": "Q1609",
   "slug": "find-the-kth-largest-element-using-a-min-heap",
-  "questionNumber": 1609,
+  "questionNumber": 58,
   "title": "Given an array of numbers and a value k, find the kth largest element efficiently using a priority queue (heap).",
   "shortTitle": "Find the Kth Largest Element Using a Min-Heap",
   "chapterNumber": 17,

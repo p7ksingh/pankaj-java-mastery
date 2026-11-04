@@ -1,7 +1,7 @@
 {
   "id": "Q1873",
   "slug": "route-tables-and-how-they-control-traffic",
-  "questionNumber": 1873,
+  "questionNumber": 4,
   "title": "What is a route table, and how do route tables control traffic between subnets, the IGW, NAT, and peered VPCs?",
   "shortTitle": "Route Tables and How They Control Traffic",
   "chapterNumber": 18,

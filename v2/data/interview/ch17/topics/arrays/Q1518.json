@@ -1,7 +1,7 @@
 {
   "id": "Q1518",
   "slug": "kth-smallest-element-in-bst-inorder-traversal-stop-at-kth",
-  "questionNumber": 1518,
+  "questionNumber": 48,
   "title": "Given the root of a binary search tree and an integer k, return the kth smallest value in the tree.",
   "shortTitle": "Kth Smallest Element in BST — inorder traversal, stop at kth",
   "chapterNumber": 17,

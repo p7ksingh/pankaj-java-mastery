@@ -1,7 +1,7 @@
 {
   "id": "Q874",
   "slug": "a-dependency-has-999-availability-but-your-api-needs-9999-is-that-possible-and-how",
-  "questionNumber": 874,
+  "questionNumber": 57,
   "title": "(Scenario) A dependency has 99.9% availability but your API is expected to provide 99.99% — is that possible, and how (not if every successful request requires that dependency synchronously — you must remove the dependency from some critical request paths via caching, replication, async workflows, or degraded functionality) — and why must availability targets be translated into concrete behavior rather than SLA numbers alone?",
   "shortTitle": "A dependency has 99.9% availability but your API needs 99.99% — is that possible, and how?",
   "chapterNumber": 10,

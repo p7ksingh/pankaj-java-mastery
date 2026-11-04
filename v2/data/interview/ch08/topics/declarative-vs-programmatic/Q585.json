@@ -1,7 +1,7 @@
 {
   "id": "Q585",
   "slug": "transactionsynchronization-callbacks-and-transactiontemplate",
-  "questionNumber": 585,
+  "questionNumber": 2,
   "title": "What is TransactionSynchronization for callbacks (afterCommit, beforeCommit)? What is TransactionTemplate for programmatic TX?",
   "shortTitle": "TransactionSynchronization and TransactionTemplate?",
   "chapterNumber": 8,

@@ -1,7 +1,7 @@
 {
   "id": "Q229",
   "slug": "lock-interface-reentrantlock-lockunlocktrylocknewcondition-vs-synchronized",
-  "questionNumber": 229,
+  "questionNumber": 1,
   "title": "Lock interface + ReentrantLock — lock/unlock/tryLock/newCondition, vs synchronized",
   "shortTitle": "What is ReentrantLock vs synchronized?",
   "chapterNumber": 5,

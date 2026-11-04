@@ -1,7 +1,7 @@
 {
   "id": "Q838",
   "slug": "java-8-practical-stream-api-with-employeetrade-model-grouping-sorting-aggregation",
-  "questionNumber": 838,
+  "questionNumber": 1,
   "title": "Demonstrate practical Java 8 Stream API usage on a finance domain model — grouping, counting, partitioning, sorting, aggregation, and joining — and explain how each collector and operation works.",
   "shortTitle": "Java 8 Practical — Stream API with Employee/Trade model (grouping, sorting, aggregation)",
   "chapterNumber": 17,

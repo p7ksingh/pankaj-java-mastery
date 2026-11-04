@@ -1,7 +1,7 @@
 {
   "id": "Q950",
   "slug": "write-a-kafka-consumer-that-routes-failed-messages-to-a-dead-letter-queue",
-  "questionNumber": 950,
+  "questionNumber": 6,
   "title": "Write a Kafka consumer that routes failed messages to a dead-letter queue.",
   "shortTitle": "Write a Kafka consumer that routes failed messages to a dead-letter queue.",
   "chapterNumber": 11,

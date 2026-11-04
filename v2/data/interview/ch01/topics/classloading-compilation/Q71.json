@@ -1,7 +1,7 @@
 {
   "id": "Q71",
   "slug": "what-is-a-class-loader-and-what-are-the-types",
-  "questionNumber": 71,
+  "questionNumber": 1,
   "title": "What is a class loader, and what are the types (Bootstrap, Extension/Platform, System/Application, Custom)?",
   "shortTitle": "What is a class loader and what are the types?",
   "chapterNumber": 1,

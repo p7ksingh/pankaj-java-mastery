@@ -1,7 +1,7 @@
 {
   "id": "Q161",
   "slug": "null-keys-in-hashmap-linkedhashmap-treemap-and-why-treemap-rejects-null-keys",
-  "questionNumber": 161,
+  "questionNumber": 4,
   "title": "Null keys in HashMap, LinkedHashMap, TreeMap — and why TreeMap rejects null keys",
   "shortTitle": "Which Maps allow null keys?",
   "chapterNumber": 3,

@@ -1,7 +1,7 @@
 {
   "id": "Q193",
   "slug": "custom-checked-vs-unchecked-preserving-cause-and-why-swallowing-exceptions-is-the-worst-anti-pattern",
-  "questionNumber": 193,
+  "questionNumber": 1,
   "title": "When should a custom exception be checked vs unchecked, should you preserve the cause (super(message, cause)), and why is swallowing an exception (catch (Exception e) {}) one of the worst anti-patterns?",
   "shortTitle": "How do you create custom checked vs unchecked exceptions?",
   "chapterNumber": 4,

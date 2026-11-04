@@ -1,7 +1,7 @@
 {
   "id": "Q434",
   "slug": "property-resolution-order-profiles-configurationproperties-config-vs-code",
-  "questionNumber": 434,
+  "questionNumber": 2,
   "title": "What is Spring Boot's property resolution order? How do you activate profiles? How does @ConfigurationProperties bind nested config with validation? What belongs in config vs code? How do you manage config across microservices (Spring Cloud Config)?",
   "shortTitle": "How does property resolution work in Spring Boot?",
   "chapterNumber": 7,

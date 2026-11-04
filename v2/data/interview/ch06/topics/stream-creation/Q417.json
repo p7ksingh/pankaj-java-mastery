@@ -1,7 +1,7 @@
 {
   "id": "Q417",
   "slug": "streamofnullable-java-9-streamconcat-null-safe-stream-creation-and-lazy-merging",
-  "questionNumber": 417,
+  "questionNumber": 3,
   "title": "What does Stream.ofNullable(value) (Java 9) do (returns one-element stream if non-null, empty if null), and how does Stream.concat(a, b) merge two streams lazily?",
   "shortTitle": "Stream.ofNullable (Java 9) + Stream.concat — null-safe stream creation and lazy merging",
   "chapterNumber": 6,

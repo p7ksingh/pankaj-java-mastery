@@ -1,7 +1,7 @@
 {
   "id": "Q1299",
   "slug": "how-are-sealed-classes-and-records-complementary-in-javas-pattern-matching-vision",
-  "questionNumber": 1299,
+  "questionNumber": 10,
   "title": "How are sealed classes and records complementary in Java's pattern-matching vision?",
   "shortTitle": "How are sealed classes and records complementary in Java's pattern-matching vision?",
   "chapterNumber": 16,

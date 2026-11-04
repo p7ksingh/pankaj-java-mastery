@@ -1,7 +1,7 @@
 {
   "id": "Q1798",
   "slug": "rod-cutting-maximize-revenue-by-cutting-a-rod-into-pieces",
-  "questionNumber": 1798,
+  "questionNumber": 38,
   "title": "Given a rod of length N and a list of prices for each length, cut the rod into pieces to maximize total revenue, where each length can be used any number of times. Explain how this is an Unbounded Knapsack, the DP technique, the complexity, and a banking use case.",
   "shortTitle": "Rod Cutting (Maximize Revenue by Cutting a Rod into Pieces)",
   "chapterNumber": 17,

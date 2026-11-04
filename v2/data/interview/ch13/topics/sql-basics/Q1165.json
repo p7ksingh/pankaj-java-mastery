@@ -1,7 +1,7 @@
 {
   "id": "Q1165",
   "slug": "merge-versus-insert-on-conflict-and-the-auto-increment-gotcha",
-  "questionNumber": 1165,
+  "questionNumber": 8,
   "title": "When do you use `MERGE` vs `INSERT ... ON CONFLICT` (MERGE supports matched/not-matched/delete branches for complex ETL; ON CONFLICT is simpler for single-row upserts), and what is the gotcha with upsert + auto-increment (sequence gaps on conflict)?",
   "shortTitle": "MERGE Versus INSERT ... ON CONFLICT, and the Auto-Increment Gotcha",
   "chapterNumber": 13,

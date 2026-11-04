@@ -1,7 +1,7 @@
 {
   "id": "Q1997",
   "slug": "schema-evolution-in-a-data-pipeline-and-why-columnar-formats-matter",
-  "questionNumber": 1997,
+  "questionNumber": 7,
   "title": "How do you handle schema evolution in a data pipeline (Avro/Parquet schemas, a Schema Registry, backward/forward compatibility rules), and why do columnar formats like Parquet matter for analytics (column pruning, predicate pushdown, compression)?",
   "shortTitle": "Schema evolution in a data pipeline and why columnar formats matter",
   "chapterNumber": 20,

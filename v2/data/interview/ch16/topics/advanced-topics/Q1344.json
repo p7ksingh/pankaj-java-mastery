@@ -1,7 +1,7 @@
 {
   "id": "Q1344",
   "slug": "how-does-the-foreign-memory-apis-arena-provide-explicit-lifetime-management-vs-directbytebuffer",
-  "questionNumber": 1344,
+  "questionNumber": 36,
   "title": "How does the Foreign Memory API's `Arena` provide explicit, bounds-checked off-heap lifetime management vs GC-dependent DirectByteBuffer cleanup?",
   "shortTitle": "How does the Foreign Memory API's Arena provide explicit lifetime management vs DirectByteBuffer?",
   "chapterNumber": 16,

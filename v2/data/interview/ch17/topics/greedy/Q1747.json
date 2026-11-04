@@ -1,7 +1,7 @@
 {
   "id": "Q1747",
   "slug": "next-interval-two-heaps-find-the-next-starting-interval",
-  "questionNumber": 1747,
+  "questionNumber": 8,
   "title": "Given an array of intervals, for each interval find the index of the next interval, meaning the interval with the smallest start that is greater than or equal to the current interval's end. If no such interval exists, record -1. Explain how two heaps keyed on start and end solve this efficiently.",
   "shortTitle": "Next Interval (Two Heaps — Find the Next Starting Interval)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q2566",
   "slug": "design-using-the-strategy-pattern",
-  "questionNumber": 2566,
+  "questionNumber": 8,
   "title": "Strategy — different pricing strategies, different sorting algorithms, different notification channels.",
   "shortTitle": "Design using the Strategy pattern",
   "chapterNumber": 15,

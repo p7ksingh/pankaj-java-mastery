@@ -1,7 +1,7 @@
 {
   "id": "Q312",
   "slug": "threadgroup-is-obsolete-executorservice-and-structured-concurrency-instead-plus-pool-name-thread-n-naming",
-  "questionNumber": 312,
+  "questionNumber": 4,
   "title": "Why is ThreadGroup considered obsolete? What replaced it? And why does the thread naming convention pool-name-thread-N matter for debugging?",
   "shortTitle": "Why is ThreadGroup obsolete?",
   "chapterNumber": 5,

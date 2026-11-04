@@ -1,7 +1,7 @@
 {
   "id": "Q1704",
   "slug": "find-pivot-index-balance-point-of-an-array",
-  "questionNumber": 1704,
+  "questionNumber": 80,
   "title": "Given an array of integers, find the leftmost pivot index where the sum of all elements strictly to its left equals the sum of all elements strictly to its right, returning minus one if no such index exists. Solve it with the prefix-sum pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Find Pivot Index (Balance Point of an Array)",
   "chapterNumber": 17,

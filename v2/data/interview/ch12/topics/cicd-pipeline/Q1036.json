@@ -1,7 +1,7 @@
 {
   "id": "Q1036",
   "slug": "what-are-the-disaster-recovery-patterns-and-their-rtorpocost-trade-offs-and-why-must-a-dr-plan-be-tested-not-just-documented",
-  "questionNumber": 1036,
+  "questionNumber": 23,
   "title": "What are the disaster-recovery patterns and their RTO/RPO/cost trade-offs (Backup & Restore, Pilot Light, Warm Standby, Multi-Site Active/Active), and why must a DR plan be tested, not just documented?",
   "shortTitle": "What are the disaster-recovery patterns and their RTO/RPO/cost trade-offs, and why must a DR plan be tested, not just documented?",
   "chapterNumber": 12,

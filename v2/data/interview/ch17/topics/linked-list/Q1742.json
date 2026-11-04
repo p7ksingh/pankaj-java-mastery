@@ -1,7 +1,7 @@
 {
   "id": "Q1742",
   "slug": "tree-diameter-longest-path-between-any-two-nodes",
-  "questionNumber": 1742,
+  "questionNumber": 22,
   "title": "Given a binary tree, find its diameter, defined as the number of nodes on the longest path between any two nodes in the tree. The path may or may not pass through the root. Explain why a single post-order traversal that returns subtree heights while updating a global maximum is the efficient solution.",
   "shortTitle": "Tree Diameter (Longest Path Between Any Two Nodes)",
   "chapterNumber": 17,

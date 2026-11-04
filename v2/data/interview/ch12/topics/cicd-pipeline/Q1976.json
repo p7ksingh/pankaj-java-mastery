@@ -1,7 +1,7 @@
 {
   "id": "Q1976",
   "slug": "what-incident-management-is-and-its-five-step-process",
-  "questionNumber": 1976,
+  "questionNumber": 53,
   "title": "What is incident management — the process of detecting, responding to, and resolving production issues: (1) Detect (alert fires), (2) Triage (how severe?), (3) Respond (assemble team, communicate), (4) Fix (mitigate first, root-cause later), (5) Postmortem (blameless review)?",
   "shortTitle": "What incident management is and its five-step process",
   "chapterNumber": 12,

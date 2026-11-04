@@ -1,7 +1,7 @@
 {
   "id": "Q41",
   "slug": "is-int-i-09-a-valid-statement",
-  "questionNumber": 41,
+  "questionNumber": 2,
   "title": "Is `int i = 09;` a valid statement (no — a leading 0 means octal, and 9 is not a valid octal digit)?",
   "shortTitle": "Is int i = 09 a valid statement?",
   "chapterNumber": 1,

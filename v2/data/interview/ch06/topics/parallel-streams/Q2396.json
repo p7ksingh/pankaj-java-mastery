@@ -1,7 +1,7 @@
 {
   "id": "Q2396",
   "slug": "explain-why-foreachordered-is-needed-with-parallel-streams-to-preserve-encounter-order",
-  "questionNumber": 2396,
+  "questionNumber": 8,
   "title": "Explain why `forEachOrdered` is needed with parallel streams to preserve encounter order.",
   "shortTitle": "Explain why forEachOrdered is needed with parallel streams to preserve encounter order",
   "chapterNumber": 6,

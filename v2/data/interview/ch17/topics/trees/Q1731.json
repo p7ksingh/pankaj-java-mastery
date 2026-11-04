@@ -1,7 +1,7 @@
 {
   "id": "Q1731",
   "slug": "maximum-depth-of-a-binary-tree-count-the-levels-via-bfs",
-  "questionNumber": 1731,
+  "questionNumber": 18,
   "title": "Given the root of a binary tree, return its maximum depth, the number of nodes along the longest path from the root down to the farthest leaf.",
   "shortTitle": "Maximum Depth of a Binary Tree (Count the Levels via BFS)",
   "chapterNumber": 17,

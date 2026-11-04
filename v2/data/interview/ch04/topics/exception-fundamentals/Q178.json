@@ -1,7 +1,7 @@
 {
   "id": "Q178",
   "slug": "throw-vs-throws-creating-exceptions-vs-declaring-them",
-  "questionNumber": 178,
+  "questionNumber": 2,
   "title": "What is the difference between throw and throws in Java?",
   "shortTitle": "What is the difference between throw and throws?",
   "chapterNumber": 4,

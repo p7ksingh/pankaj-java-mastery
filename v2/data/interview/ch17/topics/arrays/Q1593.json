@@ -1,7 +1,7 @@
 {
   "id": "Q1593",
   "slug": "maximum-product-subarray-track-max-and-min-together",
-  "questionNumber": 1593,
+  "questionNumber": 56,
   "title": "Given an integer array, find the contiguous subarray with the largest product and return that product.",
   "shortTitle": "Maximum Product Subarray — track max and min together",
   "chapterNumber": 17,

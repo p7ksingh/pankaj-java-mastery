@@ -1,7 +1,7 @@
 {
   "id": "Q107",
   "slug": "what-are-compact-object-headers-jep-519-java-25-and-why-do-they-reduce-heap-footprint",
-  "questionNumber": 107,
+  "questionNumber": 5,
   "title": "What are Compact Object Headers (JEP 519, Java 25) — shrinking the per-object header (mark word + class pointer) from ~96/128 bits toward 64 bits — and why does a smaller header reduce heap footprint and GC pressure for allocation-heavy workloads with many small objects?",
   "shortTitle": "What are Compact Object Headers?",
   "chapterNumber": 1,

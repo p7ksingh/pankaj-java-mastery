@@ -1,7 +1,7 @@
 {
   "id": "Q1080",
   "slug": "why-partitioning-does-not-automatically-make-queries-faster-partition-pruning-and-choosing-a-scheme",
-  "questionNumber": 1080,
+  "questionNumber": 3,
   "title": "Why does partitioning NOT automatically make queries faster — how does the query need to filter on the PARTITION KEY for the database to do partition pruning (skip irrelevant partitions), so a table partitioned by date but queried mostly by `user_id` still scans many partitions — and how do you choose range vs list vs hash partitioning from the actual access pattern?",
   "shortTitle": "Why partitioning does not automatically make queries faster — partition pruning and choosing a scheme",
   "chapterNumber": 13,

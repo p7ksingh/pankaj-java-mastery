@@ -1,7 +1,7 @@
 {
   "id": "Q1464",
   "slug": "maximum-sum-subarray-of-size-k-fixed-size-window-add-right-subtract-left",
-  "questionNumber": 1464,
+  "questionNumber": 30,
   "title": "Maximum Sum Subarray of Size K — fixed-size window, add right, subtract left.",
   "shortTitle": "Maximum Sum Subarray of Size K — Fixed-Size Window, Add Right, Subtract Left",
   "chapterNumber": 17,

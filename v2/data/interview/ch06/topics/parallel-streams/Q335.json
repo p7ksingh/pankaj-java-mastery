@@ -1,7 +1,7 @@
 {
   "id": "Q335",
   "slug": "stream-vs-for-loop-performance-when-is-each-faster-when-does-parallelstream-help-vs-hurt",
-  "questionNumber": 335,
+  "questionNumber": 2,
   "title": "Are streams faster than a traditional for loop, when is each faster, and when does parallelStream() actually help vs hurt?",
   "shortTitle": "Stream vs for-loop performance — when is each faster, when does parallelStream help vs hurt?",
   "chapterNumber": 6,

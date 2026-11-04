@@ -1,7 +1,7 @@
 {
   "id": "Q776",
   "slug": "security-oauth2-jwt-owasp",
-  "questionNumber": 776,
+  "questionNumber": 2,
   "title": "Explain how you secure a banking REST API using OAuth2 and JWT — the token flow, signature validation, access versus refresh tokens — and how you defend against the OWASP top risks such as SQL injection, XSS, CSRF, IDOR, and broken authentication.",
   "shortTitle": "Security — OAuth2, JWT, OWASP",
   "chapterNumber": 17,

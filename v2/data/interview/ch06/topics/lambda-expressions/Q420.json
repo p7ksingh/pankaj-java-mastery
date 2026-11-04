@@ -1,7 +1,7 @@
 {
   "id": "Q420",
   "slug": "effectively-final-vs-explicitly-final-identical-for-lambda-capture",
-  "questionNumber": 420,
+  "questionNumber": 4,
   "title": "What is the difference between an effectively final variable and an explicitly final variable when captured by a lambda (none — the compiler treats them identically; both are legal to capture; final just makes the restriction explicit)?",
   "shortTitle": "Effectively final vs explicitly final?",
   "chapterNumber": 6,

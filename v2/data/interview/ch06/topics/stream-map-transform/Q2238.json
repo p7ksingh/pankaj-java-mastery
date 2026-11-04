@@ -1,7 +1,7 @@
 {
   "id": "Q2238",
   "slug": "extract-the-email-addresses-of-all-employees-and-return-as-a-comma-separated-string-using-collectorsjoining",
-  "questionNumber": 2238,
+  "questionNumber": 6,
   "title": "Extract the email addresses of all employees and return as a comma-separated string using `Collectors.joining(\", \")`.",
   "shortTitle": "Extract the email addresses of all employees and return as a comma-separated string using Collectors.joining(\", \")",
   "chapterNumber": 6,

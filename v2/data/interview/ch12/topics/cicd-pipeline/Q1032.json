@@ -1,7 +1,7 @@
 {
   "id": "Q1032",
   "slug": "how-to-secure-the-cicd-pipeline-itself-oidc-federation-ephemeral-runners-pinned-action-shas-least-privilege-deploy-roles-and-how-to-defend-against-supply-chain-attacks",
-  "questionNumber": 1032,
+  "questionNumber": 19,
   "title": "How do you secure the CI/CD pipeline itself (OIDC federation instead of long-lived cloud keys, ephemeral runners, pinned action SHAs, least-privilege deploy roles), and how do you defend against supply-chain attacks (internal registry/CodeArtifact, dependency pinning, artifact signing)?",
   "shortTitle": "How to secure the CI/CD pipeline itself — OIDC federation, ephemeral runners, pinned action SHAs, least-privilege deploy roles — and how to defend against supply-chain attacks",
   "chapterNumber": 12,

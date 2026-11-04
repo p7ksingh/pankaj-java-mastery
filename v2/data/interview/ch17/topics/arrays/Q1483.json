@@ -1,7 +1,7 @@
 {
   "id": "Q1483",
   "slug": "reorder-list-l0-to-ln-to-l1-to-ln-1-find-middle-reverse-merge",
-  "questionNumber": 1483,
+  "questionNumber": 35,
   "title": "Given a singly linked list L0 to L1 to ... to Ln, reorder it to L0 to Ln to L1 to Ln-1 to L2 to Ln-2 and so on. You may not change node values, only rearrange the nodes themselves.",
   "shortTitle": "Reorder List (L0 to Ln to L1 to Ln-1) — Find Middle, Reverse, Merge",
   "chapterNumber": 17,

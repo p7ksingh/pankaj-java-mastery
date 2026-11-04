@@ -1,7 +1,7 @@
 {
   "id": "Q166",
   "slug": "remove-duplicates-while-maintaining-insertion-order-linkedhashset",
-  "questionNumber": 166,
+  "questionNumber": 4,
   "title": "Remove duplicates while maintaining insertion order — LinkedHashSet",
   "shortTitle": "How do you remove duplicates while keeping insertion order?",
   "chapterNumber": 3,

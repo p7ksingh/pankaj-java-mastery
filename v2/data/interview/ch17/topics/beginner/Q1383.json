@@ -1,7 +1,7 @@
 {
   "id": "Q1383",
   "slug": "write-a-recursive-function-to-calculate-factorial-of-n",
-  "questionNumber": 1383,
+  "questionNumber": 3,
   "title": "Write a recursive function to calculate factorial of N (base: `fact(0) = 1`, recursive: `fact(n) = n * fact(n-1)`).",
   "shortTitle": "Write a Recursive Function to Calculate Factorial of N",
   "chapterNumber": 17,

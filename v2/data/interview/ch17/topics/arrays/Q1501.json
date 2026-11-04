@@ -1,7 +1,7 @@
 {
   "id": "Q1501",
   "slug": "product-of-array-except-self-prefix-product-times-suffix-product",
-  "questionNumber": 1501,
+  "questionNumber": 45,
   "title": "Given an integer array, return an array where each position holds the product of all other elements, without using division and in linear time.",
   "shortTitle": "Product of Array Except Self — Prefix Product Times Suffix Product",
   "chapterNumber": 17,

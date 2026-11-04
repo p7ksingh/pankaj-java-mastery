@@ -1,7 +1,7 @@
 {
   "id": "Q2404",
   "slug": "collect-employee-names-into-a-setstring-removing-duplicates",
-  "questionNumber": 2404,
+  "questionNumber": 17,
   "title": "Collect employee names into a `Set<String>` (removing duplicates).",
   "shortTitle": "Collect employee names into a Set<String> (removing duplicates)",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q1013",
   "slug": "the-default-mapping-type-in-elasticsearch-doc-and-why-multiple-types-were-removed",
-  "questionNumber": 1013,
+  "questionNumber": 4,
   "title": "What is the default mapping type in Elasticsearch (`_doc`), and why were multiple types removed?",
   "shortTitle": "The default mapping type in Elasticsearch (`_doc`) and why multiple types were removed",
   "chapterNumber": 12,

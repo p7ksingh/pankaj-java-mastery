@@ -1,7 +1,7 @@
 {
   "id": "Q1427",
   "slug": "3sum-sort-fix-one-two-pointer-skip-duplicates",
-  "questionNumber": 1427,
+  "questionNumber": 5,
   "title": "3Sum — sort + fix one + two-pointer scan, skip duplicates.",
   "shortTitle": "3Sum — Sort + Fix One + Two-Pointer, Skip Duplicates",
   "chapterNumber": 17,

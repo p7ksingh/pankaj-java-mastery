@@ -1,7 +1,7 @@
 {
   "id": "Q2571",
   "slug": "design-using-the-adapter-pattern",
-  "questionNumber": 2571,
+  "questionNumber": 6,
   "title": "Adapter — integrate a third-party payment gateway with your system's interface.",
   "shortTitle": "Design using the Adapter pattern",
   "chapterNumber": 15,

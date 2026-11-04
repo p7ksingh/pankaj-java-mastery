@@ -1,7 +1,7 @@
 {
   "id": "Q2304",
   "slug": "use-intstreamrangeclosed1-100-to-compute-the-sum-of-first-100-numbers",
-  "questionNumber": 2304,
+  "questionNumber": 11,
   "title": "Use `IntStream.rangeClosed(1, 100)` to compute the sum of first 100 numbers.",
   "shortTitle": "Use IntStream.rangeClosed(1, 100) to compute the sum of first 100 numbers",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q2402",
   "slug": "generate-a-stream-of-powers-of-2-using-streamiterate1-n-n-2limit10",
-  "questionNumber": 2402,
+  "questionNumber": 16,
   "title": "Generate a stream of powers of 2 using `Stream.iterate(1, n -> n * 2).limit(10)`.",
   "shortTitle": "Generate a stream of powers of 2 using Stream.iterate(1, n -> n * 2).limit(10)",
   "chapterNumber": 6,

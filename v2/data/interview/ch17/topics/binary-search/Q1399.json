@@ -1,7 +1,7 @@
 {
   "id": "Q1399",
   "slug": "what-is-binary-search",
-  "questionNumber": 1399,
+  "questionNumber": 2,
   "title": "What is binary search — find an element in a SORTED array by checking the middle; if target is smaller go left, if bigger go right; O(log n) — much faster than linear search.",
   "shortTitle": "What is Binary Search?",
   "chapterNumber": 17,

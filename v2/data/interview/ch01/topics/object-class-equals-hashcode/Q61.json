@@ -1,7 +1,7 @@
 {
   "id": "Q61",
   "slug": "why-and-even-equals-do-not-compare-array-contents-and-what-to-use-instead",
-  "questionNumber": 61,
+  "questionNumber": 9,
   "title": "Why does `==` and even `.equals()` not compare array contents, and what do you use instead (`Arrays.equals` for 1-D, `Arrays.deepEquals` for nested)?",
   "shortTitle": "Why do == and equals() not compare array contents?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q1316",
   "slug": "how-do-you-add-grpc-web-browser-support-envoy-proxy-translating-http11-http2",
-  "questionNumber": 1316,
+  "questionNumber": 10,
   "title": "How do you add gRPC-web browser support (Envoy proxy translating HTTP/1.1 ↔ HTTP/2)?",
   "shortTitle": "How do you add gRPC-web browser support (Envoy proxy translating HTTP/1.1 ↔ HTTP/2)?",
   "chapterNumber": 16,

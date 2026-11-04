@@ -1,7 +1,7 @@
 {
   "id": "Q1379",
   "slug": "implement-a-stack-using-an-array",
-  "questionNumber": 1379,
+  "questionNumber": 9,
   "title": "Implement a stack using an array — push (add to top), pop (remove from top), peek (look at top without removing).",
   "shortTitle": "Implement a stack using an array",
   "chapterNumber": 17,

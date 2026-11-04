@@ -1,7 +1,7 @@
 {
   "id": "Q429",
   "slug": "spring-managed-bean-vs-plain-java-object-componentservicerepositorycontroller",
-  "questionNumber": 429,
+  "questionNumber": 1,
   "title": "What is the difference between a Spring bean and a normal object? What is the difference between @Component, @Service, @Repository, @Controller? How does @Repository enable exception translation? What is the difference between @Bean and @Component?",
   "shortTitle": "What is the difference between Spring bean and plain Java object?",
   "chapterNumber": 7,

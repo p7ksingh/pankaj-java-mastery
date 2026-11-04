@@ -1,7 +1,7 @@
 {
   "id": "Q1149",
   "slug": "cap-theorem-why-the-real-choice-is-cp-vs-ap-and-how-it-shapes-microservices",
-  "questionNumber": 1149,
+  "questionNumber": 1,
   "title": "Explain the CAP theorem (Consistency, Availability, Partition tolerance), why the real choice is CP vs AP, and how it shapes microservices data design (most favor AP/eventual consistency).",
   "shortTitle": "CAP Theorem — Why the Real Choice is CP vs AP and How It Shapes Microservices",
   "chapterNumber": 13,

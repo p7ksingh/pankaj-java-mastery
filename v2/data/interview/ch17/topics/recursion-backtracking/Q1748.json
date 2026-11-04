@@ -1,7 +1,7 @@
 {
   "id": "Q1748",
   "slug": "subsets-generate-all-subsets-of-a-distinct-set",
-  "questionNumber": 1748,
+  "questionNumber": 15,
   "title": "Given a set of distinct numbers, generate all possible subsets, including the empty set and the full set. Explain the iterative doubling technique that builds subsets one element at a time.",
   "shortTitle": "Subsets (Generate All Subsets of a Distinct Set)",
   "chapterNumber": 17,

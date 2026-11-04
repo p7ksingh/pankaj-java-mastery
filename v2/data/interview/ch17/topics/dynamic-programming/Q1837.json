@@ -1,7 +1,7 @@
 {
   "id": "Q1837",
   "slug": "climbing-stairs-count-distinct-ways-with-steps-of-one-or-two",
-  "questionNumber": 1837,
+  "questionNumber": 23,
   "title": "You climb a staircase of n steps, and at each move you take either one step or two steps. Count the number of distinct ways to reach the top. Explain the dynamic programming recurrence, the operations, the complexity, and a banking use case.",
   "shortTitle": "Climbing Stairs (Count Distinct Ways with Steps of One or Two)",
   "chapterNumber": 17,

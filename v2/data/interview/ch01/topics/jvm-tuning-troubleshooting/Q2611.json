@@ -1,7 +1,7 @@
 {
   "id": "Q2611",
   "slug": "what-are-the-essential-jvm-flags",
-  "questionNumber": 2611,
+  "questionNumber": 7,
   "title": "What are the essential JVM flags — `-Xms` (initial heap), `-Xmx` (max heap), `-XX:+UseG1GC` (choose GC), `-XX:MaxGCPauseMillis` (target pause), `-XX:MetaspaceSize` / `-XX:MaxMetaspaceSize` (class metadata limit)?",
   "shortTitle": "What are the essential JVM flags?",
   "chapterNumber": 1,

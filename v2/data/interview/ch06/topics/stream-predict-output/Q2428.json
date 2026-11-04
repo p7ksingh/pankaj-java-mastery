@@ -1,7 +1,7 @@
 {
   "id": "Q2428",
   "slug": "why-does-liststreamsortedforeachsystemoutprintln-not-guarantee-order-in-a-parallel-stream",
-  "questionNumber": 2428,
+  "questionNumber": 7,
   "title": "Why does `list.stream().sorted().forEach(System.out::println)` NOT guarantee order in a parallel stream? (Use `forEachOrdered`.)",
   "shortTitle": "Why does list.stream().sorted().forEach(System.out::println) NOT guarantee order in a parallel stream?",
   "chapterNumber": 6,

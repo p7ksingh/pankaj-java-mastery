@@ -1,7 +1,7 @@
 {
   "id": "Q1017",
   "slug": "comparing-modern-gc-algorithms-serial-parallel-g1-zgc-shenandoah-pause-model-best-fit-heapworkload-and-defaults-by-java-version",
-  "questionNumber": 1017,
+  "questionNumber": 8,
   "title": "Compare the modern GC algorithms (Serial, Parallel, G1, ZGC, Shenandoah) — pause model, best-fit heap size/workload, and defaults by Java version.",
   "shortTitle": "Comparing modern GC algorithms — Serial, Parallel, G1, ZGC, Shenandoah — pause model, best-fit heap/workload, and defaults by Java version",
   "chapterNumber": 12,

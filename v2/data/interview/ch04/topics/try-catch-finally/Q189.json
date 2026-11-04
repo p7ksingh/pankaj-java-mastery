@@ -1,7 +1,7 @@
 {
   "id": "Q189",
   "slug": "multi-catch-java-7-catch-a-b-e-implicitly-final-no-parent-child",
-  "questionNumber": 189,
+  "questionNumber": 4,
   "title": "What is multi-catch, how does catch (IOException | SQLException e) differ from separate catches?",
   "shortTitle": "What is multi-catch in Java 7+?",
   "chapterNumber": 4,

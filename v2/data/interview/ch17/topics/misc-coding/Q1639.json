@@ -1,7 +1,7 @@
 {
   "id": "Q1639",
   "slug": "cache-with-ttl-and-versioned-expiry",
-  "questionNumber": 1639,
+  "questionNumber": 21,
   "title": "Cache with TTL and Versioned Expiry — implement `put(key, value, ttl, now)` and `get(key, now)` where an entry is valid only while `now < expires_at`; a newer write replaces the old value AND expiry, so an old cleanup event must NOT delete a newer version of the same key (attach a version/sequence to each expiry record and verify it still matches before deleting) — lazy expiry gives O(1) per op; a heap for proactive cleanup adds O(log n) and stale-record management.",
   "shortTitle": "Cache with TTL and Versioned Expiry",
   "chapterNumber": 17,

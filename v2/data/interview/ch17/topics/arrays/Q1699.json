@@ -1,7 +1,7 @@
 {
   "id": "Q1699",
   "slug": "maximum-product-subarray",
-  "questionNumber": 1699,
+  "questionNumber": 76,
   "title": "Given an array of integers that may include negatives and zeros, find the maximum product obtainable from any contiguous non-empty subarray. Solve it with the running max-and-min variant of Kadane's algorithm and demonstrate with a complete banking mini-project.",
   "shortTitle": "Maximum Product Subarray",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1545",
   "slug": "word-ladder-bfs-changing-one-letter-at-a-time",
-  "questionNumber": 1545,
+  "questionNumber": 8,
   "title": "Given a begin word, an end word, and a dictionary of equal-length words, return the length of the shortest transformation sequence from begin to end, where each step changes exactly one letter and every intermediate word is in the dictionary, or zero if none exists.",
   "shortTitle": "Word Ladder — BFS changing one letter at a time",
   "chapterNumber": 17,

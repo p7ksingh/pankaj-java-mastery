@@ -1,7 +1,7 @@
 {
   "id": "Q121",
   "slug": "what-are-the-wrapper-classes-why-are-they-needed-and-parseint-vs-valueof",
-  "questionNumber": 121,
+  "questionNumber": 7,
   "title": "What are the wrapper classes for the eight primitives, why are they needed (generics/collections only hold objects, nullability, utility methods), and what is the difference between `Integer.parseInt(\"5\")` (returns a primitive `int`) and `Integer.valueOf(\"5\")` (returns a cached `Integer` object)?",
   "shortTitle": "What are the wrapper classes and why are they needed?",
   "chapterNumber": 1,

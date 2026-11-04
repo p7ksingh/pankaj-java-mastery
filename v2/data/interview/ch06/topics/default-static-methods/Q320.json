@@ -1,7 +1,7 @@
 {
   "id": "Q320",
   "slug": "static-methods-in-interfaces-how-called-not-inherited-replaces-utility-classes",
-  "questionNumber": 320,
+  "questionNumber": 3,
   "title": "Can you use static methods in an interface, how are they called, and are they inherited by implementing classes?",
   "shortTitle": "How are static methods in interfaces called?",
   "chapterNumber": 6,

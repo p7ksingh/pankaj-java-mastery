@@ -1,7 +1,7 @@
 {
-  "id": "Q200-collections",
-  "slug": "wildcard-capture-list-write-restriction-capture-helper-method",
-  "questionNumber": 200,
+  "id": "Q200",
+  "slug": "wildcard-capture-list-write-restriction-capture-helper",
+  "questionNumber": 5,
   "title": "Wildcard capture — List<?> write restriction, capture helper method",
   "shortTitle": "What is wildcard capture?",
   "chapterNumber": 3,

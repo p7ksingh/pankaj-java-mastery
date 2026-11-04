@@ -1,7 +1,7 @@
 {
   "id": "Q1086",
   "slug": "what-is-database-connection-pooling-why-is-it-used-and-how-is-it-implemented-hikaricp-apache-dbcp",
-  "questionNumber": 1086,
+  "questionNumber": 2,
   "title": "What is database connection pooling, why is it used, and how is it implemented (e.g. HikariCP, Apache DBCP)?",
   "shortTitle": "What is database connection pooling, why is it used, and how is it implemented (HikariCP, Apache DBCP)?",
   "chapterNumber": 13,

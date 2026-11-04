@@ -1,7 +1,7 @@
 {
   "id": "Q2420",
   "slug": "why-is-using-a-hashset-for-the-lookup-list-faster-than-filterlistcontains-for-intersection-queries",
-  "questionNumber": 2420,
+  "questionNumber": 5,
   "title": "Why is using a `HashSet` for the lookup list (`filter(set::contains)`) faster than `filter(list::contains)` for intersection queries?",
   "shortTitle": "Why is using a HashSet for the lookup list faster than filter(list::contains) for intersection queries?",
   "chapterNumber": 6,

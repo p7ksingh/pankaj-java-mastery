@@ -1,7 +1,7 @@
 {
   "id": "Q1081",
   "slug": "how-partitioning-helps-data-lifecycle-management-at-scale",
-  "questionNumber": 1081,
+  "questionNumber": 4,
   "title": "How does partitioning help data lifecycle management at scale (e.g. monthly time-based partitions let you archive/compress/drop whole old partitions cheaply instead of mass-deleting rows, keeping only hot recent data in the primary store)?",
   "shortTitle": "How partitioning helps data lifecycle management at scale",
   "chapterNumber": 13,

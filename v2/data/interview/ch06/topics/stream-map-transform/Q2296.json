@@ -1,7 +1,7 @@
 {
   "id": "Q2296",
   "slug": "build-an-account-to-balance-map-with-collectorstomap-and-resolve-duplicate-keys-with-a-merge-function",
-  "questionNumber": 2296,
+  "questionNumber": 15,
   "title": "Build a `Map<String, BigDecimal>` of account id to total balance from a stream of transactions where the same account appears multiple times, using `Collectors.toMap` with a merge function. Explain the `IllegalStateException` on duplicate keys and how the merge function resolves it.",
   "shortTitle": "Build an account-to-balance map with Collectors.toMap and resolve duplicate keys with a merge function",
   "chapterNumber": 6,

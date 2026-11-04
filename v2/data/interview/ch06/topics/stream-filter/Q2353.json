@@ -1,7 +1,7 @@
 {
   "id": "Q2353",
   "slug": "remove-all-whitespace-from-a-string-using-charsfilter-and-collectorsjoining",
-  "questionNumber": 2353,
+  "questionNumber": 18,
   "title": "Remove all whitespace from a string using `chars().filter(c -> !Character.isWhitespace(c))` and `Collectors.joining()`.",
   "shortTitle": "Remove all whitespace from a string using chars().filter and Collectors.joining()",
   "chapterNumber": 6,

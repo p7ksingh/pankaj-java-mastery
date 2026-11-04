@@ -1,7 +1,7 @@
 {
   "id": "Q127",
   "slug": "what-is-the-difference-between-a-switch-statement-and-a-switch-expression-which-types-can-switch-operate-on-and-why-is-switchnull-a-classic-npe",
-  "questionNumber": 127,
+  "questionNumber": 7,
   "title": "What is the difference between a classic `switch` statement (colon syntax, fall-through, needs `break`) and a `switch` expression (arrow syntax, `yield`, no fall-through, exhaustiveness), which types can a `switch` operate on, and why is `switch(null)` a classic NPE before pattern-matching switch?",
   "shortTitle": "What is the difference between switch statement and switch expression?",
   "chapterNumber": 1,

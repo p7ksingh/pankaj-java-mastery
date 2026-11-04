@@ -1,7 +1,7 @@
 {
   "id": "Q1011",
   "slug": "kibana-configuration-and-how-the-elk-stack-enables-centralized-logging-and-request-tracing-with-correlation-ids",
-  "questionNumber": 1011,
+  "questionNumber": 1,
   "title": "How is Kibana configured in your project, and how does the ELK stack enable centralized logging and request tracing with correlation IDs?",
   "shortTitle": "Kibana configuration and how the ELK stack enables centralized logging and request tracing with correlation IDs",
   "chapterNumber": 12,

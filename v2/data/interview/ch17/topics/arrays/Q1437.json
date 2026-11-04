@@ -1,7 +1,7 @@
 {
   "id": "Q1437",
   "slug": "median-of-two-sorted-arrays-binary-search-partition-olog-minmn",
-  "questionNumber": 1437,
+  "questionNumber": 26,
   "title": "Median of Two Sorted Arrays — binary search partition, O(log min(m,n)).",
   "shortTitle": "Median of Two Sorted Arrays — Binary Search Partition, O(log min(m,n))",
   "chapterNumber": 17,

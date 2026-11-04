@@ -1,7 +1,7 @@
 {
   "id": "Q220",
   "slug": "race-condition-concrete-example-check-then-act-read-modify-write-fixes",
-  "questionNumber": 220,
+  "questionNumber": 1,
   "title": "Race condition — concrete example, check-then-act, read-modify-write, fixes",
   "shortTitle": "What is a race condition?",
   "chapterNumber": 5,

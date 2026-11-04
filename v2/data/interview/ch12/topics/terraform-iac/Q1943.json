@@ -1,7 +1,7 @@
 {
   "id": "Q1943",
   "slug": "bringing-existinglegacy-aws-resources-under-terraform-management-write-config-import-plan-iterate-commit-and-why-import-alone-does-not-produce-clean-config",
-  "questionNumber": 1943,
+  "questionNumber": 10,
   "title": "How do you bring existing (manually-created or legacy) AWS resources under Terraform management as a workflow — write the matching resource config → `terraform import` into state → `terraform plan` → iterate on the config until the plan proposes NO unexpected changes → commit — and why does importing into state NOT automatically produce correct/clean config (you still must author accurate HCL, strip noise, introduce variables/modules)?",
   "shortTitle": "Bringing existing/legacy AWS resources under Terraform management (write config → import → plan → iterate → commit), and why import alone does not produce clean config",
   "chapterNumber": 12,

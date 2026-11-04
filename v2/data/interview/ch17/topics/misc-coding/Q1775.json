@@ -1,7 +1,7 @@
 {
   "id": "Q1775",
   "slug": "top-k-numbers-find-the-k-largest-numbers-with-a-min-heap",
-  "questionNumber": 1775,
+  "questionNumber": 33,
   "title": "Given an unsorted array of numbers and a value K, find the K largest numbers. Explain why a min-heap of size K is the efficient structure and how it maintains the K largest seen so far.",
   "shortTitle": "Top K Numbers (Find the K Largest Numbers with a Min-Heap)",
   "chapterNumber": 17,

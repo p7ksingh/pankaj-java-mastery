@@ -1,7 +1,7 @@
 {
   "id": "Q681",
   "slug": "mappedsuperclass-vs-inheritance-shared-fields-vs-a-real-type-hierarchy",
-  "questionNumber": 681,
+  "questionNumber": 4,
   "title": "What is the difference between @MappedSuperclass and @Inheritance in JPA? When do you use shared fields versus a real polymorphic type hierarchy?",
   "shortTitle": "@MappedSuperclass vs @Inheritance?",
   "chapterNumber": 9,

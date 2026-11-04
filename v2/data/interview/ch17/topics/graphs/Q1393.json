@@ -1,7 +1,7 @@
 {
   "id": "Q1393",
   "slug": "what-is-bfs-breadth-first-search",
-  "questionNumber": 1393,
+  "questionNumber": 2,
   "title": "What is BFS (Breadth First Search) — visit all neighbors first before going deeper (use a queue); like exploring a maze level by level.",
   "shortTitle": "What is BFS (Breadth First Search)?",
   "chapterNumber": 17,

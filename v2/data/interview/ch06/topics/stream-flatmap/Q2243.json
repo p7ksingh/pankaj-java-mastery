@@ -1,7 +1,7 @@
 {
   "id": "Q2243",
   "slug": "given-a-listdepartment-where-each-department-has-a-listemployee-flatten-to-a-single-listemployee",
-  "questionNumber": 2243,
+  "questionNumber": 5,
   "title": "Given a `List<Department>` where each department has a `List<Employee>`, flatten to a single `List<Employee>`.",
   "shortTitle": "Given a List<Department> where each department has a List<Employee>, flatten to a single List<Employee>",
   "chapterNumber": 6,

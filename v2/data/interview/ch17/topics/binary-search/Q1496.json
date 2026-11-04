@@ -1,7 +1,7 @@
 {
   "id": "Q1496",
   "slug": "square-root-of-a-number-binary-search-for-the-integer-square-root",
-  "questionNumber": 1496,
+  "questionNumber": 9,
   "title": "Given a non-negative integer, compute and return its integer square root, the largest integer whose square does not exceed the input. Do it without using any built-in square root function, in logarithmic time.",
   "shortTitle": "Square Root of a Number — Binary Search for the Integer Square Root",
   "chapterNumber": 17,

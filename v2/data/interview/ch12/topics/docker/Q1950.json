@@ -1,7 +1,7 @@
 {
   "id": "Q1950",
   "slug": "centralizing-logs-across-many-servicescontainers-elkefk-loki-and-tracing-a-single-request-end-to-end-correlation-id-opentelemetry-jaegerzipkin",
-  "questionNumber": 1950,
+  "questionNumber": 10,
   "title": "How do you centralize logs across many services/containers (ELK/EFK, Loki), and how do you trace a single request end-to-end across services (correlation/trace ID propagation, OpenTelemetry, Jaeger/Zipkin)?",
   "shortTitle": "Centralizing logs across many services/containers (ELK/EFK, Loki) and tracing a single request end-to-end (correlation ID, OpenTelemetry, Jaeger/Zipkin)",
   "chapterNumber": 12,

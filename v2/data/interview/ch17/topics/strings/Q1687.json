@@ -1,7 +1,7 @@
 {
   "id": "Q1687",
   "slug": "longest-substring-with-k-distinct-characters-sliding-window-with-a-frequency-map",
-  "questionNumber": 1687,
+  "questionNumber": 39,
   "title": "Given a string and a number k, find the length of the longest substring that contains at most k distinct characters. (GeeksforGeeks: Longest K unique characters substring)",
   "shortTitle": "Longest Substring with K Distinct Characters (Sliding Window with a Frequency Map)",
   "chapterNumber": 17,

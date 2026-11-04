@@ -1,7 +1,7 @@
 {
   "id": "Q428",
   "slug": "bean-scopes-singleton-prototype-request-session-and-the-prototype-into-singleton-trap",
-  "questionNumber": 428,
+  "questionNumber": 4,
   "title": "What are all Spring bean scopes, what is the difference between singleton and prototype, what goes wrong when you inject a prototype into a singleton, and how do you fix it (ObjectProvider, @Lookup, scoped proxy)?",
   "shortTitle": "What are the Bean Scopes?",
   "chapterNumber": 7,

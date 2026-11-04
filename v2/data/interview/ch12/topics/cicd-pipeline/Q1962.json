@@ -1,7 +1,7 @@
 {
   "id": "Q1962",
   "slug": "debugging-end-to-end-when-a-customer-cannot-access-the-application-though-credentials-are-correct",
-  "questionNumber": 1962,
+  "questionNumber": 43,
   "title": "(Scenario) A customer cannot access the application though credentials are correct — how do you debug end-to-end (DNS → LB/Ingress health → Service/Pod readiness → auth service → logs/traces)?",
   "shortTitle": "Debugging end-to-end when a customer cannot access the application though credentials are correct",
   "chapterNumber": 12,

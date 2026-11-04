@@ -1,7 +1,7 @@
 {
   "id": "Q1733",
   "slug": "connect-level-order-siblings-populate-next-right-pointers-per-level",
-  "questionNumber": 1733,
+  "questionNumber": 19,
   "title": "Given a binary tree where each node has an extra `next` pointer, connect each node to its immediate right neighbor on the same level. The last node of each level should point to null.",
   "shortTitle": "Connect Level Order Siblings (Populate Next Right Pointers per Level)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q2543",
   "slug": "strong-consistency-vs-eventual-consistency",
-  "questionNumber": 2543,
+  "questionNumber": 15,
   "title": "Strong consistency vs Eventual consistency — banking needs strong, social media feed can be eventual.",
   "shortTitle": "Strong Consistency vs Eventual Consistency",
   "chapterNumber": 24,

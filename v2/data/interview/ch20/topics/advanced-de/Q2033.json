@@ -1,7 +1,7 @@
 {
   "id": "Q2033",
   "slug": "common-caching-mistakes",
-  "questionNumber": 2033,
+  "questionNumber": 7,
   "title": "What are common caching mistakes — caching everything, assuming `cache()` is eager, caching data used once, forgetting `unpersist()`, confusing `cache()` with `collect()`, thinking cache eliminates shuffle?",
   "shortTitle": "Common caching mistakes",
   "chapterNumber": 20,

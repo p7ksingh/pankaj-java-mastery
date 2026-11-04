@@ -1,7 +1,7 @@
 {
   "id": "Q2305",
   "slug": "convert-intstream-back-to-streaminteger-using-boxed",
-  "questionNumber": 2305,
+  "questionNumber": 17,
   "title": "Convert `IntStream` back to `Stream<Integer>` using `boxed()`.",
   "shortTitle": "Convert IntStream back to Stream<Integer> using boxed()",
   "chapterNumber": 6,

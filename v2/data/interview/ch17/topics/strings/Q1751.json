@@ -1,7 +1,7 @@
 {
   "id": "Q1751",
   "slug": "string-permutations-by-changing-case-letter-case-permutation",
-  "questionNumber": 1751,
+  "questionNumber": 46,
   "title": "Given a string with letters and digits, generate all strings that can be formed by changing the case of the letters, leaving digits unchanged. Explain the doubling technique that forks only on letters.",
   "shortTitle": "String Permutations by Changing Case (Letter Case Permutation)",
   "chapterNumber": 17,

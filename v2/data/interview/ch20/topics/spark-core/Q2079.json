@@ -1,7 +1,7 @@
 {
   "id": "Q2079",
   "slug": "distinct-vs-dropduplicates-in-spark",
-  "questionNumber": 2079,
+  "questionNumber": 46,
   "title": "What is the difference between `distinct()` and `dropDuplicates()` in Spark — `distinct()` removes rows where ALL columns match; `dropDuplicates(cols)` removes rows where only the specified columns match (keeps first occurrence) — and when do you use each?",
   "shortTitle": "distinct vs dropDuplicates in Spark",
   "chapterNumber": 20,

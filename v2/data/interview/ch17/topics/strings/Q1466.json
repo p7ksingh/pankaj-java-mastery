@@ -1,7 +1,7 @@
 {
   "id": "Q1466",
   "slug": "longest-substring-without-repeating-characters-variable-window-hashmap",
-  "questionNumber": 1466,
+  "questionNumber": 24,
   "title": "Longest Substring Without Repeating Characters — variable window + HashMap.",
   "shortTitle": "Longest Substring Without Repeating Characters — Variable Window + HashMap",
   "chapterNumber": 17,

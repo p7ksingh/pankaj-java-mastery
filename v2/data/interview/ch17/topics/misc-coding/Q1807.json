@@ -1,7 +1,7 @@
 {
   "id": "Q1807",
   "slug": "house-thief-maximum-non-adjacent-sum",
-  "questionNumber": 1807,
+  "questionNumber": 40,
   "title": "Given an array of non-negative numbers representing the value in each house along a street, find the maximum total you can collect without taking from two adjacent houses. Explain the Fibonacci Numbers DP pattern, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "House Thief (Maximum Non-Adjacent Sum)",
   "chapterNumber": 17,

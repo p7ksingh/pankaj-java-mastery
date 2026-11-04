@@ -1,7 +1,7 @@
 {
   "id": "Q1720",
   "slug": "first-k-missing-positive-numbers-smallest-k-absent-positives",
-  "questionNumber": 1720,
+  "questionNumber": 27,
   "title": "Given an unsorted array and a positive integer `k`, return the first `k` missing positive numbers in order. The array may contain duplicates, negatives, and zero. Aim for O(n + k) time and O(k) extra space.",
   "shortTitle": "First K Missing Positive Numbers (Smallest K Absent Positives)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q170",
   "slug": "copyonwritearraylist-thread-safe-list-for-read-heavy-scenarios",
-  "questionNumber": 170,
+  "questionNumber": 3,
   "title": "CopyOnWriteArrayList — thread-safe list for read-heavy scenarios",
   "shortTitle": "What is CopyOnWriteArrayList?",
   "chapterNumber": 3,

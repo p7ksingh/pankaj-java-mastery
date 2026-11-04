@@ -1,7 +1,7 @@
 {
   "id": "Q2054",
   "slug": "how-broadcast-joins-interact-with-aqe-runtime-switch-from-ssmj-to-bhj",
-  "questionNumber": 2054,
+  "questionNumber": 5,
   "title": "How do Broadcast Joins interact with AQE — AQE can dynamically switch from SSMJ to BHJ at runtime when it discovers a post-filter table is small enough, even if the initial plan chose SSMJ?",
   "shortTitle": "How Broadcast Joins interact with AQE — runtime switch from SSMJ to BHJ",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q843",
   "slug": "why-does-a-load-balancer-break-things-when-a-server-stores-local-state-why-doesnt-round-robin-guarantee-equal-work-and-why-must-health-checks-verify-the-instance-can-actually-serve",
-  "questionNumber": 843,
+  "questionNumber": 6,
   "title": "Why does putting a load balancer in front of app instances break things when a server stores LOCAL state (a session in App A's memory is invisible when the next request lands on App B) — how do you fix it (externalize session/state to a shared store like Redis, or go fully stateless with JWTs), why does round-robin NOT guarantee equal WORK (a 5ms request vs a multi-second one), and why must health checks verify the instance can actually SERVE (dependency/connection-pool healthy) rather than merely be running?",
   "shortTitle": "Why does a load balancer break things when a server stores local state, why doesn't round robin guarantee equal work, and why must health checks verify the instance can actually serve?",
   "chapterNumber": 10,

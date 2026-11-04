@@ -1,7 +1,7 @@
 {
   "id": "Q423",
   "slug": "unaryoperator-vs-binaryoperator-same-type-specializations-of-function-and-bifunction",
-  "questionNumber": 423,
+  "questionNumber": 6,
   "title": "What is the difference between UnaryOperator<T> (extends Function<T,T>) and BinaryOperator<T> (extends BiFunction<T,T,T>) — they specialize for same-type input/output, used by List.replaceAll, Stream.reduce, Map.merge — and why do these specializations exist?",
   "shortTitle": "UnaryOperator vs BinaryOperator?",
   "chapterNumber": 6,

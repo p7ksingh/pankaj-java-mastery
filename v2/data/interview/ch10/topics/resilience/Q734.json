@@ -1,7 +1,7 @@
 {
   "id": "Q734",
   "slug": "if-two-instances-of-a-service-both-crash-how-do-you-make-the-service-fault-tolerant",
-  "questionNumber": 734,
+  "questionNumber": 2,
   "title": "If you have two instances of a service and both crash, how do you make the service fault tolerant (multi-node, Kubernetes self-healing, auto-scaling, health checks, multi-zone)?",
   "shortTitle": "If two instances of a service both crash, how do you make the service fault tolerant",
   "chapterNumber": 10,

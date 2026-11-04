@@ -1,7 +1,7 @@
 {
   "id": "Q16",
   "slug": "immutable-class-with-a-mutable-field-returned-directly-still-immutable",
-  "questionNumber": 16,
+  "questionNumber": 2,
   "title": "If an immutable class has a mutable field and the getter returns it directly, is the class still immutable, and how do you fix it (defensive copies for objects and collections)?",
   "shortTitle": "Is an immutable class with a mutable field still immutable?",
   "chapterNumber": 1,

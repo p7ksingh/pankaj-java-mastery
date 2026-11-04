@@ -1,7 +1,7 @@
 {
   "id": "Q1321",
   "slug": "how-do-you-implement-a-grpc-service-in-spring-boot-and-how-do-service-discovery-and-health-checking-integrate",
-  "questionNumber": 1321,
+  "questionNumber": 15,
   "title": "How do you implement a gRPC service in Spring Boot — add the `grpc-spring-boot-starter` dependency and the protobuf Maven/Gradle plugin, define your `.proto` file, run code generation, annotate the server implementation with `@GrpcService` (extends the generated `ImplBase`), and inject a client stub with `@GrpcClient(\"service-name\")` — and how does service discovery and health checking integrate (gRPC health checking protocol, Kubernetes gRPC probes, Eureka/Consul)?",
   "shortTitle": "How do you implement a gRPC service in Spring Boot, and how do service discovery and health checking integrate?",
   "chapterNumber": 16,

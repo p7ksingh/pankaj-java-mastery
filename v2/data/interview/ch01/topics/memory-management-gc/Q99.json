@@ -1,7 +1,7 @@
 {
   "id": "Q99",
   "slug": "what-is-object-promotion-what-causes-premature-promotion-and-how-do-you-diagnose-and-fix-it",
-  "questionNumber": 99,
+  "questionNumber": 17,
   "title": "What is object promotion, what causes premature promotion (small survivor space, high allocation rate, large objects), and how do you diagnose and fix it (`-Xlog:gc+age`, SurvivorRatio)?",
   "shortTitle": "What is object promotion and premature promotion?",
   "chapterNumber": 1,

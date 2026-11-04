@@ -1,7 +1,7 @@
 {
   "id": "Q1268",
   "slug": "proxy-pattern-types-virtual-protection-caching-dynamic-remote-and-how-spring-aop-uses-dynamic-proxies",
-  "questionNumber": 1268,
+  "questionNumber": 3,
   "title": "Explain the Proxy pattern types (Virtual/lazy, Protection/access-control, Caching, Dynamic/JDK, Remote) and how Spring AOP uses dynamic proxies.",
   "shortTitle": "Proxy pattern types (Virtual, Protection, Caching, Dynamic, Remote) and how Spring AOP uses dynamic proxies",
   "chapterNumber": 15,

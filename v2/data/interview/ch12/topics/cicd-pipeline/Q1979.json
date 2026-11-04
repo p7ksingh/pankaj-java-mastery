@@ -1,7 +1,7 @@
 {
   "id": "Q1979",
   "slug": "what-on-call-rotation-is-and-what-tools-support-it",
-  "questionNumber": 1979,
+  "questionNumber": 56,
   "title": "What is on-call rotation — team members take turns being the first responder for production issues (usually 1 week at a time) — and what tools are used (PagerDuty, Opsgenie for alerting; Slack/Teams for communication; runbooks for step-by-step fix guides)?",
   "shortTitle": "What on-call rotation is and what tools support it",
   "chapterNumber": 12,

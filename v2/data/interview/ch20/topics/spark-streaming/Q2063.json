@@ -1,7 +1,7 @@
 {
   "id": "Q2063",
   "slug": "event-time-vs-processing-time-in-structured-streaming",
-  "questionNumber": 2063,
+  "questionNumber": 4,
   "title": "What is event time vs processing time in Structured Streaming, why does the distinction matter for correctness (late/out-of-order events get bucketed by when they happened, not when Spark saw them), and how do you specify the event-time column?",
   "shortTitle": "Event time vs processing time in Structured Streaming",
   "chapterNumber": 20,

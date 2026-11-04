@@ -1,7 +1,7 @@
 {
   "id": "Q945",
   "slug": "what-happens-if-a-consumer-crashes-after-consuming-but-before-committing-the-offset-and-how-do-you-ensure-at-least-once",
-  "questionNumber": 945,
+  "questionNumber": 6,
   "title": "What happens if a consumer crashes after consuming but before committing the offset, and how do you ensure at-least-once (manual offset commit)?",
   "shortTitle": "What happens if a consumer crashes after consuming but before committing the offset, and how do you ensure at-least-once?",
   "chapterNumber": 11,

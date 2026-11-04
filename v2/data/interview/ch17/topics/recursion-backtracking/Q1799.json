@@ -1,7 +1,7 @@
 {
   "id": "Q1799",
   "slug": "coin-change-number-of-ways-count-combinations-to-make-an-amount",
-  "questionNumber": 1799,
+  "questionNumber": 22,
   "title": "Given coin denominations and a total amount, count the number of distinct combinations that make up that amount, where each denomination can be used unlimited times. Explain the Unbounded Knapsack counting DP technique, the complexity, and a banking use case.",
   "shortTitle": "Coin Change — Number of Ways (Count Combinations to Make an Amount)",
   "chapterNumber": 17,

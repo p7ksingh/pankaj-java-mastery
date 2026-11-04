@@ -1,7 +1,7 @@
 {
   "id": "Q1790",
   "slug": "median-of-two-sorted-arrays-k-way-merge-view-of-the-middle-element",
-  "questionNumber": 1790,
+  "questionNumber": 106,
   "title": "Given two sorted arrays, find the median of the combined sorted order. Explain how the K-way Merge pattern locates the middle without fully merging, the complexity, and a banking use case.",
   "shortTitle": "Median of Two Sorted Arrays (K-way Merge View of the Middle Element)",
   "chapterNumber": 17,

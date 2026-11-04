@@ -1,7 +1,7 @@
 {
   "id": "Q195",
   "slug": "throw-early-catch-late-fail-fast-at-boundary-handle-at-the-layer-with-context",
-  "questionNumber": 195,
+  "questionNumber": 3,
   "title": "What do \"throw early, catch late\" mean, and how does this shape clean layering (service throws, controller/boundary catches)?",
   "shortTitle": "What does throw early, catch late mean?",
   "chapterNumber": 4,

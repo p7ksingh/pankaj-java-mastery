@@ -1,7 +1,7 @@
 {
   "id": "Q1480",
   "slug": "merge-k-sorted-linked-lists-using-a-min-heap-of-the-k-heads",
-  "questionNumber": 1480,
+  "questionNumber": 7,
   "title": "Merge K sorted linked lists into one single sorted linked list. You are given an array of K list heads, each list already sorted ascending, and you must return one combined sorted list efficiently.",
   "shortTitle": "Merge K Sorted Linked Lists Using a Min-Heap of the K Heads",
   "chapterNumber": 17,

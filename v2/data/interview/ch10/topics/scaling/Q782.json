@@ -1,7 +1,7 @@
 {
   "id": "Q782",
   "slug": "how-do-you-handle-a-hot-row-that-many-requests-update-at-once",
-  "questionNumber": 782,
+  "questionNumber": 9,
   "title": "How do you handle a hot row that many requests update at once (e.g. a shared like/stock counter) — counter sharding (split into N sub-counters and sum) or buffering increments in Redis and periodically syncing to the DB?",
   "shortTitle": "How do you handle a hot row that many requests update at once",
   "chapterNumber": 10,

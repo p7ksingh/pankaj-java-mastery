@@ -1,7 +1,7 @@
 {
   "id": "Q2326",
   "slug": "use-a-constructor-reference-employeenew-to-create-employees-from-a-stream-of-data",
-  "questionNumber": 2326,
+  "questionNumber": 4,
   "title": "Use a constructor reference `Employee::new` to create employees from a stream of data.",
   "shortTitle": "Use a constructor reference Employee::new to create employees from a stream of data",
   "chapterNumber": 6,

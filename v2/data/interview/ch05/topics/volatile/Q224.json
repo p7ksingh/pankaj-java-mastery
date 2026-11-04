@@ -1,7 +1,7 @@
 {
   "id": "Q224",
   "slug": "can-volatile-alone-guarantee-thread-safety-for-a-counter-no-use-atomicinteger-or-synchronized",
-  "questionNumber": 224,
+  "questionNumber": 3,
   "title": "Can volatile alone guarantee thread safety for a counter? No — use AtomicInteger or synchronized",
   "shortTitle": "Can volatile alone guarantee thread safety for a counter?",
   "chapterNumber": 5,

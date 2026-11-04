@@ -1,7 +1,7 @@
 {
   "id": "Q151",
   "slug": "hashmap-internals-hashing-buckets-load-factor-resize-java-8-treeification",
-  "questionNumber": 151,
+  "questionNumber": 4,
   "title": "HashMap internals — hashing, buckets, load factor, resize, Java 8 treeification",
   "shortTitle": "How does HashMap work internally?",
   "chapterNumber": 3,

@@ -1,7 +1,7 @@
 {
   "id": "Q1328",
   "slug": "what-are-records-java-16-what-does-the-compiler-generate-can-you-add-validation-and-what-are-their-constraints",
-  "questionNumber": 1328,
+  "questionNumber": 22,
   "title": "What are Records (Java 16), what does the compiler generate, can you add validation (compact constructor), and what are their constraints (implicitly final, no class extension)?",
   "shortTitle": "What are Records (Java 16), what does the compiler generate, can you add validation, and what are their constraints?",
   "chapterNumber": 16,

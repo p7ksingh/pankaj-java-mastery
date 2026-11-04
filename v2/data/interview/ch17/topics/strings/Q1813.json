@@ -1,7 +1,7 @@
 {
   "id": "Q1813",
   "slug": "palindromic-partitioning-minimum-cuts-to-split-a-string-into-palindromes",
-  "questionNumber": 1813,
+  "questionNumber": 52,
   "title": "Given a string, find the minimum number of cuts needed so that every resulting piece is a palindrome. Explain how the Palindromic Subsequence pattern combines with a cut dynamic program, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Palindromic Partitioning (Minimum Cuts to Split a String into Palindromes)",
   "chapterNumber": 17,

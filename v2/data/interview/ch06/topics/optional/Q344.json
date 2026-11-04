@@ -1,7 +1,7 @@
 {
   "id": "Q344",
   "slug": "optional-designed-for-return-types-only-anti-patterns-field-parameter-collection-element-get",
-  "questionNumber": 344,
+  "questionNumber": 4,
   "title": "What is Optional actually designed for (a method RETURN type signalling \"value may be absent\"), and why is it an anti-pattern to use it as a field, a method parameter, or a collection element (not Serializable, extra allocation, awkward callers), and why is calling .get() without checking a code smell?",
   "shortTitle": "What are the Optional anti-patterns?",
   "chapterNumber": 6,

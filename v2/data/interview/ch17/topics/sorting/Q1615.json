@@ -1,7 +1,7 @@
 {
   "id": "Q1615",
   "slug": "topological-sort-and-cycle-detection-course-schedule-via-kahns-algorithm",
-  "questionNumber": 1615,
+  "questionNumber": 12,
   "title": "Given tasks with prerequisite dependencies, produce a valid order to complete them, or detect that no order exists because of a cycle, using topological sort.",
   "shortTitle": "Topological Sort and Cycle Detection (Course Schedule via Kahn's Algorithm)",
   "chapterNumber": 17,

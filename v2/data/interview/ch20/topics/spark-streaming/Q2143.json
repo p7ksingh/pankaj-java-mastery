@@ -1,7 +1,7 @@
 {
   "id": "Q2143",
   "slug": "aligned-vs-unaligned-checkpoints-in-flink",
-  "questionNumber": 2143,
+  "questionNumber": 17,
   "title": "What is the difference between aligned checkpoints (all channels must receive barrier before snapshot, can cause backpressure amplification) and unaligned checkpoints (Flink 1.11+, snapshot includes in-flight data, reduces checkpoint duration under backpressure)?",
   "shortTitle": "Aligned vs unaligned checkpoints in Flink",
   "chapterNumber": 20,

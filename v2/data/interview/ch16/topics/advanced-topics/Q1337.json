@@ -1,7 +1,7 @@
 {
   "id": "Q1337",
   "slug": "what-is-off-heap-memory-when-do-you-use-it-and-what-are-the-risks",
-  "questionNumber": 1337,
+  "questionNumber": 29,
   "title": "What is off-heap memory (`ByteBuffer.allocateDirect`, Foreign Function & Memory API / Arena in Java 22+), when do you use it (large caches, network I/O, IPC, native integration), and what are the risks?",
   "shortTitle": "What is off-heap memory, when do you use it, and what are the risks?",
   "chapterNumber": 16,

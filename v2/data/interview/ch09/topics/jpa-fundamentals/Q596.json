@@ -1,7 +1,7 @@
 {
   "id": "Q596",
   "slug": "entity-lifecycle-states-persist-vs-merge-auditing-optimisticpessimistic-locking-keyset-pagination",
-  "questionNumber": 596,
+  "questionNumber": 2,
   "title": "What are the 4 entity states (Transient/Managed/Detached/Removed)? persist vs merge? EntityManager operations + JPQL? Auditing (@CreatedDate + Envers)? Lifecycle callbacks (@PrePersist)? Optimistic (@Version) vs pessimistic (@Lock)? Offset vs keyset pagination?",
   "shortTitle": "What are entity lifecycle states?",
   "chapterNumber": 9,

@@ -1,7 +1,7 @@
 {
   "id": "Q212",
   "slug": "designing-a-thread-safe-class-immutable-confinement-delegation-locking-strategies",
-  "questionNumber": 212,
+  "questionNumber": 3,
   "title": "Designing a thread-safe class — immutable, confinement, delegation, locking strategies",
   "shortTitle": "How do you design a thread-safe class?",
   "chapterNumber": 5,

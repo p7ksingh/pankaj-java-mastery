@@ -1,7 +1,7 @@
 {
   "id": "Q1802",
   "slug": "fibonacci-numbers-compute-the-nth-fibonacci-with-dynamic-programming",
-  "questionNumber": 1802,
+  "questionNumber": 18,
   "title": "Compute the Nth Fibonacci number, where each number is the sum of the two preceding ones. Explain the Fibonacci Numbers dynamic programming pattern, bottom-up versus memoization, the complexity, and a banking use case.",
   "shortTitle": "Fibonacci Numbers (Compute the Nth Fibonacci with Dynamic Programming)",
   "chapterNumber": 17,

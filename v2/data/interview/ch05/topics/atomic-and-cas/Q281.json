@@ -1,7 +1,7 @@
 {
   "id": "Q281",
   "slug": "compare-and-swap-cas-lock-free-atomic-classes-spinning-hurt-under-high-contention",
-  "questionNumber": 281,
+  "questionNumber": 3,
   "title": "Compare-And-Swap (CAS) — lock-free Atomic classes, spinning hurt under high contention",
   "shortTitle": "How does Compare-And-Swap work?",
   "chapterNumber": 5,

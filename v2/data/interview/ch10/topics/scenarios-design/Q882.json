@@ -1,7 +1,7 @@
 {
   "id": "Q882",
   "slug": "how-would-you-introduce-a-breaking-event-schema-change-used-by-15-consumers",
-  "questionNumber": 882,
+  "questionNumber": 62,
   "title": "(Scenario) How would you introduce a breaking event-schema change used by 15 consumers — why must you avoid requiring fifteen teams to deploy at the same moment (use a compatibility strategy: additive evolution, a new event version, dual publication during a controlled period, or consumer changes before producer changes), and why is the technical schema only part of the problem (once fifteen teams depend on an event, changing it becomes an organizational migration)?",
   "shortTitle": "How would you introduce a breaking event-schema change used by 15 consumers?",
   "chapterNumber": 10,

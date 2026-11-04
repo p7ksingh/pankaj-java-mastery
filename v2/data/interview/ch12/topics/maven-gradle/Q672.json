@@ -1,7 +1,7 @@
 {
   "id": "Q672",
   "slug": "devops-docker-multi-stage-k8s-deployment-cicd-pipeline-maven-lifecycle",
-  "questionNumber": 672,
+  "questionNumber": 1,
   "title": "Explain how you take a Java banking microservice from source code to running in production using Docker multi-stage builds, Kubernetes deployment, a CI/CD pipeline, and the Maven build lifecycle. Cover Docker, K8s, Helm, CI/CD, Maven vs Gradle, Git branching, SonarQube, and zero-downtime deployment.",
   "shortTitle": "DevOps — Docker multi-stage, K8s deployment, CI/CD pipeline, Maven lifecycle",
   "chapterNumber": 12,

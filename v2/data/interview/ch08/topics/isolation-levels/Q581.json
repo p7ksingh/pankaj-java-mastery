@@ -1,7 +1,7 @@
 {
   "id": "Q581",
   "slug": "isolation-level-vs-lock-db-wide-behavior-vs-row-level-lock-can-they-be-used-together",
-  "questionNumber": 581,
+  "questionNumber": 3,
   "title": "What is the difference between a transaction isolation level and @Lock in Spring Boot, and can they be used together?",
   "shortTitle": "Isolation level vs @Lock — how do they interact?",
   "chapterNumber": 8,

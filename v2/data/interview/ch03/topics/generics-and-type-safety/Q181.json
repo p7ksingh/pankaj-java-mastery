@@ -1,7 +1,7 @@
 {
-  "id": "Q181-collections",
-  "slug": "generic-classes-methods-bounded-types-wildcards-pecs-rule",
-  "questionNumber": 181,
+  "id": "Q181",
+  "slug": "generic-classes-methods-bounded-types-wildcards-pecs",
+  "questionNumber": 2,
   "title": "Generic classes, methods, bounded types, wildcards, PECS rule",
   "shortTitle": "What are bounded types, wildcards, and PECS?",
   "chapterNumber": 3,

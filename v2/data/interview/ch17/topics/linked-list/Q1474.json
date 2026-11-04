@@ -1,7 +1,7 @@
 {
   "id": "Q1474",
   "slug": "detect-a-cycle-in-a-linked-list-floyds-slowfast-pointer",
-  "questionNumber": 1474,
+  "questionNumber": 4,
   "title": "Detect a cycle in a linked list (Floyd's slow/fast pointer).",
   "shortTitle": "Detect a Cycle in a Linked List — Floyd's Slow/Fast Pointer",
   "chapterNumber": 17,

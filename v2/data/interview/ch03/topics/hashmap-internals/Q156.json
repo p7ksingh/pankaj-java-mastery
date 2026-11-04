@@ -1,7 +1,7 @@
 {
   "id": "Q156",
   "slug": "concurrenthashmap-internals-java-7-segments-vs-java-8-cas-per-bucket-sync-treeify",
-  "questionNumber": 156,
+  "questionNumber": 9,
   "title": "ConcurrentHashMap internals — Java 7 segments vs Java 8 CAS + per-bucket sync + treeify",
   "shortTitle": "How does ConcurrentHashMap work internally?",
   "chapterNumber": 3,

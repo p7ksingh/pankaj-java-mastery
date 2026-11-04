@@ -1,7 +1,7 @@
 {
   "id": "Q2360",
   "slug": "find-all-prime-numbers-up-to-n-using-intstream-and-a-predicate",
-  "questionNumber": 2360,
+  "questionNumber": 2,
   "title": "Find all prime numbers up to N using `IntStream` and a predicate.",
   "shortTitle": "Find prime numbers using IntStream",
   "chapterNumber": 6,

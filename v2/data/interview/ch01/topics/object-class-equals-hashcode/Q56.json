@@ -1,7 +1,7 @@
 {
   "id": "Q56",
   "slug": "the-risks-of-overriding-equals-but-not-hashcode-and-what-happens-in-hash-based-collections",
-  "questionNumber": 56,
+  "questionNumber": 4,
   "title": "What are the risks of overriding `equals()` but NOT `hashCode()`, and what happens in hash-based collections if only one is overridden or neither is?",
   "shortTitle": "What happens if you override equals() but not hashCode()?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q583",
   "slug": "connection-pool-exhaustion-slow-calls-inside-tx-threadpool-mismatch-and-why-increasing-pool-is-wrong",
-  "questionNumber": 583,
+  "questionNumber": 2,
   "title": "Why avoid slow network calls inside a TX? Why can the pool exhaust even when DB is healthy? Why does 200 Tomcat threads + 10 HikariCP connections = \"DB fast but app slow\"? Why is increasing pool the wrong fix?",
   "shortTitle": "What causes connection pool exhaustion?",
   "chapterNumber": 8,

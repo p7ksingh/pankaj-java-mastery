@@ -1,7 +1,7 @@
 {
   "id": "Q283",
   "slug": "mutex-vs-semaphore-ownership-locking-vs-permit-count-signaling",
-  "questionNumber": 283,
+  "questionNumber": 3,
   "title": "Mutex vs Semaphore — ownership locking vs permit-count signaling",
   "shortTitle": "Mutex vs Semaphore?",
   "chapterNumber": 5,

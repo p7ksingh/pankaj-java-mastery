@@ -1,7 +1,7 @@
 {
   "id": "Q2626",
   "slug": "add-two-numbers-read-a-and-b-print-their-sum",
-  "questionNumber": 2626,
+  "questionNumber": 17,
   "title": "Draw a flowchart that reads two numbers A and B, computes their sum, and prints the result. Start, read A, read B, sum = A + B, print sum, End. Input: 4 7, Expected Output: 11.",
   "shortTitle": "Add Two Numbers — read A and B, print their sum",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1804",
   "slug": "number-factors-count-ways-to-express-n-as-a-sum-of-1-3-and-4",
-  "questionNumber": 1804,
+  "questionNumber": 14,
   "title": "Given a number N, count the number of distinct ways to express it as an ordered sum using only the factors one, three, and four. Explain the Fibonacci Numbers DP pattern, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Number Factors (Count Ways to Express N as a Sum of 1, 3, and 4)",
   "chapterNumber": 17,

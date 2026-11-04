@@ -1,7 +1,7 @@
 {
   "id": "Q20",
   "slug": "what-is-the-string-pool-and-how-it-decides-reuse",
-  "questionNumber": 20,
+  "questionNumber": 2,
   "title": "What is the String Pool (intern pool) in Java, and how does it decide whether to reuse an existing reference or create a new object?",
   "shortTitle": "What is the String Pool and how does it decide reuse?",
   "chapterNumber": 1,

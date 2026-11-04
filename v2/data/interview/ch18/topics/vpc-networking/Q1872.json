@@ -1,7 +1,7 @@
 {
   "id": "Q1872",
   "slug": "internet-gateway-versus-nat-gateway",
-  "questionNumber": 1872,
+  "questionNumber": 3,
   "title": "What is an Internet Gateway vs a NAT Gateway, and why does a private subnet need a NAT Gateway for outbound internet while blocking inbound?",
   "shortTitle": "Internet Gateway versus NAT Gateway",
   "chapterNumber": 18,

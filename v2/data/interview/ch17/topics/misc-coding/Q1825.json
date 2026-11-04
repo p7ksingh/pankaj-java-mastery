@@ -1,7 +1,7 @@
 {
   "id": "Q1825",
   "slug": "all-tasks-scheduling-orders-enumerate-every-valid-completion-order",
-  "questionNumber": 1825,
+  "questionNumber": 45,
   "title": "Given a number of tasks and prerequisite pairs, enumerate every valid order in which all tasks can be completed. Explain how the Topological Sort pattern combines with backtracking, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "All Tasks Scheduling Orders (Enumerate Every Valid Completion Order)",
   "chapterNumber": 17,

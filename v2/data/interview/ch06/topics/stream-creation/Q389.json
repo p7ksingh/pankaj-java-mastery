@@ -1,7 +1,7 @@
 {
   "id": "Q389",
   "slug": "streamiterate-streamgenerate-intstreamrangerangeclosed-boxed-infinite-streams-limit",
-  "questionNumber": 389,
+  "questionNumber": 1,
   "title": "How do you build streams with Stream.iterate, Stream.generate, and IntStream.range/rangeClosed + boxed(), and why must infinite streams be bounded with limit?",
   "shortTitle": "Stream.iterate, Stream.generate, IntStream.range/rangeClosed + boxed(), infinite streams + limit",
   "chapterNumber": 6,

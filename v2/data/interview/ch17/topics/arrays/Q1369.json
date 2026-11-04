@@ -1,7 +1,7 @@
 {
   "id": "Q1369",
   "slug": "reverse-a-string",
-  "questionNumber": 1369,
+  "questionNumber": 7,
   "title": "Reverse a string (convert to char array, swap from both ends, or use StringBuilder.reverse()).",
   "shortTitle": "Reverse a string",
   "chapterNumber": 17,

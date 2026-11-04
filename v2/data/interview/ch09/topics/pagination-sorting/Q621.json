@@ -1,7 +1,7 @@
 {
   "id": "Q621",
   "slug": "pagination-and-sorting-in-jpa-entitymanager-setfirstresultsetmaxresults-spring-data-pageablesort",
-  "questionNumber": 621,
+  "questionNumber": 1,
   "title": "How do you perform pagination and sorting in JPA (EntityManager setFirstResult/setMaxResults, Spring Data Pageable/Sort)?",
   "shortTitle": "How does pagination work in JPA and Spring Data?",
   "chapterNumber": 9,

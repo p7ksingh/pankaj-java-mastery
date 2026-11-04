@@ -1,7 +1,7 @@
 {
   "id": "Q2151",
   "slug": "what-is-a-dynamic-table-in-flink-sql",
-  "questionNumber": 2151,
+  "questionNumber": 14,
   "title": "What is a dynamic table in Flink SQL — a logical table that changes over time as new rows arrive or existing rows are updated/deleted — and how does it differ from a static batch table?",
   "shortTitle": "What is a dynamic table in Flink SQL",
   "chapterNumber": 20,

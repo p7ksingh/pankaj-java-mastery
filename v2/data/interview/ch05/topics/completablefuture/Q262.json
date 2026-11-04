@@ -1,7 +1,7 @@
 {
   "id": "Q262",
   "slug": "fan-out-amplification-nk-load-connection-pools-rate-limits-timeouts-circuit-breakers",
-  "questionNumber": 262,
+  "questionNumber": 16,
   "title": "Fan-out amplification — N×K load, connection pools, rate limits, timeouts, circuit breakers",
   "shortTitle": "What is fan-out amplification?",
   "chapterNumber": 5,

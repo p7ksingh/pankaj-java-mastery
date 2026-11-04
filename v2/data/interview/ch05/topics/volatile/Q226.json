@@ -1,7 +1,7 @@
 {
   "id": "Q226",
   "slug": "whileflag-never-terminates-jvm-cachinghoisting-volatile-fix",
-  "questionNumber": 226,
+  "questionNumber": 5,
   "title": "while(flag){} never terminates — JVM caching/hoisting, volatile fix",
   "shortTitle": "Why does while(flag){} never terminate without volatile?",
   "chapterNumber": 5,

@@ -1,7 +1,7 @@
 {
   "id": "Q1706",
   "slug": "contiguous-array-longest-subarray-with-equal-zeros-and-ones",
-  "questionNumber": 1706,
+  "questionNumber": 82,
   "title": "Given a binary array of zeros and ones, find the length of the longest contiguous subarray that contains an equal number of zeros and ones. Solve it with the prefix-sum and first-occurrence hash-map pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Contiguous Array (Longest Subarray with Equal Zeros and Ones)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q59",
   "slug": "how-to-compare-two-values-safely-when-either-may-be-null-and-why-literalequalsvar-is-preferred",
-  "questionNumber": 59,
+  "questionNumber": 7,
   "title": "How do you compare two values safely when either may be `null` (`Objects.equals(a, b)`), and why is `\"literal\".equals(var)` preferred over `var.equals(\"literal\")`?",
   "shortTitle": "How do you compare two values safely when either may be null?",
   "chapterNumber": 1,

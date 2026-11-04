@@ -1,7 +1,7 @@
 {
   "id": "Q2078",
   "slug": "groupbykey-vs-reducebykey-in-spark",
-  "questionNumber": 2078,
+  "questionNumber": 45,
   "title": "What is the difference between `groupByKey()` and `reduceByKey()` — `groupByKey` shuffles ALL values for each key to one partition then aggregates; `reduceByKey` combines values on each partition BEFORE shuffling (map-side pre-aggregation) — and why is `reduceByKey` almost always preferred (less data shuffled)?",
   "shortTitle": "groupByKey vs reduceByKey in Spark",
   "chapterNumber": 20,

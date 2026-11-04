@@ -1,7 +1,7 @@
 {
   "id": "Q2072",
   "slug": "speculative-execution-in-spark",
-  "questionNumber": 2072,
+  "questionNumber": 40,
   "title": "What is speculative execution in Spark (`spark.speculation=true`) — Spark detects slow-running tasks (stragglers) and launches duplicate copies on other executors; whichever finishes first wins — and when should you enable it (heterogeneous clusters, unreliable nodes) vs disable it (all tasks equally slow due to skew — speculation wastes resources)?",
   "shortTitle": "Speculative execution in Spark",
   "chapterNumber": 20,

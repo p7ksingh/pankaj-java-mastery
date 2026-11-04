@@ -1,7 +1,7 @@
 {
   "id": "Q1479",
   "slug": "merge-two-sorted-linked-lists-into-one-sorted-list",
-  "questionNumber": 1479,
+  "questionNumber": 6,
   "title": "Merge two sorted linked lists into one single sorted linked list. Both input lists are sorted in ascending order and you must return one combined list that is still sorted.",
   "shortTitle": "Merge Two Sorted Linked Lists Into One Sorted List",
   "chapterNumber": 17,

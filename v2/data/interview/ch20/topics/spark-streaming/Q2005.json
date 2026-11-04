@@ -1,7 +1,7 @@
 {
   "id": "Q2005",
   "slug": "sql-window-functions-month-over-month-balance-growth-and-duplicate-detection",
-  "questionNumber": 2005,
+  "questionNumber": 1,
   "title": "Write a query to find accounts whose average daily balance increased month over month for the last 3 months (window functions `AVG(...) OVER` + `LAG` across month buckets), and detect duplicate transactions (`ROW_NUMBER() OVER (PARTITION BY ...)`).",
   "shortTitle": "SQL window functions — month-over-month balance growth and duplicate detection",
   "chapterNumber": 20,

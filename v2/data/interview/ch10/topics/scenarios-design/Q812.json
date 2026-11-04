@@ -1,7 +1,7 @@
 {
   "id": "Q812",
   "slug": "how-would-you-design-an-otp-service-that-survives-a-login-spike",
-  "questionNumber": 812,
+  "questionNumber": 31,
   "title": "How would you design an OTP service that survives a login spike (50k RPS onto a 10k/min SMS provider) — the key fix is the \"Resend\" button re-sends the EXISTING valid OTP instead of generating a new one, plus multi-level rate limiting, queue buffering with TTL/priority to absorb the spike, provider failover, and TOTP/email as provider-independent fallbacks?",
   "shortTitle": "How would you design an OTP service that survives a login spike",
   "chapterNumber": 10,

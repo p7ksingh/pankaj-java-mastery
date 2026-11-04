@@ -1,7 +1,7 @@
 {
   "id": "Q177",
   "slug": "checked-vs-unchecked-exceptions-compile-time-vs-runtime-argument-against-checked",
-  "questionNumber": 177,
+  "questionNumber": 1,
   "title": "What is the difference between a checked and an unchecked exception (compile-time vs runtime), with examples, and what is the argument against checked exceptions in modern APIs?",
   "shortTitle": "What is the difference between checked and unchecked exceptions?",
   "chapterNumber": 4,

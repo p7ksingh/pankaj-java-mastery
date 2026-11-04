@@ -1,7 +1,7 @@
 {
   "id": "Q1295",
   "slug": "how-do-sealed-classes-help-implement-algebraic-data-types-adts",
-  "questionNumber": 1295,
+  "questionNumber": 7,
   "title": "How do sealed classes help implement algebraic data types (ADTs)?",
   "shortTitle": "How do sealed classes help implement algebraic data types (ADTs)?",
   "chapterNumber": 16,

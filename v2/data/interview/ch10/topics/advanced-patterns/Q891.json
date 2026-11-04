@@ -1,7 +1,7 @@
 {
   "id": "Q891",
   "slug": "what-is-the-raft-consensus-algorithm-and-where-is-it-used-in-practice",
-  "questionNumber": 891,
+  "questionNumber": 5,
   "title": "What is the Raft consensus algorithm — a protocol for achieving agreement across a cluster of nodes on a shared log, using leader election (candidates request votes, majority wins), log replication (the leader appends entries and replicates to followers, committing when a majority acknowledges), and safety (committed entries are never lost even if the leader changes) — and where is it used in practice (etcd for Kubernetes, Consul for service discovery, Kafka KRaft replacing ZooKeeper for metadata consensus)?",
   "shortTitle": "What is the Raft consensus algorithm, and where is it used in practice?",
   "chapterNumber": 10,

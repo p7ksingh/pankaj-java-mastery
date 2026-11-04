@@ -1,7 +1,7 @@
 {
   "id": "Q2321",
   "slug": "merge-two-mapstring-integer-maps-summing-values-for-duplicate-keys",
-  "questionNumber": 2321,
+  "questionNumber": 24,
   "title": "Merge two `Map<String, Integer>` maps, summing values for duplicate keys using `Map.merge` or stream.",
   "shortTitle": "Merge two Map<String, Integer> maps, summing values for duplicate keys",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q923",
   "slug": "how-idempotent-producers-help-achieve-exactly-once-semantics-and-why-it-matters",
-  "questionNumber": 923,
+  "questionNumber": 3,
   "title": "How do idempotent producers help achieve exactly-once semantics, and why does it matter?",
   "shortTitle": "How idempotent producers help achieve exactly-once semantics, and why it matters",
   "chapterNumber": 11,

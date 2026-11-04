@@ -1,7 +1,7 @@
 {
   "id": "Q165",
   "slug": "can-you-instantiate-an-abstract-class-no-but-anonymous-subclass-can",
-  "questionNumber": 165,
+  "questionNumber": 3,
   "title": "Can you instantiate an abstract class directly (new AbstractClass())? No — but you CAN create an anonymous subclass (new AbstractClass() { ... }). How does this relate to anonymous classes?",
   "shortTitle": "Can you instantiate an abstract class?",
   "chapterNumber": 2,

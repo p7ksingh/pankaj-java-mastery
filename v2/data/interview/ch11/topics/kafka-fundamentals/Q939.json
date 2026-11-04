@@ -1,7 +1,7 @@
 {
   "id": "Q939",
   "slug": "how-many-partitions-should-a-topic-have-what-are-the-real-constraints-and-why-can-you-never-decrease-partition-count",
-  "questionNumber": 939,
+  "questionNumber": 6,
   "title": "How many partitions should a topic have, what are the real constraints, and why can you never decrease partition count?",
   "shortTitle": "How many partitions should a topic have, what are the real constraints, and why can you never decrease partition count?",
   "chapterNumber": 11,

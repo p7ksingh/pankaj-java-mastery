@@ -1,7 +1,7 @@
 {
   "id": "Q741",
   "slug": "why-should-you-first-clarify-what-1-million-users-means",
-  "questionNumber": 741,
+  "questionNumber": 6,
   "title": "Why should you first clarify what \"1 million users\" means (registered vs daily-active vs concurrent) before designing, since the real driver is requests/sec, read/write ratio, data size, and latency/consistency requirements?",
   "shortTitle": "Why should you first clarify what \"1 million users\" means",
   "chapterNumber": 10,

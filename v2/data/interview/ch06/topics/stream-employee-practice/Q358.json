@@ -1,7 +1,7 @@
 {
   "id": "Q358",
   "slug": "merge-two-employee-lists-unique-by-id-keep-existing-and-deep-merge-strategies",
-  "questionNumber": 358,
+  "questionNumber": 7,
   "title": "How do you merge two employee lists and return a unique list keyed by employee id (keep-existing and deep-merge)?",
   "shortTitle": "Merge two employee lists — unique by ID, keep-existing and deep-merge strategies",
   "chapterNumber": 6,

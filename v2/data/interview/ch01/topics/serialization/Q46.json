@@ -1,7 +1,7 @@
 {
   "id": "Q46",
   "slug": "why-you-should-not-serialize-an-object-directly-into-a-plain-text-file",
-  "questionNumber": 46,
+  "questionNumber": 5,
   "title": "Why shouldn't you serialize an object directly into a plain text file (binary byte stream, fidelity loss, security, inefficiency)?",
   "shortTitle": "Why should you not serialize to a plain text file?",
   "chapterNumber": 1,

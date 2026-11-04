@@ -1,7 +1,7 @@
 {
   "id": "Q367",
   "slug": "find-the-second-largest-number-from-a-list-using-streams",
-  "questionNumber": 367,
+  "questionNumber": 3,
   "title": "Write a Java 8 program to find the second-largest number from a list using streams.",
   "shortTitle": "Find the second-largest number from a list using streams",
   "chapterNumber": 6,

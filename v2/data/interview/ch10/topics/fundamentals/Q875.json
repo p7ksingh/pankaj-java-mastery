@@ -1,7 +1,7 @@
 {
   "id": "Q875",
   "slug": "why-does-shared-database-access-between-microservices-weaken-their-independence-and-what-are-the-alternatives",
-  "questionNumber": 875,
+  "questionNumber": 11,
   "title": "Why does shared-database access between microservices weaken the independence the architecture diagram suggests (schema changes require coordination, business rules can be bypassed, no clear ownership of state), and what are the alternatives (explicit data ownership, controlled interfaces, replicated views, events, reporting stores)?",
   "shortTitle": "Why does shared-database access between microservices weaken their independence, and what are the alternatives?",
   "chapterNumber": 10,

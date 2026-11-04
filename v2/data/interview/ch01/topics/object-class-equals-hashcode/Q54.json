@@ -1,7 +1,7 @@
 {
   "id": "Q54",
   "slug": "the-difference-between-javalangobject-and-javautilobjects-and-the-key-objects-methods",
-  "questionNumber": 54,
+  "questionNumber": 2,
   "title": "What is the difference between `java.lang.Object` (the root class every object inherits from) and `java.util.Objects` (a final utility class of static null-safe helpers), and what are the key `Objects` methods — `requireNonNull`, `equals`/`hashCode`/`hash(...)`, `toString(obj, default)`, and `isNull`/`nonNull`?",
   "shortTitle": "What is the difference between Object and Objects?",
   "chapterNumber": 1,

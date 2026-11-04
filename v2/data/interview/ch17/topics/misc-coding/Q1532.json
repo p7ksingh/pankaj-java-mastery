@@ -1,7 +1,7 @@
 {
   "id": "Q1532",
   "slug": "replace-words-trie-for-shortest-prefix-root-replacement",
-  "questionNumber": 1532,
+  "questionNumber": 11,
   "title": "Given a dictionary of root words and a sentence, replace every word in the sentence that has a root in the dictionary as a prefix with the shortest such root. Return the resulting sentence.",
   "shortTitle": "Replace Words — Trie for shortest prefix (root) replacement",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1370",
   "slug": "check-if-a-string-is-a-palindrome",
-  "questionNumber": 1370,
+  "questionNumber": 2,
   "title": "Check if a string is a palindrome (same forwards and backwards, e.g., \"madam\") — compare first and last characters moving inward.",
   "shortTitle": "Check if a string is a palindrome",
   "chapterNumber": 17,

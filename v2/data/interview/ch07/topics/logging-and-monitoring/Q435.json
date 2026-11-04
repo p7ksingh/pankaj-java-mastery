@@ -1,7 +1,7 @@
 {
   "id": "Q435",
   "slug": "spring-boot-actuator-health-metrics-prometheus-custom-healthindicator-runtime-log-change",
-  "questionNumber": 435,
+  "questionNumber": 1,
   "title": "What is Actuator, how do you expose endpoints, how do you add a custom health check, how do you run it on a separate port, and what is Spring Boot Admin?",
   "shortTitle": "What is Spring Boot Actuator?",
   "chapterNumber": 7,

@@ -1,7 +1,7 @@
 {
   "id": "Q652",
   "slug": "onetomany-manytoone-joincolumn-mappedby-two-table-relationship",
-  "questionNumber": 652,
+  "questionNumber": 2,
   "title": "How do you map a two-table parent-child relationship with @OneToMany, @ManyToOne, @JoinColumn and mappedBy, and what does each annotation control?",
   "shortTitle": "What is @OneToMany / @ManyToOne / @JoinColumn / mappedBy?",
   "chapterNumber": 9,

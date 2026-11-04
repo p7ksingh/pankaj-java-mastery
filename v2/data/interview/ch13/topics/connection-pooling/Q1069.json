@@ -1,7 +1,7 @@
 {
   "id": "Q1069",
   "slug": "one-slow-query-drags-the-whole-app-down-connection-pool-exhaustion",
-  "questionNumber": 1069,
+  "questionNumber": 1,
   "title": "(Scenario) A database query that USED to be fast becomes slow and starts slowing down OTHER, unrelated requests too — why does one slow query drag the whole application down, and how do you fix it? (Every request needs a connection from a small pool, e.g. 10 connections. If one query holds its connection for 10 seconds instead of 50 ms, those connections are tied up, so other requests must WAIT for a free connection — now even fast queries look slow and the whole app feels frozen.)",
   "shortTitle": "One slow query drags the whole app down — connection pool exhaustion",
   "chapterNumber": 13,

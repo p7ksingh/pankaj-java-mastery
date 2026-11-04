@@ -1,7 +1,7 @@
 {
   "id": "Q376",
   "slug": "filesreadstringwritestring-string-isblankstriplinesrepeat-optionalisempty-strip-vs-trim",
-  "questionNumber": 376,
+  "questionNumber": 3,
   "title": "How do Files.readString/writeString, String.isBlank/strip/lines/repeat, and Optional.isEmpty() simplify Java 11 code, and what is strip() vs trim() (Unicode-aware)?",
   "shortTitle": "What String and Optional improvements came in Java 11?",
   "chapterNumber": 6,

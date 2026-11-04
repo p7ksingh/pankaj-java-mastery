@@ -1,7 +1,7 @@
 {
   "id": "Q1134",
   "slug": "handling-time-zones-for-queries-meant-to-run-at-a-specific-time",
-  "questionNumber": 1134,
+  "questionNumber": 19,
   "title": "How do you handle time zones for queries meant to run at a specific time (store UTC, convert on read, timezone-aware scheduling, NTP, DST)?",
   "shortTitle": "Handling Time Zones for Queries Meant to Run at a Specific Time",
   "chapterNumber": 13,

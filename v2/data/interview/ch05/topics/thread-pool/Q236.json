@@ -1,7 +1,7 @@
 {
   "id": "Q236",
   "slug": "thread-pool-why-how-executors-types-fixed-cached-single-scheduled",
-  "questionNumber": 236,
+  "questionNumber": 1,
   "title": "Thread pool — why, how, Executors types (fixed, cached, single, scheduled)",
   "shortTitle": "What is a thread pool?",
   "chapterNumber": 5,

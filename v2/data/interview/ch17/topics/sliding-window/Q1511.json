@@ -1,7 +1,7 @@
 {
   "id": "Q1511",
   "slug": "sliding-window-maximum-monotonic-deque",
-  "questionNumber": 1511,
+  "questionNumber": 6,
   "title": "Given an array and a window size k, return the maximum value in each contiguous window of size k as the window slides from left to right.",
   "shortTitle": "Sliding Window Maximum — monotonic deque",
   "chapterNumber": 17,

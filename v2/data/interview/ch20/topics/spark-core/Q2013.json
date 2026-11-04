@@ -1,7 +1,7 @@
 {
   "id": "Q2013",
   "slug": "the-five-internal-properties-of-an-rdd",
-  "questionNumber": 2013,
+  "questionNumber": 7,
   "title": "Explain the 5 internal properties of an RDD — (1) list of partitions, (2) computation function per partition, (3) dependencies/lineage (narrow vs wide), (4) optional Partitioner (HashPartitioner / RangePartitioner), (5) preferred locations (data locality: PROCESS_LOCAL → NODE_LOCAL → RACK_LOCAL → ANY).",
   "shortTitle": "The five internal properties of an RDD",
   "chapterNumber": 20,

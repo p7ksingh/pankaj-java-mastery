@@ -1,7 +1,7 @@
 {
-  "id": "Q185-collections",
-  "slug": "removeif-iteratorremove-vs-for-each-remove-concurrentmodificationexception",
-  "questionNumber": 185,
+  "id": "Q185",
+  "slug": "removeif-iteratorremove-vs-for-each-remove",
+  "questionNumber": 3,
   "title": "removeIf + Iterator.remove vs for-each remove — ConcurrentModificationException",
   "shortTitle": "How do you safely remove elements during iteration?",
   "chapterNumber": 3,

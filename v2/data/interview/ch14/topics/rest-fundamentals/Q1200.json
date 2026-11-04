@@ -1,7 +1,7 @@
 {
   "id": "Q1200",
   "slug": "what-does-rest-stand-for-its-core-constraints-and-how-a-restful-api-differs-from-rpc-style-http",
-  "questionNumber": 1200,
+  "questionNumber": 1,
   "title": "What does REST stand for (Representational State Transfer, an architectural style — not a protocol — defined by Roy Fielding), what are its core constraints (client-server, statelessness, cacheability, layered system, uniform interface / resource-based URLs, optional code-on-demand, and HATEOAS), and how does a RESTful API differ from an RPC-style/\"non-REST\" HTTP API (resource nouns like `/users/123` + correct HTTP verbs vs action verbs like `/getUser`)?",
   "shortTitle": "What does REST stand for, its core constraints, and how a RESTful API differs from RPC-style HTTP",
   "chapterNumber": 14,

@@ -1,7 +1,7 @@
 {
   "id": "Q79",
   "slug": "what-is-the-role-of-finalize-in-garbage-collection-and-why-is-it-deprecated",
-  "questionNumber": 79,
+  "questionNumber": 7,
   "title": "What is the role of `finalize()` in garbage collection, and why is it deprecated?",
   "shortTitle": "What is finalize() and why is it deprecated?",
   "chapterNumber": 1,

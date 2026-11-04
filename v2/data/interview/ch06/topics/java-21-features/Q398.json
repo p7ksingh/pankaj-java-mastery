@@ -1,7 +1,7 @@
 {
   "id": "Q398",
   "slug": "structured-concurrency-structuredtaskscope-forkjoin-as-one-unit-cancel-propagation",
-  "questionNumber": 398,
+  "questionNumber": 6,
   "title": "What is Structured Concurrency (StructuredTaskScope), how does it fix unstructured ExecutorService problems, and what is its status?",
   "shortTitle": "What is Structured Concurrency?",
   "chapterNumber": 6,

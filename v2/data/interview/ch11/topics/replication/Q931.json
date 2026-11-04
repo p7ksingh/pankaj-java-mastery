@@ -1,7 +1,7 @@
 {
   "id": "Q931",
   "slug": "what-is-mininsyncreplicas-and-why-it-matters-alongside-acksall",
-  "questionNumber": 931,
+  "questionNumber": 5,
   "title": "What is `min.insync.replicas`, and why does it matter alongside `acks=all`?",
   "shortTitle": "What is `min.insync.replicas` and why it matters alongside `acks=all`",
   "chapterNumber": 11,

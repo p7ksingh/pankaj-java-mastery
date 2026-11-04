@@ -1,7 +1,7 @@
 {
   "id": "Q1440",
   "slug": "check-if-a-string-is-a-palindrome-two-pointer-skip-non-alphanumeric",
-  "questionNumber": 1440,
+  "questionNumber": 11,
   "title": "Check if a string is a palindrome (two-pointer, skip non-alphanumeric).",
   "shortTitle": "Check If a String Is a Palindrome — Two-Pointer, Skip Non-Alphanumeric",
   "chapterNumber": 17,

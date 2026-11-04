@@ -1,7 +1,7 @@
 {
   "id": "Q326",
   "slug": "terminal-operations-collect-foreach-reduce-count-anymatch-findfirst-trigger-execution-consume-stream",
-  "questionNumber": 326,
+  "questionNumber": 1,
   "title": "Explain terminal operations (collect, forEach, reduce, count, anyMatch, findFirst) and that they trigger execution and consume the stream.",
   "shortTitle": "Terminal operations — collect, forEach, reduce, count, anyMatch, findFirst — trigger execution, consume stream",
   "chapterNumber": 6,

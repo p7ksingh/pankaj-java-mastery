@@ -1,7 +1,7 @@
 {
   "id": "Q949",
   "slug": "write-a-kafka-streams-app-that-reads-a-topic-uppercases-values-and-writes-to-another-topic",
-  "questionNumber": 949,
+  "questionNumber": 1,
   "title": "Write a Kafka Streams app that reads a topic, uppercases values, and writes to another topic.",
   "shortTitle": "Write a Kafka Streams app that reads a topic, uppercases values, and writes to another topic.",
   "chapterNumber": 11,

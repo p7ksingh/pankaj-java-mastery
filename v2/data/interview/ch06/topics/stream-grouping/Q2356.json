@@ -1,7 +1,7 @@
 {
   "id": "Q2356",
   "slug": "group-a-list-of-strings-by-their-length-into-mapinteger-liststring",
-  "questionNumber": 2356,
+  "questionNumber": 17,
   "title": "Group a list of strings by their length → `Map<Integer, List<String>>` using `groupingBy(String::length)`.",
   "shortTitle": "Group a list of strings by their length into Map<Integer, List<String>>",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q1972",
   "slug": "blue-green-vs-canary-vs-rolling-deployment-and-when-to-use-each",
-  "questionNumber": 1972,
+  "questionNumber": 5,
   "title": "What is Blue-Green deployment vs Canary deployment vs Rolling deployment — Blue-Green (two identical environments, switch traffic all at once), Canary (send small % of traffic to new version first, increase gradually), Rolling (replace instances one by one) — and when do you use each?",
   "shortTitle": "Blue-Green vs Canary vs Rolling deployment, and when to use each",
   "chapterNumber": 12,

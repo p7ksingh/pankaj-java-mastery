@@ -1,7 +1,7 @@
 {
   "id": "Q2070",
   "slug": "how-to-debug-a-spark-outofmemoryerror",
-  "questionNumber": 2070,
+  "questionNumber": 38,
   "title": "How do you debug a Spark OOM (OutOfMemoryError) — check Spark UI (Stages tab for task duration spread, Executors tab for GC time, Storage tab for cache size, SQL tab for plan), look for data skew (one task much larger), excessive shuffle, large broadcast, too few partitions, or driver OOM from `collect()`?",
   "shortTitle": "How to debug a Spark OutOfMemoryError",
   "chapterNumber": 20,

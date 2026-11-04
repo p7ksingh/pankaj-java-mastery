@@ -1,7 +1,7 @@
 {
   "id": "Q1463",
   "slug": "explain-sliding-window-fixed-size-vs-variable-size-expand-right-shrink-left",
-  "questionNumber": 1463,
+  "questionNumber": 2,
   "title": "Explain Sliding Window — fixed-size vs variable-size window, expand right / shrink left.",
   "shortTitle": "Explain Sliding Window — Fixed-Size vs Variable-Size, Expand Right / Shrink Left",
   "chapterNumber": 17,

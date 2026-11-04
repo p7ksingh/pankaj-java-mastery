@@ -1,7 +1,7 @@
 {
   "id": "Q2366",
   "slug": "merge-two-sorted-lists-into-a-single-sorted-list-using-streamconcatsorted",
-  "questionNumber": 2366,
+  "questionNumber": 22,
   "title": "Merge two sorted lists into a single sorted list using `Stream.concat(...).sorted()`.",
   "shortTitle": "Merge two sorted lists into a single sorted list using Stream.concat(...).sorted()",
   "chapterNumber": 6,

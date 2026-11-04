@@ -1,7 +1,7 @@
 {
   "id": "Q2173",
   "slug": "design-a-real-time-delivery-tracking-pipeline-with-flink",
-  "questionNumber": 2173,
+  "questionNumber": 5,
   "title": "(Scenario) Design a real-time delivery tracking pipeline with Flink — Kafka source (partitioned by user_id) → map (enrich) → keyBy(user_id) → tumbling window (30 min) → aggregate stats → JDBC sink (PostgreSQL) — explaining parallelism, forwarding vs redistributing patterns, and fault tolerance via checkpoints.",
   "shortTitle": "Design a real-time delivery tracking pipeline with Flink",
   "chapterNumber": 20,

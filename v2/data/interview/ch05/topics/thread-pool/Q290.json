@@ -1,7 +1,7 @@
 {
   "id": "Q290",
   "slug": "blockingqueue-implementations-arraybq-linkedbq-prioritybq-synchronousqueue-delayqueue",
-  "questionNumber": 290,
+  "questionNumber": 8,
   "title": "BlockingQueue implementations — ArrayBQ, LinkedBQ, PriorityBQ, SynchronousQueue, DelayQueue",
   "shortTitle": "What are BlockingQueue implementations?",
   "chapterNumber": 5,

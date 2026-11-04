@@ -1,7 +1,7 @@
 {
   "id": "Q2352",
   "slug": "find-the-second-non-repeating-character-in-a-string",
-  "questionNumber": 2352,
+  "questionNumber": 10,
   "title": "Find the SECOND non-repeating character in a string (`groupingBy` LinkedHashMap → filter count == 1 → `skip(1).findFirst()`).",
   "shortTitle": "Find the SECOND non-repeating character in a string",
   "chapterNumber": 6,

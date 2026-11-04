@@ -1,7 +1,7 @@
 {
   "id": "Q1535",
   "slug": "merge-k-sorted-lists-min-heap-of-k-heads",
-  "questionNumber": 1535,
+  "questionNumber": 8,
   "title": "Given K sorted linked lists, merge them into one sorted linked list and return its head.",
   "shortTitle": "Merge K Sorted Lists — min-heap of K heads",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q2030",
   "slug": "when-to-cachepersist-and-when-not-to",
-  "questionNumber": 2030,
+  "questionNumber": 16,
   "title": "When should you cache/persist (expensive computation + multiple reuses: iterative ML, multiple downstream branches, interactive exploration) and when should you NOT (dataset used once, dataset is tiny, caching everything causes memory pressure and eviction)?",
   "shortTitle": "When to cache/persist and when not to",
   "chapterNumber": 20,

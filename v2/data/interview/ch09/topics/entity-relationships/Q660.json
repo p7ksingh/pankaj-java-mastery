@@ -1,7 +1,7 @@
 {
   "id": "Q660",
   "slug": "jpa-cascade-types-persist-merge-remove-detach-refresh-all",
-  "questionNumber": 660,
+  "questionNumber": 4,
   "title": "What are the JPA cascade types (PERSIST, MERGE, REMOVE, DETACH, REFRESH, ALL), what does each do, and how does cascade differ from orphan removal?",
   "shortTitle": "What are JPA cascade types?",
   "chapterNumber": 9,

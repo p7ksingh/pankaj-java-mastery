@@ -1,7 +1,7 @@
 {
   "id": "Q1916",
   "slug": "virtual-machine-versus-container-with-respect-to-the-hypervisor",
-  "questionNumber": 1916,
+  "questionNumber": 3,
   "title": "What is the difference between a Virtual Machine and a container with respect to the hypervisor — a VM virtualizes hardware and runs a full guest OS on a hypervisor, while a container shares the host kernel and is isolated with namespaces + cgroups — making containers lighter, faster to start, and denser, at the cost of weaker isolation?",
   "shortTitle": "Virtual Machine Versus Container With Respect to the Hypervisor",
   "chapterNumber": 12,

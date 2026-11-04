@@ -1,7 +1,7 @@
 {
   "id": "Q1977",
   "slug": "critical-production-incident-what-to-check-first-assess-impact-prioritize-restoring-service-and-why-mitigate-before-root-cause",
-  "questionNumber": 1977,
+  "questionNumber": 54,
   "title": "(Scenario) A critical production incident was just reported — what do you check FIRST, how do you assess the impact, and how do you prioritize restoring service before doing deep root-cause analysis? In simple steps: (1) FIRST confirm and size the impact; (2) look for WHAT CHANGED most recently; (3) MITIGATE FIRST to restore service; (4) keep communicating status; (5) only AFTER service is restored do the deep root-cause analysis. Why is \"mitigate before root-cause\" the rule, and why is rollback usually the fastest safe mitigation?",
   "shortTitle": "Critical production incident — what to check first, assess impact, prioritize restoring service, and why mitigate before root-cause",
   "chapterNumber": 12,

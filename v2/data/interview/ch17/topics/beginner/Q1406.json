@@ -1,7 +1,7 @@
 {
   "id": "Q1406",
   "slug": "print-all-prime-numbers-up-to-n-sieve-of-eratosthenes",
-  "questionNumber": 1406,
+  "questionNumber": 5,
   "title": "Print all prime numbers up to N (Sieve of Eratosthenes — mark multiples of each prime as not-prime).",
   "shortTitle": "Print All Prime Numbers up to N (Sieve of Eratosthenes)",
   "chapterNumber": 17,

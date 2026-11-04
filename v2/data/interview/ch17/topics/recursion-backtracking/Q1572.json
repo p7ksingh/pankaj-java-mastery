@@ -1,7 +1,7 @@
 {
   "id": "Q1572",
   "slug": "sudoku-solver-row-column-and-box-constraint-checking",
-  "questionNumber": 1572,
+  "questionNumber": 8,
   "title": "Write a program to solve a 9×9 Sudoku board by filling empty cells so that every row, column, and 3×3 box contains the digits 1–9 exactly once.",
   "shortTitle": "Sudoku Solver — row, column, and box constraint checking",
   "chapterNumber": 17,

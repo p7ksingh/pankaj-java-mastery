@@ -1,7 +1,7 @@
 {
   "id": "Q1076",
   "slug": "the-correct-order-of-database-scaling-steps-and-why-sharding-is-last",
-  "questionNumber": 1076,
+  "questionNumber": 1,
   "title": "What is the correct order of database scaling steps, and why is sharding the LAST resort (scale up → optimize queries/indexes → add read replicas → add a cache → CQRS → shard)?",
   "shortTitle": "The correct order of database scaling steps, and why sharding is last",
   "chapterNumber": 13,

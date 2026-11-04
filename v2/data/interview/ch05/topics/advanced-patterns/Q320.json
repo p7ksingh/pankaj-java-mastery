@@ -1,7 +1,7 @@
 {
   "id": "Q320",
   "slug": "busy-waiting-spinning-spin-locks-threadonspinwait-when-it-helps-or-harms",
-  "questionNumber": 320,
+  "questionNumber": 3,
   "title": "What is busy-waiting or spinning, what is a spin lock, what does Thread.onSpinWait() do, and when does spinning help versus harm?",
   "shortTitle": "What is busy-waiting?",
   "chapterNumber": 5,

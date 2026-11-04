@@ -1,7 +1,7 @@
 {
   "id": "Q653",
   "slug": "composite-primary-key-embeddedid-vs-idclass",
-  "questionNumber": 653,
+  "questionNumber": 5,
   "title": "How do you model a composite primary key in JPA, and what is the difference between @EmbeddedId and @IdClass?",
   "shortTitle": "@EmbeddedId vs @IdClass for composite keys?",
   "chapterNumber": 9,

@@ -1,7 +1,7 @@
 {
   "id": "Q1577",
   "slug": "maximum-subarray-kadanes-algorithm-running-sum-reset-at-negatives",
-  "questionNumber": 1577,
+  "questionNumber": 55,
   "title": "Find the contiguous subarray with the largest sum and return that sum. Explain Kadane's algorithm.",
   "shortTitle": "Maximum Subarray (Kadane's Algorithm) — running sum reset at negatives",
   "chapterNumber": 17,

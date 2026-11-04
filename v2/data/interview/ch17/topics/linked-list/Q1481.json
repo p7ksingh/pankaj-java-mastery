@@ -1,7 +1,7 @@
 {
   "id": "Q1481",
   "slug": "remove-the-nth-node-from-the-end-of-a-linked-list-two-pointer-with-n-gap",
-  "questionNumber": 1481,
+  "questionNumber": 8,
   "title": "Given the head of a singly linked list, remove the Nth node counting from the end of the list and return the head. Do it in a single pass.",
   "shortTitle": "Remove the Nth Node From the End of a Linked List (Two-Pointer With N Gap)",
   "chapterNumber": 17,

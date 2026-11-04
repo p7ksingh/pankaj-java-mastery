@@ -1,7 +1,7 @@
 {
   "id": "Q158",
   "slug": "java-records-immutable-data-carrier-oop-principles-when-not-suitable",
-  "questionNumber": 158,
+  "questionNumber": 1,
   "title": "How do Java records relate to OOP — immutable, auto-generates equals/hashCode/toString, final, cannot extend — and when is a record NOT suitable (mutable state, inheritance, JPA entities)?",
   "shortTitle": "What are Java Records?",
   "chapterNumber": 2,

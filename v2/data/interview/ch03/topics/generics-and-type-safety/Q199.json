@@ -1,7 +1,7 @@
 {
-  "id": "Q199-collections",
-  "slug": "raw-types-heap-pollution-safevarargs-unchecked-warnings-and-runtime-classcastexception",
-  "questionNumber": 199,
+  "id": "Q199",
+  "slug": "raw-types-heap-pollution-safevarargs-unchecked-warnings-and-runtime",
+  "questionNumber": 4,
   "title": "Raw types, heap pollution, @SafeVarargs — unchecked warnings and runtime ClassCastException",
   "shortTitle": "What are raw types and heap pollution?",
   "chapterNumber": 3,

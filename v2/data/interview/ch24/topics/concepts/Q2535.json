@@ -1,7 +1,7 @@
 {
   "id": "Q2535",
   "slug": "database-sharding",
-  "questionNumber": 2535,
+  "questionNumber": 7,
   "title": "Database Sharding — horizontal partitioning of data across multiple DB instances, shard key selection, cross-shard queries, resharding challenges.",
   "shortTitle": "Database Sharding",
   "chapterNumber": 24,

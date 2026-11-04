@@ -1,7 +1,7 @@
 {
   "id": "Q1940",
   "slug": "configuration-drift-what-it-is-how-to-detect-it-and-how-to-reconcile-it",
-  "questionNumber": 1940,
+  "questionNumber": 37,
   "title": "What is configuration drift, how do you detect it (`terraform plan`), and how do you reconcile it?",
   "shortTitle": "Configuration Drift: What It Is, How to Detect It, and How to Reconcile It",
   "chapterNumber": 12,

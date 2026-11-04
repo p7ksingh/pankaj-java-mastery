@@ -1,7 +1,7 @@
 {
   "id": "Q1760",
   "slug": "palindrome-partitioning-all-ways-to-split-a-string-into-palindromes",
-  "questionNumber": 1760,
+  "questionNumber": 47,
   "title": "Given a string, partition it so that every substring of the partition is a palindrome, and return all possible palindrome partitionings. Explain the backtracking technique that cuts the string at each position and only recurses when the prefix is a palindrome.",
   "shortTitle": "Palindrome Partitioning (All Ways to Split a String into Palindromes)",
   "chapterNumber": 17,

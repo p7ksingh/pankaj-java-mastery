@@ -1,7 +1,7 @@
 {
   "id": "Q1968",
   "slug": "why-you-must-handle-pagination-when-listing-aws-resources-and-how-boto3-paginators-avoid-incomplete-results",
-  "questionNumber": 1968,
+  "questionNumber": 48,
   "title": "Why must you handle pagination when listing AWS resources (APIs cap results per response and return a `NextToken`), and how do Boto3 paginators (`get_paginator(...).paginate()`) avoid incomplete results vs manual token loops — why is ignoring pagination a common cause of broken automation in large accounts?",
   "shortTitle": "Why you must handle pagination when listing AWS resources, and how Boto3 paginators avoid incomplete results",
   "chapterNumber": 12,

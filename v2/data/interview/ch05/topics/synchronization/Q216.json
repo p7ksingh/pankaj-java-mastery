@@ -1,7 +1,7 @@
 {
   "id": "Q216",
   "slug": "why-synchronizing-on-string-literal-interned-object-is-a-bug-use-private-final-object-lock",
-  "questionNumber": 216,
+  "questionNumber": 7,
   "title": "Why synchronizing on String literal / interned object is a bug — use private final Object lock",
   "shortTitle": "Why is synchronizing on a String literal a bug?",
   "chapterNumber": 5,

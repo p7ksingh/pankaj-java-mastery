@@ -1,7 +1,7 @@
 {
   "id": "Q306",
   "slug": "jvmservice-benchmark-design-warmup-gc-cycles-hdrhistogram-isolating-the-bottleneck",
-  "questionNumber": 306,
+  "questionNumber": 2,
   "title": "How do you design a reliable benchmark for a JVM service? Explain the warmup phase and JIT compilation from C1 to C2, accounting for GC cycles, using HdrHistogram, isolating the bottleneck, and initialising the connection pool before measuring.",
   "shortTitle": "How to design a JVM benchmark?",
   "chapterNumber": 5,

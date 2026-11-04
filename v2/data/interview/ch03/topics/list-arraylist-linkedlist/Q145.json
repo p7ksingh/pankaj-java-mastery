@@ -1,7 +1,7 @@
 {
   "id": "Q145",
   "slug": "listsublist-gotchas-view-backed-by-parent-concurrentmodificationexception-independent-copy",
-  "questionNumber": 145,
+  "questionNumber": 7,
   "title": "List.subList() gotchas — view backed by parent, ConcurrentModificationException, independent copy",
   "shortTitle": "What are the gotchas of List.subList()?",
   "chapterNumber": 3,

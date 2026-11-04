@@ -1,7 +1,7 @@
 {
   "id": "Q85",
   "slug": "why-does-java-not-expose-explicit-pointers-and-in-what-sense-are-references-still-pointers-under-the-hood",
-  "questionNumber": 85,
+  "questionNumber": 2,
   "title": "Why does Java not expose explicit/raw pointers (no pointer arithmetic, references are managed by the JVM) — how does this improve safety (no dangling pointers / manual memory bugs), security (no arbitrary memory access), and portability — and in what sense are object references still \"pointers under the hood\"?",
   "shortTitle": "Why does Java not expose explicit pointers?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q83",
   "slug": "what-is-the-difference-between-stackoverflowerror-and-outofmemoryerror-and-why-is-oom-not-always-the-heap-is-too-small",
-  "questionNumber": 83,
+  "questionNumber": 11,
   "title": "What is the difference between `StackOverflowError` (per-thread stack exhausted — deep/infinite recursion or huge stack frames) and `OutOfMemoryError`, and why is OOM NOT always \"the heap is too small\" (it can be Metaspace, direct/native memory, GC-overhead-limit, or `unable to create new native thread`)?",
   "shortTitle": "What is the difference between StackOverflowError and OutOfMemoryError?",
   "chapterNumber": 1,

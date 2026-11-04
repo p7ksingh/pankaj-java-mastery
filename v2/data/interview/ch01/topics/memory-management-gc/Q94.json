@@ -1,7 +1,7 @@
 {
   "id": "Q94",
   "slug": "walk-through-every-jvm-memory-area-in-detail-and-how-each-is-bounded",
-  "questionNumber": 94,
+  "questionNumber": 12,
   "title": "Walk through every JVM memory area in detail: Heap (Young = Eden+S0+S1, Old), Metaspace (native), Stack (per-thread), Code Cache (JIT), and Direct/off-heap memory — what each stores and how it is bounded (-Xms/-Xmx/-Xss/-XX:MaxMetaspaceSize/-XX:ReservedCodeCacheSize/-XX:MaxDirectMemorySize).",
   "shortTitle": "Walk through every JVM memory area in detail",
   "chapterNumber": 1,

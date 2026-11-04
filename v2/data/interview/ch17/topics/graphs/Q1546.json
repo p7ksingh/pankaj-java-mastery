@@ -1,7 +1,7 @@
 {
   "id": "Q1546",
   "slug": "surrounded-regions-mark-border-connected-os-via-dfs-flip-the-rest",
-  "questionNumber": 1546,
+  "questionNumber": 9,
   "title": "Given a board of 'X' and 'O', capture all regions surrounded by 'X' by flipping every 'O' that is not connected to a border 'O' into 'X'. Border-connected 'O's are safe and stay.",
   "shortTitle": "Surrounded Regions — mark border-connected 'O's via DFS, flip the rest",
   "chapterNumber": 17,

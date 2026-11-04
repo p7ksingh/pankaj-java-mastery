@@ -1,7 +1,7 @@
 {
   "id": "Q638",
   "slug": "optimistic-vs-pessimistic-locking-in-jpa-banking-example",
-  "questionNumber": 638,
+  "questionNumber": 1,
   "title": "What is the difference between optimistic and pessimistic locking in JPA, and when do you choose each in banking?",
   "shortTitle": "Optimistic vs pessimistic locking?",
   "chapterNumber": 9,

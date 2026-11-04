@@ -1,7 +1,7 @@
 {
   "id": "Q1092",
   "slug": "what-is-the-difference-between-a-surrogate-key-a-natural-key-a-candidate-key-and-an-alternate-key-and-why-do-production-schemas-usually-prefer-a-surrogate-key",
-  "questionNumber": 1092,
+  "questionNumber": 2,
   "title": "What is the difference between a surrogate key (an artificial, meaningless key like an auto-increment/UUID), a natural key (a real-world attribute like email/SSN), a candidate key, and an alternate key (a candidate key not chosen as primary), and why do production schemas usually prefer a surrogate key (stability — natural keys change and leak meaning)?",
   "shortTitle": "What is the difference between a surrogate key, a natural key, a candidate key, and an alternate key, and why do production schemas usually prefer a surrogate key?",
   "chapterNumber": 13,

@@ -1,7 +1,7 @@
 {
   "id": "Q1554",
   "slug": "explain-union-find-disjoint-set-union-find-with-path-compression-union-by-rank",
-  "questionNumber": 1554,
+  "questionNumber": 28,
   "title": "Explain the Union-Find / Disjoint Set data structure. How do find(x) with path compression and union(x,y) by rank achieve near-constant amortized time?",
   "shortTitle": "Explain Union-Find (Disjoint Set Union) — find with path compression, union by rank",
   "chapterNumber": 17,

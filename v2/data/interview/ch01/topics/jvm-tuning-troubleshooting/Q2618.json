@@ -1,7 +1,7 @@
 {
   "id": "Q2618",
   "slug": "what-is-thread-starvation",
-  "questionNumber": 2618,
+  "questionNumber": 14,
   "title": "What is thread starvation — some threads never get CPU time because other threads hold locks too long or there are too few threads in the pool — diagnose via thread dump showing many WAITING/BLOCKED threads?",
   "shortTitle": "What is thread starvation?",
   "chapterNumber": 1,

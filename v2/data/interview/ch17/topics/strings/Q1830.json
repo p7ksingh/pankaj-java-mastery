@@ -1,7 +1,7 @@
 {
   "id": "Q1830",
   "slug": "longest-word-in-dictionary-longest-word-buildable-one-character-at-a-time",
-  "questionNumber": 1830,
+  "questionNumber": 61,
   "title": "Given a list of words, find the longest word that can be built one character at a time, where every prefix of that word is also present in the list; break ties by taking the smallest word in dictionary order. Explain how the Trie pattern solves it, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Longest Word in Dictionary (Longest Word Buildable One Character at a Time)",
   "chapterNumber": 17,

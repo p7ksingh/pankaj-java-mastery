@@ -1,7 +1,7 @@
 {
   "id": "Q166",
   "slug": "when-to-choose-interface-vs-abstract-class-java-8-default-methods-still-dont-make-them-interchangeable",
-  "questionNumber": 166,
+  "questionNumber": 4,
   "title": "When do you choose interface vs abstract class — and why does Java 8+ blurring (default methods) still not make them interchangeable?",
   "shortTitle": "When do you choose interface vs abstract class?",
   "chapterNumber": 2,

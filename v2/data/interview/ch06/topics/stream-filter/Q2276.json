@@ -1,7 +1,7 @@
 {
   "id": "Q2276",
   "slug": "remove-duplicate-employees-by-id-using-a-key-based-filter-and-remove-exact-duplicates-using-distinct",
-  "questionNumber": 2276,
+  "questionNumber": 12,
   "title": "Given a `List<Employee>`, remove exact duplicate objects using `distinct()`, and separately remove duplicates by a key such as id where the objects are not equal. Explain how `distinct()` relies on `equals`/`hashCode` and how to deduplicate by a custom key.",
   "shortTitle": "Remove duplicate employees by id using a key-based filter, and remove exact duplicates using distinct",
   "chapterNumber": 6,

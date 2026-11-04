@@ -1,7 +1,7 @@
 {
   "id": "Q2102",
   "slug": "the-success-file-in-spark",
-  "questionNumber": 2102,
+  "questionNumber": 57,
   "title": "What is the `_SUCCESS` file in Spark — an empty marker file written to the output directory when a write job completes successfully, used as a job completion indicator and data consistency guarantee for downstream workflows?",
   "shortTitle": "The _SUCCESS file in Spark",
   "chapterNumber": 20,

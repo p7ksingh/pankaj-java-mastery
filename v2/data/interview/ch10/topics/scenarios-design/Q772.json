@@ -1,7 +1,7 @@
 {
   "id": "Q772",
   "slug": "explain-the-execution-flow-of-a-parent-task-that-spawns-multiple-child-tasks-and-combines-their-results",
-  "questionNumber": 772,
+  "questionNumber": 15,
   "title": "Explain the execution flow of a parent task that spawns multiple child tasks and combines their results.",
   "shortTitle": "Explain the execution flow of a parent task that spawns multiple child tasks and combines their results",
   "chapterNumber": 10,

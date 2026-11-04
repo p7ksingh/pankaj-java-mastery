@@ -1,7 +1,7 @@
 {
   "id": "Q1513",
   "slug": "same-tree-check-if-two-trees-are-identical",
-  "questionNumber": 1513,
+  "questionNumber": 5,
   "title": "Given the roots of two binary trees, determine whether they are structurally identical and have the same values at every corresponding node.",
   "shortTitle": "Same Tree — check if two trees are identical",
   "chapterNumber": 17,

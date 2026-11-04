@@ -1,7 +1,7 @@
 {
   "id": "Q248",
   "slug": "supplyasync-vs-runasync-with-result-vs-fire-and-forget",
-  "questionNumber": 248,
+  "questionNumber": 2,
   "title": "supplyAsync() vs runAsync() — with result vs fire-and-forget",
   "shortTitle": "supplyAsync() vs runAsync()?",
   "chapterNumber": 5,

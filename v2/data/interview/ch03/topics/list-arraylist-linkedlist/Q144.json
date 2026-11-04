@@ -1,7 +1,7 @@
 {
   "id": "Q144",
   "slug": "vector-vs-arraylist-synchronization-growth-legacy",
-  "questionNumber": 144,
+  "questionNumber": 6,
   "title": "Vector vs ArrayList — synchronization, growth, legacy",
   "shortTitle": "What is the difference between Vector and ArrayList?",
   "chapterNumber": 3,

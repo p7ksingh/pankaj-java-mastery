@@ -1,7 +1,7 @@
 {
   "id": "Q2286",
   "slug": "merge-two-employee-streams-into-one-using-streamconcat-and-deduplicate-the-result",
-  "questionNumber": 2286,
+  "questionNumber": 17,
   "title": "Given two `List<Employee>` from two source systems, merge them into one stream using `Stream.concat`, then remove duplicates by id. Explain `Stream.concat`, its ordering guarantee, and how it differs from flatMap for combining streams.",
   "shortTitle": "Merge two employee streams into one using Stream.concat and deduplicate the result",
   "chapterNumber": 6,

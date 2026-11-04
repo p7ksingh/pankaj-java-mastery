@@ -1,7 +1,7 @@
 {
   "id": "Q152",
   "slug": "composition-has-a-vs-inheritance-is-a-which-to-prefer-and-why",
-  "questionNumber": 152,
+  "questionNumber": 2,
   "title": "What is the difference between composition (\"has-a\") and inheritance (\"is-a\"), and which should you prefer and why?",
   "shortTitle": "Should you prefer composition or inheritance?",
   "chapterNumber": 2,

@@ -1,7 +1,7 @@
 {
   "id": "Q1560",
   "slug": "number-of-provinces-count-friend-circles-via-union-find",
-  "questionNumber": 1560,
+  "questionNumber": 16,
   "title": "Given an n×n adjacency matrix where isConnected[i][j] = 1 means city i and city j are directly connected, return the number of provinces (connected groups of cities).",
   "shortTitle": "Number of Provinces — count friend circles via Union-Find",
   "chapterNumber": 17,

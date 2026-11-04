@@ -1,7 +1,7 @@
 {
   "id": "Q2538",
   "slug": "sql-vs-nosql-when-to-use-which",
-  "questionNumber": 2538,
+  "questionNumber": 10,
   "title": "SQL vs NoSQL — when to use which (ACID vs scale, relations vs documents, schema vs schema-less).",
   "shortTitle": "SQL vs NoSQL — When to Use Which",
   "chapterNumber": 24,

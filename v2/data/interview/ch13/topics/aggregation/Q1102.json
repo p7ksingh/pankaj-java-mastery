@@ -1,7 +1,7 @@
 {
   "id": "Q1102",
   "slug": "pivot-and-portable-conditional-aggregation",
-  "questionNumber": 1102,
+  "questionNumber": 3,
   "title": "What is a PIVOT operation (turn row values into columns, e.g. average salary per job title across departments), and how do you achieve the same portably with conditional aggregation (`SUM(CASE WHEN ... END)`) when the engine has no `PIVOT` keyword?",
   "shortTitle": "PIVOT and Portable Conditional Aggregation",
   "chapterNumber": 13,

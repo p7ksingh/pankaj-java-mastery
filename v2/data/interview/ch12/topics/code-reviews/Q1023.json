@@ -1,7 +1,7 @@
 {
   "id": "Q1023",
   "slug": "why-sizing-zgc-in-a-container-needs-more-headroom-than-g1-and-why-xmx-at-70-75-of-the-pod-limit-not-90",
-  "questionNumber": 1023,
+  "questionNumber": 5,
   "title": "Why does sizing ZGC in a container need more HEADROOM than G1 (ZGC is concurrent and needs room to allocate while it reclaims; colored pointers + page tables add native overhead) — why set `-Xmx` to only ~70–75% of the pod memory limit (reserving 25–30% for Metaspace, code cache, thread stacks, Netty direct buffers, OS page cache) — and why does sizing the heap at ~90% of the limit get the pod `OOMKilled` by cgroups during a GC cycle?",
   "shortTitle": "Why sizing ZGC in a container needs more headroom than G1 — and why -Xmx at ~70-75% of the pod limit, not ~90%",
   "chapterNumber": 12,

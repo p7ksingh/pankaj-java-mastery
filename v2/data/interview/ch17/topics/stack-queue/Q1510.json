@@ -1,7 +1,7 @@
 {
   "id": "Q1510",
   "slug": "largest-rectangle-in-histogram-increasing-stack-compute-area-on-pop",
-  "questionNumber": 1510,
+  "questionNumber": 10,
   "title": "Given an array of bar heights representing a histogram where each bar has width 1, find the area of the largest rectangle that fits entirely within the histogram.",
   "shortTitle": "Largest Rectangle in Histogram — increasing stack, compute area on pop",
   "chapterNumber": 17,

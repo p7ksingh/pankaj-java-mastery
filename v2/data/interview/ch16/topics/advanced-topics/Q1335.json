@@ -1,7 +1,7 @@
 {
   "id": "Q1335",
   "slug": "what-did-java-10-var-add-and-what-are-its-limitations",
-  "questionNumber": 1335,
+  "questionNumber": 27,
   "title": "What did Java 10 `var` add (local variable type inference), and what are its limitations (locals only, no null, readability trade-off)?",
   "shortTitle": "What did Java 10 var add, and what are its limitations?",
   "chapterNumber": 16,

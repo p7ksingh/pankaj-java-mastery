@@ -1,7 +1,7 @@
 {
   "id": "Q1408",
   "slug": "check-if-a-string-contains-only-digits",
-  "questionNumber": 1408,
+  "questionNumber": 7,
   "title": "Check if a string contains only digits (loop through each character, check `Character.isDigit()`).",
   "shortTitle": "Check if a String Contains Only Digits",
   "chapterNumber": 17,

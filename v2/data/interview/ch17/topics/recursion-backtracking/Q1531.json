@@ -1,7 +1,7 @@
 {
   "id": "Q1531",
   "slug": "word-search-ii-trie-dfs-backtracking-on-grid",
-  "questionNumber": 1531,
+  "questionNumber": 4,
   "title": "Given an m by n board of characters and a list of words, return all words that can be formed by sequentially adjacent cells (horizontally or vertically neighboring), where each cell is used at most once per word.",
   "shortTitle": "Word Search II — Trie + DFS backtracking on grid",
   "chapterNumber": 17,

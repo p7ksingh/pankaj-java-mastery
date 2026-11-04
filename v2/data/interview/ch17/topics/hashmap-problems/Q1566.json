@@ -1,7 +1,7 @@
 {
   "id": "Q1566",
   "slug": "combination-sum-ii-each-number-used-once-skip-duplicates",
-  "questionNumber": 1566,
+  "questionNumber": 12,
   "title": "Given candidates that may contain duplicates and a target, return all unique combinations summing to target, where each candidate may be used at most once.",
   "shortTitle": "Combination Sum II — each number used once, skip duplicates",
   "chapterNumber": 17,

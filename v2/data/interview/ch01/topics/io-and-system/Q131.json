@@ -1,7 +1,7 @@
 {
   "id": "Q131",
   "slug": "what-is-the-difference-between-byte-streams-and-character-streams-why-do-you-specify-a-charset-when-bridging-and-what-is-the-risk-of-the-platform-default-charset",
-  "questionNumber": 131,
+  "questionNumber": 3,
   "title": "What is the difference between byte streams (`InputStream`/`OutputStream`) and character streams (`Reader`/`Writer`), why do you specify a `Charset` when bridging bytes↔chars (`InputStreamReader`), and what is the risk of relying on the platform default charset?",
   "shortTitle": "What is the difference between byte streams and character streams?",
   "chapterNumber": 1,

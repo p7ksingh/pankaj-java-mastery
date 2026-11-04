@@ -1,7 +1,7 @@
 {
   "id": "Q644",
   "slug": "pagination-and-sorting-setfirstresultsetmaxresults-pageablesort",
-  "questionNumber": 644,
+  "questionNumber": 3,
   "title": "How do you implement pagination and sorting in JPA using setFirstResult/setMaxResults and Spring Data's Pageable and Sort?",
   "shortTitle": "Pagination and sorting with Pageable and Sort?",
   "chapterNumber": 9,

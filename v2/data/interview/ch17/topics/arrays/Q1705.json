@@ -1,7 +1,7 @@
 {
   "id": "Q1705",
   "slug": "subarray-sums-divisible-by-k-prefix-remainder-counting",
-  "questionNumber": 1705,
+  "questionNumber": 81,
   "title": "Given an array of integers that may include negatives and a positive integer k, count the number of contiguous subarrays whose sum is divisible by k. Solve it with the prefix-sum remainder pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Subarray Sums Divisible by K (Prefix Remainder Counting)",
   "chapterNumber": 17,

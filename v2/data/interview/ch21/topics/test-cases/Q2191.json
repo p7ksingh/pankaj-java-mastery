@@ -1,7 +1,7 @@
 {
   "id": "Q2191",
   "slug": "writing-a-robust-playwright-login-test",
-  "questionNumber": 2191,
+  "questionNumber": 5,
   "title": "Write a Playwright test that opens the app, navigates to login, enters credentials, submits, and asserts a successful login — and how do you make it robust (environment-specific base URLs, externalized test credentials/secrets, reused authentication state / storage state, Playwright auto-waiting instead of hard sleeps, and explicit negative/failed-login assertions)?",
   "shortTitle": "Writing a robust Playwright login test",
   "chapterNumber": 21,

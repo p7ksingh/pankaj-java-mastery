@@ -1,7 +1,7 @@
 {
   "id": "Q1676",
   "slug": "minimum-window-sort-shortest-unsorted-continuous-subarray",
-  "questionNumber": 1676,
+  "questionNumber": 65,
   "title": "Given an array, find the length of the shortest contiguous subarray that, if sorted, would make the entire array sorted in ascending order. (LeetCode: Shortest Unsorted Continuous Subarray)",
   "shortTitle": "Minimum Window Sort (Shortest Unsorted Continuous Subarray)",
   "chapterNumber": 17,

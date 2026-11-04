@@ -1,7 +1,7 @@
 {
   "id": "Q128",
   "slug": "what-does-the-math-class-provide-how-does-it-differ-from-strictmath-and-when-do-you-use-mathfloormod-vs",
-  "questionNumber": 128,
+  "questionNumber": 8,
   "title": "What does the `Math` class provide (`abs`, `max`/`min`, `pow`, `sqrt`, `round`/`ceil`/`floor`, `random`), what is the difference between `Math` and `StrictMath` (platform-reproducible results), and when do you use `Math.floorMod` vs `%` (correct sign for negative operands)?",
   "shortTitle": "What does the Math class provide?",
   "chapterNumber": 1,

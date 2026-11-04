@@ -1,7 +1,7 @@
 {
   "id": "Q2426",
   "slug": "why-does-streamgenerate-xlimit5parallelforeachorderedsystemoutprintln-print-x-five-times-in-order",
-  "questionNumber": 2426,
+  "questionNumber": 5,
   "title": "Why does `Stream.generate(() -> \"x\").limit(5).parallel().forEachOrdered(System.out::println)` print \"x\" five times in order?",
   "shortTitle": "Why does Stream.generate(() -> \"x\").limit(5).parallel().forEachOrdered(System.out::println) print \"x\" five times in order?",
   "chapterNumber": 6,

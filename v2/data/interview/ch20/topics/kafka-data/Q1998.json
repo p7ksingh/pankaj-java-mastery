@@ -1,7 +1,7 @@
 {
   "id": "Q1998",
   "slug": "consumer-lag-rebalancing-back-pressure-and-keeping-a-pipeline-healthy",
-  "questionNumber": 1998,
+  "questionNumber": 1,
   "title": "What happens to a pipeline when one consumer lags (consumer-group lag, partition rebalancing, back-pressure), and how do you keep the pipeline healthy (scaling consumers, monitoring lag, dead-letter queues for poison records)?",
   "shortTitle": "Consumer lag, rebalancing, back-pressure, and keeping a pipeline healthy",
   "chapterNumber": 20,

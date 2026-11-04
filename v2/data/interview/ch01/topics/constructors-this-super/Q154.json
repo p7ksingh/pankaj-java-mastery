@@ -1,7 +1,7 @@
 {
   "id": "Q154",
   "slug": "can-an-abstract-class-have-a-constructor-and-can-an-interface-have-a-constructor",
-  "questionNumber": 154,
+  "questionNumber": 3,
   "title": "Can an abstract class have a constructor (yes — it runs when a concrete subclass is instantiated via `super()`), and can an interface have a constructor (no — interfaces cannot hold instance state, so there is nothing to initialize)?",
   "shortTitle": "Can an abstract class have a constructor?",
   "chapterNumber": 1,

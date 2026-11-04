@@ -1,7 +1,7 @@
 {
   "id": "Q991",
   "slug": "terraform-what-terraform-init-does-and-running-terraform-safely-across-teams",
-  "questionNumber": 991,
+  "questionNumber": 2,
   "title": "What happens during `terraform init` (provider plugins, backend/remote-state init, module download, `.terraform` dir), and how do you let many engineers/teams run Terraform safely (remote state in S3/etc., state locking via DynamoDB, state isolation per environment/ownership, module structure, CI-driven plan/apply with PR review)?",
   "shortTitle": "Terraform — what `terraform init` does and running Terraform safely across teams",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q1026",
   "slug": "the-essential-jvm-flags-every-senior-should-know-heap-sizing-gc-selection-g1-tuning-metaspace-cap-heapdumponoutofmemoryerror-gc-logging-printflagsfinal",
-  "questionNumber": 1026,
+  "questionNumber": 2,
   "title": "What are the essential JVM flags every senior should know (heap sizing, GC selection, G1 tuning, Metaspace cap, HeapDumpOnOutOfMemoryError, GC logging, PrintFlagsFinal)?",
   "shortTitle": "The essential JVM flags every senior should know — heap sizing, GC selection, G1 tuning, Metaspace cap, HeapDumpOnOutOfMemoryError, GC logging, PrintFlagsFinal",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q167",
   "slug": "delegation-pattern-forwarding-to-helper-vs-inheriting-composition-over-inheritance",
-  "questionNumber": 167,
+  "questionNumber": 3,
   "title": "What is the delegation pattern — forwarding a request to a delegate object rather than inheriting — and how does it differ from inheritance?",
   "shortTitle": "What is the delegation pattern?",
   "chapterNumber": 2,

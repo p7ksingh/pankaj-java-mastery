@@ -1,7 +1,7 @@
 {
   "id": "Q1729",
   "slug": "level-averages-in-a-binary-tree-average-value-per-level",
-  "questionNumber": 1729,
+  "questionNumber": 10,
   "title": "Given the root of a binary tree, return a list containing the average value of the nodes on each level, from top to bottom.",
   "shortTitle": "Level Averages in a Binary Tree (Average Value per Level)",
   "chapterNumber": 17,

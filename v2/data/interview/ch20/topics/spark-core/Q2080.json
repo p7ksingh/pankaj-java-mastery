@@ -1,7 +1,7 @@
 {
   "id": "Q2080",
   "slug": "spark-sql-window-functions",
-  "questionNumber": 2080,
+  "questionNumber": 47,
   "title": "What are Spark SQL window functions — `ROW_NUMBER()`, `RANK()`, `DENSE_RANK()`, `LAG()`, `LEAD()`, running sum (`SUM() OVER (ORDER BY ...)`), moving average — applied `OVER (PARTITION BY ... ORDER BY ...)` without collapsing rows — and how do they differ from `groupBy` (window annotates each row; groupBy collapses)?",
   "shortTitle": "Spark SQL window functions",
   "chapterNumber": 20,

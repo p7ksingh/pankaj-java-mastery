@@ -1,7 +1,7 @@
 {
   "id": "Q1555",
   "slug": "number-of-connected-components-union-nodes-count-roots",
-  "questionNumber": 1555,
+  "questionNumber": 16,
   "title": "Given n nodes and a list of undirected edges, count the number of connected components using Union-Find.",
   "shortTitle": "Number of Connected Components — union nodes, count roots",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1606",
   "slug": "evaluate-reverse-polish-notation-using-a-stack",
-  "questionNumber": 1606,
+  "questionNumber": 57,
   "title": "Given an arithmetic expression in Reverse Polish Notation (postfix), where operators follow their operands, evaluate it and return the result using a stack.",
   "shortTitle": "Evaluate Reverse Polish Notation Using a Stack",
   "chapterNumber": 17,

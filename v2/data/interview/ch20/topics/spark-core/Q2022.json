@@ -1,7 +1,7 @@
 {
   "id": "Q2022",
   "slug": "how-post-shuffle-partition-coalescing-works",
-  "questionNumber": 2022,
+  "questionNumber": 11,
   "title": "How does post-shuffle partition coalescing work — Spark creates N shuffle partitions initially, observes actual sizes at runtime, and merges small partitions to reduce task overhead — and what config controls it (`spark.sql.adaptive.coalescePartitions.enabled`)?",
   "shortTitle": "How post-shuffle partition coalescing works",
   "chapterNumber": 20,

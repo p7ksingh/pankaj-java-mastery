@@ -1,7 +1,7 @@
 {
   "id": "Q316",
   "slug": "functional-interface-sam-functionalinterface-core-javautilfunction-interfaces",
-  "questionNumber": 316,
+  "questionNumber": 1,
   "title": "What is a functional interface (SAM interface), what are examples from java.util.function, how does @FunctionalInterface help, is it mandatory, can a FI extend another interface, and can it have default and static methods?",
   "shortTitle": "What is a functional interface?",
   "chapterNumber": 6,

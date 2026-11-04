@@ -1,7 +1,7 @@
 {
   "id": "Q1713",
   "slug": "cyclic-sort-place-each-number-at-its-correct-index",
-  "questionNumber": 1713,
+  "questionNumber": 18,
   "title": "Given an array containing `n` distinct numbers taken from the range `1` to `n` (or `0` to `n-1`), sort the array in place in O(n) time and O(1) extra space without using any sorting library. Explain the Cyclic Sort pattern and where it applies.",
   "shortTitle": "Cyclic Sort (Place Each Number at Its Correct Index)",
   "chapterNumber": 17,

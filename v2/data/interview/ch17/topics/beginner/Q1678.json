@@ -1,7 +1,7 @@
 {
   "id": "Q1678",
   "slug": "start-of-linkedlist-cycle-finding-the-loop-entry-node",
-  "questionNumber": 1678,
+  "questionNumber": 8,
   "title": "Given the head of a linked list that contains a cycle, return the node where the cycle begins. If there is no cycle, return null. Solve it with constant extra space. (LeetCode: Linked List Cycle II)",
   "shortTitle": "Start of LinkedList Cycle (Finding the Loop Entry Node)",
   "chapterNumber": 17,

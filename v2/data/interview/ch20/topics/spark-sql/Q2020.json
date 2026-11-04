@@ -1,7 +1,7 @@
 {
   "id": "Q2020",
   "slug": "adaptive-query-execution-aqe-and-how-it-complements-catalyst",
-  "questionNumber": 2020,
+  "questionNumber": 2,
   "title": "What is AQE (Adaptive Query Execution) — a Spark SQL optimization that uses runtime statistics to modify the physical plan during execution — and how does it complement (not replace) the Catalyst Optimizer?",
   "shortTitle": "Adaptive Query Execution (AQE) and how it complements Catalyst",
   "chapterNumber": 20,

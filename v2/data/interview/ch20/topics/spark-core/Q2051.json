@@ -1,7 +1,7 @@
 {
   "id": "Q2051",
   "slug": "sparksqlautobroadcastjointhreshold-and-auto-broadcast-vs-explicit-hint",
-  "questionNumber": 2051,
+  "questionNumber": 32,
   "title": "What is `spark.sql.autoBroadcastJoinThreshold` (default 10 MB), how does Spark automatically choose BHJ when a table's statistics are below this threshold, and when should you use an explicit `broadcast()` hint vs rely on auto-broadcast?",
   "shortTitle": "`spark.sql.autoBroadcastJoinThreshold` and auto-broadcast vs explicit hint",
   "chapterNumber": 20,

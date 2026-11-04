@@ -1,7 +1,7 @@
 {
   "id": "Q146",
   "slug": "how-do-spring-jpa-and-junit-use-annotations-at-runtime-and-how-does-compile-time-annotation-processing-differ",
-  "questionNumber": 146,
+  "questionNumber": 3,
   "title": "How do frameworks like Spring, JPA, and JUnit use annotations at runtime (scanning for `@Component`/`@Entity`/`@Test` via reflection + classpath scanning), and how does annotation processing at compile time differ (`javax.annotation.processing.Processor`, code generation, e.g. Lombok/MapStruct)?",
   "shortTitle": "How do Spring, JPA, and JUnit use annotations at runtime?",
   "chapterNumber": 1,

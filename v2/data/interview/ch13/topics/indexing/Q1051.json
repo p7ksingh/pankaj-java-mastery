@@ -1,7 +1,7 @@
 {
   "id": "Q1051",
   "slug": "how-indexing-works-internally-b-tree-for-range-queries-hash-index-for-exact-match-clustered-vs-non-clustered",
-  "questionNumber": 1051,
+  "questionNumber": 2,
   "title": "How does indexing work internally (B-tree for range queries, hash index for exact match, clustered vs non-clustered)?",
   "shortTitle": "How indexing works internally — B-tree for range queries, hash index for exact match, clustered vs non-clustered",
   "chapterNumber": 13,

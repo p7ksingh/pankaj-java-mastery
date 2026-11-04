@@ -1,7 +1,7 @@
 {
   "id": "Q1605",
   "slug": "design-a-min-stack-constant-time-minimum",
-  "questionNumber": 1605,
+  "questionNumber": 15,
   "title": "Design a stack that supports push, pop, top, and retrieving the minimum element, with every operation running in constant time.",
   "shortTitle": "Design a Min Stack (Constant-Time Minimum)",
   "chapterNumber": 17,

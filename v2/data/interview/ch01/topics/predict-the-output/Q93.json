@@ -1,7 +1,7 @@
 {
   "id": "Q93",
   "slug": "predict-the-output-traps-concat-without-reassignment-and-unreachable-catch-of-nullpointerexception",
-  "questionNumber": 93,
+  "questionNumber": 1,
   "title": "Predict the output of `s.concat(\" World\")` without reassignment (prints the original — String is immutable), and why does catching `Exception` before `NullPointerException` cause a compile error (unreachable catch block)?",
   "shortTitle": "Predict the output: concat without reassignment",
   "chapterNumber": 1,

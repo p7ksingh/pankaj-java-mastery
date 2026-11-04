@@ -1,7 +1,7 @@
 {
   "id": "Q900",
   "slug": "choosing-between-kafka-aws-sqs-and-rabbitmq-for-asynchronous-communication",
-  "questionNumber": 900,
+  "questionNumber": 1,
   "title": "How do you decide between Kafka, AWS SQS, and RabbitMQ for asynchronous communication — using the mental model Kafka = \"something happened\" (high-throughput durable event streams, multiple independent consumers, retention + replay), SQS = \"a job needs doing\" (simple managed queue for background work, buffering spikes), RabbitMQ = \"route this message\" (exchanges, routing keys, bindings for fine-grained routing)?",
   "shortTitle": "Choosing between Kafka, AWS SQS, and RabbitMQ for asynchronous communication",
   "chapterNumber": 11,

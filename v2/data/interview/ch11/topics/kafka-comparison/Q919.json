@@ -1,7 +1,7 @@
 {
   "id": "Q919",
   "slug": "choosing-a-partition-key-and-what-happens-with-a-bad-choice-hot-partition",
-  "questionNumber": 919,
+  "questionNumber": 3,
   "title": "How do you choose a partition key, and what happens if you choose badly (hot partition)?",
   "shortTitle": "Choosing a partition key and what happens with a bad choice (hot partition)",
   "chapterNumber": 11,

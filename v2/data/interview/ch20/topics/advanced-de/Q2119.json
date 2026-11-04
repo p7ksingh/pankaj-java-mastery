@@ -1,7 +1,7 @@
 {
   "id": "Q2119",
   "slug": "why-does-column-order-matter-with-insertinto",
-  "questionNumber": 2119,
+  "questionNumber": 21,
   "title": "Why does column order matter with `insertInto()` — Spark matches columns by position not by name, so mismatched order silently inserts wrong data — and what is the risk with partitioned tables (high-cardinality column in partition position creates excessive partitions)?",
   "shortTitle": "Why does column order matter with `insertInto()`",
   "chapterNumber": 20,

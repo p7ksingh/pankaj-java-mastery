@@ -1,7 +1,7 @@
 {
   "id": "Q1957",
   "slug": "p95-p99-and-p999-latency-percentiles-and-why-you-track-percentiles-instead-of-the-average",
-  "questionNumber": 1957,
+  "questionNumber": 40,
   "title": "What are p95 / p99 (and p99.9) latency percentiles — p99 = the latency below which 99% of requests complete (1 in 100 is slower) — and why do you track percentiles instead of the AVERAGE (averages hide tail latency; one slow fan-out dependency inflates p99, and at scale the p99 is what a meaningful fraction of users actually experience), and why is a tightened SLO on p99 harder than on the mean?",
   "shortTitle": "p95 / p99 (and p99.9) latency percentiles and why you track percentiles instead of the average",
   "chapterNumber": 12,

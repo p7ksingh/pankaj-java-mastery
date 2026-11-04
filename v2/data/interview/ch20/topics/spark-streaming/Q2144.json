@@ -1,7 +1,7 @@
 {
   "id": "Q2144",
   "slug": "flink-checkpoint-vs-savepoint",
-  "questionNumber": 2144,
+  "questionNumber": 18,
   "title": "What is the difference between a Flink checkpoint and a savepoint (automatic fault-tolerance snapshot vs user-triggered, externally-stored, version-portable snapshot for upgrades/rescaling/topology changes)?",
   "shortTitle": "Flink checkpoint vs savepoint",
   "chapterNumber": 20,

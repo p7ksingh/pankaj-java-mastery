@@ -1,7 +1,7 @@
 {
   "id": "Q425",
   "slug": "dependency-injection-constructor-vs-field-vs-setter-lombok-and-testability",
-  "questionNumber": 425,
+  "questionNumber": 2,
   "title": "What is DI, what are the three types with pros/cons, why is constructor injection preferred, how does Lombok @RequiredArgsConstructor remove boilerplate, and how do you do DI without @Autowired?",
   "shortTitle": "What is constructor vs field vs setter injection?",
   "chapterNumber": 7,

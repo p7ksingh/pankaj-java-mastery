@@ -1,7 +1,7 @@
 {
   "id": "Q666",
   "slug": "scheduled-limitations-single-threaded-pool-no-persistence-no-runtime-rescheduling",
-  "questionNumber": 666,
+  "questionNumber": 4,
   "title": "What are the limitations of Spring's @Scheduled (single-threaded default pool, no persistence of triggers, no dynamic/runtime rescheduling), and how do you work around each?",
   "shortTitle": "What are @Scheduled limitations?",
   "chapterNumber": 9,

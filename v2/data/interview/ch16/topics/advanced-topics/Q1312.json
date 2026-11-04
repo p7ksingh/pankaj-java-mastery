@@ -1,7 +1,7 @@
 {
   "id": "Q1312",
   "slug": "how-does-grpc-handle-network-failures-differently-from-rest-deadlines-retries-circuit-breaking-and-how-do-you-improve-reliability",
-  "questionNumber": 1312,
+  "questionNumber": 6,
   "title": "How does gRPC handle network failures differently from REST (deadlines, retries, circuit breaking), and how do you improve reliability?",
   "shortTitle": "How does gRPC handle network failures differently from REST (deadlines, retries, circuit breaking), and how do you improve reliability?",
   "chapterNumber": 16,

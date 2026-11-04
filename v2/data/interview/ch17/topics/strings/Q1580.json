@@ -1,7 +1,7 @@
 {
   "id": "Q1580",
   "slug": "longest-common-subsequence-2d-dp-on-two-strings",
-  "questionNumber": 1580,
+  "questionNumber": 30,
   "title": "Given two strings, return the length of their longest common subsequence — characters that appear in both in the same relative order but not necessarily contiguously.",
   "shortTitle": "Longest Common Subsequence — 2D DP on two strings",
   "chapterNumber": 17,

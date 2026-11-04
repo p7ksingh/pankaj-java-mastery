@@ -1,7 +1,7 @@
 {
   "id": "Q2482",
   "slug": "describe-a-critical-production-issue-you-handled-end-to-end-using-star-and-why-evidence-impact-and-prevention-distinguish-a-senior-answer",
-  "questionNumber": 2482,
+  "questionNumber": 2,
   "title": "Describe a critical production issue you handled end to end using the STAR method — Situation (what broke, business impact, urgency), Task (your specific responsibility), Action (how you investigated: logs, metrics, traces, thread dumps; what the root cause was; how you resolved it and communicated status), Result (measurable outcome: downtime reduced, latency improved, revenue protected, preventive measures put in place) — and why structuring the answer around evidence, impact, and prevention is what distinguishes a senior-level behavioral answer from a junior retelling?",
   "shortTitle": "Describe a critical production issue you handled end to end using STAR — and why evidence, impact, and prevention distinguish a senior answer",
   "chapterNumber": 23,

@@ -1,7 +1,7 @@
 {
   "id": "Q2565",
   "slug": "design-using-the-factory-method-pattern",
-  "questionNumber": 2565,
+  "questionNumber": 11,
   "title": "Factory Method — create different Vehicle types, different Payment methods.",
   "shortTitle": "Design using the Factory Method pattern",
   "chapterNumber": 15,

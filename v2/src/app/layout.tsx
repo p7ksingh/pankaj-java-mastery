@@ -30,9 +30,15 @@ const SITE_NAME = 'javabypankaj'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.javabypankaj.live'
 
 export const metadata: Metadata = {
-  title: `${SITE_NAME} | Crack Any Java Interview`,
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: `${SITE_NAME} | Crack Any Java Interview`,
+    template: `%s | ${SITE_NAME}`,
+  },
   description:
-    '3000+ real Java interview questions and answers covering every topic. One resource for all your interviews and System Design (HLD and LLD), with code and diagrams.',
+    '2466+ real Java interview questions and answers covering every topic. One resource for all your interviews and System Design (HLD and LLD), with code and diagrams.',
+  robots: { index: true, follow: true },
+  alternates: { canonical: '/' },
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
@@ -53,13 +59,13 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: SITE_NAME,
     type: 'website',
-    images: [{ url: `${SITE_URL}/icon-512.png`, width: 512, height: 512, alt: 'javabypankaj logo' }],
+    images: [{ url: '/icon-512.png', width: 512, height: 512, alt: 'javabypankaj logo' }],
   },
   twitter: {
     card: 'summary',
     title: `${SITE_NAME} | Crack Any Java Interview`,
     description: '2466+ real Java interview questions with code, diagrams, and ready-to-speak answers.',
-    images: [`${SITE_URL}/icon-512.png`],
+    images: ['/icon-512.png'],
   },
 }
 

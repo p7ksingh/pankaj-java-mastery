@@ -1,7 +1,7 @@
 {
   "id": "Q1401",
   "slug": "difference-between-linear-search-on-and-binary-search-olog-n",
-  "questionNumber": 1401,
+  "questionNumber": 4,
   "title": "What is the difference between linear search O(n) and binary search O(log n) — linear checks every element one by one; binary cuts the search space in half each time but needs sorted data.",
   "shortTitle": "Difference Between Linear Search O(n) and Binary Search O(log n)",
   "chapterNumber": 17,

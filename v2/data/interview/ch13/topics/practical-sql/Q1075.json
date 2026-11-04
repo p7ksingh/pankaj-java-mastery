@@ -1,7 +1,7 @@
 {
   "id": "Q1075",
   "slug": "how-would-you-design-a-scalable-database-and-what-challenges-do-you-foresee",
-  "questionNumber": 1075,
+  "questionNumber": 7,
   "title": "How would you design a scalable database, and what challenges (consistency, shard management, cross-shard queries) do you foresee and mitigate?",
   "shortTitle": "How would you design a scalable database, and what challenges do you foresee",
   "chapterNumber": 13,

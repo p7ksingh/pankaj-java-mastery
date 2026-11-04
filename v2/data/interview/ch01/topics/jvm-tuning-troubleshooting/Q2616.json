@@ -1,7 +1,7 @@
 {
   "id": "Q2616",
   "slug": "how-to-diagnose-high-cpu-usage",
-  "questionNumber": 2616,
+  "questionNumber": 12,
   "title": "How to diagnose high CPU usage — thread dump (`jstack`), look for threads in RUNNABLE state doing heavy computation or infinite loops, or excessive GC (check GC logs)?",
   "shortTitle": "How do you diagnose high CPU usage?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q881",
   "slug": "how-do-you-migrate-hundreds-of-millions-of-rows-without-taking-the-service-offline",
-  "questionNumber": 881,
+  "questionNumber": 61,
   "title": "(Scenario) How would you migrate hundreds of millions of rows without taking the service offline — separate schema compatibility, data movement, application cutover, and cleanup rather than treating the migration as one deployment: introduce the new representation while the old app remains functional, deploy code that operates during transition, backfill historical data in bounded batches with throttling/observability/restartability, verify correctness continuously, and move reads/writes only after confidence is high — and why does a migration that works in staging behave very differently when competing with production traffic?",
   "shortTitle": "How do you migrate hundreds of millions of rows without taking the service offline?",
   "chapterNumber": 10,

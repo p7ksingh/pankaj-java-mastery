@@ -1,7 +1,7 @@
 {
   "id": "Q952",
   "slug": "increasing-a-topics-partition-count-from-6-to-12-what-silently-breaks-key-to-partition-mapping",
-  "questionNumber": 952,
+  "questionNumber": 11,
   "title": "Increasing a topic's partition count from 6 to 12 — what silently breaks (key-to-partition mapping)?",
   "shortTitle": "Increasing a topic's partition count from 6 to 12 — what silently breaks (key-to-partition mapping)?",
   "chapterNumber": 11,

@@ -1,7 +1,7 @@
 {
   "id": "Q185",
   "slug": "exception-chaining-wrapping-cause-getcause-caused-by-in-stack-trace",
-  "questionNumber": 185,
+  "questionNumber": 2,
   "title": "What is exception chaining — wrapping a low-level cause in a higher-level exception (throw new ServiceException(\"msg\", cause)) — and why wrap at all (translate leaky low-level into domain-meaningful)?",
   "shortTitle": "What is exception chaining?",
   "chapterNumber": 4,

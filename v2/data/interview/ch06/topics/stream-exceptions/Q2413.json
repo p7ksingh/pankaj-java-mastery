@@ -1,7 +1,7 @@
 {
   "id": "Q2413",
   "slug": "how-do-you-handle-a-checked-exception-inside-a-map-or-foreach-lambda",
-  "questionNumber": 2413,
+  "questionNumber": 2,
   "title": "How do you handle a checked exception inside a `map()` or `forEach()` lambda (wrap in try-catch inside the lambda, or create a utility wrapper method)?",
   "shortTitle": "How do you handle a checked exception inside a map() or forEach() lambda?",
   "chapterNumber": 6,

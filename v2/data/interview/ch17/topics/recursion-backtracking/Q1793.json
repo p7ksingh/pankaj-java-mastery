@@ -1,7 +1,7 @@
 {
   "id": "Q1793",
   "slug": "subset-sum-decide-if-a-subset-reaches-an-exact-target",
-  "questionNumber": 1793,
+  "questionNumber": 20,
   "title": "Given a set of positive numbers, determine if there is a subset whose sum equals a given target S. Explain the 0/1 Knapsack boolean DP technique, the complexity, and a banking use case.",
   "shortTitle": "Subset Sum (Decide if a Subset Reaches an Exact Target)",
   "chapterNumber": 17,

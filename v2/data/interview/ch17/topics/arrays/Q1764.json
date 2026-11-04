@@ -1,7 +1,7 @@
 {
   "id": "Q1764",
   "slug": "number-range-first-and-last-position-of-a-key-in-a-sorted-array",
-  "questionNumber": 1764,
+  "questionNumber": 92,
   "title": "Given an array of numbers sorted in ascending order, find the range, meaning the first and last index, of a given key. If the key is not present, return minus one for both. Explain how two biased binary searches find the two ends.",
   "shortTitle": "Number Range (First and Last Position of a Key in a Sorted Array)",
   "chapterNumber": 17,

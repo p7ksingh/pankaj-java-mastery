@@ -1,7 +1,7 @@
 {
   "id": "Q1052",
   "slug": "when-does-a-database-actually-use-an-index-where-join-order-by-group-by",
-  "questionNumber": 1052,
+  "questionNumber": 3,
   "title": "When does a database actually use an index (WHERE, JOIN, ORDER BY, GROUP BY)?",
   "shortTitle": "When does a database actually use an index — WHERE, JOIN, ORDER BY, GROUP BY",
   "chapterNumber": 13,

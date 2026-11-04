@@ -1,7 +1,7 @@
 {
   "id": "Q301",
   "slug": "per-request-memory-overhead-in-spring-boot-and-how-to-measure-it",
-  "questionNumber": 301,
+  "questionNumber": 6,
   "title": "When a Spring Boot service handles a request, how much memory does that single request actually consume? Break down the sources — the thread stack, the request and response objects, JSON buffers — and explain how you measure per-request overhead in production using heap diffs, Actuator, and AOP.",
   "shortTitle": "Per-request memory overhead in Spring Boot?",
   "chapterNumber": 5,

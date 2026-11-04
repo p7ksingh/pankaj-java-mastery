@@ -1,7 +1,7 @@
 {
   "id": "Q1003",
   "slug": "how-to-ensure-the-quality-and-maintainability-of-your-code",
-  "questionNumber": 1003,
+  "questionNumber": 2,
   "title": "How do you ensure the quality and maintainability of your code (clean code, standards, unit tests/TDD, reviews, documentation, modular design, version control/CI-CD, refactoring)?",
   "shortTitle": "How to ensure the quality and maintainability of your code",
   "chapterNumber": 12,

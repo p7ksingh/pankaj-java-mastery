@@ -1,7 +1,7 @@
 {
   "id": "Q1936",
   "slug": "scenario-an-eks-cluster-is-slow-but-cpu-and-memory-look-normal",
-  "questionNumber": 1936,
+  "questionNumber": 35,
   "title": "(Scenario) An EKS cluster is slow but CPU and memory look NORMAL — how do you troubleshoot across the whole request path rather than one dashboard (Application: latency/error rate/thread & connection pools/downstream DB latency; Kubernetes: pod scheduling/restarts/events/probe failures/pending pods; Node: disk I/O, network, disk pressure, kernel, container runtime; Networking: CoreDNS/DNS latency, service-to-service, NetworkPolicy, LB; Control plane: API-server latency, etcd) — and why are CPU/memory only two of many signals?",
   "shortTitle": "(Scenario) An EKS Cluster Is Slow but CPU and Memory Look Normal",
   "chapterNumber": 12,

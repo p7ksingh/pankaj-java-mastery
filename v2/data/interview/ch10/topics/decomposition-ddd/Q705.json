@@ -1,7 +1,7 @@
 {
   "id": "Q705",
   "slug": "decomposing-a-monolith-into-microservices",
-  "questionNumber": 705,
+  "questionNumber": 1,
   "title": "Given a monolithic (e.g. food-delivery) application, how would you decompose it into microservices (DDD bounded contexts, database-per-service, extract one module at a time), and what challenges do you face?",
   "shortTitle": "Decomposing a monolith into microservices",
   "chapterNumber": 10,

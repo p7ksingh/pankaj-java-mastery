@@ -1,7 +1,7 @@
 {
   "id": "Q2559",
   "slug": "design-a-movie-ticket-booking-system-like-bookmyshow",
-  "questionNumber": 2559,
+  "questionNumber": 8,
   "title": "Design a Movie Ticket Booking System (like BookMyShow) — Movie, Cinema, Screen, Seat, Show, Booking, seat selection with concurrent handling (locking), payment, cancellation.",
   "shortTitle": "Design a Movie Ticket Booking System (like BookMyShow)",
   "chapterNumber": 15,

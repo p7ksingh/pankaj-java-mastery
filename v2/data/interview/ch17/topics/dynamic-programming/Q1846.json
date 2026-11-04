@@ -1,7 +1,7 @@
 {
   "id": "Q1846",
   "slug": "longest-common-subsequence-longest-order-preserving-match-between-two-sequences",
-  "questionNumber": 1846,
+  "questionNumber": 28,
   "title": "Given two sequences, find the length of the longest subsequence common to both, preserving order but not requiring contiguity. Explain the two-dimensional dynamic programming, the row-rolling optimisation, the complexity, and a banking use case.",
   "shortTitle": "Longest Common Subsequence (Longest Order-Preserving Match Between Two Sequences)",
   "chapterNumber": 17,

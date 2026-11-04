@@ -1,7 +1,7 @@
 {
   "id": "Q778",
   "slug": "scenario-a-product-manager-wants-the-ui-to-show-payment-confirmed-before-the-transaction-is-durably-committed",
-  "questionNumber": 778,
+  "questionNumber": 17,
   "title": "(Scenario) A product manager wants the UI to show \"payment confirmed\" BEFORE the transaction is durably committed — why is this dangerous (the commit can still fail/roll back, so you've told the user something false), and what do you propose instead (confirm only after the durable commit; for long-running work return a `202 Accepted` + a pending/processing state the client polls or gets notified about, with the confirmation driven by the real committed outcome)?",
   "shortTitle": "(Scenario) A product manager wants the UI to show \"payment confirmed\" BEFORE the transaction is durably committed",
   "chapterNumber": 10,

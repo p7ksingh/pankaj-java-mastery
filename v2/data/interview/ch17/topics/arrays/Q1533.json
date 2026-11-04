@@ -1,7 +1,7 @@
 {
   "id": "Q1533",
   "slug": "kth-largest-element-in-an-array-min-heap-of-size-k-or-quickselect",
-  "questionNumber": 1533,
+  "questionNumber": 49,
   "title": "Given an unsorted array of integers and a value K, return the Kth largest element (by value, not the Kth distinct element).",
   "shortTitle": "Kth Largest Element in an Array — min-heap of size K or QuickSelect",
   "chapterNumber": 17,

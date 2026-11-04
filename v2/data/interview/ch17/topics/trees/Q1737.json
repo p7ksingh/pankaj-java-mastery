@@ -1,7 +1,7 @@
 {
   "id": "Q1737",
   "slug": "binary-tree-path-sum-does-a-root-to-leaf-path-equal-a-target",
-  "questionNumber": 1737,
+  "questionNumber": 21,
   "title": "Given a binary tree and a target sum, determine whether the tree has any root-to-leaf path such that adding up all the node values along the path equals the target sum. Return true or false, and explain why a depth-first traversal is the natural fit for this problem.",
   "shortTitle": "Binary Tree Path Sum (Does a Root-to-Leaf Path Equal a Target?)",
   "chapterNumber": 17,

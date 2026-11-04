@@ -1,7 +1,7 @@
 {
   "id": "Q108",
   "slug": "what-is-a-safepoint-what-is-time-to-safepoint-and-how-can-one-loop-inflate-a-gc-pause-for-all-threads",
-  "questionNumber": 108,
+  "questionNumber": 6,
   "title": "What is a safepoint, what is Time-To-Safepoint (TTSP), and how can one long-running loop inflate a GC pause for all threads?",
   "shortTitle": "What is a safepoint and Time-To-Safepoint?",
   "chapterNumber": 1,

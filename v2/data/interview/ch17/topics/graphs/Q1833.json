@@ -1,7 +1,7 @@
 {
   "id": "Q1833",
   "slug": "cheapest-flights-within-k-stops-shortest-path-with-a-limit-on-hops",
-  "questionNumber": 1833,
+  "questionNumber": 23,
   "title": "Given n cities, a list of flights as (from, to, price), a source, a destination, and a maximum number of stops K, find the cheapest price to reach the destination using at most K stops. Explain the Bellman-Ford style relaxation, the operations, the complexity, and a banking use case.",
   "shortTitle": "Cheapest Flights Within K Stops (Shortest Path with a Limit on Hops)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1564",
   "slug": "permutations-ii-with-duplicates-sort-then-skip-same-level-duplicates",
-  "questionNumber": 1564,
+  "questionNumber": 11,
   "title": "Given an array that may contain duplicate integers, return all unique permutations.",
   "shortTitle": "Permutations II (with duplicates) — sort then skip same-level duplicates",
   "chapterNumber": 17,

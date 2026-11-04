@@ -1,7 +1,7 @@
 {
   "id": "Q1839",
   "slug": "01-knapsack-maximum-value-within-a-weight-budget-memoized",
-  "questionNumber": 1839,
+  "questionNumber": 24,
   "title": "Given items each with a weight and a value, and a knapsack capacity, choose a subset to maximise total value without exceeding the capacity, where each item is taken at most once. Explain the top-down memoized recursion, the operations, the complexity, and a banking use case.",
   "shortTitle": "0/1 Knapsack (Maximum Value Within a Weight Budget, Memoized)",
   "chapterNumber": 17,

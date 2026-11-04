@@ -1,7 +1,7 @@
 {
   "id": "Q1930",
   "slug": "scenario-diagnosing-crashloopbackoff-imagepullbackoff-pending-and-containercreating",
-  "questionNumber": 1930,
+  "questionNumber": 9,
   "title": "(Scenario) A pod is stuck in `CrashLoopBackOff` / `ImagePullBackOff` / `Pending` / `ContainerCreating` — how do you diagnose each (`kubectl describe`, `logs --previous`, events, image/registry creds, resource requests vs node capacity, PVC binding)?",
   "shortTitle": "(Scenario) Diagnosing CrashLoopBackOff, ImagePullBackOff, Pending, and ContainerCreating",
   "chapterNumber": 12,

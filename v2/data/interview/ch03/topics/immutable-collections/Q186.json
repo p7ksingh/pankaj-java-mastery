@@ -1,7 +1,7 @@
 {
-  "id": "Q186-collections",
-  "slug": "listof-setof-mapof-java-9-immutable-factories-vs-collectionsunmodifiablelist",
-  "questionNumber": 186,
+  "id": "Q186",
+  "slug": "listof-setof-mapof-java-9-immutable-factories-vs",
+  "questionNumber": 1,
   "title": "List.of, Set.of, Map.of — Java 9 immutable factories vs Collections.unmodifiableList",
   "shortTitle": "What are List.of, Set.of, Map.of?",
   "chapterNumber": 3,

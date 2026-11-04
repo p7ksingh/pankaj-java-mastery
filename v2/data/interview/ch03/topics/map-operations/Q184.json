@@ -1,7 +1,7 @@
 {
-  "id": "Q184-collections",
-  "slug": "putifabsent-vs-computeifabsent-eager-vs-lazy-cache-patterns",
-  "questionNumber": 184,
+  "id": "Q184",
+  "slug": "putifabsent-vs-computeifabsent-eager-vs-lazy-cache",
+  "questionNumber": 2,
   "title": "putIfAbsent vs computeIfAbsent — eager vs lazy, cache patterns",
   "shortTitle": "What is putIfAbsent vs computeIfAbsent?",
   "chapterNumber": 3,

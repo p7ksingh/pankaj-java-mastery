@@ -1,7 +1,7 @@
 {
   "id": "Q1569",
   "slug": "palindrome-partitioning-backtrack-with-palindrome-check-at-each-cut",
-  "questionNumber": 1569,
+  "questionNumber": 29,
   "title": "Given a string, partition it so that every substring of the partition is a palindrome, and return all possible palindrome partitionings.",
   "shortTitle": "Palindrome Partitioning — backtrack with palindrome check at each cut",
   "chapterNumber": 17,

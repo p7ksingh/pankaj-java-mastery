@@ -1,7 +1,7 @@
 {
   "id": "Q2591",
   "slug": "oauth2-client-credentials-flow-for-machine-to-machine-authentication",
-  "questionNumber": 2591,
+  "questionNumber": 4,
   "title": "What is the Client Credentials flow — used for machine-to-machine (service-to-service) authentication where there is no user involved — the client sends its own credentials to get a token?",
   "shortTitle": "OAuth2 Client Credentials Flow for Machine-to-Machine Authentication",
   "chapterNumber": 26,

@@ -1,7 +1,7 @@
 {
   "id": "Q1400",
   "slug": "implement-binary-search-iterative",
-  "questionNumber": 1400,
+  "questionNumber": 3,
   "title": "Implement binary search (iterative) — maintain left and right pointers, calculate mid, compare and narrow down.",
   "shortTitle": "Implement Binary Search (Iterative)",
   "chapterNumber": 17,

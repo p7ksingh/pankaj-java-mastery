@@ -1,7 +1,7 @@
 {
   "id": "Q40",
   "slug": "can-varargs-replace-string-args-in-the-main-method",
-  "questionNumber": 40,
+  "questionNumber": 5,
   "title": "Can varargs (`String... args`) replace `String[] args` in the `main` method?",
   "shortTitle": "Can varargs replace String[] args in the main method?",
   "chapterNumber": 1,

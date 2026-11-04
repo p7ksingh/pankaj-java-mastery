@@ -1,7 +1,7 @@
 {
   "id": "Q1074",
   "slug": "why-like-term-is-slow-full-text-search-and-when-to-reach-for-elasticsearch",
-  "questionNumber": 1074,
+  "questionNumber": 1,
   "title": "Why is `WHERE col LIKE '%term%'` slow (leading wildcard forces a full scan), and how does full-text search fix it (a `tsvector` column + GIN inverted index, with stemming and ranking) — and when do you reach for Elasticsearch instead?",
   "shortTitle": "Why LIKE '%term%' is slow, full-text search, and when to reach for Elasticsearch",
   "chapterNumber": 13,

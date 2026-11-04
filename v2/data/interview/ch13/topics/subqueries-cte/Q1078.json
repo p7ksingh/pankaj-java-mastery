@@ -1,7 +1,7 @@
 {
   "id": "Q1078",
   "slug": "readwrite-splitting-at-the-application-level-with-abstractroutingdatasource",
-  "questionNumber": 1078,
+  "questionNumber": 1,
   "title": "How do you implement read/write splitting at the application level (route writes to the primary and reads to a replica) — e.g. an `AbstractRoutingDataSource` that selects the datasource from a key set per request or driven by `@Transactional(readOnly = true)` — and what must you watch for (replication lag causing stale reads, so reads that must be fresh are routed back to the primary)?",
   "shortTitle": "Read/write splitting at the application level with AbstractRoutingDataSource",
   "chapterNumber": 13,

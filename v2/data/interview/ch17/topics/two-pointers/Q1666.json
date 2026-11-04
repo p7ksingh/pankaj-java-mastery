@@ -1,7 +1,7 @@
 {
   "id": "Q1666",
   "slug": "rearrange-0s-and-1s-in-place-partition-with-two-pointers",
-  "questionNumber": 1666,
+  "questionNumber": 7,
   "title": "Given an array containing only 0s and 1s, rearrange it in place so that all the 0s come first followed by all the 1s, without using any extra array. (GeeksforGeeks: Segregate 0s and 1s)",
   "shortTitle": "Rearrange 0s and 1s (In-Place Partition with Two Pointers)",
   "chapterNumber": 17,

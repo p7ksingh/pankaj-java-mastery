@@ -1,7 +1,7 @@
 {
   "id": "Q1327",
   "slug": "what-is-type-erasure-in-generics-what-does-it-make-impossible-and-what-is-the-pecs-rule",
-  "questionNumber": 1327,
+  "questionNumber": 21,
   "title": "What is type erasure in generics, and what does it make impossible (`new T()`, `instanceof List<String>`, generic arrays, overload by generic type), plus the PECS rule (`? extends` producer, `? super` consumer)?",
   "shortTitle": "What is type erasure in generics, what does it make impossible, and what is the PECS rule?",
   "chapterNumber": 16,

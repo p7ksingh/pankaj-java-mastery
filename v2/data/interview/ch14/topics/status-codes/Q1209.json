@@ -1,7 +1,7 @@
 {
   "id": "Q1209",
   "slug": "how-do-you-design-rest-error-responses-properly-and-why-is-returning-200-ok-with-success-false-an-anti-pattern",
-  "questionNumber": 1209,
+  "questionNumber": 4,
   "title": "How do you design REST error responses properly — why is returning `200 OK` with `{\"success\": false}` an anti-pattern (clients, monitoring, and retry logic all key off the HTTP status, so failures must use 400 bad input / 401-403 auth / 404 not found / 409 conflict / 500 server error), and what makes a good error body (a consistent shape with a STABLE machine-readable error code separate from the human-readable message, a trace/correlation id, and NO leaked stack traces — all mapped centrally through `@RestControllerAdvice` rather than per-controller `try/catch`)?",
   "shortTitle": "How do you design REST error responses properly, and why is returning 200 OK with {\"success\": false} an anti-pattern",
   "chapterNumber": 14,

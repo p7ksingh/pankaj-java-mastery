@@ -1,7 +1,7 @@
 {
   "id": "Q12",
   "slug": "how-static-behaves-in-inheritance",
-  "questionNumber": 12,
+  "questionNumber": 3,
   "title": "How does static behave in inheritance (static variable hiding, static method hiding vs overriding, static block execution order, and why super cannot call a static method)?",
   "shortTitle": "How does static behave in inheritance?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q1544",
   "slug": "flood-fill-bfsdfs-from-starting-cell",
-  "questionNumber": 1544,
+  "questionNumber": 7,
   "title": "Given an image as a grid of pixel colors, a starting pixel, and a new color, repaint the starting pixel and all connected pixels of the same original color with the new color, where connectivity is orthogonal. Return the modified image.",
   "shortTitle": "Flood Fill — BFS/DFS from starting cell",
   "chapterNumber": 17,

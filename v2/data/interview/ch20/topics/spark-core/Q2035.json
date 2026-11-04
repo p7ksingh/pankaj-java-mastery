@@ -1,7 +1,7 @@
 {
   "id": "Q2035",
   "slug": "the-three-repartition-variants-repartitionn-repartitioncols-repartitionn-cols",
-  "questionNumber": 2035,
+  "questionNumber": 20,
   "title": "Explain the three `repartition` variants: `repartition(n)` (round-robin, even distribution), `repartition(*cols)` (hash-modulo on columns, default 200 shuffle partitions), `repartition(n, *cols)` (hash-modulo into n partitions) — and when do you use each?",
   "shortTitle": "The three `repartition` variants — `repartition(n)`, `repartition(*cols)`, `repartition(n, *cols)`",
   "chapterNumber": 20,

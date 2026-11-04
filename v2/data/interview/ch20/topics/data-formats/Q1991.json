@@ -1,7 +1,7 @@
 {
   "id": "Q1991",
   "slug": "what-is-parquet",
-  "questionNumber": 1991,
+  "questionNumber": 1,
   "title": "What is Parquet — a file format that stores data in columns instead of rows, which is much faster for analytics queries because you only read the columns you need (like reading only the \"salary\" column from a table with 100 columns).",
   "shortTitle": "What is Parquet",
   "chapterNumber": 20,

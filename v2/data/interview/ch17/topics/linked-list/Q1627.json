@@ -1,7 +1,7 @@
 {
   "id": "Q1627",
   "slug": "detect-a-cycle-in-a-linked-list-floyds-tortoise-and-hare",
-  "questionNumber": 1627,
+  "questionNumber": 17,
   "title": "Determine whether a singly linked list contains a cycle, and find the node where the cycle begins, using Floyd's two-pointer algorithm in constant space.",
   "shortTitle": "Detect a Cycle in a Linked List (Floyd's Tortoise and Hare)",
   "chapterNumber": 17,

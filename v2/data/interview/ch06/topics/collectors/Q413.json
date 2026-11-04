@@ -1,7 +1,7 @@
 {
   "id": "Q413",
   "slug": "collectorstomap-keymapper-valuemapper-merge-function-map-supplier-linkedhashmap",
-  "questionNumber": 413,
+  "questionNumber": 9,
   "title": "How does Collectors.toMap(keyMapper, valueMapper) work, why does it throw IllegalStateException on duplicate keys by default, and how do you provide a merge function and a map supplier?",
   "shortTitle": "Collectors.toMap — keyMapper, valueMapper, merge function, map supplier (LinkedHashMap)",
   "chapterNumber": 6,

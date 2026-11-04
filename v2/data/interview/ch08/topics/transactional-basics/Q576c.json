@@ -1,7 +1,7 @@
 {
   "id": "Q576c",
   "slug": "class-level-vs-method-level-transactional",
-  "questionNumber": 576,
+  "questionNumber": 6,
   "title": "What is the difference between class-level and method-level @Transactional?",
   "shortTitle": "Class-level vs Method-level @Transactional?",
   "chapterNumber": 8,

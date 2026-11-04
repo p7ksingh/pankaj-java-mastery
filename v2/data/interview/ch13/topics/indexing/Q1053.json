@@ -1,7 +1,7 @@
 {
   "id": "Q1053",
   "slug": "when-might-a-database-ignore-an-index-functions-on-columns-leading-wildcard-small-tables-low-selectivity-large-result-sets",
-  "questionNumber": 1053,
+  "questionNumber": 4,
   "title": "When might a database ignore an index (functions on columns, leading wildcard, small tables, low selectivity, large result sets)?",
   "shortTitle": "When might a database ignore an index — functions on columns, leading wildcard, small tables, low selectivity, large result sets",
   "chapterNumber": 13,

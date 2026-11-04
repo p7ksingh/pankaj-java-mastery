@@ -1,7 +1,7 @@
 {
   "id": "Q2371",
   "slug": "from-a-list-of-integers-find-all-numbers-whose-string-representation-starts-with-a-given-digit",
-  "questionNumber": 2371,
+  "questionNumber": 11,
   "title": "From a list of integers, find all numbers whose string representation starts with a given digit (`mapToObj(i -> i + \"\").filter(s -> s.startsWith(\"1\"))`).",
   "shortTitle": "From a list of integers, find all numbers whose string representation starts with a given digit",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q295",
   "slug": "debug-app-feels-slow-no-errors-segment-timeline-hidden-waits-distributed-tracing",
-  "questionNumber": 295,
+  "questionNumber": 3,
   "title": "Debug \"app feels slow\" — no errors, segment timeline, hidden waits, distributed tracing",
   "shortTitle": "Debug slow app with no errors?",
   "chapterNumber": 5,

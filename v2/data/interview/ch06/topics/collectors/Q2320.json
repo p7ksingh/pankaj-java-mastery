@@ -1,7 +1,7 @@
 {
   "id": "Q2320",
   "slug": "sort-a-mapstring-double-by-value-descending-and-collect-into-linkedhashmap",
-  "questionNumber": 2320,
+  "questionNumber": 16,
   "title": "Sort a `Map<String, Double>` by value (salary) in descending order and collect into `LinkedHashMap`.",
   "shortTitle": "Sort a Map<String, Double> by value descending and collect into LinkedHashMap",
   "chapterNumber": 6,

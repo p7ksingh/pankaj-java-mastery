@@ -1,7 +1,7 @@
 {
   "id": "Q440",
   "slug": "spring-security-jwt-filter-chain-preauthorize-webclient-for-inter-service-calls",
-  "questionNumber": 440,
+  "questionNumber": 1,
   "title": "What is content negotiation? What is Feign vs RestTemplate vs WebClient? How does the Spring Security filter chain work? How does JWT auth work end-to-end? What is SecurityContextHolder? What is @PreAuthorize vs @Secured? How do you secure endpoints?",
   "shortTitle": "How does Spring Security work with JWT?",
   "chapterNumber": 7,

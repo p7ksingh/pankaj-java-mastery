@@ -1,7 +1,7 @@
 {
   "id": "Q1974",
   "slug": "what-an-slo-is-and-what-an-sli-is",
-  "questionNumber": 1974,
+  "questionNumber": 51,
   "title": "What is an SLO (Service Level Objective) — a target for reliability (e.g., 99.9% availability = max 8.7 hours downtime per year) — and what is an SLI (Service Level Indicator) — the actual measured metric (e.g., % of successful requests in last 30 days)?",
   "shortTitle": "What an SLO is and what an SLI is",
   "chapterNumber": 12,

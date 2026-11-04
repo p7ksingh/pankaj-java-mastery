@@ -1,7 +1,7 @@
 {
   "id": "Q1944",
   "slug": "safely-upgrading-a-long-neglected-terraform-module-and-why-a-must-be-replaced-line-deserves-special-scrutiny",
-  "questionNumber": 1944,
+  "questionNumber": 11,
   "title": "A Terraform module hasn't been updated in a long time — how do you upgrade it SAFELY (review current Terraform/provider/module versions and changelogs, check production usage, test in a non-prod environment, and above all scrutinize the `terraform plan`), and why does a `-/+` / \"must be replaced\" line deserve special attention (a seemingly small change can force resource recreation and downtime)?",
   "shortTitle": "Safely upgrading a long-neglected Terraform module, and why a `-/+` \"must be replaced\" line deserves special scrutiny",
   "chapterNumber": 12,

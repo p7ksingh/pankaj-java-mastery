@@ -1,7 +1,7 @@
 {
   "id": "Q1894",
   "slug": "secure-access-to-aws-services-without-hardcoded-keys-and-secret-storagerotation",
-  "questionNumber": 1894,
+  "questionNumber": 5,
   "title": "How do you give an EC2 instance, ECS task, or Lambda function secure access to other AWS services without hardcoded keys (instance profile / task role / execution role), and how do you store and rotate application secrets (Secrets Manager, Parameter Store, KMS)?",
   "shortTitle": "Secure Access to AWS Services Without Hardcoded Keys, and Secret Storage/Rotation",
   "chapterNumber": 18,

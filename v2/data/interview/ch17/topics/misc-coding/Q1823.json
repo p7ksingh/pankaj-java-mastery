@@ -1,7 +1,7 @@
 {
   "id": "Q1823",
   "slug": "tasks-scheduling-can-all-tasks-be-finished-given-prerequisites",
-  "questionNumber": 1823,
+  "questionNumber": 43,
   "title": "Given a number of tasks and a list of prerequisite pairs, determine whether it is possible to finish all tasks. Explain how the Topological Sort pattern decides feasibility, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Tasks Scheduling (Can All Tasks Be Finished Given Prerequisites)",
   "chapterNumber": 17,

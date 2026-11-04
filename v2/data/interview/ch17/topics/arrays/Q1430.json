@@ -1,7 +1,7 @@
 {
   "id": "Q1430",
   "slug": "maximum-subarray-kadanes-algorithm-running-sum-reset-when-negative",
-  "questionNumber": 1430,
+  "questionNumber": 20,
   "title": "Maximum Subarray / Kadane's Algorithm — running sum, reset when negative.",
   "shortTitle": "Maximum Subarray / Kadane's Algorithm — Running Sum, Reset When Negative",
   "chapterNumber": 17,

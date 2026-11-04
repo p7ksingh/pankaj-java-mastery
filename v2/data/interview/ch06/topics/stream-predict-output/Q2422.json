@@ -1,7 +1,7 @@
 {
   "id": "Q2422",
   "slug": "what-does-streamof123mapi-i-2-return-if-no-terminal-operation-is-called",
-  "questionNumber": 2422,
+  "questionNumber": 1,
   "title": "What does `Stream.of(1,2,3).map(i -> i * 2)` return if no terminal operation is called? (Nothing — streams are lazy.)",
   "shortTitle": "What does Stream.of(1,2,3).map(i -> i * 2) return if no terminal operation is called?",
   "chapterNumber": 6,

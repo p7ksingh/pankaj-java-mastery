@@ -1,7 +1,7 @@
 {
   "id": "Q66",
   "slug": "what-is-an-enum-in-java-and-how-can-it-have-fields-constructors-and-methods",
-  "questionNumber": 66,
+  "questionNumber": 1,
   "title": "What is an `enum` in Java, and how can it have fields, constructors, and methods?",
   "shortTitle": "What is an enum in Java and how can it have fields and methods?",
   "chapterNumber": 1,

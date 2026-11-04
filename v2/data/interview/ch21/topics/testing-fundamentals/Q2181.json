@@ -1,7 +1,7 @@
 {
   "id": "Q2181",
   "slug": "functional-vs-non-functional-testing-the-test-pyramid-and-why-the-ice-cream-cone-is-an-anti-pattern",
-  "questionNumber": 2181,
+  "questionNumber": 2,
   "title": "What is the difference between functional and non-functional testing, and where do unit, integration, system/end-to-end, and acceptance testing sit in the test pyramid (many fast unit tests at the base, fewer slow E2E tests at the top), and why is an \"ice-cream cone\" (mostly manual/E2E) an anti-pattern?",
   "shortTitle": "Functional vs non-functional testing, the test pyramid, and why the ice-cream cone is an anti-pattern",
   "chapterNumber": 21,

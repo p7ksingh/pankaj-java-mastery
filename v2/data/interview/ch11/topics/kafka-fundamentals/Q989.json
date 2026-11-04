@@ -1,7 +1,7 @@
 {
   "id": "Q989",
   "slug": "can-kafka-and-solace-be-used-together-and-why-are-they-often-complementary",
-  "questionNumber": 989,
+  "questionNumber": 18,
   "title": "Can Kafka and Solace be used together — yes, many companies use Kafka as the durable system of record for long-term event retention and replay, and Solace for dynamic event distribution and selective routing to consumers — they solve different problems and are often complementary?",
   "shortTitle": "Can Kafka and Solace be used together, and why are they often complementary?",
   "chapterNumber": 11,

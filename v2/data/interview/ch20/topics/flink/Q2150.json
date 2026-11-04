@@ -1,7 +1,7 @@
 {
   "id": "Q2150",
   "slug": "what-is-flink-sql-and-how-does-it-work",
-  "questionNumber": 2150,
+  "questionNumber": 13,
   "title": "What is Flink SQL and how does it work — you write standard SQL against dynamic tables (append-only, upsert, retract), Flink compiles the SQL into a streaming/batch dataflow graph, and results are continuously updated as new events arrive?",
   "shortTitle": "What is Flink SQL and how does it work",
   "chapterNumber": 20,

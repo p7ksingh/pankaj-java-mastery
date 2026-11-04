@@ -1,7 +1,7 @@
 {
   "id": "Q1879",
   "slug": "transit-gateway-route-tables-association-propagation-and-environment-isolation",
-  "questionNumber": 1879,
+  "questionNumber": 8,
   "title": "How do you use Transit Gateway route tables + attachment association + route propagation to ISOLATE environments (e.g. allow Production-PCA ↔ Production-non-PCA but DENY Non-Production ↔ either) — put production attachments on a production route table that carries routes between them, and the non-production attachment on a separate route table with no routes to production — and why does \"association + propagation\" determine which routes each attachment can see?",
   "shortTitle": "Transit Gateway Route Tables, Association, Propagation, and Environment Isolation",
   "chapterNumber": 18,

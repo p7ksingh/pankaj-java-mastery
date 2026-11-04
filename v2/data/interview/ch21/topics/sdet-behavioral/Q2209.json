@@ -1,7 +1,7 @@
 {
   "id": "Q2209",
   "slug": "what-is-bdd-behavior-driven-development-and-its-tools",
-  "questionNumber": 2209,
+  "questionNumber": 7,
   "title": "What is BDD (Behavior-Driven Development) — write tests in plain English using Given-When-Then format (e.g., \"Given a user is logged in, When they click checkout, Then order is placed\") — and what tools are used (Cucumber, JBehave for Java)?",
   "shortTitle": "What is BDD (Behavior-Driven Development) and its tools",
   "chapterNumber": 21,

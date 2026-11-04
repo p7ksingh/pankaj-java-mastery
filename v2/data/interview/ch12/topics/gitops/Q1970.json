@@ -1,7 +1,7 @@
 {
   "id": "Q1970",
   "slug": "what-gitops-is-and-why-it-is-better-than-manual-kubectl-apply",
-  "questionNumber": 1970,
+  "questionNumber": 2,
   "title": "What is GitOps — using Git as the single source of truth for infrastructure and application deployment; a GitOps operator (ArgoCD/Flux) watches the Git repo and automatically syncs the cluster to match what is in Git — and why is it better than manual `kubectl apply` (auditable, repeatable, self-healing)?",
   "shortTitle": "What GitOps is and why it is better than manual kubectl apply",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q2092",
   "slug": "spark-complexnested-data-types-structtype-arraytype-maptype",
-  "questionNumber": 2092,
+  "questionNumber": 52,
   "title": "What are Spark's complex/nested data types — `StructType` (nested record/object), `ArrayType` (list of elements), `MapType` (key-value dictionary) — and how do you access them (dot notation for structs, `getItem`/bracket for arrays/maps, `explode()` to flatten arrays)?",
   "shortTitle": "Spark complex/nested data types — StructType, ArrayType, MapType",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q182",
   "slug": "suppressed-exceptions-primary-vs-suppressed-getsuppressed-why-better-than-finally",
-  "questionNumber": 182,
+  "questionNumber": 2,
   "title": "What are suppressed exceptions in try-with-resources — which exception propagates (try body = primary, close() = suppressed via getSuppressed()), and why is this better than the pre-Java-7 finally pattern?",
   "shortTitle": "What are suppressed exceptions?",
   "chapterNumber": 4,

@@ -1,7 +1,7 @@
 {
   "id": "Q571",
   "slug": "transactionaleventlistener-commit-aware-event-handling",
-  "questionNumber": 571,
+  "questionNumber": 1,
   "title": "What is @TransactionalEventListener? Explain the BEFORE_COMMIT, AFTER_COMMIT, and AFTER_ROLLBACK phases, how it differs from @EventListener, and what fallbackExecution does.",
   "shortTitle": "What is @TransactionalEventListener?",
   "chapterNumber": 8,

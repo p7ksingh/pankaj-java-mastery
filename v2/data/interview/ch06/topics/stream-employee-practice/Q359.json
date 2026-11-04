@@ -1,7 +1,7 @@
 {
   "id": "Q359",
   "slug": "remove-duplicates-from-a-list-by-value-and-by-object-field-using-streams",
-  "questionNumber": 359,
+  "questionNumber": 8,
   "title": "How do you remove duplicate elements from a list (by value and by object field) using streams?",
   "shortTitle": "Remove duplicates from a list — by value and by object field using streams",
   "chapterNumber": 6,

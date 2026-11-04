@@ -1,7 +1,7 @@
 {
   "id": "Q996",
   "slug": "maven-lifecycle-phases-mvn-install-vs-mvn-deploy-and-distributionmanagement",
-  "questionNumber": 996,
+  "questionNumber": 4,
   "title": "What are the phases of the Maven build lifecycle (`validate` → `compile` → `test` → `package` → `verify` → `install` → `deploy`), what is the difference between `mvn install` (installs the artifact into the local `.m2` repository) and `mvn deploy` (uploads it to a remote/shared repository), and what is the role of `<distributionManagement>` (configuring the remote artifact repository — e.g. Nexus/Artifactory — that `deploy` publishes to)?",
   "shortTitle": "Maven lifecycle phases, `mvn install` vs `mvn deploy`, and `distributionManagement`",
   "chapterNumber": 12,

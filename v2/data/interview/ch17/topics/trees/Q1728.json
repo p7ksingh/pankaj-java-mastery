@@ -1,7 +1,7 @@
 {
   "id": "Q1728",
   "slug": "zigzag-traversal-alternating-level-order",
-  "questionNumber": 1728,
+  "questionNumber": 16,
   "title": "Given the root of a binary tree, return its node values in zigzag level order: the first level left to right, the next level right to left, alternating for each subsequent level.",
   "shortTitle": "Zigzag Traversal (Alternating Level Order)",
   "chapterNumber": 17,

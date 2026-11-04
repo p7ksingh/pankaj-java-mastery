@@ -1,7 +1,7 @@
 {
   "id": "Q111",
   "slug": "what-are-the-four-reference-types-how-does-each-interact-with-gc-and-what-are-their-use-cases",
-  "questionNumber": 111,
+  "questionNumber": 9,
   "title": "What are the four reference types (strong, soft, weak, phantom), how does each interact with GC, and what are their use cases (caches, canonicalizing maps, post-mortem cleanup)?",
   "shortTitle": "What are the four reference types in Java?",
   "chapterNumber": 1,

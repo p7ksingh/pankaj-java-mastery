@@ -1,7 +1,7 @@
 {
   "id": "Q1701",
   "slug": "maximum-absolute-sum-of-any-subarray",
-  "questionNumber": 1701,
+  "questionNumber": 9,
   "title": "Given an array of integers, find the maximum absolute value of the sum of any contiguous non-empty subarray. Solve it by running both maximum and minimum Kadane simultaneously and demonstrate with a complete banking mini-project.",
   "shortTitle": "Maximum Absolute Sum of Any Subarray",
   "chapterNumber": 17,

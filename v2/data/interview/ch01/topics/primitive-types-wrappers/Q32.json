@@ -1,7 +1,7 @@
 {
   "id": "Q32",
   "slug": "in-which-exact-cases-can-unboxing-cause-a-nullpointerexception",
-  "questionNumber": 32,
+  "questionNumber": 6,
   "title": "In which exact cases can unboxing cause a `NullPointerException` (map/list return values, default array values, method returns)?",
   "shortTitle": "When does unboxing cause a NullPointerException?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q428",
   "slug": "collectorsreducing-vs-streamreduce-collector-downstream-vs-terminal-operation",
-  "questionNumber": 428,
+  "questionNumber": 12,
   "title": "What is the difference between Collectors.reducing (a collector, usable as downstream in groupingBy) and Stream.reduce (a terminal operation), and when must you use the collector form?",
   "shortTitle": "Collectors.reducing vs Stream.reduce — collector (downstream) vs terminal operation",
   "chapterNumber": 6,

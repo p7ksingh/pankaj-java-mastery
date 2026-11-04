@@ -1,7 +1,7 @@
 {
   "id": "Q774",
   "slug": "what-is-idempotency-which-http-methods-should-be-idempotent-and-why-does-it-matter",
-  "questionNumber": 774,
+  "questionNumber": 2,
   "title": "What is idempotency, which HTTP methods should be idempotent, and why does it matter?",
   "shortTitle": "What is idempotency, which HTTP methods should be idempotent, and why does it matter",
   "chapterNumber": 10,

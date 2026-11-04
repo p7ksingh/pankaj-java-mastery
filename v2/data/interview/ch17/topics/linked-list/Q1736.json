@@ -1,7 +1,7 @@
 {
   "id": "Q1736",
   "slug": "left-view-of-a-binary-tree-first-node-of-each-level",
-  "questionNumber": 1736,
+  "questionNumber": 21,
   "title": "Given the root of a binary tree, imagine standing on the left side of it; return the values of the nodes visible from the left, ordered top to bottom. This is the first node of each level in a level order traversal.",
   "shortTitle": "Left View of a Binary Tree (First Node of Each Level)",
   "chapterNumber": 17,

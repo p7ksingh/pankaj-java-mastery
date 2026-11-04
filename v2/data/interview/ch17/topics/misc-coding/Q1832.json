@@ -1,7 +1,7 @@
 {
   "id": "Q1832",
   "slug": "autocomplete-suggestions-return-words-matching-a-typed-prefix",
-  "questionNumber": 1832,
+  "questionNumber": 47,
   "title": "Given a set of words and a typed prefix, return all words that start with that prefix, optionally limited to the top few. Explain how the Trie pattern provides autocomplete, the operations, the complexity, and a banking use case.",
   "shortTitle": "Autocomplete Suggestions (Return Words Matching a Typed Prefix)",
   "chapterNumber": 17,

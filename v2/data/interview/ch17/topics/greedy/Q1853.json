@@ -1,7 +1,7 @@
 {
   "id": "Q1853",
   "slug": "assign-cookies-greedy-matching-of-smallest-sufficient-resource",
-  "questionNumber": 1853,
+  "questionNumber": 12,
   "title": "Each child has a greed factor and each cookie has a size; a child is content only if a cookie's size meets or exceeds the child's greed. Maximise the number of content children. Explain the greedy two-pointer approach, the operations, the complexity, and a banking use case.",
   "shortTitle": "Assign Cookies (Greedy Matching of Smallest Sufficient Resource)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q2369",
   "slug": "given-a-list-of-integers-return-a-list-of-their-squares-sorted-ascending",
-  "questionNumber": 2369,
+  "questionNumber": 23,
   "title": "Given a list of integers, return a list of their squares, sorted in ascending order.",
   "shortTitle": "Given a list of integers, return a list of their squares, sorted ascending",
   "chapterNumber": 6,

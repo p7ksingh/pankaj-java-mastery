@@ -1,7 +1,7 @@
 {
   "id": "Q2569",
   "slug": "design-using-the-decorator-pattern",
-  "questionNumber": 2569,
+  "questionNumber": 5,
   "title": "Decorator — add toppings to pizza, add features to a base product.",
   "shortTitle": "Design using the Decorator pattern",
   "chapterNumber": 15,

@@ -1,7 +1,7 @@
 {
   "id": "Q1482",
   "slug": "palindrome-linked-list-reverse-second-half-compare-then-restore",
-  "questionNumber": 1482,
+  "questionNumber": 34,
   "title": "Given the head of a singly linked list, determine whether the list reads the same forwards and backwards. Do it in O(n) time and O(1) extra space, and ideally restore the list afterwards.",
   "shortTitle": "Palindrome Linked List — Reverse Second Half, Compare, Then Restore",
   "chapterNumber": 17,

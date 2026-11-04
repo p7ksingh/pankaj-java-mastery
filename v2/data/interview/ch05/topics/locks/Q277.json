@@ -1,7 +1,7 @@
 {
   "id": "Q277",
   "slug": "locksupportparkunpark-vs-waitnotify-permit-based-vs-monitor-based",
-  "questionNumber": 277,
+  "questionNumber": 2,
   "title": "LockSupport.park()/unpark() vs wait()/notify() — permit-based vs monitor-based",
   "shortTitle": "LockSupport.park() vs wait()?",
   "chapterNumber": 5,

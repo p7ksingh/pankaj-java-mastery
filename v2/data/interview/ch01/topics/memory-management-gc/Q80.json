@@ -1,7 +1,7 @@
 {
   "id": "Q80",
   "slug": "even-with-automatic-garbage-collection-why-do-memory-leaks-still-occur-in-java-and-how-do-you-prevent-them",
-  "questionNumber": 80,
+  "questionNumber": 8,
   "title": "Even with automatic garbage collection, why do memory leaks still occur in Java (long-lived references, unclosed resources, listeners, inner classes, poor cache management), and how do you prevent them?",
   "shortTitle": "Why do memory leaks still occur despite automatic GC?",
   "chapterNumber": 1,

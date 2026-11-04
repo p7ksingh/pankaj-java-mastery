@@ -1,7 +1,7 @@
 {
   "id": "Q151",
   "slug": "what-does-systemexit-do-why-should-it-never-appear-in-library-code-and-what-are-exit-codes",
-  "questionNumber": 151,
+  "questionNumber": 10,
   "title": "What does `System.exit(int status)` do (terminates the JVM, runs shutdown hooks but NOT `finally` blocks of still-running threads), why should it never appear in library/framework code, and what are exit codes (0 = success, non-zero = error)?",
   "shortTitle": "What does System.exit() do?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q141",
   "slug": "arraylist-expansion-threshold-default-size-10-grows-50",
-  "questionNumber": 141,
+  "questionNumber": 3,
   "title": "ArrayList expansion — threshold, default size 10, grows ~50%",
   "shortTitle": "How does ArrayList expansion work?",
   "chapterNumber": 3,

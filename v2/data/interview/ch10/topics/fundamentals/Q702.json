@@ -1,7 +1,7 @@
 {
   "id": "Q702",
   "slug": "common-microservices-design-patterns",
-  "questionNumber": 702,
+  "questionNumber": 3,
   "title": "Explain the common microservices design patterns (API Gateway, Service Discovery, Circuit Breaker, Saga, Event Sourcing, CQRS, Strangler Fig, Database per Service, Sidecar, Bulkhead).",
   "shortTitle": "Common microservices design patterns",
   "chapterNumber": 10,

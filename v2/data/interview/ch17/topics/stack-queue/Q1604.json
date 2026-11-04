@@ -1,7 +1,7 @@
 {
   "id": "Q1604",
   "slug": "validate-balanced-parentheses-using-a-stack",
-  "questionNumber": 1604,
+  "questionNumber": 14,
   "title": "Given a string containing the bracket characters round, square, and curly, determine whether every opening bracket is closed by the matching type in the correct order, using a stack.",
   "shortTitle": "Validate Balanced Parentheses Using a Stack",
   "chapterNumber": 17,

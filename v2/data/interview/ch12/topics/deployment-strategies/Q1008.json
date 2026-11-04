@@ -1,7 +1,7 @@
 {
   "id": "Q1008",
   "slug": "comparing-deployment-strategies-and-their-trade-offs-recreate-rolling-blue-green-canary-ab-shadow",
-  "questionNumber": 1008,
+  "questionNumber": 2,
   "title": "Compare the main deployment strategies and their trade-offs (downtime, rollback speed, infra cost, risk) — Recreate, Rolling, Blue-Green (two environments, instant traffic switch + fast rollback), Canary (gradually shift a small % of traffic while watching metrics), A/B (compare experiences for a business metric), and Shadow (mirror prod traffic to the new version, discard its response); why is \"zero downtime\" an objective rather than a strategy, and how does expand-and-contract keep schema changes safe during rollout?",
   "shortTitle": "Comparing deployment strategies and their trade-offs — Recreate, Rolling, Blue-Green, Canary, A/B, Shadow",
   "chapterNumber": 12,

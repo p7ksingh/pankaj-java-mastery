@@ -1,7 +1,7 @@
 {
   "id": "Q2230",
   "slug": "find-employees-who-do-not-belong-to-any-of-the-given-departments-use-setcontains",
-  "questionNumber": 2230,
+  "questionNumber": 10,
   "title": "Find employees who do NOT belong to any of the given departments (use `!Set.contains`).",
   "shortTitle": "Find employees who do NOT belong to any of the given departments (use !Set.contains)",
   "chapterNumber": 6,

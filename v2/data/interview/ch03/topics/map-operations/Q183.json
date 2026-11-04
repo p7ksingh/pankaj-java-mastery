@@ -1,7 +1,7 @@
 {
-  "id": "Q183-collections",
-  "slug": "computeifabsent-merge-putifabsent-getordefault-atomic-map-operations",
-  "questionNumber": 183,
+  "id": "Q183",
+  "slug": "computeifabsent-merge-putifabsent-getordefault-atomic-map",
+  "questionNumber": 1,
   "title": "computeIfAbsent, merge, putIfAbsent, getOrDefault — atomic Map operations",
   "shortTitle": "What are computeIfAbsent, merge, putIfAbsent, getOrDefault?",
   "chapterNumber": 3,

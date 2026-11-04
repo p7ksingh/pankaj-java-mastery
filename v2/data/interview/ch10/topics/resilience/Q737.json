@@ -1,7 +1,7 @@
 {
   "id": "Q737",
   "slug": "how-do-you-achieve-fault-isolation",
-  "questionNumber": 737,
+  "questionNumber": 3,
   "title": "How do you achieve fault isolation (exception handling, circuit breaker, redundancy, microservice boundaries, failover, bulkhead, resource limits)?",
   "shortTitle": "How do you achieve fault isolation",
   "chapterNumber": 10,

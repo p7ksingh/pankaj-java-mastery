@@ -1,7 +1,7 @@
 {
-  "id": "Q190-collections",
-  "slug": "arraysaslist-vs-listof-fixed-size-backed-list-vs-immutable-primitive-array-gotcha",
-  "questionNumber": 190,
+  "id": "Q190",
+  "slug": "arraysaslist-vs-listof-fixed-size-backed-list-vs-immutable-primitive-array",
+  "questionNumber": 3,
   "title": "Arrays.asList vs List.of — fixed-size backed list vs immutable, primitive array gotcha",
   "shortTitle": "What is the difference between Arrays.asList and List.of?",
   "chapterNumber": 3,

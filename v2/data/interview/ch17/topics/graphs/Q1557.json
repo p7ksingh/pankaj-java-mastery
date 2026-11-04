@@ -1,7 +1,7 @@
 {
   "id": "Q1557",
   "slug": "number-of-islands-union-find-variant-union-adjacent-land-cells",
-  "questionNumber": 1557,
+  "questionNumber": 15,
   "title": "Given a 2D grid of '1' (land) and '0' (water), count the number of islands using Union-Find instead of DFS/BFS.",
   "shortTitle": "Number of Islands (Union-Find variant) — union adjacent land cells",
   "chapterNumber": 17,

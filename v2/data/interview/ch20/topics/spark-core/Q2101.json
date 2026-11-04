@@ -1,7 +1,7 @@
 {
   "id": "Q2101",
   "slug": "the-block-manager-in-spark",
-  "questionNumber": 2101,
+  "questionNumber": 56,
   "title": "What is the Block Manager in Spark — a local cache running on every node (driver + executors) that manages storage of blocks (data partitions) in memory, disk, and off-heap — and what role does it play in caching, broadcasting, shuffling, and storing temporary files?",
   "shortTitle": "The Block Manager in Spark",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q140",
   "slug": "what-are-the-key-differences-between-an-array-and-an-arraylist-and-when-do-you-choose-each",
-  "questionNumber": 140,
+  "questionNumber": 4,
   "title": "What are the key differences between an array and an `ArrayList` — fixed size vs dynamic, primitives vs objects, no generics vs generic, `length` vs `size()`, performance (array is faster for indexed access) — and when do you choose each?",
   "shortTitle": "What are the key differences between an array and an ArrayList?",
   "chapterNumber": 1,

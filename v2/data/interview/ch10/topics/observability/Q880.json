@@ -1,7 +1,7 @@
 {
   "id": "Q880",
   "slug": "every-dashboard-looks-healthy-but-customers-report-failures-how-do-you-investigate",
-  "questionNumber": 880,
+  "questionNumber": 8,
   "title": "(Scenario) A service is healthy according to every dashboard — CPU, memory, pod count, request rate, aggregate error percentage all look normal — but customers report failures. How do you investigate (question what the dashboards are actually measuring — they may miss one tenant/region/endpoint/workflow/dependency path failing, because infrastructure health ≠ business-operation health) — and why must observability extend beyond infrastructure to customer-visible operations and business-level outcomes (a payment system returning HTTP 200 while failing to complete the intended business operation is not healthy)?",
   "shortTitle": "Every dashboard looks healthy but customers report failures — how do you investigate?",
   "chapterNumber": 10,

@@ -1,7 +1,7 @@
 {
   "id": "Q1484",
   "slug": "add-two-numbers-represented-by-linked-lists",
-  "questionNumber": 1484,
+  "questionNumber": 7,
   "title": "You are given two non-empty linked lists representing two non-negative integers, with digits stored in reverse order and each node holding a single digit. Add the two numbers and return the sum as a linked list, also in reverse order.",
   "shortTitle": "Add Two Numbers Represented by Linked Lists",
   "chapterNumber": 17,

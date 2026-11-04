@@ -1,7 +1,7 @@
 {
   "id": "Q1231",
   "slug": "what-is-grpc-and-when-should-you-use-grpc-vs-rest",
-  "questionNumber": 1231,
+  "questionNumber": 17,
   "title": "What is gRPC — a high-performance RPC framework using Protocol Buffers (binary, smaller than JSON) and HTTP/2 (multiplexing, streaming) — and when should you use gRPC vs REST (internal microservice-to-microservice calls where speed matters vs public APIs where simplicity matters)?",
   "shortTitle": "What is gRPC and when should you use gRPC vs REST",
   "chapterNumber": 14,

@@ -1,7 +1,7 @@
 {
   "id": "Q1118",
   "slug": "varchar-maximum-limit-and-byte-vs-char-length-semantics",
-  "questionNumber": 1118,
+  "questionNumber": 12,
   "title": "What is the max limit of VARCHAR, and what is the difference between BYTE and CHAR length semantics?",
   "shortTitle": "VARCHAR Maximum Limit and BYTE vs CHAR Length Semantics",
   "chapterNumber": 13,

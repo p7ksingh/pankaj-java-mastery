@@ -1,7 +1,7 @@
 {
   "id": "Q1917",
   "slug": "multi-stage-docker-build-and-how-it-reduces-final-image-size",
-  "questionNumber": 1917,
+  "questionNumber": 4,
   "title": "What is a multi-stage Docker build, and how does it reduce final image size (build stage with the full toolchain → copy only the artifact into a slim runtime image)?",
   "shortTitle": "Multi-Stage Docker Build and How It Reduces Final Image Size",
   "chapterNumber": 12,

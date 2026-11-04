@@ -1,7 +1,7 @@
 {
   "id": "Q1038",
   "slug": "aws-systems-manager-ssm-versus-patch-manager-broad-fleet-management-versus-osapplication-patching",
-  "questionNumber": 1038,
+  "questionNumber": 25,
   "title": "What is the difference between AWS Systems Manager (SSM — broad fleet management: Run Command, Session Manager, Parameter Store, inventory, automation) and Patch Manager (a feature within SSM for OS/application patching with baselines and maintenance windows)?",
   "shortTitle": "AWS Systems Manager (SSM) versus Patch Manager — broad fleet management versus OS/application patching",
   "chapterNumber": 12,

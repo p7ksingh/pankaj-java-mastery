@@ -1,7 +1,7 @@
 {
   "id": "Q190",
   "slug": "stack-traces-correct-logging-caused-by-chain-reading-root-cause",
-  "questionNumber": 190,
+  "questionNumber": 3,
   "title": "What information does a stack trace carry, how do you log an exception correctly (log.error(\"msg\", ex) — NOT ex.getMessage()), and how do you read a \"Caused by:\" chain?",
   "shortTitle": "How do you read and log stack traces correctly?",
   "chapterNumber": 4,

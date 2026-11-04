@@ -1,7 +1,7 @@
 {
   "id": "Q202",
   "slug": "nosuchelementexception-iteratornext-optionalget-queueremove-prevention",
-  "questionNumber": 202,
+  "questionNumber": 4,
   "title": "When is NoSuchElementException thrown (Iterator.next() with no elements, Optional.get() on empty, empty Queue remove/element), and how to avoid it?",
   "shortTitle": "What causes NoSuchElementException?",
   "chapterNumber": 4,

@@ -1,7 +1,7 @@
 {
   "id": "Q2097",
   "slug": "reading-xml-and-other-special-formats-in-spark",
-  "questionNumber": 2097,
+  "questionNumber": 6,
   "title": "How do you read XML files in Spark (`spark.read.format(\"com.databricks.spark.xml\").option(\"rootTag\",\"...\").option(\"rowTag\",\"...\").load(...)`) and what other special formats does Spark support (JDBC, Avro, Delta, Iceberg, HBase connectors)?",
   "shortTitle": "Reading XML and other special formats in Spark",
   "chapterNumber": 20,

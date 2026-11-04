@@ -1,7 +1,7 @@
 {
   "id": "Q2055",
   "slug": "broadcast-variable-vs-broadcast-join",
-  "questionNumber": 2055,
+  "questionNumber": 6,
   "title": "What is a Broadcast Variable (`sc.broadcast(dict)`) vs a Broadcast Join — broadcast variable is a general read-only object distributed to executors (used in map-side lookups); broadcast join is a SQL/DataFrame join optimization — and when do you use each?",
   "shortTitle": "Broadcast Variable vs Broadcast Join",
   "chapterNumber": 20,

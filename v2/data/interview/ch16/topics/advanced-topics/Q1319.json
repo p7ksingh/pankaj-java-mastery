@@ -1,7 +1,7 @@
 {
   "id": "Q1319",
   "slug": "what-is-a-proto-file-and-how-does-grpc-code-generation-work-and-why-is-contract-first-stronger-than-openapiswagger",
-  "questionNumber": 1319,
+  "questionNumber": 13,
   "title": "What is a `.proto` file and how does gRPC code generation work — you define services (RPC methods) and messages (request/response types with numbered fields) in a `.proto` file, then the `protoc` compiler generates language-specific client stubs and server base classes (Java, Go, Python, etc.) so both sides share a strict, typed contract — and why is this \"contract-first\" approach stronger than OpenAPI/Swagger (compile-time enforcement, no runtime deserialization surprises)?",
   "shortTitle": "What is a .proto file and how does gRPC code generation work, and why is contract-first stronger than OpenAPI/Swagger?",
   "chapterNumber": 16,

@@ -1,7 +1,7 @@
 {
   "id": "Q1300",
   "slug": "can-you-break-the-sealed-contract-via-reflection-or-bytecode-manipulation",
-  "questionNumber": 1300,
+  "questionNumber": 11,
   "title": "Can you break the sealed contract via reflection or bytecode manipulation?",
   "shortTitle": "Can you break the sealed contract via reflection or bytecode manipulation?",
   "chapterNumber": 16,

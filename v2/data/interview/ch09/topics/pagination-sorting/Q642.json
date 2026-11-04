@@ -1,7 +1,7 @@
 {
   "id": "Q642",
   "slug": "pagination-strategies-offset-vs-keysetcursor-when-offset-kills-performance",
-  "questionNumber": 642,
+  "questionNumber": 2,
   "title": "What pagination strategies exist in JPA, how do offset and keyset pagination differ, and when does OFFSET kill performance?",
   "shortTitle": "Offset vs keyset/cursor pagination?",
   "chapterNumber": 9,

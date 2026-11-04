@@ -1,7 +1,7 @@
 {
   "id": "Q684",
   "slug": "criteria-api-specificationt-type-safe-dynamic-queries-for-complex-optional-filters",
-  "questionNumber": 684,
+  "questionNumber": 6,
   "title": "What is the JPA Criteria API and Spring Data's Specification<T>? How do they build type-safe dynamic queries for complex optional filters?",
   "shortTitle": "What is the Criteria API / Specification?",
   "chapterNumber": 9,

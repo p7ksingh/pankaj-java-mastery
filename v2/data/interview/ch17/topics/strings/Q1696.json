@@ -1,7 +1,7 @@
 {
   "id": "Q1696",
   "slug": "challenge-4-words-concatenation-substring-with-concatenation-of-all-words",
-  "questionNumber": 1696,
+  "questionNumber": 45,
   "title": "Given a string s and a list of words all of the same length, find all starting indices in s of substrings that are a concatenation of every word exactly once in any order. Solve it with the sliding window pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Challenge 4: Words Concatenation (Substring with Concatenation of All Words)",
   "chapterNumber": 17,

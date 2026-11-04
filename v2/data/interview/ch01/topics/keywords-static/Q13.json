@@ -1,7 +1,7 @@
 {
   "id": "Q13",
   "slug": "if-a-static-initializer-block-throws-an-exception-what-happens-to-class-loading",
-  "questionNumber": 13,
+  "questionNumber": 4,
   "title": "If a static initializer block throws an exception, what happens to the class-loading process (ExceptionInInitializerError)?",
   "shortTitle": "What happens if a static initializer block throws an exception?",
   "chapterNumber": 1,

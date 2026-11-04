@@ -1,7 +1,7 @@
 {
   "id": "Q1621",
   "slug": "generate-all-valid-parentheses-combinations-backtracking",
-  "questionNumber": 1621,
+  "questionNumber": 17,
   "title": "Given n pairs of parentheses, generate all combinations of well-formed (balanced) parentheses, using backtracking with constraints.",
   "shortTitle": "Generate All Valid Parentheses Combinations (Backtracking)",
   "chapterNumber": 17,

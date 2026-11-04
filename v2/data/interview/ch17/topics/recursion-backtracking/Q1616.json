@@ -1,7 +1,7 @@
 {
   "id": "Q1616",
   "slug": "generate-all-subsets-of-a-set-backtracking-power-set",
-  "questionNumber": 1616,
+  "questionNumber": 10,
   "title": "Given a set of distinct elements, generate all possible subsets, also called the power set, using backtracking.",
   "shortTitle": "Generate All Subsets of a Set (Backtracking / Power Set)",
   "chapterNumber": 17,

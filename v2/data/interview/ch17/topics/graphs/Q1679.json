@@ -1,7 +1,7 @@
 {
   "id": "Q1679",
   "slug": "happy-number-cycle-detection-on-a-number-sequence",
-  "questionNumber": 1679,
+  "questionNumber": 21,
   "title": "A happy number is defined by repeatedly replacing a number with the sum of the squares of its digits; if this process reaches 1 the number is happy, otherwise it loops endlessly. Determine whether a given number is happy. (LeetCode: Happy Number)",
   "shortTitle": "Happy Number (Cycle Detection on a Number Sequence)",
   "chapterNumber": 17,

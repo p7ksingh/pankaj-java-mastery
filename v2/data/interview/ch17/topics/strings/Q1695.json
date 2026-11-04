@@ -1,7 +1,7 @@
 {
   "id": "Q1695",
   "slug": "challenge-2-string-anagrams-find-all-anagram-start-indices",
-  "questionNumber": 1695,
+  "questionNumber": 44,
   "title": "Given a string s and a pattern p, find the start indices of all substrings of s that are anagrams of p. Solve it with the fixed-size sliding window pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Challenge 2: String Anagrams (Find All Anagram Start Indices)",
   "chapterNumber": 17,

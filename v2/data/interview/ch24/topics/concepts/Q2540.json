@@ -1,7 +1,7 @@
 {
   "id": "Q2540",
   "slug": "push-vs-pull-model",
-  "questionNumber": 2540,
+  "questionNumber": 12,
   "title": "Push vs Pull model — push notifications vs polling vs long-polling vs WebSocket vs SSE.",
   "shortTitle": "Push vs Pull Model",
   "chapterNumber": 24,

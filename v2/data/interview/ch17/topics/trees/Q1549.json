@@ -1,7 +1,7 @@
 {
   "id": "Q1549",
   "slug": "graph-valid-tree-connected-and-no-cycle",
-  "questionNumber": 1549,
+  "questionNumber": 11,
   "title": "Given n nodes labeled 0 to n minus 1 and a list of undirected edges, determine whether these edges form a valid tree, meaning the graph is fully connected and contains no cycle.",
   "shortTitle": "Graph Valid Tree — connected and no cycle",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1776",
   "slug": "kth-smallest-number-find-the-kth-smallest-with-a-max-heap",
-  "questionNumber": 1776,
+  "questionNumber": 19,
   "title": "Given an unsorted array of numbers and a value K, find the Kth smallest number. Explain how a max-heap of size K keeps the K smallest seen so far, with its root being the answer.",
   "shortTitle": "Kth Smallest Number (Find the Kth Smallest with a Max-Heap)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q2613",
   "slug": "what-is-jit-just-in-time-compilation",
-  "questionNumber": 2613,
+  "questionNumber": 9,
   "title": "What is JIT (Just-In-Time) compilation — JVM interprets bytecode first, then compiles hot methods to native code for faster execution — and what is tiered compilation (C1 compiler for quick compilation + C2 compiler for aggressive optimization)?",
   "shortTitle": "What is JIT (Just-In-Time) compilation?",
   "chapterNumber": 1,

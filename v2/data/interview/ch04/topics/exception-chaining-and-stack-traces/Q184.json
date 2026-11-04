@@ -1,7 +1,7 @@
 {
   "id": "Q184",
   "slug": "classnotfoundexception-vs-noclassdeffounderror-dynamic-loading-vs-missing-at-runtime",
-  "questionNumber": 184,
+  "questionNumber": 1,
   "title": "What is the difference between ClassNotFoundException (checked, Class.forName — class not found dynamically) and NoClassDefFoundError (Error, class present at compile but missing at runtime)?",
   "shortTitle": "What is ClassNotFoundException vs NoClassDefFoundError?",
   "chapterNumber": 4,

@@ -1,7 +1,7 @@
 {
   "id": "Q1954",
   "slug": "error-budget-how-it-is-derived-from-an-slo-and-how-it-governs-release-pace-versus-reliability-work",
-  "questionNumber": 1954,
+  "questionNumber": 2,
   "title": "What is an error budget, how is it derived from an SLO, and how does it govern the pace of releases vs reliability work?",
   "shortTitle": "Error budget — how it is derived from an SLO and how it governs release pace versus reliability work",
   "chapterNumber": 12,

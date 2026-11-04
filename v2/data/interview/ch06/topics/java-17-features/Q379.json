@@ -1,7 +1,7 @@
 {
   "id": "Q379",
   "slug": "migrating-from-java-8-to-java-17-challenges-and-approach",
-  "questionNumber": 379,
+  "questionNumber": 1,
   "title": "How would you migrate an application from Java 8 to Java 17, and what technical challenges would you face?",
   "shortTitle": "How do you migrate from Java 8 to Java 17?",
   "chapterNumber": 6,

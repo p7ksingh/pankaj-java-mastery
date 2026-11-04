@@ -1,7 +1,7 @@
 {
-  "id": "Q193-collections",
-  "slug": "queue-throwing-vs-non-throwing-methods-addremoveelement-vs-offerpollpeek",
-  "questionNumber": 193,
+  "id": "Q193",
+  "slug": "queue-throwing-vs-non-throwing-methods-addremoveelement-vs",
+  "questionNumber": 5,
   "title": "Queue throwing vs non-throwing methods — add/remove/element vs offer/poll/peek",
   "shortTitle": "What are the Queue throwing vs non-throwing methods?",
   "chapterNumber": 3,

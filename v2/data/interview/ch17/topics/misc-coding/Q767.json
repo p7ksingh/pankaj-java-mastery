@@ -1,7 +1,7 @@
 {
   "id": "Q767",
   "slug": "system-design-payment-gateway-architecture",
-  "questionNumber": 767,
+  "questionNumber": 1,
   "title": "Design a payment gateway for a bank. Explain the end-to-end architecture, how you guarantee a payment is processed exactly once, how you keep money consistent across services, and how you make the system resilient and observable at scale.",
   "shortTitle": "System Design — Payment Gateway architecture",
   "chapterNumber": 17,

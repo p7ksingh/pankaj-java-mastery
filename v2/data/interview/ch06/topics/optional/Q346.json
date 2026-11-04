@@ -1,7 +1,7 @@
 {
   "id": "Q346",
   "slug": "when-not-to-use-optional-empty-collection-optionalintlongdouble-hot-paths",
-  "questionNumber": 346,
+  "questionNumber": 6,
   "title": "When should you NOT use Optional — return an empty collection instead of Optional<List<T>>, use OptionalInt/Long/Double to avoid boxing, and avoid it in hot paths where the extra allocation matters?",
   "shortTitle": "When NOT to use Optional?",
   "chapterNumber": 6,

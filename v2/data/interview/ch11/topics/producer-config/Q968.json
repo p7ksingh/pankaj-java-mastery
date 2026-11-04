@@ -1,7 +1,7 @@
 {
   "id": "Q968",
   "slug": "batch-processing-vs-stream-processing-what-is-the-difference-and-when-do-you-choose-each",
-  "questionNumber": 968,
+  "questionNumber": 9,
   "title": "What is the difference between batch processing (bounded data processed in large scheduled chunks — high throughput, high latency) and stream processing (unbounded data processed continuously as it arrives — low latency), and when do you choose each?",
   "shortTitle": "Batch processing vs stream processing — what is the difference, and when do you choose each?",
   "chapterNumber": 11,

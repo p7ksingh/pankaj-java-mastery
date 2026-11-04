@@ -1,7 +1,7 @@
 {
   "id": "Q35",
   "slug": "why-main-is-public-and-static-and-the-purpose-of-string-args",
-  "questionNumber": 35,
+  "questionNumber": 1,
   "title": "Why is the `main()` method declared `public` and `static`, and what is the purpose of the `String[] args` parameter?",
   "shortTitle": "Why is the main method public, static, and void?",
   "chapterNumber": 1,

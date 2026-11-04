@@ -1,7 +1,7 @@
 {
   "id": "Q1708",
   "slug": "challenge-count-of-range-sum",
-  "questionNumber": 1708,
+  "questionNumber": 25,
   "title": "Given an array of integers that may include negatives and two bounds lower and upper, count how many contiguous subarrays have a sum that falls within the inclusive range from lower to upper. Solve it with prefix sums and a merge-sort-based counting technique and demonstrate with a complete banking mini-project.",
   "shortTitle": "Challenge: Count of Range Sum",
   "chapterNumber": 17,

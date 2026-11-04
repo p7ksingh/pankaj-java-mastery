@@ -1,7 +1,7 @@
 {
   "id": "Q1601",
   "slug": "matrix-chain-multiplication-interval-dp-for-minimum-multiplications",
-  "questionNumber": 1601,
+  "questionNumber": 14,
   "title": "Given the dimensions of a chain of matrices, find the minimum number of scalar multiplications needed to compute the product, choosing the best parenthesization.",
   "shortTitle": "Matrix Chain Multiplication — interval DP for minimum multiplications",
   "chapterNumber": 17,

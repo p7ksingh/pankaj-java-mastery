@@ -1,7 +1,7 @@
 {
   "id": "Q316",
   "slug": "concurrentskiplistmap-concurrentskiplistset-sorted-concurrent-collections",
-  "questionNumber": 316,
+  "questionNumber": 3,
   "title": "What are ConcurrentSkipListMap and ConcurrentSkipListSet, how does a skip list give O(log n) sorted access concurrently, and when do you choose them over ConcurrentHashMap?",
   "shortTitle": "ConcurrentSkipListMap and ConcurrentSkipListSet?",
   "chapterNumber": 5,

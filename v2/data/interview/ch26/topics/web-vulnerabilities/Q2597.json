@@ -1,7 +1,7 @@
 {
   "id": "Q2597",
   "slug": "sensitive-data-exposure-and-how-to-prevent-it",
-  "questionNumber": 2597,
+  "questionNumber": 5,
   "title": "What is sensitive data exposure — storing passwords in plain text, sending data over HTTP instead of HTTPS, logging PII — and how to prevent it (hash passwords with bcrypt, enforce HTTPS/TLS, mask sensitive data in logs)?",
   "shortTitle": "Sensitive Data Exposure and How to Prevent It",
   "chapterNumber": 26,

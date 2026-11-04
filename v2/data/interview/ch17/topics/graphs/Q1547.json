@@ -1,7 +1,7 @@
 {
   "id": "Q1547",
   "slug": "course-schedule-cycle-detection-can-all-courses-be-finished",
-  "questionNumber": 1547,
+  "questionNumber": 10,
   "title": "Given a number of courses and a list of prerequisite pairs, return whether it is possible to finish all courses, which is true if and only if the prerequisite graph has no cycle.",
   "shortTitle": "Course Schedule — cycle detection (can all courses be finished?)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1960",
   "slug": "resolving-merge-conflicts-and-undoing-a-bad-commit-already-pushed-to-a-shared-branch-revert-vs-reset-force-push",
-  "questionNumber": 1960,
+  "questionNumber": 42,
   "title": "How do you resolve merge conflicts, and how do you undo a bad commit that has already been pushed to a shared branch (`git revert` vs `reset` + force-push, and why `revert` on shared history)?",
   "shortTitle": "Resolving merge conflicts and undoing a bad commit already pushed to a shared branch (revert vs reset + force-push)",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q315",
   "slug": "target-typing-in-lambdas-compiler-infers-type-from-context-overload-ambiguity",
-  "questionNumber": 315,
+  "questionNumber": 2,
   "title": "What is target typing in lambda expressions — a lambda has no intrinsic type; the compiler infers its functional-interface type from the TARGET context — and why does this make a lambda ambiguous when passed to an overloaded method?",
   "shortTitle": "What is target typing in lambdas?",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q369",
   "slug": "remove-empty-and-null-strings-from-an-array-using-streams",
-  "questionNumber": 369,
+  "questionNumber": 5,
   "title": "How do you remove empty and null strings from an array of strings using streams?",
   "shortTitle": "Remove empty and null strings from an array using streams",
   "chapterNumber": 6,

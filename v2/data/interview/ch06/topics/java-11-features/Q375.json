@@ -1,7 +1,7 @@
 {
   "id": "Q375",
   "slug": "java-11-httpclient-sync-send-vs-async-sendasync-http2-vs-httpurlconnection",
-  "questionNumber": 375,
+  "questionNumber": 2,
   "title": "How do you call a REST API with the Java 11 HttpClient (sync send vs async sendAsync, HTTP/2, timeouts), and why is it better than HttpURLConnection?",
   "shortTitle": "What is the Java 11 HttpClient?",
   "chapterNumber": 6,

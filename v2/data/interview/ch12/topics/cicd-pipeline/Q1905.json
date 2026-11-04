@@ -1,7 +1,7 @@
 {
   "id": "Q1905",
   "slug": "cicd-pipeline-stages-and-the-difference-between-continuous-integration-delivery-and-deployment",
-  "questionNumber": 1905,
+  "questionNumber": 29,
   "title": "What are the stages of a CI/CD pipeline (source → build → test → package → scan → deploy → verify), and what is the difference between Continuous Integration, Continuous Delivery, and Continuous Deployment?",
   "shortTitle": "CI/CD Pipeline Stages and the Difference Between Continuous Integration, Delivery and Deployment",
   "chapterNumber": 12,

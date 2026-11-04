@@ -1,7 +1,7 @@
 {
   "id": "Q1773",
   "slug": "complement-of-base-10-number-flip-every-bit-within-the-numbers-width",
-  "questionNumber": 1773,
+  "questionNumber": 5,
   "title": "Given a positive base-ten integer, find its complement, which is the number formed by flipping every bit in its binary representation, considering only the bits up to and including its highest set bit. Explain how a mask of all ones of the right width makes this a single XOR.",
   "shortTitle": "Complement of Base 10 Number (Flip Every Bit Within the Number's Width)",
   "chapterNumber": 17,

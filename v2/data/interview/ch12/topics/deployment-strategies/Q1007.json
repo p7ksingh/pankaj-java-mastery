@@ -1,7 +1,7 @@
 {
   "id": "Q1007",
   "slug": "kubernetes-rollingupdate-vs-recreate-deployment-strategies-trade-offs-and-when-to-choose-each",
-  "questionNumber": 1007,
+  "questionNumber": 1,
   "title": "What is the difference between the Kubernetes `RollingUpdate` and `Recreate` deployment strategies (zero-downtime at the cost of extra pods/memory vs guaranteed downtime), and when would you choose each?",
   "shortTitle": "Kubernetes `RollingUpdate` vs `Recreate` deployment strategies — trade-offs and when to choose each",
   "chapterNumber": 12,

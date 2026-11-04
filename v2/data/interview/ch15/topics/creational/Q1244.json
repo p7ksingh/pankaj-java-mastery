@@ -1,7 +1,7 @@
 {
   "id": "Q1244",
   "slug": "explain-the-singleton-pattern-and-the-thread-safe-ways-to-implement-it",
-  "questionNumber": 1244,
+  "questionNumber": 2,
   "title": "Explain the Singleton pattern and the thread-safe ways to implement it in Java — eager initialization (simple, not lazy), lazy with a synchronized getter (lazy but locks on every call), double-checked locking (needs a volatile instance to avoid returning a partially-constructed object), the Bill Pugh initialization-on-demand holder idiom (lazy + thread-safe via class loading, no synchronization), and an enum singleton (concise, with free serialization-/reflection-safety) — and which are preferred (Bill Pugh or enum)?",
   "shortTitle": "Explain the Singleton pattern and the thread-safe ways to implement it",
   "chapterNumber": 15,

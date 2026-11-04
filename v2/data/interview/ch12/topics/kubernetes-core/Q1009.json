@@ -1,7 +1,7 @@
 {
   "id": "Q1009",
   "slug": "core-kubernetes-objects-pod-deployment-service-ingress-configmap-secret-and-why-pods-are-cattle-not-pets",
-  "questionNumber": 1009,
+  "questionNumber": 1,
   "title": "What are the core Kubernetes objects (Pod, Deployment, Service — ClusterIP/NodePort/LoadBalancer, Ingress, ConfigMap, Secret), and why are Pods treated as disposable \"cattle, not pets\"?",
   "shortTitle": "Core Kubernetes objects — Pod, Deployment, Service, Ingress, ConfigMap, Secret — and why Pods are \"cattle, not pets\"",
   "chapterNumber": 12,

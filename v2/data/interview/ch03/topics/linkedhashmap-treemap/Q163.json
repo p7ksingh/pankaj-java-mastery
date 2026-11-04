@@ -1,7 +1,7 @@
 {
   "id": "Q163",
   "slug": "treemap-sorted-keys-comparable-requirement-classcastexception",
-  "questionNumber": 163,
+  "questionNumber": 6,
   "title": "TreeMap — sorted keys, Comparable requirement, ClassCastException",
   "shortTitle": "How does TreeMap maintain sorted keys?",
   "chapterNumber": 3,

@@ -1,7 +1,7 @@
 {
   "id": "Q1919",
   "slug": "copy-versus-add-in-a-dockerfile-and-why-copy-is-usually-preferred",
-  "questionNumber": 1919,
+  "questionNumber": 6,
   "title": "What is the difference between `COPY` and `ADD` in a Dockerfile, and why is `COPY` usually preferred?",
   "shortTitle": "COPY Versus ADD in a Dockerfile and Why COPY Is Usually Preferred",
   "chapterNumber": 12,

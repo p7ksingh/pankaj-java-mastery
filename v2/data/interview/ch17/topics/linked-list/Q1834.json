@@ -1,7 +1,7 @@
 {
   "id": "Q1834",
   "slug": "prims-minimum-spanning-tree-cheapest-way-to-connect-every-node",
-  "questionNumber": 1834,
+  "questionNumber": 24,
   "title": "Given a connected weighted undirected graph, find the minimum spanning tree — the subset of edges that connects every vertex with the smallest total weight. Explain Prim's algorithm with a priority queue, the operations, the complexity, and a banking use case.",
   "shortTitle": "Prim's Minimum Spanning Tree (Cheapest Way to Connect Every Node)",
   "chapterNumber": 17,

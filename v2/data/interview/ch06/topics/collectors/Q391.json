@@ -1,7 +1,7 @@
 {
   "id": "Q391",
   "slug": "streamtolist-java-16-vs-collectcollectorstolist-unmodifiable-vs-mutable-breaking-change",
-  "questionNumber": 391,
+  "questionNumber": 7,
   "title": "What is Stream.toList() (Java 16+), how does it differ from collect(Collectors.toList()), and why can swapping one for the other break code?",
   "shortTitle": "Stream.toList() (Java 16) vs collect(Collectors.toList()) — unmodifiable vs mutable, breaking change",
   "chapterNumber": 6,

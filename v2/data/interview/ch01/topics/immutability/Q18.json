@@ -1,7 +1,7 @@
 {
   "id": "Q18",
   "slug": "why-an-immutable-value-class-is-inherently-thread-safe",
-  "questionNumber": 18,
+  "questionNumber": 4,
   "title": "Why is an immutable value class (e.g. a Money with final fields where add() returns a NEW instance) inherently thread-safe and freely shareable across threads WITHOUT any synchronization, whereas a mutable equivalent needs synchronization on every read/write — and how is this the same principle behind String, Java records, and value-over-object functional style?",
   "shortTitle": "Why is an immutable value class inherently thread-safe?",
   "chapterNumber": 1,

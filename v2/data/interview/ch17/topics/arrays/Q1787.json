@@ -1,7 +1,7 @@
 {
   "id": "Q1787",
   "slug": "smallest-number-range-covering-k-lists-find-the-tightest-range-including-one-element-from-each-list",
-  "questionNumber": 1787,
+  "questionNumber": 103,
   "title": "Given K sorted integer lists, find the smallest range that includes at least one number from each of the K lists. If several ranges are equally small, return the one with the smaller start. Explain the K-way Merge technique and a banking use case.",
   "shortTitle": "Smallest Number Range Covering K Lists (Find the Tightest Range Including One Element from Each List)",
   "chapterNumber": 17,

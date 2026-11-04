@@ -1,7 +1,7 @@
 {
   "id": "Q1623",
   "slug": "minimum-meeting-rooms-required-interval-scheduling-with-a-heap",
-  "questionNumber": 1623,
+  "questionNumber": 3,
   "title": "Given a set of meetings with start and end times, find the minimum number of rooms needed so that no two overlapping meetings share a room.",
   "shortTitle": "Minimum Meeting Rooms Required (Interval Scheduling with a Heap)",
   "chapterNumber": 17,

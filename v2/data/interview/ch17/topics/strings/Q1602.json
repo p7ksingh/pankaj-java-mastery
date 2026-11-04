@@ -1,7 +1,7 @@
 {
   "id": "Q1602",
   "slug": "longest-valid-parentheses-longest-balanced-substring",
-  "questionNumber": 1602,
+  "questionNumber": 36,
   "title": "Given a string of only '(' and ')', return the length of the longest substring that is a valid (well-formed) parentheses sequence.",
   "shortTitle": "Longest Valid Parentheses — longest balanced substring",
   "chapterNumber": 17,

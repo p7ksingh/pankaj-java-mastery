@@ -1,7 +1,7 @@
 {
   "id": "Q2170",
   "slug": "what-is-flink-sql-and-when-do-you-use-it",
-  "questionNumber": 2170,
+  "questionNumber": 29,
   "title": "What is Flink SQL and when do you use it — writing streaming/batch queries in standard SQL against dynamic tables (backed by Kafka/Hive/JDBC), with support for temporal joins, pattern recognition (`MATCH_RECOGNIZE`), and CDC connectors — and how does it differ from Spark SQL (true streaming vs micro-batch)?",
   "shortTitle": "What is Flink SQL and when do you use it",
   "chapterNumber": 20,

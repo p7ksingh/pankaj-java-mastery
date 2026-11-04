@@ -1,7 +1,7 @@
 {
   "id": "Q1618",
   "slug": "combination-sum-backtracking-with-reuse",
-  "questionNumber": 1618,
+  "questionNumber": 12,
   "title": "Given a set of distinct positive numbers and a target, find all unique combinations that sum to the target, where each number may be reused unlimited times.",
   "shortTitle": "Combination Sum (Backtracking with Reuse)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1538",
   "slug": "k-closest-points-to-origin-max-heap-of-size-k-by-distance",
-  "questionNumber": 1538,
+  "questionNumber": 13,
   "title": "Given an array of points on a plane and a value K, return the K points closest to the origin, where distance is Euclidean (the square root of x squared plus y squared).",
   "shortTitle": "K Closest Points to Origin — max-heap of size K by distance",
   "chapterNumber": 17,

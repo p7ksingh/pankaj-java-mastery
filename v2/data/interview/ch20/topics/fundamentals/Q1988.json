@@ -1,7 +1,7 @@
 {
   "id": "Q1988",
   "slug": "what-is-a-data-lake-vs-a-data-warehouse",
-  "questionNumber": 1988,
+  "questionNumber": 3,
   "title": "What is a data lake — a storage place (like S3/HDFS) where you dump ALL raw data (structured + unstructured) cheaply, and process it later — vs a data warehouse (like Snowflake/Redshift) which stores clean, organized data ready for queries?",
   "shortTitle": "What is a data lake (vs a data warehouse)",
   "chapterNumber": 20,

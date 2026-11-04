@@ -1,7 +1,7 @@
 {
   "id": "Q332",
   "slug": "side-effect-free-pipelines-why-mutating-external-state-from-foreachmapfilter-is-a-bug",
-  "questionNumber": 332,
+  "questionNumber": 7,
   "title": "Why should stream pipelines be side-effect-free — why is mutating an external collection/variable from inside forEach/map/filter a bug (unpredictable with parallel streams, breaks laziness, not thread-safe) — and what is the correct approach (use collect/reduce instead of shared ArrayList)?",
   "shortTitle": "Why should stream pipelines be side-effect-free?",
   "chapterNumber": 6,

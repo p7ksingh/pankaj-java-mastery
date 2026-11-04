@@ -1,7 +1,7 @@
 {
   "id": "Q2423",
   "slug": "what-happens-if-you-reuse-a-stream-after-calling-a-terminal-operation",
-  "questionNumber": 2423,
+  "questionNumber": 2,
   "title": "What happens if you reuse a stream after calling a terminal operation? (`IllegalStateException`)",
   "shortTitle": "What happens if you reuse a stream after calling a terminal operation?",
   "chapterNumber": 6,

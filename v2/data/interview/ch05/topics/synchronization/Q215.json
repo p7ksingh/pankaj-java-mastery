@@ -1,7 +1,7 @@
 {
   "id": "Q215",
   "slug": "exception-inside-synchronized-block-lock-is-released-jvm-emits-monitorexit-on-both-paths",
-  "questionNumber": 215,
+  "questionNumber": 6,
   "title": "Exception inside synchronized block — lock IS released (JVM emits monitorexit on both paths)",
   "shortTitle": "Is the lock released if exception occurs in synchronized?",
   "chapterNumber": 5,

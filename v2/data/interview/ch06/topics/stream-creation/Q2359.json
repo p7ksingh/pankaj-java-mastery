@@ -1,7 +1,7 @@
 {
   "id": "Q2359",
   "slug": "find-the-sum-of-all-even-numbers-from-1-to-100-using-intstreamrangeclosed",
-  "questionNumber": 2359,
+  "questionNumber": 12,
   "title": "Find the sum of all even numbers from 1 to 100 using `IntStream.rangeClosed`.",
   "shortTitle": "Find the sum of all even numbers from 1 to 100 using IntStream.rangeClosed",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q1028",
   "slug": "what-jvm-monitoring-tools-you-use-in-production-jstat-jcmd-jmap-eclipse-mat-visualvm-async-profiler-micrometerprometheusgrafana-apm-and-which-metrics-you-alert-on",
-  "questionNumber": 1028,
+  "questionNumber": 3,
   "title": "What JVM monitoring tools do you use in production (jstat, jcmd, jmap, Eclipse MAT, VisualVM, async-profiler, Micrometer+Prometheus+Grafana, APM), and which metrics do you alert on (Old Gen %, GC pause p99, GC time ratio, monotonic heap growth)?",
   "shortTitle": "What JVM monitoring tools you use in production — jstat, jcmd, jmap, Eclipse MAT, VisualVM, async-profiler, Micrometer+Prometheus+Grafana, APM — and which metrics you alert on",
   "chapterNumber": 12,

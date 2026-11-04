@@ -1,7 +1,7 @@
 {
   "id": "Q1517",
   "slug": "validate-binary-search-tree-in-range-dfs-with-minmax-bounds",
-  "questionNumber": 1517,
+  "questionNumber": 10,
   "title": "Given the root of a binary tree, determine whether it is a valid binary search tree, where every node's value is greater than all values in its left subtree and less than all values in its right subtree.",
   "shortTitle": "Validate Binary Search Tree — in-range DFS with min/max bounds",
   "chapterNumber": 17,

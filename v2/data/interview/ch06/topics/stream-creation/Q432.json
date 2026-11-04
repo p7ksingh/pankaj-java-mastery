@@ -1,7 +1,7 @@
 {
   "id": "Q432",
   "slug": "streamtoarray-vs-toarrayintfunction-object-vs-typed-array",
-  "questionNumber": 432,
+  "questionNumber": 5,
   "title": "How do the toArray() overloads work — toArray() returns Object[], while toArray(IntFunction<A[]>) / toArray(String[]::new) returns a typed array — and why do you need the generator?",
   "shortTitle": "Stream.toArray() vs toArray(IntFunction) — Object[] vs typed array",
   "chapterNumber": 6,

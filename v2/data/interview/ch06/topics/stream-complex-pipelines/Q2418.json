@@ -1,7 +1,7 @@
 {
   "id": "Q2418",
   "slug": "why-should-you-avoid-calling-stream-inside-another-stream-pipeline-nested-streams",
-  "questionNumber": 2418,
+  "questionNumber": 7,
   "title": "Why should you avoid calling `stream()` inside another stream pipeline (nested streams)?",
   "shortTitle": "Why should you avoid calling stream() inside another stream pipeline (nested streams)?",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q1020",
   "slug": "the-g1-humongous-object-problem-object-larger-than-50-of-region-size-what-issues-it-causes-and-how-to-fix-it",
-  "questionNumber": 1020,
+  "questionNumber": 11,
   "title": "What is the G1 \"humongous object\" problem (object > 50% of region size), what issues does it cause (fragmentation, early GC pressure), and how do you fix it (bigger regions, smaller objects, switch to ZGC)?",
   "shortTitle": "The G1 humongous object problem — object larger than 50% of region size — what issues it causes, and how to fix it",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q1575",
   "slug": "house-robber-cannot-rob-adjacent-houses",
-  "questionNumber": 1575,
+  "questionNumber": 5,
   "title": "Given an array of non-negative house values, find the maximum amount you can rob without robbing two adjacent houses.",
   "shortTitle": "House Robber — cannot rob adjacent houses",
   "chapterNumber": 17,

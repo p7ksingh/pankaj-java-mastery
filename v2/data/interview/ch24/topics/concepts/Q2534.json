@@ -1,7 +1,7 @@
 {
   "id": "Q2534",
   "slug": "consistent-hashing",
-  "questionNumber": 2534,
+  "questionNumber": 6,
   "title": "Consistent Hashing — distribute data across nodes so adding/removing a node moves only K/N keys (not all), used in distributed caches and databases.",
   "shortTitle": "Consistent Hashing",
   "chapterNumber": 24,

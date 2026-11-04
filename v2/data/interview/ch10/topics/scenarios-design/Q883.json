@@ -1,7 +1,7 @@
 {
   "id": "Q883",
   "slug": "what-is-the-noisy-neighbor-problem-and-what-are-the-isolation-strategies",
-  "questionNumber": 883,
+  "questionNumber": 63,
   "title": "What is the noisy-neighbor problem (one large tenant/customer consuming shared resources — CPU, DB connections, thread pools, queue capacity — and degrading service for everyone else), and what are the isolation strategies: per-tenant quotas, bounded concurrency per tenant, separate queues/pools, workload isolation, resource budgets, and sometimes dedicated infrastructure — and how do you decide which level of isolation the product requires?",
   "shortTitle": "What is the noisy-neighbor problem, and what are the isolation strategies?",
   "chapterNumber": 10,

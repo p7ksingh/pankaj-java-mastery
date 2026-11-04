@@ -1,7 +1,7 @@
 {
   "id": "Q331",
   "slug": "resource-streams-fileslines-must-be-closed-collectionstream-does-not-try-with-resources",
-  "questionNumber": 331,
+  "questionNumber": 6,
   "title": "Which streams are backed by a resource that MUST be closed (e.g. Files.lines, Files.walk — they hold a file handle), why does a collection's .stream() NOT need closing, and how do you close resource streams safely (try-with-resources, since Stream is AutoCloseable)?",
   "shortTitle": "When must you close a resource stream?",
   "chapterNumber": 6,

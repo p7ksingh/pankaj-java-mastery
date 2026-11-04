@@ -1,7 +1,7 @@
 {
   "id": "Q1492",
   "slug": "find-a-peak-element-binary-search-on-the-slope",
-  "questionNumber": 1492,
+  "questionNumber": 40,
   "title": "A peak element is one that is strictly greater than its neighbors. Given an array where neighbors differ, return the index of any peak. Assume elements outside the array are negative infinity. Run in logarithmic time.",
   "shortTitle": "Find a Peak Element — Binary Search on the Slope",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q235",
   "slug": "producer-consumer-pattern-reentrantlockconditions-waitnotifyall-blockingqueue",
-  "questionNumber": 235,
+  "questionNumber": 6,
   "title": "Producer-consumer pattern — ReentrantLock+Conditions, wait/notifyAll, BlockingQueue",
   "shortTitle": "What is the producer-consumer pattern?",
   "chapterNumber": 5,

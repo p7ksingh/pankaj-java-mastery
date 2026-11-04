@@ -1,7 +1,7 @@
 {
   "id": "Q1088",
   "slug": "why-is-a-db-connection-pool-bounded-by-the-databases-maxconnections-rather-than-by-app-load",
-  "questionNumber": 1088,
+  "questionNumber": 4,
   "title": "Why is a DB connection pool bounded by the database's `max_connections` (typically single-digit per app instance) rather than by app load, and what breaks if N app instances × pool size exceeds the database's limit?",
   "shortTitle": "Why is a DB connection pool bounded by the database's max_connections rather than by app load?",
   "chapterNumber": 13,

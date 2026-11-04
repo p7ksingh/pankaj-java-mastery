@@ -1,7 +1,7 @@
 {
   "id": "Q1835",
   "slug": "word-ladder-shortest-transformation-chain-one-letter-at-a-time",
-  "questionNumber": 1835,
+  "questionNumber": 48,
   "title": "Given a begin word, an end word, and a dictionary of equal-length words, find the length of the shortest transformation sequence that changes one letter at a time, where every intermediate word must be in the dictionary. Explain the breadth-first search solution, the operations, the complexity, and a banking use case.",
   "shortTitle": "Word Ladder (Shortest Transformation Chain One Letter at a Time)",
   "chapterNumber": 17,

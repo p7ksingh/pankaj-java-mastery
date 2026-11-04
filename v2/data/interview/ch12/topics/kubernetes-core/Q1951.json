@@ -1,7 +1,7 @@
 {
   "id": "Q1951",
   "slug": "what-metrics-to-monitor-for-an-ec2-instance-a-kubernetes-cluster-and-a-jvm-app-and-how-to-achieve-a-high-availability-sla-with-monitoring-and-alerting",
-  "questionNumber": 1951,
+  "questionNumber": 16,
   "title": "What metrics would you monitor for an EC2 instance / a Kubernetes cluster / a JVM app, and how do you achieve a high-availability SLA with monitoring + alerting?",
   "shortTitle": "What metrics to monitor for an EC2 instance, a Kubernetes cluster, and a JVM app, and how to achieve a high-availability SLA with monitoring and alerting",
   "chapterNumber": 12,

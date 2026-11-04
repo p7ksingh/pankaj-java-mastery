@@ -1,7 +1,7 @@
 {
   "id": "Q1070",
   "slug": "database-cpu-hits-100-during-peak-traffic-how-do-you-respond",
-  "questionNumber": 1070,
+  "questionNumber": 4,
   "title": "(Scenario) Database CPU hits 100% during peak traffic — how do you respond (identify the top CPU-consuming queries first, then look for slow queries, missing indexes, full table scans, inefficient joins, excessive query frequency / N+1 from the app, and connection-pool misconfiguration), and why must you load-test after the fix to confirm it actually helps under realistic traffic?",
   "shortTitle": "Database CPU hits 100% during peak traffic — how do you respond",
   "chapterNumber": 13,

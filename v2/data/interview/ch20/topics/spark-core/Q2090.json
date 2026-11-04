@@ -1,7 +1,7 @@
 {
   "id": "Q2090",
   "slug": "why-plain-python-udfs-are-slow-in-pyspark",
-  "questionNumber": 2090,
+  "questionNumber": 51,
   "title": "Why are plain Python UDFs slow in PySpark — each row is serialized from JVM to Python and back (Py4J/IPC overhead), and Catalyst cannot optimize through the opaque UDF — and what is the performance hierarchy (built-in functions > Pandas UDFs > plain Python UDFs)?",
   "shortTitle": "Why plain Python UDFs are slow in PySpark",
   "chapterNumber": 20,

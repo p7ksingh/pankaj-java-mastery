@@ -1,7 +1,7 @@
 {
   "id": "Q257",
   "slug": "blocking-io-on-forkjoinpoolcommonpool-resource-starvation-isolation-problem",
-  "questionNumber": 257,
+  "questionNumber": 11,
   "title": "Blocking IO on ForkJoinPool.commonPool() — resource starvation, isolation problem",
   "shortTitle": "Why is blocking IO on commonPool dangerous?",
   "chapterNumber": 5,

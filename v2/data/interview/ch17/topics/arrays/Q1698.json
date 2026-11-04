@@ -1,7 +1,7 @@
 {
   "id": "Q1698",
   "slug": "minimum-subarray-sum-smallest-sum-contiguous-subarray-kadanes-minimum-variant",
-  "questionNumber": 1698,
+  "questionNumber": 75,
   "title": "Given an array of integers that may include positives and negatives, find the minimum sum obtainable from any contiguous non-empty subarray. Solve it with the minimum variant of Kadane's algorithm and demonstrate with a complete banking mini-project.",
   "shortTitle": "Minimum Subarray Sum (Smallest Sum Contiguous Subarray, Kadane's Minimum Variant)",
   "chapterNumber": 17,

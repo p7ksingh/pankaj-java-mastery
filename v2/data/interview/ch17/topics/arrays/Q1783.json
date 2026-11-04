@@ -1,7 +1,7 @@
 {
   "id": "Q1783",
   "slug": "maximum-distinct-elements-maximize-distinct-values-after-k-removals",
-  "questionNumber": 1783,
+  "questionNumber": 102,
   "title": "Given an array of numbers and a value K, you may remove up to K elements. Maximize the number of distinct elements remaining. Explain how a frequency count and a min-heap of the duplicate counts guide which removals help most.",
   "shortTitle": "Maximum Distinct Elements (Maximize Distinct Values After K Removals)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q877",
   "slug": "why-is-the-word-transient-one-of-the-most-expensive-words-in-backend-engineering",
-  "questionNumber": 877,
+  "questionNumber": 59,
   "title": "Why is the word \"transient\" one of the most expensive words in backend engineering — a timeout might mean the request never arrived, OR the provider is still processing it, OR it completed and the response was lost, OR the system is overloaded and another request is exactly the wrong thing to send — so \"transient\" doesn't answer whether retrying is safe, only that someone expects the condition to eventually change?",
   "shortTitle": "Why is the word \"transient\" one of the most expensive words in backend engineering?",
   "chapterNumber": 10,

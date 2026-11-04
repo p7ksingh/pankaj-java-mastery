@@ -1,7 +1,7 @@
 {
   "id": "Q1715",
   "slug": "find-all-missing-numbers-numbers-missing-from-1n",
-  "questionNumber": 1715,
+  "questionNumber": 4,
   "title": "Given an unsorted array of `n` integers in the range `1` to `n` where some numbers may appear more than once and some numbers are therefore missing, return a list of all the numbers in `1..n` that do not appear. Solve in O(n) time and O(1) extra space (the output list does not count).",
   "shortTitle": "Find all Missing Numbers (Numbers Missing from 1..n)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q141",
   "slug": "method-overriding-in-depth-rules-covariant-returns-access-modifiers-exceptions-use-cases",
-  "questionNumber": 141,
+  "questionNumber": 2,
   "title": "Explain method overriding in depth — rules, covariant return types, access-modifier rules, exception rules, and use cases.",
   "shortTitle": "What are the rules for method overriding?",
   "chapterNumber": 2,

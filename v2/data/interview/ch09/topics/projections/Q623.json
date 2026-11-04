@@ -1,7 +1,7 @@
 {
   "id": "Q623",
   "slug": "jpa-projections-interface-based-classdto-dynamic-performance-comparison",
-  "questionNumber": 623,
+  "questionNumber": 1,
   "title": "What are JPA projections (interface, class/DTO, dynamic), and which is most performant?",
   "shortTitle": "What are JPA projections?",
   "chapterNumber": 9,

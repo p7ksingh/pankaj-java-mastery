@@ -1,7 +1,7 @@
 {
   "id": "Q1599",
   "slug": "wildcard-matching-and-with-dp",
-  "questionNumber": 1599,
+  "questionNumber": 12,
   "title": "Implement wildcard pattern matching where '?' matches any single character and '*' matches any sequence of characters including the empty sequence.",
   "shortTitle": "Wildcard Matching — '?' and '*' with DP",
   "chapterNumber": 17,

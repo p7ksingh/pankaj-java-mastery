@@ -1,7 +1,7 @@
 {
   "id": "Q368",
   "slug": "convert-lowercase-string-to-uppercase-using-streams",
-  "questionNumber": 368,
+  "questionNumber": 4,
   "title": "Write a Java 8 program to convert a lowercase string to uppercase using streams.",
   "shortTitle": "Convert lowercase string to uppercase using streams",
   "chapterNumber": 6,

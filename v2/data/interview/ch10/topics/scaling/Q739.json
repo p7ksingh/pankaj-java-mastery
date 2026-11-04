@@ -1,7 +1,7 @@
 {
   "id": "Q739",
   "slug": "how-do-you-scale-a-microservices-application",
-  "questionNumber": 739,
+  "questionNumber": 2,
   "title": "How do you scale a microservices application (horizontal/vertical scaling, load balancing, API gateway, containers/orchestration, DB scaling, async, auto-scaling, monitoring, circuit breaker)?",
   "shortTitle": "How do you scale a microservices application",
   "chapterNumber": 10,

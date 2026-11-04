@@ -1,7 +1,7 @@
 {
   "id": "Q25",
   "slug": "how-string-and-stringbuffer-handle-memory-differently",
-  "questionNumber": 25,
+  "questionNumber": 7,
   "title": "How do String and StringBuffer handle memory differently (immutable new objects vs mutable char array)?",
   "shortTitle": "How do String and StringBuffer handle memory differently?",
   "chapterNumber": 1,

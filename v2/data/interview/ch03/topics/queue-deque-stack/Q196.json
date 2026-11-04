@@ -1,7 +1,7 @@
 {
-  "id": "Q196-collections",
-  "slug": "transferqueue-linkedtransferqueue-transfer-vs-put-hand-off-rendezvous",
-  "questionNumber": 196,
+  "id": "Q196",
+  "slug": "transferqueue-linkedtransferqueue-transfer-vs-put-hand-off",
+  "questionNumber": 8,
   "title": "TransferQueue — LinkedTransferQueue, transfer() vs put(), hand-off rendezvous",
   "shortTitle": "What is TransferQueue?",
   "chapterNumber": 3,

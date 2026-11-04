@@ -1,7 +1,7 @@
 {
   "id": "Q2424",
   "slug": "what-does-arraysaslist123streampeeksystemoutprintlncount-print-in-java-9",
-  "questionNumber": 2424,
+  "questionNumber": 3,
   "title": "What does `Arrays.asList(1,2,3).stream().peek(System.out::println).count()` print in Java 9+? (Nothing — `count()` may skip `peek()` if the stream is SIZED.)",
   "shortTitle": "What does Arrays.asList(1,2,3).stream().peek(System.out::println).count() print in Java 9+?",
   "chapterNumber": 6,

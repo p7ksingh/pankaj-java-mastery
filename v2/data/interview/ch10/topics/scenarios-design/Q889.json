@@ -1,7 +1,7 @@
 {
   "id": "Q889",
   "slug": "what-evidence-would-make-you-change-your-architecture",
-  "questionNumber": 889,
+  "questionNumber": 67,
   "title": "(Principal-level) You designed the system — what evidence would make you change your architecture? If you recommend Redis, explain what would convince you it is unnecessary. If you chose async messaging, explain what would make synchronous communication preferable. If you proposed microservices, identify which assumptions justify the boundaries — and why is an architecture much easier to trust when the engineer who designed it can also describe the conditions under which it becomes the WRONG architecture?",
   "shortTitle": "What evidence would make you change your architecture?",
   "chapterNumber": 10,

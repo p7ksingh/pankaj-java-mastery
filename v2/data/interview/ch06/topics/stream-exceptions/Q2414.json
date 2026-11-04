@@ -1,7 +1,7 @@
 {
   "id": "Q2414",
   "slug": "write-a-utility-method-functiont-r-uncheckedcheckedfunctiont-r-f-to-wrap-a-checked-function-for-use-in-streams",
-  "questionNumber": 2414,
+  "questionNumber": 3,
   "title": "Write a utility method `Function<T, R> unchecked(CheckedFunction<T, R> f)` that wraps a checked function into an unchecked one for use in streams.",
   "shortTitle": "Write a utility method Function<T, R> unchecked(CheckedFunction<T, R> f) to wrap a checked function for use in streams",
   "chapterNumber": 6,

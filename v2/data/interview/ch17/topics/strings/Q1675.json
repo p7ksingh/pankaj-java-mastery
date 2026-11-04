@@ -1,7 +1,7 @@
 {
   "id": "Q1675",
   "slug": "comparing-strings-containing-backspaces-two-pointers-from-the-end",
-  "questionNumber": 1675,
+  "questionNumber": 38,
   "title": "Given two strings that may contain the backspace character (#), determine whether they are equal after applying the backspaces. Aim for a solution with constant extra space. (LeetCode: Backspace String Compare)",
   "shortTitle": "Comparing Strings Containing Backspaces (Two Pointers from the End)",
   "chapterNumber": 17,

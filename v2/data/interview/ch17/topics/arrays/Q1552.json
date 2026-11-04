@@ -1,7 +1,7 @@
 {
   "id": "Q1552",
   "slug": "dfs-based-topological-sort-post-order-reverse",
-  "questionNumber": 1552,
+  "questionNumber": 52,
   "title": "Implement topological sorting of a directed acyclic graph using depth-first search, producing the order by reversing the post-order of the DFS.",
   "shortTitle": "DFS-based Topological Sort — post-order reverse",
   "chapterNumber": 17,

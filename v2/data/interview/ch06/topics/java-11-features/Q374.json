@@ -1,7 +1,7 @@
 {
   "id": "Q374",
   "slug": "java-11-features-var-in-lambdas-string-methods-predicatenot-http-client-single-file-run",
-  "questionNumber": 374,
+  "questionNumber": 1,
   "title": "What new features were introduced in Java 11 (var in lambda params, new String/File methods, Predicate.not, standardized HTTP Client, single-file run, Epsilon GC)?",
   "shortTitle": "What are the key Java 11 features?",
   "chapterNumber": 6,

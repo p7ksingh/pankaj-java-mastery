@@ -1,7 +1,7 @@
 {
-  "id": "Q195-collections",
-  "slug": "blockingdeque-linkedblockingdeque-work-stealing-producer-consumer-at-both-ends",
-  "questionNumber": 195,
+  "id": "Q195",
+  "slug": "blockingdeque-linkedblockingdeque-work-stealing-producer-consumer-at-both",
+  "questionNumber": 7,
   "title": "BlockingDeque — LinkedBlockingDeque, work-stealing, producer-consumer at both ends",
   "shortTitle": "What is BlockingDeque?",
   "chapterNumber": 3,

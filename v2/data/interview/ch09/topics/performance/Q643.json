@@ -1,7 +1,7 @@
 {
   "id": "Q643",
   "slug": "large-in-clauses-10k-ids-chunk-batches-temp-table-server-side-filter",
-  "questionNumber": 643,
+  "questionNumber": 3,
   "title": "How do you handle very large IN clauses, for example filtering by 10,000 ids, in JPA without hurting performance or hitting database limits?",
   "shortTitle": "Large IN clauses — chunking and alternatives?",
   "chapterNumber": 9,

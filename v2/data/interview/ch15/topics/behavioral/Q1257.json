@@ -1,7 +1,7 @@
 {
   "id": "Q1257",
   "slug": "chain-of-responsibility-pattern-passing-a-request-along-a-chain-of-handlers-approval-escalation-example",
-  "questionNumber": 1257,
+  "questionNumber": 5,
   "title": "Explain the Chain of Responsibility design pattern (request passed along handlers) with an approval-escalation example.",
   "shortTitle": "Chain of Responsibility pattern — passing a request along a chain of handlers (approval-escalation example)",
   "chapterNumber": 15,

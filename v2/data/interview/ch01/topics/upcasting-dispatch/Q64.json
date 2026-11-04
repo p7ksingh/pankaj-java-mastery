@@ -1,7 +1,7 @@
 {
   "id": "Q64",
   "slug": "explain-b-b-new-a-versus-a-a-new-b-with-upcasting-and-dynamic-dispatch",
-  "questionNumber": 64,
+  "questionNumber": 1,
   "title": "Explain `B b = new A();` (compile error) vs `A a = new B();` (valid upcasting with dynamic method dispatch).",
   "shortTitle": "Explain B b = new A() vs A a = new B() with upcasting and dynamic dispatch",
   "chapterNumber": 1,

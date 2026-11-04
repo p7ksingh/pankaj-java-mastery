@@ -1,7 +1,7 @@
 {
   "id": "Q388",
   "slug": "summarystatistics-minmaxsumaveragecount-in-one-pass",
-  "questionNumber": 388,
+  "questionNumber": 5,
   "title": "How do you get min/max/sum/average/count in a single pass with summaryStatistics() (IntSummaryStatistics)?",
   "shortTitle": "summaryStatistics() — min/max/sum/average/count in one pass",
   "chapterNumber": 6,

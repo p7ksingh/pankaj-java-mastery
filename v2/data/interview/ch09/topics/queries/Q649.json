@@ -1,7 +1,7 @@
 {
   "id": "Q649",
   "slug": "custom-queries-in-spring-data-derived-methods-query-jpql-native-sql-modifying",
-  "questionNumber": 649,
+  "questionNumber": 3,
   "title": "What are the ways to write custom queries in Spring Data JPA — derived query methods, @Query with JPQL, native SQL, and @Modifying updates?",
   "shortTitle": "Custom queries — derived, JPQL, native, @Modifying?",
   "chapterNumber": 9,

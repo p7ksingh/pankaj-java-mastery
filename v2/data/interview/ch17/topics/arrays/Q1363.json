@@ -1,7 +1,7 @@
 {
   "id": "Q1363",
   "slug": "check-if-a-given-number-exists-in-an-array",
-  "questionNumber": 1363,
+  "questionNumber": 4,
   "title": "Check if a given number exists in an array (linear search — loop through and compare each element).",
   "shortTitle": "Check if a given number exists in an array",
   "chapterNumber": 17,

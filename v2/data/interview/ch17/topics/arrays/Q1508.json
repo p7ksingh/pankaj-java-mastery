@@ -1,7 +1,7 @@
 {
   "id": "Q1508",
   "slug": "next-greater-element-i-decreasing-monotonic-stack-hashmap",
-  "questionNumber": 1508,
+  "questionNumber": 47,
   "title": "Given two arrays `nums1` (a subset of `nums2`), for each element in `nums1` find the next greater element to its right in `nums2`. If none exists, return -1 for that element.",
   "shortTitle": "Next Greater Element I — decreasing monotonic stack + HashMap",
   "chapterNumber": 17,

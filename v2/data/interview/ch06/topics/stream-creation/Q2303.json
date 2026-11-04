@@ -1,7 +1,7 @@
 {
   "id": "Q2303",
   "slug": "use-intstreamrange1-11-to-generate-numbers-1-10-then-filter-even-numbers",
-  "questionNumber": 2303,
+  "questionNumber": 10,
   "title": "Use `IntStream.range(1, 11)` to generate numbers 1-10, then filter even numbers.",
   "shortTitle": "Use IntStream.range(1, 11) to generate numbers 1-10, then filter even numbers",
   "chapterNumber": 6,

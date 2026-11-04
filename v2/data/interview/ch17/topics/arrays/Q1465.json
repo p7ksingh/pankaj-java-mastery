@@ -1,7 +1,7 @@
 {
   "id": "Q1465",
   "slug": "minimum-size-subarray-sum-target-variable-window-shrink-when-satisfied",
-  "questionNumber": 1465,
+  "questionNumber": 31,
   "title": "Minimum Size Subarray Sum ≥ target — variable window, shrink when condition met.",
   "shortTitle": "Minimum Size Subarray Sum ≥ Target — Variable Window, Shrink When Satisfied",
   "chapterNumber": 17,

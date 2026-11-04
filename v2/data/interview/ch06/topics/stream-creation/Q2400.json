@@ -1,7 +1,7 @@
 {
   "id": "Q2400",
   "slug": "generate-an-infinite-stream-of-random-salaries-using-streamgeneratemathrandom-with-limit10",
-  "questionNumber": 2400,
+  "questionNumber": 14,
   "title": "Generate an infinite stream of random salaries using `Stream.generate(Math::random)` with `limit(10)`.",
   "shortTitle": "Generate an infinite stream of random salaries using Stream.generate(Math::random) with limit(10)",
   "chapterNumber": 6,

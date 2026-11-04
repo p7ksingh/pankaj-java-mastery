@@ -1,7 +1,7 @@
 {
   "id": "Q218",
   "slug": "detect-analyze-prevent-deadlocks-jstack-finddeadlockedthreads-trylock-readwritelock",
-  "questionNumber": 218,
+  "questionNumber": 2,
   "title": "Detect, analyze, prevent deadlocks — jstack, findDeadlockedThreads, tryLock, ReadWriteLock",
   "shortTitle": "How do you detect and prevent deadlocks?",
   "chapterNumber": 5,

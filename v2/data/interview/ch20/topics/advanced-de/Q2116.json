@@ -1,7 +1,7 @@
 {
   "id": "Q2116",
   "slug": "what-is-pathglobfilter",
-  "questionNumber": 2116,
+  "questionNumber": 20,
   "title": "What is `pathGlobFilter` — a Spark read option to filter files by glob pattern when reading from a directory (e.g., `option(\"pathGlobFilter\", \"*.csv\")`) — and how does it differ from partition discovery?",
   "shortTitle": "What is `pathGlobFilter`",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q1680",
   "slug": "find-the-duplicate-number-cycle-detection-on-array-indices",
-  "questionNumber": 1680,
+  "questionNumber": 66,
   "title": "Given an array of n plus 1 integers where each integer is between 1 and n inclusive, exactly one number is repeated. Find the duplicate without modifying the array and using only constant extra space. (LeetCode: Find the Duplicate Number)",
   "shortTitle": "Find the Duplicate Number (Cycle Detection on Array Indices)",
   "chapterNumber": 17,

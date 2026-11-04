@@ -1,7 +1,7 @@
 {
   "id": "Q2169",
   "slug": "how-do-you-monitor-flink-jobs-and-what-metrics-indicate-trouble",
-  "questionNumber": 2169,
+  "questionNumber": 28,
   "title": "How do you monitor Flink jobs — Flink Web Dashboard (job graph, checkpoints, backpressure, exceptions), Flink Metrics (latency, throughput, checkpoint duration, state size) exposed to Prometheus/Grafana/Datadog, and what metrics indicate trouble (increasing checkpoint duration, growing state size, backpressure on specific operators)?",
   "shortTitle": "How do you monitor Flink jobs and what metrics indicate trouble",
   "chapterNumber": 20,

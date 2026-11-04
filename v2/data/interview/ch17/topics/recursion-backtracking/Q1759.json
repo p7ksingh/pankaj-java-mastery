@@ -1,7 +1,7 @@
 {
   "id": "Q1759",
   "slug": "combinations-all-ways-to-choose-k-items-from-n",
-  "questionNumber": 1759,
+  "questionNumber": 19,
   "title": "Given two integers N and K, return all possible combinations of K numbers chosen from the range 1 to N. Explain the backtracking technique with a start index and how to prune when not enough numbers remain.",
   "shortTitle": "Combinations (All Ways to Choose K Items from N)",
   "chapterNumber": 17,

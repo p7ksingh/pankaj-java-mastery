@@ -1,7 +1,7 @@
 {
   "id": "Q2038",
   "slug": "when-to-repartition-after-a-heavy-filter-vs-coalesce-before-writing-output",
-  "questionNumber": 2038,
+  "questionNumber": 23,
   "title": "When should you repartition after a highly-filtered DataFrame (many empty/tiny partitions → repartition to rebalance), and when should you coalesce before writing output (reduce small files)?",
   "shortTitle": "When to repartition after a heavy filter vs coalesce before writing output",
   "chapterNumber": 20,

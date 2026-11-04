@@ -1,7 +1,7 @@
 {
   "id": "Q732",
   "slug": "explain-service-discovery-in-depth",
-  "questionNumber": 732,
+  "questionNumber": 2,
   "title": "Explain service discovery in depth — service registry, instances, clients, client-side vs server-side discovery, health checks, load balancing/failover, Kubernetes DNS, service mesh, security (registry poisoning, mTLS/Zero Trust), performance (DNS TTL, proxy hops, registry scaling), and multi-region setups.",
   "shortTitle": "Explain service discovery in depth",
   "chapterNumber": 10,

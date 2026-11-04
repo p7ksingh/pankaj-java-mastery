@@ -1,7 +1,7 @@
 {
   "id": "Q1410",
   "slug": "convert-a-string-to-uppercase-lowercase-without-built-in-methods",
-  "questionNumber": 1410,
+  "questionNumber": 9,
   "title": "Convert a string to uppercase / lowercase without using built-in methods (add/subtract 32 from ASCII value).",
   "shortTitle": "Convert a String to Uppercase / Lowercase Without Built-in Methods",
   "chapterNumber": 17,

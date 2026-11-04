@@ -1,7 +1,7 @@
 {
   "id": "Q1782",
   "slug": "k-closest-numbers-find-the-k-elements-nearest-a-target-in-a-sorted-array",
-  "questionNumber": 1782,
+  "questionNumber": 101,
   "title": "Given a sorted array, a target value X, and a count K, find the K numbers closest to X. If two numbers are equally close, prefer the smaller. Explain how binary search locates X and a two-pointer window then selects the K closest.",
   "shortTitle": "K Closest Numbers (Find the K Elements Nearest a Target in a Sorted Array)",
   "chapterNumber": 17,

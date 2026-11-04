@@ -1,7 +1,7 @@
 {
   "id": "Q2167",
   "slug": "how-does-flink-handle-serialization",
-  "questionNumber": 2167,
+  "questionNumber": 26,
   "title": "How does Flink handle serialization — built-in TypeSerializers for primitives/POJOs/Tuples/Avro, fallback to Kryo for unknown types (slower), and why defining POJOs correctly (public no-arg constructor, public fields or getters/setters) matters for performance and state evolution?",
   "shortTitle": "How does Flink handle serialization",
   "chapterNumber": 20,

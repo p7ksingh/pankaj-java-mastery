@@ -1,7 +1,7 @@
 {
   "id": "Q157",
   "slug": "hashset-internals-backed-by-hashmap-dummy-present-value",
-  "questionNumber": 157,
+  "questionNumber": 1,
   "title": "HashSet internals — backed by HashMap, dummy PRESENT value",
   "shortTitle": "How does HashSet work internally?",
   "chapterNumber": 3,

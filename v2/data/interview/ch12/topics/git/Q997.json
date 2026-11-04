@@ -1,7 +1,7 @@
 {
   "id": "Q997",
   "slug": "git-branching-across-a-development-team-feature-branches-pr-flow-hotfix-branches",
-  "questionNumber": 997,
+  "questionNumber": 1,
   "title": "How would you manage Git branching across a development team (feature branching, PR flow, hotfix branches)?",
   "shortTitle": "Git branching across a development team — feature branches, PR flow, hotfix branches",
   "chapterNumber": 12,

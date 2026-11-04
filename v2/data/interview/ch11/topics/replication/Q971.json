@@ -1,7 +1,7 @@
 {
   "id": "Q971",
   "slug": "how-do-you-consume-json-in-spring-kafka-what-is-the-default-deserializer-and-how-do-you-dynamically-pauseresume-a-listener",
-  "questionNumber": 971,
+  "questionNumber": 12,
   "title": "How do you consume JSON in Spring Kafka (configure `JsonDeserializer` / `spring.kafka.consumer.value-deserializer` with trusted packages), what is the default deserializer, and how do you dynamically pause/resume a listener (`KafkaListenerEndpointRegistry` → `MessageListenerContainer.pause()/resume()`, e.g. to stop consuming while the DB is down)?",
   "shortTitle": "How do you consume JSON in Spring Kafka, what is the default deserializer, and how do you dynamically pause/resume a listener?",
   "chapterNumber": 11,

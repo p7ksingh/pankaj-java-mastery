@@ -1,7 +1,7 @@
 {
   "id": "Q1810",
   "slug": "longest-palindromic-substring-longest-contiguous-run-that-reads-the-same-both-ways",
-  "questionNumber": 1810,
+  "questionNumber": 49,
   "title": "Given a string, find the length of its longest palindromic substring, where a substring must be contiguous. Explain the Palindromic Subsequence DP pattern applied to contiguous ranges, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Longest Palindromic Substring (Longest Contiguous Run That Reads the Same Both Ways)",
   "chapterNumber": 17,

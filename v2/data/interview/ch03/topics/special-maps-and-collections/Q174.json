@@ -1,7 +1,7 @@
 {
   "id": "Q174",
   "slug": "weakhashmap-weak-reference-keys-garbage-collection-use-cases",
-  "questionNumber": 174,
+  "questionNumber": 1,
   "title": "WeakHashMap — weak reference keys, garbage collection, use cases",
   "shortTitle": "What is WeakHashMap?",
   "chapterNumber": 3,

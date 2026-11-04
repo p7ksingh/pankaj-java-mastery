@@ -1,7 +1,7 @@
 {
   "id": "Q2196",
   "slug": "explaining-a-mature-playwright-framework-architecture",
-  "questionNumber": 2196,
+  "questionNumber": 1,
   "title": "Explain a mature Playwright (or similar) framework architecture — test specs, Page Objects, fixtures, utilities, test data, API helpers, configuration, environment management, reporting, authentication handling, and CI/CD integration — and why does the interviewer want this (to tell whether you've DESIGNED a framework vs only written scripts)?",
   "shortTitle": "Explaining a mature Playwright framework architecture",
   "chapterNumber": 21,

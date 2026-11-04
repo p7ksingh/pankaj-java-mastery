@@ -1,7 +1,7 @@
 {
   "id": "Q2050",
   "slug": "broadcast-join-sending-the-small-dataset-to-every-executor",
-  "questionNumber": 2050,
+  "questionNumber": 31,
   "title": "What is a Broadcast Join — sending the small dataset to every executor so the large dataset joins locally without shuffle — and what is the PySpark syntax (`from pyspark.sql.functions import broadcast; big.join(broadcast(small), \"key\")`)?",
   "shortTitle": "Broadcast Join — sending the small dataset to every executor",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q1179",
   "slug": "how-modern-databases-handle-json-json-vs-jsonb-mysql-json",
-  "questionNumber": 1179,
+  "questionNumber": 30,
   "title": "How do modern databases handle JSON — PostgreSQL (`json` vs `jsonb` — binary, indexable with GIN), MySQL (`JSON` type, `JSON_EXTRACT`, `->>` operator), and why `jsonb` is preferred for queries (supports indexing, equality, containment `@>`) while `json` preserves formatting?",
   "shortTitle": "How modern databases handle JSON (json vs jsonb, MySQL JSON)",
   "chapterNumber": 13,

@@ -1,7 +1,7 @@
 {
   "id": "Q23",
   "slug": "difference-between-string-stringbuilder-and-stringbuffer",
-  "questionNumber": 23,
+  "questionNumber": 5,
   "title": "What is the difference between String, StringBuilder, and StringBuffer, and when should each be used (single-threaded vs thread-safe)?",
   "shortTitle": "What is the difference between String, StringBuilder, and StringBuffer?",
   "chapterNumber": 1,

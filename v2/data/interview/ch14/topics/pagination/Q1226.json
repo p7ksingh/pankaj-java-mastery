@@ -1,7 +1,7 @@
 {
   "id": "Q1226",
   "slug": "how-do-you-design-pagination-in-a-rest-api-and-why-does-offset-pagination-break-at-deep-pages",
-  "questionNumber": 1226,
+  "questionNumber": 2,
   "title": "How do you design pagination in a REST API — query-parameter-based (`?page=2&size=20` or `?offset=40&limit=20`), returning metadata (`totalElements`, `totalPages`, `hasNext`), and why does offset pagination break at deep pages (use cursor/keyset instead: `?after=lastSeenId&limit=20`)?",
   "shortTitle": "How do you design pagination in a REST API and why does offset pagination break at deep pages",
   "chapterNumber": 14,

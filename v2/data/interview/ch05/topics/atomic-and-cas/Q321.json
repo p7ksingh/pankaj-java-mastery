@@ -1,7 +1,7 @@
 {
   "id": "Q321",
   "slug": "aba-problem-in-cas-version-stamps-with-atomicstampedreference",
-  "questionNumber": 321,
+  "questionNumber": 4,
   "title": "What is the ABA problem in compare-and-swap, why does a plain CAS succeed incorrectly when a value changes from A to B and back to A, and how does AtomicStampedReference fix it?",
   "shortTitle": "What is the ABA problem?",
   "chapterNumber": 5,

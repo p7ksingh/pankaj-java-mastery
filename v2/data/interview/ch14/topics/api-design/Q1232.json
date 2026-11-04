@@ -1,7 +1,7 @@
 {
   "id": "Q1232",
   "slug": "what-are-the-four-grpc-communication-patterns",
-  "questionNumber": 1232,
+  "questionNumber": 18,
   "title": "What are the four gRPC communication patterns — Unary (one request, one response), Server Streaming (one request, stream of responses), Client Streaming (stream of requests, one response), Bidirectional Streaming (both sides stream)?",
   "shortTitle": "What are the four gRPC communication patterns",
   "chapterNumber": 14,

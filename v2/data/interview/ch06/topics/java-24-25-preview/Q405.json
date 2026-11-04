@@ -1,7 +1,7 @@
 {
   "id": "Q405",
   "slug": "primitive-types-in-patterns-jep-507-instanceofswitch-with-int-long-double",
-  "questionNumber": 405,
+  "questionNumber": 2,
   "title": "What are Primitive Types in Patterns (JEP 507) for instanceof/switch?",
   "shortTitle": "What are Primitive Types in Patterns?",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q1085",
   "slug": "what-is-acid-and-what-is-base-and-when-do-you-use-each-model",
-  "questionNumber": 1085,
+  "questionNumber": 1,
   "title": "What is ACID and what is BASE (Basically Available, Soft state, Eventual consistency), and when do you use each model?",
   "shortTitle": "What is ACID and what is BASE, and when do you use each model?",
   "chapterNumber": 13,

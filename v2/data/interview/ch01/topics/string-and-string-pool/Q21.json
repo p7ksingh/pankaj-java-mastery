@@ -1,7 +1,7 @@
 {
   "id": "Q21",
   "slug": "what-is-string-interning-and-how-it-affects-comparisons",
-  "questionNumber": 21,
+  "questionNumber": 3,
   "title": "What is String interning, and how does it affect == comparisons (literals vs new String(...) vs .intern())?",
   "shortTitle": "What is String interning and how does it affect == comparisons?",
   "chapterNumber": 1,

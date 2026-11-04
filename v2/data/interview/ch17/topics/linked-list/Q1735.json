@@ -1,7 +1,7 @@
 {
   "id": "Q1735",
   "slug": "right-view-of-a-binary-tree-last-node-of-each-level",
-  "questionNumber": 1735,
+  "questionNumber": 20,
   "title": "Given the root of a binary tree, imagine standing on the right side of it; return the values of the nodes visible from the right, ordered top to bottom. This is the last node of each level in a level order traversal.",
   "shortTitle": "Right View of a Binary Tree (Last Node of Each Level)",
   "chapterNumber": 17,

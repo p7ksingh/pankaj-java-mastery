@@ -1,7 +1,7 @@
 {
   "id": "Q136",
   "slug": "what-are-the-gotchas-of-stringsplit-dropped-trailing-empties-regex-argument-and-splitting-an-empty-string",
-  "questionNumber": 136,
+  "questionNumber": 12,
   "title": "What are the gotchas of `split()` — trailing empty strings are dropped by default (use `split(regex, -1)` to keep them), the argument is a regex (so `.` must be escaped as `\\\\.`), and splitting an empty string returns a one-element array?",
   "shortTitle": "What are the gotchas of String.split()?",
   "chapterNumber": 1,

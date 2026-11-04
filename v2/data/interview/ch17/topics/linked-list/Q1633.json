@@ -1,7 +1,7 @@
 {
   "id": "Q1633",
   "slug": "lru-cache-hashmap-plus-doubly-linked-list-for-o1-get-and-put",
-  "questionNumber": 1633,
+  "questionNumber": 18,
   "title": "LRU Cache — HashMap + doubly linked list, O(1) get/put.",
   "shortTitle": "LRU Cache — HashMap plus doubly linked list for O(1) get and put",
   "chapterNumber": 17,

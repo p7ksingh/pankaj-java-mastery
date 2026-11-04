@@ -1,7 +1,7 @@
 {
   "id": "Q2330",
   "slug": "write-a-functionemployee-string-that-extracts-the-name-then-compose-with-andthenstringtouppercase",
-  "questionNumber": 2330,
+  "questionNumber": 28,
   "title": "Write a `Function<Employee, String>` that extracts the name, then compose it with another function that uppercases using `.andThen(String::toUpperCase)`.",
   "shortTitle": "Write a Function<Employee, String> that extracts the name, then compose with andThen(String::toUpperCase)",
   "chapterNumber": 6,

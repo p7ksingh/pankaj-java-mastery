@@ -1,7 +1,7 @@
 {
   "id": "Q270",
   "slug": "hashmap-concurrent-resize-infinite-loop-java-7-table-corruption-java-8-alive-but-unresponsive",
-  "questionNumber": 270,
+  "questionNumber": 2,
   "title": "HashMap concurrent resize — infinite loop (Java 7), table corruption (Java 8+), alive but unresponsive",
   "shortTitle": "HashMap concurrent resize problems?",
   "chapterNumber": 5,

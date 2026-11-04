@@ -1,7 +1,7 @@
 {
   "id": "Q2166",
   "slug": "what-is-flinks-async-io",
-  "questionNumber": 2166,
+  "questionNumber": 25,
   "title": "What is Flink's Async I/O (`AsyncDataStream.unorderedWait(...)` / `orderedWait(...)`) — a mechanism to perform non-blocking external lookups (database, API) inside a Flink operator without blocking the entire pipeline, improving throughput?",
   "shortTitle": "What is Flink's Async I/O",
   "chapterNumber": 20,

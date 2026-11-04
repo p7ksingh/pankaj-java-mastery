@@ -1,7 +1,7 @@
 {
   "id": "Q1755",
   "slug": "structurally-unique-binary-search-trees-generate-all-shapes",
-  "questionNumber": 1755,
+  "questionNumber": 14,
   "title": "Given a number N, generate all structurally unique binary search trees that store values 1 through N. Explain how choosing each value as the root and recursively building left and right subtrees enumerates every shape.",
   "shortTitle": "Structurally Unique Binary Search Trees (Generate All Shapes)",
   "chapterNumber": 17,

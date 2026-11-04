@@ -1,7 +1,7 @@
 {
   "id": "Q993",
   "slug": "aws-cloudformation-core-concepts-and-how-sam-relates",
-  "questionNumber": 993,
+  "questionNumber": 4,
   "title": "What are the core concepts of AWS CloudFormation — templates (YAML/JSON) with Resources/Parameters/Mappings/Outputs/Conditions, Stacks, Change Sets (preview changes before applying), Drift Detection, nested stacks and StackSets (multi-account/multi-region) — and how does SAM relate to it (a CloudFormation transform/macro for serverless)?",
   "shortTitle": "AWS CloudFormation — core concepts and how SAM relates",
   "chapterNumber": 12,

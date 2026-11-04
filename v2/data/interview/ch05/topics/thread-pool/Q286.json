@@ -1,7 +1,7 @@
 {
   "id": "Q286",
   "slug": "threadpoolexecutor-all-7-parameters-queue-full-behavior-four-rejection-policies",
-  "questionNumber": 286,
+  "questionNumber": 6,
   "title": "ThreadPoolExecutor — all 7 parameters, queue-full behavior, four rejection policies",
   "shortTitle": "What are ThreadPoolExecutor 7 parameters?",
   "chapterNumber": 5,

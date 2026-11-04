@@ -1,7 +1,7 @@
 {
   "id": "Q1948",
   "slug": "how-prometheus-works-pullscrape-time-series-db-promql-grafana-integration-and-setting-actionable-alerts",
-  "questionNumber": 1948,
+  "questionNumber": 5,
   "title": "How does Prometheus work (pull/scrape model, time-series DB, PromQL), how does it integrate with Grafana for dashboards, and how do you set actionable alerts that avoid false positives?",
   "shortTitle": "How Prometheus works (pull/scrape, time-series DB, PromQL), Grafana integration, and setting actionable alerts",
   "chapterNumber": 12,

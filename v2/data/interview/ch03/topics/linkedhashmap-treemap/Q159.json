@@ -1,7 +1,7 @@
 {
   "id": "Q159",
   "slug": "when-to-use-linkedhashmap-over-hashmap",
-  "questionNumber": 159,
+  "questionNumber": 2,
   "title": "When to use LinkedHashMap over HashMap",
   "shortTitle": "When should you use LinkedHashMap over HashMap?",
   "chapterNumber": 3,

@@ -1,7 +1,7 @@
 {
   "id": "Q2100",
   "slug": "unsaferow-and-project-tungsten",
-  "questionNumber": 2100,
+  "questionNumber": 16,
   "title": "What is `UnsafeRow` (Tungsten Binary Format) — Spark's in-memory storage format backed by raw off-heap memory instead of JVM objects, avoiding serialization/deserialization overhead between executors — and how does it relate to Project Tungsten (memory management, binary processing, cache-aware computation, whole-stage codegen)?",
   "shortTitle": "UnsafeRow and Project Tungsten",
   "chapterNumber": 20,

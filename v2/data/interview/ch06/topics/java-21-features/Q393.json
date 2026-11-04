@@ -1,7 +1,7 @@
 {
   "id": "Q393",
   "slug": "virtual-threads-project-loom-jep-444-cheap-blocking-concurrency-when-they-dont-help",
-  "questionNumber": 393,
+  "questionNumber": 1,
   "title": "What are Virtual Threads, what problem do they solve (cheap blocking for I/O-bound), when do they NOT help (CPU-bound), and what is thread pinning?",
   "shortTitle": "What are virtual threads?",
   "chapterNumber": 6,

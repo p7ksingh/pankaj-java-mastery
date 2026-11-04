@@ -1,7 +1,7 @@
 {
   "id": "Q33",
   "slug": "the-rules-for-declaring-initializing-accessing-and-scoping-instance-variables",
-  "questionNumber": 33,
+  "questionNumber": 1,
   "title": "What are the rules for declaring, initializing, accessing, and scoping instance variables in Java?",
   "shortTitle": "What are the rules for instance variables in Java?",
   "chapterNumber": 1,

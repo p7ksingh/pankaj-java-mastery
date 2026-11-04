@@ -1,7 +1,7 @@
 {
   "id": "Q2103",
   "slug": "why-withcolumn-in-a-loop-is-an-anti-pattern",
-  "questionNumber": 2103,
+  "questionNumber": 17,
   "title": "Why is `withColumn` in a loop an anti-pattern — each call re-analyzes the entire plan (driver-side overhead grows O(n²)), stacking projections that the optimizer must later merge — and what is the fix (use `select` with all column expressions at once, or `withColumns` in Spark 3.3+)?",
   "shortTitle": "Why withColumn in a loop is an anti-pattern",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q576d",
   "slug": "transactions-with-and-without-spring-boot-declarative-vs-manual-jdbc-commitrollback",
-  "questionNumber": 576,
+  "questionNumber": 7,
   "title": "Explain transactions with and without Spring Boot (declarative @Transactional vs manual JDBC commit/rollback).",
   "shortTitle": "Transactions with and without Spring Boot?",
   "chapterNumber": 8,

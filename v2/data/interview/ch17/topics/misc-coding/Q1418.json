@@ -1,7 +1,7 @@
 {
   "id": "Q1418",
   "slug": "move-all-zeros-to-the-end-while-preserving-order",
-  "questionNumber": 1418,
+  "questionNumber": 6,
   "title": "Move all zeros to the end while preserving order (two-pointer swap).",
   "shortTitle": "Move All Zeros to the End While Preserving Order",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1499",
   "slug": "subarray-sum-equals-k-prefix-sum-plus-a-hashmap-counting-currentsum-minus-k",
-  "questionNumber": 1499,
+  "questionNumber": 43,
   "title": "Given an integer array and an integer K, count the total number of contiguous subarrays whose elements sum to exactly K. The array may contain negative numbers.",
   "shortTitle": "Subarray Sum Equals K — Prefix Sum Plus a HashMap Counting currentSum Minus K",
   "chapterNumber": 17,

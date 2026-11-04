@@ -1,7 +1,7 @@
 {
   "id": "Q62",
   "slug": "can-you-override-private-and-static-methods-and-the-difference-between-hiding-and-overriding",
-  "questionNumber": 62,
+  "questionNumber": 2,
   "title": "Can you override `private` and `static` methods in Java (method hiding vs overriding)?",
   "shortTitle": "Can you override private and static methods?",
   "chapterNumber": 1,

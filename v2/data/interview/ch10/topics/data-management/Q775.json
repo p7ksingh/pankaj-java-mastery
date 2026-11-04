@@ -1,7 +1,7 @@
 {
   "id": "Q775",
   "slug": "what-are-the-different-ways-to-implement-idempotency-and-when-do-you-use-each",
-  "questionNumber": 775,
+  "questionNumber": 3,
   "title": "What are the different ways to implement idempotency and when do you use each — idempotency keys (payments: store key→response, return the stored response on retry), DB unique constraints (prevent duplicate records), state-based validation (skip if the resource is already in the target state), and distributed locks (one-time coupon under high concurrency)?",
   "shortTitle": "What are the different ways to implement idempotency and when do you use each",
   "chapterNumber": 10,

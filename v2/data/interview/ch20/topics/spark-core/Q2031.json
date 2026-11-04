@@ -1,7 +1,7 @@
 {
   "id": "Q2031",
   "slug": "how-unpersist-works-and-monitoring-caching-effectiveness",
-  "questionNumber": 2031,
+  "questionNumber": 17,
   "title": "How does `unpersist()` work, why is it important in long-running applications (release executor storage), and how do you monitor caching effectiveness (Spark UI → Storage tab: cached partitions, memory/disk used)?",
   "shortTitle": "How unpersist() works and monitoring caching effectiveness",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q1986",
   "slug": "difference-between-batch-processing-and-stream-processing",
-  "questionNumber": 1986,
+  "questionNumber": 1,
   "title": "What is the difference between batch processing and stream processing — batch processes large chunks of data at once (e.g., every night), stream processes data as soon as it arrives (e.g., real-time)?",
   "shortTitle": "Difference between batch processing and stream processing",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q2172",
   "slug": "what-is-stream-deduplication-in-flink-and-why-is-it-important",
-  "questionNumber": 2172,
+  "questionNumber": 30,
   "title": "What is stream deduplication in Flink — removing duplicate events based on a key within a time window (using `ROW_NUMBER()` in Flink SQL or keyed state + timers in DataStream API) — and why is it important for exactly-once semantics in CDC and event-sourced pipelines?",
   "shortTitle": "What is stream deduplication in Flink and why is it important",
   "chapterNumber": 20,

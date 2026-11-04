@@ -1,7 +1,7 @@
 {
   "id": "Q1838",
   "slug": "house-robber-maximum-sum-of-non-adjacent-elements",
-  "questionNumber": 1838,
+  "questionNumber": 15,
   "title": "Given an array of non-negative values, pick a subset with the maximum total such that no two picked elements are adjacent. Explain the dynamic programming recurrence, the operations, the complexity, and a banking use case.",
   "shortTitle": "House Robber (Maximum Sum of Non-Adjacent Elements)",
   "chapterNumber": 17,

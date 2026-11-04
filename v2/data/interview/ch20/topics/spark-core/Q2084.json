@@ -1,7 +1,7 @@
 {
   "id": "Q2084",
   "slug": "the-spark-web-ui-and-debugging-with-it",
-  "questionNumber": 2084,
+  "questionNumber": 49,
   "title": "What is the Spark Web UI (`localhost:4040` during a running app, History Server for completed apps), what tabs do you use for debugging — Jobs (overall progress), Stages (task duration spread, shuffle read/write, GC time), SQL (query plan, AQE decisions), Storage (cached data), Executors (memory, cores, failed tasks) — and what patterns indicate problems (one task 10x slower = skew, high GC time = memory pressure, large shuffle write = expensive wide transformation)?",
   "shortTitle": "The Spark Web UI and debugging with it",
   "chapterNumber": 20,

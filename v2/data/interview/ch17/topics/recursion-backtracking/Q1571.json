@@ -1,7 +1,7 @@
 {
   "id": "Q1571",
   "slug": "n-queens-place-queens-row-by-row-check-conflicts",
-  "questionNumber": 1571,
+  "questionNumber": 7,
   "title": "Place n queens on an n×n chessboard so that no two queens attack each other, and return all distinct solutions (or the count).",
   "shortTitle": "N-Queens — place queens row by row, check conflicts",
   "chapterNumber": 17,

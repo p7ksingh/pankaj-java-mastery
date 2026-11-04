@@ -1,7 +1,7 @@
 {
   "id": "Q116",
   "slug": "predict-the-output-value-nullstring-vs-nullstringlength",
-  "questionNumber": 116,
+  "questionNumber": 5,
   "title": "Predict the output: `\"Value: \" + nullString` (prints \"null\") vs `nullString.length()` (NPE).",
   "shortTitle": "Predict the output: string concatenation with null",
   "chapterNumber": 1,

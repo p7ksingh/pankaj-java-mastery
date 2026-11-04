@@ -1,7 +1,7 @@
 {
   "id": "Q430",
   "slug": "restcontroller-requestmapping-pathvariable-requestparam-requestbody-valid",
-  "questionNumber": 430,
+  "questionNumber": 2,
   "title": "What is the difference between @RestController and @Controller? Explain @RequestMapping and shortcuts. What is the difference between @RequestParam, @PathVariable, @RequestBody? How does @RequestBody work internally? How do you configure ObjectMapper consistently?",
   "shortTitle": "What are the Spring MVC request mapping annotations?",
   "chapterNumber": 7,

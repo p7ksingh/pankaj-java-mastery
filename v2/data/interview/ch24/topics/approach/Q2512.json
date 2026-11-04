@@ -1,7 +1,7 @@
 {
   "id": "Q2512",
   "slug": "functional-vs-non-functional-requirements",
-  "questionNumber": 2512,
+  "questionNumber": 3,
   "title": "What are functional requirements (what the system DOES) vs non-functional requirements (how WELL it does it — latency, availability, consistency, scalability)?",
   "shortTitle": "Functional vs Non-Functional Requirements",
   "chapterNumber": 24,

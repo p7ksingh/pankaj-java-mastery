@@ -1,7 +1,7 @@
 {
   "id": "Q1090",
   "slug": "what-does-an-external-connection-pooler-like-pgbouncer-add-on-top-of-the-application-side-pool",
-  "questionNumber": 1090,
+  "questionNumber": 6,
   "title": "What does an external connection pooler like PgBouncer add on top of the application-side pool (multiplexing many client connections onto a small set of real DB connections)?",
   "shortTitle": "What does an external connection pooler like PgBouncer add on top of the application-side pool?",
   "chapterNumber": 13,

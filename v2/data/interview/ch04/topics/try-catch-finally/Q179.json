@@ -1,7 +1,7 @@
 {
   "id": "Q179",
   "slug": "finally-block-guaranteed-cleanup-when-it-does-not-execute",
-  "questionNumber": 179,
+  "questionNumber": 1,
   "title": "What is a finally block, and in which situations does it NOT execute (System.exit(), JVM crash, Runtime.halt(), infinite loop)?",
   "shortTitle": "How does the finally block work?",
   "chapterNumber": 4,

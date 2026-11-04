@@ -1,7 +1,7 @@
 {
   "id": "Q2322",
   "slug": "convert-a-mapstring-listemployee-to-mapstring-long-department-to-count",
-  "questionNumber": 2322,
+  "questionNumber": 25,
   "title": "Convert a `Map<String, List<Employee>>` to `Map<String, Long>` (department → count) using `entrySet().stream()`.",
   "shortTitle": "Convert a Map<String, List<Employee>> to Map<String, Long> (department to count)",
   "chapterNumber": 6,

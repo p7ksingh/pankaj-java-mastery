@@ -1,7 +1,7 @@
 {
   "id": "Q1001",
   "slug": "git-reset-vs-git-revert-and-what-git-reflog-is",
-  "questionNumber": 1001,
+  "questionNumber": 4,
   "title": "What is the difference between `git reset` and `git revert` for undoing changes (`reset` moves the branch pointer and rewrites history — safe only on unshared/local commits; `revert` adds a new commit that undoes a previous one — safe for shared/pushed history), and what is `git reflog` (a local log of everywhere `HEAD` has pointed, used to recover \"lost\" commits after a bad reset/rebase)?",
   "shortTitle": "`git reset` vs `git revert`, and what `git reflog` is",
   "chapterNumber": 12,

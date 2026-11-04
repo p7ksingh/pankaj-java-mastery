@@ -1,7 +1,7 @@
 {
   "id": "Q159",
   "slug": "sealed-classesinterfaces-java-17-controlled-hierarchy-exhaustive-switch",
-  "questionNumber": 159,
+  "questionNumber": 2,
   "title": "How do sealed classes/interfaces extend OOP's inheritance by giving the supertype CONTROL over its hierarchy (permits only listed subtypes, each must be final/sealed/non-sealed), and how does this enable exhaustive pattern matching in switch?",
   "shortTitle": "What are sealed classes and interfaces?",
   "chapterNumber": 2,

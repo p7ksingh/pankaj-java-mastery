@@ -1,7 +1,7 @@
 {
   "id": "Q2088",
   "slug": "delta-lake-time-travel",
-  "questionNumber": 2088,
+  "questionNumber": 1,
   "title": "What is Delta Lake time travel (`VERSION AS OF n`, `TIMESTAMP AS OF ts`) — reading historical versions of a table — and what are its use cases (debugging, audit, rollback, reproducible ML)?",
   "shortTitle": "Delta Lake time travel",
   "chapterNumber": 20,

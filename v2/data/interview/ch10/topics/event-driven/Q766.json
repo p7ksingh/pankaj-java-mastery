@@ -1,7 +1,7 @@
 {
   "id": "Q766",
   "slug": "what-is-event-sourcing-its-advantages-disadvantages-and-example",
-  "questionNumber": 766,
+  "questionNumber": 5,
   "title": "What is Event Sourcing (store events not state, replay to reconstruct state), its advantages, disadvantages, and example?",
   "shortTitle": "What is Event Sourcing, its advantages, disadvantages, and example?",
   "chapterNumber": 10,

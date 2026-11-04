@@ -1,7 +1,7 @@
 {
   "id": "Q309",
   "slug": "thread-priority-110-setpriority-os-hint-only-and-why-modern-schedulers-mostly-ignore-it",
-  "questionNumber": 309,
+  "questionNumber": 1,
   "title": "Explain Java thread priority. What is the range, how do you set it, how does it map to the operating system, what does the Java Language Specification guarantee, and why do modern schedulers mostly ignore it?",
   "shortTitle": "What is thread priority?",
   "chapterNumber": 5,

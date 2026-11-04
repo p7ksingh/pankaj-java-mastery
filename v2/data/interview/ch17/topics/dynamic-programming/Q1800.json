@@ -1,7 +1,7 @@
 {
   "id": "Q1800",
   "slug": "minimum-coin-change-fewest-coins-to-make-an-amount",
-  "questionNumber": 1800,
+  "questionNumber": 17,
   "title": "Given coin denominations and a total amount, find the minimum number of coins needed to make that amount, where each denomination can be used unlimited times. Return minus one if it cannot be made. Explain the Unbounded Knapsack minimization DP technique, the complexity, and a banking use case.",
   "shortTitle": "Minimum Coin Change (Fewest Coins to Make an Amount)",
   "chapterNumber": 17,

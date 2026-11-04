@@ -1,7 +1,7 @@
 {
   "id": "Q992",
   "slug": "terraform-vs-cloudformation-differences-and-how-to-choose-for-all-aws",
-  "questionNumber": 992,
+  "questionNumber": 3,
   "title": "How do Terraform and CloudFormation differ (multi-cloud + provider ecosystem + separate state vs AWS-native + managed state), and how would you choose between them for an all-AWS environment?",
   "shortTitle": "Terraform vs CloudFormation — differences and how to choose for all-AWS",
   "chapterNumber": 12,

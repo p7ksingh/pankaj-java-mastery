@@ -1,7 +1,7 @@
 {
   "id": "Q1912",
   "slug": "concurrent-pushes-and-how-parallel-and-matrix-builds-work",
-  "questionNumber": 1912,
+  "questionNumber": 32,
   "title": "If two developers push at the same time, how does the pipeline handle it, and how do parallel/matrix builds work (e.g. GitHub Actions matrix)?",
   "shortTitle": "Concurrent Pushes and How Parallel and Matrix Builds Work",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q1298",
   "slug": "can-a-sealed-classinterface-be-local-or-anonymous-why-not",
-  "questionNumber": 1298,
+  "questionNumber": 6,
   "title": "Can a sealed class or interface be local or anonymous, and why not?",
   "shortTitle": "Can a sealed class/interface be local or anonymous — why not?",
   "chapterNumber": 16,

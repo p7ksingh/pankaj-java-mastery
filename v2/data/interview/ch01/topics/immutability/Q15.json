@@ -1,7 +1,7 @@
 {
   "id": "Q15",
   "slug": "how-to-create-an-immutable-class-in-java",
-  "questionNumber": 15,
+  "questionNumber": 1,
   "title": "How do you create an immutable class in Java (final class, private final fields, no setters, defensive copies)?",
   "shortTitle": "How do you create an immutable class in Java?",
   "chapterNumber": 1,

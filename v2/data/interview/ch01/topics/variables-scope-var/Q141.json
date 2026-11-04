@@ -1,7 +1,7 @@
 {
   "id": "Q141",
   "slug": "what-is-the-var-keyword-where-can-and-cannot-it-be-used-and-why-is-the-variable-still-statically-typed",
-  "questionNumber": 141,
+  "questionNumber": 3,
   "title": "What is `var` (local variable type inference, Java 10) — the compiler infers the type from the initializer so `var list = new ArrayList<String>()` is shorthand — where can it be used (local variables with an initializer, enhanced for-loop, try-with-resources), where can it NOT (fields, method parameters, return types, `var x = null`), and why is the variable still statically typed (it is NOT dynamic typing)?",
   "shortTitle": "What is the var keyword in Java?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q1795",
   "slug": "count-of-subset-sum-count-how-many-subsets-reach-an-exact-target",
-  "questionNumber": 1795,
+  "questionNumber": 108,
   "title": "Given a set of positive numbers, count the number of subsets whose sum equals a given target S. Explain the 0/1 Knapsack counting DP technique, the complexity, and a banking use case.",
   "shortTitle": "Count of Subset Sum (Count How Many Subsets Reach an Exact Target)",
   "chapterNumber": 17,

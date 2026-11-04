@@ -1,7 +1,7 @@
 {
   "id": "Q323",
   "slug": "streams-dont-store-elements-pipeline-over-a-source-lazy-evaluation-pull-based",
-  "questionNumber": 323,
+  "questionNumber": 2,
   "title": "What does it mean that a Stream does not store elements (pipeline over a source, lazy, pull-based)?",
   "shortTitle": "Why do streams not store elements?",
   "chapterNumber": 6,

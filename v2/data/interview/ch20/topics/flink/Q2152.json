@@ -1,7 +1,7 @@
 {
   "id": "Q2152",
   "slug": "append-only-vs-retract-vs-upsert-changelog-streams-in-flink-sql",
-  "questionNumber": 2152,
+  "questionNumber": 15,
   "title": "What is the difference between append-only, retract, and upsert changelog streams in Flink SQL, and when does each apply (append = INSERT-only sources like Kafka; retract = INSERT + DELETE pairs for aggregation results; upsert = keyed INSERT/UPDATE/DELETE for CDC)?",
   "shortTitle": "Append-only vs retract vs upsert changelog streams in Flink SQL",
   "chapterNumber": 20,

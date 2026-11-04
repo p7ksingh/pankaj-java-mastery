@@ -1,7 +1,7 @@
 {
   "id": "Q1550",
   "slug": "number-of-connected-components-union-find-or-dfs",
-  "questionNumber": 1550,
+  "questionNumber": 12,
   "title": "Given n nodes labeled 0 to n minus 1 and a list of undirected edges, return the number of connected components in the graph.",
   "shortTitle": "Number of Connected Components — Union-Find or DFS",
   "chapterNumber": 17,

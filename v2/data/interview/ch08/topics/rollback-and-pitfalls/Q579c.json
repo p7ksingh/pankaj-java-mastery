@@ -1,7 +1,7 @@
 {
   "id": "Q579c",
   "slug": "external-side-effects-inside-a-transaction-why-emailhttp-inside-tx-is-a-correctness-bug",
-  "questionNumber": 579,
+  "questionNumber": 3,
   "title": "Why does @Transactional only govern DB resources and NOT external side effects? Why is sending an email or HTTP call inside a TX a correctness bug? What is the fix?",
   "shortTitle": "Why are external side effects inside a transaction dangerous?",
   "chapterNumber": 8,

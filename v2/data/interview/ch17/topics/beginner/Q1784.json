@@ -1,7 +1,7 @@
 {
   "id": "Q1784",
   "slug": "sum-of-elements-between-k1-and-k2-smallest-sum-strictly-between-two-order-statistics",
-  "questionNumber": 1784,
+  "questionNumber": 13,
   "title": "Given an array and two values K1 and K2, find the sum of all elements that are strictly greater than the K1-th smallest and strictly smaller than the K2-th smallest. Explain how two heaps, or finding the two order statistics, let you sum the band in between.",
   "shortTitle": "Sum of Elements Between K1 and K2 Smallest (Sum Strictly Between Two Order Statistics)",
   "chapterNumber": 17,

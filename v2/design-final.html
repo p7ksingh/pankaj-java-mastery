@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>javabypankaj — Final Clean Design</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Source+Serif+4:wght@400;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'Inter',sans-serif;background:#f7f7f7;color:#242424}
+
+  /* ── Screen nav ── */
+  .snav{position:sticky;top:0;z-index:999;background:#111;display:flex;gap:4px;padding:8px 16px;align-items:center}
+  .snav-btn{font-size:12px;font-weight:600;color:#777;background:#1a1a1a;border:1px solid #333;padding:8px 16px;border-radius:8px;cursor:pointer;transition:all .15s}
+  .snav-btn:hover{color:#fff;background:#333}
+  .snav-btn.on{color:#fff;background:#1a8917;border-color:#1a8917}
+  .snav span{font-size:10px;color:#555;margin-left:auto}
+
+  .screen{display:none}
+  .screen.on{display:block}
+
+  /* ── Topbar ── */
+  .topbar{height:52px;background:#242424;display:flex;align-items:center;padding:0 24px;position:sticky;top:44px;z-index:100}
+  .tb-left{display:flex;align-items:center;gap:10px}
+  .tb-brand{color:#fff;font-size:17px;font-weight:800;letter-spacing:-.02em}
+  .tb-search{color:rgba(255,255,255,.4);cursor:pointer;margin-left:6px}
+  .tb-right{margin-left:auto;display:flex;gap:10px;align-items:center}
+  .tb-btn{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.1);border:none;color:#fff;font-size:14px;cursor:pointer;display:grid;place-items:center}
+
+  /* ── Shared ── */
+  .badge{font-size:10px;font-weight:700;color:#fff;background:#242424;padding:3px 7px;border-radius:6px}
+  .bc{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:14px}
+  .bc span{font-size:11px;font-weight:600;color:#888;background:#f0f0f0;border:1px solid #e0e0e0;padding:3px 10px;border-radius:14px}
+  .stars{color:#fbbf24;font-size:12px;letter-spacing:1px}
+  .stars .e{color:#ddd}
+
+  /* ═══════════════════════════════════════
+     PAGE 1: HOME
+     ═══════════════════════════════════════ */
+  .home{display:flex;min-height:calc(100vh - 96px)}
+
+  /* Sidebar */
+  .sidebar{width:260px;flex-shrink:0;background:#fff;border-right:1px solid #eee;padding:16px 0;overflow-y:auto}
+  .sb-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#bbb;padding:0 16px;margin-bottom:10px}
+  .sb-ch{display:flex;align-items:center;gap:8px;padding:10px 16px;font-size:13px;font-weight:600;color:#666;cursor:pointer;border-left:3px solid transparent;transition:all .1s}
+  .sb-ch:hover{background:#f8f8f8;color:#242424}
+  .sb-ch.on{background:#f0faf0;color:#1a8917;border-left-color:#1a8917}
+  .sb-ch .n{font-size:11px;color:#ccc;min-width:22px}
+  .sb-ch .c{font-size:11px;color:#ddd;margin-left:auto}
+
+  /* Main */
+  .home-main{flex:1;padding:24px 28px;max-width:900px}
+  .ch-title{font-size:24px;font-weight:800;margin-bottom:4px}
+  .ch-sub{font-size:13px;color:#999;margin-bottom:20px}
+
+  /* Topic accordion */
+  .tp{margin-bottom:6px}
+  .tp-head{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;background:#fff;border-radius:8px;cursor:pointer;font-weight:700;font-size:14px;border:1px solid #eee;transition:all .15s}
+  .tp-head:hover{border-color:#ddd}
+  .tp-head.open{border-color:#1a8917;background:#fafff9;border-radius:8px 8px 0 0}
+  .tp-cnt{font-size:11px;color:#999;font-weight:600}
+  .tp-arr{font-size:12px;color:#ccc;transition:transform .2s}
+  .tp-head.open .tp-arr{transform:rotate(90deg);color:#1a8917}
+  .tp-body{background:#fff;border:1px solid #eee;border-top:none;border-radius:0 0 8px 8px}
+  .q-row{display:flex;align-items:center;gap:8px;padding:10px 16px 10px 28px;font-size:13px;font-weight:500;color:#444;cursor:pointer;border-bottom:1px solid #f5f5f5;text-decoration:none;transition:all .1s}
+  .q-row:hover{background:#f0faf0;color:#1a8917}
+  .q-row:last-child{border-bottom:none}
+
+  /* ═══════════════════════════════════════
+     PAGE 2: QUESTION
+     ═══════════════════════════════════════ */
+  .reading{display:flex;min-height:calc(100vh - 96px)}
+
+  /* Left: question list */
+  .q-sidebar{width:260px;flex-shrink:0;background:#fff;border-right:1px solid #eee;padding:14px 0;overflow-y:auto}
+  .qs-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#1a8917;padding:6px 14px}
+  .qs-item{display:flex;align-items:center;gap:6px;padding:8px 14px;font-size:12px;font-weight:500;color:#888;cursor:pointer;border-left:3px solid transparent;transition:all .1s;text-decoration:none}
+  .qs-item:hover{background:#f8f8f8;color:#242424}
+  .qs-item.on{background:#f0faf0;color:#1a8917;border-left-color:#1a8917;font-weight:700}
+  .qs-divider{height:1px;background:#eee;margin:12px 0}
+  .qs-other{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#ccc;padding:6px 14px}
+  .qs-topic{display:block;padding:7px 14px;font-size:12px;color:#888;cursor:pointer;text-decoration:none}
+  .qs-topic:hover{color:#1a8917}
+
+  /* Center: reading */
+  .q-main{flex:1;padding:24px 32px;max-width:700px}
+  .q-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+  .q-meta .time{font-size:12px;color:#bbb}
+  .q-title{font-family:'Source Serif 4',serif;font-size:30px;font-weight:800;line-height:1.2;margin-bottom:20px}
+
+  /* Key concepts */
+  .keys{background:rgba(255,255,255,.7);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.4);border-radius:12px;padding:18px 22px;margin-bottom:24px;box-shadow:0 4px 16px rgba(0,0,0,.05);transition:transform .2s,box-shadow .2s}
+  .keys:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.08)}
+  .keys-h{font-size:16px;font-weight:800;margin-bottom:12px}
+  .keys li{font-size:13px;color:#555;padding:6px 0 6px 32px;position:relative;list-style:none;border-bottom:1px solid rgba(0,0,0,.03);counter-increment:k}
+  .keys li:last-child{border-bottom:none}
+  .keys li::before{content:counter(k);position:absolute;left:0;top:6px;width:22px;height:22px;background:#242424;color:#fff;border-radius:50%;font-size:10px;font-weight:700;display:flex;align-items:center;justify-content:center}
+
+  /* Article */
+  .article{background:#fff;border-radius:12px;padding:36px 40px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .sec-h{font-size:18px;font-weight:800;margin-bottom:10px;margin-top:28px;display:flex;align-items:center;gap:6px}
+  .sec-h:first-child{margin-top:0}
+  .sec-anchor{font-size:14px;color:#ddd;text-decoration:none;opacity:0;transition:opacity .15s}
+  .sec-h:hover .sec-anchor{opacity:1;color:#1a8917}
+  .art-p{font-family:'Source Serif 4',serif;font-size:17px;line-height:1.8;color:#333;margin-bottom:18px}
+  .code{background:#f6f6f6;border:1px solid #ebebeb;border-radius:8px;padding:16px 20px;font-family:'JetBrains Mono',monospace;font-size:13px;line-height:1.65;margin-bottom:18px;position:relative;overflow-x:auto}
+  .code .copy{position:absolute;top:8px;right:8px;width:30px;height:30px;border-radius:50%;border:1.5px solid #d0d0d0;background:#fff;color:#999;cursor:pointer;display:grid;place-items:center;font-size:12px}
+  .kw{color:#0000ff}.str{color:#800000}.cm{color:#008000;font-style:italic}
+  .takeaway{background:#f0fff0;border-left:4px solid #1a8917;padding:16px 20px;border-radius:0 8px 8px 0;margin-bottom:24px}
+
+  /* Nav strip */
+  .nav-strip{display:flex;justify-content:space-between;align-items:stretch;margin-top:24px;gap:10px}
+  .nav-btn{display:flex;align-items:center;gap:8px;padding:14px 18px;background:#fff;border:1px solid #eee;border-radius:10px;cursor:pointer;flex:1;text-decoration:none;color:inherit;transition:all .15s}
+  .nav-btn:hover{border-color:#1a8917;background:#fafff9}
+  .nav-dir{font-size:10px;color:#999}
+  .nav-t{font-size:13px;font-weight:700;margin-top:2px}
+  .nav-mid{font-size:11px;color:#ccc;display:flex;align-items:center;white-space:nowrap;padding:0 8px}
+  .kbd-hint{text-align:center;padding:8px;font-size:11px;color:#ddd}
+  .kbd{background:#f0f0f0;padding:2px 6px;border-radius:4px;border:1px solid #ddd;font-size:10px;margin:0 2px}
+
+  /* Right: TOC */
+  .toc{width:160px;flex-shrink:0;padding:24px 12px;position:sticky;top:96px;align-self:flex-start}
+  .toc-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#ccc;margin-bottom:10px}
+  .toc-item{display:block;font-size:12px;font-weight:500;color:#bbb;padding:5px 0 5px 10px;border-left:2px solid #eee;text-decoration:none;transition:all .1s}
+  .toc-item:hover{color:#666;border-left-color:#ccc}
+  .toc-item.on{color:#1a8917;border-left-color:#1a8917;font-weight:700}
+
+  /* ═══════════════════════════════════════
+     PAGE 3: SEARCH
+     ═══════════════════════════════════════ */
+  .search-page{max-width:700px;margin:0 auto;padding:24px 20px}
+  .search-heading{font-family:'Source Serif 4',serif;font-size:28px;font-weight:400;color:#888;margin-bottom:4px}
+  .search-heading strong{font-weight:800;color:#242424}
+  .search-count{font-size:13px;color:#999;margin-bottom:16px}
+  .search-suggest{font-size:14px;color:#666;margin-bottom:16px;padding:10px 14px;background:#fff;border-radius:8px;border:1px solid #eee}
+  .search-suggest a{color:#1a8917;font-weight:700;cursor:pointer;text-decoration:underline}
+  .sr-item{display:flex;align-items:center;gap:12px;padding:14px 16px;background:#fff;border-bottom:1px solid #f0f0f0;cursor:pointer;transition:background .1s;text-decoration:none;color:inherit}
+  .sr-item:hover{background:#fafff9}
+  .sr-title{font-size:14px;font-weight:600}
+  .sr-path{font-size:11px;color:#999;margin-top:2px}
+  .sr-mark{background:rgba(26,137,23,.12);color:#1a8917;padding:0 2px;border-radius:2px}
+
+  /* ═══════════════════════════════════════
+     PAGE 4: ABOUT
+     ═══════════════════════════════════════ */
+  .about{max-width:600px;margin:0 auto;padding:40px 20px;text-align:center}
+  .about-avatar{width:80px;height:80px;border-radius:50%;background:#242424;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:24px;margin:0 auto 16px}
+  .about-name{font-size:28px;font-weight:800;margin-bottom:4px}
+  .about-role{font-size:15px;color:#888;margin-bottom:24px}
+  .about-stats{display:flex;gap:24px;justify-content:center;margin-bottom:28px}
+  .about-stat{text-align:center}
+  .about-stat .num{font-size:24px;font-weight:900;color:#1a8917}
+  .about-stat .lbl{font-size:11px;color:#999;font-weight:600}
+  .about-bio{font-family:'Source Serif 4',serif;font-size:17px;line-height:1.8;color:#555;text-align:left;margin-bottom:24px}
+  .about-links{display:flex;gap:12px;justify-content:center}
+  .about-link{font-size:13px;font-weight:600;color:#fff;background:#242424;padding:8px 20px;border-radius:8px;text-decoration:none;transition:background .15s}
+  .about-link:hover{background:#1a8917}
+
+  /* ── Footer ── */
+  .footer{background:#1a1a1a;color:#fff;padding:32px 24px;text-align:center;font-size:13px;color:#777;margin-top:40px}
+
+  /* ── Responsive ── */
+  @media(max-width:768px){
+    .sidebar,.q-sidebar,.toc{display:none}
+    .home-main,.q-main{padding:16px}
+    .q-title{font-size:24px}
+    .article{padding:24px 20px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Screen nav -->
+<div class="snav">
+  <button class="snav-btn on" onclick="go(1)">1. Home</button>
+  <button class="snav-btn" onclick="go(2)">2. Question</button>
+  <button class="snav-btn" onclick="go(3)">3. Search</button>
+  <button class="snav-btn" onclick="go(4)">4. About</button>
+  <span>4 pages. Clean. Simple. Fast.</span>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE 1: HOME
+     ═══════════════════════════════════════ -->
+<div class="screen on" id="s1">
+  <div class="topbar">
+    <div class="tb-left">
+      <svg width="28" height="28" viewBox="0 0 80 80" fill="none" style="color:#fff"><path d="M26 10H54V14C54 14 54 52 54 58C54 68 46 76 36 76C26 76 18 68 18 58V46" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><circle cx="42" cy="10" r="6" fill="#ff0000"><animate attributeName="opacity" values="1;0.15;1" dur="1s" repeatCount="indefinite"/><animate attributeName="r" values="6;8;6" dur="1s" repeatCount="indefinite"/></circle></svg>
+      <span class="tb-brand">javabypankaj</span>
+      <svg class="tb-search" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" onclick="go(3)"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+    </div>
+    <div class="tb-right"><button class="tb-btn">☽</button></div>
+  </div>
+
+  <div class="home">
+    <!-- Sidebar: chapters -->
+    <div class="sidebar">
+      <div class="sb-label">23 Chapters</div>
+      <div class="sb-ch on"><span class="n">01</span>Core Java<span class="c">170</span></div>
+      <div class="sb-ch"><span class="n">02</span>OOPs<span class="c">32</span></div>
+      <div class="sb-ch"><span class="n">03</span>Collections<span class="c">194</span></div>
+      <div class="sb-ch"><span class="n">04</span>Exceptions<span class="c">28</span></div>
+      <div class="sb-ch"><span class="n">05</span>Spring Boot<span class="c">127</span></div>
+      <div class="sb-ch"><span class="n">06</span>Java 8+<span class="c">334</span></div>
+      <div class="sb-ch"><span class="n">07</span>JDBC & DB<span class="c">26</span></div>
+      <div class="sb-ch"><span class="n">08</span>Servlets<span class="c">32</span></div>
+      <div class="sb-ch"><span class="n">09</span>Multithreading<span class="c">141</span></div>
+      <div class="sb-ch"><span class="n">10</span>SQL<span class="c">69</span></div>
+      <div class="sb-ch"><span class="n">11</span>Microservices<span class="c">91</span></div>
+      <div class="sb-ch"><span class="n">12</span>DevOps<span class="c">133</span></div>
+      <div class="sb-ch"><span class="n">13</span>Hibernate<span class="c">141</span></div>
+      <div class="sb-ch" style="color:#ccc;font-size:11px;padding-left:46px">+10 more</div>
+    </div>
+
+    <!-- Main: topics + questions -->
+    <div class="home-main">
+      <div class="ch-title">Core Java</div>
+      <div class="ch-sub">32 topics · 170 questions</div>
+
+      <!-- Topic: open -->
+      <div class="tp">
+        <div class="tp-head open">
+          <span>JDK, JRE & JVM</span>
+          <span style="display:flex;gap:8px;align-items:center"><span class="tp-cnt">4 Q</span><span class="tp-arr">›</span></span>
+        </div>
+        <div class="tp-body">
+          <a class="q-row" onclick="go(2)"><span class="badge">Q1</span>Difference between JDK, JRE and JVM</a>
+          <a class="q-row" onclick="go(2)"><span class="badge">Q2</span>What is bytecode in Java?</a>
+          <a class="q-row" onclick="go(2)"><span class="badge">Q3</span>What is the class-loader delegation model?</a>
+          <a class="q-row" onclick="go(2)"><span class="badge">Q4</span>How does JIT compilation work?</a>
+        </div>
+      </div>
+
+      <!-- Topic: collapsed -->
+      <div class="tp">
+        <div class="tp-head"><span>Variables, Scope & var</span><span style="display:flex;gap:8px;align-items:center"><span class="tp-cnt">3 Q</span><span class="tp-arr">›</span></span></div>
+      </div>
+      <div class="tp">
+        <div class="tp-head"><span>Primitive Types & Wrappers</span><span style="display:flex;gap:8px;align-items:center"><span class="tp-cnt">10 Q</span><span class="tp-arr">›</span></span></div>
+      </div>
+      <div class="tp">
+        <div class="tp-head"><span>String & Immutability</span><span style="display:flex;gap:8px;align-items:center"><span class="tp-cnt">12 Q</span><span class="tp-arr">›</span></span></div>
+      </div>
+      <div class="tp">
+        <div class="tp-head"><span>Access Modifiers</span><span style="display:flex;gap:8px;align-items:center"><span class="tp-cnt">8 Q</span><span class="tp-arr">›</span></span></div>
+      </div>
+      <div class="tp">
+        <div class="tp-head"><span>Exception Hierarchy</span><span style="display:flex;gap:8px;align-items:center"><span class="tp-cnt">6 Q</span><span class="tp-arr">›</span></span></div>
+      </div>
+      <div class="tp">
+        <div class="tp-head"><span>Memory Management & GC</span><span style="display:flex;gap:8px;align-items:center"><span class="tp-cnt">14 Q</span><span class="tp-arr">›</span></span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE 2: QUESTION
+     ═══════════════════════════════════════ -->
+<div class="screen" id="s2">
+  <div class="topbar">
+    <div class="tb-left">
+      <svg width="28" height="28" viewBox="0 0 80 80" fill="none" style="color:#fff"><path d="M26 10H54V14C54 14 54 52 54 58C54 68 46 76 36 76C26 76 18 68 18 58V46" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><circle cx="42" cy="10" r="6" fill="#ff0000"><animate attributeName="opacity" values="1;0.15;1" dur="1s" repeatCount="indefinite"/><animate attributeName="r" values="6;8;6" dur="1s" repeatCount="indefinite"/></circle></svg>
+      <span class="tb-brand">javabypankaj</span>
+      <svg class="tb-search" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" onclick="go(3)"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+    </div>
+    <div class="tb-right"><button class="tb-btn">☽</button></div>
+  </div>
+
+  <div class="reading">
+    <!-- Left sidebar: questions in topic -->
+    <div class="q-sidebar">
+      <div class="qs-label">JDK, JRE & JVM</div>
+      <a class="qs-item"><span class="badge" style="font-size:9px;padding:2px 5px">Q1</span>JDK vs JRE vs JVM</a>
+      <a class="qs-item on"><span class="badge" style="font-size:9px;padding:2px 5px">Q2</span>What is bytecode?</a>
+      <a class="qs-item"><span class="badge" style="font-size:9px;padding:2px 5px">Q3</span>Class-loader delegation</a>
+      <a class="qs-item"><span class="badge" style="font-size:9px;padding:2px 5px">Q4</span>JIT compilation</a>
+      <div class="qs-divider"></div>
+      <div class="qs-other">Other topics</div>
+      <a class="qs-topic">Variables, Scope & var</a>
+      <a class="qs-topic">Primitive Types & Wrappers</a>
+      <a class="qs-topic">String & Immutability</a>
+      <a class="qs-topic">Access Modifiers</a>
+    </div>
+
+    <!-- Center: the answer -->
+    <div class="q-main">
+      <div class="bc"><span onclick="go(1)" style="cursor:pointer">Home</span><span>Core Java</span><span>JDK, JRE & JVM</span><span>Q2</span></div>
+
+      <div class="q-meta">
+        <span class="badge">Q2</span>
+        <span style="font-size:12px;color:#999">Question 2 of 4</span>
+        <span class="time">· 4 min read</span>
+      </div>
+
+      <h1 class="q-title">What is bytecode in Java?</h1>
+
+      <!-- Key Concepts -->
+      <div class="keys" style="counter-reset:k">
+        <div class="keys-h">Key Concepts</div>
+        <ul style="padding:0">
+          <li>Java compiler produces .class files containing bytecode</li>
+          <li>Platform-independent intermediate representation</li>
+          <li>JVM interprets or JIT-compiles bytecode at runtime</li>
+        </ul>
+      </div>
+
+      <!-- Article -->
+      <div class="article">
+        <div class="sec-h" id="definition"><span>Definition</span><a class="sec-anchor" href="#definition">#</a></div>
+        <p class="art-p">When you compile a Java source file, the compiler does not produce native machine code. Instead, it generates <strong>bytecode</strong> — a set of instructions designed for the Java Virtual Machine. This bytecode is stored in <code style="background:#f0f0f0;padding:1px 5px;border-radius:4px;font-family:'JetBrains Mono',monospace;font-size:15px">.class</code> files and is platform-independent, meaning the same bytecode runs on any operating system without recompilation.</p>
+
+        <div class="sec-h" id="code"><span>Java Code</span><a class="sec-anchor" href="#code">#</a></div>
+        <div class="code">
+          <button class="copy">⊡</button>
+<span class="cm">// Compile: javac Hello.java → Hello.class</span>
+<span class="kw">public class</span> Hello {
+    <span class="kw">public static void</span> main(String[] args) {
+        System.out.println(<span class="str">"Hello World"</span>);
+    }
+}
+        </div>
+
+        <div class="sec-h" id="takeaway"><span>Takeaway</span><a class="sec-anchor" href="#takeaway">#</a></div>
+        <div class="takeaway">
+          <p class="art-p" style="margin:0">Java achieves <strong>"Write Once, Run Anywhere"</strong> through bytecode. The compiler produces platform-neutral .class files, and the JVM on each platform handles translation to native machine code via the JIT compiler.</p>
+        </div>
+      </div>
+
+      <!-- Next/Prev -->
+      <div class="nav-strip">
+        <a class="nav-btn">
+          <div><div class="nav-dir">← Previous</div><div class="nav-t">JDK vs JRE vs JVM</div></div>
+        </a>
+        <span class="nav-mid">2 / 4</span>
+        <a class="nav-btn" style="text-align:right;justify-content:flex-end">
+          <div><div class="nav-dir">Next →</div><div class="nav-t">Class-loader delegation</div></div>
+        </a>
+      </div>
+      <div class="kbd-hint">Use <span class="kbd">←</span> <span class="kbd">→</span> to navigate</div>
+    </div>
+
+    <!-- Right: TOC -->
+    <div class="toc">
+      <div class="toc-label">On this page</div>
+      <a class="toc-item on" href="#definition">Definition</a>
+      <a class="toc-item" href="#code">Java Code</a>
+      <a class="toc-item" href="#takeaway">Takeaway</a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE 3: SEARCH
+     ═══════════════════════════════════════ -->
+<div class="screen" id="s3">
+  <div class="topbar">
+    <div class="tb-left">
+      <svg width="28" height="28" viewBox="0 0 80 80" fill="none" style="color:#fff"><path d="M26 10H54V14C54 14 54 52 54 58C54 68 46 76 36 76C26 76 18 68 18 58V46" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><circle cx="42" cy="10" r="6" fill="#ff0000"><animate attributeName="opacity" values="1;0.15;1" dur="1s" repeatCount="indefinite"/><animate attributeName="r" values="6;8;6" dur="1s" repeatCount="indefinite"/></circle></svg>
+      <span class="tb-brand">javabypankaj</span>
+      <div style="display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);border-radius:18px;padding:0 12px;height:32px;margin-left:10px;width:240px">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.5)" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/></svg>
+        <span style="color:#fff;font-size:13px">HashMap</span>
+      </div>
+    </div>
+    <div class="tb-right"><button class="tb-btn">☽</button></div>
+  </div>
+
+  <div class="search-page">
+    <div class="bc"><span onclick="go(1)" style="cursor:pointer">Home</span><span>Search</span></div>
+    <div class="search-heading">Results for <strong>HashMap</strong></div>
+    <div class="search-count">26 results</div>
+
+    <div style="background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.04)">
+      <a class="sr-item" onclick="go(2)">
+        <span class="badge">Q45</span>
+        <div>
+          <div class="sr-title">How does <span class="sr-mark">HashMap</span> work internally in Java?</div>
+          <div class="sr-path">Collections › HashMap Internals</div>
+        </div>
+      </a>
+      <a class="sr-item" onclick="go(2)">
+        <span class="badge">Q46</span>
+        <div>
+          <div class="sr-title">What happens when two keys have the same hashCode in <span class="sr-mark">HashMap</span>?</div>
+          <div class="sr-path">Collections › HashMap Internals</div>
+        </div>
+      </a>
+      <a class="sr-item" onclick="go(2)">
+        <span class="badge">Q47</span>
+        <div>
+          <div class="sr-title">Explain <span class="sr-mark">HashMap</span> resizing and treeify threshold</div>
+          <div class="sr-path">Collections › HashMap Internals</div>
+        </div>
+      </a>
+      <a class="sr-item" onclick="go(2)">
+        <span class="badge">Q52</span>
+        <div>
+          <div class="sr-title"><span class="sr-mark">HashMap</span> vs LinkedHashMap vs TreeMap</div>
+          <div class="sr-path">Collections › Map Implementations</div>
+        </div>
+      </a>
+      <a class="sr-item" onclick="go(2)">
+        <span class="badge">Q148</span>
+        <div>
+          <div class="sr-title"><span class="sr-mark">HashMap</span> vs Hashtable vs ConcurrentHashMap</div>
+          <div class="sr-path">Collections › Thread-safe Collections</div>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     PAGE 4: ABOUT
+     ═══════════════════════════════════════ -->
+<div class="screen" id="s4">
+  <div class="topbar">
+    <div class="tb-left">
+      <svg width="28" height="28" viewBox="0 0 80 80" fill="none" style="color:#fff"><path d="M26 10H54V14C54 14 54 52 54 58C54 68 46 76 36 76C26 76 18 68 18 58V46" stroke="currentColor" stroke-width="8" stroke-linecap="round"/><circle cx="42" cy="10" r="6" fill="#ff0000"><animate attributeName="opacity" values="1;0.15;1" dur="1s" repeatCount="indefinite"/><animate attributeName="r" values="6;8;6" dur="1s" repeatCount="indefinite"/></circle></svg>
+      <span class="tb-brand" onclick="go(1)" style="cursor:pointer">javabypankaj</span>
+    </div>
+    <div class="tb-right"><button class="tb-btn">☽</button></div>
+  </div>
+
+  <div class="about">
+    <div class="bc" style="justify-content:center;margin-top:20px"><span onclick="go(1)" style="cursor:pointer">Home</span><span>About</span></div>
+    <div class="about-avatar">PS</div>
+    <div class="about-name">Pankaj Singh</div>
+    <div class="about-role">Senior Java Developer · 10+ years · Banking & Finance</div>
+
+    <div class="about-stats">
+      <div class="about-stat"><div class="num">2466</div><div class="lbl">Questions</div></div>
+      <div class="about-stat"><div class="num">23</div><div class="lbl">Chapters</div></div>
+      <div class="about-stat"><div class="num">317</div><div class="lbl">Topics</div></div>
+    </div>
+
+    <p class="about-bio">I have spent over a decade building Java applications in banking and financial services. Every question on this site comes from real interviews — either ones I have conducted, faced, or heard from colleagues across the industry. My goal is simple: give you one resource that covers everything you need to crack any Java interview, from fresher to architect level.</p>
+
+    <p class="about-bio">This is not AI-generated fluff. Every answer is written the way a senior developer would explain it to a colleague — with real code, real diagrams, and the exact words you would use in an interview.</p>
+
+    <div class="about-links">
+      <a class="about-link" href="#">LinkedIn</a>
+      <a class="about-link" href="#">GitHub</a>
+    </div>
+  </div>
+
+  <div class="footer">javabypankaj.live · One platform. Every interview. Your entire career.</div>
+</div>
+
+<script>
+function go(n){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('on'));
+  document.getElementById('s'+n).classList.add('on');
+  document.querySelectorAll('.snav-btn').forEach((b,i)=>b.classList.toggle('on',i===n-1));
+  window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>

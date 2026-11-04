@@ -1,7 +1,7 @@
 {
   "id": "Q1031",
   "slug": "what-an-sbom-is-spdx-cyclonedx-and-how-it-is-an-incident-response-capability-not-a-compliance-checkbox",
-  "questionNumber": 1031,
+  "questionNumber": 18,
   "title": "What is an SBOM (SPDX/CycloneDX), and how is it an incident-response capability (query which services use a vulnerable library) rather than a compliance checkbox?",
   "shortTitle": "What an SBOM is (SPDX / CycloneDX) — and how it is an incident-response capability, not a compliance checkbox",
   "chapterNumber": 12,

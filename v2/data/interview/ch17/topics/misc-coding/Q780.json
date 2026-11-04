@@ -1,7 +1,7 @@
 {
   "id": "Q780",
   "slug": "jvm-internals-memory-areas-gc-jit-thread-dump-analysis",
-  "questionNumber": 780,
+  "questionNumber": 3,
   "title": "Explain the JVM internals — the memory areas (heap, stack, metaspace, code cache), how garbage collection works, what the JIT compiler does, and how you analyze thread dumps, heap dumps, and GC logs when troubleshooting a production Java service.",
   "shortTitle": "JVM Internals — Memory areas, GC, JIT, thread dump analysis",
   "chapterNumber": 17,

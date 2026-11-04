@@ -1,7 +1,7 @@
 {
   "id": "Q43",
   "slug": "explain-the-transient-keyword-with-a-serialization-example-excluding-a-password-field",
-  "questionNumber": 43,
+  "questionNumber": 2,
   "title": "Explain the `transient` keyword with a serialization example (e.g. excluding a password field).",
   "shortTitle": "How does transient work with a serialization example?",
   "chapterNumber": 1,

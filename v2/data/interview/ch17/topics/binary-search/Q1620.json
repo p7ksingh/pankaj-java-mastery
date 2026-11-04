@@ -1,7 +1,7 @@
 {
   "id": "Q1620",
   "slug": "word-search-in-a-grid-dfs-backtracking",
-  "questionNumber": 1620,
+  "questionNumber": 11,
   "title": "Given a grid of characters and a word, determine whether the word can be formed by a path of orthogonally adjacent cells, where each cell is used at most once.",
   "shortTitle": "Word Search in a Grid (DFS Backtracking)",
   "chapterNumber": 17,

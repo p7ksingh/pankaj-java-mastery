@@ -1,7 +1,7 @@
 {
   "id": "Q2159",
   "slug": "what-are-flink-sql-catalogs-and-why-are-they-important-for-production",
-  "questionNumber": 2159,
+  "questionNumber": 20,
   "title": "What are Flink SQL catalogs (HiveCatalog, JdbcCatalog, in-memory default catalog), how do they store table metadata persistently, and why are they important for production (table definitions survive job restarts, shared across teams)?",
   "shortTitle": "What are Flink SQL catalogs and why are they important for production",
   "chapterNumber": 20,

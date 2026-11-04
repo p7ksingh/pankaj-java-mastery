@@ -1,7 +1,7 @@
 {
   "id": "Q1341",
   "slug": "what-is-project-skara-and-why-does-it-matter-for-contributors",
-  "questionNumber": 1341,
+  "questionNumber": 33,
   "title": "What is Project Skara — the OpenJDK project that migrated the JDK source code from Mercurial to Git and built tooling (bots, CLI tools, and GitHub/GitLab integrations) to modernize OpenJDK's code review and contribution workflow — and why does it matter for contributors (lower barrier to entry, familiar PR-based workflow, faster review cycles)?",
   "shortTitle": "What is Project Skara and why does it matter for contributors?",
   "chapterNumber": 16,

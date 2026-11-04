@@ -1,7 +1,7 @@
 {
   "id": "Q246",
   "slug": "concurrency-vs-parallelism-interleaving-vs-simultaneous-io-bound-vs-cpu-bound",
-  "questionNumber": 246,
+  "questionNumber": 7,
   "title": "Concurrency vs parallelism — interleaving vs simultaneous, IO-bound vs CPU-bound",
   "shortTitle": "What is concurrency vs parallelism?",
   "chapterNumber": 5,

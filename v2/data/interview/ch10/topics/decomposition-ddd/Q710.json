@@ -1,7 +1,7 @@
 {
   "id": "Q710",
   "slug": "when-should-two-microservices-be-merged-back",
-  "questionNumber": 710,
+  "questionNumber": 6,
   "title": "When should two microservices be MERGED back (or decomposition stop) — when the boundary creates coordination without autonomy (same team, deployed together, synchronous chains, shared consistency, lockstep schema/API changes), and why should a healthy architecture be able to delete/merge services, not only create them?",
   "shortTitle": "When should two microservices be merged back",
   "chapterNumber": 10,

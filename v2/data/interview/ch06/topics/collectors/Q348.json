@@ -1,7 +1,7 @@
 {
   "id": "Q348",
   "slug": "collectorsgroupingby-single-level-multi-level-downstream-collectors",
-  "questionNumber": 348,
+  "questionNumber": 1,
   "title": "How does Collectors.groupingBy() work, and can you give a multi-level grouping example?",
   "shortTitle": "Collectors.groupingBy() — single-level, multi-level, downstream collectors",
   "chapterNumber": 6,

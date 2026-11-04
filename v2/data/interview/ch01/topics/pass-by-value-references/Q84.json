@@ -1,7 +1,7 @@
 {
   "id": "Q84",
   "slug": "is-java-pass-by-value-or-pass-by-reference-and-why-does-passing-an-object-reference-confuse-people",
-  "questionNumber": 84,
+  "questionNumber": 1,
   "title": "Explain pass-by-value vs pass-by-reference — is Java pass-by-reference or pass-by-value, and why does passing an object reference confuse people?",
   "shortTitle": "Is Java pass-by-value or pass-by-reference?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q2596",
   "slug": "broken-authentication-and-best-practices",
-  "questionNumber": 2596,
+  "questionNumber": 4,
   "title": "What is broken authentication — weak passwords, no account lockout, exposed session tokens, missing 2FA — and best practices (strong password policy, rate limit login attempts, MFA, secure token storage)?",
   "shortTitle": "Broken Authentication and Best Practices",
   "chapterNumber": 26,

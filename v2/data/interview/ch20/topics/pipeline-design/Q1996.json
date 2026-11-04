@@ -1,7 +1,7 @@
 {
   "id": "Q1996",
   "slug": "handling-late-out-of-order-data-and-reprocessing-in-a-streaming-pipeline",
-  "questionNumber": 1996,
+  "questionNumber": 1,
   "title": "How do you handle late-arriving / out-of-order data in a streaming pipeline (event-time vs processing-time, watermarks, allowed lateness, windowing), and how do you reprocess historical data (replay from Kafka/object store, backfill jobs, idempotent/exactly-once writes)?",
   "shortTitle": "Handling late / out-of-order data and reprocessing in a streaming pipeline",
   "chapterNumber": 20,

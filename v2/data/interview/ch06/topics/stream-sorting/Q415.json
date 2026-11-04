@@ -1,7 +1,7 @@
 {
   "id": "Q415",
   "slug": "comparatorcomparing-thencomparing-reversed-nullsfirstnullslast-complex-sort-orders",
-  "questionNumber": 415,
+  "questionNumber": 4,
   "title": "How do you build complex sort orders with Comparator.comparing(keyExtractor), .thenComparing(...) for secondary sort, .reversed() for descending, and Comparator.nullsFirst()/nullsLast() for null-safe comparison — and why is this preferable to a hand-written multi-field compare() method?",
   "shortTitle": "Comparator.comparing + thenComparing + reversed + nullsFirst/nullsLast — complex sort orders",
   "chapterNumber": 6,

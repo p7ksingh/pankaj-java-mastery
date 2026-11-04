@@ -1,7 +1,7 @@
 {
   "id": "Q1397",
   "slug": "implement-selection-sort",
-  "questionNumber": 1397,
+  "questionNumber": 4,
   "title": "Implement Selection Sort — find the smallest element, put it first, then find next smallest, put it second, repeat; O(n²).",
   "shortTitle": "Implement Selection Sort",
   "chapterNumber": 17,

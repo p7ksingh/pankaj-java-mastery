@@ -1,7 +1,7 @@
 {
   "id": "Q2123",
   "slug": "what-is-unity-catalog",
-  "questionNumber": 2123,
+  "questionNumber": 4,
   "title": "What is Unity Catalog — Databricks' unified governance layer providing centralized access control (ACLs), auditing, data lineage, and data discovery across workspaces and clouds?",
   "shortTitle": "What is Unity Catalog",
   "chapterNumber": 20,

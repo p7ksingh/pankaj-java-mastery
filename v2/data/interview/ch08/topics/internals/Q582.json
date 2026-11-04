@@ -1,7 +1,7 @@
 {
   "id": "Q582",
   "slug": "transactional-internal-end-to-end-proxy-transactioninterceptor-platformtransactionmanager",
-  "questionNumber": 582,
+  "questionNumber": 1,
   "title": "How does @Transactional work internally end-to-end — the AOP proxy, TransactionInterceptor → TransactionAspectSupport.invokeWithinTransaction, choosing a PlatformTransactionManager, and begin/commit/rollback?",
   "shortTitle": "What happens internally when @Transactional executes?",
   "chapterNumber": 8,

@@ -1,7 +1,7 @@
 {
   "id": "Q1188",
   "slug": "common-sharding-strategies-and-choosing-a-shard-key",
-  "questionNumber": 1188,
+  "questionNumber": 6,
   "title": "What are the common sharding strategies — hash-based (consistent hashing on shard key — even distribution, hard range queries), range-based (date/ID ranges — easy range scans, risk of hot partitions), directory-based (lookup table maps key→shard — flexible, single point of lookup) — and how do you choose the shard key (high cardinality, even distribution, aligned with query patterns)?",
   "shortTitle": "Common sharding strategies and choosing a shard key",
   "chapterNumber": 13,

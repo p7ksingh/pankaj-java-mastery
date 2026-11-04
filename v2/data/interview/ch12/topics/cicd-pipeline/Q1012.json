@@ -1,7 +1,7 @@
 {
   "id": "Q1012",
   "slug": "what-elasticsearch-is-and-how-it-searches-internally-inverted-index-analyzers-sharding-near-real-time",
-  "questionNumber": 1012,
+  "questionNumber": 3,
   "title": "What is Elasticsearch, and how does it search internally (inverted index, analyzers, sharding, near-real-time)?",
   "shortTitle": "What Elasticsearch is, and how it searches internally — inverted index, analyzers, sharding, near-real-time",
   "chapterNumber": 12,

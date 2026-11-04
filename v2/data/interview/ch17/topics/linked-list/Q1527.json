@@ -1,7 +1,7 @@
 {
   "id": "Q1527",
   "slug": "balanced-binary-tree-check-height-diff-1-at-every-node",
-  "questionNumber": 1527,
+  "questionNumber": 15,
   "title": "Given the root of a binary tree, determine whether it is height-balanced, meaning that for every node the heights of its left and right subtrees differ by at most one.",
   "shortTitle": "Balanced Binary Tree — check height diff ≤ 1 at every node",
   "chapterNumber": 17,

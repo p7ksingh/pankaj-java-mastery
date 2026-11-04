@@ -1,7 +1,7 @@
 {
   "id": "Q144",
   "slug": "what-does-null-instanceof-return-what-happens-when-try-and-finally-both-return-and-what-does-systemexit-do",
-  "questionNumber": 144,
+  "questionNumber": 7,
   "title": "What does `null instanceof AnyType` return (`false`, never throws), why is this useful for null-safe type checks; what happens when both the `try` block and the `finally` block have a `return` (the `finally` return overrides the try return) and why is returning from `finally` a bug; and what does `System.exit(int status)` do (terminates the JVM, runs shutdown hooks but NOT `finally` blocks of still-running threads)?",
   "shortTitle": "What does null instanceof return?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q1921",
   "slug": "scenario-a-container-keeps-restarting-in-production-finding-the-root-cause",
-  "questionNumber": 1921,
+  "questionNumber": 8,
   "title": "A container keeps restarting in production — how do you find the root cause (`docker logs`, exit codes, `OOMKilled`, failing healthcheck, bad entrypoint)?",
   "shortTitle": "Scenario — A Container Keeps Restarting in Production: Finding the Root Cause",
   "chapterNumber": 12,

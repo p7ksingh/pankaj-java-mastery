@@ -1,7 +1,7 @@
 {
   "id": "Q249",
   "slug": "completablefuture-get-vs-join-checked-vs-unchecked-exception-handling",
-  "questionNumber": 249,
+  "questionNumber": 3,
   "title": "CompletableFuture get() vs join() — checked vs unchecked exception handling",
   "shortTitle": "get() vs join()?",
   "chapterNumber": 5,

@@ -1,7 +1,7 @@
 {
   "id": "Q153",
   "slug": "duplicate-key-in-hashmap-value-overwrite-old-value-returned",
-  "questionNumber": 153,
+  "questionNumber": 6,
   "title": "Duplicate key in HashMap — value overwrite, old value returned",
   "shortTitle": "What happens when you put a duplicate key in HashMap?",
   "chapterNumber": 3,

@@ -1,7 +1,7 @@
 {
   "id": "Q2584",
   "slug": "structure-of-a-jwt-header-payload-signature-and-why-the-payload-is-not-encrypted",
-  "questionNumber": 2584,
+  "questionNumber": 1,
   "title": "What is the structure of a JWT — Header (algorithm + type) + Payload (claims: sub, exp, iat, custom) + Signature (HMAC or RSA) — and why is the payload NOT encrypted (only Base64-encoded, anyone can read it)?",
   "shortTitle": "Structure of a JWT (Header, Payload, Signature) and Why the Payload Is Not Encrypted",
   "chapterNumber": 26,

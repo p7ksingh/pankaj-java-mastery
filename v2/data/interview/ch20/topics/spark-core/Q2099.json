@@ -1,7 +1,7 @@
 {
   "id": "Q2099",
   "slug": "do-you-need-spark-installed-on-all-nodes-of-a-yarn-cluster",
-  "questionNumber": 2099,
+  "questionNumber": 55,
   "title": "Do you need to install Spark on all nodes of a YARN cluster (no — Spark runs on top of YARN and uses YARN to get resources; install Spark only on the submitter/edge node)?",
   "shortTitle": "Do you need Spark installed on all nodes of a YARN cluster?",
   "chapterNumber": 20,

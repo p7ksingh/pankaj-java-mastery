@@ -1,7 +1,7 @@
 {
   "id": "Q2002",
   "slug": "delivery-semantics-and-how-exactly-once-is-achieved",
-  "questionNumber": 2002,
+  "questionNumber": 2,
   "title": "What delivery semantics does a streaming pipeline provide (at-most-once, at-least-once, exactly-once) and how is exactly-once actually achieved (idempotent producers + transactional writes + checkpointed offsets)?",
   "shortTitle": "Delivery semantics and how exactly-once is achieved",
   "chapterNumber": 20,

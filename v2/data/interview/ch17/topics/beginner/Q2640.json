@@ -1,7 +1,7 @@
 {
   "id": "Q2640",
   "slug": "sum-of-even-numbers-between-20-and-40-print-their-total",
-  "questionNumber": 2640,
+  "questionNumber": 30,
   "title": "Draw a flowchart to calculate and print the sum of all even numbers between 20 and 40 (both inclusive). Start, initialize sum = 0 and i = 20, loop while i <= 40 doing sum = sum + i, i = i + 2, print sum, End. Input: none, Expected Output: 330.",
   "shortTitle": "Sum of Even Numbers between 20 and 40 — print their total",
   "chapterNumber": 17,

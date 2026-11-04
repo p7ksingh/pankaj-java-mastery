@@ -1,7 +1,7 @@
 {
   "id": "Q149",
   "slug": "shallow-copy-vs-deep-copy-with-nested-object-demonstration",
-  "questionNumber": 149,
+  "questionNumber": 3,
   "title": "What is the difference between a shallow copy and a deep copy, and can you demonstrate a deep copy with a nested object example?",
   "shortTitle": "What is shallow copy vs deep copy?",
   "chapterNumber": 2,

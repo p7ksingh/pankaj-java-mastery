@@ -1,7 +1,7 @@
 {
   "id": "Q11",
   "slug": "difference-between-static-variables-and-instance-variables",
-  "questionNumber": 11,
+  "questionNumber": 2,
   "title": "What is the difference between static variables and instance variables in Java?",
   "shortTitle": "What is the difference between static and instance variables?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q2419",
   "slug": "when-should-you-use-toarray-vs-collecttolist",
-  "questionNumber": 2419,
+  "questionNumber": 4,
   "title": "When should you use `toArray()` vs `collect(toList())`?",
   "shortTitle": "When should you use toArray() vs collect(toList())?",
   "chapterNumber": 6,

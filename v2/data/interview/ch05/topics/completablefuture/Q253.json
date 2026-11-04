@@ -1,7 +1,7 @@
 {
   "id": "Q253",
   "slug": "supplyasync-default-pool-forkjoinpoolcommonpool-why-use-dedicated-executor-in-production",
-  "questionNumber": 253,
+  "questionNumber": 7,
   "title": "supplyAsync default pool — ForkJoinPool.commonPool(), why use dedicated executor in production",
   "shortTitle": "Default pool for supplyAsync?",
   "chapterNumber": 5,

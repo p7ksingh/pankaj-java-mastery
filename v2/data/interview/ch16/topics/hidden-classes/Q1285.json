@@ -1,7 +1,7 @@
 {
   "id": "Q1285",
   "slug": "classoptionweak-vs-strong-for-hidden-class-gc-and-what-nestmate-enables",
-  "questionNumber": 1285,
+  "questionNumber": 1,
   "title": "How do `ClassOption.WEAK` vs `STRONG` affect hidden-class garbage collection, and what does `NESTMATE` enable?",
   "shortTitle": "`ClassOption.WEAK` vs `STRONG` for hidden-class GC, and what `NESTMATE` enables",
   "chapterNumber": 16,

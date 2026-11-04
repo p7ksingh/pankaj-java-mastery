@@ -1,7 +1,7 @@
 {
   "id": "Q1923",
   "slug": "pod-deployment-replicaset-statefulset-daemonset-and-job-the-differences",
-  "questionNumber": 1923,
+  "questionNumber": 6,
   "title": "What is the difference between a Pod, a Deployment, a ReplicaSet, a StatefulSet, a DaemonSet, and a Job?",
   "shortTitle": "Pod, Deployment, ReplicaSet, StatefulSet, DaemonSet, and Job — The Differences",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q674",
   "slug": "hibernate-update-sets-every-column-dirty-checking-dynamicupdate-fix-merge-null-overwrite-risk",
-  "questionNumber": 674,
+  "questionNumber": 6,
   "title": "Why does a Hibernate UPDATE set every column even when only one changed? How does dirty checking work, how does @DynamicUpdate fix it, and how can merge() accidentally overwrite columns with null?",
   "shortTitle": "Why does Hibernate UPDATE set every column?",
   "chapterNumber": 9,

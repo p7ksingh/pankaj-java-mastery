@@ -1,7 +1,7 @@
 {
   "id": "Q433",
   "slug": "spliterator-characteristicsflags-ordered-sized-sorted-distinct-and-pipeline-optimization",
-  "questionNumber": 433,
+  "questionNumber": 6,
   "title": "What are stream characteristics / Spliterator flags (ORDERED, SIZED, SORTED, DISTINCT, NONNULL, IMMUTABLE, CONCURRENT), and how do they let the pipeline optimize?",
   "shortTitle": "Spliterator characteristics/flags — ORDERED, SIZED, SORTED, DISTINCT and pipeline optimization",
   "chapterNumber": 6,

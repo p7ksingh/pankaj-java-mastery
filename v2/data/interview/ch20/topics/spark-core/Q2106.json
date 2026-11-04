@@ -1,7 +1,7 @@
 {
   "id": "Q2106",
   "slug": "the-void-datatype-in-spark",
-  "questionNumber": 2106,
+  "questionNumber": 60,
   "title": "What is the `void` datatype in Spark (created by `lit(None)` without a cast), why does it cause errors when writing to Parquet/Delta, and how do you fix it (`lit(None).cast(\"string\")`)?",
   "shortTitle": "The void datatype in Spark",
   "chapterNumber": 20,

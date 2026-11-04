@@ -1,7 +1,7 @@
 {
   "id": "Q2081",
   "slug": "temporary-views-global-temporary-views-and-managed-vs-external-tables",
-  "questionNumber": 2081,
+  "questionNumber": 9,
   "title": "What are Spark temporary views (`createOrReplaceTempView` — session-scoped) and global temporary views (`createOrReplaceGlobalTempView` — cross-session, accessed via `global_temp.view_name`), and what are managed vs external/unmanaged tables in Spark (managed = Spark controls data + metadata, drop deletes both; external = Spark controls only metadata, drop keeps data)?",
   "shortTitle": "Temporary views, global temporary views, and managed vs external tables",
   "chapterNumber": 20,

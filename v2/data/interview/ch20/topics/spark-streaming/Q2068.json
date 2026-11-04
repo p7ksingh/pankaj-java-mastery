@@ -1,7 +1,7 @@
 {
   "id": "Q2068",
   "slug": "streaming-trigger-modes-and-input-rate-control",
-  "questionNumber": 2068,
+  "questionNumber": 9,
   "title": "What are streaming trigger modes — `processingTime(\"30 seconds\")` (fixed interval micro-batches), `once()` (single batch then stop), `availableNow()` (process all available data then stop, good for cost-saving), `continuous(\"1 second\")` (experimental true continuous) — and how do you control input rate (`maxOffsetsPerTrigger`, `maxFilesPerTrigger`)?",
   "shortTitle": "Streaming trigger modes and input-rate control",
   "chapterNumber": 20,

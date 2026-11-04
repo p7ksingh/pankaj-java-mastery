@@ -1,7 +1,7 @@
 {
   "id": "Q410",
   "slug": "unnamed-variables-and-patterns-jep-456-ignoring-unused-bindings-to-reduce-noise",
-  "questionNumber": 410,
+  "questionNumber": 7,
   "title": "What are unnamed variables and patterns (`_`, JEP 456) for ignoring unused locals/exception vars/pattern bindings, and how do they reduce noise?",
   "shortTitle": "What are unnamed variables and patterns?",
   "chapterNumber": 6,

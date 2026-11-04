@@ -1,7 +1,7 @@
 {
   "id": "Q1043",
   "slug": "scenario-cross-account-aws-lambda-in-account-b-using-amazon-efs-owned-by-account-a-why-it-needs-both-network-connectivity-and-authorization-and-why-scps-or-cross-region-role-assumption-do-not-solve-it",
-  "questionNumber": 1043,
+  "questionNumber": 27,
   "title": "(Scenario) How do you let an AWS Lambda in Account B use an Amazon EFS owned by Account A — why does it require solving both network connectivity (VPC peering) and authorization (EFS resource policy + Lambda execution-role EFS/VPC permissions), and why do SCPs or cross-region role assumption NOT solve it?",
   "shortTitle": "(Scenario) Cross-account AWS Lambda in Account B using Amazon EFS owned by Account A — why it needs both network connectivity and authorization, and why SCPs or cross-region role assumption do NOT solve it",
   "chapterNumber": 12,

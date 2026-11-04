@@ -1,7 +1,7 @@
 {
   "id": "Q279",
   "slug": "readwritelock-reentrantreadwritelock-read-heavy-improvement-write-heavy-overhead",
-  "questionNumber": 279,
+  "questionNumber": 4,
   "title": "ReadWriteLock (ReentrantReadWriteLock) — read-heavy improvement, write-heavy overhead",
   "shortTitle": "What is ReadWriteLock?",
   "chapterNumber": 5,

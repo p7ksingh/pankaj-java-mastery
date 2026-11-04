@@ -1,7 +1,7 @@
 {
   "id": "Q149",
   "slug": "what-does-null-instanceof-anytype-return-and-why-is-this-useful-for-null-safe-type-checks",
-  "questionNumber": 149,
+  "questionNumber": 8,
   "title": "What does `null instanceof AnyType` return (`false`, never throws), and why is this useful for null-safe type checks?",
   "shortTitle": "What does null instanceof AnyType return?",
   "chapterNumber": 1,

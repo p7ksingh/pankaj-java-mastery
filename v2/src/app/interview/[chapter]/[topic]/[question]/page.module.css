@@ -1,5 +1,5 @@
 .reading {
-  max-width: 760px;
+  max-width: min(var(--max-width), 90vw);
   margin: 0 auto;
   padding: 0;
 }
@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .meta {
@@ -22,7 +22,7 @@
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   color: #1a1a1a;
 }
 
@@ -39,9 +39,8 @@
 }
 
 .keyPoints {
-  list-style: none;
-  margin: 0 0 20px 0;
-  padding: 18px 22px;
+  margin: 0 0 28px 0;
+  padding: 20px 24px;
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -49,6 +48,12 @@
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.keyPointsList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   counter-reset: kp;
 }
 
@@ -63,7 +68,7 @@
   font-weight: 800;
   letter-spacing: -0.02em;
   color: #1a1a1a;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -77,11 +82,11 @@
   flex-shrink: 0;
 }
 
-.keyPoints li {
+.keyPointsList li {
   font-size: 14px;
   line-height: 1.65;
   color: var(--color-text-secondary);
-  padding: 8px 0 8px 38px;
+  padding: 9px 0 9px 38px;
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   counter-increment: kp;
@@ -95,7 +100,7 @@
   content: counter(kp);
   position: absolute;
   left: 0;
-  top: 8px;
+  top: 9px;
   width: 24px;
   height: 24px;
   background: #242424;
@@ -111,23 +116,25 @@
 .article {
   background: var(--color-surface);
   border-radius: 12px;
-  padding: 40px 44px;
+  padding: 44px 48px;
   box-shadow: var(--shadow-card);
 }
 
+/* ── Tablet ── */
 @media (max-width: 768px) {
   .reading { max-width: 100%; }
-  .title { font-size: 24px; margin-bottom: 10px; }
-  .keyPoints { padding: 14px 18px; }
-  .keyPoints li { font-size: 13px; }
-  .article { padding: 28px 24px; border-radius: 10px; }
+  .title { font-size: 24px; margin-bottom: 16px; }
+  .keyPoints { padding: 16px 20px; margin-bottom: 24px; }
+  .keyPointsList li { font-size: 13px; }
+  .article { padding: 32px 28px; border-radius: 10px; }
   .header { flex-wrap: wrap; gap: 8px; }
 }
 
+/* ── Mobile ── */
 @media (max-width: 480px) {
-  .title { font-size: 22px; line-height: 1.25; }
-  .keyPoints { padding: 12px 14px; border-radius: 10px; }
-  .keyPoints li { font-size: 12px; padding-left: 14px; }
-  .keyPointsHead { font-size: 11px; }
-  .article { padding: 20px 16px; border-radius: 8px; }
+  .title { font-size: 22px; line-height: 1.25; margin-bottom: 14px; }
+  .keyPoints { padding: 14px 16px; border-radius: 10px; }
+  .keyPointsList li { font-size: 12px; padding-left: 14px; }
+  .keyPointsHead { font-size: 15px; }
+  .article { padding: 24px 20px; border-radius: 8px; }
 }

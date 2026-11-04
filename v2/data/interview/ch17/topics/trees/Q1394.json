@@ -1,7 +1,7 @@
 {
   "id": "Q1394",
   "slug": "what-is-dfs-depth-first-search",
-  "questionNumber": 1394,
+  "questionNumber": 3,
   "title": "What is DFS (Depth First Search) — go as deep as possible first, then backtrack (use recursion or stack); like exploring one path fully before trying another.",
   "shortTitle": "What is DFS (Depth First Search)?",
   "chapterNumber": 17,

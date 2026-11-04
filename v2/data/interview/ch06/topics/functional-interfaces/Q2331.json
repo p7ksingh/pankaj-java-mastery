@@ -1,7 +1,7 @@
 {
   "id": "Q2331",
   "slug": "write-a-consumeremployee-that-prints-details-then-chain-another-consumer-using-andthen",
-  "questionNumber": 2331,
+  "questionNumber": 8,
   "title": "Write a `Consumer<Employee>` that prints employee details, then chain another consumer using `.andThen()`.",
   "shortTitle": "Write a Consumer<Employee> that prints details, then chain another consumer using andThen()",
   "chapterNumber": 6,

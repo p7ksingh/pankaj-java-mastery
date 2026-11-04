@@ -1,7 +1,7 @@
 {
   "id": "Q1345",
   "slug": "how-does-java-classloading-work-and-can-two-classes-with-the-same-name-coexist-in-one-jvm",
-  "questionNumber": 1345,
+  "questionNumber": 37,
   "title": "How does Java classloading work (Bootstrap → Platform → Application loaders, delegation model), and can two classes with the same fully-qualified name coexist in one JVM (yes — if loaded by different classloaders, as in app servers/plugins)?",
   "shortTitle": "How does Java classloading work, and can two classes with the same name coexist in one JVM?",
   "chapterNumber": 16,

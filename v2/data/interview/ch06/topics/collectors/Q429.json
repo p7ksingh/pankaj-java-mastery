@@ -1,7 +1,7 @@
 {
   "id": "Q429",
   "slug": "collectorscollectingandthen-wrap-result-extract-value-transform-collected-container",
-  "questionNumber": 429,
+  "questionNumber": 13,
   "title": "What is Collectors.collectingAndThen(downstream, finisher), and what are its typical uses (wrapping in unmodifiableList, extracting a value, converting the type)?",
   "shortTitle": "Collectors.collectingAndThen — wrap result, extract value, transform collected container",
   "chapterNumber": 6,

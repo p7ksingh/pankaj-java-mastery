@@ -1,7 +1,7 @@
 {
   "id": "Q662",
   "slug": "mysql-to-oracle-migration-dialect-driver-sequences-schema-differences",
-  "questionNumber": 662,
+  "questionNumber": 2,
   "title": "What changes when migrating a Spring Boot / JPA application from MySQL to Oracle — dialect, JDBC driver, identifier generation (auto-increment vs sequences), and schema/type differences?",
   "shortTitle": "MySQL to Oracle migration challenges?",
   "chapterNumber": 9,

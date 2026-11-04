@@ -1,7 +1,7 @@
 {
   "id": "Q2176",
   "slug": "how-does-kinesis-data-analytics-integrate-with-aws-lambda",
-  "questionNumber": 2176,
+  "questionNumber": 23,
   "title": "How does Kinesis Data Analytics integrate with AWS Lambda — Lambda functions can be triggered from analytics output for serverless custom processing, enrichment, or event-driven actions?",
   "shortTitle": "How does Kinesis Data Analytics integrate with AWS Lambda",
   "chapterNumber": 20,

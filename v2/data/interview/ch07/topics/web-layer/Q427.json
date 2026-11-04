@@ -1,7 +1,7 @@
 {
   "id": "Q427",
   "slug": "servlet-concurrency-one-thread-per-request-singleton-thread-safety-pool-exhaustion",
-  "questionNumber": 427,
+  "questionNumber": 1,
   "title": "How does the Servlet model handle concurrent requests, why doesn't one slow request block others, and why is storing per-request state in a singleton bean a bug?",
   "shortTitle": "How does servlet concurrency work in Spring?",
   "chapterNumber": 7,

@@ -1,7 +1,7 @@
 {
   "id": "Q683",
   "slug": "namedquery-namednativequery-pre-compiled-validated-at-startup-vs-inline-query",
-  "questionNumber": 683,
+  "questionNumber": 5,
   "title": "What are @NamedQuery and @NamedNativeQuery in JPA? How do they differ from an inline @Query, and why are they validated at startup?",
   "shortTitle": "What are @NamedQuery and @NamedNativeQuery?",
   "chapterNumber": 9,

@@ -1,7 +1,7 @@
 {
   "id": "Q373",
   "slug": "benefits-of-functional-programming-immutability-pure-functions-parallelism-declarative",
-  "questionNumber": 373,
+  "questionNumber": 2,
   "title": "What are the benefits of functional programming (immutability, pure functions, concise code, easier parallelism, higher-order functions, declarative style)?",
   "shortTitle": "What are the benefits of functional programming?",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q357",
   "slug": "sort-a-list-of-strings-by-length-ascending-and-descending-using-streams",
-  "questionNumber": 357,
+  "questionNumber": 3,
   "title": "How do you sort a list of strings by length (ascending and descending) using streams?",
   "shortTitle": "Sort a list of strings by length — ascending and descending using streams",
   "chapterNumber": 6,

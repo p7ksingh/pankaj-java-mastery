@@ -1,7 +1,7 @@
 {
   "id": "Q1006",
   "slug": "versioning-format-for-deployments-semantic-versioning-and-how-the-releasedeployment-process-is-managed",
-  "questionNumber": 1006,
+  "questionNumber": 1,
   "title": "What is your versioning format for deployments (Semantic Versioning), and how is the release/deployment process managed?",
   "shortTitle": "Versioning format for deployments (Semantic Versioning) and how the release/deployment process is managed",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q130",
   "slug": "how-do-you-read-user-input-in-java-what-is-the-nextintnextline-leftover-newline-trap-and-why-is-bufferedreader-faster-for-bulk-input",
-  "questionNumber": 130,
+  "questionNumber": 2,
   "title": "How do you read user input in Java (`Scanner` over `System.in`, `BufferedReader`/`InputStreamReader`, `System.console()`), what is the difference between `Scanner.nextInt()` + `nextLine()` (the leftover-newline trap) and reading whole lines, and why is `BufferedReader` faster for bulk input?",
   "shortTitle": "How do you read user input in Java?",
   "chapterNumber": 1,

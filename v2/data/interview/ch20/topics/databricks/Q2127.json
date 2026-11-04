@@ -1,7 +1,7 @@
 {
   "id": "Q2127",
   "slug": "what-is-the-difference-between-databricks-optimize-and-vacuum",
-  "questionNumber": 2127,
+  "questionNumber": 7,
   "title": "What is the difference between Databricks `OPTIMIZE` and `VACUUM` — OPTIMIZE compacts small files and optionally applies ZORDER; VACUUM removes old unreferenced files beyond the retention period (default 7 days) to reclaim storage — and why must you not VACUUM below the retention period (breaks time travel)?",
   "shortTitle": "What is the difference between Databricks `OPTIMIZE` and `VACUUM`",
   "chapterNumber": 20,

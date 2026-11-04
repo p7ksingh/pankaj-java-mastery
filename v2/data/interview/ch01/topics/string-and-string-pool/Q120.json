@@ -1,7 +1,7 @@
 {
   "id": "Q120",
   "slug": "what-are-the-different-ways-to-create-a-string-and-how-do-they-differ-in-memory-and-behavior",
-  "questionNumber": 120,
+  "questionNumber": 10,
   "title": "What are the different ways to create a `String` (literal → pooled, `new String(...)` → heap object, from `char[]`, from `byte[]` + `Charset`), and how do they differ in memory and `==` behavior?",
   "shortTitle": "What are the different ways to create a String?",
   "chapterNumber": 1,

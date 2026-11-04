@@ -1,7 +1,7 @@
 {
-  "id": "Q194-collections",
-  "slug": "arraydeque-replaces-stack-pushpoppeek-lifo-behavior",
-  "questionNumber": 194,
+  "id": "Q194",
+  "slug": "arraydeque-replaces-stack-pushpoppeek-lifo",
+  "questionNumber": 6,
   "title": "ArrayDeque replaces Stack — push/pop/peek LIFO behavior",
   "shortTitle": "How does ArrayDeque replace Stack?",
   "chapterNumber": 3,

@@ -1,7 +1,7 @@
 {
   "id": "Q2029",
   "slug": "serialized-vs-deserialized-storage",
-  "questionNumber": 2029,
+  "questionNumber": 6,
   "title": "What is the difference between serialized vs deserialized storage (deserialized = faster access but more memory; serialized = less memory but CPU overhead for ser/deser), and how does this trade-off apply?",
   "shortTitle": "Serialized vs deserialized storage",
   "chapterNumber": 20,

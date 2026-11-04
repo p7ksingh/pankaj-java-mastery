@@ -1,7 +1,7 @@
 {
   "id": "Q2416",
   "slug": "why-should-you-prefer-collectionstream-over-streamofarray-for-large-datasets",
-  "questionNumber": 2416,
+  "questionNumber": 18,
   "title": "Why should you prefer `Collection.stream()` over `Stream.of(array)` for large datasets?",
   "shortTitle": "Why should you prefer Collection.stream() over Stream.of(array) for large datasets?",
   "chapterNumber": 6,

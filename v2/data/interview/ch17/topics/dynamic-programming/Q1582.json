@@ -1,7 +1,7 @@
 {
   "id": "Q1582",
   "slug": "edit-distance-minimum-insert-delete-replace-levenshtein",
-  "questionNumber": 1582,
+  "questionNumber": 8,
   "title": "Given two strings, return the minimum number of single-character insertions, deletions, or replacements needed to turn the first string into the second.",
   "shortTitle": "Edit Distance — minimum insert, delete, replace (Levenshtein)",
   "chapterNumber": 17,

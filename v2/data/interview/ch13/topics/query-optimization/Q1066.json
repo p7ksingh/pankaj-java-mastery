@@ -1,7 +1,7 @@
 {
   "id": "Q1066",
   "slug": "how-will-you-optimize-a-slow-query",
-  "questionNumber": 1066,
+  "questionNumber": 1,
   "title": "How will you optimize a slow query (EXPLAIN, indexing, rewrite, proper joins, avoid functions on indexed columns, partitioning, caching, schema, server resources)?",
   "shortTitle": "How will you optimize a slow query",
   "chapterNumber": 13,

@@ -1,7 +1,7 @@
 {
   "id": "Q1993",
   "slug": "difference-between-oltp-and-olap-and-why-not-run-analytics-on-production",
-  "questionNumber": 1993,
+  "questionNumber": 5,
   "title": "What is the difference between OLTP (your production database handling fast transactions like orders/payments) and OLAP (your analytics database handling complex queries like \"total sales per region last quarter\") — and why you should NOT run heavy analytics on your production database?",
   "shortTitle": "Difference between OLTP and OLAP (and why not run analytics on production)",
   "chapterNumber": 20,

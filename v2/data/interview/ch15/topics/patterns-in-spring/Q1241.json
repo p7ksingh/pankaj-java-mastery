@@ -1,7 +1,7 @@
 {
   "id": "Q1241",
   "slug": "where-does-spring-and-the-jdk-already-use-gof-design-patterns",
-  "questionNumber": 1241,
+  "questionNumber": 1,
   "title": "Where does the Spring Framework (and the JDK) already use GoF design patterns — Factory (BeanFactory/ApplicationContext), Singleton (default bean scope), Proxy (AOP, @Transactional, lazy beans), Template Method (JdbcTemplate/RestTemplate/JmsTemplate), Strategy (pluggable AuthenticationProviders, Resource loaders), Observer (ApplicationEvent/@EventListener), Decorator (BeanPostProcessor, servlet wrappers), Adapter (HandlerAdapter), Builder (UriComponentsBuilder), and in the JDK (Iterator, Comparator as Strategy, decorated java.io streams, Runnable/Callable) — and why does recognizing these show practical pattern understanding?",
   "shortTitle": "Where does Spring and the JDK already use GoF design patterns",
   "chapterNumber": 15,

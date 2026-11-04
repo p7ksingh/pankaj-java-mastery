@@ -1,7 +1,7 @@
 {
   "id": "Q2625",
   "slug": "factorial-print-n-as-the-product-of-all-integers-from-1-to-n",
-  "questionNumber": 2625,
+  "questionNumber": 16,
   "title": "Given a single non-negative integer N, draw a flowchart to calculate and print N factorial (N!), the product of all integers from 1 to N inclusive. Start, read N, initialize result = 1 and i = 1, loop while i <= N doing result = result * i and i = i + 1, print result, End. Special case: 0! = 1, so the loop simply does not execute. Input: 5, Expected Output: 120.",
   "shortTitle": "Factorial — print N! as the product of all integers from 1 to N",
   "chapterNumber": 17,

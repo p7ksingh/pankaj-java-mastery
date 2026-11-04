@@ -1,7 +1,7 @@
 {
   "id": "Q1526",
   "slug": "binary-tree-right-side-view-bfs-taking-last-node-per-level",
-  "questionNumber": 1526,
+  "questionNumber": 14,
   "title": "Given the root of a binary tree, return the values of the nodes you can see when looking at the tree from the right side, ordered from top to bottom.",
   "shortTitle": "Binary Tree Right Side View — BFS taking last node per level",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1267",
   "slug": "how-java-io-streams-exemplify-the-decorator-pattern-and-avoid-subclass-explosion",
-  "questionNumber": 1267,
+  "questionNumber": 2,
   "title": "How does Java I/O (`DataInputStream` wrapping `BufferedInputStream` wrapping `GZIPInputStream`...) exemplify the Decorator pattern, and how does it avoid subclass explosion?",
   "shortTitle": "How Java I/O streams exemplify the Decorator pattern and avoid subclass explosion",
   "chapterNumber": 15,

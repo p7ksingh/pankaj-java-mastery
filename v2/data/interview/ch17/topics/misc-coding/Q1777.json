@@ -1,7 +1,7 @@
 {
   "id": "Q1777",
   "slug": "k-closest-points-to-the-origin-nearest-k-points-by-distance",
-  "questionNumber": 1777,
+  "questionNumber": 34,
   "title": "Given a list of points on a plane and a value K, find the K points closest to the origin. Explain how a max-heap keyed on squared distance keeps the K nearest and why squared distance avoids the square root.",
   "shortTitle": "K Closest Points to the Origin (Nearest K Points by Distance)",
   "chapterNumber": 17,

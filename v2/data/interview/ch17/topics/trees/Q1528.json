@@ -1,7 +1,7 @@
 {
   "id": "Q1528",
   "slug": "path-sum-path-sum-iii-root-to-leaf-path-all-downward-paths-summing-to-target",
-  "questionNumber": 1528,
+  "questionNumber": 10,
   "title": "Path Sum: given a tree and a target, determine if any root-to-leaf path sums to the target. Path Sum III: count the number of downward paths (not necessarily starting at the root or ending at a leaf) whose values sum to the target.",
   "shortTitle": "Path Sum / Path Sum III — root-to-leaf path / all downward paths summing to target",
   "chapterNumber": 17,

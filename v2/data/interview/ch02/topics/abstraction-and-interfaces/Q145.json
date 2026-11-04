@@ -1,7 +1,7 @@
 {
   "id": "Q145",
   "slug": "can-an-abstract-class-implement-multiple-interfaces-and-extend-another-abstract-class",
-  "questionNumber": 145,
+  "questionNumber": 2,
   "title": "Can an abstract class implement multiple interfaces and extend another abstract class at the same time?",
   "shortTitle": "Can an abstract class extend another class and implement interfaces?",
   "chapterNumber": 2,

@@ -1,7 +1,7 @@
 {
   "id": "Q2074",
   "slug": "how-spark-handles-schema-inference",
-  "questionNumber": 2074,
+  "questionNumber": 42,
   "title": "How does Spark handle schema inference — for CSV (`inferSchema=true`, reads data twice), JSON (inspects a sample), Parquet/ORC (schema embedded in file footer, no inference needed) — and why should you provide an explicit schema in production (avoids double read, prevents schema drift)?",
   "shortTitle": "How Spark handles schema inference",
   "chapterNumber": 20,

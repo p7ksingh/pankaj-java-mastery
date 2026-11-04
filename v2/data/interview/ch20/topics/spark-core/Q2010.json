@@ -1,7 +1,7 @@
 {
   "id": "Q2010",
   "slug": "spark-master-worker-architecture-driver-cluster-manager-workers-executors-tasks",
-  "questionNumber": 2010,
+  "questionNumber": 5,
   "title": "Explain the Spark master-worker architecture — Driver (SparkSession/SparkContext, DAG, task scheduling), Cluster Manager (Standalone/YARN/K8s/Databricks), Worker Nodes, Executors (JVM processes on workers), and Tasks (smallest unit, one per partition).",
   "shortTitle": "Spark master-worker architecture — Driver, Cluster Manager, Workers, Executors, Tasks",
   "chapterNumber": 20,

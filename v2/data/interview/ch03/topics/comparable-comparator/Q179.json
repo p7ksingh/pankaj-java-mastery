@@ -1,7 +1,7 @@
 {
-  "id": "Q179-collections",
-  "slug": "bigdecimal-compareto-vs-equals-currencyexchange-rate-comparison",
-  "questionNumber": 179,
+  "id": "Q179",
+  "slug": "bigdecimal-compareto-vs-equals-currencyexchange-rate",
+  "questionNumber": 4,
   "title": "BigDecimal compareTo vs equals — currency/exchange-rate comparison",
   "shortTitle": "Why does BigDecimal compareTo differ from equals?",
   "chapterNumber": 3,

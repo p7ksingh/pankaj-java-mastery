@@ -1,7 +1,7 @@
 {
   "id": "Q82",
   "slug": "how-would-you-debug-an-outofmemoryerror",
-  "questionNumber": 82,
+  "questionNumber": 10,
   "title": "How would you debug an `OutOfMemoryError` (identify OOM type, heap dumps, GC logs, profilers, code review, JVM tuning, production monitoring)?",
   "shortTitle": "How do you debug an OutOfMemoryError?",
   "chapterNumber": 1,

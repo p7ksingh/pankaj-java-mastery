@@ -1,7 +1,7 @@
 {
   "id": "Q1805",
   "slug": "minimum-jumps-to-reach-the-end-fewest-jumps-across-an-array",
-  "questionNumber": 1805,
+  "questionNumber": 109,
   "title": "Given an array where each element is the maximum jump length from that position, find the minimum number of jumps to reach the last index from the first. Explain the Fibonacci Numbers DP pattern view, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Minimum Jumps to Reach the End (Fewest Jumps Across an Array)",
   "chapterNumber": 17,

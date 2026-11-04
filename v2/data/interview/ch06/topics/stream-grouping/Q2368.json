@@ -1,7 +1,7 @@
 {
   "id": "Q2368",
   "slug": "find-duplicate-elements-in-an-integer-list-using-groupingby-counting",
-  "questionNumber": 2368,
+  "questionNumber": 21,
   "title": "Find duplicate elements in an integer list using `Collectors.groupingBy` + `Collectors.counting()`.",
   "shortTitle": "Find duplicate elements in an integer list using groupingBy + counting",
   "chapterNumber": 6,

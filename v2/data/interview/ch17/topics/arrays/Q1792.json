@@ -1,7 +1,7 @@
 {
   "id": "Q1792",
   "slug": "equal-subset-sum-partition-split-an-array-into-two-equal-sum-halves",
-  "questionNumber": 1792,
+  "questionNumber": 107,
   "title": "Given a set of positive numbers, determine if it can be partitioned into two subsets whose sums are equal. Explain how this reduces to 0/1 Knapsack, the DP technique, the complexity, and a banking use case.",
   "shortTitle": "Equal Subset Sum Partition (Split an Array into Two Equal-Sum Halves)",
   "chapterNumber": 17,

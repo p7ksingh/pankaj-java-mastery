@@ -1,7 +1,7 @@
 {
   "id": "Q1711",
   "slug": "intervals-intersection-interval-list-intersections",
-  "questionNumber": 1711,
+  "questionNumber": 5,
   "title": "Given two lists of closed intervals each sorted by start and internally non-overlapping, return the list of intervals representing their intersection. Solve it with the two-pointer merge-intervals pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Intervals Intersection (Interval List Intersections)",
   "chapterNumber": 17,

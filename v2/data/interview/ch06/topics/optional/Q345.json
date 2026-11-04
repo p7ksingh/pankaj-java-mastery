@@ -1,7 +1,7 @@
 {
   "id": "Q345",
   "slug": "idiomatic-optional-map-flatmap-filter-ifpresent-orelsethrow-instead-of-ispresentget",
-  "questionNumber": 345,
+  "questionNumber": 5,
   "title": "How do you consume an Optional idiomatically — orElse/orElseGet for defaults, orElseThrow for required values, ifPresent for side effects, map/filter, and flatMap to avoid nested Optional<Optional<T>> — instead of isPresent()+get()?",
   "shortTitle": "What is idiomatic Optional usage?",
   "chapterNumber": 6,

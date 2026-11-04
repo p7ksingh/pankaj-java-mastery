@@ -1,7 +1,7 @@
 {
   "id": "Q887",
   "slug": "why-cant-you-simply-deploy-the-old-binary-after-writing-data-in-a-new-format-and-what-is-expand-and-contract",
-  "questionNumber": 887,
+  "questionNumber": 9,
   "title": "(Scenario) You deploy a new version that writes data in a new format, then discover a bug and need to roll back — why can't you simply deploy the old binary (the old code may not understand the new data), and what is the expand-and-contract principle for safe rollback (ensure old and new versions can coexist throughout the migration)?",
   "shortTitle": "Why can't you simply deploy the old binary after writing data in a new format, and what is expand-and-contract?",
   "chapterNumber": 10,

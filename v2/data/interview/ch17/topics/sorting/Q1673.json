@@ -1,7 +1,7 @@
 {
   "id": "Q1673",
   "slug": "dutch-national-flag-problem-three-way-partition-sort-colors",
-  "questionNumber": 1673,
+  "questionNumber": 16,
   "title": "Given an array containing only three distinct values (for example 0, 1, and 2), sort it in place in a single pass without using a counting approach or a library sort. (LeetCode: Sort Colors)",
   "shortTitle": "Dutch National Flag Problem (Three-Way Partition, Sort Colors)",
   "chapterNumber": 17,

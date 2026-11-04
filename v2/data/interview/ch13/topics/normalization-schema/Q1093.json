@@ -1,7 +1,7 @@
 {
   "id": "Q1093",
   "slug": "can-a-table-have-more-than-one-primary-key",
-  "questionNumber": 1093,
+  "questionNumber": 2,
   "title": "Can a table have more than one primary key (no — only one, but it can be composite)?",
   "shortTitle": "Can a table have more than one primary key?",
   "chapterNumber": 13,

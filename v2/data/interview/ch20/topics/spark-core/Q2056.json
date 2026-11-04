@@ -1,7 +1,7 @@
 {
   "id": "Q2056",
   "slug": "broadcast-join-hints-in-spark-sql",
-  "questionNumber": 2056,
+  "questionNumber": 34,
   "title": "How do you use broadcast join hints in Spark SQL (`SELECT /*+ BROADCAST(c) */ ... FROM transactions t JOIN customers c ON ...`)?",
   "shortTitle": "Broadcast join hints in Spark SQL",
   "chapterNumber": 20,

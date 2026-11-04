@@ -1,7 +1,7 @@
 {
   "id": "Q1674",
   "slug": "quadruple-sum-to-target-4sum",
-  "questionNumber": 1674,
+  "questionNumber": 22,
   "title": "Given an array of numbers and a target, find all unique quadruplets that add up to the target. (LeetCode: 4Sum)",
   "shortTitle": "Quadruple Sum to Target (4Sum)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q199",
   "slug": "stackoverflowerror-causes-vs-oom-prevention",
-  "questionNumber": 199,
+  "questionNumber": 1,
   "title": "What causes StackOverflowError (unbounded recursion, cyclic toString/equals), how does it differ from OutOfMemoryError, and how to prevent it?",
   "shortTitle": "What causes StackOverflowError?",
   "chapterNumber": 4,

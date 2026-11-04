@@ -1,7 +1,7 @@
 {
   "id": "Q1402",
   "slug": "fizzbuzz",
-  "questionNumber": 1402,
+  "questionNumber": 4,
   "title": "FizzBuzz — print numbers 1 to N, but print \"Fizz\" for multiples of 3, \"Buzz\" for multiples of 5, \"FizzBuzz\" for multiples of both.",
   "shortTitle": "FizzBuzz",
   "chapterNumber": 17,

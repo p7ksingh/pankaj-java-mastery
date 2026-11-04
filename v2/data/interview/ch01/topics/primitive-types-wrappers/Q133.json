@@ -1,7 +1,7 @@
 {
   "id": "Q133",
   "slug": "what-is-the-difference-between-widening-and-narrowing-conversions-and-where-does-char-fit",
-  "questionNumber": 133,
+  "questionNumber": 10,
   "title": "What is the difference between widening (implicit, safe — `int` → `long` → `float` → `double`) and narrowing (explicit cast, may lose data — `double` → `int`, `int` → `byte`), and where does `char` fit (widening to `int` is implicit, but `int` → `char` or `byte` → `char` requires a cast)?",
   "shortTitle": "What is the difference between widening and narrowing conversions?",
   "chapterNumber": 1,

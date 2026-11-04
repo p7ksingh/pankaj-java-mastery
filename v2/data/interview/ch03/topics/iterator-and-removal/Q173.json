@@ -1,7 +1,7 @@
 {
   "id": "Q173",
   "slug": "iterator-vs-listiterator-forward-only-vs-bidirectional-addset-during-iteration",
-  "questionNumber": 173,
+  "questionNumber": 2,
   "title": "Iterator vs ListIterator — forward-only vs bidirectional, add/set during iteration",
   "shortTitle": "What is the difference between Iterator and ListIterator?",
   "chapterNumber": 3,

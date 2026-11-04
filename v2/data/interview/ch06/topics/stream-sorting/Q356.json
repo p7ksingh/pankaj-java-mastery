@@ -1,7 +1,7 @@
 {
   "id": "Q356",
   "slug": "sort-a-stream-by-multiple-fields-comparatorcomparingthencomparing",
-  "questionNumber": 356,
+  "questionNumber": 2,
   "title": "How do you sort a stream by multiple fields (name then age, or salary descending then name)?",
   "shortTitle": "Sort a stream by multiple fields — Comparator.comparing().thenComparing()",
   "chapterNumber": 6,

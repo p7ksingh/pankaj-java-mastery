@@ -1,7 +1,7 @@
 {
   "id": "Q2139",
   "slug": "forwarding-vs-redistributing-data-in-flink",
-  "questionNumber": 2139,
+  "questionNumber": 8,
   "title": "What is forwarding vs redistributing data pattern in Flink — forwarding is 1:1 (data stays in same partition, preserves order, e.g. source→map) vs redistributing (data shuffled across subtasks, e.g. after keyBy()) — and how does this affect parallelism and performance?",
   "shortTitle": "Forwarding vs redistributing data in Flink",
   "chapterNumber": 20,

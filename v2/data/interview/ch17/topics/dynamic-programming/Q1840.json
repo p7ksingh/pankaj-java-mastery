@@ -1,7 +1,7 @@
 {
   "id": "Q1840",
   "slug": "tabulation-introduction-bottom-up-dynamic-programming-explained",
-  "questionNumber": 1840,
+  "questionNumber": 25,
   "title": "Explain the concept of tabulation in dynamic programming — how it differs from memoization, how you fill a table from base cases upward, the trade-offs, the complexity, and a banking use case.",
   "shortTitle": "Tabulation Introduction (Bottom-Up Dynamic Programming Explained)",
   "chapterNumber": 17,

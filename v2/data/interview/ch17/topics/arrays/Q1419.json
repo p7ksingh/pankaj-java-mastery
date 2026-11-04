@@ -1,7 +1,7 @@
 {
   "id": "Q1419",
   "slug": "rotate-an-array-by-k-positions",
-  "questionNumber": 1419,
+  "questionNumber": 18,
   "title": "Rotate an array by K positions (reverse whole → reverse first K → reverse rest).",
   "shortTitle": "Rotate an Array by K Positions",
   "chapterNumber": 17,

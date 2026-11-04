@@ -1,7 +1,7 @@
 {
   "id": "Q38",
   "slug": "can-you-have-two-main-methods-in-a-spring-or-java-application",
-  "questionNumber": 38,
+  "questionNumber": 4,
   "title": "Can you have two `main()` methods in a Spring/Java application (one per class, multiple classes allowed)?",
   "shortTitle": "Can you have two main methods in a Java application?",
   "chapterNumber": 1,

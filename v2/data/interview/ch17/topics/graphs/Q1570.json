@@ -1,7 +1,7 @@
 {
   "id": "Q1570",
   "slug": "word-search-dfs-on-a-grid-with-visited-marking",
-  "questionNumber": 1570,
+  "questionNumber": 16,
   "title": "Given a 2D board of characters and a word, return true if the word exists in the grid by connecting horizontally or vertically adjacent cells, where each cell is used at most once.",
   "shortTitle": "Word Search — DFS on a grid with visited marking",
   "chapterNumber": 17,

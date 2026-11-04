@@ -1,7 +1,7 @@
 {
   "id": "Q884",
   "slug": "how-do-you-stop-one-large-customer-hurting-everyone-when-infrastructure-is-shared",
-  "questionNumber": 884,
+  "questionNumber": 64,
   "title": "How do you prevent one large customer from hurting everyone else when your system is multi-tenant at the application layer but shares infrastructure — and why is \"just add more instances\" insufficient when the bottleneck is a shared database, a third-party API quota, or a single Kafka partition?",
   "shortTitle": "How do you stop one large customer hurting everyone when infrastructure is shared?",
   "chapterNumber": 10,

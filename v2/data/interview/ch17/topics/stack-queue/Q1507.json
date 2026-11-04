@@ -1,7 +1,7 @@
 {
   "id": "Q1507",
   "slug": "evaluate-postfix-expression-stack-based-evaluation",
-  "questionNumber": 1507,
+  "questionNumber": 8,
   "title": "Given an arithmetic expression in Reverse Polish (postfix) notation, evaluate it and return the result.",
   "shortTitle": "Evaluate Postfix Expression — stack-based evaluation",
   "chapterNumber": 17,

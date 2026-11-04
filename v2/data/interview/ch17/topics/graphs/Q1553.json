@@ -1,7 +1,7 @@
 {
   "id": "Q1553",
   "slug": "course-schedule-i-ii-unified-detect-cycle-and-produce-order",
-  "questionNumber": 1553,
+  "questionNumber": 13,
   "title": "Given courses with prerequisites, provide a single approach that both detects whether all courses can be finished (Course Schedule I) and, when possible, returns a valid completion order (Course Schedule II), using topological sorting.",
   "shortTitle": "Course Schedule I / II unified — detect cycle and produce order",
   "chapterNumber": 17,

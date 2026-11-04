@@ -1,7 +1,7 @@
 {
   "id": "Q1488",
   "slug": "find-first-and-last-position-of-a-target-modified-binary-search-for-boundaries",
-  "questionNumber": 1488,
+  "questionNumber": 5,
   "title": "Given a sorted array that may contain duplicates and a target value, find the first and last index where the target appears. Return minus one for both if the target is absent. The algorithm must run in logarithmic time.",
   "shortTitle": "Find First and Last Position of a Target — Modified Binary Search for Boundaries",
   "chapterNumber": 17,

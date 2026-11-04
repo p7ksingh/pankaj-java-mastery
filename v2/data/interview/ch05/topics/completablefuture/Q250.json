@@ -1,7 +1,7 @@
 {
   "id": "Q250",
   "slug": "completablefuture-exception-handling-exceptionally-handle-whencomplete",
-  "questionNumber": 250,
+  "questionNumber": 4,
   "title": "CompletableFuture exception handling — exceptionally(), handle(), whenComplete()",
   "shortTitle": "Exception handling in CompletableFuture?",
   "chapterNumber": 5,

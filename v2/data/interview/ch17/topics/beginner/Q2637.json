@@ -1,7 +1,7 @@
 {
   "id": "Q2637",
   "slug": "check-prime-check-whether-n-is-prime-and-print-yes-or-no",
-  "questionNumber": 2637,
+  "questionNumber": 27,
   "title": "Given a number N (assume N >= 2), draw a flowchart to check whether it is prime and print Yes if prime, otherwise No. Start, read N, initialize i = 2 and isPrime = true, loop while i < N (or i*i <= N) doing if N % i == 0 then isPrime = false and break, i = i + 1, decision isPrime == true, Yes print Yes, No print No, End. Input: 7, Expected Output: Yes (e.g. 9 -> No).",
   "shortTitle": "Check Prime — check whether N is prime and print Yes or No",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1753",
   "slug": "unique-generalized-abbreviations-all-abbreviations-of-a-word",
-  "questionNumber": 1753,
+  "questionNumber": 30,
   "title": "Given a word, generate all of its unique generalized abbreviations, where any contiguous run of characters can be replaced by its count. Explain the backtracking choice at each character of keeping it or abbreviating it.",
   "shortTitle": "Unique Generalized Abbreviations (All Abbreviations of a Word)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1850",
   "slug": "dynamic-programming-revision-recognising-and-framing-dp-problems",
-  "questionNumber": 1850,
+  "questionNumber": 30,
   "title": "Summarise how to recognise a dynamic programming problem and how to frame its state and transition. Explain optimal substructure, overlapping subproblems, the standard patterns, the memoization-versus-tabulation choice, and a banking use case.",
   "shortTitle": "Dynamic Programming Revision (Recognising and Framing DP Problems)",
   "chapterNumber": 17,

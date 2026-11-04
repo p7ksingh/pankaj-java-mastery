@@ -1,7 +1,7 @@
 {
   "id": "Q1318",
   "slug": "implement-a-grpc-logging-interceptor-a-rate-limiter-interceptor-and-a-bidirectional-streaming-service-live-stock-prices",
-  "questionNumber": 1318,
+  "questionNumber": 12,
   "title": "Implement a gRPC logging interceptor, a rate-limiter interceptor, and a bidirectional streaming service (live stock prices).",
   "shortTitle": "Implement a gRPC logging interceptor, a rate-limiter interceptor, and a bidirectional streaming service (live stock prices).",
   "chapterNumber": 16,

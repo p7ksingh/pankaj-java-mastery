@@ -1,7 +1,7 @@
 {
   "id": "Q1844",
   "slug": "longest-increasing-subsequence-longest-strictly-rising-pick",
-  "questionNumber": 1844,
+  "questionNumber": 27,
   "title": "Given an array of numbers, find the length of the longest strictly increasing subsequence, where the chosen elements keep their original order but need not be contiguous. Explain the quadratic dynamic programming and the optimal patience-sorting approach, the complexity, and a banking use case.",
   "shortTitle": "Longest Increasing Subsequence (Longest Strictly Rising Pick)",
   "chapterNumber": 17,

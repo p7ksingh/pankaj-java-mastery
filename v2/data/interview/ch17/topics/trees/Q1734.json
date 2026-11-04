@@ -1,7 +1,7 @@
 {
   "id": "Q1734",
   "slug": "connect-all-level-order-siblings-one-continuous-next-chain",
-  "questionNumber": 1734,
+  "questionNumber": 20,
   "title": "Given a binary tree with an extra `next` pointer on each node, connect all nodes so that `next` forms a single continuous chain in level order: the last node of each level points to the first node of the next level, not to null.",
   "shortTitle": "Connect All Level Order Siblings (One Continuous Next Chain)",
   "chapterNumber": 17,

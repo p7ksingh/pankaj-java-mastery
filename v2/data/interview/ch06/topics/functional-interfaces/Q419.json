@@ -1,7 +1,7 @@
 {
   "id": "Q419",
   "slug": "predicatenot-java-11-patternasmatchpredicateaspredicate-java-11-cleaner-filtering",
-  "questionNumber": 419,
+  "questionNumber": 4,
   "title": "What are Predicate.not(...) (Java 11) and Pattern.asMatchPredicate() / Pattern.asPredicate() (Java 11), and how do they simplify filter(Predicate.not(String::isBlank)) vs a negated lambda?",
   "shortTitle": "What is Predicate.not()?",
   "chapterNumber": 6,

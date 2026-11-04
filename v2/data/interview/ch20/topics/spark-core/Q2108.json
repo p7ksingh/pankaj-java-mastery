@@ -1,7 +1,7 @@
 {
   "id": "Q2108",
   "slug": "what-stage-skipped-means-in-the-spark-ui",
-  "questionNumber": 2108,
+  "questionNumber": 62,
   "title": "What does \"Stage Skipped\" mean in the Spark UI — the stage's output was already computed and cached/checkpointed, so Spark reused it instead of recomputing — and why does this commonly happen with successive actions on the same cached DataFrame?",
   "shortTitle": "What \"Stage Skipped\" means in the Spark UI",
   "chapterNumber": 20,

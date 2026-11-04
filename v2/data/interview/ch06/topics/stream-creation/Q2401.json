@@ -1,7 +1,7 @@
 {
   "id": "Q2401",
   "slug": "generate-the-fibonacci-sequence-using-streamiterate",
-  "questionNumber": 2401,
+  "questionNumber": 15,
   "title": "Generate the Fibonacci sequence using `Stream.iterate(new long[]{0, 1}, f -> new long[]{f[1], f[0]+f[1]}).map(f -> f[0]).limit(20)`.",
   "shortTitle": "Generate the Fibonacci sequence using Stream.iterate",
   "chapterNumber": 6,

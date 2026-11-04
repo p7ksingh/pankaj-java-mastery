@@ -1,7 +1,7 @@
 {
   "id": "Q2124",
   "slug": "what-is-auto-loader-cloudfiles",
-  "questionNumber": 2124,
+  "questionNumber": 22,
   "title": "What is Auto Loader (`cloudFiles`) — a Databricks streaming source that incrementally and efficiently processes new files as they arrive in cloud storage, using file notification or directory listing with checkpointing for exactly-once processing?",
   "shortTitle": "What is Auto Loader (`cloudFiles`)",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q1385",
   "slug": "print-numbers-1-to-n-using-recursion",
-  "questionNumber": 1385,
+  "questionNumber": 2,
   "title": "Print numbers 1 to N using recursion (base: if n == 0 return, recursive: print then call with n-1).",
   "shortTitle": "Print Numbers 1 to N Using Recursion",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q2014",
   "slug": "narrow-vs-wide-dependencies",
-  "questionNumber": 2014,
+  "questionNumber": 2,
   "title": "What is the difference between narrow dependencies (each parent partition used by at most one child — `map`, `filter`, no shuffle) and wide dependencies (one parent partition used by multiple children — `groupByKey`, `reduceByKey`, `join` — triggers a shuffle)?",
   "shortTitle": "Narrow vs wide dependencies",
   "chapterNumber": 20,

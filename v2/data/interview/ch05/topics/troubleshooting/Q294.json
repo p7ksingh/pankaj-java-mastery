@@ -1,7 +1,7 @@
 {
   "id": "Q294",
   "slug": "scenario-threads-rising-cpu-low-slow-io-thread-leak-investigation-with-jstack",
-  "questionNumber": 294,
+  "questionNumber": 2,
   "title": "Scenario: threads rising + CPU low — slow IO, thread leak, investigation with jstack",
   "shortTitle": "Threads rising, CPU low — what is wrong?",
   "chapterNumber": 5,

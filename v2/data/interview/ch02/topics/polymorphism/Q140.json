@@ -1,7 +1,7 @@
 {
   "id": "Q140",
   "slug": "overloading-vs-overriding-compile-time-vs-runtime-resolution-by-the-jvm",
-  "questionNumber": 140,
+  "questionNumber": 1,
   "title": "What is the difference between method overloading and method overriding, and how does the JVM resolve each (compile-time vs runtime)?",
   "shortTitle": "What is the difference between overloading and overriding?",
   "chapterNumber": 2,

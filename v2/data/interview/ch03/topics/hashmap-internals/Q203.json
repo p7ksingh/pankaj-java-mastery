@@ -1,7 +1,7 @@
 {
-  "id": "Q203-collections",
-  "slug": "hashmap-resize-internals-power-of-two-hash-capacity-1-oldindex-oldcapacity-redistribution",
-  "questionNumber": 203,
+  "id": "Q203",
+  "slug": "hashmap-resize-internals-power-of-two-hash-capacity-1-oldindex-oldcapacity",
+  "questionNumber": 10,
   "title": "HashMap resize internals — power-of-two, hash & (capacity-1), oldIndex + oldCapacity redistribution",
   "shortTitle": "How does HashMap resize internally?",
   "chapterNumber": 3,

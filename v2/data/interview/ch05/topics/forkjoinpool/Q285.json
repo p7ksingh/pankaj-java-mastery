@@ -1,7 +1,7 @@
 {
   "id": "Q285",
   "slug": "forkjoinpool-work-stealing-own-deque-front-steal-from-back-blocking-common-pool-is-dangerous",
-  "questionNumber": 285,
+  "questionNumber": 3,
   "title": "ForkJoinPool work-stealing — own deque front, steal from back, blocking common pool is dangerous",
   "shortTitle": "How does work-stealing work?",
   "chapterNumber": 5,

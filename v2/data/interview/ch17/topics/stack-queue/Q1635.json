@@ -1,7 +1,7 @@
 {
   "id": "Q1635",
   "slug": "min-stack-o1-push-pop-top-and-getmin",
-  "questionNumber": 1635,
+  "questionNumber": 18,
   "title": "Min Stack — O(1) push/pop/top/getMin.",
   "shortTitle": "Min Stack — O(1) push, pop, top, and getMin",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q2104",
   "slug": "non-deterministic-functions-in-spark",
-  "questionNumber": 2104,
+  "questionNumber": 58,
   "title": "What are non-deterministic functions in Spark (`rand`, `uuid`, `monotonically_increasing_id`, `collect_list`, `shuffle`, `input_file_name`, `spark_partition_id`) — they return different results on multiple invocations — and why does the optimizer treat them differently (may skip predicate pushdown, may re-execute unexpectedly)?",
   "shortTitle": "Non-deterministic functions in Spark",
   "chapterNumber": 20,

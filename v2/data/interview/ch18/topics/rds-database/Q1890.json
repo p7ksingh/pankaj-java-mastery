@@ -1,7 +1,7 @@
 {
   "id": "Q1890",
   "slug": "securely-connecting-an-application-to-rds-and-cross-account-access",
-  "questionNumber": 1890,
+  "questionNumber": 2,
   "title": "How do you securely connect an application to an RDS database (private subnet, security group allowing only the app, IAM database authentication or Secrets Manager-rotated credentials, TLS), and can an EC2 instance in one account access RDS in another (VPC peering/PrivateLink + security groups + cross-account access)?",
   "shortTitle": "Securely Connecting an Application to RDS and Cross-Account Access",
   "chapterNumber": 18,

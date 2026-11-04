@@ -1,7 +1,7 @@
 {
   "id": "Q1579",
   "slug": "coin-change-ii-number-of-ways-to-make-an-amount",
-  "questionNumber": 1579,
+  "questionNumber": 7,
   "title": "Given coin denominations and a target amount, return the total number of distinct combinations that make up that amount (order does not matter). Coins may be reused.",
   "shortTitle": "Coin Change II — number of ways to make an amount",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q2619",
   "slug": "what-is-jmh-java-microbenchmark-harness",
-  "questionNumber": 2619,
+  "questionNumber": 15,
   "title": "What is JMH (Java Microbenchmark Harness) — the standard tool for writing reliable JVM microbenchmarks that accounts for JIT warm-up, dead-code elimination, GC, and CPU scheduling — how do you set up a JMH benchmark (`@Benchmark`, `@State`, `@Setup`, `@Param`, `@Fork`, `@Warmup`, `@Measurement`, `@BenchmarkMode`), why must you return or consume computed values (blackhole) to prevent the JIT from eliminating dead code, and why is `System.nanoTime()` in a loop NOT a valid Java benchmark (no warm-up, no fork isolation, GC noise, dead-code elimination)?",
   "shortTitle": "What is JMH (Java Microbenchmark Harness)?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q1094",
   "slug": "what-is-a-foreign-key-and-what-do-on-delete-and-on-update-clauses-do",
-  "questionNumber": 1094,
+  "questionNumber": 3,
   "title": "What is a foreign key, and what do `ON DELETE`/`ON UPDATE` clauses do?",
   "shortTitle": "What is a foreign key, and what do ON DELETE and ON UPDATE clauses do?",
   "chapterNumber": 13,

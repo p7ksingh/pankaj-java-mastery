@@ -1,7 +1,7 @@
 {
   "id": "Q2060",
   "slug": "other-techniques-that-help-with-data-skew",
-  "questionNumber": 2060,
+  "questionNumber": 8,
   "title": "What other techniques help with data skew — isolate hot keys and broadcast them separately, increase parallelism, pre-aggregate before join, use a different join strategy, or redesign the data model?",
   "shortTitle": "Other techniques that help with data skew",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q5",
   "slug": "difference-between-and-equals-and-when-works-for-value-comparison",
-  "questionNumber": 5,
+  "questionNumber": 1,
   "title": "What is the difference between == and .equals() in Java, and in which exact cases does == actually work correctly for value comparison (primitives, interned strings, cached boxed values)?",
   "shortTitle": "What is the difference between == and .equals()?",
   "chapterNumber": 1,

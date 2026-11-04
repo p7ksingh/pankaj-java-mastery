@@ -1,7 +1,7 @@
 {
   "id": "Q1169",
   "slug": "the-check-constraint-db-level-domain-rules",
-  "questionNumber": 1169,
+  "questionNumber": 27,
   "title": "What is a `CHECK` constraint (`CHECK (salary > 0)`, `CHECK (status IN ('ACTIVE','INACTIVE'))`), when does the DB reject the row (on INSERT or UPDATE that violates), and why is a DB-level CHECK safer than app-only validation (multiple apps, direct SQL, race conditions)?",
   "shortTitle": "The CHECK Constraint — DB-Level Domain Rules",
   "chapterNumber": 13,

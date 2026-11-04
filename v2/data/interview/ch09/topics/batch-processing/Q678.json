@@ -1,7 +1,7 @@
 {
   "id": "Q678",
   "slug": "batch-insert-flushclear-pattern-why-a-naive-save-loop-balloons-memory-flushclear-every-n-rows",
-  "questionNumber": 678,
+  "questionNumber": 1,
   "title": "Why does a naive save() loop for bulk inserts balloon memory? How does the flush+clear-every-N-rows pattern fix it?",
   "shortTitle": "What is the batch insert flush+clear pattern?",
   "chapterNumber": 9,

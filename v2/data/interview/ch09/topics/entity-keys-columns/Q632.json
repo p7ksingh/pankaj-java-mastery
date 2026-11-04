@@ -1,7 +1,7 @@
 {
   "id": "Q632",
   "slug": "id-generatedvalue-identity-vs-sequence-vs-table-vs-auto-vs-uuid",
-  "questionNumber": 632,
+  "questionNumber": 3,
   "title": "How do you declare and generate a single-column primary key in JPA (@Id + @GeneratedValue), and what is the difference between GenerationType strategies — IDENTITY, SEQUENCE, TABLE, AUTO, UUID?",
   "shortTitle": "What are the @GeneratedValue strategies?",
   "chapterNumber": 9,

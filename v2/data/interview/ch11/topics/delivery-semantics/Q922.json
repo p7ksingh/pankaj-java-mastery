@@ -1,7 +1,7 @@
 {
   "id": "Q922",
   "slug": "idempotent-producer-versus-transactional-producer",
-  "questionNumber": 922,
+  "questionNumber": 2,
   "title": "What is the difference between an idempotent producer and a transactional producer?",
   "shortTitle": "Idempotent producer versus transactional producer",
   "chapterNumber": 11,

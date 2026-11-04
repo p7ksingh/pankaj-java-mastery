@@ -1,7 +1,7 @@
 {
   "id": "Q593",
   "slug": "n1-query-problem-detection-join-fetch-entitygraph-batchsize-multiplebagfetchexception",
-  "questionNumber": 593,
+  "questionNumber": 1,
   "title": "What is N+1? How to detect? Fix strategies (JOIN FETCH, EntityGraph, @BatchSize)? Why is JOIN FETCH not a cure-all (Cartesian product, MultipleBagFetchException)? How to optimize Hibernate queries?",
   "shortTitle": "What is the N+1 query problem?",
   "chapterNumber": 9,

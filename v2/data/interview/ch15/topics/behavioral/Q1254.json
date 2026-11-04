@@ -1,7 +1,7 @@
 {
   "id": "Q1254",
   "slug": "scenario-add-otp-captcha-and-password-login-without-a-new-endpoint-using-strategy",
-  "questionNumber": 1254,
+  "questionNumber": 2,
   "title": "(Scenario) You have an existing login API and must add OTP, CAPTCHA, and username/password login WITHOUT creating a new endpoint or modifying the existing handler — how do you design this with the Strategy pattern + Open/Closed Principle (an AuthenticationStrategy interface, one implementation per method, selected at runtime by a type field/header via a factory or a Spring Map<String, AuthenticationStrategy> injected by bean name) so adding a new method is just a new class?",
   "shortTitle": "Scenario: add OTP, CAPTCHA, and password login without a new endpoint using Strategy",
   "chapterNumber": 15,

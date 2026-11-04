@@ -1,7 +1,7 @@
 {
   "id": "Q1987",
   "slug": "what-is-etl",
-  "questionNumber": 1987,
+  "questionNumber": 2,
   "title": "What is ETL — Extract (get data from source like database/API/file), Transform (clean, filter, join, change format), Load (put into target like data warehouse/data lake) — the most common data engineering task.",
   "shortTitle": "What is ETL",
   "chapterNumber": 20,

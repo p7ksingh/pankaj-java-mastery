@@ -1,7 +1,7 @@
 {
   "id": "Q1854",
   "slug": "fractional-knapsack-greedy-by-value-density",
-  "questionNumber": 1854,
+  "questionNumber": 31,
   "title": "Given items with weights and values and a capacity, maximise total value when you may take fractions of items. Explain why a greedy by value-to-weight ratio is optimal here, contrast it with 0/1 Knapsack, the operations, the complexity, and a banking use case.",
   "shortTitle": "Fractional Knapsack (Greedy by Value Density)",
   "chapterNumber": 17,

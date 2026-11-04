@@ -1,7 +1,7 @@
 {
-  "id": "Q177-collections",
-  "slug": "mutable-stringbuilder-key-in-hashmap-lookup-fails",
-  "questionNumber": 177,
+  "id": "Q177",
+  "slug": "mutable-stringbuilder-key-in-hashmap-lookup",
+  "questionNumber": 3,
   "title": "Mutable StringBuilder key in HashMap — lookup fails",
   "shortTitle": "What happens with a mutable StringBuilder key in HashMap?",
   "chapterNumber": 3,

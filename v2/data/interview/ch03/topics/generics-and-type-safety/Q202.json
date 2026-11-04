@@ -1,7 +1,7 @@
 {
-  "id": "Q202-collections",
-  "slug": "collectionscheckedlistmapset-runtime-type-enforcement-catching-heap-pollution",
-  "questionNumber": 202,
+  "id": "Q202",
+  "slug": "collectionscheckedlistmapset-runtime-type-enforcement-catching-heap",
+  "questionNumber": 7,
   "title": "Collections.checkedList/Map/Set — runtime type enforcement, catching heap pollution",
   "shortTitle": "What does Collections.checkedList do?",
   "chapterNumber": 3,

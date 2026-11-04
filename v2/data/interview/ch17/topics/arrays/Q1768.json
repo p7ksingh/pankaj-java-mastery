@@ -1,7 +1,7 @@
 {
   "id": "Q1768",
   "slug": "search-bitonic-array-find-a-key-in-a-rise-then-fall-array",
-  "questionNumber": 1768,
+  "questionNumber": 96,
   "title": "Given a bitonic array, strictly increasing then strictly decreasing, find the index of a given key. If the key appears on both sides, return the smaller index. Explain how you first find the peak and then binary-search each side with the correct order.",
   "shortTitle": "Search Bitonic Array (Find a Key in a Rise-Then-Fall Array)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1040",
   "slug": "writing-a-production-dockerfile-for-a-spring-boot-app-multi-stage-layered-jar-slim-jre-non-root-maxrampercentage-and-why-instruction-order-matters",
-  "questionNumber": 1040,
+  "questionNumber": 1,
   "title": "How do you write a production Dockerfile for a Spring Boot app (multi-stage build, layered JAR for cache efficiency, slim JRE base, non-root user, `MaxRAMPercentage`), and why does instruction order matter for layer caching?",
   "shortTitle": "Writing a production Dockerfile for a Spring Boot app — multi-stage, layered JAR, slim JRE, non-root, MaxRAMPercentage, and why instruction order matters",
   "chapterNumber": 12,

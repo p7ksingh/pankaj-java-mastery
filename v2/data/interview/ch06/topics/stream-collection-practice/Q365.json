@@ -1,7 +1,7 @@
 {
   "id": "Q365",
   "slug": "intersection-common-elements-of-two-lists-filtersetcontains-hashset-for-o1",
-  "questionNumber": 365,
+  "questionNumber": 1,
   "title": "How do you find the intersection / common elements of two lists using streams (filter(set2::contains), converting the second list to a HashSet for O(1) lookups, and distinct() to drop duplicates)?",
   "shortTitle": "Intersection / common elements of two lists — filter(set::contains), HashSet for O(1)",
   "chapterNumber": 6,

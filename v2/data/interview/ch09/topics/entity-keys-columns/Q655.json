@@ -1,7 +1,7 @@
 {
   "id": "Q655",
   "slug": "id-generatedvalue-identity-sequence-table-auto-uuid-strategies",
-  "questionNumber": 655,
+  "questionNumber": 7,
   "title": "What are the @GeneratedValue strategies (IDENTITY, SEQUENCE, TABLE, AUTO, UUID), how does each generate keys, and which should you choose?",
   "shortTitle": "IDENTITY vs SEQUENCE vs TABLE vs AUTO vs UUID?",
   "chapterNumber": 9,

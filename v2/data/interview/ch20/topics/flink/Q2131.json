@@ -1,7 +1,7 @@
 {
   "id": "Q2131",
   "slug": "what-are-the-flink-deployment-modes",
-  "questionNumber": 2131,
+  "questionNumber": 5,
   "title": "What are the Flink deployment modes — Session mode (long-running cluster, multiple jobs share it), Per-Job mode (dedicated cluster per job, YARN only, deprecated), and Application mode (job's main() runs on the cluster, preferred for production on K8s/YARN) — and when do you choose each?",
   "shortTitle": "What are the Flink deployment modes",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q1945",
   "slug": "ensuring-a-terraform-change-does-not-unexpectedly-recreate-resources",
-  "questionNumber": 1945,
+  "questionNumber": 12,
   "title": "How do you ensure a Terraform change does NOT unexpectedly recreate resources — read the plan for create/update/destroy/replace, know which attributes are immutable (force replacement) vs updatable in place, pin provider and module versions, review plans in PRs, use `lifecycle` rules (e.g. `prevent_destroy`/`ignore_changes`) carefully, and treat IaC as a controlled change process rather than \"plan and apply\"?",
   "shortTitle": "Ensuring a Terraform change does NOT unexpectedly recreate resources",
   "chapterNumber": 12,

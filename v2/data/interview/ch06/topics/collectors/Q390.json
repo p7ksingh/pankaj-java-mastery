@@ -1,7 +1,7 @@
 {
   "id": "Q390",
   "slug": "collect-to-unmodifiable-result-tounmodifiablelist-collectingandthen-why-immutability-matters",
-  "questionNumber": 390,
+  "questionNumber": 6,
   "title": "How do you collect into an unmodifiable result (Collectors.toUnmodifiableList, collectingAndThen + Collections::unmodifiableList), and why does immutability matter for stream outputs?",
   "shortTitle": "Collect to unmodifiable result — toUnmodifiableList, collectingAndThen, why immutability matters",
   "chapterNumber": 6,

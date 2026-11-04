@@ -1,7 +1,7 @@
 {
   "id": "Q1594",
   "slug": "longest-common-substring-contiguous-match-2d-dp",
-  "questionNumber": 1594,
+  "questionNumber": 34,
   "title": "Given two strings, return the length of the longest substring (contiguous) that appears in both.",
   "shortTitle": "Longest Common Substring — contiguous match 2D DP",
   "chapterNumber": 17,

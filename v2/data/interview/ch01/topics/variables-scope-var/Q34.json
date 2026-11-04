@@ -1,7 +1,7 @@
 {
   "id": "Q34",
   "slug": "if-you-declare-a-local-variable-in-main-but-do-not-initialize-it-and-print-it-what-happens",
-  "questionNumber": 34,
+  "questionNumber": 2,
   "title": "If you declare a local variable inside `main()` but do not initialize it and then try to print it, what happens and why?",
   "shortTitle": "What happens if you print an uninitialized local variable?",
   "chapterNumber": 1,

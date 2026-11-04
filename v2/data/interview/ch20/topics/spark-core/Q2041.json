@@ -1,7 +1,7 @@
 {
   "id": "Q2041",
   "slug": "requirements-for-effective-partitioning-and-the-high-cardinality-pitfall",
-  "questionNumber": 2041,
+  "questionNumber": 26,
   "title": "What are the requirements for effective partitioning — align with query access patterns + use low-cardinality columns — and what goes wrong with high-cardinality partition columns (millions of tiny directories, metadata bloat, small-file problem, driver OOM)?",
   "shortTitle": "Requirements for effective partitioning and the high-cardinality pitfall",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q1498",
   "slug": "range-sum-query-immutable-build-a-prefix-array",
-  "questionNumber": 1498,
+  "questionNumber": 42,
   "title": "Design a class that, given an immutable integer array, answers multiple queries for the sum of elements between indices i and j inclusive. The constructor may preprocess, and each query must be fast.",
   "shortTitle": "Range Sum Query Immutable — Build a Prefix Array",
   "chapterNumber": 17,

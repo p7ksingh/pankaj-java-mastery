@@ -1,7 +1,7 @@
 {
   "id": "Q1230",
   "slug": "what-is-graphql-and-when-should-you-use-graphql-vs-rest",
-  "questionNumber": 1230,
+  "questionNumber": 16,
   "title": "What is GraphQL — a query language where the client asks for exactly the fields it needs in one request, solving REST's over-fetching (getting too many fields) and under-fetching (needing multiple calls) problems — and when should you use GraphQL vs REST?",
   "shortTitle": "What is GraphQL and when should you use GraphQL vs REST",
   "chapterNumber": 14,

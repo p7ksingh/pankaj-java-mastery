@@ -1,7 +1,7 @@
 {
   "id": "Q1181",
   "slug": "how-to-index-and-efficiently-query-json-fields",
-  "questionNumber": 1181,
+  "questionNumber": 18,
   "title": "How do you index JSON fields (`CREATE INDEX idx ON tbl USING GIN (data jsonb_path_ops)`) and query them efficiently (`WHERE data @> '{\"status\": \"active\"}'`)?",
   "shortTitle": "How to index and efficiently query JSON fields",
   "chapterNumber": 13,

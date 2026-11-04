@@ -1,7 +1,7 @@
 {
   "id": "Q2171",
   "slug": "what-is-the-difference-between-flinks-dataset-api-and-datastream-api-and-when-do-you-use-datastream-vs-table-apiflink-sql",
-  "questionNumber": 2171,
+  "questionNumber": 3,
   "title": "What is the difference between Flink's DataSet API (batch, deprecated) and DataStream API (streaming/batch, recommended low-level API), and when do you use DataStream vs Table API/Flink SQL (DataStream for fine-grained control; Table API/SQL for declarative, SQL-like analytics)?",
   "shortTitle": "What is the difference between Flink's DataSet API and DataStream API, and when do you use DataStream vs Table API/Flink SQL",
   "chapterNumber": 20,

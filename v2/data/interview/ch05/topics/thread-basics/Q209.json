@@ -1,7 +1,7 @@
 {
   "id": "Q209",
   "slug": "start-vs-run-calling-run-directly-does-not-create-a-new-thread",
-  "questionNumber": 209,
+  "questionNumber": 5,
   "title": "start() vs run() — calling run() directly does NOT create a new thread",
   "shortTitle": "What is the difference between start() and run()?",
   "chapterNumber": 5,

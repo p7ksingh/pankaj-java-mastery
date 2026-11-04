@@ -1,7 +1,7 @@
 {
   "id": "Q142",
   "slug": "what-are-the-built-in-java-annotations-and-when-should-each-be-used",
-  "questionNumber": 142,
+  "questionNumber": 1,
   "title": "What are the built-in Java annotations — `@Override` (compile-time check), `@Deprecated` (with `forRemoval`/`since` in Java 9+), `@SuppressWarnings`, `@SafeVarargs`, `@FunctionalInterface` — and when should each be used?",
   "shortTitle": "What are the built-in Java annotations?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q630",
   "slug": "composite-primary-key-embeddedid-vs-idclass-equalshashcode-serializable",
-  "questionNumber": 630,
+  "questionNumber": 1,
   "title": "How do you map a composite primary key in JPA — the @EmbeddedId approach (a separate @Embeddable key class with equals/hashCode and Serializable) vs the @IdClass approach (an ID class plus multiple @Id fields on the entity) — and when would you use each?",
   "shortTitle": "What is a composite primary key in JPA?",
   "chapterNumber": 9,

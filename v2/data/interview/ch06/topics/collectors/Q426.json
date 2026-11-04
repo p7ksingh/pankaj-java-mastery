@@ -1,7 +1,7 @@
 {
   "id": "Q426",
   "slug": "stringjoiner-delimiter-prefix-suffix-relationship-to-collectorsjoining-and-stringjoin",
-  "questionNumber": 426,
+  "questionNumber": 11,
   "title": "What is the StringJoiner class (Java 8), how do you use it with a delimiter and optional prefix/suffix, and how does it relate to Collectors.joining and String.join?",
   "shortTitle": "StringJoiner — delimiter, prefix, suffix — relationship to Collectors.joining and String.join",
   "chapterNumber": 6,

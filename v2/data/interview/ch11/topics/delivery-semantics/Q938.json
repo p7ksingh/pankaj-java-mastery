@@ -1,7 +1,7 @@
 {
   "id": "Q938",
   "slug": "walk-through-what-happens-during-exactly-once-processing-end-to-end",
-  "questionNumber": 938,
+  "questionNumber": 5,
   "title": "Walk through what happens during exactly-once processing end-to-end (transaction coordinator, commit markers, producer ID/epoch fencing).",
   "shortTitle": "Walk through what happens during exactly-once processing end-to-end.",
   "chapterNumber": 11,

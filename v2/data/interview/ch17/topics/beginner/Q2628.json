@@ -1,7 +1,7 @@
 {
   "id": "Q2628",
   "slug": "even-or-odd-check-and-print-whether-n-is-even-or-odd",
-  "questionNumber": 2628,
+  "questionNumber": 19,
   "title": "Given a number N, draw a flowchart to check and print whether it is even or odd. Start, read N, decision N % 2 == 0, Yes print Even, No print Odd, End. Input: 7, Expected Output: Odd.",
   "shortTitle": "Even or Odd — check and print whether N is even or odd",
   "chapterNumber": 17,

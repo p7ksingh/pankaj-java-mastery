@@ -1,7 +1,7 @@
 {
   "id": "Q2336",
   "slug": "write-a-custom-three-argument-functionalinterface-trifunctiona-b-c-r-and-explain-why-java-has-no-built-in-3-arg-function",
-  "questionNumber": 2336,
+  "questionNumber": 13,
   "title": "Write a custom three-argument `@FunctionalInterface TriFunction<A, B, C, R>` with `R apply(A a, B b, C c)` and use it (e.g., sum of three numbers) — explain why Java has no built-in 3-arg function.",
   "shortTitle": "Write a custom three-argument @FunctionalInterface TriFunction<A, B, C, R> and explain why Java has no built-in 3-arg function",
   "chapterNumber": 6,

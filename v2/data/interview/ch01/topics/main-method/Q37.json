@@ -1,7 +1,7 @@
 {
   "id": "Q37",
   "slug": "can-the-main-method-be-overridden-static-method-hiding-versus-overriding",
-  "questionNumber": 37,
+  "questionNumber": 3,
   "title": "Can the `main()` method be overridden (static method hiding vs overriding)?",
   "shortTitle": "Can the main method be overridden?",
   "chapterNumber": 1,

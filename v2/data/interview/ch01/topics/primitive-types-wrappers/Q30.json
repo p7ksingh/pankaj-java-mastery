@@ -1,7 +1,7 @@
 {
   "id": "Q30",
   "slug": "what-is-autoboxing-and-unboxing-and-the-integer-cache-problem",
-  "questionNumber": 30,
+  "questionNumber": 4,
   "title": "What is autoboxing and unboxing, what performance problem does autoboxing cause in loops, and how does the Integer cache (-128..127) affect `==`?",
   "shortTitle": "What is autoboxing, unboxing, and the Integer cache?",
   "chapterNumber": 1,

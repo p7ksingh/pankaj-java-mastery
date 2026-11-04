@@ -1,7 +1,7 @@
 {
   "id": "Q2126",
   "slug": "how-do-you-implement-cdc-change-data-capture-in-databricks",
-  "questionNumber": 2126,
+  "questionNumber": 6,
   "title": "How do you implement CDC (Change Data Capture) in Databricks — using `MERGE INTO` on Delta tables for batch CDC, or DLT's `APPLY CHANGES INTO` for streaming CDC from Debezium/Kafka change feeds?",
   "shortTitle": "How do you implement CDC (Change Data Capture) in Databricks",
   "chapterNumber": 20,

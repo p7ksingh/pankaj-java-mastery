@@ -1,7 +1,7 @@
 {
   "id": "Q2019",
   "slug": "spark-stage-the-dagscheduler-and-stagestaskspartitions",
-  "questionNumber": 2019,
+  "questionNumber": 10,
   "title": "What is a Spark Stage, how does the DAGScheduler determine stage boundaries (at every wide/shuffle dependency), and what is the relationship between stages, tasks, and partitions (one task per partition per stage)?",
   "shortTitle": "Spark Stage, the DAGScheduler, and stages/tasks/partitions",
   "chapterNumber": 20,

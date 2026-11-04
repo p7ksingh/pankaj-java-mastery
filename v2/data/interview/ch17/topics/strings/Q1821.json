@@ -1,7 +1,7 @@
 {
   "id": "Q1821",
   "slug": "edit-distance-minimum-insertions-deletions-and-substitutions-between-two-strings",
-  "questionNumber": 1821,
+  "questionNumber": 58,
   "title": "Given two strings, find the minimum number of single-character insertions, deletions, and substitutions needed to transform the first into the second. Explain the Edit Distance dynamic program within the Longest Common Substring pattern family, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Edit Distance (Minimum Insertions, Deletions, and Substitutions Between Two Strings)",
   "chapterNumber": 17,

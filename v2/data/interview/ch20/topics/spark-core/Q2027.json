@@ -1,7 +1,7 @@
 {
   "id": "Q2027",
   "slug": "difference-between-cache-and-persiststoragelevel",
-  "questionNumber": 2027,
+  "questionNumber": 14,
   "title": "What is the difference between `cache()` (uses the default storage level) and `persist(StorageLevel)` (lets you choose the storage strategy explicitly)?",
   "shortTitle": "Difference between cache() and persist(StorageLevel)",
   "chapterNumber": 20,

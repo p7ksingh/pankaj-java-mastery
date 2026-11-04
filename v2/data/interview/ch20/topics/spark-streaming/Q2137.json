@@ -1,7 +1,7 @@
 {
   "id": "Q2137",
   "slug": "what-are-the-window-components-in-flink",
-  "questionNumber": 2137,
+  "questionNumber": 12,
   "title": "What are the window components in detail — window assigner (assigns events to windows), trigger (determines when to fire computation, e.g. EventTimeTrigger, CountTrigger, ProcessingTimeTrigger), and evictor (optionally removes elements before/after window function) — and how do they interact?",
   "shortTitle": "What are the window components in Flink",
   "chapterNumber": 20,

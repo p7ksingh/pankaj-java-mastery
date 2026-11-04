@@ -1,7 +1,7 @@
 {
   "id": "Q1506",
   "slug": "implement-queue-using-two-stacks-stack-using-two-queues",
-  "questionNumber": 1506,
+  "questionNumber": 7,
   "title": "Implement a first-in-first-out queue using only two stacks. Also discuss implementing a stack using two queues.",
   "shortTitle": "Implement Queue using two Stacks / Stack using two Queues",
   "chapterNumber": 17,

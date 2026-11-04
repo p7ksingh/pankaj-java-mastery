@@ -1,7 +1,7 @@
 {
   "id": "Q1342",
   "slug": "how-do-the-major-openjdk-projects-work-together-as-a-coherent-platform-evolution",
-  "questionNumber": 1342,
+  "questionNumber": 34,
   "title": "How do the major OpenJDK projects work TOGETHER as a coherent platform evolution — Loom (virtual threads) makes blocking I/O cheap so you don't need reactive frameworks, Valhalla (value types) eliminates boxing overhead so primitives work with generics and collections naturally, Panama (FFI + Vector API) replaces JNI for native interop and enables SIMD parallelism, Amber (records, sealed types, pattern matching) makes the language more expressive with less boilerplate, and Leyden (AOT/CDS) makes startup fast for cloud/serverless — and why does a Java developer benefit from understanding the roadmap as a whole (features compound: e.g. Valhalla value types + Loom virtual threads + Panama vectors together enable high-performance, simple, native-interop code that was impossible before)?",
   "shortTitle": "How do the major OpenJDK projects work together as a coherent platform evolution?",
   "chapterNumber": 16,

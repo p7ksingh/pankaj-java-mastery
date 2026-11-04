@@ -1,7 +1,7 @@
 {
   "id": "Q317",
   "slug": "is-functionalinterface-mandatory-can-a-fi-extend-another-interface-can-it-have-defaultstatic",
-  "questionNumber": 317,
+  "questionNumber": 2,
   "title": "Is @FunctionalInterface mandatory, can a functional interface extend another non-functional interface, and can it have default and static methods while lambdas still work?",
   "shortTitle": "Is @FunctionalInterface mandatory?",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q1995",
   "slug": "designing-a-pipeline-for-millions-of-tradetransaction-events-per-day",
-  "questionNumber": 1995,
+  "questionNumber": 2,
   "title": "You receive millions of trade/transaction events per day — how do you design the pipeline end to end (ingestion via Kafka/Kinesis → processing as batch vs streaming → storage in a columnar format), and what are the key decision points?",
   "shortTitle": "Designing a pipeline for millions of trade/transaction events per day",
   "chapterNumber": 20,

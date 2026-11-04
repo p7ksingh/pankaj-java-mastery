@@ -1,7 +1,7 @@
 {
   "id": "Q258",
   "slug": "bulkhead-pattern-separate-bounded-pools-per-workload-no-shared-giant-pool",
-  "questionNumber": 258,
+  "questionNumber": 12,
   "title": "Bulkhead pattern — separate bounded pools per workload, no shared giant pool",
   "shortTitle": "What is the bulkhead pattern?",
   "chapterNumber": 5,

@@ -1,7 +1,7 @@
 {
   "id": "Q1672",
   "slug": "subarrays-with-product-less-than-a-target-sliding-window",
-  "questionNumber": 1672,
+  "questionNumber": 64,
   "title": "Given an array of positive numbers and a target, count how many contiguous subarrays have a product strictly less than the target. (LeetCode: Subarray Product Less Than K)",
   "shortTitle": "Subarrays with Product Less than a Target (Sliding Window)",
   "chapterNumber": 17,

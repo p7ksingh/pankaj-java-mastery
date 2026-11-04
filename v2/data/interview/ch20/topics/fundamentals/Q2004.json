@@ -1,7 +1,7 @@
 {
   "id": "Q2004",
   "slug": "data-lake-vs-data-warehouse-vs-lakehouse-and-when-to-use-each",
-  "questionNumber": 2004,
+  "questionNumber": 9,
   "title": "What is the difference between a data lake (raw files on S3 in Parquet/ORC), a data warehouse (Snowflake/Redshift/BigQuery), and a lakehouse, and when do you use each?",
   "shortTitle": "Data lake vs data warehouse vs lakehouse, and when to use each",
   "chapterNumber": 20,

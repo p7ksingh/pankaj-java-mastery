@@ -1,7 +1,7 @@
 {
   "id": "Q158",
   "slug": "hashmap-vs-linkedhashmap-vs-treemap-ordering-performance-cache-use-case",
-  "questionNumber": 158,
+  "questionNumber": 1,
   "title": "HashMap vs LinkedHashMap vs TreeMap — ordering, performance, cache use case",
   "shortTitle": "What is the difference between HashMap, LinkedHashMap, and TreeMap?",
   "chapterNumber": 3,

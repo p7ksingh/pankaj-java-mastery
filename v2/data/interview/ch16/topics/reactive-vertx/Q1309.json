@@ -1,7 +1,7 @@
 {
   "id": "Q1309",
   "slug": "can-rsocket-work-in-a-serverless-environment-stateless-cold-starts-timeouts-api-gateway-websocket-proxy-always-on-server-serverless-clients",
-  "questionNumber": 1309,
+  "questionNumber": 8,
   "title": "Can RSocket work in a serverless environment (stateless, cold starts, timeouts; API Gateway WebSocket proxy, always-on server + serverless clients)?",
   "shortTitle": "Can RSocket work in a serverless environment (stateless, cold starts, timeouts; API Gateway WebSocket proxy, always-on server + serverless clients)?",
   "chapterNumber": 16,

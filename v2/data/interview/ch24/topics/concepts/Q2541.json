@@ -1,7 +1,7 @@
 {
   "id": "Q2541",
   "slug": "monolith-vs-microservices",
-  "questionNumber": 2541,
+  "questionNumber": 13,
   "title": "Monolith vs Microservices — when monolith is better (small team, early stage), when microservices are needed (scale, independent deployment).",
   "shortTitle": "Monolith vs Microservices",
   "chapterNumber": 24,

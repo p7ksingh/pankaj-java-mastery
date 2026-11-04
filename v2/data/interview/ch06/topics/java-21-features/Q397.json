@@ -1,7 +1,7 @@
 {
   "id": "Q397",
   "slug": "java-21-lts-features-virtual-threads-pattern-matching-switch-record-patterns-sequenced-collections-zgc",
-  "questionNumber": 397,
+  "questionNumber": 5,
   "title": "What did Java 21 add overall, and why is Java 21 a common upgrade target (LTS)?",
   "shortTitle": "What are Java 21 LTS features?",
   "chapterNumber": 6,

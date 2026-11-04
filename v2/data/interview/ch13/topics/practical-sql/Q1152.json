@@ -1,7 +1,7 @@
 {
   "id": "Q1152",
   "slug": "pacelc-theorem-extending-cap-to-the-healthy-system-case",
-  "questionNumber": 1152,
+  "questionNumber": 24,
   "title": "What is the PACELC theorem and how does it extend CAP — during a network Partition choose Availability or Consistency (same as CAP), but Else (when the system is running normally with no partition) you still face a trade-off between Latency and Consistency — and why does this matter (CAP only talks about failure mode, but most of the time the system is healthy and the real daily trade-off is \"do I wait for all replicas to ack (consistent but slower) or return after one ack (fast but possibly stale)\") — e.g. DynamoDB is PA/EL (available during partition, low-latency normally), PostgreSQL synchronous replication is PC/EC (consistent always, at the cost of latency)?",
   "shortTitle": "PACELC Theorem — Extending CAP to the Healthy-System Case",
   "chapterNumber": 13,

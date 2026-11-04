@@ -1,7 +1,7 @@
 {
   "id": "Q146",
   "slug": "arraydeque-vs-linkedlist-vs-stack-when-to-use-each",
-  "questionNumber": 146,
+  "questionNumber": 1,
   "title": "ArrayDeque vs LinkedList vs Stack — when to use each",
   "shortTitle": "When do you use ArrayDeque vs LinkedList vs Stack?",
   "chapterNumber": 3,

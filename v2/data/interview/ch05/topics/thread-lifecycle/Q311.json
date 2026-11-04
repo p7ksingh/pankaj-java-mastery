@@ -1,7 +1,7 @@
 {
   "id": "Q311",
   "slug": "why-threadstopsuspendresume-are-deprecated-and-the-correct-interrupt-based-pattern",
-  "questionNumber": 311,
+  "questionNumber": 3,
   "title": "Why are Thread.stop, Thread.suspend, and Thread.resume deprecated? Explain how stop releases monitors and leaves inconsistent state, how suspend causes deadlock, and the correct replacement using the interrupt flag and InterruptedException.",
   "shortTitle": "Why are stop/suspend/resume deprecated?",
   "chapterNumber": 5,

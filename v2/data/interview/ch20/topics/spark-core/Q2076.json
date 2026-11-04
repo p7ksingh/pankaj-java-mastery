@@ -1,7 +1,7 @@
 {
   "id": "Q2076",
   "slug": "the-small-files-problem-in-spark",
-  "questionNumber": 2076,
+  "questionNumber": 43,
   "title": "What is the small-files problem in Spark — too many tiny output files (common after streaming writes or high-cardinality `partitionBy`) cause excessive metadata overhead, slow file listing, and task scheduling overhead — and how do you fix it (coalesce before write, `maxRecordsPerFile`, periodic compaction, Delta Lake `OPTIMIZE`)?",
   "shortTitle": "The small-files problem in Spark",
   "chapterNumber": 20,

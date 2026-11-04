@@ -1,7 +1,7 @@
 {
   "id": "Q794",
   "slug": "explain-master-slave-architecture-its-use-cases-and-what-happens-if-the-master-or-a-slave-dies",
-  "questionNumber": 794,
+  "questionNumber": 1,
   "title": "Explain Master-Slave architecture, its use cases, and what happens if the master or a slave dies.",
   "shortTitle": "Explain Master-Slave architecture, its use cases, and what happens if the master or a slave dies",
   "chapterNumber": 10,

@@ -1,7 +1,7 @@
 {
   "id": "Q2037",
   "slug": "why-coalesce-to-reduce-repartition-to-increase-and-the-repartition1-vs-coalesce1-trade-off",
-  "questionNumber": 2037,
+  "questionNumber": 22,
   "title": "Why is the general recommendation \"use coalesce to reduce partitions, repartition to increase\" — and what is the performance trade-off of `repartition(1)` vs `coalesce(1)` (repartition shuffles all data to one partition; coalesce stitches but may create a single large task)?",
   "shortTitle": "Why \"coalesce to reduce, repartition to increase\" — and the `repartition(1)` vs `coalesce(1)` trade-off",
   "chapterNumber": 20,

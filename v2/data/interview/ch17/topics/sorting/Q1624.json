@@ -1,7 +1,7 @@
 {
   "id": "Q1624",
   "slug": "implement-quick-sort",
-  "questionNumber": 1624,
+  "questionNumber": 13,
   "title": "Implement the quick sort algorithm, explain the partition step and pivot choice, and analyse its time complexity.",
   "shortTitle": "Implement Quick Sort",
   "chapterNumber": 17,

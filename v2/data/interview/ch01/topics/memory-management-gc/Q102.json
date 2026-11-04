@@ -1,7 +1,7 @@
 {
   "id": "Q102",
   "slug": "how-do-you-capture-a-heap-dump-in-kubernetes-and-how-do-you-distinguish-oomkilled-from-a-java-heap-outofmemoryerror",
-  "questionNumber": 102,
+  "questionNumber": 20,
   "title": "How do you capture a heap dump in Kubernetes where containers are ephemeral and an OOMKill can wipe the evidence — enable `-XX:+HeapDumpOnOutOfMemoryError` with `-XX:HeapDumpPath` pointing at a MOUNTED volume (not `/tmp`), raise `terminationGracePeriodSeconds` so a large dump can finish writing, and distinguish a Kubernetes `OOMKilled` (cgroup/container-limit exceeded) from a Java `OutOfMemoryError: Java heap space` (heap only)?",
   "shortTitle": "How do you capture a heap dump in Kubernetes?",
   "chapterNumber": 1,

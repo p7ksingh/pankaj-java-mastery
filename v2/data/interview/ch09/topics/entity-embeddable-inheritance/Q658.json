@@ -1,7 +1,7 @@
 {
   "id": "Q658",
   "slug": "random-uuidv4-as-primary-key-b-tree-page-splits-index-bloat-innodb-clustering-fix-with-uuidv7ulidsequential",
-  "questionNumber": 658,
+  "questionNumber": 2,
   "title": "Why does a random UUIDv4 primary key hurt write performance (B-tree page splits, index bloat, worse on InnoDB), and how do you fix it with UUIDv7, ULID, or a sequential id?",
   "shortTitle": "Why does random UUID primary key hurt performance?",
   "chapterNumber": 9,

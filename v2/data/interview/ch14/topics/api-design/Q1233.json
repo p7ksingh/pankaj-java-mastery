@@ -1,7 +1,7 @@
 {
   "id": "Q1233",
   "slug": "what-is-the-difference-between-rest-vs-grpc-vs-graphql",
-  "questionNumber": 1233,
+  "questionNumber": 19,
   "title": "What is the difference between REST (text/JSON, HTTP/1.1, human-readable, browser-friendly) vs gRPC (binary/protobuf, HTTP/2, fast, code-generated clients) vs GraphQL (flexible queries, single endpoint, client decides shape)?",
   "shortTitle": "What is the difference between REST vs gRPC vs GraphQL",
   "chapterNumber": 14,

@@ -1,7 +1,7 @@
 {
   "id": "Q1245",
   "slug": "explain-the-factory-design-pattern-with-benefits-and-use-cases",
-  "questionNumber": 1245,
+  "questionNumber": 3,
   "title": "Explain the Factory design pattern (product interface, concrete products, factory), with benefits and use cases.",
   "shortTitle": "Explain the Factory design pattern with benefits and use cases",
   "chapterNumber": 15,

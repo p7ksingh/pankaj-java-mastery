@@ -1,7 +1,7 @@
 {
   "id": "Q1819",
   "slug": "maximum-sum-increasing-subsequence-rising-subsequence-with-the-largest-total",
-  "questionNumber": 1819,
+  "questionNumber": 42,
   "title": "Given an array of numbers, find the maximum sum of any strictly increasing subsequence. Explain how the Longest Increasing Subsequence dynamic program adapts to maximise sum instead of length, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Maximum Sum Increasing Subsequence (Rising Subsequence with the Largest Total)",
   "chapterNumber": 17,

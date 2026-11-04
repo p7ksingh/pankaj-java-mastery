@@ -1,7 +1,7 @@
 {
   "id": "Q1628",
   "slug": "reverse-nodes-in-a-linked-list-in-groups-of-k",
-  "questionNumber": 1628,
+  "questionNumber": 60,
   "title": "Given a singly linked list, reverse its nodes k at a time and return the modified list, leaving any trailing group of fewer than k nodes in original order.",
   "shortTitle": "Reverse Nodes in a Linked List in Groups of k",
   "chapterNumber": 17,

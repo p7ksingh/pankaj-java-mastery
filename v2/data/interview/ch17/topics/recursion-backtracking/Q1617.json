@@ -1,7 +1,7 @@
 {
   "id": "Q1617",
   "slug": "generate-all-permutations-of-a-set-backtracking",
-  "questionNumber": 1617,
+  "questionNumber": 11,
   "title": "Given a set of distinct elements, generate all possible orderings (permutations) using backtracking.",
   "shortTitle": "Generate All Permutations of a Set (Backtracking)",
   "chapterNumber": 17,

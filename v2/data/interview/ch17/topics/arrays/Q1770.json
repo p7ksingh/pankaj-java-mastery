@@ -1,7 +1,7 @@
 {
   "id": "Q1770",
   "slug": "rotation-count-how-many-times-a-sorted-array-was-rotated",
-  "questionNumber": 1770,
+  "questionNumber": 98,
   "title": "Given an ascending sorted array that has been rotated an unknown number of times, count how many times it was rotated, which equals the index of its smallest element. Explain how binary search locates the minimum.",
   "shortTitle": "Rotation Count (How Many Times a Sorted Array Was Rotated)",
   "chapterNumber": 17,

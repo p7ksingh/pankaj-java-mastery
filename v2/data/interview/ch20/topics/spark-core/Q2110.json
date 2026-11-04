@@ -1,7 +1,7 @@
 {
   "id": "Q2110",
   "slug": "what-is-py4j-and-why-pyspark-udfs-have-serialization-overhead",
-  "questionNumber": 2110,
+  "questionNumber": 63,
   "title": "What is Py4J — the bridge library PySpark uses to invoke JVM code from the Python runtime, communicating over a socket in the driver — and why does this architecture mean PySpark UDFs have serialization overhead (data crosses JVM↔Python boundary)?",
   "shortTitle": "What is Py4J and why PySpark UDFs have serialization overhead",
   "chapterNumber": 20,

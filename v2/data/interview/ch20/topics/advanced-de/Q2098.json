@@ -1,7 +1,7 @@
 {
   "id": "Q2098",
   "slug": "collect-vs-taken-vs-headn-vs-first",
-  "questionNumber": 2098,
+  "questionNumber": 15,
   "title": "What is `collect()` vs `take(n)` vs `head(n)` vs `first()` — `collect()` brings ALL rows to the driver (dangerous on large data, causes driver OOM), `take(n)`/`head(n)` bring only n rows (bounded, safe), `first()` = `take(1)` — and why should you never `collect()` a large DataFrame?",
   "shortTitle": "collect() vs take(n) vs head(n) vs first()",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q2138",
   "slug": "eager-vs-relaxed-watermarks-in-flink",
-  "questionNumber": 2138,
+  "questionNumber": 13,
   "title": "What is the difference between eager watermarks (minimize latency, may miss late events) and relaxed watermarks (higher accuracy, increased latency), and how do you choose based on your use case?",
   "shortTitle": "Eager vs relaxed watermarks in Flink",
   "chapterNumber": 20,

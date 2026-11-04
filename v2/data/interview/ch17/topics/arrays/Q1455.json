@@ -1,7 +1,7 @@
 {
   "id": "Q1455",
   "slug": "two-sum-on-a-sorted-array-left-and-right-pointers-o1-space",
-  "questionNumber": 1455,
+  "questionNumber": 28,
   "title": "Two Sum on sorted array — left+right pointer, O(1) space.",
   "shortTitle": "Two Sum on a Sorted Array — Left and Right Pointers, O(1) Space",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1985",
   "slug": "what-is-data-engineering",
-  "questionNumber": 1985,
+  "questionNumber": 1,
   "title": "What is data engineering — the work of building systems that collect, store, and prepare data so that others (analysts, data scientists, ML models) can use it easily and quickly.",
   "shortTitle": "What is data engineering",
   "chapterNumber": 20,

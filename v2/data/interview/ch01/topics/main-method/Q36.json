@@ -1,7 +1,7 @@
 {
   "id": "Q36",
   "slug": "can-the-main-method-be-overloaded-and-which-signature-the-jvm-uses",
-  "questionNumber": 36,
+  "questionNumber": 2,
   "title": "Can the `main()` method be overloaded, and which signature does the JVM actually use as the entry point?",
   "shortTitle": "Can the main method be overloaded?",
   "chapterNumber": 1,

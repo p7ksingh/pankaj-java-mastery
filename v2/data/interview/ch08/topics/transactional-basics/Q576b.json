@@ -1,7 +1,7 @@
 {
   "id": "Q576b",
   "slug": "declarative-transactional-vs-programmatic-transactiontemplate-transaction-management",
-  "questionNumber": 576,
+  "questionNumber": 5,
   "title": "How does Spring Boot manage transactions, including declarative vs programmatic transaction management and rollback rules?",
   "shortTitle": "Declarative vs Programmatic transaction management?",
   "chapterNumber": 8,

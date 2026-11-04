@@ -1,7 +1,7 @@
 {
   "id": "Q2615",
   "slug": "how-to-diagnose-outofmemoryerror",
-  "questionNumber": 2615,
+  "questionNumber": 11,
   "title": "How to diagnose OutOfMemoryError — check which area ran out (Heap space, Metaspace, unable to create native thread), take heap dump, analyze for large object retention or memory leaks?",
   "shortTitle": "How do you diagnose OutOfMemoryError?",
   "chapterNumber": 1,

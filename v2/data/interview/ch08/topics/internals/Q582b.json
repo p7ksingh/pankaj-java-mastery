@@ -1,7 +1,7 @@
 {
   "id": "Q582b",
   "slug": "platformtransactionmanager-role-and-datasourcetransactionmanager-internals",
-  "questionNumber": 582,
+  "questionNumber": 2,
   "title": "What is PlatformTransactionManager, its JDBC implementation DataSourceTransactionManager, and what is TransactionSynchronizationManager thread-local resource binding?",
   "shortTitle": "What is PlatformTransactionManager?",
   "chapterNumber": 8,

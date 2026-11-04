@@ -1,7 +1,7 @@
 {
   "id": "Q2180",
   "slug": "difference-between-smoke-sanity-and-regression-testing-and-where-each-runs-in-cicd",
-  "questionNumber": 2180,
+  "questionNumber": 1,
   "title": "What is the difference between smoke testing (a quick \"is the build even testable\" check of critical paths), sanity testing (a narrow check that a specific fix/area works), and regression testing (re-running a broad suite to confirm existing behavior still works), and where does each run in a CI/CD pipeline (smoke on every build/deploy gate, sanity after a targeted change, regression before release)?",
   "shortTitle": "Difference between smoke, sanity, and regression testing and where each runs in CI/CD",
   "chapterNumber": 21,

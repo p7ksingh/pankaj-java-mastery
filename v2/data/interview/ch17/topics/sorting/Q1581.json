@@ -1,7 +1,7 @@
 {
   "id": "Q1581",
   "slug": "longest-increasing-subsequence-on-log-n-patience-sort",
-  "questionNumber": 1581,
+  "questionNumber": 10,
   "title": "Given an array of integers, return the length of the longest strictly increasing subsequence. Aim for O(n log n).",
   "shortTitle": "Longest Increasing Subsequence — O(n log n) patience sort",
   "chapterNumber": 17,

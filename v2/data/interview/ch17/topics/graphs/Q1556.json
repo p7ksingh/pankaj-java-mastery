@@ -1,7 +1,7 @@
 {
   "id": "Q1556",
   "slug": "redundant-connection-detect-the-cycle-edge-via-union-find",
-  "questionNumber": 1556,
+  "questionNumber": 14,
   "title": "In a graph that started as a tree with n nodes and had one extra edge added, return the edge that creates a cycle (if multiple, return the last one in input order).",
   "shortTitle": "Redundant Connection — detect the cycle edge via Union-Find",
   "chapterNumber": 17,

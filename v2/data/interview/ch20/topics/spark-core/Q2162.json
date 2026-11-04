@@ -1,7 +1,7 @@
 {
   "id": "Q2162",
   "slug": "what-is-the-difference-between-flink-sql-and-spark-sql-for-streaming-use-cases",
-  "questionNumber": 2162,
+  "questionNumber": 72,
   "title": "What is the difference between Flink SQL and Spark SQL for streaming use cases — Flink SQL is true continuous/incremental processing with native changelog semantics; Spark SQL (Structured Streaming) is micro-batch by default (or experimental continuous mode) — and what are the trade-offs (latency, exactly-once, state management, ecosystem)?",
   "shortTitle": "What is the difference between Flink SQL and Spark SQL for streaming use cases",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q1845",
   "slug": "lis-tabulation-quadratic-bottom-up-and-reconstructing-the-sequence",
-  "questionNumber": 1845,
+  "questionNumber": 50,
   "title": "Explain the classic quadratic bottom-up tabulation for the Longest Increasing Subsequence, how each cell is built from earlier cells, how to reconstruct the actual subsequence with predecessor pointers, the complexity, and a banking use case.",
   "shortTitle": "LIS Tabulation (Quadratic Bottom-Up and Reconstructing the Sequence)",
   "chapterNumber": 17,

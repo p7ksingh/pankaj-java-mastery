@@ -1,7 +1,7 @@
 {
   "id": "Q1691",
   "slug": "longest-subarray-with-ones-after-replacement-max-consecutive-ones-iii",
-  "questionNumber": 1691,
+  "questionNumber": 72,
   "title": "Given a binary array of ones and zeros and an integer k, find the length of the longest contiguous subarray containing only ones after flipping at most k zeros to ones. Solve it with the sliding window pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Longest Subarray with Ones after Replacement (Max Consecutive Ones III)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1828",
   "slug": "implement-a-trie-prefix-tree-with-insert-search-and-startswith",
-  "questionNumber": 1828,
+  "questionNumber": 25,
   "title": "Implement a trie, also called a prefix tree, supporting inserting a word, searching for a complete word, and checking whether any word starts with a given prefix. Explain the Trie pattern, the operations, the complexity, and a banking use case.",
   "shortTitle": "Implement a Trie (Prefix Tree with Insert, Search, and StartsWith)",
   "chapterNumber": 17,

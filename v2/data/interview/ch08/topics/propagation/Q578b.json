@@ -1,7 +1,7 @@
 {
   "id": "Q578b",
   "slug": "requiresnew-connection-pool-deadlock-and-hikaricp-sizing-formula",
-  "questionNumber": 578,
+  "questionNumber": 2,
   "title": "Why can heavy use of Propagation.REQUIRES_NEW deadlock the application at the CONNECTION-POOL level, and what is the Hikari sizing formula to avoid it?",
   "shortTitle": "What is the REQUIRES_NEW connection pool deadlock?",
   "chapterNumber": 8,

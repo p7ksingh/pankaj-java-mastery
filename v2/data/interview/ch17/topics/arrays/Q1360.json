@@ -1,7 +1,7 @@
 {
   "id": "Q1360",
   "slug": "find-the-largest-element-in-an-array",
-  "questionNumber": 1360,
+  "questionNumber": 1,
   "title": "Find the largest element in an array (keep a variable `max`, update it when you find something bigger).",
   "shortTitle": "Find the largest element in an array",
   "chapterNumber": 17,

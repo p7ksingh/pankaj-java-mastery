@@ -1,7 +1,7 @@
 {
   "id": "Q1361",
   "slug": "find-the-smallest-element-in-an-array",
-  "questionNumber": 1361,
+  "questionNumber": 2,
   "title": "Find the smallest element in an array (keep a variable `min`, update it when you find something smaller).",
   "shortTitle": "Find the smallest element in an array",
   "chapterNumber": 17,

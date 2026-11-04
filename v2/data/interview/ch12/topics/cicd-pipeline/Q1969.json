@@ -1,7 +1,7 @@
 {
   "id": "Q1969",
   "slug": "filtering-aws-resources-server-side-with-boto3-instead-of-pulling-everything-and-what-automation-it-enables",
-  "questionNumber": 1969,
+  "questionNumber": 49,
   "title": "How do you filter AWS resources server-side with Boto3 (`Filters=[{\"Name\": \"tag:Environment\", \"Values\": [\"Production\"]}]`) instead of pulling everything and filtering in Python, and what kinds of automation does this enable (find untagged instances, stopped dev instances, inventory/compliance reports, remediation triggers)?",
   "shortTitle": "Filtering AWS resources server-side with Boto3 instead of pulling everything, and what automation it enables",
   "chapterNumber": 12,

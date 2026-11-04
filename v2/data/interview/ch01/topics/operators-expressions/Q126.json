@@ -1,7 +1,7 @@
 {
   "id": "Q126",
   "slug": "what-are-the-looping-constructs-and-how-do-break-continue-and-labeled-breakcontinue-control-nested-loops",
-  "questionNumber": 126,
+  "questionNumber": 6,
   "title": "What are the looping constructs (`for`, enhanced for-each, `while`, `do-while`), and what is the difference between `break`, `continue`, and a labeled `break`/`continue` for exiting or skipping an OUTER loop from a nested loop?",
   "shortTitle": "What are the looping constructs in Java?",
   "chapterNumber": 1,

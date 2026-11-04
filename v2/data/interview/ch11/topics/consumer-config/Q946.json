@@ -1,7 +1,7 @@
 {
   "id": "Q946",
   "slug": "what-do-the-key-consumer-configs-do",
-  "questionNumber": 946,
+  "questionNumber": 3,
   "title": "What do the key consumer configs do — `enable.auto.commit` (auto vs manual offset commit, and why manual + commit-after-processing gives at-least-once), `auto.offset.reset` (`earliest` vs `latest` when there is no committed offset), `max.poll.records` (max records per `poll()`, not a total cap), and `max.poll.interval.ms` (too-slow processing between polls triggers a rebalance)?",
   "shortTitle": "What do the key consumer configs do?",
   "chapterNumber": 11,

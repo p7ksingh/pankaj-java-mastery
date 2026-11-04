@@ -1,7 +1,7 @@
 {
   "id": "Q412",
   "slug": "collectorsjoiningdelimiter-prefix-suffix-concatenate-stream-to-string",
-  "questionNumber": 412,
+  "questionNumber": 8,
   "title": "How does Collectors.joining(delimiter, prefix, suffix) concatenate stream elements into a single String, and why is it preferred over manual StringBuilder accumulation?",
   "shortTitle": "Collectors.joining(delimiter, prefix, suffix) — concatenate stream to String",
   "chapterNumber": 6,

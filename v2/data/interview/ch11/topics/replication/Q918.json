@@ -1,7 +1,7 @@
 {
   "id": "Q918",
   "slug": "schema-registry-compatibility-modes-backward-forward-full-none-and-why-defaults-matter",
-  "questionNumber": 918,
+  "questionNumber": 4,
   "title": "What are the Schema Registry compatibility modes (BACKWARD, FORWARD, FULL, NONE), how do they let producers and consumers deploy independently, and why does adding a new required field break compatibility unless you give it a default (so old data can still be read)?",
   "shortTitle": "Schema Registry compatibility modes (BACKWARD, FORWARD, FULL, NONE) and why defaults matter",
   "chapterNumber": 11,

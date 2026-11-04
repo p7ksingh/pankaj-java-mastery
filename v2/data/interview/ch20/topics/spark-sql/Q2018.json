@@ -1,7 +1,7 @@
 {
   "id": "Q2018",
   "slug": "the-catalyst-optimizer",
-  "questionNumber": 2018,
+  "questionNumber": 1,
   "title": "What is the Catalyst Optimizer and how does it work (Parsed Logical Plan → Analyzed → Optimized Logical Plan with predicate pushdown/column pruning → Physical Plan with WholeStageCodegen)?",
   "shortTitle": "The Catalyst Optimizer",
   "chapterNumber": 20,

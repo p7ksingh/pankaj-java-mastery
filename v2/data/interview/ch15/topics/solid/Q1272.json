@@ -1,7 +1,7 @@
 {
   "id": "Q1272",
   "slug": "why-dont-over-engineer-is-a-core-lld-skill-and-answering-how-would-you-extend-this-with-the-openclosed-principle",
-  "questionNumber": 1272,
+  "questionNumber": 4,
   "title": "Why is \"don't over-engineer\" a core LLD skill (avoid forcing patterns, avoid a God class, start simple and refactor), and how do you answer the common follow-up \"how would you extend this?\" using the Open/Closed Principle (add a new class, not modify existing code)?",
   "shortTitle": "Why \"don't over-engineer\" is a core LLD skill, and answering \"how would you extend this?\" with the Open/Closed Principle",
   "chapterNumber": 15,

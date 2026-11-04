@@ -1,7 +1,7 @@
 {
   "id": "Q2632",
   "slug": "leap-year-check-whether-a-year-is-a-leap-year",
-  "questionNumber": 2632,
+  "questionNumber": 23,
   "title": "Given a year, draw a flowchart to check whether it is a leap year. Start, read year, decision (year % 4 == 0 AND year % 100 != 0) OR (year % 400 == 0), Yes print Leap Year, No print Not a Leap Year, End. Input: 2000, Expected Output: Leap Year.",
   "shortTitle": "Leap Year — check whether a year is a leap year",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q656",
   "slug": "column-mapping-transient-field-to-column-control-and-excluding-fields-from-persistence",
-  "questionNumber": 656,
+  "questionNumber": 8,
   "title": "How does @Column control field-to-column mapping, and what is the difference between JPA @Transient and the Java transient keyword?",
   "shortTitle": "@Column mapping and @Transient?",
   "chapterNumber": 9,

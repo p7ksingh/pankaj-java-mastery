@@ -1,7 +1,7 @@
 {
   "id": "Q1057",
   "slug": "what-is-the-difference-between-a-primary-key-and-an-index",
-  "questionNumber": 1057,
+  "questionNumber": 8,
   "title": "What is the difference between a primary key and an index — a primary key is a CONSTRAINT (uniqueness + not-null + one per table + typically the clustered index) that the DB automatically backs with an index, whereas an index is purely a performance structure (you can have many, on any columns, allowing duplicates/NULLs) that enforces no business rule?",
   "shortTitle": "What is the difference between a primary key and an index",
   "chapterNumber": 13,

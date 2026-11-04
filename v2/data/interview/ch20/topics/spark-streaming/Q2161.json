@@ -1,7 +1,7 @@
 {
   "id": "Q2161",
   "slug": "how-does-flink-sql-handle-late-data-in-windowed-aggregations",
-  "questionNumber": 2161,
+  "questionNumber": 22,
   "title": "How does Flink SQL handle late data in windowed aggregations — events arriving after the watermark has passed the window end are dropped by default, and you can configure allowed lateness or use side outputs at the DataStream level?",
   "shortTitle": "How does Flink SQL handle late data in windowed aggregations",
   "chapterNumber": 20,

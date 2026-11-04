@@ -1,7 +1,7 @@
 {
   "id": "Q804",
   "slug": "how-would-you-debug-sustained-high-cpu-in-a-java-service-and-what-are-the-common-causes",
-  "questionNumber": 804,
+  "questionNumber": 23,
   "title": "How would you debug sustained high CPU in a Java service (collect evidence first — CPU metrics, thread dumps, an async/sampling profiler — to find the hot code paths before changing anything), and what are the common causes (tight loops, expensive serialization, lock contention, pathological regex backtracking, and GC pressure)?",
   "shortTitle": "How would you debug sustained high CPU in a Java service, and what are the common causes",
   "chapterNumber": 10,

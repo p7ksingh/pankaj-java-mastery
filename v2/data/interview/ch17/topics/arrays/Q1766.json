@@ -1,7 +1,7 @@
 {
   "id": "Q1766",
   "slug": "minimum-difference-element-closest-element-to-a-key-in-a-sorted-array",
-  "questionNumber": 1766,
+  "questionNumber": 94,
   "title": "Given an array of numbers sorted in ascending order, find the element whose absolute difference from a given key is smallest. If two elements are equally close, return the smaller one. Explain how binary search plus a comparison of the two neighbours around the closing window finds it.",
   "shortTitle": "Minimum Difference Element (Closest Element to a Key in a Sorted Array)",
   "chapterNumber": 17,

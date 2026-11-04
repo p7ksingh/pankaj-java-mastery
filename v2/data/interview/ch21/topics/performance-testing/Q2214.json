@@ -1,7 +1,7 @@
 {
   "id": "Q2214",
   "slug": "tools-used-for-performance-testing",
-  "questionNumber": 2214,
+  "questionNumber": 2,
   "title": "What tools are used for performance testing — JMeter (open-source, UI-based, widely used), Gatling (code-based in Scala, better reports), k6 (JavaScript-based, developer-friendly, good for CI/CD), Locust (Python-based)?",
   "shortTitle": "Tools used for performance testing",
   "chapterNumber": 21,

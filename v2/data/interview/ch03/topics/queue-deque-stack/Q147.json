@@ -1,7 +1,7 @@
 {
   "id": "Q147",
   "slug": "linkedblockingqueue-thread-safe-boundedunbounded-blocking-puttake",
-  "questionNumber": 147,
+  "questionNumber": 2,
   "title": "LinkedBlockingQueue — thread-safe, bounded/unbounded, blocking put/take",
   "shortTitle": "What is LinkedBlockingQueue?",
   "chapterNumber": 3,

@@ -1,7 +1,7 @@
 {
   "id": "Q167",
   "slug": "treeset-sorting-custom-objects-comparable-vs-comparator-red-black-tree",
-  "questionNumber": 167,
+  "questionNumber": 1,
   "title": "TreeSet — sorting custom objects, Comparable vs Comparator, Red-Black tree",
   "shortTitle": "How does TreeSet sort custom objects?",
   "chapterNumber": 3,

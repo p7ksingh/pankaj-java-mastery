@@ -5,7 +5,6 @@ import { StructuredData } from '@/components/seo/StructuredData'
 
 export default function HomePage() {
   const chapters = getAllChapters()
-  const totalQuestions = chapters.reduce((sum, c) => sum + c.questionCount, 0)
 
   return (
     <main>
@@ -16,15 +15,14 @@ export default function HomePage() {
           name: 'javabypankaj',
           alternateName: ['Java by Pankaj', 'Java Interview Mastery'],
           url: 'https://www.javabypankaj.live/',
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: 'https://www.javabypankaj.live/search#{search_term_string}',
+            'query-input': 'required name=search_term_string',
+          },
         }}
       />
-      <PageHeader
-        title="Interview Topics"
-        stats={[
-          { label: 'Questions', value: totalQuestions.toLocaleString() },
-          { label: 'Chapters', value: chapters.length },
-        ]}
-      />
+      <PageHeader title="Interview Topics" />
       <ChapterTable chapters={chapters} />
     </main>
   )

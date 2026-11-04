@@ -1,7 +1,7 @@
 {
   "id": "Q1808",
   "slug": "climbing-stairs-count-ways-to-reach-the-top-taking-1-or-2-steps",
-  "questionNumber": 1808,
+  "questionNumber": 20,
   "title": "Given a staircase of N steps, count the number of distinct ways to climb to the top if you can take one or two steps at a time. Explain the Fibonacci Numbers DP pattern, why the answer is a Fibonacci number, the complexity, and a banking use case.",
   "shortTitle": "Climbing Stairs (Count Ways to Reach the Top Taking 1 or 2 Steps)",
   "chapterNumber": 17,

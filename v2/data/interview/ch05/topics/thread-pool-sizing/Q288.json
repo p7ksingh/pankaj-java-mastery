@@ -1,7 +1,7 @@
 {
   "id": "Q288",
   "slug": "thread-pool-deadlock-parent-joins-child-in-same-pool-pool-segregation-fix-virtual-threads",
-  "questionNumber": 288,
+  "questionNumber": 1,
   "title": "Thread pool deadlock — parent join()s child in same pool, pool segregation fix, virtual threads",
   "shortTitle": "What causes thread pool deadlock?",
   "chapterNumber": 5,

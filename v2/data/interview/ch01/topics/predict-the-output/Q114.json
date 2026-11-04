@@ -1,7 +1,7 @@
 {
   "id": "Q114",
   "slug": "predict-the-output-01-02-03-and-how-do-you-compare-safely",
-  "questionNumber": 114,
+  "questionNumber": 3,
   "title": "Predict the output: `0.1 + 0.2 == 0.3` (false — IEEE 754), and how do you compare safely (BigDecimal or tolerance epsilon)?",
   "shortTitle": "Predict the output: 0.1 + 0.2 == 0.3",
   "chapterNumber": 1,

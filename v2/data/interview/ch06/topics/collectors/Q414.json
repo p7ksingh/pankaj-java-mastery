@@ -1,7 +1,7 @@
 {
   "id": "Q414",
   "slug": "collectorsteeing-two-collectors-in-one-pass-merge-results-java-12",
-  "questionNumber": 414,
+  "questionNumber": 10,
   "title": "What is Collectors.teeing(downstream1, downstream2, merger) (Java 12+) — running TWO collectors in a single pass and merging their results — e.g. computing min AND max salary simultaneously — and why is it more efficient than streaming twice?",
   "shortTitle": "Collectors.teeing — two collectors in one pass, merge results (Java 12+)",
   "chapterNumber": 6,

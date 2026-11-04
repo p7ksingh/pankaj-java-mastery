@@ -1,7 +1,7 @@
 {
   "id": "Q26",
   "slug": "in-which-scenarios-would-you-specifically-need-stringbuffer-over-stringbuilder",
-  "questionNumber": 26,
+  "questionNumber": 8,
   "title": "In which scenarios would you specifically need `StringBuffer` over `StringBuilder`?",
   "shortTitle": "When would you specifically need StringBuffer over StringBuilder?",
   "chapterNumber": 1,

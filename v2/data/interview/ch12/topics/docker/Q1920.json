@@ -1,7 +1,7 @@
 {
   "id": "Q1920",
   "slug": "scanning-docker-images-for-vulnerabilities-and-managing-secrets-inside-containers-securely",
-  "questionNumber": 1920,
+  "questionNumber": 7,
   "title": "How do you scan Docker images for vulnerabilities before deployment (Trivy, Grype, registry scanning), and how do you manage secrets inside containers securely (not in `ENV`/image layers — mounted secrets/secret managers)?",
   "shortTitle": "Scanning Docker Images for Vulnerabilities and Managing Secrets Inside Containers Securely",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q1595",
   "slug": "target-sum-assign-and-signs-to-reach-a-target",
-  "questionNumber": 1595,
+  "questionNumber": 18,
   "title": "Given an array of non-negative integers and a target, assign a plus or minus sign to each number so the signed sum equals the target, and count the number of ways.",
   "shortTitle": "Target Sum — assign + and - signs to reach a target",
   "chapterNumber": 17,

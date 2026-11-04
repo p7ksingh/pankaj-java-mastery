@@ -1,7 +1,7 @@
 {
   "id": "Q1438",
   "slug": "largest-number-from-a-list-of-integers-custom-comparator-ab-vs-ba",
-  "questionNumber": 1438,
+  "questionNumber": 8,
   "title": "Largest number from a list of integers (custom comparator: compare `a+b` vs `b+a`).",
   "shortTitle": "Largest Number From a List of Integers — Custom Comparator a+b vs b+a",
   "chapterNumber": 17,

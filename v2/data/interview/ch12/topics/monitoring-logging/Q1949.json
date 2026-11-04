@@ -1,7 +1,7 @@
 {
   "id": "Q1949",
   "slug": "cardinality-explosion-in-prometheus-metrics-what-it-is-the-incident-it-causes-and-how-to-avoid-it",
-  "questionNumber": 1949,
+  "questionNumber": 6,
   "title": "What is cardinality explosion in Prometheus metrics (a separate time series per unique label-value combination, so an unbounded/high-cardinality label — userId, orderId, email, full URL / path with IDs, trace id — multiplies series into the millions), what incident does it cause (TSDB OOM / crashed Prometheus / failed scrapes / slow dashboards), and how do you avoid it (keep labels low-cardinality and bounded, put high-cardinality identifiers in LOGS/traces not metric labels, aggregate before exposing, apply relabel/limit rules)?",
   "shortTitle": "Cardinality explosion in Prometheus metrics — what it is, the incident it causes, and how to avoid it",
   "chapterNumber": 12,

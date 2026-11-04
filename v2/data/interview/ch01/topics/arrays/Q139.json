@@ -1,7 +1,7 @@
 {
   "id": "Q139",
   "slug": "what-does-the-arrays-utility-class-provide-and-what-is-the-difference-between-arraysaslist-and-new-arraylistarraysaslist",
-  "questionNumber": 139,
+  "questionNumber": 3,
   "title": "What does the `Arrays` utility class provide — `sort`, `binarySearch`, `copyOf`/`copyOfRange`, `fill`, `equals`/`deepEquals`, `toString`/`deepToString`, and `asList` — and what is the difference between `Arrays.asList(arr)` and `new ArrayList<>(Arrays.asList(arr))`?",
   "shortTitle": "What does the Arrays utility class provide?",
   "chapterNumber": 1,

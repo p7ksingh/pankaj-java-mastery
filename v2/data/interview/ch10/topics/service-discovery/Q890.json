@@ -1,7 +1,7 @@
 {
   "id": "Q890",
   "slug": "how-does-a-service-registry-like-netflix-eureka-work-and-how-does-kubernetes-native-discovery-differ",
-  "questionNumber": 890,
+  "questionNumber": 3,
   "title": "How does a service registry like Netflix Eureka work — each service instance registers itself on startup (heartbeat-based lease), clients query the registry to discover available instances, and stale registrations are evicted after missed heartbeats — and how does Kubernetes-native service discovery (CoreDNS + Service objects) differ from Eureka (no separate registry server, the platform handles it), and when do you still need Eureka (non-Kubernetes environments, multi-cloud, gradual migration)?",
   "shortTitle": "How does a service registry like Netflix Eureka work, and how does Kubernetes-native discovery differ?",
   "chapterNumber": 10,

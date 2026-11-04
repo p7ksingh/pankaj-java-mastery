@@ -1,7 +1,7 @@
 {
   "id": "Q95",
   "slug": "what-was-permgen-why-did-it-cause-outofmemoryerror-permgen-space-and-how-does-metaspace-fix-it",
-  "questionNumber": 95,
+  "questionNumber": 13,
   "title": "What was PermGen, why did it cause `OutOfMemoryError: PermGen space` (fixed size, hot-deploy class leaks), and how does Metaspace (Java 8+, native memory, classloader-scoped collection) fix it?",
   "shortTitle": "What was PermGen and how does Metaspace fix it?",
   "chapterNumber": 1,

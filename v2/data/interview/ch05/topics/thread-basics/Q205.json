@@ -1,7 +1,7 @@
 {
   "id": "Q205",
   "slug": "process-vs-thread-memory-space-stack-overhead",
-  "questionNumber": 205,
+  "questionNumber": 1,
   "title": "Process vs Thread — memory space, stack, overhead",
   "shortTitle": "What is the difference between a process and a thread?",
   "chapterNumber": 5,

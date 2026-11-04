@@ -1,7 +1,7 @@
 {
   "id": "Q1305",
   "slug": "how-do-you-implement-rsocket-error-handling-and-what-happens-on-clientserver-disconnect-onerrorresume-retrywhen-keep-alive-resumption",
-  "questionNumber": 1305,
+  "questionNumber": 4,
   "title": "How do you implement RSocket error handling, and what happens on client/server disconnect (onErrorResume, retryWhen, keep-alive, resumption)?",
   "shortTitle": "How do you implement RSocket error handling, and what happens on client/server disconnect (onErrorResume, retryWhen, keep-alive, resumption)?",
   "chapterNumber": 16,

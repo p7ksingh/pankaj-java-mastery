@@ -1,7 +1,7 @@
 {
   "id": "Q386",
   "slug": "collectorsmapping-downstream-transformation-within-groups",
-  "questionNumber": 386,
+  "questionNumber": 3,
   "title": "What is Collectors.mapping used for as a downstream collector (transform elements within each group)?",
   "shortTitle": "Collectors.mapping — downstream transformation within groups",
   "chapterNumber": 6,

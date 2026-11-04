@@ -1,7 +1,7 @@
 {
   "id": "Q579",
   "slug": "four-cases-where-transactional-does-not-rollback-and-how-to-fix-each",
-  "questionNumber": 579,
+  "questionNumber": 1,
   "title": "In which cases does @Transactional NOT roll back (checked exceptions, self-invocation, private methods, swallowed exceptions), and what are the common pitfalls?",
   "shortTitle": "When does @Transactional NOT rollback?",
   "chapterNumber": 8,

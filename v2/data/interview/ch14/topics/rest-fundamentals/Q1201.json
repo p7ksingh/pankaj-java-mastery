@@ -1,7 +1,7 @@
 {
   "id": "Q1201",
   "slug": "what-are-the-roles-of-the-http-methods-in-restful-apis-get-post-put-patch-delete-head-options",
-  "questionNumber": 1201,
+  "questionNumber": 2,
   "title": "What are the roles of the HTTP methods in RESTful APIs (GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS)?",
   "shortTitle": "What are the roles of the HTTP methods in RESTful APIs (GET, POST, PUT, PATCH, DELETE, HEAD, OPTIONS)",
   "chapterNumber": 14,

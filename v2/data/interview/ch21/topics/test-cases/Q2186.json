@@ -1,7 +1,7 @@
 {
   "id": "Q2186",
   "slug": "test-design-techniques-to-reduce-case-count-while-keeping-coverage",
-  "questionNumber": 2186,
+  "questionNumber": 3,
   "title": "What test-design techniques do you apply to reduce case count while keeping coverage (equivalence partitioning, boundary value analysis, decision tables, state transition testing, pairwise/combinatorial), and how do they help you choose which inputs to test?",
   "shortTitle": "Test-design techniques to reduce case count while keeping coverage",
   "chapterNumber": 21,

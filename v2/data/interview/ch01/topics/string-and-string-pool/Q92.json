@@ -1,7 +1,7 @@
 {
   "id": "Q92",
   "slug": "why-are-strings-immutable-in-java",
-  "questionNumber": 92,
+  "questionNumber": 9,
   "title": "Why are strings immutable in Java (security, string pool, thread safety, hashcode caching, safe sharing)?",
   "shortTitle": "Why are strings immutable in Java?",
   "chapterNumber": 1,

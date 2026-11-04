@@ -1,7 +1,7 @@
 {
   "id": "Q1778",
   "slug": "connect-ropes-minimum-cost-to-connect-all-ropes",
-  "questionNumber": 1778,
+  "questionNumber": 35,
   "title": "Given ropes of different lengths, connecting two ropes costs the sum of their lengths, and the combined rope can be connected again. Find the minimum total cost to connect all ropes into one. Explain why always joining the two shortest ropes is optimal and how a min-heap implements it.",
   "shortTitle": "Connect Ropes (Minimum Cost to Connect All Ropes)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q2394",
   "slug": "demonstrate-a-bug-caused-by-a-shared-mutable-arraylist-inside-foreach-of-a-parallel-stream",
-  "questionNumber": 2394,
+  "questionNumber": 6,
   "title": "Demonstrate a bug caused by using a shared mutable `ArrayList` inside `forEach` of a parallel stream (race condition).",
   "shortTitle": "Demonstrate a bug caused by a shared mutable ArrayList inside forEach of a parallel stream",
   "chapterNumber": 6,

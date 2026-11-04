@@ -1,7 +1,7 @@
 {
   "id": "Q2015",
   "slug": "fault-tolerance-through-lineage",
-  "questionNumber": 2015,
+  "questionNumber": 3,
   "title": "How does Spark achieve fault tolerance through lineage (the DAG of transformations is recorded; if an executor loses a cached partition, Spark recomputes only that partition from its parent RDD, not the entire job)?",
   "shortTitle": "Fault tolerance through lineage",
   "chapterNumber": 20,

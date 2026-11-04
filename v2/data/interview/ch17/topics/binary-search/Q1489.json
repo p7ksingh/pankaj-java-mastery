@@ -1,7 +1,7 @@
 {
   "id": "Q1489",
   "slug": "search-insert-position-find-where-a-target-would-be-inserted",
-  "questionNumber": 1489,
+  "questionNumber": 6,
   "title": "Given a sorted array of distinct integers and a target value, return the index where the target is found. If it is not found, return the index where it would be inserted to keep the array sorted. Run in logarithmic time.",
   "shortTitle": "Search Insert Position — Find Where a Target Would Be Inserted",
   "chapterNumber": 17,

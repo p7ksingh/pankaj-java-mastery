@@ -1,7 +1,7 @@
 {
   "id": "Q1771",
   "slug": "single-number-find-the-one-element-that-appears-once",
-  "questionNumber": 1771,
+  "questionNumber": 99,
   "title": "In an array where every number appears exactly twice except for one number that appears once, find that single number using constant extra space. Explain why XOR of all elements gives the answer.",
   "shortTitle": "Single Number (Find the One Element That Appears Once)",
   "chapterNumber": 17,

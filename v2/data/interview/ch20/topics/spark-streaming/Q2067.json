@@ -1,7 +1,7 @@
 {
   "id": "Q2067",
   "slug": "structured-streaming-integration-with-kafka",
-  "questionNumber": 2067,
+  "questionNumber": 8,
   "title": "How does Structured Streaming integrate with Kafka (`readStream.format(\"kafka\")` for source, `writeStream.format(\"kafka\")` for sink), and what delivery semantics does it provide (exactly-once with checkpointing + idempotent sinks)?",
   "shortTitle": "Structured Streaming integration with Kafka",
   "chapterNumber": 20,

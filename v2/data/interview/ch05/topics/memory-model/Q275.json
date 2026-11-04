@@ -1,7 +1,7 @@
 {
   "id": "Q275",
   "slug": "instruction-reordering-compilerjitcpu-reorder-breaks-dcl-without-volatile",
-  "questionNumber": 275,
+  "questionNumber": 4,
   "title": "Instruction reordering — compiler/JIT/CPU reorder, breaks DCL without volatile",
   "shortTitle": "What is instruction reordering?",
   "chapterNumber": 5,

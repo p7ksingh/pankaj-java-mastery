@@ -1,7 +1,7 @@
 {
   "id": "Q1210",
   "slug": "what-is-the-rfc-9457-problem-details-standard-for-http-errors",
-  "questionNumber": 1210,
+  "questionNumber": 1,
   "title": "What is the RFC 9457 \"Problem Details\" standard for HTTP errors (`Content-Type: application/problem+json` with `type` [a stable URL the client can switch on], `title`, `status`, `detail` [human-readable], `instance`, plus a `traceId`), how does Spring expose it (`ProblemDetail` / `ErrorResponse`), and why prefer it over a hand-rolled error shape (a documented, framework-supported contract)?",
   "shortTitle": "What is the RFC 9457 \"Problem Details\" standard for HTTP errors",
   "chapterNumber": 14,

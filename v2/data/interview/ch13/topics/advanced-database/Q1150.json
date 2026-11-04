@@ -1,7 +1,7 @@
 {
   "id": "Q1150",
   "slug": "why-consistency-decisions-should-start-from-the-business-invariant",
-  "questionNumber": 1150,
+  "questionNumber": 2,
   "title": "Why is \"pick consistency OR availability\" an oversimplification, and why should the consistency decision START from the business INVARIANT — ask \"what must never happen\" (e.g. \"available balance must never go negative\" or \"the last item must not be sold twice\") demands strong consistency, while \"a feed/profile picture can lag a few seconds\" permits availability/latency/eventual consistency — so that requirements drive the technology rather than choosing Cassandra-vs-PostgreSQL first?",
   "shortTitle": "Why Consistency Decisions Should Start From the Business Invariant",
   "chapterNumber": 13,

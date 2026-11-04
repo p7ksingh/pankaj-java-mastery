@@ -1,7 +1,7 @@
 {
   "id": "Q2148",
   "slug": "what-are-flink-restart-strategies",
-  "questionNumber": 2148,
+  "questionNumber": 11,
   "title": "What are Flink restart strategies — fixed-delay (retry N times with a delay), failure-rate (allow N failures within an interval), exponential-delay (increasing backoff), and no-restart — and how do you configure them (RestartStrategies.fixedDelayRestart(attempts, delay))?",
   "shortTitle": "What are Flink restart strategies",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q657",
   "slug": "secondarytable-mapping-a-single-entity-across-multiple-tables",
-  "questionNumber": 657,
+  "questionNumber": 1,
   "title": "What is @SecondaryTable, how does it let one entity span multiple tables, and when should you use it?",
   "shortTitle": "What is @SecondaryTable?",
   "chapterNumber": 9,

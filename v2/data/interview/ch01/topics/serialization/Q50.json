@@ -1,7 +1,7 @@
 {
   "id": "Q50",
   "slug": "if-a-variable-is-static-does-it-take-part-in-serialization",
-  "questionNumber": 50,
+  "questionNumber": 9,
   "title": "If a variable is `static`, does it take part in serialization (no — static belongs to the class, not the instance)?",
   "shortTitle": "If a variable is static, does it participate in serialization?",
   "chapterNumber": 1,

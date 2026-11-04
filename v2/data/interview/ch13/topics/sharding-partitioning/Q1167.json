@@ -1,7 +1,7 @@
 {
   "id": "Q1167",
   "slug": "generating-globally-unique-ids-across-shards",
-  "questionNumber": 1167,
+  "questionNumber": 5,
   "title": "How do you generate globally-unique IDs across shards — a DB sequence per shard with non-overlapping ranges, a Snowflake-style ID generator (timestamp + worker-id + sequence), or UUIDv7?",
   "shortTitle": "Generating Globally-Unique IDs Across Shards",
   "chapterNumber": 13,

@@ -1,7 +1,7 @@
 {
   "id": "Q885",
   "slug": "what-is-the-difference-between-availability-and-reliability-and-why-must-slis-measure-correctness",
-  "questionNumber": 885,
+  "questionNumber": 65,
   "title": "What is the difference between availability (the system can provide service when requested) and reliability (it continues producing CORRECT behavior over time) — a service returning HTTP 200 while producing incorrect financial state may score 99.99% availability on a dashboard while being operationally disastrous — and why must SLIs measure business correctness, not just reachability?",
   "shortTitle": "What is the difference between availability and reliability, and why must SLIs measure correctness?",
   "chapterNumber": 10,

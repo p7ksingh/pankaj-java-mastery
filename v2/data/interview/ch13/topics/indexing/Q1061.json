@@ -1,7 +1,7 @@
 {
   "id": "Q1061",
   "slug": "why-can-random-uuidv4-primary-keys-cause-index-fragmentation-and-slower-inserts-and-how-do-time-ordered-ids-fix-this",
-  "questionNumber": 1061,
+  "questionNumber": 12,
   "title": "Why can random UUIDv4 primary keys cause index fragmentation and slower inserts versus auto-increment, and how do time-ordered IDs (UUIDv7 / ULID) fix this while staying globally unique?",
   "shortTitle": "Why can random UUIDv4 primary keys cause index fragmentation and slower inserts, and how do time-ordered IDs fix this",
   "chapterNumber": 13,

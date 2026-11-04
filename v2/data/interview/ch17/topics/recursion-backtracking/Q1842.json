@@ -1,7 +1,7 @@
 {
   "id": "Q1842",
   "slug": "subset-sum-can-a-subset-reach-an-exact-target",
-  "questionNumber": 1842,
+  "questionNumber": 23,
   "title": "Given an array of non-negative integers and a target, determine whether any subset sums exactly to the target. Explain the dynamic programming boolean table, the reverse-iteration single-row optimisation, the complexity, and a banking use case.",
   "shortTitle": "Subset Sum (Can a Subset Reach an Exact Target)",
   "chapterNumber": 17,

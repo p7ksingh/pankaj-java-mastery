@@ -1,7 +1,7 @@
 {
   "id": "Q1520",
   "slug": "lowest-common-ancestor-of-n-nodes-deepest-node-whose-subtree-contains-all-targets",
-  "questionNumber": 1520,
+  "questionNumber": 10,
   "title": "Given a tree and a non-empty list of employees/nodes (which may contain duplicates), return the deepest node whose subtree contains ALL of them. Deduplicate the targets, then in postorder count target nodes in each subtree (including the root), returning the deepest node containing every distinct target in O(N + K) time and O(N) space. Follow-up: if the tree is fixed but you receive thousands of queries, separate preprocessing cost from per-query cost using an Euler-tour and sparse table for O(1) LCA per pair.",
   "shortTitle": "Lowest Common Ancestor of N Nodes — deepest node whose subtree contains all targets",
   "chapterNumber": 17,

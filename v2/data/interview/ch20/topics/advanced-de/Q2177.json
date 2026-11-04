@@ -1,7 +1,7 @@
 {
   "id": "Q2177",
   "slug": "what-is-amazon-msk-vs-kinesis-data-streams-and-when-do-you-choose-each",
-  "questionNumber": 2177,
+  "questionNumber": 24,
   "title": "What is Amazon MSK (Managed Streaming for Apache Kafka) vs Kinesis Data Streams — MSK is managed Kafka (open-source, portable, consumer-group model) vs Kinesis is AWS-native (simpler, shard-based, deeper AWS integration) — and when do you choose each?",
   "shortTitle": "What is Amazon MSK vs Kinesis Data Streams, and when do you choose each",
   "chapterNumber": 20,

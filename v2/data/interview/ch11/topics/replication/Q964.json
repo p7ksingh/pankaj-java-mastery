@@ -1,7 +1,7 @@
 {
   "id": "Q964",
   "slug": "scenario-partition-leaders-are-moving-frequently-what-is-the-impact-and-how-do-you-stabilize-it",
-  "questionNumber": 964,
+  "questionNumber": 10,
   "title": "(Scenario) Partition leaders are moving frequently (due to rebalances, broker instability, or maintenance) — what is the impact: increased produce/consume latency (clients must refresh metadata and retry on NOT_LEADER_FOR_PARTITION), more errors and retries, consumer lag increases during leader transitions, higher broker load from coordination (metadata updates, ISR changes), and risk to durability if replicas fall out of ISR leaving fewer in-sync copies — and how do you stabilize it (fix the root cause of instability, avoid unnecessary preferred-leader elections, monitor leader count per broker)?",
   "shortTitle": "(Scenario) Partition leaders are moving frequently — what is the impact, and how do you stabilize it?",
   "chapterNumber": 11,

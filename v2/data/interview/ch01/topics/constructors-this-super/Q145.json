@@ -1,7 +1,7 @@
 {
   "id": "Q145",
   "slug": "what-are-the-rules-for-this-and-super-in-constructors-and-what-happens-if-the-superclass-has-no-no-arg-constructor",
-  "questionNumber": 145,
+  "questionNumber": 1,
   "title": "What are the rules for `this()` and `super()` calls in constructors — each must be the FIRST statement so you can use at most one per constructor, `super()` is implicitly inserted if you write neither, and constructor chaining via `this(...)` delegates to another constructor in the same class — and what happens if the superclass has no no-arg constructor (compile error unless you explicitly call `super(args)`)?",
   "shortTitle": "What are the rules for this() and super() in constructors?",
   "chapterNumber": 1,

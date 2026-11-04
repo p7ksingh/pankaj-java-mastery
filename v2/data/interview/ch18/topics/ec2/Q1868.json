@@ -1,7 +1,7 @@
 {
   "id": "Q1868",
   "slug": "scenario-cannot-ssh-into-an-ec2-instance",
-  "questionNumber": 1868,
+  "questionNumber": 3,
   "title": "(Scenario) You cannot SSH into an EC2 instance — how do you troubleshoot (security group inbound rule, NACL, route table/IGW, public IP vs private, key pair, OS firewall, instance state/health)?",
   "shortTitle": "Scenario — Cannot SSH into an EC2 Instance",
   "chapterNumber": 18,

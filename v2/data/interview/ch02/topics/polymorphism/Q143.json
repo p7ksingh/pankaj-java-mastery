@@ -1,7 +1,7 @@
 {
   "id": "Q143",
   "slug": "polymorphism-compile-time-vs-runtime-with-examples-and-why-it-is-useful",
-  "questionNumber": 143,
+  "questionNumber": 4,
   "title": "Explain polymorphism (compile-time overloading vs runtime overriding) with examples and why it is useful.",
   "shortTitle": "What is polymorphism and why is it useful?",
   "chapterNumber": 2,

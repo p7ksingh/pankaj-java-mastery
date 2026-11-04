@@ -1,7 +1,7 @@
 {
   "id": "Q180",
   "slug": "why-throwreturn-in-finally-is-dangerous-silently-swallows-trys-exception",
-  "questionNumber": 180,
+  "questionNumber": 2,
   "title": "Why is throwing an exception or returning inside a finally block dangerous — it silently swallows the try/catch exception — and why should production code never return/throw from finally?",
   "shortTitle": "Why is throw/return in finally dangerous?",
   "chapterNumber": 4,

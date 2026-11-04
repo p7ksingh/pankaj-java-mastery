@@ -1,7 +1,7 @@
 {
   "id": "Q155",
   "slug": "entryset-vs-keysetget-why-entryset-is-faster-for-iteration",
-  "questionNumber": 155,
+  "questionNumber": 8,
   "title": "entrySet() vs keySet()+get() — why entrySet is faster for iteration",
   "shortTitle": "Why is entrySet() faster than keySet()+get() for iteration?",
   "chapterNumber": 3,

@@ -1,7 +1,7 @@
 {
   "id": "Q1714",
   "slug": "find-the-missing-number-one-number-missing-from-0n",
-  "questionNumber": 1714,
+  "questionNumber": 3,
   "title": "Given an array of `n` distinct numbers taken from the range `0` to `n`, exactly one number in that range is missing. Find the missing number in O(n) time and O(1) space.",
   "shortTitle": "Find the Missing Number (One Number Missing from 0..n)",
   "chapterNumber": 17,

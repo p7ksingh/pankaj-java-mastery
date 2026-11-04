@@ -1,7 +1,7 @@
 {
   "id": "Q1667",
   "slug": "remove-duplicates-from-a-sorted-structure-two-pointers-in-place",
-  "questionNumber": 1667,
+  "questionNumber": 14,
   "title": "Given a sorted array (or a sorted linked list), remove the duplicate elements in place so that each element appears only once, and return the new length (or the de-duplicated list). Solve it without allocating a second structure. (LeetCode: Remove Duplicates from Sorted List / Remove Duplicates from Sorted Array)",
   "shortTitle": "Remove Duplicates from a Sorted Structure (Two Pointers, In Place)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1727",
   "slug": "reverse-level-order-traversal-bottom-up-level-order",
-  "questionNumber": 1727,
+  "questionNumber": 88,
   "title": "Given the root of a binary tree, return its node values level by level but from the bottom level up to the root, left to right within each level.",
   "shortTitle": "Reverse Level Order Traversal (Bottom-up Level Order)",
   "chapterNumber": 17,

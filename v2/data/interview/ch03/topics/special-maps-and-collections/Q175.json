@@ -1,7 +1,7 @@
 {
   "id": "Q175",
   "slug": "identityhashmap-reference-equality-instead-of-equals",
-  "questionNumber": 175,
+  "questionNumber": 2,
   "title": "IdentityHashMap — reference equality (==) instead of equals()",
   "shortTitle": "What is IdentityHashMap?",
   "chapterNumber": 3,

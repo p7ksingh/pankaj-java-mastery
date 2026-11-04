@@ -1,7 +1,7 @@
 {
   "id": "Q951",
   "slug": "a-rolling-deployment-triggers-a-rebalance-for-every-pod-restart-why-does-it-hurt-more-than-expected-and-how-do-you-fix-it",
-  "questionNumber": 951,
+  "questionNumber": 4,
   "title": "A rolling deployment triggers a rebalance for every pod restart — why does it hurt more than expected and how do you fix it?",
   "shortTitle": "A rolling deployment triggers a rebalance for every pod restart — why does it hurt more than expected, and how do you fix it?",
   "chapterNumber": 11,

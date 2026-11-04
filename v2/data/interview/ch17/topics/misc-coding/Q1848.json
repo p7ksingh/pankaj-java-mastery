@@ -1,7 +1,7 @@
 {
   "id": "Q1848",
   "slug": "best-time-to-buy-and-sell-stock-single-and-multiple-transactions",
-  "questionNumber": 1848,
+  "questionNumber": 51,
   "title": "Given daily prices, maximise profit from buying and selling a stock, covering the single-transaction case and the unlimited-transaction case. Explain both algorithms, the operations, the complexity, and a banking use case.",
   "shortTitle": "Best Time to Buy and Sell Stock (Single and Multiple Transactions)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q715",
   "slug": "why-the-n1-problem-is-a-general-distributed-pattern-not-just-a-hibernate-issue",
-  "questionNumber": 715,
+  "questionNumber": 5,
   "title": "Why is the N+1 problem not just a Hibernate issue but a general distributed pattern (1 initial call + N dependent calls — e.g. fetch 100 users then call another service once per user = 1 + 100 network calls), why is the network version often worse than the DB version (higher latency, more failure modes), and how do you fix it (batch/bulk endpoints, a single aggregated call, caching, parallel fan-out with bounded concurrency)?",
   "shortTitle": "Why the N+1 problem is a general distributed pattern, not just a Hibernate issue",
   "chapterNumber": 10,

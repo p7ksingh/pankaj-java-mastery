@@ -1,7 +1,7 @@
 {
   "id": "Q1749",
   "slug": "subsets-with-duplicates-generate-unique-subsets-when-elements-repeat",
-  "questionNumber": 1749,
+  "questionNumber": 89,
   "title": "Given a set of numbers that may contain duplicates, generate all possible unique subsets, with no two subsets identical. Explain how sorting plus a controlled expansion of only the newly added subsets prevents duplicate subsets.",
   "shortTitle": "Subsets With Duplicates (Generate Unique Subsets When Elements Repeat)",
   "chapterNumber": 17,

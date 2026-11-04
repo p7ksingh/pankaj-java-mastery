@@ -1,7 +1,7 @@
 {
   "id": "Q1794",
   "slug": "minimum-subset-sum-difference-split-into-two-subsets-with-the-smallest-difference",
-  "questionNumber": 1794,
+  "questionNumber": 21,
   "title": "Given a set of positive numbers, partition them into two subsets so that the absolute difference of their sums is minimized. Return that minimum difference. Explain the 0/1 Knapsack DP technique, the complexity, and a banking use case.",
   "shortTitle": "Minimum Subset Sum Difference (Split into Two Subsets with the Smallest Difference)",
   "chapterNumber": 17,

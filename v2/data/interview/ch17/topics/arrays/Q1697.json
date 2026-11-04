@@ -1,7 +1,7 @@
 {
   "id": "Q1697",
   "slug": "maximum-subarray-sum-kadanes-algorithm",
-  "questionNumber": 1697,
+  "questionNumber": 74,
   "title": "Given an array of integers that may include negative numbers, find the maximum sum obtainable from any contiguous non-empty subarray. Solve it with Kadane's algorithm and demonstrate with a complete banking mini-project.",
   "shortTitle": "Maximum Subarray Sum (Kadane's Algorithm)",
   "chapterNumber": 17,

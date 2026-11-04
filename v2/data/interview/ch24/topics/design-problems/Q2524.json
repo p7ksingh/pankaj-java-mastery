@@ -1,7 +1,7 @@
 {
   "id": "Q2524",
   "slug": "design-a-video-streaming-platform-like-youtubenetflix",
-  "questionNumber": 2524,
+  "questionNumber": 11,
   "title": "Design a Video Streaming Platform (like YouTube/Netflix) — video upload and transcoding pipeline, CDN for delivery, adaptive bitrate streaming (HLS/DASH), recommendation engine, view counting at scale.",
   "shortTitle": "Design a Video Streaming Platform (like YouTube/Netflix)",
   "chapterNumber": 24,

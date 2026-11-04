@@ -1,7 +1,7 @@
 {
   "id": "Q106",
   "slug": "what-are-compressed-oops-and-why-can-a-33gb-heap-use-more-memory-than-a-31gb-heap",
-  "questionNumber": 106,
+  "questionNumber": 4,
   "title": "What are Compressed Oops, why are they enabled by default below a 32GB heap, and why can going from 31GB to 33GB heap actually increase memory usage?",
   "shortTitle": "What are Compressed Oops?",
   "chapterNumber": 1,

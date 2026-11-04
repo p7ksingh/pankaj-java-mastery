@@ -1,7 +1,7 @@
 {
   "id": "Q293",
   "slug": "troubleshoot-high-thread-contention-thread-dumps-jfr-root-cause-analysis",
-  "questionNumber": 293,
+  "questionNumber": 1,
   "title": "Troubleshoot high thread contention — thread dumps, JFR, root cause analysis",
   "shortTitle": "How to troubleshoot thread contention?",
   "chapterNumber": 5,

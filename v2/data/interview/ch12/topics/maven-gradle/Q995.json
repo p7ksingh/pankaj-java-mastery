@@ -1,7 +1,7 @@
 {
   "id": "Q995",
   "slug": "why-we-use-maven-dependency-management-structure-lifecycle-bom",
-  "questionNumber": 995,
+  "questionNumber": 3,
   "title": "Why do we use Maven (dependency management, standard structure, build automation, lifecycle, BOM version management)?",
   "shortTitle": "Why we use Maven — dependency management, structure, lifecycle, BOM",
   "chapterNumber": 12,

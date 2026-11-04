@@ -1,7 +1,7 @@
 {
   "id": "Q2158",
   "slug": "how-do-you-read-cdc-data-in-flink-sql-and-how-does-flink-interpret-insertupdatedelete-changelog-events",
-  "questionNumber": 2158,
+  "questionNumber": 19,
   "title": "How do you read CDC (Change Data Capture) data in Flink SQL — using CDC connectors like `'connector' = 'mysql-cdc'` or `'format' = 'debezium-json'` / `'canal-json'` — and how does Flink interpret INSERT/UPDATE/DELETE changelog events?",
   "shortTitle": "How do you read CDC data in Flink SQL and how does Flink interpret INSERT/UPDATE/DELETE changelog events",
   "chapterNumber": 20,

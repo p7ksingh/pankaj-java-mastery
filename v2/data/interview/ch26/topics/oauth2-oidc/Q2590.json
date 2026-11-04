@@ -1,7 +1,7 @@
 {
   "id": "Q2590",
   "slug": "pkce-proof-key-for-code-exchange-for-mobile-and-spa-clients",
-  "questionNumber": 2590,
+  "questionNumber": 3,
   "title": "What is PKCE (Proof Key for Code Exchange) — an extension for mobile/SPA apps that cannot safely store a client secret: generate a code_verifier + code_challenge, send challenge in auth request, send verifier in token exchange — prevents authorization code interception?",
   "shortTitle": "PKCE (Proof Key for Code Exchange) for Mobile and SPA Clients",
   "chapterNumber": 26,

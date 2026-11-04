@@ -1,7 +1,7 @@
 {
   "id": "Q1368",
   "slug": "what-is-a-string-in-java",
-  "questionNumber": 1368,
+  "questionNumber": 1,
   "title": "What is a String in Java — a sequence of characters, immutable (cannot be changed after creation).",
   "shortTitle": "What is a String in Java",
   "chapterNumber": 17,

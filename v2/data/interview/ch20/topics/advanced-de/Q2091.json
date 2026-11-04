@@ -1,7 +1,7 @@
 {
   "id": "Q2091",
   "slug": "pandas-udf-vectorized-udf",
-  "questionNumber": 2091,
+  "questionNumber": 12,
   "title": "What is a Pandas UDF (vectorized UDF) — it transfers data in batches via Apache Arrow instead of row-by-row, and your function operates on a `pd.Series`, giving 10-100x speedup over plain UDFs — and how do you enable Arrow (`spark.sql.execution.arrow.pyspark.enabled=true`)?",
   "shortTitle": "Pandas UDF (vectorized UDF)",
   "chapterNumber": 20,

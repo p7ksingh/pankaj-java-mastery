@@ -1,7 +1,7 @@
 {
   "id": "Q628",
   "slug": "jpa-projections-three-forms-interface-dto-constructor-dynamic-why-they-beat-full-entity",
-  "questionNumber": 628,
+  "questionNumber": 2,
   "title": "What are JPA projections and their three forms (interface-based, class-based/DTO with constructor expression, dynamic), and why do they beat loading the full entity?",
   "shortTitle": "Interface vs DTO vs dynamic projections?",
   "chapterNumber": 9,

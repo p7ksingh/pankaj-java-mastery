@@ -1,7 +1,7 @@
 {
   "id": "Q1540",
   "slug": "number-of-islands-dfsbfs-grid-traversal",
-  "questionNumber": 1540,
+  "questionNumber": 5,
   "title": "Given a two-dimensional grid of '1's (land) and '0's (water), count the number of islands, where an island is formed by connecting adjacent land cells horizontally or vertically and is surrounded by water.",
   "shortTitle": "Number of Islands — DFS/BFS grid traversal",
   "chapterNumber": 17,

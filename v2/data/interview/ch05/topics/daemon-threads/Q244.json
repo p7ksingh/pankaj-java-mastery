@@ -1,7 +1,7 @@
 {
   "id": "Q244",
   "slug": "jvm-doesnt-exit-after-main-non-daemon-threads-keep-it-alive-clean-shutdown",
-  "questionNumber": 244,
+  "questionNumber": 2,
   "title": "JVM doesn't exit after main() — non-daemon threads keep it alive, clean shutdown",
   "shortTitle": "Why does JVM not exit after main()?",
   "chapterNumber": 5,

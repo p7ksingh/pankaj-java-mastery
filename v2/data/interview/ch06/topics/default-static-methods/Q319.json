@@ -1,7 +1,7 @@
 {
   "id": "Q319",
   "slug": "default-method-conflict-diamond-problem-resolution-rules-interfacenamesupermethod",
-  "questionNumber": 319,
+  "questionNumber": 2,
   "title": "How do you resolve the conflict when a class implements two interfaces that both declare the same default method?",
   "shortTitle": "What happens with default method conflicts?",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q124",
   "slug": "what-are-the-bitwise-and-shift-operators-and-why-does-matter-for-unsigned-bits",
-  "questionNumber": 124,
+  "questionNumber": 4,
   "title": "What are the bitwise operators (`&`, `|`, `^`, `~`) and the shift operators — `<<` (left shift), `>>` (arithmetic/signed right shift, preserves sign), and `>>>` (logical/unsigned right shift, fills with 0) — and why does `>>>` matter for treating an `int`/`long` as unsigned bits?",
   "shortTitle": "What are the bitwise and shift operators?",
   "chapterNumber": 1,

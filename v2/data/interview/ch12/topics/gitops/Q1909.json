@@ -1,7 +1,7 @@
 {
   "id": "Q1909",
   "slug": "gitops-argocdflux-versus-push-based-jenkins-deploys",
-  "questionNumber": 1909,
+  "questionNumber": 1,
   "title": "What is GitOps (ArgoCD/Flux) — Git as the single source of truth with a controller continuously reconciling the cluster to the declared manifests (pull-based) — and how does it differ from a push-based Jenkins deploy (auditability, automatic drift correction, easy rollback via `git revert`)?",
   "shortTitle": "GitOps (ArgoCD/Flux) Versus Push-Based Jenkins Deploys",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q999",
   "slug": "gits-four-locations-for-code-and-the-commands-that-move-changes-between-them",
-  "questionNumber": 999,
+  "questionNumber": 2,
   "title": "What are Git's four locations for code (working directory, staging area, local repository, remote repository), and which commands move changes between them (`add`, `commit`, `push`, `fetch`/`pull`)?",
   "shortTitle": "Git's four locations for code and the commands that move changes between them",
   "chapterNumber": 12,

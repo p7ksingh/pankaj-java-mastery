@@ -1,7 +1,7 @@
 {
   "id": "Q1693",
   "slug": "minimum-window-substring-smallest-window-containing-all-required-characters",
-  "questionNumber": 1693,
+  "questionNumber": 42,
   "title": "Given a string s and a pattern p, find the smallest substring of s that contains all the characters of p including their required counts, returning an empty result if none exists. Solve it with the sliding window pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Minimum Window Substring (Smallest Window Containing All Required Characters)",
   "chapterNumber": 17,

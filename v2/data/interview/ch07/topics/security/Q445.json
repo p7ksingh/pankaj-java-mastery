@@ -1,7 +1,7 @@
 {
   "id": "Q445",
   "slug": "oauth2-resource-server-reactive-webflux-websocket-live-prices-and-declarative-http-clients",
-  "questionNumber": 445,
+  "questionNumber": 3,
   "title": "How do OAuth2/OIDC work in Spring Security? What is the declarative HTTP client (@HttpExchange)? What is WebFlux (Mono/Flux)? How do WebSocket/SSE work? What is GraphQL in Spring? What is Spring AI? How does Quarkus differ from Spring Boot?",
   "shortTitle": "What is OAuth2 Resource Server and WebFlux?",
   "chapterNumber": 7,

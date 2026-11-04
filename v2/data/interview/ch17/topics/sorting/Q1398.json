@@ -1,7 +1,7 @@
 {
   "id": "Q1398",
   "slug": "implement-insertion-sort",
-  "questionNumber": 1398,
+  "questionNumber": 5,
   "title": "Implement Insertion Sort — pick each element and insert it in its correct position in the already sorted part; O(n²) but fast for nearly sorted data.",
   "shortTitle": "Implement Insertion Sort",
   "chapterNumber": 17,

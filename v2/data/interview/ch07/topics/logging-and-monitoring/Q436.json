@@ -1,7 +1,7 @@
 {
   "id": "Q436",
   "slug": "logging-slf4j-logback-mdc-correlation-correct-exception-logging-async-appender",
-  "questionNumber": 436,
+  "questionNumber": 2,
   "title": "How is logging implemented in Spring Boot? What is SLF4J vs Logback? How do you centralize logs (ELK/Loki)? How do you change log levels at runtime? How do you handle MDC correlation IDs and PII masking? Why does heavy logging cause latency spikes?",
   "shortTitle": "How does logging work in Spring Boot?",
   "chapterNumber": 7,

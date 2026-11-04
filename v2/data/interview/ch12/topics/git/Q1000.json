@@ -1,7 +1,7 @@
 {
   "id": "Q1000",
   "slug": "git-merge-vs-git-rebase-and-what-stash-and-cherry-pick-do",
-  "questionNumber": 1000,
+  "questionNumber": 3,
   "title": "What is the difference between `git merge` and `git rebase` for integrating a branch (merge commit preserving history vs replaying commits for a linear history), and what do `stash` and `cherry-pick` do?",
   "shortTitle": "`git merge` vs `git rebase`, and what `stash` and `cherry-pick` do",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q673",
   "slug": "open-session-in-view-osiv-why-it-hides-lazyinitializationexception-and-is-discouraged-in-production",
-  "questionNumber": 673,
+  "questionNumber": 5,
   "title": "What is Open-Session-In-View (OSIV)? Why does it hide LazyInitializationException, and why is it discouraged in production?",
   "shortTitle": "What is Open-Session-In-View and why disable it?",
   "chapterNumber": 9,

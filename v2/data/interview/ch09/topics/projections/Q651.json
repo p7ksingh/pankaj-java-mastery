@@ -1,7 +1,7 @@
 {
   "id": "Q651",
   "slug": "jpa-projections-interface-classdto-constructor-dynamic-generic-form",
-  "questionNumber": 651,
+  "questionNumber": 4,
   "title": "What are the three forms of JPA projections (interface-based, class/DTO constructor, dynamic generic), how does each work, and when do you use which?",
   "shortTitle": "Interface, class/DTO constructor, dynamic generic projections?",
   "chapterNumber": 9,

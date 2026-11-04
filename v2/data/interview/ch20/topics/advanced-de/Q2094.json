@@ -1,7 +1,7 @@
 {
   "id": "Q2094",
   "slug": "higher-order-array-functions-transform-filter-aggregate-exists-forall",
-  "questionNumber": 2094,
+  "questionNumber": 14,
   "title": "What are higher-order array functions — `transform`, `filter`, `aggregate`, `exists`, `forall` (Spark 2.4+) — that let you operate on array elements WITHOUT exploding, and when are they preferred (avoid row multiplication for simple transforms/checks)?",
   "shortTitle": "Higher-order array functions — transform, filter, aggregate, exists, forall",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q2542",
   "slug": "build-vs-buy",
-  "questionNumber": 2542,
+  "questionNumber": 14,
   "title": "Build vs Buy — how do you decide whether to build a component in-house or adopt a third-party service/library (core differentiator vs commodity, total cost of ownership, integration/lock-in/data-sovereignty risks, team expertise, time to market) — and why is \"we can build it better\" often the most expensive decision?",
   "shortTitle": "Build vs Buy",
   "chapterNumber": 24,

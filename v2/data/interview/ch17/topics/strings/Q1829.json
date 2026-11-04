@@ -1,7 +1,7 @@
 {
   "id": "Q1829",
   "slug": "word-search-with-a-trie-find-which-dictionary-words-appear-in-a-character-grid",
-  "questionNumber": 1829,
+  "questionNumber": 60,
   "title": "Given a grid of characters and a set of dictionary words, find all dictionary words that can be formed by a path of adjacent cells without reusing a cell. Explain how the Trie pattern accelerates the search, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Word Search with a Trie (Find Which Dictionary Words Appear in a Character Grid)",
   "chapterNumber": 17,

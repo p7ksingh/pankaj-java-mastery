@@ -1,7 +1,7 @@
 {
   "id": "Q1324",
   "slug": "what-are-the-different-outofmemoryerror-types-and-what-does-each-indicate",
-  "questionNumber": 1324,
+  "questionNumber": 18,
   "title": "What are the different `OutOfMemoryError` types (Java heap space, GC overhead limit exceeded, Metaspace, Direct buffer memory, unable to create native thread, Compressed class space), and what does each indicate?",
   "shortTitle": "What are the different OutOfMemoryError types, and what does each indicate?",
   "chapterNumber": 16,

@@ -1,7 +1,7 @@
 {
   "id": "Q392",
   "slug": "stream-gatherers-jep-485-java-24-custom-stateful-intermediate-operations",
-  "questionNumber": 392,
+  "questionNumber": 2,
   "title": "What are Stream Gatherers (Stream.gather, JEP 485), why were they needed, and what do they enable (windowing, batching, folding)?",
   "shortTitle": "Stream Gatherers (JEP 485, Java 24) — custom stateful intermediate operations",
   "chapterNumber": 6,

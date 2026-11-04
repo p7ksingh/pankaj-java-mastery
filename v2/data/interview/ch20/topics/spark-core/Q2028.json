@@ -1,7 +1,7 @@
 {
   "id": "Q2028",
   "slug": "spark-storage-levels",
-  "questionNumber": 2028,
+  "questionNumber": 15,
   "title": "Explain Spark's storage levels — `MEMORY_ONLY` (fast but evicts if full, must recompute), `MEMORY_AND_DISK` (spills to disk if memory is insufficient), `DISK_ONLY`, `MEMORY_ONLY_2` / `MEMORY_AND_DISK_2` (replicated for fault tolerance), `OFF_HEAP` — and when to choose each.",
   "shortTitle": "Spark storage levels",
   "chapterNumber": 20,

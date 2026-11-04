@@ -1,7 +1,7 @@
 {
   "id": "Q1827",
   "slug": "course-schedule-cycle-check-detect-a-dependency-cycle-with-dfs-colouring",
-  "questionNumber": 1827,
+  "questionNumber": 22,
   "title": "Given a number of courses and prerequisite pairs, determine whether the dependency graph contains a cycle, using a depth-first colouring approach. Explain this depth-first variant of the Topological Sort pattern, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Course Schedule Cycle Check (Detect a Dependency Cycle with DFS Colouring)",
   "chapterNumber": 17,

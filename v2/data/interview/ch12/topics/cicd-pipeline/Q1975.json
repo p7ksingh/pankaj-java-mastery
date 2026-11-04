@@ -1,7 +1,7 @@
 {
   "id": "Q1975",
   "slug": "what-an-error-budget-is-and-how-teams-use-it",
-  "questionNumber": 1975,
+  "questionNumber": 52,
   "title": "What is an error budget — the amount of unreliability you are ALLOWED before you must freeze features and fix reliability (if SLO is 99.9%, error budget is 0.1%) — and how do teams use it (if error budget is spent, stop shipping features, focus on reliability)?",
   "shortTitle": "What an error budget is and how teams use it",
   "chapterNumber": 12,

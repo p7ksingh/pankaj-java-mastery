@@ -1,7 +1,7 @@
 {
   "id": "Q2403",
   "slug": "use-streamiterate-with-a-predicate-java-9-to-generate-numbers-from-1-to-100",
-  "questionNumber": 2403,
+  "questionNumber": 17,
   "title": "Use `Stream.iterate` with a predicate (Java 9) to generate numbers from 1 to 100: `Stream.iterate(1, n -> n <= 100, n -> n + 1)`.",
   "shortTitle": "Use Stream.iterate with a predicate (Java 9) to generate numbers from 1 to 100",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q1726",
   "slug": "binary-tree-level-order-traversal-bfs-level-by-level",
-  "questionNumber": 1726,
+  "questionNumber": 15,
   "title": "Given the root of a binary tree, return its node values grouped by level, from top to bottom and left to right within each level. Explain the Tree Breadth First Search pattern.",
   "shortTitle": "Binary Tree Level Order Traversal (BFS Level by Level)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1539",
   "slug": "task-scheduler-most-frequent-first-with-cooldown",
-  "questionNumber": 1539,
+  "questionNumber": 14,
   "title": "Given a list of tasks represented by characters and a cooldown value N, where the same task must be separated by at least N intervals, return the minimum number of intervals needed to finish all tasks (idle intervals count).",
   "shortTitle": "Task Scheduler — most-frequent-first with cooldown",
   "chapterNumber": 17,

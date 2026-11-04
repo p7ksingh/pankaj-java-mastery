@@ -1,7 +1,7 @@
 {
   "id": "Q1732",
   "slug": "level-order-successor-next-node-in-bfs-order",
-  "questionNumber": 1732,
+  "questionNumber": 19,
   "title": "Given the root of a binary tree and the value of a target node, find its level order successor, the node that appears immediately after the target in a breadth-first traversal. Return null if the target is the last node.",
   "shortTitle": "Level Order Successor (Next Node in BFS Order)",
   "chapterNumber": 17,

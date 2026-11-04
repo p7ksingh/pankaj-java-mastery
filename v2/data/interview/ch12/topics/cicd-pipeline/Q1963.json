@@ -1,7 +1,7 @@
 {
   "id": "Q1963",
   "slug": "immediate-mitigation-and-longer-term-fix-for-ec2-alb-health-check-failures-rds-storage-exhaustion-and-failed-production-deployments",
-  "questionNumber": 1963,
+  "questionNumber": 44,
   "title": "(Scenario) EC2 instances fail ALB health checks / an RDS runs out of storage / a production deployment fails — walk through your immediate mitigation and your longer-term fix.",
   "shortTitle": "Immediate mitigation and longer-term fix for EC2 ALB health-check failures, RDS storage exhaustion, and failed production deployments",
   "chapterNumber": 12,

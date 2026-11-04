@@ -1,7 +1,7 @@
 {
   "id": "Q1436",
   "slug": "encode-and-decode-strings-length-prefixed-serialization",
-  "questionNumber": 1436,
+  "questionNumber": 10,
   "title": "Encode and Decode Strings — design encode/decode for list of strings.",
   "shortTitle": "Encode and Decode Strings — Length-Prefixed Serialization",
   "chapterNumber": 17,

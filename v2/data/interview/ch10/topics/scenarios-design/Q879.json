@@ -1,7 +1,7 @@
 {
   "id": "Q879",
   "slug": "why-can-removing-retries-from-a-payment-service-raise-the-error-rate-yet-improve-reliability",
-  "questionNumber": 879,
+  "questionNumber": 60,
   "title": "(Scenario) A principal engineer suggests removing retries from a payment service — the error rate goes UP but reliability IMPROVES — why (the system stopped using hidden downstream work to make one metric look healthier; failing some requests earlier preserved enough capacity for the system to continue serving the rest, and the dependency recovered faster because it wasn't being hammered by amplified retry traffic)?",
   "shortTitle": "Why can removing retries from a payment service raise the error rate yet improve reliability?",
   "chapterNumber": 10,

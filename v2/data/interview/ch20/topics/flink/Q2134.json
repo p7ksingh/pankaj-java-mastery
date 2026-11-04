@@ -1,7 +1,7 @@
 {
   "id": "Q2134",
   "slug": "what-are-flinks-three-time-semantics",
-  "questionNumber": 2134,
+  "questionNumber": 6,
   "title": "What are Flink's three time semantics (event time = when it happened, processing time = system clock, ingestion time = when it entered the pipeline) and when do you use each?",
   "shortTitle": "What are Flink's three time semantics",
   "chapterNumber": 20,

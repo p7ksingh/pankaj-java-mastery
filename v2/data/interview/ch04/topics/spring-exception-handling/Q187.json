@@ -1,7 +1,7 @@
 {
   "id": "Q187",
   "slug": "controlleradvice-exceptionhandler-global-exception-handling-in-spring-boot-rest",
-  "questionNumber": 187,
+  "questionNumber": 1,
   "title": "How do you handle exceptions globally in Spring Boot REST API using @ControllerAdvice/@RestControllerAdvice, @ExceptionHandler, @ResponseStatus, and ResponseStatusException?",
   "shortTitle": "How does @ControllerAdvice handle exceptions globally?",
   "chapterNumber": 4,

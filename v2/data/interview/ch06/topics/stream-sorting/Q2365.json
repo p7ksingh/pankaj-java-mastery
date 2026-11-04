@@ -1,7 +1,7 @@
 {
   "id": "Q2365",
   "slug": "find-the-kth-largest-element-from-an-unsorted-list-using-streams",
-  "questionNumber": 2365,
+  "questionNumber": 21,
   "title": "Find the Kth largest element from an unsorted list using streams.",
   "shortTitle": "Find the Kth largest element from an unsorted list using streams",
   "chapterNumber": 6,

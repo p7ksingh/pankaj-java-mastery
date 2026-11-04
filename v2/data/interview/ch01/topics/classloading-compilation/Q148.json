@@ -1,7 +1,7 @@
 {
   "id": "Q148",
   "slug": "what-are-packages-the-naming-convention-and-how-do-import-wildcard-import-and-static-import-work",
-  "questionNumber": 148,
+  "questionNumber": 4,
   "title": "What are packages (namespace/directory grouping), the naming convention (reversed domain: `com.company.project.module`), and how do `import`, wildcard import (`import java.util.*`), and static import (`import static java.lang.Math.PI`) work — and why is wildcard import discouraged in production code (namespace pollution, ambiguity)?",
   "shortTitle": "What are packages and how do imports work?",
   "chapterNumber": 1,

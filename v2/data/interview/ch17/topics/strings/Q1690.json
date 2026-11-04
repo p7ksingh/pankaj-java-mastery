@@ -1,7 +1,7 @@
 {
   "id": "Q1690",
   "slug": "longest-substring-with-same-letters-after-replacement-longest-repeating-character-replacement",
-  "questionNumber": 1690,
+  "questionNumber": 41,
   "title": "Given a string and an integer k, find the length of the longest substring you can obtain where all characters are the same after replacing at most k characters. Solve it with the sliding window pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Longest Substring with Same Letters after Replacement (Longest Repeating Character Replacement)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q140",
   "slug": "arraylist-internal-working-dynamic-array-15x-growth-resize-initial-capacity",
-  "questionNumber": 140,
+  "questionNumber": 2,
   "title": "ArrayList internal working — dynamic array, 1.5x growth, resize, initial capacity",
   "shortTitle": "How does ArrayList work internally?",
   "chapterNumber": 3,

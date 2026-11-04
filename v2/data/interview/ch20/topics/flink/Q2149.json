@@ -1,7 +1,7 @@
 {
   "id": "Q2149",
   "slug": "what-is-flinks-failover-strategy",
-  "questionNumber": 2149,
+  "questionNumber": 12,
   "title": "What is Flink's failover strategy — region failover (only restart the failed region/pipeline, not the entire job graph) vs full restart — and why is region failover the default and more efficient?",
   "shortTitle": "What is Flink's failover strategy",
   "chapterNumber": 20,

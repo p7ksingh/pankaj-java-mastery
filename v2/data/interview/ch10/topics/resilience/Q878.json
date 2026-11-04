@@ -1,7 +1,7 @@
 {
   "id": "Q878",
   "slug": "why-does-exponential-backoff-with-jitter-not-rescue-a-bad-retry-policy-and-why-treat-retries-as-a-budget",
-  "questionNumber": 878,
+  "questionNumber": 7,
   "title": "Why does exponential backoff with jitter NOT rescue a bad retry policy (it controls WHEN another attempt happens but doesn't decide WHETHER another attempt should exist — and who in the call chain should OWN the retry decision), and why must retries be treated as a capacity BUDGET rather than free resilience?",
   "shortTitle": "Why does exponential backoff with jitter NOT rescue a bad retry policy, and why treat retries as a budget?",
   "chapterNumber": 10,

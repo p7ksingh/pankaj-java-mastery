@@ -1,7 +1,7 @@
 {
   "id": "Q1918",
   "slug": "optimizing-a-docker-images-size",
-  "questionNumber": 1918,
+  "questionNumber": 5,
   "title": "How do you optimize a Docker image's size (slim/distroless base, multi-stage, fewer layers, `.dockerignore`, no build tools in the final image)?",
   "shortTitle": "Optimizing a Docker Image's Size",
   "chapterNumber": 12,

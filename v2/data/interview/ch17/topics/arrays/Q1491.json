@@ -1,7 +1,7 @@
 {
   "id": "Q1491",
   "slug": "search-in-rotated-sorted-array-decide-which-half-is-sorted",
-  "questionNumber": 1491,
+  "questionNumber": 39,
   "title": "A sorted ascending array of distinct integers is rotated at an unknown pivot. Given a target, return its index or minus one if absent. Run in logarithmic time.",
   "shortTitle": "Search in Rotated Sorted Array — Decide Which Half Is Sorted",
   "chapterNumber": 17,

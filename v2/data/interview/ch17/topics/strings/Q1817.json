@@ -1,7 +1,7 @@
 {
   "id": "Q1817",
   "slug": "minimum-deletions-and-insertions-to-transform-one-string-into-another",
-  "questionNumber": 1817,
+  "questionNumber": 56,
   "title": "Given two strings, find the minimum number of deletions and insertions needed to transform the first string into the second, using only deletions and insertions. Explain how the Longest Common Substring pattern solves it through the longest common subsequence, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Minimum Deletions and Insertions to Transform One String into Another",
   "chapterNumber": 17,

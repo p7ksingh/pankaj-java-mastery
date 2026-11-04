@@ -1,7 +1,7 @@
 {
   "id": "Q1382",
   "slug": "what-is-recursion",
-  "questionNumber": 1382,
+  "questionNumber": 1,
   "title": "What is recursion — a function that calls itself; it needs a base case (when to stop) and a recursive case (when to call itself again).",
   "shortTitle": "What is Recursion?",
   "chapterNumber": 17,

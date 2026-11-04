@@ -1,7 +1,7 @@
 {
   "id": "Q2357",
   "slug": "group-a-list-of-strings-by-their-length-and-count-each-group-into-mapinteger-long",
-  "questionNumber": 2357,
+  "questionNumber": 18,
   "title": "Group a list of strings by their length and count each group → `Map<Integer, Long>` using `groupingBy(String::length, counting())`.",
   "shortTitle": "Group a list of strings by their length and count each group into Map<Integer, Long>",
   "chapterNumber": 6,

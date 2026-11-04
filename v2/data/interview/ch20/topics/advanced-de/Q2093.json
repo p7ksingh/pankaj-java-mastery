@@ -1,7 +1,7 @@
 {
   "id": "Q2093",
   "slug": "explode-vs-explodeouter",
-  "questionNumber": 2093,
+  "questionNumber": 13,
   "title": "What is `explode()` vs `explode_outer()` — `explode` drops rows where the array is null/empty, `explode_outer` keeps them with nulls — and why should you filter and select BEFORE exploding (every row and column before the explode gets multiplied)?",
   "shortTitle": "explode() vs explode_outer()",
   "chapterNumber": 20,

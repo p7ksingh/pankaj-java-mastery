@@ -1,7 +1,7 @@
 {
   "id": "Q1758",
   "slug": "combination-sum-all-combinations-reaching-a-target-with-reuse",
-  "questionNumber": 1758,
+  "questionNumber": 18,
   "title": "Given a set of distinct positive numbers and a target, find all unique combinations that sum to the target, where each number may be used an unlimited number of times. Explain the backtracking technique with a start index that prevents duplicate combinations.",
   "shortTitle": "Combination Sum (All Combinations Reaching a Target with Reuse)",
   "chapterNumber": 17,

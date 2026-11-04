@@ -1,7 +1,7 @@
 {
   "id": "Q274",
   "slug": "java-memory-model-evolution-pre-java-5-broken-jsr-133-java-9-varhandle-java-21",
-  "questionNumber": 274,
+  "questionNumber": 3,
   "title": "Java Memory Model evolution — pre-Java 5 broken, JSR-133, Java 9 VarHandle, Java 21",
   "shortTitle": "How has the Java Memory Model evolved?",
   "chapterNumber": 5,

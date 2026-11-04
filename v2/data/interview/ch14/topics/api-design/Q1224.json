@@ -1,7 +1,7 @@
 {
   "id": "Q1224",
   "slug": "what-is-the-difference-between-cookies-and-sessions-and-when-do-you-use-each",
-  "questionNumber": 1224,
+  "questionNumber": 13,
   "title": "What is the difference between cookies (small ≤4 KB data stored client-side, sent with every request, user-controllable) and sessions (server-side state keyed by a session ID returned in a cookie — larger, more secure), and when do you use each?",
   "shortTitle": "What is the difference between cookies and sessions, and when do you use each",
   "chapterNumber": 14,

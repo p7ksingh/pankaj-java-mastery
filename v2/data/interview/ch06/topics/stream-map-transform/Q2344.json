@@ -1,7 +1,7 @@
 {
   "id": "Q2344",
   "slug": "find-the-first-non-repeating-character-in-a-string-using-chars-and-linkedhashmap",
-  "questionNumber": 2344,
+  "questionNumber": 30,
   "title": "Find the first non-repeating character in a string using `chars()` and `LinkedHashMap`.",
   "shortTitle": "Find the first non-repeating character in a string using chars() and LinkedHashMap",
   "chapterNumber": 6,

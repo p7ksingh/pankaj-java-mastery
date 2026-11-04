@@ -1,7 +1,7 @@
 {
   "id": "Q2012",
   "slug": "transformations-vs-actions-and-lazy-evaluation",
-  "questionNumber": 2012,
+  "questionNumber": 2,
   "title": "What are the two categories of RDD/DataFrame operations — transformations (lazy: `filter`, `map`, `flatMap`, `groupByKey`, `join`, `select`, `sorted`, `distinct`) vs actions (eager, trigger execution: `collect`, `count`, `show`, `saveAsTextFile`, `write`) — and what is lazy evaluation?",
   "shortTitle": "Transformations vs actions and lazy evaluation",
   "chapterNumber": 20,

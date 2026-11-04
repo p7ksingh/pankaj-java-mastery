@@ -1,7 +1,7 @@
 {
   "id": "Q271",
   "slug": "alternate-printing-1a2b3c-two-threads-with-waitnotify",
-  "questionNumber": 271,
+  "questionNumber": 1,
   "title": "Alternate printing: 1,A,2,B,3,C — two threads with wait/notify",
   "shortTitle": "Two threads print 1,A,2,B,3,C alternately?",
   "chapterNumber": 5,

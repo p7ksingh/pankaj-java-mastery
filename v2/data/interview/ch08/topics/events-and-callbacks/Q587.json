@@ -1,7 +1,7 @@
 {
   "id": "Q587",
   "slug": "readonly-optimization-and-transactionaleventlistener-phases",
-  "questionNumber": 587,
+  "questionNumber": 2,
   "title": "What does readOnly=true optimize? What are the phases of @TransactionalEventListener (BEFORE_COMMIT, AFTER_COMMIT, AFTER_ROLLBACK)?",
   "shortTitle": "What is readOnly optimization and @TransactionalEventListener phases?",
   "chapterNumber": 8,

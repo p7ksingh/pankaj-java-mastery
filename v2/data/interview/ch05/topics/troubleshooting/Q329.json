@@ -1,7 +1,7 @@
 {
   "id": "Q329",
   "slug": "capturing-and-reading-a-thread-dump-jstack-kill-3-jcmd-and-interpreting-states-and-lock-ownership",
-  "questionNumber": 329,
+  "questionNumber": 5,
   "title": "How do you capture a thread dump and how do you read it? Explain jstack, kill -3 and jcmd, and how to interpret thread name, state, stack trace, lock ownership, and the deadlock section.",
   "shortTitle": "How to capture and read a thread dump?",
   "chapterNumber": 5,

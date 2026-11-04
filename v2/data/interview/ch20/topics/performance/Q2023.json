@@ -1,7 +1,7 @@
 {
   "id": "Q2023",
   "slug": "how-aqe-handles-data-skew-and-when-you-still-need-salting",
-  "questionNumber": 2023,
+  "questionNumber": 1,
   "title": "How does AQE handle data skew — it detects skewed shuffle partitions (via `skewedPartitionFactor` and `skewedPartitionThresholdInBytes`), splits them into smaller pieces, and replicates the other side — and when might you still need manual salting?",
   "shortTitle": "How AQE handles data skew (and when you still need salting)",
   "chapterNumber": 20,

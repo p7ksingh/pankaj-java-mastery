@@ -1,7 +1,7 @@
 {
   "id": "Q2211",
   "slug": "what-is-code-coverage-and-why-100-is-not-always-the-goal",
-  "questionNumber": 2211,
+  "questionNumber": 9,
   "title": "What is code coverage — how much of your code is tested (line coverage, branch coverage, path coverage) — and why is 100% coverage NOT always the goal (tests can be meaningless even with high coverage; focus on testing IMPORTANT logic)?",
   "shortTitle": "What is code coverage and why 100% is not always the goal",
   "chapterNumber": 21,

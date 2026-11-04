@@ -1,7 +1,7 @@
 {
   "id": "Q135",
   "slug": "what-are-the-essential-string-methods-and-why-is-every-string-method-non-mutating",
-  "questionNumber": 135,
+  "questionNumber": 11,
   "title": "What are the essential `String` methods every developer should know — `charAt`, `substring`, `indexOf`/`lastIndexOf`, `contains`, `startsWith`/`endsWith`, `replace`/`replaceAll`, `split`, `trim` vs `strip`, `toUpperCase`/`toLowerCase`, `toCharArray`, `getBytes(Charset)`, `compareTo`, `String.format`/`formatted`, and `String.join` — and why is every method non-mutating (returns a new String)?",
   "shortTitle": "What are the essential String methods?",
   "chapterNumber": 1,

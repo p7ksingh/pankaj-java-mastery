@@ -1,7 +1,7 @@
 {
   "id": "Q2406",
   "slug": "collect-employees-into-an-array-using-toarrayemployeenew",
-  "questionNumber": 2406,
+  "questionNumber": 19,
   "title": "Collect employees into an array using `toArray(Employee[]::new)`.",
   "shortTitle": "Collect employees into an array using toArray(Employee[]::new)",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q2399",
   "slug": "create-a-stream-of-fixed-values-using-streamofa-b-c",
-  "questionNumber": 2399,
+  "questionNumber": 13,
   "title": "Create a stream of fixed values using `Stream.of(\"A\", \"B\", \"C\")`.",
   "shortTitle": "Create a stream of fixed values using Stream.of(\"A\", \"B\", \"C\")",
   "chapterNumber": 6,

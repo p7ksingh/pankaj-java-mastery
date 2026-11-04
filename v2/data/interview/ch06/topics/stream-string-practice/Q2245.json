@@ -1,7 +1,7 @@
 {
   "id": "Q2245",
   "slug": "given-a-list-of-sentences-split-each-into-words-and-return-a-flat-list-of-all-unique-words",
-  "questionNumber": 2245,
+  "questionNumber": 6,
   "title": "Given a list of sentences, split each into words and return a flat list of all unique words.",
   "shortTitle": "Given a list of sentences, split each into words and return a flat list of all unique words",
   "chapterNumber": 6,

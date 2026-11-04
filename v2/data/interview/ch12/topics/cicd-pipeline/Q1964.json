@@ -1,7 +1,7 @@
 {
   "id": "Q1964",
   "slug": "identifying-a-deploy-as-the-cause-of-a-latency-spike-by-comparing-before-vs-after-then-restoring-service-safely",
-  "questionNumber": 1964,
+  "questionNumber": 45,
   "title": "(Scenario) A deployment suddenly increases API latency — how do you identify the root cause by comparing BEFORE vs AFTER the release (application metrics, distributed traces, DB performance, CPU/memory, GC activity, external dependencies, config changes, logs), and once the deploy is confirmed as the cause, how do you restore service safely using the org's rollback/deployment strategy?",
   "shortTitle": "Identifying a deploy as the cause of a latency spike by comparing BEFORE vs AFTER, then restoring service safely",
   "chapterNumber": 12,

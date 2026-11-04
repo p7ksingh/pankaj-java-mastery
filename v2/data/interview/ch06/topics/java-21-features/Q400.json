@@ -1,7 +1,7 @@
 {
   "id": "Q400",
   "slug": "text-blocks-multi-line-strings-without-escaping-for-jsonsqlhtml",
-  "questionNumber": 400,
+  "questionNumber": 8,
   "title": "What are Text Blocks, and when are they useful (JSON/SQL/HTML without escaping)?",
   "shortTitle": "What are text blocks?",
   "chapterNumber": 6,

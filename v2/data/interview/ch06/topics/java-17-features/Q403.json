@@ -1,7 +1,7 @@
 {
   "id": "Q403",
   "slug": "java-17-lts-features-records-sealed-classes-pattern-matching-instanceof-switch-expressions-text-blocks",
-  "questionNumber": 403,
+  "questionNumber": 3,
   "title": "What did Java 17 add overall, and why do teams adopt it (LTS stability + modern features)?",
   "shortTitle": "What are Java 17 LTS features?",
   "chapterNumber": 6,

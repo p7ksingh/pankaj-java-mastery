@@ -1,7 +1,7 @@
 {
   "id": "Q430",
   "slug": "streamconcatab-vs-streamofabflatmapidentity-trade-offs-for-2-streams",
-  "questionNumber": 430,
+  "questionNumber": 4,
   "title": "When should you merge two streams with Stream.concat(a, b) versus Stream.of(a, b).flatMap(Function.identity()), and what are the trade-offs for more than two streams?",
   "shortTitle": "Stream.concat(a,b) vs Stream.of(a,b).flatMap(identity) — trade-offs for 2+ streams",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q444",
   "slug": "beanpostprocessor-eventlistener-smartlifecycle-virtual-threads-spring-batch-chunk-processing",
-  "questionNumber": 444,
+  "questionNumber": 2,
   "title": "What is BeanPostProcessor? How do ApplicationEventPublisher + @EventListener decouple? What is SmartLifecycle? How do you tune Tomcat threads? When WebFlux vs MVC + Virtual Threads? What are virtual thread traps? What is Spring Batch chunk processing with fault tolerance?",
   "shortTitle": "What are BeanPostProcessor, EventListener, SmartLifecycle?",
   "chapterNumber": 7,

@@ -1,7 +1,7 @@
 {
   "id": "Q1551",
   "slug": "kahns-algorithm-bfs-topological-sort-in-degree-array-zero-degree-queue",
-  "questionNumber": 1551,
+  "questionNumber": 51,
   "title": "Implement topological sorting of a directed acyclic graph using Kahn's algorithm, which processes nodes in order of their in-degree reaching zero, and detect a cycle if not all nodes can be ordered.",
   "shortTitle": "Kahn's Algorithm (BFS topological sort) — in-degree array + zero-degree queue",
   "chapterNumber": 17,

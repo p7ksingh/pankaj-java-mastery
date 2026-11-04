@@ -1,7 +1,7 @@
 {
   "id": "Q231",
   "slug": "wait-vs-sleep-vs-yield-lock-release-purpose-thread-state",
-  "questionNumber": 231,
+  "questionNumber": 2,
   "title": "wait() vs sleep() vs yield() — lock release, purpose, thread state",
   "shortTitle": "wait() vs sleep() vs yield()?",
   "chapterNumber": 5,

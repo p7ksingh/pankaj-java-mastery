@@ -1,7 +1,7 @@
 {
   "id": "Q1836",
   "slug": "fibonacci-number-introduction-to-dynamic-programming-with-memoization",
-  "questionNumber": 1836,
+  "questionNumber": 22,
   "title": "Compute the nth Fibonacci number, where each number is the sum of the two before it. Explain the naive recursion, why it is slow, how memoization and the bottom-up rolling approach fix it, the complexity, and a banking use case.",
   "shortTitle": "Fibonacci Number (Introduction to Dynamic Programming with Memoization)",
   "chapterNumber": 17,

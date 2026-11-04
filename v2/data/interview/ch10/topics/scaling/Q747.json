@@ -1,7 +1,7 @@
 {
   "id": "Q747",
   "slug": "how-is-a-load-balancer-implemented-in-azure",
-  "questionNumber": 747,
+  "questionNumber": 7,
   "title": "How is a load balancer implemented in Azure (Azure Load Balancer L4, Application Gateway L7, Front Door global, AKS LoadBalancer service)?",
   "shortTitle": "How is a load balancer implemented in Azure",
   "chapterNumber": 10,

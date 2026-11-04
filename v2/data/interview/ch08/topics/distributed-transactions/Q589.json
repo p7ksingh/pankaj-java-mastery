@@ -1,7 +1,7 @@
 {
   "id": "Q589",
   "slug": "distributed-transactions-jtaxa-and-modifying-transactional-interaction",
-  "questionNumber": 589,
+  "questionNumber": 2,
   "title": "What are distributed transactions / JTA / XA two-phase commit? How do @Modifying and @Transactional interact?",
   "shortTitle": "How do distributed transactions and @Modifying interact?",
   "chapterNumber": 8,

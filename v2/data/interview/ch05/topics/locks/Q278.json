@@ -1,7 +1,7 @@
 {
   "id": "Q278",
   "slug": "stampedlock-optimistic-read-mode-tryoptimisticread-validate-beats-readwritelock",
-  "questionNumber": 278,
+  "questionNumber": 3,
   "title": "StampedLock — optimistic read mode (tryOptimisticRead + validate), beats ReadWriteLock",
   "shortTitle": "What is StampedLock?",
   "chapterNumber": 5,

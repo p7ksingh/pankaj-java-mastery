@@ -1,7 +1,7 @@
 {
   "id": "Q2130",
   "slug": "datastream-api-vs-table-api-flink-sql",
-  "questionNumber": 2130,
+  "questionNumber": 4,
   "title": "What is the difference between Flink's DataStream API (low-level, event-at-a-time processing, full control over state/timers/windows) and the Table API / Flink SQL (high-level, declarative relational queries over streams and batch), and when do you use each?",
   "shortTitle": "DataStream API vs Table API / Flink SQL",
   "chapterNumber": 20,

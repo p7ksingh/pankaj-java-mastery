@@ -1,7 +1,7 @@
 {
   "id": "Q1002",
   "slug": "how-to-do-code-pr-reviews",
-  "questionNumber": 1002,
+  "questionNumber": 1,
   "title": "How do you do code / PR reviews (requirement, quality, business logic, exception handling, performance, security, tests, standards)?",
   "shortTitle": "How to do code / PR reviews",
   "chapterNumber": 12,

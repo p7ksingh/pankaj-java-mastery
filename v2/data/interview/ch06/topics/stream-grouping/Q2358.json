@@ -1,7 +1,7 @@
 {
   "id": "Q2358",
   "slug": "group-a-list-of-strings-by-their-first-letter-into-mapcharacter-liststring",
-  "questionNumber": 2358,
+  "questionNumber": 19,
   "title": "Group a list of strings by their first letter → `Map<Character, List<String>>` using `groupingBy(s -> s.charAt(0))`.",
   "shortTitle": "Group a list of strings by their first letter into Map<Character, List<String>>",
   "chapterNumber": 6,

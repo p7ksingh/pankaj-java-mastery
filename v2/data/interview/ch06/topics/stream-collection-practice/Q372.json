@@ -1,7 +1,7 @@
 {
   "id": "Q372",
   "slug": "predict-output-loop-adding-to-listshort-with-removal-autoboxing-trap",
-  "questionNumber": 372,
+  "questionNumber": 8,
   "title": "Predict the output: a loop that adds i to a List<Short> and then removes the last element whenever size > 1 — what prints and why?",
   "shortTitle": "Predict output — loop adding to List<Short> with removal — autoboxing trap",
   "chapterNumber": 6,

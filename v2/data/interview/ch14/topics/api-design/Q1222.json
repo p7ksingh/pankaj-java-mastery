@@ -1,7 +1,7 @@
 {
   "id": "Q1222",
   "slug": "how-do-you-convert-json-to-xml-and-vice-versa",
-  "questionNumber": 1222,
+  "questionNumber": 11,
   "title": "How do you convert JSON to XML and vice versa (org.json, Jackson XmlMapper)?",
   "shortTitle": "How do you convert JSON to XML and vice versa",
   "chapterNumber": 14,

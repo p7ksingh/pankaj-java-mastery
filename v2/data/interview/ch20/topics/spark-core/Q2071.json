@@ -1,7 +1,7 @@
 {
   "id": "Q2071",
   "slug": "spill-to-disk-in-spark",
-  "questionNumber": 2071,
+  "questionNumber": 39,
   "title": "What is spill-to-disk in Spark — when an operation (shuffle, sort, aggregation) exceeds available execution memory, Spark writes intermediate data to local disk — and why is excessive spill a performance red flag (disk I/O is orders of magnitude slower than memory)?",
   "shortTitle": "Spill-to-disk in Spark",
   "chapterNumber": 20,

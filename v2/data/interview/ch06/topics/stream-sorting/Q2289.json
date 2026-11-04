@@ -1,7 +1,7 @@
 {
   "id": "Q2289",
   "slug": "build-a-word-frequency-map-and-return-the-top-entries-sorted-by-count-descending",
-  "questionNumber": 2289,
+  "questionNumber": 16,
   "title": "Given a list of transaction narration strings, count how often each word appears using `groupingBy` with `counting`, then return the words sorted by frequency descending. Explain counting as a downstream collector and how to sort a map by value.",
   "shortTitle": "Build a word frequency map and return the top entries sorted by count descending",
   "chapterNumber": 6,

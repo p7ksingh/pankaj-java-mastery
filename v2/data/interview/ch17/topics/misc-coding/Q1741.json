@@ -1,7 +1,7 @@
 {
   "id": "Q1741",
   "slug": "count-paths-for-a-sum-count-all-downward-paths-summing-to-a-target",
-  "questionNumber": 1741,
+  "questionNumber": 28,
   "title": "Given a binary tree and a target sum, count all paths in the tree where the sum of the node values equals the target. The paths do not need to start at the root or end at a leaf, but they must go downward, from a node to one of its descendants. Explain the running-prefix-sum technique that makes this efficient.",
   "shortTitle": "Count Paths for a Sum (Count All Downward Paths Summing to a Target)",
   "chapterNumber": 17,

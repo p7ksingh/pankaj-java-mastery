@@ -1,7 +1,7 @@
 {
   "id": "Q1190",
   "slug": "consistent-hashing-and-virtual-nodes",
-  "questionNumber": 1190,
+  "questionNumber": 34,
   "title": "What is consistent hashing, how does it minimize data movement when adding/removing nodes (only K/N keys move instead of all), and what is a virtual node (multiple hash positions per physical node for better balance)?",
   "shortTitle": "Consistent hashing and virtual nodes",
   "chapterNumber": 13,

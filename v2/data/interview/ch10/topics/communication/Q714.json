@@ -1,7 +1,7 @@
 {
   "id": "Q714",
   "slug": "design-pattern-for-synchronous-communication-between-microservices",
-  "questionNumber": 714,
+  "questionNumber": 4,
   "title": "Which design pattern is used for synchronous communication between microservices (API Gateway)?",
   "shortTitle": "Design pattern for synchronous communication between microservices",
   "chapterNumber": 10,

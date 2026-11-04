@@ -1,7 +1,7 @@
 {
   "id": "Q427",
   "slug": "streampeek-debugging-only-may-be-optimized-away-side-effects-unreliable",
-  "questionNumber": 427,
+  "questionNumber": 1,
   "title": "What does Stream.peek(Consumer) do, why is it for DEBUGGING only (may be optimized away), and why is using it for side effects a bug?",
   "shortTitle": "Stream.peek() — debugging only, may be optimized away, side effects unreliable",
   "chapterNumber": 6,

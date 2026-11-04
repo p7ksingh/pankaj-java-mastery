@@ -1,7 +1,7 @@
 {
   "id": "Q969",
   "slug": "what-does-spring-kafka-add-over-the-raw-client-and-how-does-the-listener-container-concurrency-map-threads-to-partitions",
-  "questionNumber": 969,
+  "questionNumber": 1,
   "title": "What does Spring Kafka add over the raw Kafka client — `KafkaTemplate` (a thread-safe producer wrapper, `send(topic, key, value)` returning a `CompletableFuture`) for publishing, and `@KafkaListener` + listener containers for consuming — and how does the `ConcurrentKafkaListenerContainerFactory` `concurrency` setting map listener threads to partitions (one consumer thread per partition, capped by partition count)?",
   "shortTitle": "What does Spring Kafka add over the raw client, and how does the listener container `concurrency` map threads to partitions?",
   "chapterNumber": 11,

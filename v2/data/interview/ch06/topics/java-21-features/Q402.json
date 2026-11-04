@@ -1,7 +1,7 @@
 {
   "id": "Q402",
   "slug": "helpful-nullpointerexceptions-jep-358-better-diagnostics-not-prevention",
-  "questionNumber": 402,
+  "questionNumber": 10,
   "title": "What are Helpful NullPointerExceptions (JEP 358), and why do they only make NPEs easier to diagnose, not prevent them?",
   "shortTitle": "What are helpful NullPointerExceptions?",
   "chapterNumber": 6,

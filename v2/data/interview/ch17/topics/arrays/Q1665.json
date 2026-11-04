@@ -1,7 +1,7 @@
 {
   "id": "Q1665",
   "slug": "pair-with-target-sum-two-pointers-on-a-sorted-array",
-  "questionNumber": 1665,
+  "questionNumber": 62,
   "title": "Given a sorted array of numbers and a target sum, find a pair of elements whose values add up exactly to the target and return their indices. Solve it with the two-pointer technique. (LeetCode: Two Sum II — Input Array Is Sorted)",
   "shortTitle": "Pair with Target Sum (Two Pointers on a Sorted Array)",
   "chapterNumber": 17,

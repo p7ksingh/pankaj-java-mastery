@@ -1,7 +1,7 @@
 {
   "id": "Q1607",
   "slug": "implement-a-queue-using-two-stacks",
-  "questionNumber": 1607,
+  "questionNumber": 16,
   "title": "Implement a first-in-first-out queue using only two last-in-first-out stacks, supporting enqueue and dequeue, and analyse the amortised cost.",
   "shortTitle": "Implement a Queue Using Two Stacks",
   "chapterNumber": 17,

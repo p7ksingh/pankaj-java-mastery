@@ -1,7 +1,7 @@
 {
   "id": "Q1589",
   "slug": "jump-game-can-you-reach-the-last-index-greedy-reachability",
-  "questionNumber": 1589,
+  "questionNumber": 1,
   "title": "Given an array where each element is the maximum jump length from that position, determine whether you can reach the last index starting from the first.",
   "shortTitle": "Jump Game — can you reach the last index (greedy reachability)",
   "chapterNumber": 17,

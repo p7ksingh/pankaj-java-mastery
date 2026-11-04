@@ -1,7 +1,7 @@
 {
-  "id": "Q188-collections",
-  "slug": "enumset-and-enummap-bit-vector-ordinal-array-performance",
-  "questionNumber": 188,
+  "id": "Q188",
+  "slug": "enumset-and-enummap-bit-vector-ordinal-array",
+  "questionNumber": 4,
   "title": "EnumSet and EnumMap — bit-vector, ordinal array, performance",
   "shortTitle": "What are EnumSet and EnumMap?",
   "chapterNumber": 3,

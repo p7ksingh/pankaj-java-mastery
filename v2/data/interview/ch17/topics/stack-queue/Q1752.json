@@ -1,7 +1,7 @@
 {
   "id": "Q1752",
   "slug": "balanced-parentheses-generate-all-valid-combinations",
-  "questionNumber": 1752,
+  "questionNumber": 20,
   "title": "For a given number N, generate all combinations of N pairs of balanced parentheses. Explain the backtracking technique that tracks open and close counts to keep every prefix valid.",
   "shortTitle": "Balanced Parentheses (Generate All Valid Combinations)",
   "chapterNumber": 17,

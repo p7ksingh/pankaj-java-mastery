@@ -1,7 +1,7 @@
 {
   "id": "Q1626",
   "slug": "implement-heap-sort",
-  "questionNumber": 1626,
+  "questionNumber": 15,
   "title": "Implement heap sort using a binary heap, explain the heapify and sort-down phases, and analyse its complexity and stability.",
   "shortTitle": "Implement Heap Sort",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q2355",
   "slug": "find-the-longest-string-in-a-list-using-maxcomparatorcomparingintstringlength",
-  "questionNumber": 2355,
+  "questionNumber": 20,
   "title": "Find the longest string in a list using `max(Comparator.comparingInt(String::length))`.",
   "shortTitle": "Find the longest string in a list using max(Comparator.comparingInt(String::length))",
   "chapterNumber": 6,

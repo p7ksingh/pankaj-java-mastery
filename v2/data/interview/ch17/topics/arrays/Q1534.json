@@ -1,7 +1,7 @@
 {
   "id": "Q1534",
   "slug": "top-k-frequent-elements-hashmap-frequency-min-heap-or-bucket-sort",
-  "questionNumber": 1534,
+  "questionNumber": 50,
   "title": "Given an array of elements and a value K, return the K most frequent elements, in any order.",
   "shortTitle": "Top K Frequent Elements — HashMap frequency + min-heap or bucket sort",
   "chapterNumber": 17,

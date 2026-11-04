@@ -1,7 +1,7 @@
 {
   "id": "Q2242",
   "slug": "convert-a-listemployee-back-into-a-liststring-of-csv-rows-reverse-of-the-above",
-  "questionNumber": 2242,
+  "questionNumber": 10,
   "title": "Convert a `List<Employee>` back into a `List<String>` of CSV rows (reverse of the above).",
   "shortTitle": "Convert a List<Employee> back into a List<String> of CSV rows (reverse of the above)",
   "chapterNumber": 6,

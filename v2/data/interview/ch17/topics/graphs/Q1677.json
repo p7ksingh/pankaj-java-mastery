@@ -1,7 +1,7 @@
 {
   "id": "Q1677",
   "slug": "linkedlist-cycle-floyds-tortoise-and-hare-detection",
-  "questionNumber": 1677,
+  "questionNumber": 20,
   "title": "Given the head of a singly linked list, determine whether the list has a cycle, meaning some node's next pointer points back to an earlier node. Solve it with constant extra space. (LeetCode: Linked List Cycle)",
   "shortTitle": "LinkedList Cycle (Floyd's Tortoise and Hare Detection)",
   "chapterNumber": 17,

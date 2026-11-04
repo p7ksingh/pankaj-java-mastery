@@ -1,7 +1,7 @@
 {
   "id": "Q147",
   "slug": "multiple-inheritance-why-class-inheritance-disallowed-diamond-problem-interfaces-as-workaround",
-  "questionNumber": 147,
+  "questionNumber": 1,
   "title": "Can we achieve multiple inheritance in Java, why is multiple class inheritance disallowed (the diamond problem), and how do interfaces work around it?",
   "shortTitle": "Can Java achieve multiple inheritance?",
   "chapterNumber": 2,

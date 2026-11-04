@@ -1,7 +1,7 @@
 {
   "id": "Q2193",
   "slug": "difference-between-playwrights-locator-getbyrole-and-getbytext",
-  "questionNumber": 2193,
+  "questionNumber": 2,
   "title": "What is the difference between Playwright's `locator()`, `getByRole()`, and `getByText()` in terms of reliability, accessibility alignment, maintainability, readability, and appropriate use cases (role-based mirrors how users interact; text-based when visible text is the right identifier; generic `locator()`/CSS/XPath as a fallback)?",
   "shortTitle": "Difference between Playwright's locator(), getByRole(), and getByText()",
   "chapterNumber": 21,

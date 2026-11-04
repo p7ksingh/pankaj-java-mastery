@@ -1,7 +1,7 @@
 {
   "id": "Q1034",
   "slug": "explain-the-shared-responsibility-model-and-why-most-cloud-breaches-are-on-the-customer-side-misconfiguration-over-permissioned-identities",
-  "questionNumber": 1034,
+  "questionNumber": 21,
   "title": "Explain the Shared Responsibility Model, and why most cloud breaches are on the customer side (misconfiguration, over-permissioned identities).",
   "shortTitle": "Explain the Shared Responsibility Model, and why most cloud breaches are on the customer side (misconfiguration, over-permissioned identities)",
   "chapterNumber": 12,

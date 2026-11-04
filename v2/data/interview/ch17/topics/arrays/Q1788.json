@@ -1,7 +1,7 @@
 {
   "id": "Q1788",
   "slug": "merge-k-sorted-arrays-combine-k-sorted-arrays-into-one-sorted-array",
-  "questionNumber": 1788,
+  "questionNumber": 104,
   "title": "Given K sorted arrays, merge them into a single sorted array. Explain the K-way Merge technique with a heap, the complexity, and a banking use case.",
   "shortTitle": "Merge K Sorted Arrays (Combine K Sorted Arrays into One Sorted Array)",
   "chapterNumber": 17,

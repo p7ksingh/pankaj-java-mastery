@@ -1,7 +1,7 @@
 {
   "id": "Q645",
   "slug": "transactionalreadonlytrue-dirty-checking-and-the-osiv-anti-pattern",
-  "questionNumber": 645,
+  "questionNumber": 4,
   "title": "What does @Transactional(readOnly=true) optimize, how does it relate to dirty checking, and why is Open Session In View an anti-pattern?",
   "shortTitle": "readOnly, dirty checking, and OSIV?",
   "chapterNumber": 9,

@@ -1,7 +1,7 @@
 {
   "id": "Q1376",
   "slug": "traverse-a-linked-list",
-  "questionNumber": 1376,
+  "questionNumber": 2,
   "title": "Traverse a linked list (start from head, follow next pointers until null, print each node's data).",
   "shortTitle": "Traverse a linked list",
   "chapterNumber": 17,

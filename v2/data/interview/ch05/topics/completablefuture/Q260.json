@@ -1,7 +1,7 @@
 {
   "id": "Q260",
   "slug": "allof-returns-cfvoid-must-join-each-partial-results-vs-fail-all-vs-fallbacks",
-  "questionNumber": 260,
+  "questionNumber": 14,
   "title": "allOf() returns CF<Void> — must join each, partial results vs fail-all vs fallbacks",
   "shortTitle": "How to use allOf() correctly?",
   "chapterNumber": 5,

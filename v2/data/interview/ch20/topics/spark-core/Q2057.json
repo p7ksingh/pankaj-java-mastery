@@ -1,7 +1,7 @@
 {
   "id": "Q2057",
   "slug": "data-skew-in-spark-hot-keys-and-how-to-detect-it",
-  "questionNumber": 2057,
+  "questionNumber": 35,
   "title": "What is data skew in Spark — when one partition has disproportionately more data than others (a \"hot key\"), causing one task to run much longer than the rest — and how do you detect it (Spark UI: one task takes 10-100x longer, shuffle read/write imbalanced)?",
   "shortTitle": "Data skew in Spark — hot keys and how to detect it",
   "chapterNumber": 20,

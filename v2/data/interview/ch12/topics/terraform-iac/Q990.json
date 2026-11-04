@@ -1,7 +1,7 @@
 {
   "id": "Q990",
   "slug": "terraform-planapply-workflow-and-why-we-use-infrastructure-as-code",
-  "questionNumber": 990,
+  "questionNumber": 1,
   "title": "What is Terraform, how does the plan/apply workflow work, and why do we use Infrastructure as Code?",
   "shortTitle": "Terraform — plan/apply workflow and why we use Infrastructure as Code",
   "chapterNumber": 12,

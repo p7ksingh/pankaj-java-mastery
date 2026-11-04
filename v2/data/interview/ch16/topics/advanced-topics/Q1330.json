@@ -1,7 +1,7 @@
 {
   "id": "Q1330",
   "slug": "what-are-sequenced-collections-java-21-and-what-gap-did-they-fill",
-  "questionNumber": 1330,
+  "questionNumber": 23,
   "title": "What are Sequenced Collections (Java 21 — `SequencedCollection`/`SequencedSet`/`SequencedMap`, getFirst/getLast/reversed), and what gap did they fill?",
   "shortTitle": "What are Sequenced Collections (Java 21), and what gap did they fill?",
   "chapterNumber": 16,

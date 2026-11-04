@@ -1,7 +1,7 @@
 {
   "id": "Q2319",
   "slug": "given-a-mapstring-integer-product-to-price-filter-entries-where-price-100",
-  "questionNumber": 2319,
+  "questionNumber": 16,
   "title": "Given a `Map<String, Integer>` (product → price), filter entries where price > 100.",
   "shortTitle": "Given a Map<String, Integer> product to price, filter entries where price > 100",
   "chapterNumber": 6,

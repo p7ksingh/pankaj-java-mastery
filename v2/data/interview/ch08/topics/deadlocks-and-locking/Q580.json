@@ -1,7 +1,7 @@
 {
   "id": "Q580",
   "slug": "parallel-transaction-deadlocks-lock-ordering-optimistic-locking-retry-skip-locked",
-  "questionNumber": 580,
+  "questionNumber": 1,
   "title": "How do parallel transactions cause deadlocks, and how do you handle them in Spring (lock ordering, optimistic locking, retry, SKIP LOCKED)?",
   "shortTitle": "How do you handle parallel transaction deadlocks?",
   "chapterNumber": 8,

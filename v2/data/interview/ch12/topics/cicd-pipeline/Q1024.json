@@ -1,7 +1,7 @@
 {
   "id": "Q1024",
   "slug": "what-shenandoah-gc-is-brooks-forwarding-pointers-concurrent-compaction-and-what-generational-shenandoah-java-25-jep-521-added",
-  "questionNumber": 1024,
+  "questionNumber": 14,
   "title": "What is Shenandoah GC (Brooks forwarding pointers, concurrent compaction), and what did Generational Shenandoah (Java 25, JEP 521) add?",
   "shortTitle": "What Shenandoah GC is — Brooks forwarding pointers, concurrent compaction — and what Generational Shenandoah (Java 25, JEP 521) added",
   "chapterNumber": 12,

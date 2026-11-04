@@ -1,7 +1,7 @@
 {
   "id": "Q577",
   "slug": "transaction-isolation-levels-dirty-read-non-repeatable-read-phantom-read",
-  "questionNumber": 577,
+  "questionNumber": 1,
   "title": "Explain all @Transactional isolation levels and the read phenomena they prevent (dirty read, non-repeatable read, phantom read).",
   "shortTitle": "What are the transaction isolation levels?",
   "chapterNumber": 8,

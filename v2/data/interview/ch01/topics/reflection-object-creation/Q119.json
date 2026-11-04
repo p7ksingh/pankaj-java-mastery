@@ -1,7 +1,7 @@
 {
   "id": "Q119",
   "slug": "what-is-the-reflection-api-how-do-frameworks-rely-on-it-and-why-is-reflecting-a-private-method-in-a-test-a-smell",
-  "questionNumber": 119,
+  "questionNumber": 2,
   "title": "What is the Reflection API — inspecting and manipulating classes, methods, fields, and constructors at runtime (`Class`, `Method`, `Field`, `setAccessible(true)` to reach private members) — what are its real use cases, how do frameworks rely on it (Spring DI/annotation scanning, Hibernate entity hydration, Jackson JSON serialization, JUnit test discovery), and why is invoking a private method via reflection in a unit test usually a design smell?",
   "shortTitle": "What is the Reflection API?",
   "chapterNumber": 1,

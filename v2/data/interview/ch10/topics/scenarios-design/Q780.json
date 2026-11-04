@@ -1,7 +1,7 @@
 {
   "id": "Q780",
   "slug": "how-do-you-make-a-messageevent-consumer-safe-against-at-least-once-duplicate-delivery",
-  "questionNumber": 780,
+  "questionNumber": 18,
   "title": "How do you make a message/event consumer safe against at-least-once duplicate delivery (store a `processed_event_id` / inbox table and skip already-processed IDs, use unique DB constraints, or idempotent state transitions) — and why is \"do not corrupt state on reprocessing\" the real goal rather than literal exactly-once?",
   "shortTitle": "How do you make a message/event consumer safe against at-least-once duplicate delivery",
   "chapterNumber": 10,

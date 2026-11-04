@@ -1,7 +1,7 @@
 {
   "id": "Q268",
   "slug": "forkjoinpool-how-executor-framework-and-completablefuture-use-it",
-  "questionNumber": 268,
+  "questionNumber": 2,
   "title": "ForkJoinPool — how Executor framework and CompletableFuture use it",
   "shortTitle": "How do CF and parallelStream use ForkJoinPool?",
   "chapterNumber": 5,

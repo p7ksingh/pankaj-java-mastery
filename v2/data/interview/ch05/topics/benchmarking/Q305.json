@@ -1,7 +1,7 @@
 {
   "id": "Q305",
   "slug": "coordinated-omission-closed-model-vs-open-model-load-testing-and-true-p99",
-  "questionNumber": 305,
+  "questionNumber": 1,
   "title": "What is coordinated omission in load testing? Why does a closed-model tool like JMeter hide tail latency while an open-model tool like wrk2 or k6 exposes the true p99? Explain constant-arrival-rate versus wait-for-response.",
   "shortTitle": "What is coordinated omission?",
   "chapterNumber": 5,

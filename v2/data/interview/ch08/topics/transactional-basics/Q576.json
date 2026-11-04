@@ -1,7 +1,7 @@
 {
   "id": "Q576",
   "slug": "how-transactional-works-aop-proxy-begincommitrollback-key-attributes",
-  "questionNumber": 576,
+  "questionNumber": 4,
   "title": "What is the @Transactional annotation, how does Spring implement it (AOP proxy, begin/commit/rollback), where can it be applied, and what are its key attributes (propagation, isolation, readOnly, timeout, rollbackFor)?",
   "shortTitle": "How does @Transactional work?",
   "chapterNumber": 8,

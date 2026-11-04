@@ -1,7 +1,7 @@
 {
   "id": "Q1019",
   "slug": "how-g1gc-works-equal-sized-regions-dynamic-role-assignment-youngmixedconcurrent-markingfull-phases-ihop-maxgcpausemillis-and-what-makes-it-garbage-first",
-  "questionNumber": 1019,
+  "questionNumber": 10,
   "title": "How does G1GC work (equal-sized regions, dynamic role assignment, Young/Mixed/Concurrent-Marking/Full phases, IHOP, MaxGCPauseMillis), and what makes it \"Garbage First\"?",
   "shortTitle": "How G1GC works — equal-sized regions, dynamic role assignment, Young/Mixed/Concurrent-Marking/Full phases, IHOP, MaxGCPauseMillis — and what makes it \"Garbage First\"",
   "chapterNumber": 12,

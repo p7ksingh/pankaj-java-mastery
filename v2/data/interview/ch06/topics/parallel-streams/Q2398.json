@@ -1,7 +1,7 @@
 {
   "id": "Q2398",
   "slug": "explain-why-stateful-operations-sorted-distinct-limit-are-more-expensive-in-parallel-streams",
-  "questionNumber": 2398,
+  "questionNumber": 10,
   "title": "Explain why stateful operations (`sorted`, `distinct`, `limit`) are more expensive in parallel streams.",
   "shortTitle": "Explain why stateful operations (sorted, distinct, limit) are more expensive in parallel streams",
   "chapterNumber": 6,

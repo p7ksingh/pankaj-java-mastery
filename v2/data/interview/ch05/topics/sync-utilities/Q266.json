@@ -1,7 +1,7 @@
 {
   "id": "Q266",
   "slug": "cyclicbarrier-vs-countdownlatch-reusable-sync-point-vs-one-time-event-count",
-  "questionNumber": 266,
+  "questionNumber": 1,
   "title": "CyclicBarrier vs CountDownLatch — reusable sync-point vs one-time event count",
   "shortTitle": "CyclicBarrier vs CountDownLatch?",
   "chapterNumber": 5,

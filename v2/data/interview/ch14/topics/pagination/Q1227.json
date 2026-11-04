@@ -1,7 +1,7 @@
 {
   "id": "Q1227",
   "slug": "how-do-you-design-filtering-and-sorting-in-a-rest-api-and-why-whitelist-fields",
-  "questionNumber": 1227,
+  "questionNumber": 3,
   "title": "How do you design filtering and sorting in a REST API (`?status=active&sort=createdAt,desc`), and why should the server whitelist allowed filter/sort fields rather than accepting arbitrary column names (SQL injection, information leakage, performance)?",
   "shortTitle": "How do you design filtering and sorting in a REST API and why whitelist fields",
   "chapterNumber": 14,

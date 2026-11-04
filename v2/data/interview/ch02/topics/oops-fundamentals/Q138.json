@@ -1,7 +1,7 @@
 {
   "id": "Q138",
   "slug": "if-you-only-have-a-single-class-a-how-can-you-prove-it-follows-oop-principles",
-  "questionNumber": 138,
+  "questionNumber": 3,
   "title": "If you only have a single class A, how can you prove it follows OOP principles (encapsulation, abstraction, polymorphism via overloading, inheritance via Object)?",
   "shortTitle": "How can a single class prove it follows OOP principles?",
   "chapterNumber": 2,

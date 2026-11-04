@@ -1,7 +1,7 @@
 {
   "id": "Q366",
   "slug": "sort-a-map-by-key-or-value-linkedhashmap-to-preserve-order",
-  "questionNumber": 366,
+  "questionNumber": 2,
   "title": "How do you sort a Map by key or by value using streams and preserve that order — stream entrySet() → sorted → collect to LinkedHashMap — and why does collecting into HashMap lose the sorted order?",
   "shortTitle": "Sort a Map by key or value — LinkedHashMap to preserve order",
   "chapterNumber": 6,

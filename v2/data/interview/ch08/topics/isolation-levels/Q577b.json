@@ -1,7 +1,7 @@
 {
   "id": "Q577b",
   "slug": "mvcc-how-readers-do-not-block-writers-snapshot-isolation-vacuum-cost",
-  "questionNumber": 577,
+  "questionNumber": 2,
   "title": "What is MVCC — how PostgreSQL/InnoDB keep row versions so readers don't block writers, how it implements snapshot isolation, costs (version bloat, vacuum), and how it differs from lock-based concurrency?",
   "shortTitle": "What is MVCC?",
   "chapterNumber": 8,

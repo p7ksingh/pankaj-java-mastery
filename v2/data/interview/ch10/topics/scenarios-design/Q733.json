@@ -1,7 +1,7 @@
 {
   "id": "Q733",
   "slug": "if-one-microservice-is-down-how-do-you-handle-it-gracefully",
-  "questionNumber": 733,
+  "questionNumber": 2,
   "title": "If one microservice is down, how do you handle it gracefully (circuit breaker, fallback, retry with backoff, timeout, bulkhead, graceful degradation, monitoring)?",
   "shortTitle": "If one microservice is down, how do you handle it gracefully",
   "chapterNumber": 10,

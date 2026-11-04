@@ -1,7 +1,7 @@
 {
   "id": "Q584",
   "slug": "transactional-with-multiple-datasources-separate-managers-cannot-span-two-dbs",
-  "questionNumber": 584,
+  "questionNumber": 1,
   "title": "How do you use @Transactional with multiple DataSources? Why can't a single @Transactional span two independent DataSources without JTA/XA?",
   "shortTitle": "How does @Transactional work with multiple DataSources?",
   "chapterNumber": 8,

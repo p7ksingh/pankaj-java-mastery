@@ -1,7 +1,7 @@
 {
   "id": "Q439",
   "slug": "testing-unit-integration-webmvctest-datajpatest-mockito-testcontainers-tdd",
-  "questionNumber": 439,
+  "questionNumber": 1,
   "title": "How do you test with JUnit + Mockito? What are JUnit 5 lifecycle annotations? What is TDD vs BDD? What is @Mock vs @Spy? How do you verify interactions with ArgumentCaptor? What is code coverage (JaCoCo)? What is @SpringBootTest vs @WebMvcTest vs @DataJpaTest? Why test failure paths? What is unit vs integration vs contract vs E2E testing? When to use Testcontainers?",
   "shortTitle": "What are the Spring testing annotations?",
   "chapterNumber": 7,

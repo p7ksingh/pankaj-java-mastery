@@ -1,7 +1,7 @@
 {
   "id": "Q442",
   "slug": "debugging-a-slow-spring-boot-app-performance-optimization-handling-traffic-surges",
-  "questionNumber": 442,
+  "questionNumber": 1,
   "title": "How do you debug a running Spring Boot app? How do you address prod slower than UAT? How to reduce API response time? How to cut startup time? How to handle 503 in prod? How to handle concurrent users and sudden 10x traffic?",
   "shortTitle": "How do you debug a slow Spring Boot app?",
   "chapterNumber": 7,

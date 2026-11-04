@@ -1,7 +1,7 @@
 {
   "id": "Q2372",
   "slug": "from-a-list-of-integers-keep-only-numbers-greater-than-a-threshold-and-convert-each-to-its-string-form",
-  "questionNumber": 2372,
+  "questionNumber": 33,
   "title": "From a list of integers, keep only numbers greater than a threshold and convert each to its `String` form (`filter(...).map(String::valueOf)`).",
   "shortTitle": "From a list of integers, keep only numbers greater than a threshold and convert each to its String form",
   "chapterNumber": 6,

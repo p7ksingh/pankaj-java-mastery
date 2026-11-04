@@ -1,7 +1,7 @@
 {
   "id": "Q1509",
   "slug": "daily-temperatures-decreasing-stack-of-indices",
-  "questionNumber": 1509,
+  "questionNumber": 9,
   "title": "Given an array of daily temperatures, return an array where each position holds the number of days you must wait until a warmer temperature. If no warmer day exists, put 0.",
   "shortTitle": "Daily Temperatures — decreasing stack of indices",
   "chapterNumber": 17,

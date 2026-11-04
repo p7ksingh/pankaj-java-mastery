@@ -1,7 +1,7 @@
 {
   "id": "Q2293",
   "slug": "sum-transaction-amounts-safely-with-a-parallel-stream-using-an-associative-reduce",
-  "questionNumber": 2293,
+  "questionNumber": 3,
   "title": "Sum a large list of transaction amounts using a parallel stream and `reduce`, and explain why the accumulator must be associative and stateless, and why a shared mutable accumulator is unsafe. Contrast `reduce` with a non-thread-safe forEach-plus-counter.",
   "shortTitle": "Sum transaction amounts safely with a parallel stream using an associative reduce",
   "chapterNumber": 6,

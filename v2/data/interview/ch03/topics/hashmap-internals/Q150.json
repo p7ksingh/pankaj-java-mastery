@@ -1,7 +1,7 @@
 {
   "id": "Q150",
   "slug": "collectionssynchronizedmap-wrapping-hashmap-safe-iteration",
-  "questionNumber": 150,
+  "questionNumber": 3,
   "title": "Collections.synchronizedMap — wrapping HashMap + safe iteration",
   "shortTitle": "What is Collections.synchronizedMap?",
   "chapterNumber": 3,

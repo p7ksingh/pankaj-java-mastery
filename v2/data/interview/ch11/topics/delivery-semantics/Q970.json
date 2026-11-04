@@ -1,7 +1,7 @@
 {
   "id": "Q970",
   "slug": "what-are-the-spring-kafka-ackmodes-when-do-you-use-manual-acknowledgment-and-why-does-commit-after-processing-give-at-least-once",
-  "questionNumber": 970,
+  "questionNumber": 9,
   "title": "What are the Spring Kafka `AckMode`s — `RECORD` (commit after each record), `BATCH` (commit after the whole `poll()` batch, the default), `TIME`, `COUNT`, `COUNT_TIME`, and `MANUAL`/`MANUAL_IMMEDIATE` (you call `Acknowledgment.acknowledge()`) — when do you use manual acknowledgment, and why does commit-after-processing give at-least-once semantics?",
   "shortTitle": "What are the Spring Kafka AckModes, when do you use manual acknowledgment, and why does commit-after-processing give at-least-once?",
   "chapterNumber": 11,

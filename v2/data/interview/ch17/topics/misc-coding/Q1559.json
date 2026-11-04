@@ -1,7 +1,7 @@
 {
   "id": "Q1559",
   "slug": "accounts-merge-union-emails-that-belong-to-the-same-person",
-  "questionNumber": 1559,
+  "questionNumber": 15,
   "title": "Given accounts where each is a name followed by emails, merge accounts that share any email. Return merged accounts with the name and sorted unique emails.",
   "shortTitle": "Accounts Merge — union emails that belong to the same person",
   "chapterNumber": 17,

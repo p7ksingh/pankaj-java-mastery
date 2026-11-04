@@ -1,7 +1,7 @@
 {
   "id": "Q148",
   "slug": "what-is-a-constructor-and-can-it-be-private-singleton-factory-utility-class",
-  "questionNumber": 148,
+  "questionNumber": 2,
   "title": "What is a constructor, and can a constructor be private (as in Singleton, factory methods, utility classes)?",
   "shortTitle": "What is a constructor and can it be private?",
   "chapterNumber": 2,

@@ -1,7 +1,7 @@
 {
   "id": "Q425",
   "slug": "flatmaptointlongdouble-flatten-to-primitive-stream-vs-flatmapmaptoint",
-  "questionNumber": 425,
+  "questionNumber": 3,
   "title": "What do flatMapToInt, flatMapToLong, and flatMapToDouble do — map each element to a primitive stream and flatten — and when are they preferred over flatMap(...).mapToInt(...)?",
   "shortTitle": "flatMapToInt/Long/Double — flatten to primitive stream, vs flatMap+mapToInt",
   "chapterNumber": 6,

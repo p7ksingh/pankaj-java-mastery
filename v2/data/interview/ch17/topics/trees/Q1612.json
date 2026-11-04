@@ -1,7 +1,7 @@
 {
   "id": "Q1612",
   "slug": "implement-a-trie-prefix-tree-with-insert-search-and-startswith",
-  "questionNumber": 1612,
+  "questionNumber": 14,
   "title": "Implement a trie supporting inserting a word, searching for a complete word, and checking whether any word starts with a given prefix.",
   "shortTitle": "Implement a Trie (Prefix Tree) with Insert, Search, and startsWith",
   "chapterNumber": 17,

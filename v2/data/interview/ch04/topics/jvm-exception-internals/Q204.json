@@ -1,7 +1,7 @@
 {
   "id": "Q204",
   "slug": "why-exceptions-are-expensive-to-throw-fillinstacktrace-stack-unwinding-optimization-techniques",
-  "questionNumber": 204,
+  "questionNumber": 2,
   "title": "Why are exceptions expensive to throw (fillInStackTrace captures full stack, unwinding walks stack), and what techniques reduce cost (stackless, pre-built, Optional/return codes)?",
   "shortTitle": "Why are exceptions expensive to throw?",
   "chapterNumber": 4,

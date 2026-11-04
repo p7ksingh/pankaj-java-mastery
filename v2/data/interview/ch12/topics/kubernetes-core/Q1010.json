@@ -1,7 +1,7 @@
 {
   "id": "Q1010",
   "slug": "liveness-probe-vs-readiness-probe-and-wiring-spring-boot-actuator-health-groups-to-them",
-  "questionNumber": 1010,
+  "questionNumber": 2,
   "title": "What is the difference between a liveness probe and a readiness probe, and how do you wire Spring Boot Actuator (`/actuator/health/liveness`, `/actuator/health/readiness`) to them?",
   "shortTitle": "Liveness probe vs readiness probe, and wiring Spring Boot Actuator health groups to them",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
   "id": "Q1586",
   "slug": "decode-ways-count-decodings-of-a-digit-string",
-  "questionNumber": 1586,
+  "questionNumber": 32,
   "title": "A message of digits is encoded where 1 maps to A through 26 maps to Z. Given a digit string, count how many ways it can be decoded.",
   "shortTitle": "Decode Ways — count decodings of a digit string",
   "chapterNumber": 17,

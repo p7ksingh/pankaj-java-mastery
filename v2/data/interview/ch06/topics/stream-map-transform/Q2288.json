@@ -1,7 +1,7 @@
 {
   "id": "Q2288",
   "slug": "build-an-immutable-lookup-map-and-an-unmodifiable-list-using-collectorscollectingandthen",
-  "questionNumber": 2288,
+  "questionNumber": 14,
   "title": "Collect employee names into an unmodifiable list, and build an id-to-name lookup as an unmodifiable map, using `Collectors.collectingAndThen` to apply a finishing step. Explain how `collectingAndThen` wraps a collector with a final transformation and why it is used for immutability.",
   "shortTitle": "Build an immutable lookup map and an unmodifiable list using Collectors.collectingAndThen",
   "chapterNumber": 6,

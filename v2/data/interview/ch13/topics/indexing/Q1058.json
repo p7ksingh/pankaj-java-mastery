@@ -1,7 +1,7 @@
 {
   "id": "Q1058",
   "slug": "how-does-a-composite-index-work-and-what-is-the-left-prefix-rule-why-put-equality-columns-before-range-columns",
-  "questionNumber": 1058,
+  "questionNumber": 9,
   "title": "How does a composite (multi-column) index work and what is the left-prefix rule (an index on `(a, b)` serves `WHERE a` and `WHERE a AND b` but NOT `WHERE b` alone), and why put equality columns before range columns?",
   "shortTitle": "How does a composite index work and what is the left-prefix rule — why put equality columns before range columns",
   "chapterNumber": 13,

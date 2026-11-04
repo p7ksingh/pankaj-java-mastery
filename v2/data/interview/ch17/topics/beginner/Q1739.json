@@ -1,7 +1,7 @@
 {
   "id": "Q1739",
   "slug": "sum-of-path-numbers-each-root-to-leaf-path-is-a-multi-digit-number",
-  "questionNumber": 1739,
+  "questionNumber": 11,
   "title": "Given a binary tree where each node holds a single digit from 0 to 9, each root-to-leaf path represents a number formed by concatenating the digits along the path. Find the total sum of all such numbers, and explain the running-number technique.",
   "shortTitle": "Sum of Path Numbers (Each Root-to-Leaf Path Is a Multi-Digit Number)",
   "chapterNumber": 17,

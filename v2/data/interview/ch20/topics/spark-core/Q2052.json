@@ -1,7 +1,7 @@
 {
   "id": "Q2052",
   "slug": "how-to-verify-spark-actually-used-a-broadcast-join",
-  "questionNumber": 2052,
+  "questionNumber": 33,
   "title": "How do you verify Spark actually used a Broadcast Join (`df.explain(\"formatted\")` → look for `BroadcastExchange` + `BroadcastHashJoin`), and what does the Spark UI show (no shuffle read/write on the broadcast side)?",
   "shortTitle": "How to verify Spark actually used a Broadcast Join",
   "chapterNumber": 20,

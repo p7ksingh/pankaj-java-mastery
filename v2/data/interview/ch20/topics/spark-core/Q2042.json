@@ -1,7 +1,7 @@
 {
   "id": "Q2042",
   "slug": "bucketing-bucketby-and-how-it-differs-from-partitioning",
-  "questionNumber": 2042,
+  "questionNumber": 27,
   "title": "What is bucketing (`df.write.bucketBy(n, \"col\").sortBy(\"col2\").saveAsTable(...)`) — dividing data into a fixed number of files using hash-modulo on the bucketing column — and how does it differ from partitioning (fixed number of files vs variable directories)?",
   "shortTitle": "Bucketing (`bucketBy`) and how it differs from partitioning",
   "chapterNumber": 20,

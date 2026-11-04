@@ -1,7 +1,7 @@
 {
   "id": "Q409",
   "slug": "http3-in-jdk-httpclient-quic-udp-based-faster-connection-setup-network-resilience",
-  "questionNumber": 409,
+  "questionNumber": 6,
   "title": "What is HTTP/3 support in the JDK HttpClient (HttpClient.Version.HTTP_3), and why does QUIC improve connection setup and resilience?",
   "shortTitle": "What is HTTP/3 in JDK HttpClient?",
   "chapterNumber": 6,

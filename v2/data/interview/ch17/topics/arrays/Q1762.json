@@ -1,7 +1,7 @@
 {
   "id": "Q1762",
   "slug": "ceiling-of-a-number-smallest-element-greater-than-or-equal-to-the-key",
-  "questionNumber": 1762,
+  "questionNumber": 91,
   "title": "Given an array of numbers sorted in ascending order, find the ceiling of a given key, defined as the smallest element greater than or equal to the key. If no such element exists, return minus one. Explain how binary search converges to the ceiling.",
   "shortTitle": "Ceiling of a Number (Smallest Element Greater Than or Equal to the Key)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1071",
   "slug": "why-limitoffset-pagination-gets-slower-on-deep-pages-and-keyset-pagination",
-  "questionNumber": 1071,
+  "questionNumber": 5,
   "title": "Why does `LIMIT ... OFFSET` pagination get slower on deep pages (the DB scans and discards all preceding rows — O(n) per page), and how does keyset/cursor pagination (`WHERE id > :last_seen ORDER BY id LIMIT n`) stay O(log n) at any depth?",
   "shortTitle": "Why LIMIT/OFFSET pagination gets slower on deep pages, and keyset pagination",
   "chapterNumber": 13,

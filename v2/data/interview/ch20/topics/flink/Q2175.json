@@ -1,7 +1,7 @@
 {
   "id": "Q2175",
   "slug": "what-is-the-difference-between-kinesis-data-analytics-managed-flink-and-amazon-kinesis-analytics-sql-only-and-when-do-you-use-each",
-  "questionNumber": 2175,
+  "questionNumber": 32,
   "title": "What is the difference between Kinesis Data Analytics (managed Flink for complex stream processing) and Amazon Kinesis Analytics (SQL-only queries on streams) — and when do you use each?",
   "shortTitle": "What is the difference between Kinesis Data Analytics (managed Flink) and Amazon Kinesis Analytics (SQL-only), and when do you use each",
   "chapterNumber": 20,

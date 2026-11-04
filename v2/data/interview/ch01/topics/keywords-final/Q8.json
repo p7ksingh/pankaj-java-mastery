@@ -1,7 +1,7 @@
 {
   "id": "Q8",
   "slug": "what-happens-if-you-declare-final-int-x-and-print-it-without-initializing",
-  "questionNumber": 8,
+  "questionNumber": 3,
   "title": "What happens if you declare final int x; and print it without initializing it (compile error)?",
   "shortTitle": "What happens if you declare final int x without initializing?",
   "chapterNumber": 1,

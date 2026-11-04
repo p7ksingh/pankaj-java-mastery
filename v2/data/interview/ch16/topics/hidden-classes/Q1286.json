@@ -1,7 +1,7 @@
 {
   "id": "Q1286",
   "slug": "hidden-classes-vs-dynamically-generated-proxy-classes-and-their-behaviour-under-jpms-module-restrictions",
-  "questionNumber": 1286,
+  "questionNumber": 2,
   "title": "How do hidden classes compare to dynamically generated `Proxy` classes, and how do they behave under JPMS module restrictions?",
   "shortTitle": "Hidden classes vs dynamically generated `Proxy` classes, and their behaviour under JPMS module restrictions",
   "chapterNumber": 16,

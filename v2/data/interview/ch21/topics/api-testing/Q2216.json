@@ -1,7 +1,7 @@
 {
   "id": "Q2216",
   "slug": "how-to-performance-test-an-api",
-  "questionNumber": 2216,
+  "questionNumber": 3,
   "title": "How do you performance test an API — define test scenarios (login → browse → checkout), set up test data, run tests with increasing users (100 → 500 → 1000), measure response times and error rates, find the breaking point, fix bottlenecks?",
   "shortTitle": "How to performance test an API",
   "chapterNumber": 21,

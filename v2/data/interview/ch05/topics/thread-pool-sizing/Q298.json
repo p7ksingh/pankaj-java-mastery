@@ -1,7 +1,7 @@
 {
   "id": "Q298",
   "slug": "how-to-size-a-thread-pool-cpu-bound-vs-io-bound-formulas",
-  "questionNumber": 298,
+  "questionNumber": 3,
   "title": "How do you decide the correct number of threads in a thread pool? Explain the formula for CPU-bound work versus IO-bound work, and why oversizing a pool actually hurts performance.",
   "shortTitle": "How to size a thread pool?",
   "chapterNumber": 5,

@@ -1,7 +1,7 @@
 {
   "id": "Q1284",
   "slug": "hidden-classes-jep-371-what-they-are-why-introduced-how-created-with-definehiddenclass-and-how-they-replace-unsafedefineanonymousclass",
-  "questionNumber": 1284,
+  "questionNumber": 5,
   "title": "What are hidden classes (JEP 371), why were they introduced, how are they created (`defineHiddenClass`), and how do they replace `Unsafe.defineAnonymousClass()`?",
   "shortTitle": "Hidden classes (JEP 371) — what they are, why introduced, how created with `defineHiddenClass`, and how they replace `Unsafe.defineAnonymousClass()`",
   "chapterNumber": 16,

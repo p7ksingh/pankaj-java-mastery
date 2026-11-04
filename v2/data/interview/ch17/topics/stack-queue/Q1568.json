@@ -1,7 +1,7 @@
 {
   "id": "Q1568",
   "slug": "generate-parentheses-track-open-and-close-counts",
-  "questionNumber": 1568,
+  "questionNumber": 13,
   "title": "Given n pairs of parentheses, generate all combinations of well-formed (balanced) parentheses.",
   "shortTitle": "Generate Parentheses — track open and close counts",
   "chapterNumber": 17,

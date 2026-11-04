@@ -1,7 +1,7 @@
 {
   "id": "Q1072",
   "slug": "oltp-versus-olap-and-why-not-to-run-analytics-on-your-oltp-database",
-  "questionNumber": 1072,
+  "questionNumber": 6,
   "title": "What is the difference between OLTP (row-oriented stores like PostgreSQL — fast single-row transactions) and OLAP (columnar stores like Redshift/BigQuery — fast aggregations over few columns), and why should you NOT run heavy analytics on your production OLTP database?",
   "shortTitle": "OLTP versus OLAP, and why not to run analytics on your OLTP database",
   "chapterNumber": 13,

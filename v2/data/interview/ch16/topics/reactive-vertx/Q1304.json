@@ -1,7 +1,7 @@
 {
   "id": "Q1304",
   "slug": "what-is-rsocket-reactive-binary-protocol-its-four-interaction-models-features-advantagesdisadvantages-and-comparison-vs-websocketsgrpc",
-  "questionNumber": 1304,
+  "questionNumber": 3,
   "title": "What is RSocket (reactive binary protocol), its four interaction models (request-response, fire-and-forget, request-stream, channel), features, advantages/disadvantages, and comparison vs WebSockets/gRPC?",
   "shortTitle": "What is RSocket (reactive binary protocol), its four interaction models, features, advantages/disadvantages, and comparison vs WebSockets/gRPC?",
   "chapterNumber": 16,

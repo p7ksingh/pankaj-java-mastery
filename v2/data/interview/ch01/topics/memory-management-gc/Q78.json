@@ -1,7 +1,7 @@
 {
   "id": "Q78",
   "slug": "how-does-garbage-collection-work-in-java-and-what-algorithms-does-the-jvm-use",
-  "questionNumber": 78,
+  "questionNumber": 6,
   "title": "How does garbage collection work in Java (reachability, mark-and-sweep, generational heap, GC types), and what algorithms does the JVM use?",
   "shortTitle": "How does garbage collection work in Java?",
   "chapterNumber": 1,

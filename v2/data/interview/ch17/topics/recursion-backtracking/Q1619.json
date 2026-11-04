@@ -1,7 +1,7 @@
 {
   "id": "Q1619",
   "slug": "solve-the-n-queens-problem-backtracking-with-constraint-pruning",
-  "questionNumber": 1619,
+  "questionNumber": 13,
   "title": "Place n queens on an n-by-n chessboard so that no two queens attack each other, and count or list all valid placements, using backtracking.",
   "shortTitle": "Solve the N-Queens Problem (Backtracking with Constraint Pruning)",
   "chapterNumber": 17,

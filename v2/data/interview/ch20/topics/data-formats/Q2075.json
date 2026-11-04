@@ -1,7 +1,7 @@
 {
   "id": "Q2075",
   "slug": "differences-between-avro-parquet-and-orc",
-  "questionNumber": 2075,
+  "questionNumber": 4,
   "title": "What are the differences between Avro (row-based, schema in file header, good for schema evolution/write-heavy), Parquet (columnar, best for read-heavy analytics, column pruning + predicate pushdown), and ORC (columnar, ACID support in Hive, built-in indexes) — and when do you use each?",
   "shortTitle": "Differences between Avro, Parquet, and ORC",
   "chapterNumber": 20,

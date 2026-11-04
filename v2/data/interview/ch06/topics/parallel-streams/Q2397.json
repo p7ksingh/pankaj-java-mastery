@@ -1,7 +1,7 @@
 {
   "id": "Q2397",
   "slug": "benchmark-parallel-vs-sequential-for-10-elements-vs-10-million-and-explain-the-overhead",
-  "questionNumber": 2397,
+  "questionNumber": 9,
   "title": "Benchmark parallel vs sequential for a list of 10 elements vs 10 million elements and explain the overhead.",
   "shortTitle": "Benchmark parallel vs sequential for 10 elements vs 10 million and explain the overhead",
   "chapterNumber": 6,

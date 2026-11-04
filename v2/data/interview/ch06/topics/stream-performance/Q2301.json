@@ -1,7 +1,7 @@
 {
   "id": "Q2301",
   "slug": "explain-why-peek-should-not-be-used-for-side-effects-in-production-code",
-  "questionNumber": 2301,
+  "questionNumber": 2,
   "title": "Explain why `peek()` should NOT be used for side effects in production code (may be skipped by the pipeline).",
   "shortTitle": "Explain why peek() should NOT be used for side effects in production code",
   "chapterNumber": 6,

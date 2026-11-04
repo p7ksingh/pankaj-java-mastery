@@ -1,7 +1,7 @@
 {
   "id": "Q1880",
   "slug": "scenario-troubleshooting-a-communication-path-through-a-transit-gateway",
-  "questionNumber": 1880,
+  "questionNumber": 2,
   "title": "(Scenario) How do you troubleshoot an unexpected (or missing) communication path through a Transit Gateway — trace it end to end: source VPC route table → TGW attachment → TGW route-table association → route propagation → destination route → security groups → NACLs → destination subnet routing → the RETURN path — and why is checking only the source route table the classic mistake (routing is a two-way conversation)?",
   "shortTitle": "Scenario — Troubleshooting a Communication Path Through a Transit Gateway",
   "chapterNumber": 18,

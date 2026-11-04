@@ -1,7 +1,7 @@
 {
   "id": "Q1062",
   "slug": "when-should-you-choose-a-uuid-key-vs-avoid-it",
-  "questionNumber": 1062,
+  "questionNumber": 13,
   "title": "When should you CHOOSE a UUID key vs AVOID it — use it when you need decentralized/coordination-free unique IDs (distributed systems, DB sharding, merging/offline-sync data, or non-guessable public identifiers); avoid it (prefer auto-increment / sequences, or at least a time-ordered UUIDv7) for heavy-write relational tables (random-UUID index fragmentation), tight storage/bandwidth (16 bytes vs 4–8), when you need chronologically sortable IDs, and simple single-node apps?",
   "shortTitle": "When should you CHOOSE a UUID key vs AVOID it",
   "chapterNumber": 13,

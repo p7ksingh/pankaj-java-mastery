@@ -1,7 +1,7 @@
 {
   "id": "Q1516",
   "slug": "binary-tree-inorderpreorderpostorder-recursive-and-iterative-stack",
-  "questionNumber": 1516,
+  "questionNumber": 12,
   "title": "Implement the three depth-first traversals of a binary tree — inorder, preorder, and postorder — both recursively and iteratively using an explicit stack.",
   "shortTitle": "Binary Tree Inorder/Preorder/Postorder — recursive and iterative (stack)",
   "chapterNumber": 17,

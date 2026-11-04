@@ -1,7 +1,7 @@
 {
   "id": "Q2140",
   "slug": "what-is-flink-state-management",
-  "questionNumber": 2140,
+  "questionNumber": 14,
   "title": "What is Flink state management — keyed state (partitioned by key, exclusive per key: ValueState, ListState, MapState, ReducingState, AggregatingState) vs operator state (scoped to one parallel task: ListState, UnionListState, BroadcastState), and when do you use each?",
   "shortTitle": "What is Flink state management",
   "chapterNumber": 20,

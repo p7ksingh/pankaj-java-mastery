@@ -1,7 +1,7 @@
 {
   "id": "Q1952",
   "slug": "ebpf-based-observability-and-when-to-reach-for-it-beyond-apm",
-  "questionNumber": 1952,
+  "questionNumber": 7,
   "title": "What is eBPF-based observability and when do you reach for it beyond APM — APM/metrics/traces see the application and JVM, but eBPF runs sandboxed programs in the Linux kernel to see what's below it (syscalls, TCP retransmits / packet drops, run-queue / scheduler latency, disk I/O waits, page faults) with no code changes or agents (tools like bpftrace/bcc, Pixie, Cilium) — useful when latency spikes or pod restarts have no application-level cause?",
   "shortTitle": "eBPF-based observability and when to reach for it beyond APM",
   "chapterNumber": 12,

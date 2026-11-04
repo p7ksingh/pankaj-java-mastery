@@ -1,7 +1,7 @@
 {
   "id": "Q1926",
   "slug": "kubernetes-service-discovery-networking-and-debugging-dns-resolution",
-  "questionNumber": 1926,
+  "questionNumber": 8,
   "title": "How does Kubernetes Service discovery and networking work (ClusterIP/NodePort/LoadBalancer, kube-dns/CoreDNS, Ingress → Service → Pod), and how do you debug a pod that cannot resolve a Service DNS name?",
   "shortTitle": "Kubernetes Service Discovery, Networking, and Debugging DNS Resolution",
   "chapterNumber": 12,

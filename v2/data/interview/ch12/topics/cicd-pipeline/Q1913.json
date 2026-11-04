@@ -1,7 +1,7 @@
 {
   "id": "Q1913",
   "slug": "securely-managing-secrets-in-a-cicd-pipeline",
-  "questionNumber": 1913,
+  "questionNumber": 33,
   "title": "How do you securely manage secrets (DB passwords, cloud keys, JWT secrets) in a CI/CD pipeline (secret stores/Vault/cloud secret managers, masked variables — never committed or baked into images)?",
   "shortTitle": "Securely Managing Secrets in a CI/CD Pipeline",
   "chapterNumber": 12,

@@ -1,7 +1,7 @@
 {
-  "id": "Q187-collections",
-  "slug": "listof-throws-unsupportedoperationexception-listcopyof-safe-snapshot",
-  "questionNumber": 187,
+  "id": "Q187",
+  "slug": "listof-throws-unsupportedoperationexception-listcopyof-safe",
+  "questionNumber": 2,
   "title": "List.of() throws UnsupportedOperationException + List.copyOf safe snapshot",
   "shortTitle": "Why does List.of() throw UnsupportedOperationException?",
   "chapterNumber": 3,

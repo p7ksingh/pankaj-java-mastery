@@ -1,7 +1,7 @@
 {
   "id": "Q1439",
   "slug": "reverse-a-string-without-stringbuilder-two-pointer-swap-on-char-array",
-  "questionNumber": 1439,
+  "questionNumber": 27,
   "title": "Reverse a string without StringBuilder (two-pointer swap on char array).",
   "shortTitle": "Reverse a String Without StringBuilder — Two-Pointer Swap on Char Array",
   "chapterNumber": 17,

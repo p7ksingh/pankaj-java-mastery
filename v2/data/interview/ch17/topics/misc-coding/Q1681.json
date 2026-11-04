@@ -1,7 +1,7 @@
 {
   "id": "Q1681",
   "slug": "middle-of-the-linkedlist-fast-and-slow-pointers",
-  "questionNumber": 1681,
+  "questionNumber": 23,
   "title": "Given the head of a singly linked list, return the middle node. If there are two middle nodes, return the second one. Solve it in a single pass. (LeetCode: Middle of the Linked List)",
   "shortTitle": "Middle of the LinkedList (Fast and Slow Pointers)",
   "chapterNumber": 17,

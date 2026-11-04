@@ -1,7 +1,7 @@
 {
   "id": "Q2551",
   "slug": "which-solid-principles-matter-most-in-lld",
-  "questionNumber": 2551,
+  "questionNumber": 5,
   "title": "Which SOLID principles matter most in LLD — Single Responsibility (one class, one job), Open/Closed (extend behavior without modifying existing code), Liskov Substitution (child can replace parent), Dependency Inversion (depend on abstractions, not concrete classes)?",
   "shortTitle": "Which SOLID principles matter most in LLD?",
   "chapterNumber": 15,

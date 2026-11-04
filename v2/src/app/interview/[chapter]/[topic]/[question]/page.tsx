@@ -45,8 +45,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Not Found' }
   }
   return {
-    title: `${question.shortTitle} | ${chapter.title} | javabypankaj`,
+    title: `${question.shortTitle} | ${chapter.title}`,
     description: `${question.title} - interview answer with code, diagrams and ready-to-speak explanation.`,
+    alternates: { canonical: `/interview/${chSlug}/${topicSlug}/${qId}/` },
+    openGraph: {
+      title: `${question.shortTitle} | ${chapter.title} | javabypankaj`,
+      description: `${question.title} - interview answer with code, diagrams and ready-to-speak explanation.`,
+    },
   }
 }
 
@@ -122,14 +127,16 @@ export default async function QuestionPage({ params }: PageProps) {
       </div>
       <h1 className={styles.title}>{question.shortTitle}</h1>
       {question.keyPoints && question.keyPoints.length > 0 && (
-        <ul className={styles.keyPoints}>
+        <div className={styles.keyPoints}>
           <div className={styles.keyPointsHead}>
             Key Concepts
           </div>
-          {question.keyPoints.map((point, i) => (
-            <li key={i}>{point}</li>
-          ))}
-        </ul>
+          <ul className={styles.keyPointsList}>
+            {question.keyPoints.map((point, i) => (
+              <li key={i}>{point}</li>
+            ))}
+          </ul>
+        </div>
       )}
       <CompletionCheckbox questionId={question.id} />
       <article className={styles.article}>

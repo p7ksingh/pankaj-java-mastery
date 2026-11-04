@@ -1,7 +1,7 @@
 {
   "id": "Q1041",
   "slug": "deploying-to-kuberneteseks-via-a-cicd-pipeline-github-actions-oidc-ecr-push-kubectlhelm-deploy-rollout-verification-and-why-oidc-beats-long-lived-keys",
-  "questionNumber": 1041,
+  "questionNumber": 26,
   "title": "How do you deploy to Kubernetes/EKS via a CI/CD pipeline (GitHub Actions OIDC → ECR image push → `kubectl`/Helm deploy → rollout verification), and why prefer OIDC federation over long-lived AWS keys?",
   "shortTitle": "Deploying to Kubernetes/EKS via a CI/CD pipeline — GitHub Actions OIDC, ECR push, kubectl/Helm deploy, rollout verification, and why OIDC beats long-lived keys",
   "chapterNumber": 12,

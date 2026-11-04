@@ -1,7 +1,7 @@
 {
   "id": "Q672",
   "slug": "hibernate-flush-modes-auto-commit-manual-when-pending-changes-become-visible-to-a-query",
-  "questionNumber": 672,
+  "questionNumber": 5,
   "title": "What are the Hibernate flush modes (AUTO, COMMIT, MANUAL/ALWAYS)? How do they control when pending changes are visible to a query?",
   "shortTitle": "What are Hibernate flush modes?",
   "chapterNumber": 9,

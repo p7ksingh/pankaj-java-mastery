@@ -1,7 +1,7 @@
 {
   "id": "Q1730",
   "slug": "minimum-depth-of-a-binary-tree-nearest-leaf-via-bfs",
-  "questionNumber": 1730,
+  "questionNumber": 17,
   "title": "Given the root of a binary tree, find its minimum depth, the number of nodes along the shortest path from the root to the nearest leaf node. A leaf is a node with no children.",
   "shortTitle": "Minimum Depth of a Binary Tree (Nearest Leaf via BFS)",
   "chapterNumber": 17,

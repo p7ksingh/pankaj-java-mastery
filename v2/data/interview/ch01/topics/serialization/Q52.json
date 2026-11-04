@@ -1,7 +1,7 @@
 {
   "id": "Q52",
   "slug": "what-is-the-externalizable-interface-and-how-it-differs-from-serializable",
-  "questionNumber": 52,
+  "questionNumber": 11,
   "title": "What is the `Externalizable` interface, and how does it differ from `Serializable` (full control, mandatory no-arg constructor, manual `readExternal`/`writeExternal`)?",
   "shortTitle": "What is the Externalizable interface?",
   "chapterNumber": 1,

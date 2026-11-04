@@ -1,7 +1,7 @@
 {
   "id": "Q1067",
   "slug": "optimizing-a-very-slow-query-on-a-2-million-row-table-end-to-end",
-  "questionNumber": 1067,
+  "questionNumber": 2,
   "title": "If a table has 2 million records and a query is very slow, how do you optimize its performance end to end?",
   "shortTitle": "Optimizing a very slow query on a 2 million row table — end to end",
   "chapterNumber": 13,

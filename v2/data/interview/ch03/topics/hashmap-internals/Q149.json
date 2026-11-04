@@ -1,7 +1,7 @@
 {
   "id": "Q149",
   "slug": "hashmap-vs-concurrenthashmap-differences",
-  "questionNumber": 149,
+  "questionNumber": 2,
   "title": "HashMap vs ConcurrentHashMap — differences",
   "shortTitle": "How does HashMap differ from ConcurrentHashMap?",
   "chapterNumber": 3,

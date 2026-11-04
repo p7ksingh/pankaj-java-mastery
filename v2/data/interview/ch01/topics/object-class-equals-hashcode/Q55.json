@@ -1,7 +1,7 @@
 {
   "id": "Q55",
   "slug": "the-contract-between-equals-and-hashcode-and-why-you-must-override-both-together",
-  "questionNumber": 55,
+  "questionNumber": 3,
   "title": "What is the contract between `equals()` and `hashCode()` in Java, and why must you override both together?",
   "shortTitle": "What is the contract between equals() and hashCode()?",
   "chapterNumber": 1,

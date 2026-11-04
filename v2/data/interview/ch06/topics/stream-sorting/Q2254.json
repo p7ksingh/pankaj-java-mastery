@@ -1,7 +1,7 @@
 {
   "id": "Q2254",
   "slug": "sort-a-list-of-strings-by-their-length-using-comparatorcomparingintstringlength",
-  "questionNumber": 2254,
+  "questionNumber": 13,
   "title": "Given a `List<String>` (for example transaction reference codes), sort them by their length using `Comparator.comparingInt(String::length)`. Show ascending and how to make it descending.",
   "shortTitle": "Sort a list of strings by their length using Comparator.comparingInt(String::length)",
   "chapterNumber": 6,

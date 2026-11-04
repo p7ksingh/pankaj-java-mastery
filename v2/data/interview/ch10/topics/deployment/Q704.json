@@ -1,7 +1,7 @@
 {
   "id": "Q704",
   "slug": "what-makes-a-microservice-truly-independently-deployable",
-  "questionNumber": 704,
+  "questionNumber": 1,
   "title": "What makes a microservice truly \"independently deployable\" (its own codebase/pipeline, private database, backward-compatible contracts, no shared-library lockstep), and why is independent deployability — not size — the real test of whether you have microservices or a distributed monolith?",
   "shortTitle": "What makes a microservice truly independently deployable",
   "chapterNumber": 10,

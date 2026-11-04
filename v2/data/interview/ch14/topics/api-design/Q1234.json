@@ -1,7 +1,7 @@
 {
   "id": "Q1234",
   "slug": "what-is-the-difference-between-short-polling-long-polling-sse-and-websocket",
-  "questionNumber": 1234,
+  "questionNumber": 20,
   "title": "What is the difference between Short Polling (client keeps asking server every few seconds — simple but wasteful), Long Polling (client asks, server holds the connection until new data arrives — better but still HTTP overhead), SSE (Server-Sent Events — one-way server→client stream over HTTP), and WebSocket (full two-way communication over a single TCP connection)?",
   "shortTitle": "What is the difference between Short Polling, Long Polling, SSE, and WebSocket",
   "chapterNumber": 14,

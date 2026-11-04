@@ -1,7 +1,7 @@
 {
   "id": "Q2142",
   "slug": "how-does-flink-checkpointing-work-via-barrier-snapshots",
-  "questionNumber": 2142,
+  "questionNumber": 16,
   "title": "How does Flink checkpointing work via barrier snapshots (barriers injected at sources flow through the graph, barrier alignment waits for a barrier on all inputs, then each task snapshots its state asynchronously to durable storage like S3/HDFS)?",
   "shortTitle": "How does Flink checkpointing work via barrier snapshots",
   "chapterNumber": 20,

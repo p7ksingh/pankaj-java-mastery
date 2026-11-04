@@ -1,7 +1,7 @@
 {
   "id": "Q165",
   "slug": "hashset-vs-linkedhashset",
-  "questionNumber": 165,
+  "questionNumber": 3,
   "title": "HashSet vs LinkedHashSet",
   "shortTitle": "What is the difference between HashSet and LinkedHashSet?",
   "chapterNumber": 3,

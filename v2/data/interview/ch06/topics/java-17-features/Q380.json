@@ -1,7 +1,7 @@
 {
   "id": "Q380",
   "slug": "java-817-breaking-changes-strong-encapsulation-removed-modules-gc-change-module-infojava-not-required",
-  "questionNumber": 380,
+  "questionNumber": 2,
   "title": "What are the specific breaking changes when migrating Java 8 → Java 17 — strong encapsulation (JEP 396), removed modules, removed JVM flags, default GC switch, framework bumps — and do you need module-info.java?",
   "shortTitle": "What are Java 8 to 17 breaking changes?",
   "chapterNumber": 6,

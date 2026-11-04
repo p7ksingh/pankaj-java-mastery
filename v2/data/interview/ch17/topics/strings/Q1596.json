@@ -1,7 +1,7 @@
 {
   "id": "Q1596",
   "slug": "interleaving-string-can-two-strings-interleave-to-form-a-third",
-  "questionNumber": 1596,
+  "questionNumber": 35,
   "title": "Given strings s1, s2, and s3, determine whether s3 is formed by interleaving s1 and s2, preserving the left-to-right order of each.",
   "shortTitle": "Interleaving String — can two strings interleave to form a third",
   "chapterNumber": 17,

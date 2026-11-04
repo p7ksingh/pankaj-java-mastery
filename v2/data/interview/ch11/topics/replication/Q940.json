@@ -1,7 +1,7 @@
 {
   "id": "Q940",
   "slug": "how-do-you-design-multi-datacenter-kafka-replication-and-what-is-the-tradeoff-between-active-active-and-active-passive",
-  "questionNumber": 940,
+  "questionNumber": 8,
   "title": "How do you design multi-datacenter Kafka replication, and what is the tradeoff between active-active and active-passive?",
   "shortTitle": "How do you design multi-datacenter Kafka replication, and what is the tradeoff between active-active and active-passive?",
   "chapterNumber": 11,

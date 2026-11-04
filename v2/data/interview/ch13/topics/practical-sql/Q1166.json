@@ -1,7 +1,7 @@
 {
   "id": "Q1166",
   "slug": "database-sequences-versus-identityauto-increment-columns",
-  "questionNumber": 1166,
+  "questionNumber": 25,
   "title": "What is a database sequence (`CREATE SEQUENCE`, `nextval`), how does it differ from an identity/auto-increment column (a sequence is independent of a table — reusable, multi-table, gapless optional; identity is table-bound), and why do sequences have gaps (caching, rollbacks) which is normal and expected?",
   "shortTitle": "Database Sequences Versus Identity/Auto-Increment Columns",
   "chapterNumber": 13,

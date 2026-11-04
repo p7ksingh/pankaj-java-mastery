@@ -1,7 +1,7 @@
 {
   "id": "Q1689",
   "slug": "no-repeat-substring-longest-substring-without-repeating-characters",
-  "questionNumber": 1689,
+  "questionNumber": 40,
   "title": "Given a string, find the length of the longest substring that contains no repeating characters, using the sliding window pattern. Explain the approach, the data structures, the time and space complexity, and demonstrate it with a complete banking mini-project.",
   "shortTitle": "No-repeat Substring (Longest Substring Without Repeating Characters)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q109",
   "slug": "what-is-g1-string-deduplication-and-how-does-it-differ-from-string-interning",
-  "questionNumber": 109,
+  "questionNumber": 7,
   "title": "What is G1 String Deduplication (`-XX:+UseStringDeduplication`), and how does it differ from String interning?",
   "shortTitle": "What is G1 String Deduplication?",
   "chapterNumber": 1,

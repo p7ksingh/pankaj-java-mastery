@@ -1,7 +1,7 @@
 {
   "id": "Q627",
   "slug": "queryhints-readonly-cacheable-fetchsize-timeout-method-level-vs-transaction-level",
-  "questionNumber": 627,
+  "questionNumber": 2,
   "title": "What are JPA/Hibernate @QueryHints, which hints matter (readOnly, cacheable, fetchSize, timeout), and how does a method-level readOnly hint differ from @Transactional(readOnly=true)?",
   "shortTitle": "What are @QueryHints?",
   "chapterNumber": 9,

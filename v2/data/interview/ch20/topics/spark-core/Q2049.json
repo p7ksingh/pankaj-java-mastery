@@ -1,7 +1,7 @@
 {
   "id": "Q2049",
   "slug": "sparks-physical-join-strategies-bhj-ssmj-shj-bnlj-and-how-the-optimizer-chooses",
-  "questionNumber": 2049,
+  "questionNumber": 30,
   "title": "What are Spark's physical join strategies — Broadcast Hash Join (BHJ — small side broadcast to all executors, hash lookup, no shuffle of large side), Shuffle Sort Merge Join (SSMJ — both sides shuffled and sorted by join key, merge-step), Shuffle Hash Join (SHJ — both sides shuffled, hash table built on smaller side per partition), and Broadcast Nested Loop Join (BNLJ — for non-equi joins) — and how does the optimizer choose?",
   "shortTitle": "Spark's physical join strategies — BHJ, SSMJ, SHJ, BNLJ — and how the optimizer chooses",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
-  "id": "Q198-collections",
-  "slug": "type-erasure-compiler-erases-generics-consequences-no-new-t-no-instanceof-liststring-bridge-methods",
-  "questionNumber": 198,
+  "id": "Q198",
+  "slug": "type-erasure-compiler-erases-generics-consequences-no-new-t-no-instanceof-liststring-bridge",
+  "questionNumber": 3,
   "title": "Type erasure — compiler erases generics, consequences: no new T(), no instanceof List<String>, bridge methods",
   "shortTitle": "What is type erasure?",
   "chapterNumber": 3,

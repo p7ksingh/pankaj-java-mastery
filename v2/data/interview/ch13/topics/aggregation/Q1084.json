@@ -1,7 +1,7 @@
 {
   "id": "Q1084",
   "slug": "how-do-you-write-a-custom-method-or-query-in-mongodb-shell-aggregation-framework-spring-data-custom-repository",
-  "questionNumber": 1084,
+  "questionNumber": 1,
   "title": "How do you write a custom method/query in MongoDB (shell, aggregation framework, Spring Data custom repository)?",
   "shortTitle": "How do you write a custom method or query in MongoDB (shell, aggregation framework, Spring Data custom repository)?",
   "chapterNumber": 13,

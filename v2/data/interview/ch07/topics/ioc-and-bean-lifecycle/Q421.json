@@ -1,7 +1,7 @@
 {
   "id": "Q421",
   "slug": "ioc-container-beanfactory-vs-applicationcontext",
-  "questionNumber": 421,
+  "questionNumber": 1,
   "title": "Explain the Spring IoC container, the difference between BeanFactory and ApplicationContext, Inversion of Control, and Dependency Injection vs Dependency Lookup.",
   "shortTitle": "What is IoC Container — BeanFactory vs ApplicationContext?",
   "chapterNumber": 7,

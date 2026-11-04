@@ -1,7 +1,7 @@
 {
   "id": "Q1785",
   "slug": "merge-k-sorted-lists-combine-k-sorted-linked-lists-into-one",
-  "questionNumber": 1785,
+  "questionNumber": 23,
   "title": "You are given K sorted linked lists. Merge them into a single sorted linked list and return its head. Explain the K-way Merge pattern, the heap-based technique, the time and space complexity, and how it maps to a real banking scenario.",
   "shortTitle": "Merge K Sorted Lists (Combine K Sorted Linked Lists into One)",
   "chapterNumber": 17,

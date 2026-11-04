@@ -1,7 +1,7 @@
 {
   "id": "Q1035",
   "slug": "what-is-the-well-architected-framework-the-pillars-and-how-do-you-use-it-in-a-design-review",
-  "questionNumber": 1035,
+  "questionNumber": 22,
   "title": "What is the Well-Architected Framework (the pillars: Operational Excellence, Security, Reliability, Performance Efficiency, Cost Optimization, Sustainability), and how do you use it in a design review?",
   "shortTitle": "What is the Well-Architected Framework (the pillars), and how do you use it in a design review?",
   "chapterNumber": 12,

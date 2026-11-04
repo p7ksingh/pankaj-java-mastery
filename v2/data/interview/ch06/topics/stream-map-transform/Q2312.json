@@ -1,7 +1,7 @@
 {
   "id": "Q2312",
   "slug": "invert-a-mapstring-liststring-department-to-names-into-mapstring-string-name-to-department",
-  "questionNumber": 2312,
+  "questionNumber": 23,
   "title": "Invert a map: given `Map<String, List<String>>` (department → employee names), create `Map<String, String>` (employee name → department).",
   "shortTitle": "Invert a Map<String, List<String>> (department to names) into Map<String, String> (name to department)",
   "chapterNumber": 6,

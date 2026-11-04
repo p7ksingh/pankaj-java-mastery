@@ -1,7 +1,7 @@
 {
   "id": "Q172",
   "slug": "fail-fast-vs-fail-safe-iteration-concurrentmodificationexception",
-  "questionNumber": 172,
+  "questionNumber": 1,
   "title": "Fail-fast vs fail-safe iteration — ConcurrentModificationException",
   "shortTitle": "What is fail-fast vs fail-safe iteration?",
   "chapterNumber": 3,

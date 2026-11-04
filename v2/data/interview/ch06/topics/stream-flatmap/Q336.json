@@ -1,7 +1,7 @@
 {
   "id": "Q336",
   "slug": "map-vs-flatmap-one-to-one-vs-one-to-many-flatten",
-  "questionNumber": 336,
+  "questionNumber": 1,
   "title": "What is the difference between map() and flatMap() in streams?",
   "shortTitle": "map() vs flatMap() — one-to-one vs one-to-many + flatten",
   "chapterNumber": 6,

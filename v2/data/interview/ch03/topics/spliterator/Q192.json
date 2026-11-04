@@ -1,7 +1,7 @@
 {
-  "id": "Q192-collections",
-  "slug": "spliterator-characteristics-ordered-sized-sorted-distinct-and-stream-optimizations",
-  "questionNumber": 192,
+  "id": "Q192",
+  "slug": "spliterator-characteristics-ordered-sized-sorted-distinct-and-stream",
+  "questionNumber": 2,
   "title": "Spliterator characteristics — ORDERED, SIZED, SORTED, DISTINCT and stream optimizations",
   "shortTitle": "What are Spliterator characteristics?",
   "chapterNumber": 3,

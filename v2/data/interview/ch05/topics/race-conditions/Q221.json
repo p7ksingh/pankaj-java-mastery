@@ -1,7 +1,7 @@
 {
   "id": "Q221",
   "slug": "race-condition-vs-deadlock-data-corruption-vs-permanent-freeze",
-  "questionNumber": 221,
+  "questionNumber": 2,
   "title": "Race condition vs deadlock — data corruption vs permanent freeze",
   "shortTitle": "Race condition vs deadlock?",
   "chapterNumber": 5,

@@ -1,7 +1,7 @@
 {
   "id": "Q2016",
   "slug": "the-10-step-spark-execution-lifecycle",
-  "questionNumber": 2016,
+  "questionNumber": 8,
   "title": "Walk through the 10-step Spark execution lifecycle: (1) Driver starts SparkSession, (2) Cluster Manager provisions Executors, (3) DAG built from transformations, (4) Catalyst Optimizer builds logical→physical plan (for DataFrames/SQL), (5) DAGScheduler creates Stages at shuffle boundaries, (6) TaskScheduler creates Tasks (one per partition per stage), (7) Executors run Tasks in parallel, (8) Shuffle exchanges data between stages, (9) Results returned to Driver or written to storage, (10) SparkSession.stop() releases resources.",
   "shortTitle": "The 10-step Spark execution lifecycle",
   "chapterNumber": 20,

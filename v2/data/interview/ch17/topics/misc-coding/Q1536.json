@@ -1,7 +1,7 @@
 {
   "id": "Q1536",
   "slug": "find-median-from-data-stream-two-heaps-max-heap-lower-min-heap-upper",
-  "questionNumber": 1536,
+  "questionNumber": 12,
   "title": "Design a data structure that supports adding integers from a stream and returning the median of all values added so far, in logarithmic add time and constant median time.",
   "shortTitle": "Find Median from Data Stream — two heaps (max-heap lower + min-heap upper)",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q196",
   "slug": "throw-e-rethrow-vs-throw-new-serviceexceptionmsg-e-wrap-java-7-precise-rethrow",
-  "questionNumber": 196,
+  "questionNumber": 4,
   "title": "Difference between rethrowing with throw e vs wrapping with throw new ServiceException(\"msg\", e), and what is \"more precise rethrow\" (Java 7+)?",
   "shortTitle": "What is the difference between rethrow and wrap?",
   "chapterNumber": 4,

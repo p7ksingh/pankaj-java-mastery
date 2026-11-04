@@ -1,7 +1,7 @@
 {
   "id": "Q1228",
   "slug": "what-are-the-common-rest-api-design-mistakes-and-what-does-a-well-designed-api-look-like",
-  "questionNumber": 1228,
+  "questionNumber": 15,
   "title": "What are the common REST API design mistakes — verbs in URLs (`/getUser`), inconsistent naming, no versioning, no pagination on list endpoints, exposing internal IDs/entities, missing `Content-Type`/`Accept` headers, no rate-limit headers (`X-RateLimit-Limit`/`Remaining`/`Reset`), and generic 200-for-everything responses — and what does a well-designed API look like?",
   "shortTitle": "What are the common REST API design mistakes and what does a well-designed API look like",
   "chapterNumber": 14,

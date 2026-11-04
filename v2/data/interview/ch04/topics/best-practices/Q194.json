@@ -1,7 +1,7 @@
 {
   "id": "Q194",
   "slug": "catch-most-specific-exception-avoid-catchthrowableexception-and-never-use-exceptions-for-control-flow",
-  "questionNumber": 194,
+  "questionNumber": 2,
   "title": "Why should you catch the most specific exception possible and avoid catch(Throwable t)/catch(Exception e) broadly, and why should you not use exceptions for ordinary control flow?",
   "shortTitle": "What are the exception handling best practices?",
   "chapterNumber": 4,

@@ -1,7 +1,7 @@
 {
   "id": "Q9",
   "slug": "difference-between-final-finally-and-finalize",
-  "questionNumber": 9,
+  "questionNumber": 4,
   "title": "What is the difference between final, finally, and finalize() in Java?",
   "shortTitle": "What is the difference between final, finally, and finalize()?",
   "chapterNumber": 1,

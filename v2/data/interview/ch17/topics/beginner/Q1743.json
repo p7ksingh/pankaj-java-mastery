@@ -1,7 +1,7 @@
 {
   "id": "Q1743",
   "slug": "path-with-maximum-sum-maximum-sum-of-any-path-between-two-nodes",
-  "questionNumber": 1743,
+  "questionNumber": 12,
   "title": "Given a binary tree, find the path with the maximum sum, where a path is any sequence of connected nodes and need not pass through the root or start or end at a leaf. Node values may be negative. Return the maximum path sum, and explain the post-order traversal with a global maximum.",
   "shortTitle": "Path with Maximum Sum (Maximum Sum of Any Path Between Two Nodes)",
   "chapterNumber": 17,

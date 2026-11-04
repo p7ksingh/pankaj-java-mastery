@@ -1,7 +1,7 @@
 {
   "id": "Q422",
   "slug": "spring-bean-lifecycle-from-instantiation-to-destruction",
-  "questionNumber": 422,
+  "questionNumber": 2,
   "title": "Walk through the complete Spring bean lifecycle, explain why the injected bean is a proxy, what are the three init/destroy hooks, what should and should NOT go in @PostConstruct, why might @PreDestroy not run, and what does @DependsOn do?",
   "shortTitle": "What is the Spring Bean Lifecycle?",
   "chapterNumber": 7,

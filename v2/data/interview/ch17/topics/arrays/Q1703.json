@@ -1,7 +1,7 @@
 {
   "id": "Q1703",
   "slug": "subarray-sum-equals-k-prefix-sum-with-a-hash-map",
-  "questionNumber": 1703,
+  "questionNumber": 79,
   "title": "Given an array of integers that may include negatives and a target value k, find the total number of contiguous subarrays whose elements sum exactly to k. Solve it with the prefix-sum and hash-map pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Subarray Sum Equals K (Prefix Sum with a Hash Map)",
   "chapterNumber": 17,

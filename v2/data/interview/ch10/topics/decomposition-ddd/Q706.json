@@ -1,7 +1,7 @@
 {
   "id": "Q706",
   "slug": "the-decomposition-design-pattern",
-  "questionNumber": 706,
+  "questionNumber": 2,
   "title": "Explain the Decomposition design pattern (by business capability, by subdomain/DDD, by transaction, by scalability).",
   "shortTitle": "The Decomposition design pattern",
   "chapterNumber": 10,

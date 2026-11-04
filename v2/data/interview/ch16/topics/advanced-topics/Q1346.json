@@ -1,7 +1,7 @@
 {
   "id": "Q1346",
   "slug": "how-does-serviceloader-the-java-spi-mechanism-discover-implementations",
-  "questionNumber": 1346,
+  "questionNumber": 38,
   "title": "How does `ServiceLoader` (the Java SPI mechanism) discover implementations (`META-INF/services` files, lazy loading via the context classloader)?",
   "shortTitle": "How does ServiceLoader (the Java SPI mechanism) discover implementations?",
   "chapterNumber": 16,

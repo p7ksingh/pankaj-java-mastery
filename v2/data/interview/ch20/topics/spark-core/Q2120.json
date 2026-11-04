@@ -1,7 +1,7 @@
 {
   "id": "Q2120",
   "slug": "what-is-barrier-execution-mode-in-spark",
-  "questionNumber": 2120,
+  "questionNumber": 70,
   "title": "What is Barrier Execution Mode in Spark — a programming model (modeled after MPI) where all tasks in a stage launch simultaneously or not at all, and a single task failure restarts the entire stage — and what is its use case (distributed deep learning training frameworks like TensorFlow/PyTorch on Spark)?",
   "shortTitle": "What is Barrier Execution Mode in Spark",
   "chapterNumber": 20,

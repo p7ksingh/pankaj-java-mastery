@@ -1,7 +1,7 @@
 {
   "id": "Q1530",
   "slug": "design-add-and-search-words-trie-dfs-for-wildcard",
-  "questionNumber": 1530,
+  "questionNumber": 4,
   "title": "Design a data structure that supports adding words and searching words, where the search string may contain the dot character '.' that matches any single letter. Return whether any stored word matches the pattern.",
   "shortTitle": "Design Add and Search Words — Trie + DFS for '.' wildcard",
   "chapterNumber": 17,

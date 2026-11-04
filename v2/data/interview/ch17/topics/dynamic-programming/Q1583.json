@@ -1,7 +1,7 @@
 {
   "id": "Q1583",
   "slug": "01-knapsack-maximize-value-under-a-weight-capacity",
-  "questionNumber": 1583,
+  "questionNumber": 9,
   "title": "Given item weights and values and a knapsack capacity, maximize total value where each item may be taken at most once (0 or 1).",
   "shortTitle": "0/1 Knapsack — maximize value under a weight capacity",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q240",
   "slug": "interruptedexception-restore-interrupt-status-dont-swallow-graceful-shutdown",
-  "questionNumber": 240,
+  "questionNumber": 5,
   "title": "InterruptedException — restore interrupt status, don't swallow, graceful shutdown",
   "shortTitle": "How to handle InterruptedException?",
   "chapterNumber": 5,

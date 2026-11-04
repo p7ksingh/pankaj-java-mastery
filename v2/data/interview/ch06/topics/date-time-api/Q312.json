@@ -1,7 +1,7 @@
 {
   "id": "Q312",
   "slug": "javatime-datetime-api-localdate-zoneddatetime-instant-duration-vs-legacy-datecalendar",
-  "questionNumber": 312,
+  "questionNumber": 1,
   "title": "What is the Java 8 java.time Date/Time API, and why is it preferred over legacy Date/Calendar/SimpleDateFormat? What is Instant vs ZonedDateTime?",
   "shortTitle": "What is the java.time Date/Time API?",
   "chapterNumber": 6,

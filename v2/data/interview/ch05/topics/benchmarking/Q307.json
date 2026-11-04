@@ -1,7 +1,7 @@
 {
   "id": "Q307",
   "slug": "reactive-vs-blocking-benchmark-mistakes-omission-db-saturation-pool-sizing-gc-pressure",
-  "questionNumber": 307,
+  "questionNumber": 3,
   "title": "When benchmarking a reactive service against a blocking one, what mistakes make the comparison unfair? Explain coordinated omission, database saturation, connection pool sizing, and GC pressure from R2DBC tiny objects combined with an undersized young generation (`-Xmn`).",
   "shortTitle": "Reactive vs blocking benchmark mistakes?",
   "chapterNumber": 5,

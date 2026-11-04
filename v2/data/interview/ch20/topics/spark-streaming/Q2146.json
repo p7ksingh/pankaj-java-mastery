@@ -1,7 +1,7 @@
 {
   "id": "Q2146",
   "slug": "what-is-flinks-broadcast-state-pattern",
-  "questionNumber": 2146,
+  "questionNumber": 19,
   "title": "What is Flink's broadcast state pattern — a small, slowly-changing dataset (e.g., rules, config) is broadcast to all parallel instances of an operator via BroadcastStream, stored in BroadcastState, and used to enrich or control the processing of the main stream?",
   "shortTitle": "What is Flink's broadcast state pattern",
   "chapterNumber": 20,

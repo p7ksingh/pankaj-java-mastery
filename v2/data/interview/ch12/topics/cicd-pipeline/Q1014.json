@@ -1,7 +1,7 @@
 {
   "id": "Q1014",
   "slug": "the-default-string-field-type-in-elasticsearch-text-or-keyword-and-how-dynamic-mapping-handles-it",
-  "questionNumber": 1014,
+  "questionNumber": 5,
   "title": "Is the default string field type in Elasticsearch `text` or `keyword`, and how does dynamic mapping handle it?",
   "shortTitle": "The default string field type in Elasticsearch — `text` or `keyword` — and how dynamic mapping handles it",
   "chapterNumber": 12,

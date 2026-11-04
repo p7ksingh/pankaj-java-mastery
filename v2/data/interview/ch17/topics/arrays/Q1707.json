@@ -1,7 +1,7 @@
 {
   "id": "Q1707",
   "slug": "challenge-shortest-subarray-with-sum-at-least-k-prefix-sums-with-a-monotonic-deque",
-  "questionNumber": 1707,
+  "questionNumber": 83,
   "title": "Given an array of integers that may include negatives and a target k, find the length of the shortest contiguous non-empty subarray whose sum is at least k, returning minus one if none exists. Solve it with prefix sums and a monotonic deque and demonstrate with a complete banking mini-project.",
   "shortTitle": "Challenge: Shortest Subarray with Sum at Least K (Prefix Sums with a Monotonic Deque)",
   "chapterNumber": 17,

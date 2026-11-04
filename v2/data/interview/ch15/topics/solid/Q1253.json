@@ -1,7 +1,7 @@
 {
   "id": "Q1253",
   "slug": "what-is-the-strategy-pattern-and-how-does-it-enforce-the-openclosed-principle",
-  "questionNumber": 1253,
+  "questionNumber": 2,
   "title": "What is the Strategy pattern, where does it appear in the Java standard library, and how does it enforce the Open/Closed Principle (payment-strategy example)?",
   "shortTitle": "What is the Strategy pattern and how does it enforce the Open/Closed Principle",
   "chapterNumber": 15,

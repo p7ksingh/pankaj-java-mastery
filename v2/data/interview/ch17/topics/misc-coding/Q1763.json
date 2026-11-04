@@ -1,7 +1,7 @@
 {
   "id": "Q1763",
   "slug": "next-letter-smallest-letter-strictly-greater-than-the-key-wrapping-around",
-  "questionNumber": 1763,
+  "questionNumber": 32,
   "title": "Given an array of lowercase letters sorted in ascending order and a target letter, find the smallest letter in the array that is strictly greater than the target. The letters wrap around, so if the target is greater than or equal to the last letter, return the first letter. Explain the binary-search approach.",
   "shortTitle": "Next Letter (Smallest Letter Strictly Greater Than the Key, Wrapping Around)",
   "chapterNumber": 17,

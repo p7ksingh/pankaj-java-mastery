@@ -1,7 +1,7 @@
 {
   "id": "Q2595",
   "slug": "csrf-cross-site-request-forgery-and-how-to-prevent-it",
-  "questionNumber": 2595,
+  "questionNumber": 3,
   "title": "What is CSRF (Cross-Site Request Forgery) — attacker tricks a logged-in user's browser into making an unwanted request to your server — and how to prevent it (CSRF token in forms, SameSite cookie attribute)?",
   "shortTitle": "CSRF (Cross-Site Request Forgery) and How to Prevent It",
   "chapterNumber": 26,

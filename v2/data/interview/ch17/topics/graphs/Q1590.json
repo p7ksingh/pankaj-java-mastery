@@ -1,7 +1,7 @@
 {
   "id": "Q1590",
   "slug": "jump-game-ii-minimum-jumps-to-reach-the-end-greedy-bfs-layers",
-  "questionNumber": 1590,
+  "questionNumber": 17,
   "title": "Given an array where each element is the maximum jump length, return the minimum number of jumps needed to reach the last index (assume the end is always reachable).",
   "shortTitle": "Jump Game II — minimum jumps to reach the end (greedy BFS layers)",
   "chapterNumber": 17,

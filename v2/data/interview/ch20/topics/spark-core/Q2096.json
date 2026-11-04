@@ -1,7 +1,7 @@
 {
   "id": "Q2096",
   "slug": "integrating-spark-with-hive",
-  "questionNumber": 2096,
+  "questionNumber": 54,
   "title": "How do you integrate Spark with Hive — copy `hive-site.xml` + `core-site.xml` to Spark's conf directory, enable `enableHiveSupport()` in SparkSession, and set `spark.sql.warehouse.dir` — and what does this give you (access to Hive metastore tables, Hive UDFs, HiveQL)?",
   "shortTitle": "Integrating Spark with Hive",
   "chapterNumber": 20,

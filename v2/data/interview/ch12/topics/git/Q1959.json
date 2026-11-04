@@ -1,7 +1,7 @@
 {
   "id": "Q1959",
   "slug": "git-branching-strategy-gitflow-trunk-based-feature-branches-and-why-maintain-separate-production-and-development-branches-instead-of-a-single-branch-with-tags",
-  "questionNumber": 1959,
+  "questionNumber": 5,
   "title": "What is your Git branching strategy (GitFlow, trunk-based, feature branches), and why maintain separate `production` and `development` branches instead of a single branch with tags?",
   "shortTitle": "Git branching strategy (GitFlow, trunk-based, feature branches) and why maintain separate production and development branches instead of a single branch with tags",
   "chapterNumber": 12,

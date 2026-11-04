@@ -1,7 +1,7 @@
 {
   "id": "Q798",
   "slug": "why-does-naive-hashkey-n-sharding-make-rebalancing-painful-and-how-does-consistent-hashing-help",
-  "questionNumber": 798,
+  "questionNumber": 8,
   "title": "Why does naive `hash(key) % N` sharding make rebalancing painful (changing N remaps most keys), and how does consistent hashing (with virtual nodes) reduce the data movement when shards are added/removed?",
   "shortTitle": "Why does naive hash(key) % N sharding make rebalancing painful, and how does consistent hashing help",
   "chapterNumber": 10,

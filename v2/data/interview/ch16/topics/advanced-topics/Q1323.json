@@ -1,7 +1,7 @@
 {
   "id": "Q1323",
   "slug": "design-an-lfu-cache-with-o1-getput-and-extend-it-with-time-based-frequency-decay-and-ttl",
-  "questionNumber": 1323,
+  "questionNumber": 17,
   "title": "Design an LFU cache with O(1) get/put, and extend it with time-based frequency decay and TTL.",
   "shortTitle": "Design an LFU cache with O(1) get/put, and extend it with time-based frequency decay and TTL.",
   "chapterNumber": 16,

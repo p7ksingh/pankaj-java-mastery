@@ -1,7 +1,7 @@
 {
   "id": "Q1029",
   "slug": "what-devsecops-and-shift-left-are-and-why-moving-security-into-the-pipeline-vs-a-final-gate-matters-at-high-release-cadence",
-  "questionNumber": 1029,
+  "questionNumber": 16,
   "title": "What is DevSecOps and \"shift left\", and why does moving security into the pipeline (vs a final gate) matter at high release cadence?",
   "shortTitle": "What DevSecOps and \"shift left\" are — and why moving security into the pipeline (vs a final gate) matters at high release cadence",
   "chapterNumber": 12,

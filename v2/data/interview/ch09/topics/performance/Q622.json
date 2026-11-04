@@ -1,7 +1,7 @@
 {
   "id": "Q622",
   "slug": "transactionalreadonlytrue-hibernate-dirty-checking-open-session-in-view-anti-pattern",
-  "questionNumber": 622,
+  "questionNumber": 2,
   "title": "What does @Transactional(readOnly=true) optimize, how does Hibernate dirty checking work, and why is Open Session in View a production anti-pattern?",
   "shortTitle": "readOnly, dirty checking, and Open Session in View?",
   "chapterNumber": 9,

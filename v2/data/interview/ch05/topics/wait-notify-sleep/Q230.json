@@ -1,7 +1,7 @@
 {
   "id": "Q230",
   "slug": "waitnotify-vs-conditionawaitsignal-monitor-wait-set-vs-multiple-conditions",
-  "questionNumber": 230,
+  "questionNumber": 1,
   "title": "wait()/notify() vs Condition.await()/signal() — monitor wait-set vs multiple Conditions",
   "shortTitle": "wait()/notify() vs Condition.await()/signal()?",
   "chapterNumber": 5,

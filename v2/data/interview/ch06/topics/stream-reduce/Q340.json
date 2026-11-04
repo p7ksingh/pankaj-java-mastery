@@ -1,7 +1,7 @@
 {
   "id": "Q340",
   "slug": "findfirst-vs-findany-encounter-order-vs-parallel-performance",
-  "questionNumber": 340,
+  "questionNumber": 3,
   "title": "What is the difference between findFirst() and findAny()?",
   "shortTitle": "findFirst() vs findAny() — encounter order vs parallel performance",
   "chapterNumber": 6,

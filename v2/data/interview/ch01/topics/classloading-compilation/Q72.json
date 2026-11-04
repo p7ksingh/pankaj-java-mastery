@@ -1,7 +1,7 @@
 {
   "id": "Q72",
   "slug": "explain-the-class-loader-delegation-model-and-a-scenario-where-it-causes-issues",
-  "questionNumber": 72,
+  "questionNumber": 2,
   "title": "Explain the class-loader delegation (parent delegation) model, and give a scenario where it causes issues (same class, two loaders → ClassCastException).",
   "shortTitle": "What is the class-loader delegation model?",
   "chapterNumber": 1,

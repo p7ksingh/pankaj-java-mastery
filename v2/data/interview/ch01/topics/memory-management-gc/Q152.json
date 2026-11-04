@@ -1,7 +1,7 @@
 {
   "id": "Q152",
   "slug": "what-makes-an-object-eligible-for-garbage-collection-and-what-is-an-island-of-isolation",
-  "questionNumber": 152,
+  "questionNumber": 21,
   "title": "What makes an object eligible for garbage collection — no live (strong) reference chain from any GC root — and what are the common ways to make an object eligible (nulling the reference, reassigning it, letting the variable go out of scope, and island of isolation where a group of objects reference only each other but no external root reaches them)?",
   "shortTitle": "What makes an object eligible for garbage collection?",
   "chapterNumber": 1,

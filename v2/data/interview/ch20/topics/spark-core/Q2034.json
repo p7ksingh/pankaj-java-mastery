@@ -1,7 +1,7 @@
 {
   "id": "Q2034",
   "slug": "repartitionn-vs-coalescen",
-  "questionNumber": 2034,
+  "questionNumber": 19,
   "title": "What is the difference between `repartition(n)` and `coalesce(n)` — repartition is a wide transformation (full shuffle, round-robin, can increase or decrease partitions, produces evenly-sized output) vs coalesce is a narrow transformation (no shuffle, stitches existing partitions, can only decrease, output is unevenly sized)?",
   "shortTitle": "repartition(n) vs coalesce(n)",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q671",
   "slug": "save-does-not-immediately-run-insert-the-entity-becomes-managed-sql-is-deferred-to-flushcommit",
-  "questionNumber": 671,
+  "questionNumber": 4,
   "title": "Why does calling save() not immediately run an INSERT statement? What actually happens when you call save()?",
   "shortTitle": "Why does save() not immediately INSERT?",
   "chapterNumber": 9,

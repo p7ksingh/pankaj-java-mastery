@@ -1,7 +1,7 @@
 {
   "id": "Q416",
   "slug": "comparablecompareto-vs-comparatorcompare-natural-ordering-vs-external-strategy",
-  "questionNumber": 416,
+  "questionNumber": 5,
   "title": "What is the difference between Comparable.compareTo (natural ordering, defined IN the class) and Comparator.compare (external strategy, defined OUTSIDE), and how does Comparator.naturalOrder() / Comparator.reverseOrder() help?",
   "shortTitle": "Comparable.compareTo vs Comparator.compare — natural ordering vs external strategy",
   "chapterNumber": 6,

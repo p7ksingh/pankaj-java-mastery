@@ -1,7 +1,7 @@
 {
   "id": "Q1403",
   "slug": "check-if-a-number-is-prime",
-  "questionNumber": 1403,
+  "questionNumber": 4,
   "title": "Check if a number is prime (no factors other than 1 and itself — loop from 2 to sqrt(n)).",
   "shortTitle": "Check if a Number is Prime",
   "chapterNumber": 17,

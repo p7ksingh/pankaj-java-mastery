@@ -1,7 +1,7 @@
 {
   "id": "Q1132",
   "slug": "database-lock-types-shared-exclusive-intent-and-lock-escalation",
-  "questionNumber": 1132,
+  "questionNumber": 17,
   "title": "What are the database lock types — Shared (S, read, many allowed concurrently), Exclusive (X, write, only one), and Intent locks (signal an intention to lock at a lower granularity so the engine can check compatibility cheaply) — and what is lock escalation (the engine converting many fine-grained row locks into fewer coarse-grained table/page locks to reduce overhead, at the cost of concurrency)?",
   "shortTitle": "Database Lock Types (Shared, Exclusive, Intent) and Lock Escalation",
   "chapterNumber": 13,

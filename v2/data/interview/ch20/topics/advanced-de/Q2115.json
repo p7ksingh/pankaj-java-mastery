@@ -1,7 +1,7 @@
 {
   "id": "Q2115",
   "slug": "what-is-sizeestimator",
-  "questionNumber": 2115,
+  "questionNumber": 19,
   "title": "What is `SizeEstimator` — a Spark utility to estimate the in-memory size of a DataFrame/RDD in bytes (`sc._jvm.org.apache.spark.util.SizeEstimator.estimate(df._jdf)`) — and why is it useful for deciding whether to broadcast?",
   "shortTitle": "What is `SizeEstimator`",
   "chapterNumber": 20,

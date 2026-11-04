@@ -1,7 +1,7 @@
 {
   "id": "Q1780",
   "slug": "frequency-sort-sort-characters-by-decreasing-frequency",
-  "questionNumber": 1780,
+  "questionNumber": 48,
   "title": "Given a string, sort its characters in decreasing order of how often they appear. Explain how a frequency map plus a max-heap keyed on frequency builds the result.",
   "shortTitle": "Frequency Sort (Sort Characters by Decreasing Frequency)",
   "chapterNumber": 17,

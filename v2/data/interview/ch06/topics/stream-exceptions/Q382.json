@@ -1,7 +1,7 @@
 {
   "id": "Q382",
   "slug": "checked-exceptions-in-lambdasstreams-why-awkward-handling-options-trade-offs",
-  "questionNumber": 382,
+  "questionNumber": 1,
   "title": "Why do checked exceptions make lambdas/streams awkward, and what are the handling options (try-catch in lambda, custom @FunctionalInterface with throws, sneaky throw)?",
   "shortTitle": "Checked exceptions in lambdas/streams — why awkward, handling options, trade-offs",
   "chapterNumber": 6,

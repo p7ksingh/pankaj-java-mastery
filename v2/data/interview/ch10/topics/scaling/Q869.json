@@ -1,7 +1,7 @@
 {
   "id": "Q869",
   "slug": "postgresql-is-approaching-its-write-capacity-what-would-you-do-before-sharding",
-  "questionNumber": 869,
+  "questionNumber": 20,
   "title": "(Scenario) PostgreSQL is approaching its write capacity — what would you do BEFORE sharding (establish which resource is actually at its limit — CPU, lock contention, connection pressure, WAL generation, a handful of expensive queries — then examine query/index design, transaction duration, unnecessary writes, batching, connection behavior, data lifecycle, vertical headroom, and workload separation, because sharding changes application development permanently)?",
   "shortTitle": "PostgreSQL is approaching its write capacity — what would you do before sharding?",
   "chapterNumber": 10,

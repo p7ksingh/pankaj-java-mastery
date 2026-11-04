@@ -1,7 +1,7 @@
 {
   "id": "Q1876",
   "slug": "choosing-vpc-cidr-ranges-and-subnet-sizes-up-front",
-  "questionNumber": 1876,
+  "questionNumber": 7,
   "title": "What should you consider when choosing VPC CIDR ranges and subnet sizes up front (number of VPCs/environments/AZs, expected workload growth, EKS pod IP demand, public/private/DB subnets, Transit Gateway + peering connectivity, and avoiding OVERLAPPING CIDRs which block inter-VPC communication), and why is IP address management an org-wide architecture decision not an isolated per-VPC one?",
   "shortTitle": "Choosing VPC CIDR Ranges and Subnet Sizes Up Front",
   "chapterNumber": 18,

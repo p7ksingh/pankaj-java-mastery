@@ -1,7 +1,7 @@
 {
   "id": "Q1634",
   "slug": "lfu-cache-hashmap-plus-frequency-map-plus-linkedhashset-buckets",
-  "questionNumber": 1634,
+  "questionNumber": 13,
   "title": "LFU Cache — HashMap + frequency map + LinkedHashSet.",
   "shortTitle": "LFU Cache — HashMap plus frequency map plus LinkedHashSet buckets",
   "chapterNumber": 17,

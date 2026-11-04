@@ -1,7 +1,7 @@
 {
   "id": "Q1087",
   "slug": "how-would-you-build-a-database-connection-pool-from-scratch-and-how-does-hikaricp-improve-on-it",
-  "questionNumber": 1087,
+  "questionNumber": 3,
   "title": "How would you build a database connection pool from scratch (a bounded `BlockingQueue<Connection>` — `take()` to borrow blocks when empty, `offer()` to release), and how does HikariCP improve on this (a lock-free `ConcurrentBag`, leak detection, validation)?",
   "shortTitle": "How would you build a database connection pool from scratch, and how does HikariCP improve on it?",
   "chapterNumber": 13,

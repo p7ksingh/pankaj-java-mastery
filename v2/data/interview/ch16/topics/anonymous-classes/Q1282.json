@@ -1,7 +1,7 @@
 {
   "id": "Q1282",
   "slug": "what-does-this-refer-to-inside-an-anonymous-class-and-how-do-you-reference-the-enclosing-instance",
-  "questionNumber": 1282,
+  "questionNumber": 3,
   "title": "What does `this` refer to inside an anonymous class, and how do you reference the enclosing instance?",
   "shortTitle": "What does `this` refer to inside an anonymous class, and how do you reference the enclosing instance?",
   "chapterNumber": 16,

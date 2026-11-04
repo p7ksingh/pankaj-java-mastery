@@ -1,7 +1,7 @@
 {
   "id": "Q2045",
   "slug": "predicate-pushdown-filtering-at-the-data-source-before-reading-into-spark",
-  "questionNumber": 2045,
+  "questionNumber": 29,
   "title": "What is predicate pushdown — the Catalyst Optimizer pushes filter conditions down to the data source (Parquet/ORC/JDBC) so rows are filtered before being read into Spark memory — and why is it less effective with row-based formats (CSV/JSON must read full rows)?",
   "shortTitle": "Predicate pushdown — filtering at the data source before reading into Spark",
   "chapterNumber": 20,

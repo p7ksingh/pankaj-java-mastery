@@ -1,7 +1,7 @@
 {
   "id": "Q203",
   "slug": "jvm-exception-table-per-method-bytecode-table-zero-cost-try-block",
-  "questionNumber": 203,
+  "questionNumber": 1,
   "title": "How does the JVM find the matching catch block — using per-method exception table in bytecode — and why does a non-thrown try block have essentially ZERO runtime cost?",
   "shortTitle": "What is the JVM exception table?",
   "chapterNumber": 4,

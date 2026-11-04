@@ -1,7 +1,7 @@
 {
   "id": "Q2085",
   "slug": "what-is-delta-lake-and-how-it-differs-from-plain-parquet",
-  "questionNumber": 2085,
+  "questionNumber": 5,
   "title": "What is Delta Lake — an open-source storage layer on top of Parquet that brings ACID transactions, schema enforcement, time travel, and DML (UPDATE/DELETE/MERGE) to a data lake — and how does it differ from plain Parquet (transaction log, concurrent writes, schema evolution)?",
   "shortTitle": "What is Delta Lake and how it differs from plain Parquet",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q1375",
   "slug": "what-is-the-difference-between-array-and-linked-list",
-  "questionNumber": 1375,
+  "questionNumber": 8,
   "title": "What is the difference between array and linked list — array has fast access by index O(1) but slow insert/delete; linked list has slow access O(n) but fast insert/delete at head O(1).",
   "shortTitle": "What is the difference between array and linked list",
   "chapterNumber": 17,

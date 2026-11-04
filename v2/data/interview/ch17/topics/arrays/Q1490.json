@@ -1,7 +1,7 @@
 {
   "id": "Q1490",
   "slug": "find-minimum-in-rotated-sorted-array-binary-search-on-the-inflection-point",
-  "questionNumber": 1490,
+  "questionNumber": 38,
   "title": "A sorted ascending array of distinct integers has been rotated at some unknown pivot. Find the minimum element in logarithmic time.",
   "shortTitle": "Find Minimum in Rotated Sorted Array — Binary Search on the Inflection Point",
   "chapterNumber": 17,

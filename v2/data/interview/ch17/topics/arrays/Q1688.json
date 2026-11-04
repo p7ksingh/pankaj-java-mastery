@@ -1,7 +1,7 @@
 {
   "id": "Q1688",
   "slug": "fruits-into-baskets-longest-subarray-with-at-most-two-distinct-values",
-  "questionNumber": 1688,
+  "questionNumber": 71,
   "title": "You have two baskets and want to collect fruits from a row of trees, where each basket holds only one type of fruit. Starting from any tree, you must pick from every tree moving right until you cannot. Find the maximum number of fruits you can collect, which equals the longest subarray with at most two distinct values. (LeetCode: Fruit Into Baskets)",
   "shortTitle": "Fruits into Baskets (Longest Subarray with At Most Two Distinct Values)",
   "chapterNumber": 17,

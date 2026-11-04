@@ -1,7 +1,7 @@
 {
   "id": "Q1502",
   "slug": "longest-consecutive-sequence-hashset-expand-each-potential-start",
-  "questionNumber": 1502,
+  "questionNumber": 8,
   "title": "Given an unsorted integer array, find the length of the longest run of consecutive integers. The numbers may appear in any order, and the algorithm must run in linear time.",
   "shortTitle": "Longest Consecutive Sequence — HashSet, Expand Each Potential Start",
   "chapterNumber": 17,

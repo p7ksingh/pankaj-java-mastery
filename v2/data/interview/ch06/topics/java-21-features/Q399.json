@@ -1,7 +1,7 @@
 {
   "id": "Q399",
   "slug": "scopedvalue-vs-threadlocal-immutable-scoped-data-for-virtual-threads",
-  "questionNumber": 399,
+  "questionNumber": 7,
   "title": "What is ScopedValue, why is it preferred over ThreadLocal for virtual threads, and what is its status?",
   "shortTitle": "What is ScopedValue?",
   "chapterNumber": 6,

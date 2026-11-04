@@ -1,7 +1,7 @@
 {
   "id": "Q2082",
   "slug": "graphx-and-mllib",
-  "questionNumber": 2082,
+  "questionNumber": 10,
   "title": "What is GraphX — Spark's API for graph-parallel computation (vertices + edges as RDDs, supports PageRank, connected components, triangle counting) — and what is MLlib — Spark's machine learning library (classification, regression, clustering, recommendation, feature engineering via Pipeline API)?",
   "shortTitle": "GraphX and MLlib",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q1384",
   "slug": "write-a-recursive-function-for-fibonacci-number",
-  "questionNumber": 1384,
+  "questionNumber": 1,
   "title": "Write a recursive function for Fibonacci number (base: `fib(0) = 0, fib(1) = 1`, recursive: `fib(n) = fib(n-1) + fib(n-2)`).",
   "shortTitle": "Write a Recursive Function for Fibonacci Number",
   "chapterNumber": 17,

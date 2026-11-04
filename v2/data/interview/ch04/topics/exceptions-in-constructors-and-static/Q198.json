@@ -1,7 +1,7 @@
 {
   "id": "Q198",
   "slug": "exceptionininitializererror-static-init-throws-class-unusable-noclassdeffounderror-on-retry",
-  "questionNumber": 198,
+  "questionNumber": 2,
   "title": "What happens when exception thrown from static initializer — ExceptionInInitializerError, class marked unusable, subsequent access throws NoClassDefFoundError?",
   "shortTitle": "What is ExceptionInInitializerError?",
   "chapterNumber": 4,

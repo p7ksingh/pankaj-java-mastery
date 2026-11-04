@@ -1,7 +1,7 @@
 {
   "id": "Q1404",
   "slug": "check-if-a-number-is-a-palindrome",
-  "questionNumber": 1404,
+  "questionNumber": 6,
   "title": "Check if a number is palindrome (e.g., 121 → reverse digits → 121 → same → palindrome).",
   "shortTitle": "Check if a Number is a Palindrome",
   "chapterNumber": 17,

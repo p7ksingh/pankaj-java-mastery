@@ -1,7 +1,7 @@
 {
   "id": "Q2415",
   "slug": "how-do-you-collect-both-successful-results-and-errors-from-a-stream-pipeline",
-  "questionNumber": 2415,
+  "questionNumber": 4,
   "title": "How do you collect BOTH successful results and errors from a stream pipeline (use `Either` pattern or collect into a result holder)?",
   "shortTitle": "How do you collect BOTH successful results and errors from a stream pipeline?",
   "chapterNumber": 6,

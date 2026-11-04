@@ -1,7 +1,7 @@
 {
   "id": "Q965",
   "slug": "why-can-kafka-sustain-very-high-throughput-on-commodity-disks",
-  "questionNumber": 965,
+  "questionNumber": 13,
   "title": "Why can Kafka sustain very high throughput on commodity disks — explain sequential append-only writes vs random I/O, zero-copy transfer (`sendfile`), and reliance on the OS page cache rather than an in-process cache.",
   "shortTitle": "Why can Kafka sustain very high throughput on commodity disks?",
   "chapterNumber": 11,

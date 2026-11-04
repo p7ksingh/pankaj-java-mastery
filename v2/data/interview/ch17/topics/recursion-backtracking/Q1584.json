@@ -1,7 +1,7 @@
 {
   "id": "Q1584",
   "slug": "partition-equal-subset-sum-subset-sum-dp",
-  "questionNumber": 1584,
+  "questionNumber": 9,
   "title": "Given an array of positive integers, determine whether it can be split into two subsets with equal sums.",
   "shortTitle": "Partition Equal Subset Sum — subset-sum DP",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1922",
   "slug": "kubernetes-architecture-control-plane-worker-nodes-and-how-the-scheduler-places-a-pod",
-  "questionNumber": 1922,
+  "questionNumber": 5,
   "title": "Explain the Kubernetes architecture — control plane (API server, scheduler, controller manager, etcd) and worker nodes (kubelet, kube-proxy, container runtime) — and how the scheduler decides where to place a pod.",
   "shortTitle": "Kubernetes Architecture — Control Plane, Worker Nodes, and How the Scheduler Places a Pod",
   "chapterNumber": 12,

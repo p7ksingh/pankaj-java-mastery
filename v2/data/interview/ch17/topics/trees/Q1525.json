@@ -1,7 +1,7 @@
 {
   "id": "Q1525",
   "slug": "serialize-and-deserialize-binary-tree",
-  "questionNumber": 1525,
+  "questionNumber": 9,
   "title": "Design an algorithm to serialize a binary tree to a string and deserialize that string back into the identical tree.",
   "shortTitle": "Serialize and Deserialize Binary Tree",
   "chapterNumber": 17,

@@ -1,7 +1,7 @@
 {
   "id": "Q1235",
   "slug": "when-should-you-use-websocket-vs-sse",
-  "questionNumber": 1235,
+  "questionNumber": 21,
   "title": "When should you use WebSocket vs SSE — WebSocket for chat, gaming, collaborative editing (need two-way); SSE for live notifications, stock tickers, dashboards (server→client only, simpler, auto-reconnect)?",
   "shortTitle": "When should you use WebSocket vs SSE",
   "chapterNumber": 14,

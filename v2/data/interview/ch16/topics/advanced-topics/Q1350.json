@@ -1,7 +1,7 @@
 {
   "id": "Q1350",
   "slug": "what-is-a-java-agent-how-does-it-instrument-bytecode-at-load-time-and-what-tools-are-built-on-it",
-  "questionNumber": 1350,
+  "questionNumber": 41,
   "title": "What is a Java Agent (`java.lang.instrument`, the `-javaagent` flag, the `premain`/`agentmain` hooks + `ClassFileTransformer`), how does it instrument or rewrite class bytecode at load time (typically via ASM/ByteBuddy/Javassist), and what real tools are built on it (APM like New Relic/Dynatrace, JaCoCo code coverage, OpenTelemetry auto-instrumentation, JRebel hot-reload)?",
   "shortTitle": "What is a Java Agent, how does it instrument bytecode at load time, and what tools are built on it?",
   "chapterNumber": 16,

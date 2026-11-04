@@ -1,7 +1,7 @@
 {
   "id": "Q1765",
   "slug": "search-in-a-sorted-infinite-array-find-a-key-without-knowing-the-length",
-  "questionNumber": 1765,
+  "questionNumber": 93,
   "title": "Given an infinite sorted array, or one whose length is unknown and can only be probed through an accessor that returns a large sentinel for out-of-bounds indices, find the index of a given key. Explain how you first find a bounding window and then binary-search within it.",
   "shortTitle": "Search in a Sorted Infinite Array (Find a Key Without Knowing the Length)",
   "chapterNumber": 17,

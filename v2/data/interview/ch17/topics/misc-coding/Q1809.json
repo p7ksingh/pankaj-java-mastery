@@ -1,7 +1,7 @@
 {
   "id": "Q1809",
   "slug": "longest-palindromic-subsequence-longest-subsequence-that-reads-the-same-both-ways",
-  "questionNumber": 1809,
+  "questionNumber": 41,
   "title": "Given a string, find the length of its longest palindromic subsequence, where a subsequence keeps relative order but need not be contiguous. Explain the Palindromic Subsequence DP pattern, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Longest Palindromic Subsequence (Longest Subsequence That Reads the Same Both Ways)",
   "chapterNumber": 17,

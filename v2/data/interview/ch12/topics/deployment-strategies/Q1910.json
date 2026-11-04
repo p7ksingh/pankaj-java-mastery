@@ -1,7 +1,7 @@
 {
   "id": "Q1910",
   "slug": "deployment-strategies-rolling-update-blue-green-and-canary",
-  "questionNumber": 1910,
+  "questionNumber": 3,
   "title": "What deployment strategies do you use and how do they differ — rolling update, blue-green (two environments, instant switch + instant rollback), and canary (shift a % of traffic, observe, then ramp)?",
   "shortTitle": "Deployment Strategies — Rolling Update, Blue-Green, and Canary",
   "chapterNumber": 12,

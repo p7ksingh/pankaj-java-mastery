@@ -1,7 +1,7 @@
 {
   "id": "Q1412",
   "slug": "find-the-power-of-a-number-using-recursion",
-  "questionNumber": 1412,
+  "questionNumber": 3,
   "title": "Find the power of a number (e.g., 2^10) using recursion (`power(x,n) = x * power(x, n-1)`, base: `power(x,0) = 1`).",
   "shortTitle": "Find the Power of a Number Using Recursion",
   "chapterNumber": 17,

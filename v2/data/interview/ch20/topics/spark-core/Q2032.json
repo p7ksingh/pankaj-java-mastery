@@ -1,7 +1,7 @@
 {
   "id": "Q2032",
   "slug": "cachingpersistence-vs-checkpointing",
-  "questionNumber": 2032,
+  "questionNumber": 18,
   "title": "What is the difference between caching/persistence and checkpointing (cache = reuse optimization, lineage preserved; checkpoint = materialize to reliable storage and truncate lineage for fault recovery)?",
   "shortTitle": "Caching/persistence vs checkpointing",
   "chapterNumber": 20,

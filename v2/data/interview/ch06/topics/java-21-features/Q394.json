@@ -1,7 +1,7 @@
 {
   "id": "Q394",
   "slug": "virtual-thread-pinning-synchronized-vs-reentrantlock-jep-491-jfr-detection",
-  "questionNumber": 394,
+  "questionNumber": 2,
   "title": "What causes carrier-thread pinning, how has it changed across versions (Java 21 vs 24), and how do you detect it?",
   "shortTitle": "What is virtual thread pinning?",
   "chapterNumber": 6,

@@ -1,7 +1,7 @@
 {
   "id": "Q1671",
   "slug": "triplets-with-smaller-sum-two-pointers-with-counting",
-  "questionNumber": 1671,
+  "questionNumber": 10,
   "title": "Given an array and a target value, count how many triplets have a sum strictly less than the target. (GeeksforGeeks: Count triplets with sum smaller than X)",
   "shortTitle": "Triplets with Smaller Sum (Two Pointers with Counting)",
   "chapterNumber": 17,

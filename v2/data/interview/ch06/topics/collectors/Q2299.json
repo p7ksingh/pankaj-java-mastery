@@ -1,7 +1,7 @@
 {
   "id": "Q2299",
   "slug": "build-a-formatted-department-summary-string-from-a-grouped-map-using-entryset-streaming-and-collectorsjoining",
-  "questionNumber": 2299,
+  "questionNumber": 15,
   "title": "From a `Map<String, Long>` of employee count per department, build a single formatted summary string like `[Risk=2, Trading=3]` sorted by department, by streaming the map's `entrySet` and using `Collectors.joining` with a delimiter, prefix, and suffix. Explain how to stream a map and compose the formatted output.",
   "shortTitle": "Build a formatted department summary string from a grouped map using entrySet streaming and Collectors.joining",
   "chapterNumber": 6,

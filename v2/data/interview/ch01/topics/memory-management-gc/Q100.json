@@ -1,7 +1,7 @@
 {
   "id": "Q100",
   "slug": "in-heap-dump-analysis-what-is-the-difference-between-shallow-heap-and-retained-heap-and-why-sort-by-retained-heap",
-  "questionNumber": 100,
+  "questionNumber": 18,
   "title": "In heap-dump analysis, what is the difference between shallow heap and retained heap, and why do you sort by retained heap to find memory accumulators?",
   "shortTitle": "What is shallow heap vs retained heap in heap dump analysis?",
   "chapterNumber": 1,

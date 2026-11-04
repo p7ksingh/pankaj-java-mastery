@@ -1,7 +1,7 @@
 {
   "id": "Q616",
   "slug": "microservices-advanced-outbox-pattern-sharding-scaling-to-1m-users-resilience-retry-amplification",
-  "questionNumber": 616,
+  "questionNumber": 1,
   "title": "How do you secure microservices (JWT propagation, mTLS)? Database sharding? Scaling from 1 to 1M users? Data consistency (outbox, 2PC, eventual)? Design scenarios (payment, chat, URL shortener)? Anti-patterns? Retry amplification? Availability math? When NOT to use microservices?",
   "shortTitle": "Microservices advanced — outbox pattern, sharding, scaling to 1M users, resilience, retry amplification",
   "chapterNumber": 10,

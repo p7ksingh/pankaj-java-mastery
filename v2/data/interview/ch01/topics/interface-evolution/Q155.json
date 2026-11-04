@@ -1,7 +1,7 @@
 {
   "id": "Q155",
   "slug": "how-has-the-java-interface-evolved-and-why-were-default-methods-added",
-  "questionNumber": 155,
+  "questionNumber": 1,
   "title": "How has the Java `interface` evolved — pre-Java 8 (abstract methods + constants only) → Java 8 (default methods + static methods) → Java 9 (private methods + private static methods) — and why were default methods added (backward-compatible API evolution: add new methods like `forEach`, `stream`, `spliterator` to existing interfaces without breaking all implementors)?",
   "shortTitle": "How has the Java interface evolved?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q1522",
   "slug": "binary-tree-maximum-path-sum-dfs-tracking-max-through-node",
-  "questionNumber": 1522,
+  "questionNumber": 12,
   "title": "Given the root of a binary tree, find the maximum path sum, where a path is any sequence of connected nodes and the path need not pass through the root. Each node's value may be negative.",
   "shortTitle": "Binary Tree Maximum Path Sum — DFS tracking max-through-node",
   "chapterNumber": 17,

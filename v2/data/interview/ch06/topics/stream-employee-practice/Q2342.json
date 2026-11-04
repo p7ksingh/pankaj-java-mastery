@@ -1,7 +1,7 @@
 {
   "id": "Q2342",
   "slug": "format-an-employees-joining-date-as-dd-mmm-yyyy-using-datetimeformatter",
-  "questionNumber": 2342,
+  "questionNumber": 21,
   "title": "Format an employee's joining date as \"dd-MMM-yyyy\" using `DateTimeFormatter`.",
   "shortTitle": "Format an employee's joining date as \"dd-MMM-yyyy\" using DateTimeFormatter",
   "chapterNumber": 6,

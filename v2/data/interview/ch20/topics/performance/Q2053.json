@@ -1,7 +1,7 @@
 {
   "id": "Q2053",
   "slug": "when-you-should-not-use-a-broadcast-join-smaller-safe-to-broadcast",
-  "questionNumber": 2053,
+  "questionNumber": 4,
   "title": "When should you NOT use Broadcast Join — the \"small\" table is still too large for executor memory (causes OOM), both sides are huge, the broadcast overhead exceeds the shuffle cost for very small datasets — and why is \"smaller ≠ safe to broadcast\" an important production rule?",
   "shortTitle": "When you should NOT use a Broadcast Join — \"smaller ≠ safe to broadcast\"",
   "chapterNumber": 20,

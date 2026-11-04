@@ -1,7 +1,7 @@
 {
   "id": "Q1250",
   "slug": "how-do-you-stop-cloning-from-breaking-a-singleton",
-  "questionNumber": 1250,
+  "questionNumber": 8,
   "title": "How do you stop cloning from breaking a Singleton (override clone() to throw CloneNotSupportedException or return the instance)?",
   "shortTitle": "How do you stop cloning from breaking a Singleton",
   "chapterNumber": 15,

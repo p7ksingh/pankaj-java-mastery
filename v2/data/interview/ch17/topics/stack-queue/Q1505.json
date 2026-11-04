@@ -1,7 +1,7 @@
 {
   "id": "Q1505",
   "slug": "min-stack-design-with-o1-getmin-auxiliary-min-stack",
-  "questionNumber": 1505,
+  "questionNumber": 6,
   "title": "Design a stack that supports push, pop, top, and retrieving the minimum element, all in constant time.",
   "shortTitle": "Min Stack — design with O(1) getMin (auxiliary min stack)",
   "chapterNumber": 17,

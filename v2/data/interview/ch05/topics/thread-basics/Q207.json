@@ -1,7 +1,7 @@
 {
   "id": "Q207",
   "slug": "thread-lifecycle-states-new-runnable-blocked-waiting-timed-waiting-terminated",
-  "questionNumber": 207,
+  "questionNumber": 3,
   "title": "Thread lifecycle / states — New, Runnable, Blocked, Waiting, Timed Waiting, Terminated",
   "shortTitle": "What are the thread lifecycle states?",
   "chapterNumber": 5,

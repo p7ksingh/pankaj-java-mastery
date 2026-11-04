@@ -1,7 +1,7 @@
 {
   "id": "Q668",
   "slug": "sessionevict-vs-sessionclear-vs-detach-detach-one-vs-all-batch-loop-memory",
-  "questionNumber": 668,
+  "questionNumber": 1,
   "title": "What is the difference between session.evict(), session.clear(), and detach()? When do you detach one entity versus all of them? How does this matter in a batch loop that runs out of memory?",
   "shortTitle": "session.evict() vs session.clear() vs detach()?",
   "chapterNumber": 9,

@@ -1,7 +1,7 @@
 {
   "id": "Q134",
   "slug": "what-is-implicit-coercion-in-mixed-expressions-why-does-a-1-produce-66-and-why-does-long-float-yield-float",
-  "questionNumber": 134,
+  "questionNumber": 11,
   "title": "What is implicit coercion in mixed expressions — why does `'A' + 1` produce an `int` (66), why must you cast back to assign to a `char`, and why does `long + float` yield `float` (binary numeric promotion)?",
   "shortTitle": "What is implicit coercion in mixed expressions?",
   "chapterNumber": 1,

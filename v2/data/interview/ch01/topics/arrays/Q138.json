@@ -1,7 +1,7 @@
 {
   "id": "Q138",
   "slug": "what-are-multi-dimensional-and-jagged-arrays-and-how-does-java-store-them",
-  "questionNumber": 138,
+  "questionNumber": 2,
   "title": "What are multi-dimensional and jagged arrays (`int[][] grid = new int[3][4]` vs `int[][] jagged = new int[3][]` where each row can differ in length), and how does Java store them (arrays of arrays, not contiguous memory)?",
   "shortTitle": "What are multi-dimensional and jagged arrays?",
   "chapterNumber": 1,

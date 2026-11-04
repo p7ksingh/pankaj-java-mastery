@@ -1,7 +1,7 @@
 {
   "id": "Q1587",
   "slug": "unique-paths-count-grid-paths-moving-right-or-down",
-  "questionNumber": 1587,
+  "questionNumber": 1,
   "title": "A robot starts at the top-left of an m by n grid and may move only right or down. Count how many distinct paths reach the bottom-right.",
   "shortTitle": "Unique Paths — count grid paths moving right or down",
   "chapterNumber": 17,

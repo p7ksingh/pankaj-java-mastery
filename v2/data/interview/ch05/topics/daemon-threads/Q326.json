@@ -1,7 +1,7 @@
 {
   "id": "Q326",
   "slug": "jvm-shutdown-hook-runtimeaddshutdownhook-for-graceful-shutdown",
-  "questionNumber": 326,
+  "questionNumber": 3,
   "title": "What is a JVM shutdown hook? When does Runtime.addShutdownHook run, when does it NOT run (kill -9), and how do you use it for graceful shutdown?",
   "shortTitle": "What is a JVM shutdown hook?",
   "chapterNumber": 5,

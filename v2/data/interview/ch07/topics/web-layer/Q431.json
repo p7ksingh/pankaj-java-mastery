@@ -1,7 +1,7 @@
 {
   "id": "Q431",
   "slug": "why-not-db-in-controller-dao-benefits-and-how-auto-configuration-works-internally",
-  "questionNumber": 431,
+  "questionNumber": 3,
   "title": "Why is DB operations in a controller bad practice? What are DAO layer benefits? How does Spring Boot auto-configuration work (@EnableAutoConfiguration, @Conditional)? How do you customize, exclude, or debug auto-configuration?",
   "shortTitle": "Why should you not put DB logic in a controller?",
   "chapterNumber": 7,

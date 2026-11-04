@@ -1,7 +1,7 @@
 {
   "id": "Q330",
   "slug": "when-to-use-a-traditional-loop-over-the-stream-api-index-access-in-place-modification-early-exit-trycatch",
-  "questionNumber": 330,
+  "questionNumber": 5,
   "title": "In which cases would you use a traditional loop over the Stream API (index access, in-place modification, early exit, per-element try/catch, nested loops, performance, stateful iteration)?",
   "shortTitle": "When to use a loop over Stream API?",
   "chapterNumber": 6,

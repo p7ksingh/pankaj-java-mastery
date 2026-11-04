@@ -1,7 +1,7 @@
 {
   "id": "Q1025",
   "slug": "what-epsilon-gc-is-the-no-op-collector-and-when-it-is-useful",
-  "questionNumber": 1025,
+  "questionNumber": 15,
   "title": "What is Epsilon GC (no-op collector), and when is it useful (benchmarking, short-lived programs, allocation-rate analysis)?",
   "shortTitle": "What Epsilon GC is — the no-op collector — and when it is useful",
   "chapterNumber": 12,

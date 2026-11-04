@@ -1,7 +1,7 @@
 {
   "id": "Q2202",
   "slug": "generating-and-using-allurehtml-reports-that-help-developers-diagnose-failures",
-  "questionNumber": 2202,
+  "questionNumber": 2,
   "title": "How do you generate and use Allure/HTML test reports (passed/failed, duration, error messages, screenshots, videos, trace files, environment info), and why should a report help developers DIAGNOSE a failure rather than just show red/green?",
   "shortTitle": "Generating and using Allure/HTML reports that help developers diagnose failures",
   "chapterNumber": 21,

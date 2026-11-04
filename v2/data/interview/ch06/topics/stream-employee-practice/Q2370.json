@@ -1,7 +1,7 @@
 {
   "id": "Q2370",
   "slug": "compute-the-runningcumulative-sum-of-a-list-using-streams",
-  "questionNumber": 2370,
+  "questionNumber": 24,
   "title": "Compute the running/cumulative sum of a list using streams (hint: `AtomicInteger` or custom collector).",
   "shortTitle": "Compute the running/cumulative sum of a list using streams",
   "chapterNumber": 6,

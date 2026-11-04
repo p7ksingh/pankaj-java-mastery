@@ -1,7 +1,7 @@
 {
   "id": "Q594",
   "slug": "eager-vs-lazy-defaults-lazyinitializationexception-hibernateinitialize-getreference-vs-findbyid",
-  "questionNumber": 594,
+  "questionNumber": 2,
   "title": "EAGER vs LAZY? Default fetch per association? Lazy loading internals (proxy, on-demand SQL)? Hibernate.initialize()? LazyInitializationException in prod? Eager/lazy in plain Java? load() vs get()? getReference/getById vs findById?",
   "shortTitle": "What is EAGER vs LAZY fetching?",
   "chapterNumber": 9,

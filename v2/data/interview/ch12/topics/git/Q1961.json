@@ -1,7 +1,7 @@
 {
   "id": "Q1961",
   "slug": "the-difference-between-git-merge-git-rebase-and-git-cherry-pick-and-when-to-use-each",
-  "questionNumber": 1961,
+  "questionNumber": 6,
   "title": "What is the difference between `git merge`, `git rebase`, and `git cherry-pick`, and when do you use each?",
   "shortTitle": "The difference between git merge, git rebase, and git cherry-pick, and when to use each",
   "chapterNumber": 12,

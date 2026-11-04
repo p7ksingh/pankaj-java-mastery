@@ -1,7 +1,7 @@
 {
   "id": "Q1472",
   "slug": "max-consecutive-ones-iii-sliding-window-allowing-at-most-k-zero-flips",
-  "questionNumber": 1472,
+  "questionNumber": 5,
   "title": "Max Consecutive Ones III — sliding window allowing at most K zero flips.",
   "shortTitle": "Max Consecutive Ones III — Sliding Window Allowing At Most K Zero Flips",
   "chapterNumber": 17,

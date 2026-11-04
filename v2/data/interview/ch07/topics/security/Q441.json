@@ -1,7 +1,7 @@
 {
   "id": "Q441",
   "slug": "csrf-vs-cors-bean-validation-valid-and-spring-jdbc-vs-spring-data-jpa",
-  "questionNumber": 441,
+  "questionNumber": 2,
   "title": "What are CSRF and CORS, how do they differ, is it safe to disable CSRF in REST APIs? How do you validate POST endpoints (@Valid, JSR-303, @ControllerAdvice)? What is EntityManagerFactory? What is the difference between Spring JDBC and Spring Data JPA?",
   "shortTitle": "What is CSRF vs CORS and Bean Validation?",
   "chapterNumber": 7,

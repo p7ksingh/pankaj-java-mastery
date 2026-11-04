@@ -1,7 +1,7 @@
 {
   "id": "Q44",
   "slug": "the-difference-between-transient-and-volatile-and-whether-a-field-can-be-both",
-  "questionNumber": 44,
+  "questionNumber": 3,
   "title": "What is the difference between `transient` and `volatile` (serialization opt-out vs cross-thread visibility — unrelated concerns), can a field be both (`transient volatile`), and why is `transient` NOT a security feature (doesn't protect JSON/logs/DB)?",
   "shortTitle": "What is the difference between transient and volatile?",
   "chapterNumber": 1,

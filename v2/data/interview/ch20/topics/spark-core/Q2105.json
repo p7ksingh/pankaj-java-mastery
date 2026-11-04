@@ -1,7 +1,7 @@
 {
   "id": "Q2105",
   "slug": "spark-read-modes-permissive-dropmalformed-failfast",
-  "questionNumber": 2105,
+  "questionNumber": 59,
   "title": "What are Spark's read modes for handling corrupt records — `PERMISSIVE` (default: nulls for bad fields, corrupt record saved in `_corrupt_record` column), `DROPMALFORMED` (drops bad rows), `FAILFAST` (throws exception on first bad record) — and when do you use each?",
   "shortTitle": "Spark read modes — PERMISSIVE, DROPMALFORMED, FAILFAST",
   "chapterNumber": 20,

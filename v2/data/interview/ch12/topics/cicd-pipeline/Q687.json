@@ -1,7 +1,7 @@
 {
   "id": "Q687",
   "slug": "database-sql-queries-indexes-joins-window-functions-transactions-sharding-hikaricp",
-  "questionNumber": 687,
+  "questionNumber": 1,
   "title": "Explain relational database performance and correctness for a high-volume banking service. Cover SQL versus NoSQL, ACID transactions, B-tree indexes and query optimization with EXPLAIN ANALYZE, joins and normalization, window functions and CTEs, connection pooling with HikariCP, read replicas and sharding, SQL injection prevention, and Flyway migrations.",
   "shortTitle": "Database — SQL queries, indexes, joins, window functions, transactions, sharding, HikariCP",
   "chapterNumber": 12,

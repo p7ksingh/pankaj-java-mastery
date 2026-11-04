@@ -1,7 +1,7 @@
 {
   "id": "Q929",
   "slug": "what-consumer-lag-tells-you-and-what-it-does-not-per-partition-vs-aggregate",
-  "questionNumber": 929,
+  "questionNumber": 2,
   "title": "What does consumer lag tell you, and what does it NOT tell you (per-partition vs aggregate)?",
   "shortTitle": "What consumer lag tells you and what it does not (per-partition vs aggregate)",
   "chapterNumber": 11,

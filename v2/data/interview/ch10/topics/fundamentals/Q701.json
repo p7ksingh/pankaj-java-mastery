@@ -1,7 +1,7 @@
 {
   "id": "Q701",
   "slug": "key-components-of-a-microservices-architecture",
-  "questionNumber": 701,
+  "questionNumber": 2,
   "title": "Explain the key components of a microservices architecture (API Gateway, Service Registry, Config Server, inter-service communication, DB-per-service, load balancer, monitoring/logging, circuit breaker).",
   "shortTitle": "Key components of a microservices architecture",
   "chapterNumber": 10,

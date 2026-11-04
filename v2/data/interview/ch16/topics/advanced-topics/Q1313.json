@@ -1,7 +1,7 @@
 {
   "id": "Q1313",
   "slug": "how-do-you-add-distributed-tracing-to-a-grpc-microservice-clientserver-interceptors-injectingextracting-trace-context-jaegerzipkinopentelemetry",
-  "questionNumber": 1313,
+  "questionNumber": 7,
   "title": "How do you add distributed tracing to a gRPC microservice (client/server interceptors injecting/extracting trace context, Jaeger/Zipkin/OpenTelemetry)?",
   "shortTitle": "How do you add distributed tracing to a gRPC microservice (client/server interceptors injecting/extracting trace context, Jaeger/Zipkin/OpenTelemetry)?",
   "chapterNumber": 16,

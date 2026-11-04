@@ -1,7 +1,7 @@
 {
   "id": "Q1588",
   "slug": "minimum-path-sum-cheapest-path-through-a-weighted-grid",
-  "questionNumber": 1588,
+  "questionNumber": 12,
   "title": "Given an m by n grid of non-negative costs, find a path from top-left to bottom-right that minimizes the sum of costs, moving only right or down.",
   "shortTitle": "Minimum Path Sum — cheapest path through a weighted grid",
   "chapterNumber": 17,

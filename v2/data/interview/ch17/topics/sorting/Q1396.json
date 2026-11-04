@@ -1,7 +1,7 @@
 {
   "id": "Q1396",
   "slug": "implement-bubble-sort",
-  "questionNumber": 1396,
+  "questionNumber": 3,
   "title": "Implement Bubble Sort — compare adjacent elements, swap if wrong order, repeat until sorted; O(n²) but easy to understand.",
   "shortTitle": "Implement Bubble Sort",
   "chapterNumber": 17,

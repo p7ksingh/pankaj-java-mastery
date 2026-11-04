@@ -1,7 +1,7 @@
 {
   "id": "Q2065",
   "slug": "stateless-vs-stateful-operations-in-structured-streaming",
-  "questionNumber": 2065,
+  "questionNumber": 6,
   "title": "What is the difference between stateless operations (filter, map — each micro-batch independent) and stateful operations (aggregations, joins, deduplication — maintain state across batches) in Structured Streaming?",
   "shortTitle": "Stateless vs stateful operations in Structured Streaming",
   "chapterNumber": 20,

@@ -1,7 +1,7 @@
 {
   "id": "Q1374",
   "slug": "what-is-a-linked-list",
-  "questionNumber": 1374,
+  "questionNumber": 1,
   "title": "What is a linked list — a chain of nodes, each node holds data + a pointer to the next node; unlike array, nodes are NOT stored side by side in memory.",
   "shortTitle": "What is a linked list",
   "chapterNumber": 17,

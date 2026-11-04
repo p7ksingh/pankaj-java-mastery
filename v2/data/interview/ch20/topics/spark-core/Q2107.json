@@ -1,7 +1,7 @@
 {
   "id": "Q2107",
   "slug": "hash-based-vs-sort-based-aggregation-in-spark",
-  "questionNumber": 2107,
+  "questionNumber": 61,
   "title": "What is Hash-based aggregation vs Sort-based aggregation in Spark — HashAggregate (uses off-heap hash map, fast for low-cardinality, mutable fixed-length buffers) vs SortAggregate (sorts by key first, handles high-cardinality and variable-length types like strings/decimals) vs ObjectHashAggregate (for non-mutable buffer types like `collect_list`) — and how does Spark choose?",
   "shortTitle": "Hash-based vs Sort-based aggregation in Spark",
   "chapterNumber": 20,

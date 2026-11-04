@@ -1,7 +1,7 @@
 {
   "id": "Q1692",
   "slug": "minimum-size-subarray-sum-shortest-subarray-with-sum-at-least-target",
-  "questionNumber": 1692,
+  "questionNumber": 73,
   "title": "Given an array of positive integers and a target value, find the length of the shortest contiguous subarray whose sum is greater than or equal to the target, returning zero if no such subarray exists. Solve it with the sliding window pattern and demonstrate with a complete banking mini-project.",
   "shortTitle": "Minimum Size Subarray Sum (Shortest Subarray with Sum At Least Target)",
   "chapterNumber": 17,

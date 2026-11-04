@@ -1,7 +1,7 @@
 {
   "id": "Q886",
   "slug": "why-is-rollback-harder-in-distributed-systems-than-in-a-monolith",
-  "questionNumber": 886,
+  "questionNumber": 12,
   "title": "Why is rollback harder in distributed systems than in a monolith — code rollback is easy only when STATE remains compatible; once a deployment writes data in a new schema, publishes events old consumers cannot interpret, or triggers irreversible external side effects, deploying the previous binary may NOT restore the previous system — and why must rollback be considered while DESIGNING the change, not after production begins failing?",
   "shortTitle": "Why is rollback harder in distributed systems than in a monolith?",
   "chapterNumber": 10,

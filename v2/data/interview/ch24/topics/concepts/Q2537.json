@@ -1,7 +1,7 @@
 {
   "id": "Q2537",
   "slug": "cap-theorem-in-practice",
-  "questionNumber": 2537,
+  "questionNumber": 9,
   "title": "CAP Theorem in practice — in a network partition, choose Consistency (CP: reject requests until partition heals) or Availability (AP: serve possibly stale data) — most real systems choose AP with eventual consistency.",
   "shortTitle": "CAP Theorem in Practice",
   "chapterNumber": 24,

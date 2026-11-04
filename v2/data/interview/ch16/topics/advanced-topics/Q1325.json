@@ -1,7 +1,7 @@
 {
   "id": "Q1325",
   "slug": "what-causes-memory-leaks-in-java-despite-gc-and-how-do-you-diagnose-one-end-to-end",
-  "questionNumber": 1325,
+  "questionNumber": 19,
   "title": "What causes memory leaks in Java despite GC (static collections, unclosed resources, ThreadLocal in pools, unremoved listeners, unbounded caches, inner class holding outer reference), and how do you diagnose one end-to-end (jstat → GC log → heap dump → MAT leak suspects → reference chain)?",
   "shortTitle": "What causes memory leaks in Java despite GC, and how do you diagnose one end-to-end?",
   "chapterNumber": 16,

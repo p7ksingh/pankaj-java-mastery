@@ -1,7 +1,7 @@
 {
   "id": "Q1906",
   "slug": "separating-ci-and-cd-pipelines-in-jenkins-and-integrating-jenkins-with-kubernetes",
-  "questionNumber": 1906,
+  "questionNumber": 1,
   "title": "How do you separate CI and CD pipelines in Jenkins (triggers at each stage), and how is Jenkins integrated with a Kubernetes cluster (agents as pods, Kubernetes plugin)?",
   "shortTitle": "Separating CI and CD Pipelines in Jenkins and Integrating Jenkins with Kubernetes",
   "chapterNumber": 12,

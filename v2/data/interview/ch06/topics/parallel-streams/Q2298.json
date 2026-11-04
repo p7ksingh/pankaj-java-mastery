@@ -1,7 +1,7 @@
 {
   "id": "Q2298",
   "slug": "group-a-large-transaction-stream-by-account-in-parallel-using-groupingbyconcurrent",
-  "questionNumber": 2298,
+  "questionNumber": 4,
   "title": "Group a very large stream of transactions by account id in parallel, using `Collectors.groupingByConcurrent`, and explain how it differs from `groupingBy` on a parallel stream, the requirement for a concurrent map, and the unordered trade-off.",
   "shortTitle": "Group a large transaction stream by account in parallel using groupingByConcurrent",
   "chapterNumber": 6,

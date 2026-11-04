@@ -1,7 +1,7 @@
 {
   "id": "Q1814",
   "slug": "minimum-insertions-to-form-a-palindrome-fewest-additions-for-symmetry",
-  "questionNumber": 1814,
+  "questionNumber": 53,
   "title": "Given a string, find the minimum number of characters you must insert anywhere to make it a palindrome. Explain how the Palindromic Subsequence pattern solves it, the recurrence, the complexity, and a banking use case.",
   "shortTitle": "Minimum Insertions to Form a Palindrome (Fewest Additions for Symmetry)",
   "chapterNumber": 17,

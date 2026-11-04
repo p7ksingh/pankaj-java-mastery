@@ -1,7 +1,7 @@
 {
   "id": "Q2007",
   "slug": "designing-a-real-time-fraud-detection-data-platform",
-  "questionNumber": 2007,
+  "questionNumber": 4,
   "title": "(Scenario) Design a real-time fraud-detection data platform — ingestion (Kafka with at-least-once vs exactly-once), streaming detection (stateful Spark/Flink jobs, feature lookups), storage split (OLTP for serving + OLAP/lake for analytics), and reliability (schema/data validation, dead-letter queues, monitoring/alerting) — and articulate the \"safer but slightly slower\" trade-offs a bank prefers.",
   "shortTitle": "Designing a real-time fraud-detection data platform",
   "chapterNumber": 20,

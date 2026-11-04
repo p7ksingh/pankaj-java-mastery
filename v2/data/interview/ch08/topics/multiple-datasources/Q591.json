@@ -1,7 +1,7 @@
 {
   "id": "Q591",
   "slug": "transactional-on-interface-vs-implementation-cglib-proxy-pitfall",
-  "questionNumber": 591,
+  "questionNumber": 2,
   "title": "Why does Spring recommend putting @Transactional on the concrete implementation class rather than on the interface?",
   "shortTitle": "@Transactional on interface vs implementation?",
   "chapterNumber": 8,

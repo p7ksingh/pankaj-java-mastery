@@ -1,7 +1,7 @@
 {
   "id": "Q2147",
   "slug": "how-does-flink-handle-backpressure",
-  "questionNumber": 2147,
+  "questionNumber": 10,
   "title": "How does Flink handle backpressure (buffer-based flow control: when a downstream operator is slow, its input buffers fill up, the TCP channel applies backpressure upstream, and eventually the source slows down — no data loss, no special config needed)?",
   "shortTitle": "How does Flink handle backpressure",
   "chapterNumber": 20,

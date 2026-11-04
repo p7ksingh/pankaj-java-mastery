@@ -36,7 +36,7 @@ export default async function PatternPage({ params }: PageProps) {
   }
 
   return (
-    <main>
+    <main style={{ maxWidth: 'min(var(--max-width), 90vw)', margin: '0 auto' }}>
       <Breadcrumb
         items={[
           { label: 'Home', href: '/' },

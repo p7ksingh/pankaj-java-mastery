@@ -1,7 +1,7 @@
 {
   "id": "Q1683",
   "slug": "rearrange-a-linkedlist-reorder-list",
-  "questionNumber": 1683,
+  "questionNumber": 24,
   "title": "Given a singly linked list, reorder it so that the nodes interleave from the two ends: the first node, then the last, then the second, then the second-to-last, and so on. Do it in place. (LeetCode: Reorder List)",
   "shortTitle": "Rearrange a LinkedList (Reorder List)",
   "chapterNumber": 17,

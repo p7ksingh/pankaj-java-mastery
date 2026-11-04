@@ -1,7 +1,7 @@
 {
   "id": "Q1971",
   "slug": "what-argocd-is-and-how-pull-based-gitops-differs-from-push-based-cicd",
-  "questionNumber": 1971,
+  "questionNumber": 3,
   "title": "What is ArgoCD — a Kubernetes-native GitOps tool that watches a Git repo containing Kubernetes manifests/Helm charts and continuously syncs the cluster state to match — and what is the difference between ArgoCD (pull-based, runs inside cluster) and traditional CI/CD push (Jenkins pushes to cluster)?",
   "shortTitle": "What ArgoCD is and how pull-based GitOps differs from push-based CI/CD",
   "chapterNumber": 12,

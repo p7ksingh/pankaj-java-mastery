@@ -1,7 +1,7 @@
 {
   "id": "Q77",
   "slug": "which-memory-is-faster-heap-or-stack-and-why-and-where-are-local-primitives-references-and-objects-stored",
-  "questionNumber": 77,
+  "questionNumber": 5,
   "title": "Which memory is faster, Heap or Stack, and why, and where are local primitives, references, and objects stored?",
   "shortTitle": "Which memory is faster, Heap or Stack?",
   "chapterNumber": 1,

@@ -1,7 +1,7 @@
 {
   "id": "Q361",
   "slug": "second-most-repeated-nth-most-frequent-character-in-a-string-linkedhashmap-tie-break",
-  "questionNumber": 361,
+  "questionNumber": 2,
   "title": "How do you find the second most repeated character (or the Nth most frequent) in a string using streams, why use LinkedHashMap, and what happens when characters tie on count?",
   "shortTitle": "Second most repeated (Nth most frequent) character in a string — LinkedHashMap tie-break",
   "chapterNumber": 6,
