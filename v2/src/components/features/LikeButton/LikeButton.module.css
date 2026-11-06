@@ -1,0 +1,96 @@
+/* LikeButton – YouTube-style thumbs-up with tooltip */
+
+/* ── Pill variant (reading page header) ── */
+.pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 34px;
+  padding: 0 12px 0 10px;
+  border: none;
+  border-radius: 17px;
+  background: var(--color-hover);
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s, transform 0.15s;
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.pill:hover {
+  color: var(--color-text-primary);
+  background: var(--color-border);
+}
+
+.pill:active {
+  transform: scale(0.95);
+}
+
+.pill.liked {
+  color: var(--color-link);
+  background: var(--color-green-light);
+}
+
+.pill.liked:hover {
+  filter: brightness(0.95);
+}
+
+/* ── Compact variant (card view) ── */
+.compact {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-border);
+  padding: 0;
+  transition: color 0.15s, transform 0.1s;
+}
+
+.compact:hover {
+  color: var(--color-link);
+  transform: scale(1.1);
+}
+
+.compact.liked {
+  color: var(--color-link);
+}
+
+/* ── Tooltip ── */
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-badge-bg);
+  color: var(--color-badge-text);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.15s, visibility 0.15s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--color-badge-bg);
+}
+
+.pill:hover .tooltip,
+.compact:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}

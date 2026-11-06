@@ -1,0 +1,25 @@
+/* SocialLinks — row of social profile icons */
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.iconLink {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.45);
+  background: transparent;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}
+
+.iconLink:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}

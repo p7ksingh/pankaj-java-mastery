@@ -1,0 +1,152 @@
+/* ArticleTOC — Medium-style: lines default, text card on hover.
+   Desktop only. Hidden on mobile/tablet. */
+
+/* ── Wrapper: fixed on right edge, vertically centered ── */
+.wrapper {
+  position: fixed;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+}
+
+/* Hide on mobile/tablet — desktop only */
+@media (max-width: 1100px) {
+  .wrapper {
+    display: none;
+  }
+}
+
+/* ══════════════════════════════
+   LINES: visible by default
+   ══════════════════════════════ */
+.lines {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: flex-end;
+  transition: opacity 0.2s;
+}
+
+.line {
+  width: 20px;
+  height: 2.5px;
+  background: var(--color-text-muted);
+  border-radius: 2px;
+  opacity: 0.35;
+  transition: width 0.2s, opacity 0.2s, background 0.2s;
+}
+
+/* Active line: wider + bright */
+.lineActive {
+  width: 28px;
+  background: var(--color-text-primary);
+  opacity: 1;
+}
+
+/* ══════════════════════════════
+   CARD: hidden by default, appears on hover
+   ══════════════════════════════ */
+.card {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 250px;
+
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 14px 0;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0.25s;
+
+  max-height: calc(100vh - var(--topbar-height) - 80px);
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+}
+
+:global(html.dark) .card {
+  background: #252525;
+  border-color: #383838;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+}
+
+.card::-webkit-scrollbar {
+  width: 3px;
+}
+
+.card::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.card::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 2px;
+}
+
+/* ══════════════════════════════
+   HOVER: hide lines, show card
+   ══════════════════════════════ */
+.wrapper:hover .lines {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.wrapper:hover .card {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ══════════════════════════════
+   CARD ITEMS
+   ══════════════════════════════ */
+.cardItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 5px 16px;
+  font-size: 13px;
+  line-height: 1.35;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+
+.cardItem:hover {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+/* Green dot */
+.cardDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: transparent;
+  flex-shrink: 0;
+  margin-top: 5px;
+  transition: background 0.15s;
+}
+
+/* Title text — truncated with ellipsis */
+.cardText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Active item: green dot + green text */
+.cardItemActive {
+  color: var(--color-link);
+  font-weight: 600;
+}
+
+.cardItemActive .cardDot {
+  background: var(--color-link);
+}

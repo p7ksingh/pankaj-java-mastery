@@ -1,26 +1,98 @@
+/* TopBar — sticky top nav, matches design-step1-home.html prototype */
+
 .topbar {
   height: var(--topbar-height);
   background: var(--color-topbar);
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 var(--space-lg);
+  padding: 0 24px;
   position: sticky;
   top: 0;
   z-index: 100;
+  transition: background 0.3s;
 }
 
 .left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
 }
 
+.right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* ── Hamburger ── */
+.hamburger {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  border: none;
+  background: none;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  position: relative;
+  transition: background 0.15s;
+}
+
+.hamburger:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.hamburgerLine {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #fff;
+  border-radius: 1px;
+}
+
+.hamburgerTooltip {
+  position: absolute;
+  top: 44px;
+  left: 0;
+  background: #242424;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s;
+  z-index: 10;
+}
+
+.hamburgerTooltip::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 14px;
+  width: 8px;
+  height: 8px;
+  background: #242424;
+  transform: rotate(45deg);
+}
+
+.hamburger:hover .hamburgerTooltip {
+  opacity: 1;
+}
+
+/* ── Logo + brand ── */
 .logoLink {
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   transition: transform 0.2s;
 }
 
@@ -31,7 +103,6 @@
 
 .logo {
   color: #fff;
-  flex-shrink: 0;
 }
 
 .brand {
@@ -41,39 +112,33 @@
   color: #fff;
 }
 
-.right {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-/* ── Search wrapper ── */
+/* ── Search ── */
 .searchWrapper {
   position: relative;
 }
 
-/* ── Search icon button (collapsed) ── */
 .searchIconBtn {
   width: 34px;
   height: 34px;
   border-radius: 50%;
   background: none;
   border: none;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.4);
   cursor: pointer;
   display: grid;
   place-items: center;
   transition: color 0.2s;
 }
+
 .searchIconBtn:hover {
   color: #fff;
 }
+
 .searchIconBtn svg {
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
 }
 
-/* ── Search bar (expanded) ── */
 .searchBar {
   display: flex;
   align-items: center;
@@ -88,8 +153,14 @@
 }
 
 @keyframes expandIn {
-  from { width: 36px; opacity: 0.5; }
-  to { width: 280px; opacity: 1; }
+  from {
+    width: 36px;
+    opacity: 0.5;
+  }
+  to {
+    width: 280px;
+    opacity: 1;
+  }
 }
 
 .searchIcon {
@@ -111,15 +182,16 @@
   -webkit-appearance: none;
   appearance: none;
 }
+
 .searchInput:focus {
   outline: none;
   box-shadow: none;
 }
+
 .searchInput::placeholder {
   color: rgba(255, 255, 255, 0.35);
 }
 
-/* ── Close button inside search bar ── */
 .closeBtn {
   width: 24px;
   height: 24px;
@@ -133,12 +205,13 @@
   flex-shrink: 0;
   transition: all 0.15s;
 }
+
 .closeBtn:hover {
   background: rgba(255, 255, 255, 0.25);
   color: #fff;
 }
 
-/* ── Recent history dropdown ── */
+/* ── Search history dropdown ── */
 .historyDropdown {
   position: absolute;
   top: calc(100% + 6px);
@@ -179,6 +252,7 @@
   padding: 2px 6px;
   border-radius: 4px;
 }
+
 .historyClear:hover {
   color: var(--color-error);
   background: var(--color-hover);
@@ -200,49 +274,124 @@
   text-align: left;
   transition: background 0.1s;
 }
+
 .historyItem:hover {
   background: var(--color-hover);
 }
+
 .historyItem svg {
   color: var(--color-text-muted);
   flex-shrink: 0;
 }
 
-/* ── Theme toggle ── */
-.themeBtn {
-  width: 34px;
-  height: 34px;
-  border: none;
-  background: rgba(255, 255, 255, 0.12);
-  border-radius: var(--radius-full);
-  color: #fff;
-  font-size: 16px;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  transition: all 0.2s;
+/* ── Write button ── */
+.writeBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.15s;
 }
-.themeBtn:hover {
-  background: rgba(255, 255, 255, 0.25);
-  transform: scale(1.1);
+
+.writeBtn:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.writeBtn svg {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* ── Bell ── */
+.bellBtn {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s;
+}
+
+.bellBtn:hover {
+  color: #fff;
+}
+
+/* ── Profile avatar ── */
+.profileBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+}
+
+.profileAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #666;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  transition: border-color 0.15s;
+}
+
+.profileBtn:hover .profileAvatar {
+  border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-  .topbar { padding: 0 14px; height: 50px; }
-  .brand { font-size: 15px; }
-  .searchBar { width: 200px; }
+  .topbar {
+    padding: 0 14px;
+  }
+
+  .brand {
+    font-size: 15px;
+  }
+
+  .searchBar {
+    width: 200px;
+  }
+
   @keyframes expandIn {
     from { width: 36px; opacity: 0.5; }
     to { width: 200px; opacity: 1; }
   }
+
+  .writeBtnText {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
-  .brand { display: none; }
-  .searchBar { width: 160px; }
+  .topbar {
+    padding: 0 12px;
+  }
+
+  .brand {
+    font-size: 15px;
+  }
+
+  .searchBar {
+    width: 160px;
+  }
+
   @keyframes expandIn {
     from { width: 36px; opacity: 0.5; }
     to { width: 160px; opacity: 1; }
+  }
+
+  .writeBtn {
+    display: none;
   }
 }

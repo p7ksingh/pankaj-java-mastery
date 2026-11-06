@@ -9,7 +9,7 @@ describe('BookmarkButton', () => {
 
   it('renders as not bookmarked by default', () => {
     render(<BookmarkButton questionId="Q1" />)
-    expect(screen.getByRole('button', { name: /bookmark/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /save/i })).toBeInTheDocument()
   })
 
   it('toggles bookmark state on click', async () => {

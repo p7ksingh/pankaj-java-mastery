@@ -1,0 +1,1 @@
+export { ArticleTOC } from './ArticleTOC'

@@ -1,9 +1,12 @@
 import { Logo } from '@/components/ui/Logo'
+import { ShareLinks } from '@/components/ui/ShareLinks'
+import { SocialLinks } from '@/components/ui/SocialLinks'
+import { CopyLinkButton } from '@/components/ui/CopyLinkButton'
+import { buildSocialProfiles } from '@/lib/utils/share'
 import styles from './Footer.module.css'
 
 interface FooterProps {
   siteName: string
-  tagline: string
   siteUrl: string
   social: {
     linkedin?: string
@@ -12,61 +15,41 @@ interface FooterProps {
   }
 }
 
-export function Footer({ siteName, tagline, siteUrl, social }: FooterProps) {
-  const encodedUrl = encodeURIComponent(siteUrl)
+/**
+ * Footer — Option D: single-row minimal bar.
+ * Composition pattern: composes Logo, ShareLinks, CopyLinkButton, SocialLinks.
+ * No hardcoded URLs, platforms, or icons — all driven by config/constants.
+ */
+export function Footer({ siteName, siteUrl, social }: FooterProps) {
+  const socialProfiles = buildSocialProfiles(social)
+  const currentYear = new Date().getFullYear()
 
   return (
-    <footer className={styles.footer}>
-      <div className={styles.top}>
-        <div className={styles.brandGroup}>
-          <Logo size={44} className={styles.logo} />
-          <div>
-            <div className={styles.name}>{siteName}</div>
-            <div className={styles.tagline}>{tagline}</div>
-          </div>
-        </div>
-        <div className={styles.links}>
-          <div className={styles.column}>
-            <div className={styles.heading}>Share</div>
-            <a
-              href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-            >
-              Share on LinkedIn
-            </a>
-            <a
-              href={`https://twitter.com/intent/tweet?url=${encodedUrl}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-            >
-              Share on X
-            </a>
-            <a
-              href={`https://wa.me/?text=${encodedUrl}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-            >
-              Share on WhatsApp
-            </a>
-          </div>
-          <div className={styles.column}>
-            <div className={styles.heading}>Connect</div>
-            {social.linkedin && (
-              <a href={social.linkedin} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                LinkedIn
-              </a>
-            )}
-            {social.github && (
-              <a href={social.github} target="_blank" rel="noopener noreferrer" className={styles.link}>
-                GitHub
-              </a>
-            )}
-          </div>
-        </div>
+    <footer className={styles.footer} role="contentinfo">
+      <div className={styles.bar}>
+        {/* Wordmark */}
+        <Logo size="footer" className={styles.wordmark} />
+
+        {/* Copyright */}
+        <span className={styles.copyright}>
+          © {currentYear} {siteName}
+        </span>
+
+        {/* Spacer pushes actions right */}
+        <span className={styles.spacer} />
+
+        {/* Copy page link */}
+        <CopyLinkButton textToCopy={siteUrl} />
+
+        <span className={styles.divider} />
+
+        {/* Share on platforms */}
+        <ShareLinks url={siteUrl} title={`${siteName} — Crack Any Java Interview`} />
+
+        <span className={styles.divider} />
+
+        {/* Social profiles */}
+        <SocialLinks profiles={socialProfiles} />
       </div>
     </footer>
   )

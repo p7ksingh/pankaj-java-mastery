@@ -10,7 +10,7 @@ interface AnswerSectionProps {
 
 export function AnswerSection({ sectionKey, content }: AnswerSectionProps) {
   const label = getSectionLabel(sectionKey)
-  const isTakeaway = sectionKey === 's6_takeaway'
+  const isTakeaway = sectionKey.endsWith('_takeaway')
 
   if (typeof content === 'string') {
     // Takeaway section gets distinct styling
@@ -214,6 +214,22 @@ function formatMarkdown(text: string): string {
 
 function formatParagraph(text: string): string {
   const formatted = formatInline(text)
+
+  // Headings (### and ####)
+  const h3Match = formatted.match(/^###\s+(.+)/)
+  if (h3Match) {
+    const slug = h3Match[1]
+      .replace(/<[^>]*>/g, '')
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, '')
+      .substring(0, 60)
+    return `<h3 id="${slug}">${h3Match[1]}</h3>`
+  }
+  const h4Match = formatted.match(/^####\s+(.+)/)
+  if (h4Match) {
+    return `<h4>${h4Match[1]}</h4>`
+  }
 
   const stepMatch = formatted.match(/^(Step\s+\d+\s*[:\u2014\u2013\u2212—-])\s*/)
   if (stepMatch) {

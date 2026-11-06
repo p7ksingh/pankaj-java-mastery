@@ -1,0 +1,39 @@
+/* Wordmark — Medium-style serif logo
+   Font: Noe Display Bold → Georgia (system serif fallback)
+   Tight letter-spacing, bold, no icon. */
+
+.wordmark {
+  font-family: 'Noe Display', Georgia, serif;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  white-space: nowrap;
+  color: currentColor;
+}
+
+/* ── Size variants ── */
+.header {
+  font-size: 26px;
+}
+
+.footer {
+  font-size: 20px;
+}
+
+.hero {
+  font-size: 48px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    font-size: 20px;
+  }
+
+  .footer {
+    font-size: 17px;
+  }
+
+  .hero {
+    font-size: 36px;
+  }
+}

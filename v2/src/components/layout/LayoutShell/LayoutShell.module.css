@@ -1,0 +1,27 @@
+/* LayoutShell — always fills full viewport width.
+   When sidebar is open on desktop, padding-left creates space for it.
+   Content dynamically fills the remaining space — no gaps. */
+
+.shell {
+  margin-top: var(--topbar-height);
+  min-height: calc(100vh - var(--topbar-height));
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: padding-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding-left: 0;
+}
+
+/* Desktop: pad left when sidebar is open */
+@media (min-width: 1025px) {
+  .shifted {
+    padding-left: var(--sidebar-width);
+  }
+}
+
+/* Mobile: sidebar overlays, no padding shift */
+@media (max-width: 1024px) {
+  .shell {
+    padding-left: 0 !important;
+  }
+}

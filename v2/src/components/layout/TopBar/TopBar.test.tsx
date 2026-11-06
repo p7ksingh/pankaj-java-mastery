@@ -1,6 +1,17 @@
 import { render, screen } from '@testing-library/react'
 import { TopBar } from './TopBar'
 
+// Mock next/navigation
+jest.mock('next/navigation', () => ({
+  usePathname: () => '/',
+}))
+
+// Mock ThemeContext
+jest.mock('@/contexts/ThemeContext', () => ({
+  useTheme: () => ({ mode: 'light', isDark: false, setMode: jest.fn() }),
+  ThemeProvider: ({ children }: { children: React.ReactNode }) => children,
+}))
+
 describe('TopBar', () => {
   it('renders the site name', () => {
     render(<TopBar siteName="javabypankaj" />)
@@ -18,9 +29,14 @@ describe('TopBar', () => {
     expect(screen.getByRole('button', { name: /search/i })).toBeInTheDocument()
   })
 
-  it('renders the dark mode toggle', () => {
+  it('renders the hamburger menu button', () => {
     render(<TopBar siteName="javabypankaj" />)
-    expect(screen.getByRole('button', { name: /switch to dark mode/i })).toBeInTheDocument()
+    expect(screen.getByRole('button', { name: /open sidebar/i })).toBeInTheDocument()
+  })
+
+  it('renders the profile button', () => {
+    render(<TopBar siteName="javabypankaj" />)
+    expect(screen.getByRole('button', { name: /profile/i })).toBeInTheDocument()
   })
 
   it('renders inside a nav element', () => {

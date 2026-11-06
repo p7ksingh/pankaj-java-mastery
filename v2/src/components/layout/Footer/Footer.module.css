@@ -1,80 +1,60 @@
+/* Footer — Option D: single-row minimal bar */
+
 .footer {
-  background: var(--color-footer);
-  color: #fff;
-  padding: var(--space-xl) var(--space-lg);
-  margin-top: var(--space-xl);
+  background: var(--color-topbar);
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 40px;
+  transition: background 0.3s;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.top {
-  max-width: var(--max-width);
+.bar {
+  max-width: 1000px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
-  gap: var(--space-xl);
+  align-items: center;
+  gap: 12px;
+  padding: 14px 40px 16px;
   flex-wrap: wrap;
 }
 
-.brandGroup {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
+.wordmark {
+  color: #ffffff;
 }
 
-.logo {
-  color: #fff;
+.copyright {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  white-space: nowrap;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.12);
   flex-shrink: 0;
 }
 
-.name {
-  font-size: 16px;
-  font-weight: 800;
-  margin-top: 2px;
-}
-
-.tagline {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.55);
-  margin-top: 4px;
-  line-height: 1.4;
-}
-
-.links {
-  display: flex;
-  gap: var(--space-xl);
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.heading {
-  font-size: 11px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 12px;
-}
-
-.link {
-  color: rgba(255, 255, 255, 0.7);
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.15s;
-  padding: 6px 0;
-  min-height: 44px;
-  display: inline-flex;
-  align-items: center;
-}
-
-.link:hover {
-  color: #fff;
-}
-
+/* ── Mobile: stack into rows ── */
 @media (max-width: 768px) {
-  .top {
-    flex-direction: column;
+  .bar {
+    justify-content: center;
+    gap: 8px 12px;
+    padding: 16px 0 20px;
+  }
+
+  .spacer {
+    display: none;
+  }
+
+  .copyright {
+    width: 100%;
+    text-align: center;
+    order: 10;
+    margin-top: 4px;
   }
 }

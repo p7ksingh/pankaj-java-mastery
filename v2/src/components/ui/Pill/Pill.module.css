@@ -8,17 +8,17 @@
 }
 
 .default {
-  background: var(--color-pill-bg, #f0f0f0);
+  background: var(--color-pill-bg);
   color: var(--color-text-secondary);
 }
 
 .info {
-  background: #d1e7fd;
-  color: #1a5276;
+  background: var(--color-green-light);
+  color: var(--color-link);
 }
 
 .success {
-  background: #e8f8f0;
+  background: var(--color-green-light);
   color: var(--color-success);
 }
 
@@ -28,6 +28,6 @@
 }
 
 .muted {
-  background: var(--color-pill-bg, #f0f0f0);
+  background: var(--color-pill-bg);
   color: var(--color-text-muted);
 }

@@ -1,0 +1,42 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px;
+}
+
+.star {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+  transition: transform 0.1s;
+}
+
+.star:hover {
+  transform: scale(1.2);
+}
+
+.filled {
+  color: var(--color-star);
+}
+
+.empty {
+  color: var(--color-border);
+}
+
+.label {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-left: 4px;
+}
+
+/* Size variants */
+.sm .star {
+  font-size: 14px;
+}
+
+.md .star {
+  font-size: 18px;
+}

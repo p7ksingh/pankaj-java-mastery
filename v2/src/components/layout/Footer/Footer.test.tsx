@@ -1,50 +1,60 @@
 import { render, screen } from '@testing-library/react'
 import { Footer } from './Footer'
 
-const defaultProps = {
-  siteName: 'javabypankaj',
-  tagline: 'One platform. Every interview. Your entire career.',
-  siteUrl: 'https://www.javabypankaj.live',
-  social: {
-    linkedin: 'https://linkedin.com/in/p7ksingh',
-    github: 'https://github.com/p7ksingh',
-  },
-}
-
 describe('Footer', () => {
-  it('renders the site name', () => {
+  const defaultProps = {
+    siteName: 'javabypankaj',
+    siteUrl: 'https://www.javabypankaj.live',
+    social: {
+      linkedin: 'https://www.linkedin.com/in/p7ksingh/',
+      github: 'https://github.com/p7ksingh',
+    },
+  }
+
+  it('renders the footer element', () => {
+    render(<Footer {...defaultProps} />)
+    expect(screen.getByRole('contentinfo')).toBeInTheDocument()
+  })
+
+  it('renders the wordmark logo', () => {
     render(<Footer {...defaultProps} />)
     expect(screen.getByText('javabypankaj')).toBeInTheDocument()
   })
 
-  it('renders the tagline', () => {
+  it('renders current year in copyright', () => {
     render(<Footer {...defaultProps} />)
-    expect(screen.getByText(defaultProps.tagline)).toBeInTheDocument()
+    const year = new Date().getFullYear()
+    expect(screen.getByText(new RegExp(`© ${year}`))).toBeInTheDocument()
   })
 
   it('renders share links', () => {
     render(<Footer {...defaultProps} />)
-    expect(screen.getByText('Share on LinkedIn')).toBeInTheDocument()
-    expect(screen.getByText('Share on X')).toBeInTheDocument()
-    expect(screen.getByText('Share on WhatsApp')).toBeInTheDocument()
+    expect(screen.getByLabelText('Share on LinkedIn')).toBeInTheDocument()
+    expect(screen.getByLabelText('Share on X')).toBeInTheDocument()
+    expect(screen.getByLabelText('Share on WhatsApp')).toBeInTheDocument()
+    expect(screen.getByLabelText('Share on Telegram')).toBeInTheDocument()
+    expect(screen.getByLabelText('Share on Email')).toBeInTheDocument()
   })
 
-  it('renders share links with correct URLs using the site URL', () => {
+  it('renders copy link button', () => {
     render(<Footer {...defaultProps} />)
-    const linkedInLink = screen.getByText('Share on LinkedIn').closest('a')
-    expect(linkedInLink?.href).toContain('javabypankaj.live')
+    expect(screen.getByText('Copy link')).toBeInTheDocument()
   })
 
-  it('renders inside a footer element', () => {
-    const { container } = render(<Footer {...defaultProps} />)
-    expect(container.querySelector('footer')).toBeInTheDocument()
-  })
-
-  it('renders social links', () => {
+  it('renders social profile links', () => {
     render(<Footer {...defaultProps} />)
-    const links = screen.getAllByRole('link')
-    const hrefs = links.map((l) => l.getAttribute('href'))
-    expect(hrefs).toContain(defaultProps.social.linkedin)
-    expect(hrefs).toContain(defaultProps.social.github)
+    expect(screen.getByLabelText('LinkedIn')).toBeInTheDocument()
+    expect(screen.getByLabelText('GitHub')).toBeInTheDocument()
+  })
+
+  it('links social profiles to correct URLs', () => {
+    render(<Footer {...defaultProps} />)
+    expect(screen.getByLabelText('GitHub')).toHaveAttribute('href', 'https://github.com/p7ksingh')
+  })
+
+  it('renders without optional social links', () => {
+    render(<Footer {...defaultProps} social={{ linkedin: 'https://linkedin.com/in/test' }} />)
+    expect(screen.getByLabelText('LinkedIn')).toBeInTheDocument()
+    expect(screen.queryByLabelText('GitHub')).not.toBeInTheDocument()
   })
 })
