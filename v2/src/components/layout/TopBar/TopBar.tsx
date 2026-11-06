@@ -1,13 +1,13 @@
 'use client'
 
-import { useState, useRef, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import Link from 'next/link'
 import { Logo } from '@/components/ui/Logo'
 import { ProfileMenu } from '@/components/features/ProfileMenu'
 import { AppearanceModal } from '@/components/features/AppearanceModal'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { WriteModal } from '@/components/features/WriteModal'
-import { SearchDropdown, type SearchDropdownHandle } from '@/components/features/SearchDropdown'
+import { SearchDropdown } from '@/components/features/SearchDropdown'
 import { useSidebar } from '@/contexts/SidebarContext'
 import styles from './TopBar.module.css'
 
@@ -23,7 +23,19 @@ export function TopBar({ siteName: _siteName }: TopBarProps) {
   const [profileOpen, setProfileOpen] = useState(false)
   const [appearanceOpen, setAppearanceOpen] = useState(false)
   const [writeOpen, setWriteOpen] = useState(false)
-  const searchRef = useRef<SearchDropdownHandle>(null)
+  const [searchOpen, setSearchOpen] = useState(false)
+
+  // ⌘K / Ctrl+K global shortcut
+  useEffect(() => {
+    function handleGlobalKey(e: KeyboardEvent) {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault()
+        setSearchOpen(true)
+      }
+    }
+    document.addEventListener('keydown', handleGlobalKey)
+    return () => document.removeEventListener('keydown', handleGlobalKey)
+  }, [])
 
   /* ── Sidebar toggle (delegates to shared context) ── */
   const toggleSidebar = useCallback(() => {
@@ -77,16 +89,20 @@ export function TopBar({ siteName: _siteName }: TopBarProps) {
           </Link>
 
           {/* Search */}
-          <button
-            className={styles.searchIconBtn}
-            onClick={() => searchRef.current?.open()}
-            aria-label="Search questions"
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-              <circle cx="11" cy="11" r="7" />
-              <line x1="16.5" y1="16.5" x2="21" y2="21" />
-            </svg>
-          </button>
+          {!searchOpen ? (
+            <button
+              className={styles.searchIconBtn}
+              onClick={() => setSearchOpen(true)}
+              aria-label="Search questions"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                <circle cx="11" cy="11" r="7" />
+                <line x1="16.5" y1="16.5" x2="21" y2="21" />
+              </svg>
+            </button>
+          ) : (
+            <SearchDropdown onClose={() => setSearchOpen(false)} />
+          )}
         </div>
 
         <div className={styles.right}>
@@ -135,9 +151,6 @@ export function TopBar({ siteName: _siteName }: TopBarProps) {
 
       {/* Write modal */}
       <WriteModal isOpen={writeOpen} onClose={() => setWriteOpen(false)} />
-
-      {/* Search dropdown */}
-      <SearchDropdown ref={searchRef} />
     </>
   )
 }

@@ -1,267 +1,220 @@
 'use client'
 
-import { useState, useEffect, useRef, useCallback, forwardRef, useImperativeHandle } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
-import { loadSearchIndex, filterIndex, type SearchEntry, type SearchResult } from '@/lib/data/search'
+import { searchQuestions, type TypesenseHit } from '@/lib/search/typesenseClient'
 import styles from './SearchDropdown.module.css'
 
-const MAX_RESULTS = 6
+const MAX_RESULTS = 15
 const DEBOUNCE_MS = 200
 
-export interface SearchDropdownHandle {
-  open: () => void
-  close: () => void
-  isOpen: boolean
+interface SearchDropdownProps {
+  onClose: () => void
 }
 
 /**
- * Inline search dropdown that appears under the TopBar search input.
- * Shows live results as user types with debounced search.
- * Supports keyboard navigation: ↑↓ to navigate, Enter to open, Escape to close.
+ * Inline search with Typesense-powered results dropdown.
+ * Expands in the topbar, dropdown appears below with live results.
+ * Searches 23,000+ entries (questions + sub-questions) via Typesense API.
  */
-export const SearchDropdown = forwardRef<SearchDropdownHandle, object>(
-  function SearchDropdown(_props, ref) {
-    const router = useRouter()
-    const [index, setIndex] = useState<SearchEntry[]>([])
-    const [query, setQuery] = useState('')
-    const [result, setResult] = useState<SearchResult>({ items: [], suggestion: null })
-    const [activeIdx, setActiveIdx] = useState(-1)
-    const [open, setOpen] = useState(false)
-    const [indexLoaded, setIndexLoaded] = useState(false)
-    const inputRef = useRef<HTMLInputElement>(null)
-    const wrapRef = useRef<HTMLDivElement>(null)
-    const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+export function SearchDropdown({ onClose }: SearchDropdownProps) {
+  const router = useRouter()
+  const [query, setQuery] = useState('')
+  const [hits, setHits] = useState<TypesenseHit[]>([])
+  const [found, setFound] = useState(0)
+  const [activeIdx, setActiveIdx] = useState(-1)
+  const [searched, setSearched] = useState(false)
+  const inputRef = useRef<HTMLInputElement>(null)
+  const wrapRef = useRef<HTMLDivElement>(null)
+  const resultsRef = useRef<HTMLDivElement>(null)
+  const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 
-    // Load search index once (lazy — on first focus)
-    const ensureIndex = useCallback(async () => {
-      if (indexLoaded) {
-        return
-      }
-      const data = await loadSearchIndex()
-      setIndex(data)
-      setIndexLoaded(true)
-    }, [indexLoaded])
+  // Auto-focus
+  useEffect(() => {
+    setTimeout(() => inputRef.current?.focus(), 50)
+  }, [])
 
-    // Expose open/close to parent (TopBar)
-    useImperativeHandle(ref, () => ({
-      open: () => {
-        setOpen(true)
-        ensureIndex()
-        setTimeout(() => inputRef.current?.focus(), 50)
-      },
-      close: () => {
-        setOpen(false)
-        setQuery('')
-        setResult({ items: [], suggestion: null })
-        setActiveIdx(-1)
-      },
-      get isOpen() {
-        return open
-      },
-    }), [open, ensureIndex])
-
-    // Debounced search
-    const doSearch = useCallback((q: string) => {
-      if (debounceRef.current) {
-        clearTimeout(debounceRef.current)
-      }
-      if (q.trim().length < 2) {
-        setResult({ items: [], suggestion: null })
-        setActiveIdx(-1)
-        return
-      }
-      debounceRef.current = setTimeout(() => {
-        const res = filterIndex(index, q, MAX_RESULTS)
-        setResult(res)
-        setActiveIdx(-1)
-      }, DEBOUNCE_MS)
-    }, [index])
-
-    function handleChange(val: string) {
-      setQuery(val)
-      doSearch(val)
-    }
-
-    function handleKeyDown(e: React.KeyboardEvent) {
-      const items = result.items
-
-      if (e.key === 'ArrowDown') {
-        e.preventDefault()
-        setActiveIdx((prev) => Math.min(prev + 1, items.length - 1))
-      } else if (e.key === 'ArrowUp') {
-        e.preventDefault()
-        setActiveIdx((prev) => Math.max(prev - 1, -1))
-      } else if (e.key === 'Enter') {
-        e.preventDefault()
-        if (activeIdx >= 0 && items[activeIdx]) {
-          navigateTo(items[activeIdx].url)
-        } else if (query.trim().length >= 2) {
-          // Go to full search page
-          navigateTo(`/search#${encodeURIComponent(query.trim())}`)
-        }
-      } else if (e.key === 'Escape') {
-        setOpen(false)
-        setQuery('')
-        setResult({ items: [], suggestion: null })
-        inputRef.current?.blur()
+  // Scroll active item into view
+  useEffect(() => {
+    if (activeIdx >= 0 && resultsRef.current) {
+      const items = resultsRef.current.querySelectorAll('button')
+      if (items[activeIdx]) {
+        items[activeIdx].scrollIntoView({ block: 'nearest' })
       }
     }
+  }, [activeIdx])
 
-    function navigateTo(url: string) {
-      setOpen(false)
-      setQuery('')
-      setResult({ items: [], suggestion: null })
+  // Close on outside click
+  useEffect(() => {
+    function handleClick(e: MouseEvent) {
+      if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) {
+        onClose()
+      }
+    }
+    document.addEventListener('mousedown', handleClick)
+    return () => document.removeEventListener('mousedown', handleClick)
+  }, [onClose])
+
+  // Debounced search via Typesense
+  const doSearch = useCallback((q: string) => {
+    if (debounceRef.current) {
+      clearTimeout(debounceRef.current)
+    }
+    if (q.trim().length < 2) {
+      setHits([])
+      setFound(0)
       setActiveIdx(-1)
-      if (url.startsWith('/search#')) {
-        window.location.href = url
-      } else {
-        router.push(url)
-      }
+      setSearched(false)
+      return
     }
+    debounceRef.current = setTimeout(async () => {
+      const result = await searchQuestions(q.trim(), MAX_RESULTS)
+      setHits(result.hits)
+      setFound(result.found)
+      setActiveIdx(-1)
+      setSearched(true)
+    }, DEBOUNCE_MS)
+  }, [])
 
-    // Close on outside click
-    useEffect(() => {
-      function handleClick(e: MouseEvent) {
-        if (wrapRef.current && !wrapRef.current.contains(e.target as Node)) {
-          setOpen(false)
-        }
-      }
-      document.addEventListener('mousedown', handleClick)
-      return () => document.removeEventListener('mousedown', handleClick)
-    }, [])
+  function handleChange(val: string) {
+    setQuery(val)
+    doSearch(val)
+  }
 
-    // ⌘K / Ctrl+K shortcut
-    useEffect(() => {
-      function handleGlobalKey(e: KeyboardEvent) {
-        if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-          e.preventDefault()
-          setOpen(true)
-          ensureIndex()
-          setTimeout(() => inputRef.current?.focus(), 50)
-        }
-      }
-      document.addEventListener('keydown', handleGlobalKey)
-      return () => document.removeEventListener('keydown', handleGlobalKey)
-    }, [ensureIndex])
-
-    if (!open) {
-      return null
+  function navigateTo(url: string) {
+    onClose()
+    if (url.startsWith('/search#')) {
+      window.location.href = url
+    } else {
+      router.push(url)
     }
+  }
 
-    const showResults = query.trim().length >= 2 && result.items.length > 0
-    const showEmpty = query.trim().length >= 2 && result.items.length === 0 && indexLoaded
-    const totalMatches = query.trim().length >= 2 ? filterIndex(index, query, 100).items.length : 0
+  function handleKeyDown(e: React.KeyboardEvent) {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      setActiveIdx((prev) => Math.min(prev + 1, hits.length - 1))
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      setActiveIdx((prev) => Math.max(prev - 1, -1))
+    } else if (e.key === 'Enter') {
+      e.preventDefault()
+      if (activeIdx >= 0 && hits[activeIdx]) {
+        navigateTo(hits[activeIdx].document.url)
+      } else if (query.trim().length >= 2) {
+        navigateTo(`/search#${encodeURIComponent(query.trim())}`)
+      }
+    } else if (e.key === 'Escape') {
+      onClose()
+    }
+  }
 
-    return (
-      <div className={styles.overlay} onClick={() => setOpen(false)}>
-        <div className={styles.wrap} ref={wrapRef} onClick={(e) => e.stopPropagation()}>
-          {/* Search input */}
-          <div className={styles.inputWrap}>
-            <svg className={styles.inputIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
-              <circle cx="11" cy="11" r="7" />
-              <line x1="16.5" y1="16.5" x2="21" y2="21" />
-            </svg>
-            <input
-              ref={inputRef}
-              className={styles.input}
-              type="text"
-              placeholder="Search 2466 questions..."
-              value={query}
-              onChange={(e) => handleChange(e.target.value)}
-              onKeyDown={handleKeyDown}
-              autoComplete="off"
-              spellCheck={false}
-            />
-            <kbd className={styles.kbd}>esc</kbd>
-          </div>
+  const showResults = hits.length > 0
+  const showEmpty = searched && hits.length === 0 && query.trim().length >= 2
 
-          {/* Results */}
+  return (
+    <div className={styles.wrap} ref={wrapRef}>
+      {/* Inline input */}
+      <div className={styles.bar}>
+        <svg className={styles.icon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+          <circle cx="11" cy="11" r="7" />
+          <line x1="16.5" y1="16.5" x2="21" y2="21" />
+        </svg>
+        <input
+          ref={inputRef}
+          className={styles.input}
+          type="text"
+          placeholder="Search questions..."
+          value={query}
+          onChange={(e) => handleChange(e.target.value)}
+          onKeyDown={handleKeyDown}
+          autoComplete="off"
+          spellCheck={false}
+        />
+        <button type="button" className={styles.closeBtn} onClick={onClose} aria-label="Close search">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+
+      {/* Results dropdown */}
+      {(showResults || showEmpty) && (
+        <div className={styles.dropdown}>
           {showResults && (
             <>
               <div className={styles.section}>Top results</div>
-              <div className={styles.results}>
-                {result.items.map((r, i) => (
-                  <button
-                    key={r.id + r.url}
-                    type="button"
-                    className={`${styles.item} ${i === activeIdx ? styles.itemActive : ''}`}
-                    onClick={() => navigateTo(r.url)}
-                    onMouseEnter={() => setActiveIdx(i)}
-                  >
-                    <div className={styles.itemIcon}>
-                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                        <path d="M14 2v6h6" />
-                      </svg>
-                    </div>
-                    <div className={styles.itemInfo}>
-                      <div className={styles.itemTitle}>{highlightMatch(r.title, query)}</div>
-                      <div className={styles.itemPath}>{r.chapter} › {r.topic}</div>
-                    </div>
-                    {i === activeIdx && <span className={styles.itemKbd}>↵</span>}
-                  </button>
-                ))}
+              <div className={styles.results} ref={resultsRef}>
+                {hits.map((hit, i) => {
+                  const doc = hit.document
+                  const titleHighlight = hit.highlights?.find((h) => h.field === 'title')
+                  const isSubQ = doc.type === 'subquestion'
+
+                  return (
+                    <button
+                      key={doc.id}
+                      type="button"
+                      className={`${styles.item} ${i === activeIdx ? styles.itemActive : ''}`}
+                      onClick={() => navigateTo(doc.url)}
+                      onMouseEnter={() => setActiveIdx(i)}
+                    >
+                      <div className={`${styles.itemIcon} ${isSubQ ? styles.itemIconSub : ''}`}>
+                        {isSubQ ? (
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                            <path d="M9 18l6-6-6-6" />
+                          </svg>
+                        ) : (
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <path d="M14 2v6h6" />
+                          </svg>
+                        )}
+                      </div>
+                      <div className={styles.itemInfo}>
+                        <div
+                          className={styles.itemTitle}
+                          dangerouslySetInnerHTML={{
+                            __html: titleHighlight?.snippet || escapeHtml(doc.shortTitle || doc.title),
+                          }}
+                        />
+                        <div className={styles.itemPath}>
+                          {doc.chapter} › {doc.topic}
+                          {isSubQ && <span className={styles.subBadge}>sub-question</span>}
+                        </div>
+                      </div>
+                      {i === activeIdx && <span className={styles.itemKbd}>↵</span>}
+                    </button>
+                  )
+                })}
               </div>
             </>
           )}
 
-          {/* Empty state */}
           {showEmpty && (
             <div className={styles.empty}>
               No results for &ldquo;<strong>{query}</strong>&rdquo;
-              {result.suggestion && (
-                <span>
-                  {' '}— try{' '}
-                  <button
-                    type="button"
-                    className={styles.suggestion}
-                    onClick={() => handleChange(result.suggestion!)}
-                  >
-                    {result.suggestion}
-                  </button>
-                </span>
-              )}
             </div>
           )}
 
-          {/* Footer */}
           <div className={styles.footer}>
             <div className={styles.footerLeft}>
               <span className={styles.hint}><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
               <span className={styles.hint}><kbd>↵</kbd> open</span>
               <span className={styles.hint}><kbd>esc</kbd> close</span>
             </div>
-            {totalMatches > MAX_RESULTS && (
-              <button
-                type="button"
-                className={styles.footerAll}
-                onClick={() => navigateTo(`/search#${encodeURIComponent(query.trim())}`)}
-              >
-                View all <strong>{totalMatches}</strong> results
+            {found > MAX_RESULTS && (
+              <button type="button" className={styles.footerAll} onClick={() => navigateTo(`/search#${encodeURIComponent(query.trim())}`)}>
+                All <strong>{found}</strong> results
               </button>
             )}
           </div>
         </div>
-      </div>
-    )
-  },
-)
-
-function highlightMatch(text: string, query: string): React.ReactNode {
-  if (!query || query.length < 2) {
-    return text
-  }
-  const regex = new RegExp(`(${escapeRegex(query)})`, 'gi')
-  const parts = text.split(regex)
-  return parts.map((part, i) =>
-    regex.test(part) ? (
-      <mark key={i} className={styles.highlight}>{part}</mark>
-    ) : (
-      part
-    ),
+      )}
+    </div>
   )
 }
 
-function escapeRegex(str: string): string {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+function escapeHtml(s: string): string {
+  return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 }
