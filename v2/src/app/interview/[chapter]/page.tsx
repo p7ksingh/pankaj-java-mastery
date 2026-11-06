@@ -1,37 +1,41 @@
 import { notFound } from 'next/navigation'
 import type { Metadata } from 'next'
 import { getAllChapters, getChapterBySlug } from '@/lib/data/chapters'
-import { Breadcrumb } from '@/components/layout/Breadcrumb'
-import { PageHeader } from '@/components/layout/PageHeader'
-import { TopicTable } from '@/components/features/TopicTable'
-import { StructuredData } from '@/components/seo/StructuredData'
+import { getQuestionPreviewsByTopic } from '@/lib/data/questions'
+import { ChapterDetailLayout } from '@/components/features/ChapterDetailLayout'
+import { APP_CONFIG } from '@/lib/constants/config'
 
 interface PageProps {
   params: Promise<{ chapter: string }>
 }
 
 export async function generateStaticParams() {
-  const chapters = getAllChapters()
-  return chapters.map((c) => ({ chapter: c.slug }))
+  return getAllChapters().map((c) => ({ chapter: c.slug }))
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { chapter: slug } = await params
   const chapter = getChapterBySlug(slug)
+
   if (!chapter) {
     return { title: 'Chapter Not Found' }
   }
+
   return {
     title: `${chapter.title} Interview Questions`,
     description: `${chapter.questionCount} real ${chapter.title} interview questions with code, diagrams and ready-to-speak answers.`,
     alternates: { canonical: `/interview/${slug}/` },
     openGraph: {
-      title: `${chapter.title} Interview Questions | javabypankaj`,
+      title: `${chapter.title} Interview Questions | ${APP_CONFIG.site.name}`,
       description: `${chapter.questionCount} real ${chapter.title} interview questions with code, diagrams and ready-to-speak answers.`,
     },
   }
 }
 
+/**
+ * Chapter page — auto-selects the first topic and shows its R1 cards.
+ * Two-panel layout: sidebar with topic list + right panel with question cards.
+ */
 export default async function ChapterPage({ params }: PageProps) {
   const { chapter: slug } = await params
   const chapter = getChapterBySlug(slug)
@@ -40,39 +44,23 @@ export default async function ChapterPage({ params }: PageProps) {
     notFound()
   }
 
-  const chPad = String(chapter.number).padStart(2, '0')
+  const allChapters = getAllChapters()
+
+  // Auto-select first topic
+  const firstTopic = chapter.topics[0]
+  if (!firstTopic) {
+    notFound()
+  }
+
+  const questions = getQuestionPreviewsByTopic(chapter.number, firstTopic.slug)
 
   return (
     <main>
-      <StructuredData
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'BreadcrumbList',
-          itemListElement: [
-            { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.javabypankaj.live/' },
-            { '@type': 'ListItem', position: 2, name: chapter.title },
-          ],
-        }}
-      />
-      <Breadcrumb
-        items={[
-          { label: 'Home', href: '/' },
-          { label: chapter.title },
-        ]}
-      />
-      <PageHeader
-        title={chapter.title}
-        stats={[
-          { label: '', value: `Ch ${chPad}` },
-          { label: 'Topics', value: chapter.topicCount },
-          { label: 'Qs', value: chapter.questionCount },
-        ]}
-      />
-      <TopicTable
-        topics={chapter.topics}
-        chapterSlug={chapter.slug}
-        chapterTitle={chapter.title}
-        chapterNumber={chapter.number}
+      <ChapterDetailLayout
+        chapter={chapter}
+        allChapters={allChapters}
+        topic={firstTopic}
+        questions={questions}
       />
     </main>
   )

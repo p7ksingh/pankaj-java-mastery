@@ -1,6 +1,8 @@
+/* Question reading page — Medium flat ink-on-paper, no cards/morphism */
+
 .reading {
-  max-width: min(var(--max-width), 90vw);
-  margin: 0 auto;
+  max-width: min(var(--max-width-read), 100%);
+  margin: 0;
   padding: 0;
 }
 
@@ -11,43 +13,58 @@
   margin-bottom: 16px;
 }
 
+.headerSpacer {
+  flex: 1;
+}
+
+.headerSep {
+  width: 1px;
+  height: 20px;
+  background: var(--color-border);
+  margin: 0 4px;
+  flex-shrink: 0;
+}
+
 .meta {
   font-size: 13px;
   color: var(--color-text-muted);
 }
 
+/* Title — Medium style: serif, weight 700, flat on page */
 .title {
-  font-family: var(--font-family);
-  font-size: 28px;
-  font-weight: 800;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
-  color: #1a1a1a;
-}
-
-.keyContext {
   font-family: var(--font-reading);
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--color-text-secondary);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.011em;
   margin-bottom: 24px;
-  padding: 12px 16px;
-  background: var(--color-hover);
-  border-radius: 6px;
-  border-left: 3px solid var(--color-border);
+  color: var(--color-text-primary);
 }
 
+/* Key Concepts — flat list, no card, just a thin top rule */
 .keyPoints {
-  margin: 0 0 28px 0;
-  padding: 20px 24px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 0 0 32px 0;
+  padding: 0;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.keyPoints:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.keyPointsHead {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0;
+  color: var(--color-text-primary);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .keyPointsList {
@@ -57,55 +74,27 @@
   counter-reset: kp;
 }
 
-.keyPoints:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.keyPointsHead {
-  font-family: var(--font-family);
-  font-size: 18px;
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  color: #1a1a1a;
-  margin-bottom: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.keyPointsDot {
-  width: 16px;
-  height: 16px;
-  background: #242424;
-  border-radius: 4px;
-  flex-shrink: 0;
-}
-
 .keyPointsList li {
-  font-size: 14px;
-  line-height: 1.65;
+  font-family: var(--font-reading);
+  font-size: 17px;
+  line-height: 1.58;
   color: var(--color-text-secondary);
-  padding: 9px 0 9px 38px;
+  padding: 8px 0 8px 36px;
   position: relative;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
   counter-increment: kp;
-}
-
-.keyPoints li:last-child {
-  border-bottom: none;
 }
 
 .keyPoints li::before {
   content: counter(kp);
   position: absolute;
   left: 0;
-  top: 9px;
+  top: 8px;
   width: 24px;
   height: 24px;
-  background: #242424;
-  color: #fff;
+  background: var(--color-badge-bg);
+  color: var(--color-badge-text);
   border-radius: 50%;
+  font-family: var(--font-family);
   font-size: 11px;
   font-weight: 700;
   display: flex;
@@ -113,28 +102,27 @@
   justify-content: center;
 }
 
+/* Article wrapper — NO card, NO shadow, NO border-radius. Flat like Medium. */
 .article {
-  background: var(--color-surface);
-  border-radius: 12px;
-  padding: 44px 48px;
-  box-shadow: var(--shadow-card);
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  border-top: 1px solid var(--color-border);
+  padding-top: 32px;
 }
 
 /* ── Tablet ── */
 @media (max-width: 768px) {
   .reading { max-width: 100%; }
-  .title { font-size: 24px; margin-bottom: 16px; }
-  .keyPoints { padding: 16px 20px; margin-bottom: 24px; }
-  .keyPointsList li { font-size: 13px; }
-  .article { padding: 32px 28px; border-radius: 10px; }
+  .title { font-size: 26px; margin-bottom: 20px; }
+  .keyPointsList li { font-size: 15px; }
   .header { flex-wrap: wrap; gap: 8px; }
 }
 
 /* ── Mobile ── */
 @media (max-width: 480px) {
-  .title { font-size: 22px; line-height: 1.25; margin-bottom: 14px; }
-  .keyPoints { padding: 14px 16px; border-radius: 10px; }
-  .keyPointsList li { font-size: 12px; padding-left: 14px; }
+  .title { font-size: 24px; line-height: 1.25; margin-bottom: 16px; }
+  .keyPointsList li { font-size: 14px; padding-left: 30px; }
   .keyPointsHead { font-size: 15px; }
-  .article { padding: 24px 20px; border-radius: 8px; }
 }

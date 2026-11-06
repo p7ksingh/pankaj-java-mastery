@@ -5,7 +5,7 @@ import { SearchResults } from '@/components/features/SearchResults'
 
 export const metadata: Metadata = {
   title: 'Search | javabypankaj',
-  description: 'Search across 2500+ Java interview questions.',
+  description: 'Search across all Java interview questions. Find answers on Core Java, Spring, Microservices, System Design, and more.',
 }
 
 export const dynamic = 'force-static'

@@ -1,10 +1,29 @@
-import { getAllChapters } from '@/lib/data/chapters'
-import { PageHeader } from '@/components/layout/PageHeader'
+import { getAllChapters, getChapterBySlug } from '@/lib/data/chapters'
 import { ChapterTable } from '@/components/features/ChapterTable'
 import { StructuredData } from '@/components/seo/StructuredData'
+import styles from './page.module.css'
+
+/** Build a map of chapterNumber → all questionIds for progress tracking. */
+function buildQuestionIdMap(chapters: ReturnType<typeof getAllChapters>): Record<number, string[]> {
+  const map: Record<number, string[]> = {}
+  for (const ch of chapters) {
+    const full = getChapterBySlug(ch.slug)
+    if (full) {
+      const ids: string[] = []
+      for (const topic of full.topics) {
+        if (topic.questionIds) {
+          ids.push(...topic.questionIds)
+        }
+      }
+      map[ch.number] = ids
+    }
+  }
+  return map
+}
 
 export default function HomePage() {
   const chapters = getAllChapters()
+  const questionIdMap = buildQuestionIdMap(chapters)
 
   return (
     <main>
@@ -13,7 +32,7 @@ export default function HomePage() {
           '@context': 'https://schema.org',
           '@type': 'WebSite',
           name: 'javabypankaj',
-          alternateName: ['Java by Pankaj', 'Java Interview Mastery'],
+          alternateName: ['Java by Pankaj', 'javabypankaj.live'],
           url: 'https://www.javabypankaj.live/',
           potentialAction: {
             '@type': 'SearchAction',
@@ -22,8 +41,8 @@ export default function HomePage() {
           },
         }}
       />
-      <PageHeader title="Interview Topics" />
-      <ChapterTable chapters={chapters} />
+      <h1 className={styles.pageTitle}>Interview Topics</h1>
+      <ChapterTable chapters={chapters} questionIdMap={questionIdMap} />
     </main>
   )
 }

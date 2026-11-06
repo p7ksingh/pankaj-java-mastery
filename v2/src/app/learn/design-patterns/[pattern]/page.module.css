@@ -314,15 +314,15 @@
 }
 
 /* Dark mode */
-:global(body.dark) .content p { color: #c8c8c8; }
-:global(body.dark) .content :global(.box-blue) { background: linear-gradient(135deg, rgba(74, 144, 217, 0.12), rgba(74, 144, 217, 0.04)); }
-:global(body.dark) .content :global(.box-red) { background: linear-gradient(135deg, rgba(231, 76, 60, 0.12), rgba(231, 76, 60, 0.04)); }
-:global(body.dark) .content :global(.box-green) { background: linear-gradient(135deg, rgba(39, 174, 96, 0.12), rgba(39, 174, 96, 0.04)); }
-:global(body.dark) .content :global(.box-orange) { background: linear-gradient(135deg, rgba(230, 126, 34, 0.12), rgba(230, 126, 34, 0.04)); }
-:global(body.dark) .content :global(.box-purple) { background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(139, 92, 246, 0.04)); }
-:global(body.dark) .content :global(.card) { background: var(--color-surface); border-color: var(--color-border); }
-:global(body.dark) .content :global(.note) { background: var(--color-hover); }
-:global(body.dark) .content code { background: rgba(74, 144, 217, 0.15); color: #e8a87c; }
+:global(html.dark) .content p { color: #c8c8c8; }
+:global(html.dark) .content :global(.box-blue) { background: linear-gradient(135deg, rgba(74, 144, 217, 0.12), rgba(74, 144, 217, 0.04)); }
+:global(html.dark) .content :global(.box-red) { background: linear-gradient(135deg, rgba(231, 76, 60, 0.12), rgba(231, 76, 60, 0.04)); }
+:global(html.dark) .content :global(.box-green) { background: linear-gradient(135deg, rgba(39, 174, 96, 0.12), rgba(39, 174, 96, 0.04)); }
+:global(html.dark) .content :global(.box-orange) { background: linear-gradient(135deg, rgba(230, 126, 34, 0.12), rgba(230, 126, 34, 0.04)); }
+:global(html.dark) .content :global(.box-purple) { background: linear-gradient(135deg, rgba(139, 92, 246, 0.12), rgba(139, 92, 246, 0.04)); }
+:global(html.dark) .content :global(.card) { background: var(--color-surface); border-color: var(--color-border); }
+:global(html.dark) .content :global(.note) { background: var(--color-hover); }
+:global(html.dark) .content code { background: rgba(74, 144, 217, 0.15); color: #e8a87c; }
 
 /* Responsive */
 @media (max-width: 768px) {

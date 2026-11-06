@@ -1,15 +1,18 @@
+/* Page wrapper — centered max-width for standard pages (home, search, learn).
+   Interview pages (chapter detail, topic) override this to go fluid. */
+
 .page {
-  max-width: min(var(--max-width), 90vw);
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 32px 24px;
-  min-height: calc(100vh - var(--topbar-height) - 200px);
+  padding: 32px 40px;
   width: 100%;
   box-sizing: border-box;
+  flex: 1;
 }
 
 @media (max-width: 768px) {
   .page {
-    padding: 24px 16px;
+    padding: 20px 16px;
     max-width: 100%;
   }
 }
