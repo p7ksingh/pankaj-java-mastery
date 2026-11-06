@@ -9,6 +9,7 @@ import { BookmarkButton } from '@/components/features/BookmarkButton'
 import { CompletionButton } from '@/components/features/CompletionButton'
 import { LikeButton } from '@/components/features/LikeButton'
 import { ArticleTOC } from '@/components/features/ArticleTOC'
+import { RelatedQuestions } from '@/components/features/RelatedQuestions'
 import { StructuredData } from '@/components/seo/StructuredData'
 import styles from './page.module.css'
 
@@ -172,6 +173,13 @@ export default async function QuestionPage({ params }: PageProps) {
         ))}
       </article>
       <ArticleTOC containerSelector="#question-article" />
+      <RelatedQuestions
+        currentQuestionId={question.id}
+        chapterNumber={chapter.number}
+        chapterSlug={chSlug}
+        topicSlug={topicSlug}
+        topicTitle={topic.title}
+      />
     </main>
   )
 }

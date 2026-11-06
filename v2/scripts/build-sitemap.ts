@@ -27,6 +27,11 @@ function run(): void {
   // Search page
   entries.push({ url: '/search/', priority: '0.5', changefreq: 'monthly' })
 
+  // Community, Library, Popular pages
+  entries.push({ url: '/community/', priority: '0.7', changefreq: 'daily' })
+  entries.push({ url: '/library/', priority: '0.4', changefreq: 'monthly' })
+  entries.push({ url: '/popular/', priority: '0.6', changefreq: 'weekly' })
+
   // Learn pages
   entries.push({ url: '/learn/', priority: '0.8', changefreq: 'monthly' })
   entries.push({ url: '/learn/design-patterns/', priority: '0.8', changefreq: 'monthly' })
@@ -78,9 +83,10 @@ function run(): void {
 
       const files = fs.readdirSync(topicDir).filter((f: string) => f.endsWith('.json'))
       for (const file of files) {
-        const qId = file.replace('.json', '')
+        const q = JSON.parse(fs.readFileSync(path.join(topicDir, file), 'utf-8'))
+        const slug = q.urlSlug || file.replace('.json', '')
         entries.push({
-          url: `/interview/${ch.slug}/${topic.slug}/${qId}/`,
+          url: `/interview/${ch.slug}/${topic.slug}/${slug}/`,
           priority: '0.7',
           changefreq: 'monthly',
         })
