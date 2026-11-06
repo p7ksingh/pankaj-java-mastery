@@ -1,35 +1,49 @@
-/* Profile dropdown — appears below avatar on topbar */
+/* Profile dropdown — gold standard: tight, every link works */
 
 .menu {
   position: fixed;
   top: 52px;
   right: 16px;
-  width: 260px;
+  width: 240px;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 12px;
-  box-shadow: var(--shadow-hover);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
   z-index: 300;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
-  transition: background 0.3s;
+  animation: dropIn 0.12s ease;
 }
 
-.user {
+:global(html.dark) .menu {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes dropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Header */
+.header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 16px 20px;
+  gap: 10px;
+  padding: 12px 14px;
 }
 
 .avatar {
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
-  background: #666;
+  background: #555;
   color: #fff;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   display: flex;
   align-items: center;
@@ -38,67 +52,82 @@
 }
 
 .name {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 700;
   color: var(--color-text-primary);
 }
 
-.viewProfile {
-  font-size: 12px;
-  color: var(--color-link);
-  cursor: pointer;
+.site {
+  font-size: 11px;
+  color: var(--color-text-muted);
 }
 
-.viewProfile:hover {
-  text-decoration: underline;
-}
-
-.divider {
+/* Separator */
+.sep {
   height: 1px;
   background: var(--color-border);
-  margin: 0;
 }
 
+/* Group */
+.group {
+  padding: 4px 0;
+}
+
+/* Item */
 .item {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 12px 20px;
+  gap: 9px;
+  padding: 7px 14px;
   font-family: var(--font-family);
-  font-size: 14px;
-  color: var(--color-text-primary);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
   cursor: pointer;
-  transition: background 0.12s;
+  transition: background 0.08s, color 0.08s;
   border: none;
   background: none;
   width: 100%;
   text-align: left;
+  text-decoration: none;
 }
 
 .item:hover {
   background: var(--color-hover);
+  color: var(--color-text-primary);
+  text-decoration: none;
 }
 
 .item svg {
-  color: var(--color-text-secondary);
+  width: 15px;
+  height: 15px;
+  color: var(--color-text-muted);
   flex-shrink: 0;
 }
 
-.itemMuted {
-  padding: 12px 20px;
-  font-size: 14px;
-  color: var(--color-text-secondary);
+.item:hover svg {
+  color: var(--color-text-primary);
 }
 
-.email {
-  font-size: 12px;
+/* Badge (saved count, progress %) */
+.badge {
+  margin-left: auto;
+  font-size: 10px;
+  font-weight: 600;
   color: var(--color-text-muted);
-  margin-top: 2px;
+}
+
+/* Coffee emoji */
+.coffeeEmoji {
+  font-size: 15px;
+  width: 15px;
+  text-align: center;
+  flex-shrink: 0;
 }
 
 @media (max-width: 480px) {
   .menu {
     right: 8px;
-    width: 240px;
+    width: 220px;
   }
 }
