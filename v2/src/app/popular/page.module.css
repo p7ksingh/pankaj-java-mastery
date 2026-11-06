@@ -1,0 +1,38 @@
+.page {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.comingSoon {
+  text-align: center;
+  padding: 80px 24px;
+}
+
+.icon {
+  color: var(--color-text-muted);
+  opacity: 0.25;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-link);
+  margin-bottom: 12px;
+}
+
+.desc {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  max-width: 400px;
+  margin: 0 auto;
+}
