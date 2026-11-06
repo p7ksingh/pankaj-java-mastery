@@ -96,22 +96,30 @@ export default async function QuestionPage({ params }: PageProps) {
     ? firstSection.slice(0, 500)
     : (firstSection as { raw?: string }).raw?.slice(0, 500) || ''
 
+  // Extract sub-questions from s2_detail for FAQ Schema
+  const s2Detail = typeof question.sections.s2_detail === 'string' ? question.sections.s2_detail : ''
+  const subQuestions = extractSubQuestionsForSchema(s2Detail)
+
+  // Build FAQ Schema: main question + all sub-questions
+  const faqEntities = [
+    {
+      '@type': 'Question',
+      name: question.title,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: answerText,
+      },
+    },
+    ...subQuestions,
+  ]
+
   return (
     <main className={styles.reading}>
       <StructuredData
         data={{
           '@context': 'https://schema.org',
           '@type': 'FAQPage',
-          mainEntity: [
-            {
-              '@type': 'Question',
-              name: question.title,
-              acceptedAnswer: {
-                '@type': 'Answer',
-                text: answerText,
-              },
-            },
-          ],
+          mainEntity: faqEntities,
         }}
       />
       <StructuredData
@@ -166,4 +174,73 @@ export default async function QuestionPage({ params }: PageProps) {
       <ArticleTOC containerSelector="#question-article" />
     </main>
   )
+}
+
+
+/**
+ * Extracts ### sub-question headings and their answer text from s2_detail
+ * for FAQ Schema structured data. Each heading becomes a Question,
+ * the text until the next heading becomes the Answer.
+ * Google uses this for "People Also Ask" rich results.
+ */
+function extractSubQuestionsForSchema(s2Detail: string) {
+  if (!s2Detail) {
+    return []
+  }
+
+  const sections: Array<{ name: string; text: string }> = []
+  const lines = s2Detail.split('\n')
+  let currentHeading = ''
+  let currentText: string[] = []
+
+  for (const line of lines) {
+    const headingMatch = line.match(/^### (.+)$/)
+    if (headingMatch) {
+      // Save previous section
+      if (currentHeading && currentText.length > 0) {
+        sections.push({
+          name: currentHeading,
+          text: currentText
+            .join(' ')
+            .replace(/```[\s\S]*?```/g, '') // remove code blocks
+            .replace(/[#*`|>\-]/g, '') // remove markdown
+            .replace(/\s+/g, ' ')
+            .trim()
+            .slice(0, 300),
+        })
+      }
+      currentHeading = headingMatch[1].trim()
+      currentText = []
+    } else if (currentHeading) {
+      // Skip code block lines and empty lines
+      const trimmed = line.trim()
+      if (trimmed && !trimmed.startsWith('```') && !trimmed.startsWith('|') && !trimmed.startsWith('####')) {
+        currentText.push(trimmed)
+      }
+    }
+  }
+
+  // Save last section
+  if (currentHeading && currentText.length > 0) {
+    sections.push({
+      name: currentHeading,
+      text: currentText
+        .join(' ')
+        .replace(/```[\s\S]*?```/g, '')
+        .replace(/[#*`|>\-]/g, '')
+        .replace(/\s+/g, ' ')
+        .trim()
+        .slice(0, 300),
+    })
+  }
+
+  // Return as FAQ Schema format (max 10 to avoid bloating HTML)
+  return sections.slice(0, 10).map((s) => ({
+    '@type': 'Question',
+    name: s.name,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: s.text,
+    },
+  }))
 }
