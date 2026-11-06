@@ -1,0 +1,183 @@
+/* WriteModal: LinkedIn-style simple question submission */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 80px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s, visibility 0.25s;
+}
+
+.overlayOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+:global(html.dark) .overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+  width: 560px;
+  max-width: 92vw;
+  background: var(--color-surface);
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.15);
+  transform: translateY(16px);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.overlayOpen .modal {
+  transform: translateY(0);
+}
+
+:global(html.dark) .modal {
+  background: #252525;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.close {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.close:hover {
+  background: var(--color-hover);
+  color: var(--color-text-primary);
+}
+
+/* Body */
+.body {
+  padding: 16px 20px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 180px;
+  border: none;
+  outline: none;
+  resize: none;
+  background: none;
+  color: var(--color-text-primary);
+  font-family: var(--font-reading);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.textarea:focus,
+.textarea:focus-visible {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
+
+.textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Honeypot: invisible to humans */
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 12px 20px 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.charCount {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-right: auto;
+}
+
+.error {
+  font-size: 12px;
+  color: var(--color-error, #c94a4a);
+  margin-right: auto;
+}
+
+.submitBtn {
+  padding: 8px 24px;
+  border-radius: 20px;
+  border: none;
+  background: var(--color-link);
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.submitBtn:hover {
+  opacity: 0.9;
+}
+
+.submitBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* Success */
+.success {
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.successIcon {
+  color: var(--color-link);
+  margin-bottom: 12px;
+}
+
+.successTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.successText {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}

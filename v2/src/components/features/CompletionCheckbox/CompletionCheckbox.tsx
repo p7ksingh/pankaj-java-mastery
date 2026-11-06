@@ -1,6 +1,6 @@
 'use client'
 
-import { useProgress } from '@/hooks/useProgress'
+import { useUserProgress } from '@/hooks/useUserProgress'
 import styles from './CompletionCheckbox.module.css'
 
 interface CompletionCheckboxProps {
@@ -8,8 +8,8 @@ interface CompletionCheckboxProps {
 }
 
 export function CompletionCheckbox({ questionId }: CompletionCheckboxProps) {
-  const { isCompleted, toggle } = useProgress()
-  const checked = isCompleted(questionId)
+  const { isComplete, toggleComplete } = useUserProgress()
+  const checked = isComplete(questionId)
 
   return (
     <label className={styles.label}>
@@ -17,7 +17,7 @@ export function CompletionCheckbox({ questionId }: CompletionCheckboxProps) {
         type="checkbox"
         className={styles.checkbox}
         checked={checked}
-        onChange={() => toggle(questionId)}
+        onChange={() => toggleComplete(questionId)}
       />
       <span className={styles.text}>{checked ? 'Completed' : 'Mark as completed'}</span>
     </label>

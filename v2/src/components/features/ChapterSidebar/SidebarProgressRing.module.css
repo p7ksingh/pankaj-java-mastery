@@ -1,0 +1,38 @@
+.heroProgress {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+
+.ring {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.ringBg {
+  fill: none;
+  stroke: var(--color-border);
+  stroke-width: 3;
+}
+
+.ringFill {
+  fill: none;
+  stroke: var(--color-link);
+  stroke-width: 3;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.4s;
+}
+
+.text {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.textStrong {
+  color: var(--color-link);
+  font-weight: 700;
+}

@@ -49,3 +49,29 @@ Every major decision is recorded here with the reasoning. If you disagree with o
 ## DD-010: Progressive enhancement
 **Decision:** Pages render fully without JavaScript. JS adds: dark mode, bookmarks, notes, progress, keyboard shortcuts.
 **Reason:** Google's crawler may not execute all JS. Users on slow connections see content immediately. Accessibility: screen readers get full content.
+
+## DD-011: Brand wordmark — Medium-style text logo
+**Decision:** Replace the "J" icon mark with a **text-only wordmark** ("javabypankaj"), styled like Medium's wordmark: a high-contrast display serif, pinned hard-left in the header, tight letter-spacing, no icon, no accent dot.
+
+**What Medium actually uses:** Medium's wordmark is set in **Noe Display Bold** (by Schick Toikka) — a high-contrast display serif with triangular serifs and compact spacing. Noe Display is a **paid/commercial font** and is **not** available on Google Fonts, so we cannot ship it for free.
+
+**Chosen font:** **Georgia** (system serif, universally available, zero-cost fallback of Medium's Noe Display).
+- `font-family: 'Noe Display', Georgia, serif;`
+- `font-weight: 700 (bold)`
+- `font-size: 28px` (desktop header), scales down on mobile
+- `letter-spacing: -0.025em` (tight, matches Medium's compact spacing)
+- color: `#ffffff` on the dark header; `#121212` on light surfaces
+- single clean word — **no** icon, **no** red dot, **no** faded "by"
+
+**Why Georgia:** Georgia is a high-quality serif typeface pre-installed on every OS (macOS, Windows, Linux, iOS, Android). It is the natural fallback for Noe Display and renders cleanly at wordmark sizes. Zero font files to load = fastest possible paint.
+
+**Alternatives considered:**
+- *Fraunces* (Google Fonts, free) — closest free match to Noe Display but adds a network font load.
+- *Playfair Display 800* — free, elegant, higher contrast; adds a network font load.
+- *Source Serif 4 700* — free, softer; less "Medium-like".
+
+**Reason:** The user reviewed all options side-by-side and chose the Georgia rendering for its clean, classic Medium-style feel. It ships with every OS, loads instantly, and matches the editorial serif character of Medium's wordmark.
+
+**Migration note:** This supersedes the "Bold J Logo" (CHANGELOG 2026-11-02). The SVG `J` mark in `src/components/ui/Logo/Logo.tsx` is replaced by a text-only wordmark; the red-dot animation is dropped.
+
+**Future upgrade:** If Noe Display is licensed later, self-host the font files, add an `@font-face` for `'Noe Display'`, and the existing `font-family` stack will pick it up automatically with no other code changes.

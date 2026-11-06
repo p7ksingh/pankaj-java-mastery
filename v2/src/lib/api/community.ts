@@ -1,4 +1,4 @@
-import { APP_CONFIG } from '@/lib/constants/config'
+import { API_ENDPOINTS } from '@/lib/constants/api'
 
 export interface QuestionSubmission {
   question: string
@@ -23,8 +23,12 @@ export interface SubmitResult {
 
 /** Submits a user-contributed interview question to the API. */
 export async function submitQuestion(data: QuestionSubmission): Promise<SubmitResult> {
+  const endpoint = API_ENDPOINTS.questions
+  if (!endpoint) {
+    return { success: false, message: 'API not configured.' }
+  }
   try {
-    const response = await fetch(APP_CONFIG.api.questions, {
+    const response = await fetch(endpoint, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
@@ -38,8 +42,12 @@ export async function submitQuestion(data: QuestionSubmission): Promise<SubmitRe
 
 /** Fetches community-submitted questions from the API. */
 export async function getCommunityQuestions(): Promise<CommunityQuestion[]> {
+  const endpoint = API_ENDPOINTS.questions
+  if (!endpoint) {
+    return []
+  }
   try {
-    const response = await fetch(APP_CONFIG.api.questions)
+    const response = await fetch(endpoint)
     if (!response.ok) {
       return []
     }

@@ -1,4 +1,4 @@
-/* Reset and base styles. Applied once via root layout. */
+/* Reset and base styles — Medium-inspired. */
 
 *,
 *::before,
@@ -22,6 +22,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
 }
 
 a {
@@ -50,6 +51,7 @@ img {
   height: auto;
 }
 
+/* Code — kept as-is (JetBrains Mono) */
 code,
 pre {
   font-family: var(--font-mono);
@@ -70,21 +72,22 @@ pre {
 }
 
 code {
-  font-size: 13px;
+  font-size: 0.85em;
   background: var(--color-code-inline-bg);
-  padding: 1px 5px;
-  border-radius: 4px;
+  padding: 2px 5px;
+  border-radius: 3px;
 }
 
 /* Prevent pre > code from doubling the background */
 pre code {
-  background: none;
+  background: none !important;
+  border: none !important;
   padding: 0;
 }
 
-/* Selection */
+/* Selection — Medium green tint */
 ::selection {
-  background: rgba(74, 144, 217, 0.25);
+  background: rgba(26, 137, 23, 0.15);
 }
 
 /* Focus ring for accessibility */

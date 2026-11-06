@@ -1,0 +1,12 @@
+.likes {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 9px;
+  color: var(--color-text-muted);
+}
+
+.likes svg {
+  width: 10px;
+  height: 10px;
+}

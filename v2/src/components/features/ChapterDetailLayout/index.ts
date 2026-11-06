@@ -1,0 +1,1 @@
+export { ChapterDetailLayout } from './ChapterDetailLayout'

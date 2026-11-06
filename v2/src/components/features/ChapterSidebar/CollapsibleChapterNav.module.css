@@ -1,0 +1,108 @@
+.chNav {
+  border-top: 1px solid var(--color-border-light, var(--color-border));
+  flex-shrink: 0;
+}
+
+.chNavHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px 6px;
+}
+
+.chNavTitle {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+}
+
+.chNavToggle {
+  font-size: 10px;
+  color: var(--color-link);
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.chNavList {
+  max-height: 180px;
+  overflow-y: auto;
+  padding-bottom: 8px;
+  transition: max-height 0.3s, padding-bottom 0.3s;
+}
+
+.chNavListCollapsed {
+  max-height: 0;
+  overflow: hidden;
+  padding-bottom: 0;
+}
+
+.chNavItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 20px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  transition: background 0.12s;
+  text-decoration: none;
+}
+
+.chNavItem:hover {
+  background: var(--color-hover);
+  color: var(--color-text-primary);
+  text-decoration: none;
+}
+
+.chNavItemActive {
+  color: var(--color-text-primary);
+  font-weight: 700;
+}
+
+.chNavNum {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: var(--color-pill-bg);
+  color: var(--color-text-muted);
+  font-size: 9px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chNavItemActive .chNavNum {
+  background: var(--color-badge-bg);
+  color: var(--color-badge-text);
+}
+
+.chNavName {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* On hover: let user scroll to see full chapter name */
+.chNavItem:hover .chNavName {
+  overflow-x: auto;
+  text-overflow: unset;
+  scrollbar-width: none;          /* Firefox */
+  -ms-overflow-style: none;       /* IE / old Edge */
+}
+
+.chNavItem:hover .chNavName::-webkit-scrollbar {
+  display: none;                  /* Chrome / Safari / Edge (Chromium) */
+}
+
+.chNavQCount {
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
