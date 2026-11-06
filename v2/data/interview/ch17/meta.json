@@ -1,14 +1,14 @@
 {
   "number": 17,
   "slug": "dsa-coding",
-  "title": "Coding Problems — DSA",
+  "title": "Coding Problems: DSA",
   "topicCount": 19,
   "questionCount": 492,
   "topics": [
     {
       "index": 0,
       "slug": "beginner",
-      "title": "Beginner — I/O, Arithmetic, Loops",
+      "title": "Beginner: I/O, Arithmetic, Loops",
       "questionCount": 30,
       "questionIds": [
         "Q1365",

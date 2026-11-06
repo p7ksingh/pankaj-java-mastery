@@ -8,7 +8,7 @@
     {
       "index": 0,
       "slug": "aws-overview",
-      "title": "AWS Overview — Regions, AZs",
+      "title": "AWS Overview: Regions, AZs",
       "questionCount": 1,
       "questionIds": [
         "Q1860"
@@ -17,7 +17,7 @@
     {
       "index": 1,
       "slug": "iam",
-      "title": "IAM — Users, Roles, Policies",
+      "title": "IAM: Users, Roles, Policies",
       "questionCount": 5,
       "questionIds": [
         "Q1891",

@@ -64,7 +64,7 @@
     {
       "index": 3,
       "slug": "messaging",
-      "title": "Messaging — Kafka vs RabbitMQ vs SQS",
+      "title": "Messaging: Kafka vs RabbitMQ vs SQS",
       "questionCount": 1,
       "questionIds": [
         "Q2530"

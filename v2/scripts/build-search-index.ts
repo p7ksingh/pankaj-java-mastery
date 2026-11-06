@@ -33,6 +33,7 @@ interface SearchEntry {
   u: string   // url
   k: string   // keywords from all content
   kp: string  // key points
+  qn: number  // question number (sequential in topic)
 }
 
 /** Extract meaningful keywords from text */
@@ -118,9 +119,10 @@ function run(): void {
           t: q.shortTitle || q.title,
           ch: ch.title,
           tp: topic.title,
-          u: `/interview/${ch.slug}/${topic.slug}/${q.id}/`,
+          u: `/interview/${ch.slug}/${topic.slug}/${q.urlSlug || q.id}/`,
           k: keywords,
           kp: keyPoints,
+          qn: q.questionNumber || 0,
         })
       }
     }

@@ -89,7 +89,7 @@
     {
       "index": 6,
       "slug": "keywords-final",
-      "title": "Keywords — final",
+      "title": "Keywords: final",
       "questionCount": 4,
       "questionIds": [
         "Q6",
@@ -101,7 +101,7 @@
     {
       "index": 7,
       "slug": "keywords-static",
-      "title": "Keywords — static",
+      "title": "Keywords: static",
       "questionCount": 4,
       "questionIds": [
         "Q10",
@@ -375,7 +375,7 @@
     {
       "index": 29,
       "slug": "jvm-internals-advanced",
-      "title": "JVM Internals — Advanced",
+      "title": "JVM Internals: Advanced",
       "questionCount": 10,
       "questionIds": [
         "Q103",

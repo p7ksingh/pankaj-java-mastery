@@ -45,7 +45,7 @@
     {
       "index": 2,
       "slug": "communication",
-      "title": "Communication — Sync, Async, gRPC",
+      "title": "Communication: Sync, Async, gRPC",
       "questionCount": 8,
       "questionIds": [
         "Q711",
@@ -96,7 +96,7 @@
     {
       "index": 5,
       "slug": "resilience",
-      "title": "Resilience — Circuit Breaker, Retry, Bulkhead",
+      "title": "Resilience: Circuit Breaker, Retry, Bulkhead",
       "questionCount": 7,
       "questionIds": [
         "Q616",
@@ -184,7 +184,7 @@
     {
       "index": 10,
       "slug": "observability",
-      "title": "Observability — Logging, Tracing, Metrics",
+      "title": "Observability: Logging, Tracing, Metrics",
       "questionCount": 9,
       "questionIds": [
         "Q748",

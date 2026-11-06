@@ -20,7 +20,7 @@
     {
       "index": 1,
       "slug": "list-arraylist-linkedlist",
-      "title": "List — ArrayList & LinkedList",
+      "title": "List: ArrayList & LinkedList",
       "questionCount": 7,
       "questionIds": [
         "Q139",
@@ -83,7 +83,7 @@
     {
       "index": 5,
       "slug": "set-hashset-treeset",
-      "title": "Set — HashSet, LinkedHashSet, TreeSet",
+      "title": "Set: HashSet, LinkedHashSet, TreeSet",
       "questionCount": 5,
       "questionIds": [
         "Q157",
@@ -119,7 +119,7 @@
     {
       "index": 8,
       "slug": "map-operations",
-      "title": "Map Operations — compute, merge, putIfAbsent",
+      "title": "Map Operations: compute, merge, putIfAbsent",
       "questionCount": 2,
       "questionIds": [
         "Q183-collections",

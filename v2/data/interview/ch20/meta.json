@@ -39,7 +39,7 @@
     {
       "index": 2,
       "slug": "data-formats",
-      "title": "Data Formats — Parquet, Avro, ORC",
+      "title": "Data Formats: Parquet, Avro, ORC",
       "questionCount": 6,
       "questionIds": [
         "Q2047",
@@ -53,7 +53,7 @@
     {
       "index": 3,
       "slug": "spark-core",
-      "title": "Apache Spark — Core",
+      "title": "Apache Spark: Core",
       "questionCount": 72,
       "questionIds": [
         "Q2028",

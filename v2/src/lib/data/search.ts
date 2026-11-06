@@ -8,6 +8,7 @@ export interface SearchEntry {
   u: string   // url
   k?: string  // keywords from all content
   kp?: string // key points
+  qn?: number // question number (sequential in topic)
 }
 
 export interface SearchResultItem {
@@ -17,6 +18,7 @@ export interface SearchResultItem {
   topic: string
   url: string
   score: number
+  questionNumber: number
 }
 
 export interface SearchResult {
@@ -114,6 +116,7 @@ export function filterIndex(index: SearchEntry[], query: string, limit: number):
         topic: entry.tp || '',
         url: entry.u,
         score,
+        questionNumber: entry.qn || 0,
       })
     }
   }
@@ -165,6 +168,7 @@ function fuzzyMatch(index: SearchEntry[], _lower: string, queryWords: string[], 
         topic: entry.tp || '',
         url: entry.u,
         score,
+        questionNumber: entry.qn || 0,
       })
       if (score > bestScore) {
         bestScore = score

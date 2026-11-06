@@ -41,7 +41,7 @@
     {
       "index": 3,
       "slug": "web-layer",
-      "title": "Web Layer — Controllers & Request Mapping",
+      "title": "Web Layer: Controllers & Request Mapping",
       "questionCount": 3,
       "questionIds": [
         "Q427",
@@ -62,7 +62,7 @@
     {
       "index": 5,
       "slug": "aop",
-      "title": "AOP — Aspect-Oriented Programming",
+      "title": "AOP: Aspect-Oriented Programming",
       "questionCount": 1,
       "questionIds": [
         "Q437"
@@ -71,7 +71,7 @@
     {
       "index": 6,
       "slug": "caching",
-      "title": "Caching — Spring Cache & Redis",
+      "title": "Caching: Spring Cache & Redis",
       "questionCount": 1,
       "questionIds": [
         "Q438"
@@ -80,7 +80,7 @@
     {
       "index": 7,
       "slug": "testing",
-      "title": "Testing — Unit, Integration, Testcontainers",
+      "title": "Testing: Unit, Integration, Testcontainers",
       "questionCount": 1,
       "questionIds": [
         "Q439"
@@ -89,7 +89,7 @@
     {
       "index": 8,
       "slug": "security",
-      "title": "Spring Security — JWT, OAuth2, CSRF/CORS",
+      "title": "Spring Security: JWT, OAuth2, CSRF/CORS",
       "questionCount": 3,
       "questionIds": [
         "Q440",
@@ -129,7 +129,7 @@
     {
       "index": 12,
       "slug": "advanced-spring",
-      "title": "Advanced — WebFlux, WebSocket, Virtual Threads",
+      "title": "Advanced: WebFlux, WebSocket, Virtual Threads",
       "questionCount": 1,
       "questionIds": [
         "Q446"

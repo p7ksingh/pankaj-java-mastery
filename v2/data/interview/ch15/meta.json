@@ -33,7 +33,7 @@
     {
       "index": 2,
       "slug": "creational",
-      "title": "Creational — Singleton, Factory, Builder, Prototype",
+      "title": "Creational: Singleton, Factory, Builder, Prototype",
       "questionCount": 12,
       "questionIds": [
         "Q1244",
@@ -53,7 +53,7 @@
     {
       "index": 3,
       "slug": "structural",
-      "title": "Structural — Adapter, Decorator, Proxy, Facade",
+      "title": "Structural: Adapter, Decorator, Proxy, Facade",
       "questionCount": 6,
       "questionIds": [
         "Q1268",
@@ -67,7 +67,7 @@
     {
       "index": 4,
       "slug": "behavioral",
-      "title": "Behavioral — Strategy, Observer, Command, State, Template",
+      "title": "Behavioral: Strategy, Observer, Command, State, Template",
       "questionCount": 12,
       "questionIds": [
         "Q1252",
@@ -116,7 +116,7 @@
     {
       "index": 8,
       "slug": "lld-problems",
-      "title": "LLD Problems — Parking Lot, Elevator, Chess, etc.",
+      "title": "LLD Problems: Parking Lot, Elevator, Chess, etc.",
       "questionCount": 12,
       "questionIds": [
         "Q2555",

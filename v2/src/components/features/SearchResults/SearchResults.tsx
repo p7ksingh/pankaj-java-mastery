@@ -87,7 +87,7 @@ export function SearchResults({ initialQuery }: SearchResultsProps) {
       <div className={styles.list}>
         {result.items.map((r) => (
           <Link key={r.id + r.url} href={r.url} className={styles.row}>
-            <Badge variant="question">{r.id}</Badge>
+            <Badge variant="question">Q{r.questionNumber}</Badge>
             <div className={styles.info}>
               <span className={styles.title}>{highlightMatch(r.title, query)}</span>
               <span className={styles.chapter}>{r.chapter} › {r.topic}</span>

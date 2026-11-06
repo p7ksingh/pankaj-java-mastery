@@ -31,7 +31,7 @@
     {
       "index": 2,
       "slug": "entity-relationships",
-      "title": "Entity Mapping — Relationships",
+      "title": "Entity Mapping: Relationships",
       "questionCount": 5,
       "questionIds": [
         "Q629",
@@ -44,7 +44,7 @@
     {
       "index": 3,
       "slug": "entity-keys-columns",
-      "title": "Entity Mapping — Keys, Columns & Annotations",
+      "title": "Entity Mapping: Keys, Columns & Annotations",
       "questionCount": 8,
       "questionIds": [
         "Q630",
@@ -85,7 +85,7 @@
     {
       "index": 6,
       "slug": "queries",
-      "title": "Queries — JPQL, Native, Derived, Criteria",
+      "title": "Queries: JPQL, Native, Derived, Criteria",
       "questionCount": 6,
       "questionIds": [
         "Q626",
@@ -99,7 +99,7 @@
     {
       "index": 7,
       "slug": "projections",
-      "title": "Projections — Interface, DTO, Dynamic",
+      "title": "Projections: Interface, DTO, Dynamic",
       "questionCount": 4,
       "questionIds": [
         "Q623",
@@ -121,7 +121,7 @@
     {
       "index": 9,
       "slug": "locking",
-      "title": "Locking — Optimistic & Pessimistic",
+      "title": "Locking: Optimistic & Pessimistic",
       "questionCount": 4,
       "questionIds": [
         "Q638",
@@ -144,7 +144,7 @@
     {
       "index": 11,
       "slug": "performance",
-      "title": "Performance — Large IN, Dirty Checking, OSIV",
+      "title": "Performance: Large IN, Dirty Checking, OSIV",
       "questionCount": 6,
       "questionIds": [
         "Q620",
@@ -201,7 +201,7 @@
     {
       "index": 16,
       "slug": "scheduling",
-      "title": "Scheduling — @Scheduled, ShedLock, Retry",
+      "title": "Scheduling: @Scheduled, ShedLock, Retry",
       "questionCount": 4,
       "questionIds": [
         "Q663",

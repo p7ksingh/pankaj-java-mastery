@@ -8,7 +8,7 @@
     {
       "index": 0,
       "slug": "sql-basics",
-      "title": "SQL Basics — SELECT, WHERE, ORDER BY",
+      "title": "SQL Basics: SELECT, WHERE, ORDER BY",
       "questionCount": 8,
       "questionIds": [
         "Q1164",
@@ -24,7 +24,7 @@
     {
       "index": 1,
       "slug": "joins",
-      "title": "Joins — INNER, LEFT, RIGHT, FULL, CROSS",
+      "title": "Joins: INNER, LEFT, RIGHT, FULL, CROSS",
       "questionCount": 12,
       "questionIds": [
         "Q1155",
@@ -44,7 +44,7 @@
     {
       "index": 2,
       "slug": "aggregation",
-      "title": "Aggregation — GROUP BY, HAVING, COUNT, SUM",
+      "title": "Aggregation: GROUP BY, HAVING, COUNT, SUM",
       "questionCount": 10,
       "questionIds": [
         "Q1084",
@@ -77,7 +77,7 @@
     {
       "index": 4,
       "slug": "window-functions",
-      "title": "Window Functions — ROW_NUMBER, RANK, LEAD, LAG",
+      "title": "Window Functions: ROW_NUMBER, RANK, LEAD, LAG",
       "questionCount": 8,
       "questionIds": [
         "Q1116",
@@ -198,7 +198,7 @@
     {
       "index": 12,
       "slug": "database-internals",
-      "title": "Database Internals — B-tree, MVCC, WAL",
+      "title": "Database Internals: B-tree, MVCC, WAL",
       "questionCount": 1,
       "questionIds": [
         "Q1073"
@@ -272,7 +272,7 @@
     {
       "index": 16,
       "slug": "advanced-database",
-      "title": "Advanced — Replication, Consistency, CAP",
+      "title": "Advanced: Replication, Consistency, CAP",
       "questionCount": 5,
       "questionIds": [
         "Q1149",

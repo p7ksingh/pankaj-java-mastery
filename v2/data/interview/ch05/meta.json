@@ -101,7 +101,7 @@
     {
       "index": 7,
       "slug": "locks",
-      "title": "Locks — ReentrantLock, ReadWriteLock, StampedLock",
+      "title": "Locks: ReentrantLock, ReadWriteLock, StampedLock",
       "questionCount": 7,
       "questionIds": [
         "Q229",
@@ -145,7 +145,7 @@
     {
       "index": 10,
       "slug": "thread-pool-sizing",
-      "title": "Thread Pool — Sizing & Pitfalls",
+      "title": "Thread Pool: Sizing & Pitfalls",
       "questionCount": 7,
       "questionIds": [
         "Q288",
@@ -212,7 +212,7 @@
     {
       "index": 14,
       "slug": "sync-utilities",
-      "title": "Synchronization Utilities — Latch, Barrier, Semaphore",
+      "title": "Synchronization Utilities: Latch, Barrier, Semaphore",
       "questionCount": 6,
       "questionIds": [
         "Q266",
@@ -250,7 +250,7 @@
     {
       "index": 17,
       "slug": "thread-lifecycle",
-      "title": "Thread Lifecycle — Priority, Interruption, Factory",
+      "title": "Thread Lifecycle: Priority, Interruption, Factory",
       "questionCount": 5,
       "questionIds": [
         "Q309",
@@ -298,7 +298,7 @@
     {
       "index": 21,
       "slug": "advanced-patterns",
-      "title": "Advanced — Disruptor, Actor, False Sharing",
+      "title": "Advanced: Disruptor, Actor, False Sharing",
       "questionCount": 5,
       "questionIds": [
         "Q271",

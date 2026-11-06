@@ -2,12 +2,21 @@
 export interface QuestionSummary {
   id: string
   slug: string
+  urlSlug: string
   questionNumber: number
   title: string
   shortTitle: string
   chapterNumber: number
   chapterSlug: string
   chapterTitle: string
+}
+
+/** Question preview for R1 cards — summary plus content hints. */
+export interface QuestionPreview extends QuestionSummary {
+  keyPoints: string[]
+  oneliner: string
+  topicSlug: string
+  topicTitle: string
 }
 
 /** Full question with all answer sections. */

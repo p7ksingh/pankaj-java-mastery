@@ -62,7 +62,7 @@
     {
       "index": 4,
       "slug": "reactive-vertx",
-      "title": "Reactive — Vert.x & RSocket",
+      "title": "Reactive: Vert.x & RSocket",
       "questionCount": 8,
       "questionIds": [
         "Q1309",

@@ -81,7 +81,7 @@
     {
       "index": 6,
       "slug": "relationships",
-      "title": "Relationships — Association, Aggregation, Composition",
+      "title": "Relationships: Association, Aggregation, Composition",
       "questionCount": 3,
       "questionIds": [
         "Q155",
@@ -102,7 +102,7 @@
     {
       "index": 8,
       "slug": "modern-java-oop",
-      "title": "Modern Java OOP — Records & Sealed",
+      "title": "Modern Java OOP: Records & Sealed",
       "questionCount": 2,
       "questionIds": [
         "Q158",

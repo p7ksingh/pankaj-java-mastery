@@ -20,7 +20,7 @@
     {
       "index": 1,
       "slug": "jwt",
-      "title": "JWT — Structure, Validation, Storage",
+      "title": "JWT: Structure, Validation, Storage",
       "questionCount": 4,
       "questionIds": [
         "Q2584",
@@ -45,7 +45,7 @@
     {
       "index": 3,
       "slug": "web-vulnerabilities",
-      "title": "Web Vulnerabilities — SQLi, XSS, CSRF, SSRF",
+      "title": "Web Vulnerabilities: SQLi, XSS, CSRF, SSRF",
       "questionCount": 7,
       "questionIds": [
         "Q2596",

@@ -8,7 +8,7 @@
     {
       "index": 0,
       "slug": "git",
-      "title": "Git — Branching, Merge, Rebase",
+      "title": "Git: Branching, Merge, Rebase",
       "questionCount": 6,
       "questionIds": [
         "Q1000",
@@ -134,7 +134,7 @@
     {
       "index": 6,
       "slug": "docker",
-      "title": "Docker — Images, Containers, Multi-Stage",
+      "title": "Docker: Images, Containers, Multi-Stage",
       "questionCount": 10,
       "questionIds": [
         "Q1040",
@@ -152,7 +152,7 @@
     {
       "index": 7,
       "slug": "kubernetes-core",
-      "title": "Kubernetes — Core Concepts",
+      "title": "Kubernetes: Core Concepts",
       "questionCount": 16,
       "questionIds": [
         "Q1009",
@@ -176,7 +176,7 @@
     {
       "index": 8,
       "slug": "kubernetes-networking",
-      "title": "Kubernetes — Networking, Storage, Security",
+      "title": "Kubernetes: Networking, Storage, Security",
       "questionCount": 0,
       "questionIds": []
     },
@@ -248,7 +248,7 @@
     {
       "index": 14,
       "slug": "gitops",
-      "title": "GitOps — ArgoCD, Flux",
+      "title": "GitOps: ArgoCD, Flux",
       "questionCount": 3,
       "questionIds": [
         "Q1970",

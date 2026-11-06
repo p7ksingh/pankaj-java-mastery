@@ -82,7 +82,7 @@
     {
       "index": 5,
       "slug": "stream-filter",
-      "title": "Stream — filter",
+      "title": "Stream: filter",
       "questionCount": 19,
       "questionIds": [
         "Q325",
@@ -109,7 +109,7 @@
     {
       "index": 6,
       "slug": "stream-map-transform",
-      "title": "Stream — map & Transform",
+      "title": "Stream: map & Transform",
       "questionCount": 34,
       "questionIds": [
         "Q337",
@@ -151,7 +151,7 @@
     {
       "index": 7,
       "slug": "stream-flatmap",
-      "title": "Stream — flatMap",
+      "title": "Stream: flatMap",
       "questionCount": 7,
       "questionIds": [
         "Q336",
@@ -166,7 +166,7 @@
     {
       "index": 8,
       "slug": "stream-sorting",
-      "title": "Stream — Sorting & Comparator",
+      "title": "Stream: Sorting & Comparator",
       "questionCount": 23,
       "questionIds": [
         "Q349",
@@ -197,7 +197,7 @@
     {
       "index": 9,
       "slug": "stream-reduce",
-      "title": "Stream — reduce & Aggregate",
+      "title": "Stream: reduce & Aggregate",
       "questionCount": 9,
       "questionIds": [
         "Q326",
@@ -214,7 +214,7 @@
     {
       "index": 10,
       "slug": "stream-grouping",
-      "title": "Stream — Grouping & Partitioning",
+      "title": "Stream: Grouping & Partitioning",
       "questionCount": 22,
       "questionIds": [
         "Q2261",
@@ -344,7 +344,7 @@
     {
       "index": 16,
       "slug": "stream-exceptions",
-      "title": "Stream — Exception Handling",
+      "title": "Stream: Exception Handling",
       "questionCount": 4,
       "questionIds": [
         "Q382",
@@ -356,7 +356,7 @@
     {
       "index": 17,
       "slug": "stream-performance",
-      "title": "Stream — Performance & Pitfalls",
+      "title": "Stream: Performance & Pitfalls",
       "questionCount": 5,
       "questionIds": [
         "Q427",
@@ -369,7 +369,7 @@
     {
       "index": 18,
       "slug": "stream-predict-output",
-      "title": "Stream — Predict the Output",
+      "title": "Stream: Predict the Output",
       "questionCount": 7,
       "questionIds": [
         "Q2422",
@@ -384,7 +384,7 @@
     {
       "index": 19,
       "slug": "stream-employee-practice",
-      "title": "Stream Practice — Employee Analysis",
+      "title": "Stream Practice: Employee Analysis",
       "questionCount": 43,
       "questionIds": [
         "Q350",
@@ -435,7 +435,7 @@
     {
       "index": 20,
       "slug": "stream-string-practice",
-      "title": "Stream Practice — String & Character",
+      "title": "Stream Practice: String & Character",
       "questionCount": 11,
       "questionIds": [
         "Q360",
@@ -454,7 +454,7 @@
     {
       "index": 21,
       "slug": "stream-collection-practice",
-      "title": "Stream Practice — Collections & Numbers",
+      "title": "Stream Practice: Collections & Numbers",
       "questionCount": 11,
       "questionIds": [
         "Q365",
@@ -473,7 +473,7 @@
     {
       "index": 22,
       "slug": "stream-complex-pipelines",
-      "title": "Stream — Complex Pipelines",
+      "title": "Stream: Complex Pipelines",
       "questionCount": 8,
       "questionIds": [
         "Q2282",
