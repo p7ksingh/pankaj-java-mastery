@@ -1,0 +1,262 @@
+/* ─── Overlay ─── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 72px;
+}
+
+:global(html.dark) .overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* ─── Dropdown container ─── */
+.wrap {
+  width: 560px;
+  max-width: 92vw;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  animation: dropIn 0.15s ease;
+}
+
+:global(html.dark) .wrap {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes dropIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Input ─── */
+.inputWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.inputIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  color: var(--color-text-primary);
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.input:focus,
+.input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.kbd {
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: var(--color-pill-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
+  font-family: var(--font-family);
+}
+
+/* ─── Section label ─── */
+.section {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+  padding: 10px 16px 4px;
+}
+
+/* ─── Results ─── */
+.results {
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-family);
+  color: var(--color-text-primary);
+  transition: background 0.08s;
+}
+
+.item:hover,
+.itemActive {
+  background: var(--color-hover);
+}
+
+.itemActive .itemTitle {
+  color: var(--color-link);
+}
+
+.itemIcon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: var(--color-pill-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+}
+
+.itemIcon svg {
+  width: 16px;
+  height: 16px;
+}
+
+.itemInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemTitle {
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemPath {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.itemKbd {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+}
+
+.highlight {
+  background: none;
+  color: var(--color-link);
+  font-weight: 700;
+}
+
+/* ─── Empty ─── */
+.empty {
+  text-align: center;
+  padding: 24px 16px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.suggestion {
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-link);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+/* ─── Footer ─── */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-hover);
+}
+
+.footerLeft {
+  display: flex;
+  gap: 12px;
+}
+
+.hint {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  color: var(--color-text-muted);
+}
+
+.hint kbd {
+  font-size: 10px;
+  font-weight: 600;
+  background: var(--color-pill-bg);
+  padding: 1px 5px;
+  border-radius: 3px;
+  color: var(--color-text-secondary);
+  font-family: var(--font-family);
+}
+
+.footerAll {
+  font-family: var(--font-family);
+  font-size: 11px;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.footerAll:hover {
+  color: var(--color-link);
+}
+
+.footerAll strong {
+  color: var(--color-text-secondary);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 680px) {
+  .overlay {
+    padding-top: 8px;
+  }
+
+  .wrap {
+    border-radius: 0;
+    max-width: 100%;
+    width: 100%;
+    max-height: 100vh;
+  }
+}
