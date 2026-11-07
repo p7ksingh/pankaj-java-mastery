@@ -34,6 +34,21 @@ export function SubscribePopup() {
     return () => clearTimeout(timer)
   }, [])
 
+  // Listen for manual trigger (e.g. sidebar Subscribe button)
+  useEffect(() => {
+    function handleShow() {
+      try {
+        if (!localStorage.getItem(SUBSCRIBED_KEY)) {
+          setVisible(true)
+        }
+      } catch {
+        setVisible(true)
+      }
+    }
+    window.addEventListener('showSubscribe', handleShow)
+    return () => window.removeEventListener('showSubscribe', handleShow)
+  }, [])
+
   // Lock body scroll when visible
   useEffect(() => {
     if (visible) {
