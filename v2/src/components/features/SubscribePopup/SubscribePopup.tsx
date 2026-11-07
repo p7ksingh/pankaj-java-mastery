@@ -8,6 +8,24 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const DISMISSED_KEY = 'javabypankaj.subscribeDismissed'
 const SUBSCRIBED_KEY = 'javabypankaj.subscribed'
 const DELAY_MS = 60_000 // 60 seconds
+const DISMISS_COOLDOWN_MS = 24 * 60 * 60 * 1000 // 24 hours
+
+/** Check if dismiss cooldown has expired (show popup again after 24h) */
+function isDismissCooledDown(): boolean {
+  try {
+    const dismissed = localStorage.getItem(DISMISSED_KEY)
+    if (!dismissed) {
+      return true // never dismissed
+    }
+    const timestamp = parseInt(dismissed, 10)
+    if (isNaN(timestamp)) {
+      return true // legacy '1' value — treat as expired
+    }
+    return Date.now() - timestamp > DISMISS_COOLDOWN_MS
+  } catch {
+    return false
+  }
+}
 
 /**
  * Timed subscribe modal. Appears after 60 seconds.
@@ -23,8 +41,11 @@ export function SubscribePopup() {
 
   useEffect(() => {
     try {
-      if (localStorage.getItem(DISMISSED_KEY) || localStorage.getItem(SUBSCRIBED_KEY)) {
-        return
+      if (localStorage.getItem(SUBSCRIBED_KEY)) {
+        return // subscribed = never show again
+      }
+      if (!isDismissCooledDown()) {
+        return // dismissed less than 24h ago
       }
     } catch {
       return
@@ -73,7 +94,7 @@ export function SubscribePopup() {
   const dismiss = useCallback(() => {
     setVisible(false)
     try {
-      localStorage.setItem(DISMISSED_KEY, '1')
+      localStorage.setItem(DISMISSED_KEY, String(Date.now()))
     } catch {
       // localStorage unavailable
     }
