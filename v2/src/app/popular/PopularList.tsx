@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { fetchTopLiked } from '@/lib/api/likes'
-import { loadSearchIndex, type SearchEntry } from '@/lib/data/search'
+import { loadQuestionMeta, type QuestionMeta } from '@/lib/data/questionMeta'
 import { LikeButton } from '@/components/features/LikeButton'
 import styles from './page.module.css'
 
@@ -31,11 +31,11 @@ export function PopularList() {
         // Fetch top-liked from API + search index for metadata in parallel
         const [topLiked, searchIndex] = await Promise.all([
           fetchTopLiked(50),
-          loadSearchIndex(),
+          loadQuestionMeta(),
         ])
 
         // Build lookup map from search index
-        const indexMap = new Map<string, SearchEntry>()
+        const indexMap = new Map<string, QuestionMeta>()
         for (const entry of searchIndex) {
           indexMap.set(entry.id, entry)
         }

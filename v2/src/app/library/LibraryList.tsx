@@ -3,21 +3,21 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { useBookmarks } from '@/hooks/useBookmarks'
-import { loadSearchIndex, type SearchEntry } from '@/lib/data/search'
+import { loadQuestionMeta, type QuestionMeta } from '@/lib/data/questionMeta'
 import styles from './page.module.css'
 
 /**
  * Library list — shows all bookmarked questions.
- * Resolves bookmark IDs against the search index for titles and URLs.
+ * Resolves bookmark IDs against slim question metadata for titles and URLs.
  * Client component because it reads from localStorage.
  */
 export function LibraryList() {
   const { bookmarks, toggle } = useBookmarks()
-  const [index, setIndex] = useState<SearchEntry[]>([])
+  const [index, setIndex] = useState<QuestionMeta[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    loadSearchIndex()
+    loadQuestionMeta()
       .then(setIndex)
       .finally(() => setLoading(false))
   }, [])
@@ -29,7 +29,7 @@ export function LibraryList() {
   // Resolve bookmark IDs to full question data
   const saved = bookmarks
     .map((id) => index.find((entry) => entry.id === id))
-    .filter((entry): entry is SearchEntry => entry !== undefined)
+    .filter((entry): entry is QuestionMeta => entry !== undefined)
 
   if (saved.length === 0) {
     return (

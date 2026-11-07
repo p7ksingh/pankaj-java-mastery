@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prebuild": "npx ts-node --skip-project --compiler-options '{\"module\":\"commonjs\",\"esModuleInterop\":true}' scripts/build-search-index.ts && npx ts-node --skip-project --compiler-options '{\"module\":\"commonjs\",\"esModuleInterop\":true}' scripts/build-sitemap.ts",
+    "prebuild": "npx ts-node --skip-project --compiler-options '{\"module\":\"commonjs\",\"esModuleInterop\":true}' scripts/build-search-index.ts && npx ts-node --skip-project --compiler-options '{\"module\":\"commonjs\",\"esModuleInterop\":true}' scripts/build-question-meta.ts && npx ts-node --skip-project --compiler-options '{\"module\":\"commonjs\",\"esModuleInterop\":true}' scripts/build-sitemap.ts",
     "build": "next build",
     "start": "next start",
     "deploy:lambda": "bash scripts/deploy-lambda.sh",
