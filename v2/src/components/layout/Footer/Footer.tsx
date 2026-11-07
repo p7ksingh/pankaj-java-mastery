@@ -1,6 +1,7 @@
 import { Logo } from '@/components/ui/Logo'
 import { SocialLinks } from '@/components/ui/SocialLinks'
 import { buildSocialProfiles } from '@/lib/utils/share'
+import Link from 'next/link'
 import styles from './Footer.module.css'
 
 interface FooterProps {
@@ -36,6 +37,11 @@ export function Footer({ siteName, social }: FooterProps) {
 
         {/* Social profiles */}
         <SocialLinks profiles={socialProfiles} />
+
+        <span className={styles.legalLinks}>
+          <Link href="/privacy/" className={styles.legalLink}>Privacy</Link>
+          <Link href="/terms/" className={styles.legalLink}>Terms</Link>
+        </span>
       </div>
     </footer>
   )

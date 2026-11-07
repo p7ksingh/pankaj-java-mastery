@@ -82,11 +82,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeScript />
       </head>
       <body suppressHydrationWarning>
+        <a href="#main-content" className="skip-link">Skip to content</a>
         <ThemeProvider>
           <SidebarProvider>
             <TopBar siteName={SITE_NAME} />
             <LayoutShell>
-              <div className={styles.page}>{children}</div>
+              <div id="main-content" className={styles.page}>{children}</div>
               <Footer
                 siteName={SITE_NAME}
                 social={{

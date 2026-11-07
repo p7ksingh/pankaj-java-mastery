@@ -51,3 +51,23 @@
     margin-top: 4px;
   }
 }
+
+/* Legal links */
+.legalLinks {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: 12px;
+}
+
+.legalLink {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.legalLink:hover {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
