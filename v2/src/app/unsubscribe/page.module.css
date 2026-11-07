@@ -1,0 +1,132 @@
+.page {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 32px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.icon {
+  color: var(--color-text-muted);
+  margin-bottom: 14px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.copy {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+
+.form {
+  display: flex;
+  gap: 8px;
+  position: relative;
+}
+
+.input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  font-family: var(--font-family);
+  font-size: 14px;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--color-link);
+}
+
+.input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  background: var(--color-error, #c94a4a);
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.error {
+  font-size: 12px;
+  color: var(--color-error, #c94a4a);
+  margin-top: 10px;
+}
+
+/* Success */
+.success {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: 40px 32px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.successIcon {
+  color: var(--color-link);
+  margin-bottom: 12px;
+}
+
+.successTitle {
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.successText {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 24px 20px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

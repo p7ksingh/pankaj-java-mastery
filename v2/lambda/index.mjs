@@ -1,5 +1,5 @@
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { DynamoDBDocumentClient, PutCommand, ScanCommand } from "@aws-sdk/lib-dynamodb";
+import { DynamoDBDocumentClient, PutCommand, ScanCommand, DeleteCommand } from "@aws-sdk/lib-dynamodb";
 
 const client = new DynamoDBClient({ region: "ap-southeast-2" });
 const db = DynamoDBDocumentClient.from(client);
@@ -16,7 +16,7 @@ function getCorsHeaders(event) {
   const origin = event.headers?.origin || "";
   return {
     "Access-Control-Allow-Origin": ALLOWED_ORIGINS.includes(origin) ? origin : "",
-    "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
+    "Access-Control-Allow-Methods": "GET,POST,DELETE,OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
   };
 }
@@ -113,6 +113,23 @@ async function handlePostSubscribe(event) {
   return respond(200, { msg: "Subscribed!" }, event);
 }
 
+async function handleDeleteSubscribe(event) {
+  const body = parseBody(event);
+  const params = event.queryStringParameters || {};
+  const email = (body.email || params.email || "").trim().toLowerCase();
+
+  if (!email || !email.includes("@")) {
+    return respond(400, { msg: "Invalid email" }, event);
+  }
+
+  await db.send(new DeleteCommand({
+    TableName: SUBSCRIBERS_TABLE,
+    Key: { email },
+  }));
+
+  return respond(200, { msg: "Unsubscribed successfully. You will no longer receive emails." }, event);
+}
+
 export const handler = async (event) => {
   const method = parseMethod(event);
   const path = parsePath(event);
@@ -132,6 +149,10 @@ export const handler = async (event) => {
 
     if (method === "POST" && path.includes("/subscribe")) {
       return await handlePostSubscribe(event);
+    }
+
+    if (method === "DELETE" && path.includes("/subscribe")) {
+      return await handleDeleteSubscribe(event);
     }
 
     return respond(404, { msg: "Not found" }, event);
