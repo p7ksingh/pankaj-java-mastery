@@ -137,9 +137,10 @@ async function run() {
         const content = extractContent(sections)
         const keyPoints = (q.keyPoints || []).join('. ')
 
-        // Index the main question
+        // Index the main question (use chapter-scoped ID for global uniqueness)
+        const docId = `ch${chPad}-${q.id}`
         documents.push({
-          id: q.id,
+          id: docId,
           title: q.title || q.shortTitle,
           shortTitle: q.shortTitle || q.title,
           chapter: ch.title,
@@ -156,14 +157,14 @@ async function run() {
         const subHeadings = extractSubQuestions(s2)
         for (let i = 0; i < subHeadings.length; i++) {
           documents.push({
-            id: `${q.id}-sub-${i}`,
+            id: `${docId}-sub-${i}`,
             title: subHeadings[i],
             shortTitle: subHeadings[i],
             chapter: ch.title,
             topic: topic.title,
             url: `${url}#${slugify(subHeadings[i])}`,
             type: 'subquestion',
-            parentId: q.id,
+            parentId: docId,
             content: '',
             questionNumber: q.questionNumber || 0,
           })
@@ -177,34 +178,78 @@ async function run() {
   console.log(`Indexing ${documents.length} documents (${questionCount} questions + ${subQuestionCount} sub-questions)...`)
 
   const BATCH_SIZE = 100
+  let successCount = 0
+  let failCount = 0
+  const failedDocs: Record<string, unknown>[] = []
+
   for (let i = 0; i < documents.length; i += BATCH_SIZE) {
     const batch = documents.slice(i, i + BATCH_SIZE)
     try {
-      await client.collections(COLLECTION_NAME).documents().import(batch, { action: 'upsert' })
+      const results = await client.collections(COLLECTION_NAME).documents().import(batch, { action: 'upsert' })
+      // Check per-document results (import returns JSONL, each line is a result)
+      const resultArr = Array.isArray(results) ? results : []
+      for (let j = 0; j < resultArr.length; j++) {
+        const r = resultArr[j] as { success: boolean; error?: string; document?: string }
+        if (r.success) {
+          successCount++
+        } else {
+          failCount++
+          failedDocs.push(batch[j])
+          if (failCount <= 20) {
+            const doc = batch[j] as Record<string, unknown>
+            console.error(`  FAIL: ${doc.id} — ${r.error}`)
+          }
+        }
+      }
     } catch (err) {
-      console.error(`Batch ${i / BATCH_SIZE + 1} failed:`, err)
+      console.error(`Batch ${i / BATCH_SIZE + 1} failed entirely:`, err)
+      failCount += batch.length
+      failedDocs.push(...batch)
     }
     if ((i / BATCH_SIZE + 1) % 50 === 0) {
       console.log(`  ...indexed ${Math.min(i + BATCH_SIZE, documents.length)} / ${documents.length}`)
     }
   }
 
-  console.log(`Indexed: ${questionCount} questions + ${subQuestionCount} sub-questions = ${documents.length} total`)
+  // Retry failed documents one-by-one
+  if (failedDocs.length > 0) {
+    console.log(`\nRetrying ${failedDocs.length} failed documents one-by-one...`)
+    let retrySuccess = 0
+    for (const doc of failedDocs) {
+      try {
+        await client.collections(COLLECTION_NAME).documents().create(doc as Record<string, string>, { action: 'upsert' } as never)
+        retrySuccess++
+      } catch (err) {
+        const d = doc as Record<string, unknown>
+        console.error(`  Retry FAIL: ${d.id} — ${(err as Error).message}`)
+      }
+    }
+    console.log(`  Retry results: ${retrySuccess} recovered, ${failedDocs.length - retrySuccess} still failed`)
+    successCount += retrySuccess
+    failCount = failedDocs.length - retrySuccess
+  }
 
-  // Step 4: Create search-only API key
-  const searchKey = await client.keys().create({
-    description: 'Search-only key for javabypankaj frontend',
-    actions: ['documents:search'],
-    collections: [COLLECTION_NAME],
-  })
+  console.log(`\nIndexed: ${successCount} succeeded, ${failCount} failed (of ${documents.length} total)`)
 
-  console.log('')
-  console.log('── Search-Only API Key (safe for frontend) ──')
-  console.log(`NEXT_PUBLIC_TYPESENSE_SEARCH_KEY=${searchKey.value}`)
-  console.log(`NEXT_PUBLIC_TYPESENSE_HOST=${HOST}`)
-  console.log('')
-  console.log('Add these to your .env.local and .env.production')
-  console.log('This key can ONLY search — it cannot create, update, or delete anything.')
+  // Step 4: Create search-only API key (only when --new-key flag is passed)
+  if (process.argv.includes('--new-key')) {
+    const searchKey = await client.keys().create({
+      description: 'Search-only key for javabypankaj frontend',
+      actions: ['documents:search'],
+      collections: [COLLECTION_NAME],
+    })
+
+    console.log('')
+    console.log('── Search-Only API Key (safe for frontend) ──')
+    console.log(`NEXT_PUBLIC_TYPESENSE_SEARCH_KEY=${searchKey.value}`)
+    console.log(`NEXT_PUBLIC_TYPESENSE_HOST=${HOST}`)
+    console.log('')
+    console.log('Add these to your .env.local and .env.production')
+    console.log('This key can ONLY search — it cannot create, update, or delete anything.')
+  } else {
+    console.log('\nTip: Run with --new-key to generate a new search-only API key.')
+    console.log('Existing keys remain valid after re-indexing.')
+  }
   console.log('')
   console.log('── Done ──')
 }

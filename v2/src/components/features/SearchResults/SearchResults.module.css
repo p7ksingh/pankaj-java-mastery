@@ -64,6 +64,11 @@
   color: var(--color-text-muted);
 }
 
+.subTag {
+  font-style: italic;
+  opacity: 0.7;
+}
+
 .highlight {
   background: rgba(255, 200, 0, 0.3);
   padding: 0 2px;

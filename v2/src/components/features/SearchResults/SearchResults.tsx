@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import { loadSearchIndex, filterIndex, type SearchEntry, type SearchResult } from '@/lib/data/search'
+import { searchQuestions, type TypesenseHit } from '@/lib/search/typesenseClient'
 import { Badge } from '@/components/ui/Badge'
 import styles from './SearchResults.module.css'
 
@@ -12,11 +12,17 @@ interface SearchResultsProps {
   initialQuery: string
 }
 
+/**
+ * Full search results page — powered by Typesense.
+ * Uses the same search engine as the topbar dropdown for consistent results.
+ * Reads query from URL hash (e.g. /search#seven%20OOP).
+ */
 export function SearchResults({ initialQuery }: SearchResultsProps) {
-  const [index, setIndex] = useState<SearchEntry[]>([])
   const [query, setQuery] = useState(initialQuery)
-  const [result, setResult] = useState<SearchResult>({ items: [], suggestion: null })
-  const [loading, setLoading] = useState(true)
+  const [hits, setHits] = useState<TypesenseHit[]>([])
+  const [found, setFound] = useState(0)
+  const [loading, setLoading] = useState(false)
+  const [searched, setSearched] = useState(false)
 
   // Read query from URL hash on mount and on hash change
   useEffect(() => {
@@ -31,34 +37,34 @@ export function SearchResults({ initialQuery }: SearchResultsProps) {
     return () => window.removeEventListener('hashchange', readHash)
   }, [])
 
-  // Load search index
-  useEffect(() => {
-    loadSearchIndex()
-      .then((data) => {
-        setIndex(data)
-        setLoading(false)
-      })
-      .catch(() => {
-        setLoading(false)
-      })
-  }, [])
-
-  // Filter results when index or query changes
-  useEffect(() => {
-    if (index.length === 0) {
+  // Search via Typesense when query changes
+  const doSearch = useCallback(async (q: string) => {
+    if (!q || q.trim().length < 2) {
+      setHits([])
+      setFound(0)
+      setSearched(false)
       return
     }
-    setResult(filterIndex(index, query, RESULTS_LIMIT))
-  }, [index, query])
 
-  function searchSuggestion() {
-    if (result.suggestion) {
-      window.location.hash = encodeURIComponent(result.suggestion)
+    setLoading(true)
+    try {
+      const result = await searchQuestions(q.trim(), RESULTS_LIMIT)
+      setHits(result.hits)
+      setFound(result.found)
+    } catch {
+      setHits([])
+      setFound(0)
     }
-  }
+    setSearched(true)
+    setLoading(false)
+  }, [])
+
+  useEffect(() => {
+    doSearch(query)
+  }, [query, doSearch])
 
   if (loading) {
-    return <p className={styles.loading}>Loading search index...</p>
+    return <p className={styles.loading}>Searching...</p>
   }
 
   return (
@@ -70,55 +76,44 @@ export function SearchResults({ initialQuery }: SearchResultsProps) {
       ) : (
         <p className={styles.hint}>Use the search bar above to find questions.</p>
       )}
-      {query.length >= 2 && (
+      {query.length >= 2 && searched && (
         <p className={styles.count}>
-          {result.items.length} result{result.items.length !== 1 ? 's' : ''}
-        </p>
-      )}
-      {result.suggestion && (
-        <p className={styles.suggestion}>
-          Did you mean:{' '}
-          <button className={styles.suggestionLink} onClick={searchSuggestion}>
-            {result.suggestion}
-          </button>
-          ?
+          {found} result{found !== 1 ? 's' : ''}
         </p>
       )}
       <div className={styles.list}>
-        {result.items.map((r) => (
-          <Link key={r.id + r.url} href={r.url} className={styles.row}>
-            <Badge variant="question">Q{r.questionNumber}</Badge>
-            <div className={styles.info}>
-              <span className={styles.title}>{highlightMatch(r.title, query)}</span>
-              <span className={styles.chapter}>{r.chapter} › {r.topic}</span>
-            </div>
-          </Link>
-        ))}
+        {hits.map((hit) => {
+          const doc = hit.document
+          const titleSnippet = hit.highlights?.find((h) => h.field === 'title')?.snippet
+          return (
+            <Link key={doc.id + doc.url} href={doc.url} className={styles.row}>
+              <Badge variant="question">Q{doc.questionNumber}</Badge>
+              <div className={styles.info}>
+                <span
+                  className={styles.title}
+                  dangerouslySetInnerHTML={{
+                    __html: titleSnippet || escapeHtml(doc.shortTitle || doc.title),
+                  }}
+                />
+                <span className={styles.chapter}>
+                  {doc.chapter} › {doc.topic}
+                  {doc.type === 'subquestion' && <span className={styles.subTag}> · Sub-question</span>}
+                </span>
+              </div>
+            </Link>
+          )
+        })}
       </div>
-      {query.length >= 2 && result.items.length === 0 && !result.suggestion && (
+      {query.length >= 2 && searched && hits.length === 0 && (
         <p className={styles.empty}>No results found. Try a different keyword.</p>
       )}
     </div>
   )
 }
 
-function highlightMatch(text: string, query: string): React.ReactNode {
-  if (!query || query.length < 2) {
-    return text
-  }
-
-  const regex = new RegExp(`(${escapeRegex(query)})`, 'gi')
-  const parts = text.split(regex)
-
-  return parts.map((part, i) =>
-    regex.test(part) ? (
-      <mark key={i} className={styles.highlight}>{part}</mark>
-    ) : (
-      part
-    ),
-  )
-}
-
-function escapeRegex(str: string): string {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
 }

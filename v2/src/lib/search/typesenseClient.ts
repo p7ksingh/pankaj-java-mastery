@@ -67,6 +67,9 @@ export async function searchQuestions(
         per_page: limit,
         num_typos: 2,
         typo_tokens_threshold: 1,
+        drop_tokens_threshold: 1,
+        split_join_tokens: 'fallback',
+        prefix: 'true,true,false,false,false',
       })
 
     return {
