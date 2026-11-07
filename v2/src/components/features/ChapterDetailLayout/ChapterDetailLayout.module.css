@@ -2,10 +2,8 @@
   --sidebar-width: 280px;
   display: flex;
   min-height: calc(100vh - var(--topbar-height));
-  width: 100vw;
-  max-width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-top: -32px;
+  max-width: 1200px;
+  margin: -32px auto 0;
   position: relative;
 }
 
@@ -25,10 +23,7 @@
 
 @media (min-width: 1025px) {
   .layout {
-    margin-left: -40px;
-    margin-right: -40px;
-    width: calc(100% + 80px);
-    max-width: none;
+    max-width: 1200px;
   }
 }
 
