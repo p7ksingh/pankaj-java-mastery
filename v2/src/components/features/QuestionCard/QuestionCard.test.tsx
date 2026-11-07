@@ -12,6 +12,7 @@ jest.mock('@/hooks/useLikes', () => ({
 const mockQuestion: QuestionPreview = {
   id: 'Q1',
   slug: 'what-is-jdk',
+  urlSlug: 'jdk-jre-jvm-difference-needs',
   questionNumber: 1,
   title: 'What is the difference between JDK, JRE, and JVM?',
   shortTitle: 'What is the difference between JDK, JRE, and JVM?',
