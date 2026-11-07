@@ -1,5 +1,6 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { CopyLinkButton } from '@/components/ui/CopyLinkButton'
 import { SvgIcon } from '@/components/ui/SvgIcon'
 import { SHARE_PLATFORMS } from '@/lib/constants/share'
@@ -14,9 +15,16 @@ interface ShareBarProps {
  * Share bar — appears on the reading page after the article.
  * Gold standard: share actions belong on the content page, not in the global footer.
  * Renders: "Share" label, copy link, and all configured share platforms.
+ *
+ * Uses useEffect for URL to avoid SSR hydration mismatch (window.location
+ * is only available on the client).
  */
 export function ShareBar({ title }: ShareBarProps) {
-  const url = typeof window !== 'undefined' ? window.location.href : ''
+  const [url, setUrl] = useState('')
+
+  useEffect(() => {
+    setUrl(window.location.href)
+  }, [])
 
   return (
     <div className={styles.shareBar} role="group" aria-label="Share this article">
@@ -26,7 +34,7 @@ export function ShareBar({ title }: ShareBarProps) {
       {SHARE_PLATFORMS.map((platform) => (
         <a
           key={platform.id}
-          href={platform.buildUrl(url, title)}
+          href={url ? platform.buildUrl(url, title) : '#'}
           target="_blank"
           rel="noopener noreferrer"
           className={styles.iconLink}
