@@ -7,7 +7,7 @@ import { Pill } from '@/components/ui/Pill'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Learn Java | javabypankaj',
+  title: 'Learn Java',
   description: 'Learn Java design patterns, SOLID principles, and system design with complete tutorials, code examples, and industry projects.',
 }
 

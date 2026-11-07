@@ -5,7 +5,7 @@ import { StructuredData } from '@/components/seo/StructuredData'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'About | javabypankaj',
+  title: 'About',
   description: 'About javabypankaj.live — free Java interview prep built by Pankaj Singh. 2,466 questions from Core Java to System Design.',
 }
 

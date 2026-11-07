@@ -5,7 +5,7 @@ import { PopularList } from './PopularList'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Popular Questions | javabypankaj',
+  title: 'Popular Questions',
   description: 'Most liked Java interview questions — ranked by the community.',
 }
 
