@@ -1,0 +1,175 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+.overlayOpen {
+  opacity: 1;
+  visibility: visible;
+}
+
+:global(html.dark) .overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.modal {
+  width: 400px;
+  max-width: 100%;
+  background: var(--color-surface);
+  border-radius: 14px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.2);
+  transform: translateY(12px);
+  transition: transform 0.2s;
+  overflow: hidden;
+}
+
+.overlayOpen .modal {
+  transform: translateY(0);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.close {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.close:hover {
+  background: var(--color-hover);
+  color: var(--color-text-primary);
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  font-family: var(--font-family);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  text-align: center;
+  transition: color 0.12s;
+}
+
+.tab:hover {
+  color: var(--color-text-primary);
+}
+
+.tabActive {
+  color: var(--color-text-primary);
+  border-bottom-color: var(--color-link);
+}
+
+/* Body */
+.body {
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.qrImage {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+.upiId {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: var(--color-pill-bg);
+  padding: 6px 14px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.copyBtn {
+  background: none;
+  border: none;
+  color: var(--color-link);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  padding: 0;
+}
+
+.copyBtn:hover {
+  text-decoration: underline;
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* Buy Me a Coffee */
+.coffeeBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  background: #ffdd00;
+  color: #1a1a1a;
+  font-family: var(--font-family);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: transform 0.12s;
+}
+
+.coffeeBtn:hover {
+  transform: scale(1.03);
+  text-decoration: none;
+}
+
+.coffeeEmoji {
+  font-size: 20px;
+}

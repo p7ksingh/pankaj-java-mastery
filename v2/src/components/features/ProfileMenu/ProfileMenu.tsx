@@ -9,6 +9,7 @@ interface ProfileMenuProps {
   isOpen: boolean
   onClose: () => void
   onAppearanceClick: () => void
+  onSupportClick: () => void
 }
 
 /**
@@ -16,7 +17,7 @@ interface ProfileMenuProps {
  * Tight spacing, every link works, live data from localStorage.
  * Groups: personal → settings → social → support.
  */
-export function ProfileMenu({ isOpen, onClose, onAppearanceClick }: ProfileMenuProps) {
+export function ProfileMenu({ isOpen, onClose, onAppearanceClick, onSupportClick }: ProfileMenuProps) {
   const menuRef = useRef<HTMLDivElement>(null)
   const { count: savedCount } = useBookmarks()
 
@@ -126,10 +127,10 @@ export function ProfileMenu({ isOpen, onClose, onAppearanceClick }: ProfileMenuP
 
       {/* Support + About */}
       <div className={styles.group}>
-        <a href="https://buymeacoffee.com/javabypankaj" target="_blank" rel="noopener noreferrer" className={styles.item} onClick={onClose} role="menuitem">
+        <button className={styles.item} onClick={() => { onClose(); onSupportClick() }} role="menuitem">
           <span className={styles.coffeeEmoji}>☕</span>
-          Buy me a coffee
-        </a>
+          Support this project
+        </button>
         <Link href="/" className={styles.item} onClick={onClose} role="menuitem">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
             <circle cx="12" cy="12" r="10" />

@@ -8,6 +8,7 @@ import { AppearanceModal } from '@/components/features/AppearanceModal'
 import { Sidebar } from '@/components/layout/Sidebar'
 import { WriteModal } from '@/components/features/WriteModal'
 import { SearchDropdown } from '@/components/features/SearchDropdown'
+import { SupportModal } from '@/components/features/SupportModal'
 import { useSidebar } from '@/contexts/SidebarContext'
 import styles from './TopBar.module.css'
 
@@ -24,6 +25,7 @@ export function TopBar({ siteName: _siteName }: TopBarProps) {
   const [appearanceOpen, setAppearanceOpen] = useState(false)
   const [writeOpen, setWriteOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
+  const [supportOpen, setSupportOpen] = useState(false)
 
   // ⌘K / Ctrl+K global shortcut
   useEffect(() => {
@@ -140,6 +142,7 @@ export function TopBar({ siteName: _siteName }: TopBarProps) {
           isOpen={profileOpen}
           onClose={closeProfile}
           onAppearanceClick={openAppearance}
+          onSupportClick={() => setSupportOpen(true)}
         />
       </nav>
 
@@ -151,6 +154,9 @@ export function TopBar({ siteName: _siteName }: TopBarProps) {
 
       {/* Write modal */}
       <WriteModal isOpen={writeOpen} onClose={() => setWriteOpen(false)} />
+
+      {/* Support modal */}
+      <SupportModal isOpen={supportOpen} onClose={() => setSupportOpen(false)} />
     </>
   )
 }
