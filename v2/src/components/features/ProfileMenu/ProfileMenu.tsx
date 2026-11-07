@@ -129,7 +129,7 @@ export function ProfileMenu({ isOpen, onClose, onAppearanceClick, onSupportClick
       <div className={styles.group}>
         <button className={styles.item} onClick={() => { onClose(); onSupportClick() }} role="menuitem">
           <span className={styles.coffeeEmoji}>☕</span>
-          Support this project
+          Buy me a coffee
         </button>
         <Link href="/" className={styles.item} onClick={onClose} role="menuitem">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round">
