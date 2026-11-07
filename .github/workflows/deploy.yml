@@ -1,4 +1,4 @@
-name: Deploy to AWS S3
+name: Deploy v2 to AWS S3
 
 on:
   push:
@@ -7,9 +7,35 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: v2
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: v2/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: ${{ secrets.NEXT_PUBLIC_SITE_URL }}
+          NEXT_PUBLIC_API_BASE_URL: ${{ secrets.NEXT_PUBLIC_API_BASE_URL }}
+          NEXT_PUBLIC_QUESTIONS_API: ${{ secrets.NEXT_PUBLIC_QUESTIONS_API }}
+          NEXT_PUBLIC_TYPESENSE_SEARCH_KEY: ${{ secrets.NEXT_PUBLIC_TYPESENSE_SEARCH_KEY }}
+          NEXT_PUBLIC_TYPESENSE_HOST: ${{ secrets.NEXT_PUBLIC_TYPESENSE_HOST }}
+          NEXT_PUBLIC_LIKES_API: ${{ secrets.NEXT_PUBLIC_LIKES_API }}
+          NEXT_PUBLIC_GA_ID: ${{ secrets.NEXT_PUBLIC_GA_ID }}
+          NEXT_PUBLIC_DATA_SOURCE: local
 
       - name: Configure AWS
         uses: aws-actions/configure-aws-credentials@v4
@@ -20,22 +46,34 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync . s3://javabypankaj \
-            --exclude ".git/*" \
-            --exclude "node_modules/*" \
-            --exclude "*.backup" \
-            --exclude "parse_md.py" \
-            --exclude "group_topics.py" \
-            --exclude "package*" \
-            --exclude ".github/*" \
-            --delete
+          aws s3 sync out/ s3://javabypankaj \
+            --delete \
+            --cache-control "public, max-age=31536000, immutable" \
+            --exclude "*.html" \
+            --exclude "sitemap.xml" \
+            --exclude "robots.txt"
 
-          # Fix content types
-          aws s3 cp s3://javabypankaj/index.html s3://javabypankaj/index.html --content-type "text/html" --metadata-directive REPLACE
-          aws s3 cp s3://javabypankaj/maintenance.html s3://javabypankaj/maintenance.html --content-type "text/html" --metadata-directive REPLACE
-          aws s3 cp s3://javabypankaj/css/style.css s3://javabypankaj/css/style.css --content-type "text/css" --metadata-directive REPLACE
-          aws s3 cp s3://javabypankaj/js/app.js s3://javabypankaj/js/app.js --content-type "application/javascript" --metadata-directive REPLACE
-          aws s3 cp s3://javabypankaj/sitemap.xml s3://javabypankaj/sitemap.xml --content-type "application/xml" --metadata-directive REPLACE
+          # HTML files: short cache (revalidate on deploy)
+          aws s3 sync out/ s3://javabypankaj \
+            --cache-control "public, max-age=0, must-revalidate" \
+            --include "*.html" \
+            --exclude "*" \
+            --content-type "text/html"
+
+          # XML/TXT: short cache
+          aws s3 cp out/sitemap.xml s3://javabypankaj/sitemap.xml \
+            --cache-control "public, max-age=3600" \
+            --content-type "application/xml"
+
+          aws s3 cp out/robots.txt s3://javabypankaj/robots.txt \
+            --cache-control "public, max-age=3600" \
+            --content-type "text/plain"
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id E1Q6QZJNQB5S54 \
+            --paths "/*"
 
       - name: Done
-        run: echo "Deployed to http://javabypankaj.s3-website-ap-southeast-2.amazonaws.com"
+        run: echo "v2 deployed to https://www.javabypankaj.live"
