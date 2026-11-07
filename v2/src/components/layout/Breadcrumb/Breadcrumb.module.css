@@ -1,23 +1,26 @@
+/* Breadcrumb — gold standard: plain text, no pills */
+
 .nav {
   padding: var(--space-sm) 0;
   margin-bottom: 8px;
 }
 
 .list {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 0;
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: var(--font-size-sm);
-  font-weight: 600;
+  font-size: 13px;
+  font-weight: 500;
+  overflow: hidden;
 }
 
 .item {
   display: flex;
   align-items: center;
-  gap: 6px;
+  min-width: 0;
 }
 
 .homeIcon {
@@ -29,19 +32,14 @@
 .link {
   display: inline-flex;
   align-items: center;
-  padding: 5px 14px;
-  background: var(--color-pill-bg);
-  color: var(--color-text-primary);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
+  color: var(--color-text-muted);
   text-decoration: none;
-  font-size: var(--font-size-sm);
-  font-weight: 600;
-  transition: background 0.15s ease;
+  white-space: nowrap;
+  transition: color 0.12s;
 }
 
 .link:hover {
-  background: var(--color-hover);
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -49,38 +47,33 @@
   color: var(--color-text-muted);
   font-weight: 400;
   font-size: 14px;
+  margin: 0 8px;
+  opacity: 0.5;
+  flex-shrink: 0;
 }
 
 .current {
-  display: inline-flex;
-  align-items: center;
-  padding: 5px 14px;
-  background: var(--color-pill-bg);
   color: var(--color-text-primary);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  font-size: var(--font-size-sm);
-  font-weight: 700;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .currentLast {
-  max-width: 50vw;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   display: inline-block;
+  max-width: 50vw;
 }
 
 @media (max-width: 768px) {
-  .list { gap: 5px; }
-  .link, .current { padding: 4px 10px; font-size: 12px; }
-  .homeIcon { width: 12px; height: 12px; }
+  .list { font-size: 12px; }
+  .separator { margin: 0 6px; }
   .currentLast { max-width: 40vw; }
 }
 
 @media (max-width: 480px) {
-  .list { gap: 4px; flex-wrap: wrap; }
-  .link, .current { padding: 3px 8px; font-size: 11px; border-radius: 6px; }
-  .homeIcon { width: 11px; height: 11px; }
+  .list { font-size: 11px; }
+  .separator { margin: 0 4px; font-size: 12px; }
   .currentLast { max-width: 55vw; }
 }
