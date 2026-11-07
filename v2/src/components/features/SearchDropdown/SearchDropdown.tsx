@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
 import { searchQuestions, type TypesenseHit } from '@/lib/search/typesenseClient'
+import { sanitizeHighlight } from '@/lib/utils/sanitize'
 import styles from './SearchDropdown.module.css'
 
 const MAX_RESULTS = 15
@@ -175,7 +176,7 @@ export function SearchDropdown({ onClose }: SearchDropdownProps) {
                         <div
                           className={styles.itemTitle}
                           dangerouslySetInnerHTML={{
-                            __html: titleHighlight?.snippet || escapeHtml(doc.shortTitle || doc.title),
+                            __html: sanitizeHighlight(titleHighlight?.snippet || escapeHtml(doc.shortTitle || doc.title)),
                           }}
                         />
                         <div className={styles.itemPath}>

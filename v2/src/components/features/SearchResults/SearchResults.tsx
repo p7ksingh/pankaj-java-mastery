@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import { searchQuestions, type TypesenseHit } from '@/lib/search/typesenseClient'
+import { sanitizeHighlight } from '@/lib/utils/sanitize'
 import { Badge } from '@/components/ui/Badge'
 import styles from './SearchResults.module.css'
 
@@ -92,7 +93,7 @@ export function SearchResults({ initialQuery }: SearchResultsProps) {
                 <span
                   className={styles.title}
                   dangerouslySetInnerHTML={{
-                    __html: titleSnippet || escapeHtml(doc.shortTitle || doc.title),
+                    __html: sanitizeHighlight(titleSnippet || escapeHtml(doc.shortTitle || doc.title)),
                   }}
                 />
                 <span className={styles.chapter}>
