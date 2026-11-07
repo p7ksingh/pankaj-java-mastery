@@ -3,7 +3,7 @@ import { Breadcrumb } from '@/components/layout/Breadcrumb'
 import styles from '../privacy/page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | javabypankaj',
+  title: 'Terms of Service',
   description: 'Terms of use for javabypankaj.live — free Java interview preparation resource.',
   alternates: { canonical: '/terms/' },
 }

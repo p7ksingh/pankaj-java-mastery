@@ -4,7 +4,7 @@ import { LibraryList } from './LibraryList'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Library | javabypankaj',
+  title: 'Your Library',
   description: 'Your saved interview questions. Bookmark questions while reading and find them here.',
 }
 

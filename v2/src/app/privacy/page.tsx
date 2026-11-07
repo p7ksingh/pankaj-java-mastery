@@ -3,7 +3,7 @@ import { Breadcrumb } from '@/components/layout/Breadcrumb'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | javabypankaj',
+  title: 'Privacy Policy',
   description: 'How javabypankaj.live handles your data — what we collect, why, and your rights.',
   alternates: { canonical: '/privacy/' },
 }

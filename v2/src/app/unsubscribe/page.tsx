@@ -4,7 +4,7 @@ import { UnsubscribeForm } from './UnsubscribeForm'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Unsubscribe | javabypankaj',
+  title: 'Unsubscribe',
   description: 'Unsubscribe from javabypankaj email notifications.',
 }
 

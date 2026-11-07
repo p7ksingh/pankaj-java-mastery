@@ -4,7 +4,7 @@ import { PageHeader } from '@/components/layout/PageHeader'
 import { SearchResults } from '@/components/features/SearchResults'
 
 export const metadata: Metadata = {
-  title: 'Search | javabypankaj',
+  title: 'Search',
   description: 'Search across all Java interview questions. Find answers on Core Java, Spring, Microservices, System Design, and more.',
 }
 

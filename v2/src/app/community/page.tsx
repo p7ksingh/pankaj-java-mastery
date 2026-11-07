@@ -4,7 +4,7 @@ import { CommunityQuestionList } from '@/components/features/CommunityPage'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Community Questions | javabypankaj',
+  title: 'Community Questions',
   description: 'Real interview questions shared by developers. Share your own and help others prepare.',
 }
 

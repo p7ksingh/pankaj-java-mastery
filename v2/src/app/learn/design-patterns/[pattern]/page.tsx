@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     return { title: 'Not Found' }
   }
   return {
-    title: `${pattern.title} in Java | javabypankaj`,
+    title: `${pattern.title} in Java `,
     description: `Complete tutorial on ${pattern.title} with code examples, industry project, HLD, LLD, and interview questions.`,
   }
 }

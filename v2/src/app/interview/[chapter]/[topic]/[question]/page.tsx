@@ -61,7 +61,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: `${question.title} - interview answer with code, diagrams and ready-to-speak explanation.`,
     alternates: { canonical: `/interview/${chSlug}/${topicSlug}/${question.urlSlug}/` },
     openGraph: {
-      title: `${question.shortTitle} | ${chapter.title} | javabypankaj`,
+      title: `${question.shortTitle} | ${chapter.title} `,
       description: `${question.title} - interview answer with code, diagrams and ready-to-speak explanation.`,
     },
   }

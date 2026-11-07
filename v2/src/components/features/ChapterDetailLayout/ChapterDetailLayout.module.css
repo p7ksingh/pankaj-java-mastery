@@ -142,6 +142,12 @@
     margin-top: 0;
   }
 
+  /* Hide sidebar background strip on mobile — it covers question cards */
+  .layout::before {
+    display: none;
+  }
+
+  /* Hide sidebar panel on mobile — replaced by dropdown select */
   .layout > aside {
     display: none;
   }

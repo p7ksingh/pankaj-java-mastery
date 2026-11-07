@@ -8,7 +8,7 @@ import { Pill } from '@/components/ui/Pill'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {
-  title: 'Java Design Patterns | javabypankaj',
+  title: 'Java Design Patterns',
   description: '21 Java design patterns with complete tutorials, industry projects with HLD and LLD, code examples, and interview questions.',
 }
 
