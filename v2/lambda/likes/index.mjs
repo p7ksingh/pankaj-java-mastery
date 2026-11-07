@@ -8,7 +8,6 @@ const LIKES_TABLE = "javabypankaj-like";
 const ALLOWED_ORIGINS = [
   "https://www.javabypankaj.live",
   "https://javabypankaj.live",
-  "http://localhost:3000",
 ];
 
 function cors(event) {
@@ -28,6 +27,15 @@ function parseBody(event) {
   try { return JSON.parse(event.body || "{}"); } catch { return {}; }
 }
 
+/** Validate questionId: 1-100 chars, alphanumeric + hyphens + underscores only */
+function validateQuestionId(id) {
+  if (!id || typeof id !== "string") return null;
+  const trimmed = id.trim();
+  if (trimmed.length === 0 || trimmed.length > 100) return null;
+  if (!/^[a-zA-Z0-9_-]+$/.test(trimmed)) return null;
+  return trimmed;
+}
+
 export const handler = async (event) => {
   const method = event.requestContext?.http?.method || event.httpMethod || "GET";
 
@@ -38,9 +46,10 @@ export const handler = async (event) => {
   try {
     // POST /likes — increment like count
     if (method === "POST") {
-      const { questionId } = parseBody(event);
+      const { questionId: rawId } = parseBody(event);
+      const questionId = validateQuestionId(rawId);
       if (!questionId) {
-        return respond(400, { msg: "questionId required" }, event);
+        return respond(400, { msg: "Invalid questionId (1-100 chars, alphanumeric/hyphens only)" }, event);
       }
 
       const result = await db.send(new UpdateCommand({
@@ -61,10 +70,10 @@ export const handler = async (event) => {
     if (method === "DELETE") {
       const body = parseBody(event);
       const params = event.queryStringParameters || {};
-      const questionId = (body.questionId || params.questionId || "").trim();
+      const questionId = validateQuestionId(body.questionId || params.questionId);
 
       if (!questionId) {
-        return respond(400, { msg: "questionId required" }, event);
+        return respond(400, { msg: "Invalid questionId" }, event);
       }
 
       try {
@@ -123,7 +132,7 @@ export const handler = async (event) => {
         return respond(200, { counts: {} }, event);
       }
 
-      const ids = idsParam.split(",").map((s) => s.trim()).filter(Boolean).slice(0, 100);
+      const ids = idsParam.split(",").map((s) => s.trim()).filter((s) => /^[a-zA-Z0-9_-]+$/.test(s) && s.length <= 100).slice(0, 100);
 
       if (ids.length === 0) {
         return respond(200, { counts: {} }, event);
