@@ -11,6 +11,7 @@ export const APP_CONFIG = {
   api: {
     questions: `${API_BASE}/questions`,
     subscribe: `${API_BASE}/subscribe`,
+    likes: `${API_BASE}/likes`,
   },
   rateLimit: {
     submitCooldownMs: 30_000,
