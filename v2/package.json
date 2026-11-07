@@ -7,6 +7,8 @@
     "prebuild": "npx ts-node --skip-project --compiler-options '{\"module\":\"commonjs\",\"esModuleInterop\":true}' scripts/build-search-index.ts && npx ts-node --skip-project --compiler-options '{\"module\":\"commonjs\",\"esModuleInterop\":true}' scripts/build-sitemap.ts",
     "build": "next build",
     "start": "next start",
+    "deploy:lambda": "bash scripts/deploy-lambda.sh",
+    "deploy": "npm run deploy:lambda && npm run build",
     "lint": "next lint",
     "format": "prettier --check \"src/**/*.{ts,tsx,css}\"",
     "format:fix": "prettier --write \"src/**/*.{ts,tsx,css}\"",
