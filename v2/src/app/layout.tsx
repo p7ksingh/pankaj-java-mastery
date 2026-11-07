@@ -6,6 +6,7 @@ import { ThemeScript } from '@/components/layout/ThemeScript'
 import { TopBar } from '@/components/layout/TopBar'
 import { Footer } from '@/components/layout/Footer'
 import { LayoutShell } from '@/components/layout/LayoutShell'
+import { SubscribePopup } from '@/components/features/SubscribePopup'
 import '@/styles/theme.css'
 import '@/styles/globals.css'
 import '@/styles/typography.css'
@@ -95,6 +96,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 }}
               />
             </LayoutShell>
+            <SubscribePopup />
           </SidebarProvider>
         </ThemeProvider>
       </body>
