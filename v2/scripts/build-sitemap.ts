@@ -31,6 +31,7 @@ function run(): void {
   entries.push({ url: '/community/', priority: '0.7', changefreq: 'daily' })
   entries.push({ url: '/library/', priority: '0.4', changefreq: 'monthly' })
   entries.push({ url: '/popular/', priority: '0.6', changefreq: 'weekly' })
+  entries.push({ url: '/about/', priority: '0.5', changefreq: 'monthly' })
 
   // Learn pages
   entries.push({ url: '/learn/', priority: '0.8', changefreq: 'monthly' })
