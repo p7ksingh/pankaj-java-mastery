@@ -32,13 +32,6 @@
   flex: 1;
 }
 
-.divider {
-  width: 1px;
-  height: 20px;
-  background: rgba(255, 255, 255, 0.12);
-  flex-shrink: 0;
-}
-
 /* ── Mobile: stack into rows ── */
 @media (max-width: 768px) {
   .bar {

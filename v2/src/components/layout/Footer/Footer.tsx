@@ -1,13 +1,10 @@
 import { Logo } from '@/components/ui/Logo'
-import { ShareLinks } from '@/components/ui/ShareLinks'
 import { SocialLinks } from '@/components/ui/SocialLinks'
-import { CopyLinkButton } from '@/components/ui/CopyLinkButton'
 import { buildSocialProfiles } from '@/lib/utils/share'
 import styles from './Footer.module.css'
 
 interface FooterProps {
   siteName: string
-  siteUrl: string
   social: {
     linkedin?: string
     github?: string
@@ -16,11 +13,10 @@ interface FooterProps {
 }
 
 /**
- * Footer — Option D: single-row minimal bar.
- * Composition pattern: composes Logo, ShareLinks, CopyLinkButton, SocialLinks.
- * No hardcoded URLs, platforms, or icons — all driven by config/constants.
+ * Footer — minimal identity bar: wordmark, copyright, social profiles.
+ * Share actions live on the reading page (page-specific), not in the global footer.
  */
-export function Footer({ siteName, siteUrl, social }: FooterProps) {
+export function Footer({ siteName, social }: FooterProps) {
   const socialProfiles = buildSocialProfiles(social)
   const currentYear = new Date().getFullYear()
 
@@ -37,16 +33,6 @@ export function Footer({ siteName, siteUrl, social }: FooterProps) {
 
         {/* Spacer pushes actions right */}
         <span className={styles.spacer} />
-
-        {/* Copy page link */}
-        <CopyLinkButton textToCopy={siteUrl} />
-
-        <span className={styles.divider} />
-
-        {/* Share on platforms */}
-        <ShareLinks url={siteUrl} title={`${siteName} — Crack Any Java Interview`} />
-
-        <span className={styles.divider} />
 
         {/* Social profiles */}
         <SocialLinks profiles={socialProfiles} />

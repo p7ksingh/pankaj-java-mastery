@@ -89,7 +89,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className={styles.page}>{children}</div>
               <Footer
                 siteName={SITE_NAME}
-                siteUrl={SITE_URL}
                 social={{
                   linkedin: 'https://www.linkedin.com/in/p7ksingh/',
                   github: 'https://github.com/p7ksingh',
