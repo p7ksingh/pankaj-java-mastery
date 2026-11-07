@@ -77,3 +77,25 @@ export async function fetchLikeCounts(
     return {}
   }
 }
+
+/**
+ * Fetch top-liked questions (for Popular page).
+ * Returns array sorted by most liked.
+ */
+export async function fetchTopLiked(
+  limit: number = 50,
+): Promise<Array<{ questionId: string; likeCount: number }>> {
+  if (!ENDPOINT) {
+    return []
+  }
+  try {
+    const res = await fetch(`${ENDPOINT}?top=${limit}`)
+    if (!res.ok) {
+      return []
+    }
+    const data = await res.json()
+    return data.items ?? []
+  } catch {
+    return []
+  }
+}

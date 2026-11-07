@@ -1,5 +1,5 @@
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
-import { DynamoDBDocumentClient, UpdateCommand, BatchGetCommand } from "@aws-sdk/lib-dynamodb";
+import { DynamoDBDocumentClient, UpdateCommand, BatchGetCommand, ScanCommand } from "@aws-sdk/lib-dynamodb";
 
 const client = new DynamoDBClient({ region: "ap-southeast-2" });
 const db = DynamoDBDocumentClient.from(client);
@@ -89,9 +89,35 @@ export const handler = async (event) => {
       }
     }
 
-    // GET /likes?ids=Q1,Q2,Q3 — batch fetch counts
+    // GET /likes — two modes:
+    //   ?top=50       → top-N most liked (for Popular page)
+    //   ?ids=Q1,Q2    → batch fetch counts
     if (method === "GET") {
-      const idsParam = (event.queryStringParameters?.ids || "").trim();
+      const params = event.queryStringParameters || {};
+
+      // Mode 1: Top-liked questions
+      if (params.top) {
+        const limit = Math.min(parseInt(params.top, 10) || 50, 200);
+        const result = await db.send(new ScanCommand({
+          TableName: LIKES_TABLE,
+          ProjectionExpression: "questionId, likeCount",
+          FilterExpression: "likeCount > :zero",
+          ExpressionAttributeValues: { ":zero": 0 },
+        }));
+
+        const items = (result.Items || [])
+          .sort((a, b) => (b.likeCount || 0) - (a.likeCount || 0))
+          .slice(0, limit)
+          .map((item) => ({
+            questionId: item.questionId,
+            likeCount: item.likeCount || 0,
+          }));
+
+        return respond(200, { items, total: result.Items?.length || 0 }, event);
+      }
+
+      // Mode 2: Batch fetch by IDs
+      const idsParam = (params.ids || "").trim();
 
       if (!idsParam) {
         return respond(200, { counts: {} }, event);

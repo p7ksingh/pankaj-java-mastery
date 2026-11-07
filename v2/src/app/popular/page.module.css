@@ -1,38 +1,133 @@
 .page {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 0 24px 80px;
+  max-width: 780px;
+  margin: 0;
+  padding: 0 0 80px;
 }
 
-.comingSoon {
+/* ── List ── */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--color-border);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: background 0.15s;
+}
+
+.row:last-child {
+  border-bottom: none;
+}
+
+.row:hover {
+  background: var(--color-hover);
+  text-decoration: none;
+}
+
+/* Rank number */
+.rank {
+  width: 28px;
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--color-text-muted);
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.row:nth-child(1) .rank { color: #d4a017; font-size: 17px; }
+.row:nth-child(2) .rank { color: #8a8a8a; font-size: 16px; }
+.row:nth-child(3) .rank { color: #b87333; font-size: 16px; }
+
+/* Question info */
+.info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.questionTitle {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--color-text-primary);
+}
+
+.meta {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* Like column */
+.likeCol {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.likeCount {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-secondary);
+  min-width: 24px;
+}
+
+/* ── Loading ── */
+.loading {
+  text-align: center;
+  padding: 60px 24px;
+  color: var(--color-text-muted);
+  font-size: 15px;
+}
+
+/* ── Empty state ── */
+.emptyState {
   text-align: center;
   padding: 80px 24px;
 }
 
-.icon {
+.emptyIcon {
   color: var(--color-text-muted);
   opacity: 0.25;
   margin-bottom: 16px;
 }
 
-.title {
-  font-size: 24px;
-  font-weight: 800;
-  letter-spacing: -0.03em;
+.emptyTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-primary);
   margin-bottom: 6px;
 }
 
-.subtitle {
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--color-link);
-  margin-bottom: 12px;
-}
-
-.desc {
+.emptyText {
   font-size: 14px;
   color: var(--color-text-muted);
   line-height: 1.6;
-  max-width: 400px;
+  max-width: 360px;
   margin: 0 auto;
+}
+
+/* ── Responsive ── */
+@media (max-width: 480px) {
+  .row {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .questionTitle {
+    font-size: 14px;
+  }
 }
