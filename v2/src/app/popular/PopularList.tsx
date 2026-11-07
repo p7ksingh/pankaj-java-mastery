@@ -27,36 +27,41 @@ export function PopularList() {
 
   useEffect(() => {
     async function load() {
-      // Fetch top-liked from API + search index for metadata in parallel
-      const [topLiked, searchIndex] = await Promise.all([
-        fetchTopLiked(50),
-        loadSearchIndex(),
-      ])
+      try {
+        // Fetch top-liked from API + search index for metadata in parallel
+        const [topLiked, searchIndex] = await Promise.all([
+          fetchTopLiked(50),
+          loadSearchIndex(),
+        ])
 
-      // Build lookup map from search index
-      const indexMap = new Map<string, SearchEntry>()
-      for (const entry of searchIndex) {
-        indexMap.set(entry.id, entry)
-      }
-
-      // Join: like counts + question metadata
-      const joined: PopularItem[] = []
-      for (const liked of topLiked) {
-        const entry = indexMap.get(liked.questionId)
-        if (entry) {
-          joined.push({
-            questionId: liked.questionId,
-            likeCount: liked.likeCount,
-            title: entry.t,
-            chapter: entry.ch,
-            topic: entry.tp || '',
-            url: entry.u,
-            questionNumber: entry.qn || 0,
-          })
+        // Build lookup map from search index
+        const indexMap = new Map<string, SearchEntry>()
+        for (const entry of searchIndex) {
+          indexMap.set(entry.id, entry)
         }
-      }
 
-      setItems(joined)
+        // Join: like counts + question metadata
+        const joined: PopularItem[] = []
+        for (const liked of topLiked) {
+          const entry = indexMap.get(liked.questionId)
+          if (entry) {
+            joined.push({
+              questionId: liked.questionId,
+              likeCount: liked.likeCount,
+              title: entry.t,
+              chapter: entry.ch,
+              topic: entry.tp || '',
+              url: entry.u,
+              questionNumber: entry.qn || 0,
+            })
+          }
+        }
+
+        setItems(joined)
+      } catch {
+        // API or search index failed — show empty state gracefully
+        setItems([])
+      }
       setLoading(false)
     }
 

@@ -97,7 +97,7 @@ export const handler = async (event) => {
 
       // Mode 1: Top-liked questions
       if (params.top) {
-        const limit = Math.min(parseInt(params.top, 10) || 50, 200);
+        const limit = Math.min(Math.max(parseInt(params.top, 10) || 50, 1), 200);
         const result = await db.send(new ScanCommand({
           TableName: LIKES_TABLE,
           ProjectionExpression: "questionId, likeCount",

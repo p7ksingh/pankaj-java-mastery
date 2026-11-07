@@ -108,3 +108,15 @@
   text-decoration: underline;
   padding: 0;
 }
+
+/* ── Mobile ── */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 24px;
+  }
+
+  .row {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+}
