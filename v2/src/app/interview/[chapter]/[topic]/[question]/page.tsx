@@ -180,7 +180,6 @@ export default async function QuestionPage({ params }: PageProps) {
         chapterSlug={chSlug}
         topicSlug={topicSlug}
       />
-      <SubscribeSection />
       <RelatedQuestions
         currentQuestionId={question.id}
         chapterNumber={chapter.number}
