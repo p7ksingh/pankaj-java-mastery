@@ -27,6 +27,13 @@ export function TopBar({ siteName: _siteName }: TopBarProps) {
   const [searchOpen, setSearchOpen] = useState(false)
   const [supportOpen, setSupportOpen] = useState(false)
 
+  // Listen for global trigger (e.g. footer coffee icon)
+  useEffect(() => {
+    function handleShow() { setSupportOpen(true) }
+    window.addEventListener('showSupport', handleShow)
+    return () => window.removeEventListener('showSupport', handleShow)
+  }, [])
+
   // ⌘K / Ctrl+K global shortcut
   useEffect(() => {
     function handleGlobalKey(e: KeyboardEvent) {

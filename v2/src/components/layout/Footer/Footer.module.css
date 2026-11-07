@@ -52,6 +52,25 @@
   }
 }
 
+/* Coffee link */
+.coffeeLink {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.45);
+  background: transparent;
+  text-decoration: none;
+  transition: color 0.15s, background 0.15s;
+}
+
+.coffeeLink:hover {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
 /* Legal links */
 .legalLinks {
   display: flex;

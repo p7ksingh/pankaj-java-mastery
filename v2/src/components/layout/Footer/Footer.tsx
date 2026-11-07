@@ -1,5 +1,6 @@
 import { Logo } from '@/components/ui/Logo'
 import { SocialLinks } from '@/components/ui/SocialLinks'
+import { CoffeeButton } from '@/components/ui/CoffeeButton'
 import { buildSocialProfiles } from '@/lib/utils/share'
 import Link from 'next/link'
 import styles from './Footer.module.css'
@@ -34,6 +35,9 @@ export function Footer({ siteName, social }: FooterProps) {
 
         {/* Spacer pushes actions right */}
         <span className={styles.spacer} />
+
+        {/* Buy me a coffee — opens SupportModal */}
+        <CoffeeButton />
 
         {/* Social profiles */}
         <SocialLinks profiles={socialProfiles} />
