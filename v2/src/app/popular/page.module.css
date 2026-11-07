@@ -38,16 +38,12 @@
 /* Rank number */
 .rank {
   width: 28px;
-  font-size: 15px;
-  font-weight: 800;
+  font-size: 14px;
+  font-weight: 700;
   color: var(--color-text-muted);
   text-align: center;
   flex-shrink: 0;
 }
-
-.row:nth-child(1) .rank { color: #d4a017; font-size: 17px; }
-.row:nth-child(2) .rank { color: #8a8a8a; font-size: 16px; }
-.row:nth-child(3) .rank { color: #b87333; font-size: 16px; }
 
 /* Question info */
 .info {
