@@ -56,8 +56,8 @@ jobs:
           # HTML files: short cache (revalidate on deploy)
           aws s3 sync out/ s3://javabypankaj \
             --cache-control "public, max-age=0, must-revalidate" \
-            --include "*.html" \
             --exclude "*" \
+            --include "*.html" \
             --content-type "text/html"
 
           # XML/TXT: short cache
