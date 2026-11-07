@@ -64,13 +64,13 @@ export const metadata: Metadata = {
     url: SITE_URL,
     siteName: SITE_NAME,
     type: 'website',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'javabypankaj | Java Interviews, Mastered' }],
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'javabypankaj | Java Interviews, Mastered' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${SITE_NAME} | Java Interviews, Mastered`,
     description: 'Deep Java answers you actually remember in the interview. Core Java to System Design with production code, edge cases, and expert insights.',
-    images: ['/og-image.png'],
+    images: ['/og-image.jpg'],
   },
 }
 
