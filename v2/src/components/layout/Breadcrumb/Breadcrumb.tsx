@@ -41,7 +41,11 @@ export function Breadcrumb({ items }: BreadcrumbProps) {
             <li key={index} className={styles.item}>
               {index > 0 && <span className={styles.separator} aria-hidden="true">&rsaquo;</span>}
               {isLast || !item.href ? (
-                <span className={styles.current} aria-current={isLast ? 'page' : undefined}>
+                <span
+                  className={`${styles.current} ${isLast && !isHome ? styles.currentLast : ''}`}
+                  aria-current={isLast ? 'page' : undefined}
+                  title={isLast && !isHome ? item.label : undefined}
+                >
                   {isHome ? <HomeIcon /> : item.label}
                 </span>
               ) : (

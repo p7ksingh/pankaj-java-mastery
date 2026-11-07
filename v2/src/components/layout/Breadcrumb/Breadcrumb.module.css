@@ -63,14 +63,24 @@
   font-weight: 700;
 }
 
+.currentLast {
+  max-width: 360px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+}
+
 @media (max-width: 768px) {
   .list { gap: 5px; }
   .link, .current { padding: 4px 10px; font-size: 12px; }
   .homeIcon { width: 12px; height: 12px; }
+  .currentLast { max-width: 200px; }
 }
 
 @media (max-width: 480px) {
   .list { gap: 4px; flex-wrap: wrap; }
   .link, .current { padding: 3px 8px; font-size: 11px; border-radius: 6px; }
   .homeIcon { width: 11px; height: 11px; }
+  .currentLast { max-width: 160px; }
 }
