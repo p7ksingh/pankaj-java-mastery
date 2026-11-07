@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${chapter.title} Interview Questions | ${APP_CONFIG.site.name}`,
       description: `${chapter.questionCount} real ${chapter.title} interview questions with code, diagrams and ready-to-speak answers.`,
+      images: ['/og-image.jpg'],
     },
   }
 }
