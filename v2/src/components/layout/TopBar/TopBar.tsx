@@ -9,6 +9,7 @@ import { Sidebar } from '@/components/layout/Sidebar'
 import { WriteModal } from '@/components/features/WriteModal'
 import { SearchDropdown } from '@/components/features/SearchDropdown'
 import { SupportModal } from '@/components/features/SupportModal'
+import { ShareDropdownMenu } from '@/components/features/ShareDropdownMenu'
 import { useSidebar } from '@/contexts/SidebarContext'
 import styles from './TopBar.module.css'
 
@@ -26,6 +27,7 @@ export function TopBar({ siteName: _siteName }: TopBarProps) {
   const [writeOpen, setWriteOpen] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false)
   const [supportOpen, setSupportOpen] = useState(false)
+  const [shareOpen, setShareOpen] = useState(false)
 
   // Listen for global trigger (e.g. footer coffee icon)
   useEffect(() => {
@@ -123,6 +125,24 @@ export function TopBar({ siteName: _siteName }: TopBarProps) {
             </svg>
             <span className={styles.writeBtnText}>Write</span>
           </button>
+
+          {/* Share */}
+          <button
+            className={styles.writeBtn}
+            onClick={() => setShareOpen((p) => !p)}
+            aria-label="Share this page"
+            aria-expanded={shareOpen}
+            data-share-trigger
+            title="Share"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+              <polyline points="16 6 12 2 8 6" />
+              <line x1="12" y1="2" x2="12" y2="15" />
+            </svg>
+          </button>
+
+          {shareOpen && <ShareDropdownMenu onClose={() => setShareOpen(false)} />}
 
           <button
             className={styles.profileBtn}
